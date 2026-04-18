@@ -1,0 +1,174 @@
+{
+  "session": "33",
+  "companyCount": 4,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Joval Brands",
+      "headlineCount": 2,
+      "firstBarIx": 15,
+      "headlineIds": [
+        "H001",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Joval Brands names new head of cloud infrastructure division",
+        "Joval Brands announces $7.9B share buyback program"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Arnik Commerce",
+      "headlineCount": 2,
+      "firstBarIx": 31,
+      "headlineIds": [
+        "H002",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Arnik Commerce announces breakthrough in data analytics",
+        "Arnik Commerce sees 10% drop in new customer orders this quarter"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Xelvol Biotech",
+      "headlineCount": 1,
+      "firstBarIx": 32,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Xelvol Biotech reports 3% decline in operating income"
+      ]
+    },
+    {
+      "companyId": 3,
+      "name": "Jorval Trading Co",
+      "headlineCount": 1,
+      "firstBarIx": 33,
+      "headlineIds": [
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Jorval Trading Co misses quarterly revenue estimates by 12%"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 15,
+      "companyId": 0,
+      "companyName": "Joval Brands",
+      "headline": "Joval Brands names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a key division can signal strategic shifts or improved operational efficiency, but the immediate financial impact is often indirect and uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 31,
+      "companyId": 1,
+      "companyName": "Arnik Commerce",
+      "headline": "Arnik Commerce announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics could lead to new products, improved services, or operational efficiencies, potentially boosting future revenue or reducing costs.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 32,
+      "companyId": 2,
+      "companyName": "Xelvol Biotech",
+      "headline": "Xelvol Biotech reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates reduced profitability from core operations, which is a negative financial signal.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 33,
+      "companyId": 3,
+      "companyName": "Jorval Trading Co",
+      "headline": "Jorval Trading Co misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected sales performance, which is a strong negative signal for investors.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 36,
+      "companyId": 1,
+      "companyName": "Arnik Commerce",
+      "headline": "Arnik Commerce sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders directly indicates weakening demand for the company's products or services, negatively impacting future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 43,
+      "companyId": 0,
+      "companyName": "Joval Brands",
+      "headline": "Joval Brands announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management's confidence in the company's valuation and can boost earnings per share, often viewed positively by investors.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:21:50.881Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

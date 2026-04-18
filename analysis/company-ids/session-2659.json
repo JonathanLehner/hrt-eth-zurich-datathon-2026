@@ -60,35 +60,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces breakthrough in data analytics"
+      "headline": "Relvon Fuels announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics suggests potential for improved efficiency, new product development, or competitive advantage, but the immediate financial impact is unclear.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 8,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports unexpected decline in Southeast Asia revenue"
+      "headline": "Volval Devices reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative impact on current performance and potentially future growth.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Zelval Energy completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a key area like precision manufacturing is generally positive for long-term capabilities, though short-term integration costs or risks are not mentioned.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $320M contract with a multinational manufacturer"
+      "headline": "Relvon Fuels secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $320M contract is a clear positive financial event, indicating future revenue and strengthening market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables raises full-year guidance citing robust demand"
+      "headline": "Ulvon Renewables raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance due to robust demand is a strong positive indicator for the company's expected financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:49.962Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

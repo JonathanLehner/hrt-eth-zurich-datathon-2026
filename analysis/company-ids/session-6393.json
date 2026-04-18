@@ -48,28 +48,79 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $650M contract with a top-tier research institute"
+      "headline": "Nolvol Resources secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $650M contract with a top-tier research institute is a clear positive for Nolvol Resources' revenue and reputation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $250M contract with a global retailer"
+      "headline": "Plevik Energy secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract with a global retailer represents a substantial revenue increase and market expansion for Plevik Energy.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries files for regulatory approval of new digital payments offering"
+      "headline": "Zrovex Industries files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards launching a new digital payments offering, indicating potential future revenue but with inherent approval risk.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources sees mixed results in data analytics pilot program"
+      "headline": "Nolvol Resources sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program suggest uncertainty regarding the program's future success and potential impact on efficiency or new revenue streams.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:54.449Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

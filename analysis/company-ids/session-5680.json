@@ -60,35 +60,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma secures $250M contract with a top-tier research institute"
+      "headline": "Zrovum Biopharma secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a top-tier institute is a clear positive for revenue and reputation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces $2.5B share buyback program"
+      "headline": "Ilval Financial announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial share buyback program typically boosts EPS and signals management confidence, positively impacting share price.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $50M contract with a multinational manufacturer"
+      "headline": "Nerval Biopharma secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a contract with a multinational manufacturer is a positive for revenue and validates the company's offerings.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma announces $3.8B share buyback program"
+      "headline": "Nerval Biopharma announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A very large share buyback program is a strong positive signal for shareholders, indicating confidence and potentially boosting EPS.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics explores strategic alternatives for data analytics unit"
+      "headline": "Zelvix Therapeutics explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could be positive if it streamlines operations or unlocks value, or negative if it indicates underperformance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:26.490Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

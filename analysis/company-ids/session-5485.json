@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports strong demand in Central Europe, raises outlook"
+      "headline": "Nerval Biopharma reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook indicate positive financial performance for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma recalls products in renewable storage line due to quality concerns"
+      "headline": "Nerval Biopharma recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will negatively impact sales, reputation, and incur costs.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees 20% drop in new customer orders this quarter"
+      "headline": "Jorvyl Securities sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly implies a negative impact on future revenue and growth.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities faces class action over wireless connectivity service disruption"
+      "headline": "Jorvyl Securities faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit implies potential significant legal costs, settlements, and reputational damage.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $650M contract with a leading cloud platform"
+      "headline": "Zrovov Advisors secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a leading platform represents a significant positive revenue stream and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $50M contract with a global retailer"
+      "headline": "Nerval Biopharma secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a global retailer is a positive event, indicating new revenue and market penetration.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees mixed results in process automation pilot program"
+      "headline": "Nerval Biopharma sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding the success and future rollout of a new initiative, leading to neutral to slightly negative sentiment.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities misses quarterly revenue estimates by 25%"
+      "headline": "Creven Securities misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 25% indicates underperformance and will negatively impact investor confidence and future projections.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:54.507Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

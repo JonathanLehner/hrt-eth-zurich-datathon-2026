@@ -66,56 +66,147 @@
       "barIx": 27,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $120M contract with a top-tier research institute"
+      "headline": "Krevum Pharmaceuticals secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a top-tier institute is a clear positive for revenue and reputation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics recalls products in enterprise software line due to quality concerns"
+      "headline": "Grevel Diagnostics recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will negatively impact revenue, reputation, and incur costs.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees mixed results in automated logistics pilot program"
+      "headline": "Grevel Diagnostics sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding future operational efficiency improvements or product viability.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences to host investor day focused on cloud infrastructure strategy"
+      "headline": "Calvis Sciences to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy can generate interest and provide clarity, but the actual impact depends on the information revealed.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen digital payments"
+      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "A strategic acquisition aims to strengthen a business area, which is generally positive, but integration risks exist.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma expands operations into Europe markets"
+      "headline": "Zrovum Biopharma expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets indicates growth potential and increased addressable market.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences announces breakthrough in process automation"
+      "headline": "Calvis Sciences announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for new products, improved efficiency, or competitive advantage.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences completes strategic acquisition to strengthen process automation"
+      "headline": "Calvis Sciences completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "A strategic acquisition aimed at strengthening a key area like process automation is generally positive for growth and capabilities.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:01.434Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

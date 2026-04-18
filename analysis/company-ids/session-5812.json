@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 3% increase in customer acquisition"
+      "headline": "Calvis Sciences reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition suggests positive business momentum and potential for future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics secures $320M contract with a major logistics provider"
+      "headline": "Grevel Diagnostics secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial $320M contract with a major provider is a significant positive event for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports unexpected decline in Central Europe revenue"
+      "headline": "Grevel Diagnostics reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative operational or demand issue that could impact overall financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports strong demand in Latin America, raises outlook"
+      "headline": "Calvis Sciences reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region combined with a raised outlook signals improved financial performance expectations.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $120M contract with a national infrastructure agency"
+      "headline": "Myrnon Therapeutics secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial $120M contract with a national agency is a significant positive event for revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Xelvol Biotech announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a new region indicates future growth potential but also near-term investment costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences opens new office in Latin America"
+      "headline": "Calvis Sciences opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office in a region where strong demand was previously reported suggests operational expansion to capitalize on growth.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:53.814Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

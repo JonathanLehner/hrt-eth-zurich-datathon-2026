@@ -62,42 +62,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing loses key contract in Middle East to competitor"
+      "headline": "Dralol Computing loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market position, creating immediate negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences completes strategic acquisition to strengthen digital payments"
+      "headline": "Wyrnik Sciences completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions typically signal growth, though the immediate market reaction depends on the perceived valuation and integration potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $400M contract with a global retailer"
+      "headline": "Prynis Systems secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, quantifiable revenue growth and strengthens the company's market standing.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports unexpected decline in Southeast Asia revenue"
+      "headline": "Frelol Software reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a negative indicator that typically triggers immediate downward pressure on stock performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing opens new office in Central Europe"
+      "headline": "Dralol Computing opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a positive operational expansion, though the financial impact is usually gradual rather than immediate.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing opens new office in Southeast Asia"
+      "headline": "Dralol Computing opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Expanding into a new region represents a growth opportunity, but the long-term financial contribution remains speculative at this stage.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:13.843Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

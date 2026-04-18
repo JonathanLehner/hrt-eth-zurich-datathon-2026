@@ -54,49 +54,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces breakthrough in data analytics"
+      "headline": "Frelis Genomics announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics suggests potential for new products or improved services, which could positively impact future revenue.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands to host investor day focused on precision manufacturing strategy"
+      "headline": "Halvav Brands to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy indicates the company will provide updates that could influence investor perception and future expectations.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "guidance",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics misses quarterly revenue estimates by 18%"
+      "headline": "Frelis Genomics misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $400M contract with a top-tier research institute"
+      "headline": "Nerval Biopharma secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial $400M contract with a reputable institute is a clear positive for future revenue and market validation.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $500M contract with a multinational manufacturer"
+      "headline": "Nerval Biopharma secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing another substantial $500M contract further boosts future revenue and strengthens market position.",
+        "longTerm": 9,
+        "shortTerm": 10,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics files for regulatory approval of new wireless connectivity offering"
+      "headline": "Frelis Genomics files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards commercializing a new product, indicating progress but not guaranteed success or immediate revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Halvav Brands withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market, even due to unfavorable conditions, suggests a loss of potential revenue and market share, though it could also be a cost-saving measure.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:24.162Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

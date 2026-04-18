@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group wins industry award for excellence in digital payments"
+      "headline": "Holtum Asset Group wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and could indirectly lead to future business, but the direct financial impact is not immediate or quantifiable.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $650M contract with a top-tier research institute"
+      "headline": "Zelvix Therapeutics secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a top-tier institute is a significant positive financial event, indicating future revenue and strong demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Yorvov Pharmaceuticals completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Completing an acquisition to strengthen cloud infrastructure suggests an investment in operational efficiency and future capabilities, which is generally positive but comes with integration risks.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics sees 15% drop in new customer orders this quarter"
+      "headline": "Zelvix Therapeutics sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly indicates weakening demand and will negatively impact future revenue and growth.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals sees mixed results in supply chain optimization pilot program"
+      "headline": "Yorvov Pharmaceuticals sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from an optimization pilot program suggest that anticipated cost savings or efficiency gains may not be fully realized, leading to uncertainty about future operational improvements.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Holtum Asset Group Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive like the COO creates uncertainty and could disrupt operations, especially if a successor is not immediately named.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group launches next-generation cloud infrastructure platform"
+      "headline": "Holtum Asset Group launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform indicates innovation and potential for new revenue streams or improved service, which is generally positive for the company.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech expands operations into Scandinavia markets"
+      "headline": "Xelvol Biotech expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets represents a growth strategy and potential for increased revenue, though market penetration takes time and investment.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:23.908Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces $9.6B share buyback program"
+      "headline": "Relvon Fuels announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to a positive impact on share price.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices faces regulatory review of enterprise software practices"
+      "headline": "Volval Devices faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines or operational changes, which is generally negative for a company.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables explores strategic alternatives for digital payments unit"
+      "headline": "Ulvon Renewables explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could be positive if the unit is underperforming or negative if it's a growth area.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 3,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels secures $800M contract with a major logistics provider"
+      "headline": "Jorvis Fuels secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a major provider is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 8% decline in operating income"
+      "headline": "Ulvon Renewables reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables expands operations into Central Europe markets"
+      "headline": "Ulvon Renewables expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets represents potential for growth and increased revenue, but also involves execution risk and initial costs.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels CTO addresses investor concerns in open letter"
+      "headline": "Jorvis Fuels CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CTO addressing investor concerns suggests there are existing issues, and the impact depends on whether the letter effectively alleviates those concerns.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:20.447Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

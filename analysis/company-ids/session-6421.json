@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics faces class action over supply chain optimization service disruption"
+      "headline": "Frelis Genomics faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption indicates potential significant legal costs, reputational damage, and financial penalties.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports unexpected decline in Middle East revenue"
+      "headline": "Myrnon Therapeutics reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region suggests weakening demand or operational issues impacting sales in that market.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences explores strategic alternatives for enterprise software unit"
+      "headline": "Calvis Sciences explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit often signals a potential sale or restructuring, which can be positive if it streamlines operations or negative if it indicates underperformance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $75M contract with a multinational manufacturer"
+      "headline": "Frelis Genomics secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a multinational manufacturer is a clear positive for revenue and market validation.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics misses quarterly revenue estimates by 3%"
+      "headline": "Myrnon Therapeutics misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates, even by a small margin, typically leads to negative market reaction due to unmet expectations.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees 10% margin improvement in latest quarter"
+      "headline": "Frelis Genomics sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates enhanced operational efficiency and profitability, which is a strong positive financial signal.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:05.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -46,21 +46,62 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices announces breakthrough in enterprise software"
+      "headline": "Nolvis Devices announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' suggests future positive impact from new product capabilities, but the immediate financial effect is uncertain without details on commercialization.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 7,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $500M contract with a national infrastructure agency"
+      "headline": "Brevon Microchips secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and significant revenue stream, positively impacting the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software misses quarterly revenue estimates by 10%"
+      "headline": "Frelol Software misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected performance, likely leading to negative investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:13.614Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

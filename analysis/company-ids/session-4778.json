@@ -40,35 +40,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $180M contract with a top-tier research institute"
+      "headline": "Pleven Trading Co secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract with a top-tier institute is a clear positive for revenue and reputation.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Arnos Marketplace reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressuring margins indicate a negative impact on profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace faces class action over digital payments service disruption"
+      "headline": "Arnos Marketplace faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption implies potential legal costs, reputational damage, and financial liabilities.",
+        "longTerm": -8,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co announces breakthrough in data analytics"
+      "headline": "Pleven Trading Co announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics suggests potential for new products, competitive advantage, and future revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co recalls products in renewable storage line due to quality concerns"
+      "headline": "Pleven Trading Co recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially reduce future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:42.838Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors to present at Tech Leadership Conference"
+      "headline": "Plevyl Advisors to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference offers some visibility but the direct financial impact is usually minimal and indirect.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities loses key contract in Central Europe to competitor"
+      "headline": "Creven Securities loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract implies a direct negative impact on revenue and potentially market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities delays product launch in renewable storage segment"
+      "headline": "Creven Securities delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can lead to missed revenue opportunities, increased development costs, and potential loss of market share.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software to host investor day focused on wireless connectivity strategy"
+      "headline": "Relvan Software to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day provides an opportunity to communicate strategy and potentially boost investor confidence, but direct financial impact is indirect.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $320M contract with a major logistics provider"
+      "headline": "Yorval Partners secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a major client provides a clear and substantial positive impact on future revenue.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities faces regulatory review of enterprise software practices"
+      "headline": "Creven Securities faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty, potential fines, and operational disruptions, leading to a negative financial outlook.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners wins industry award for excellence in renewable storage"
+      "headline": "Yorval Partners wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Winning an industry award can enhance reputation and brand visibility, potentially leading to increased sales, but the direct financial impact is indirect and hard to quantify.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:21:06.423Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

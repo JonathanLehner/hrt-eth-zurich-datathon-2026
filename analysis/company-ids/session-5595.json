@@ -58,28 +58,79 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma confirms participation in Tech Leadership Conference"
+      "headline": "Zrovum Biopharma confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference offers minor visibility and networking opportunities but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices files for regulatory approval of new enterprise software offering"
+      "headline": "Volval Devices files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step towards a new product launch, indicating progress but not guaranteeing approval or immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics wins industry award for excellence in enterprise software"
+      "headline": "Myrnon Therapeutics wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides positive recognition and can enhance reputation, potentially aiding sales indirectly, but does not guarantee direct financial gains.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech completes strategic acquisition to strengthen process automation"
+      "headline": "Xelvol Biotech completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen process automation is generally positive for efficiency and growth, though integration risks are inherent.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:10.735Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

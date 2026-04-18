@@ -50,35 +50,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $250M contract with a major logistics provider"
+      "headline": "Orevov Solutions secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics announces significant capital expenditure plan for Latin America"
+      "headline": "Myrnon Therapeutics announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in Latin America suggests future growth potential but also involves immediate costs and execution risks.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces regulatory review of supply chain optimization practices"
+      "headline": "Relvon Fuels faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage, which is generally negative.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports 5% decline in operating income"
+      "headline": "Myrnon Therapeutics reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income is a clear negative financial indicator, suggesting reduced profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces class action over supply chain optimization service disruption"
+      "headline": "Relvon Fuels faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption represents a significant legal and financial risk, potentially leading to substantial costs and reputational damage.",
+        "longTerm": -8,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:49.567Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

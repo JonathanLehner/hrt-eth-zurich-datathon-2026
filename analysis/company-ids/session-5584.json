@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech begins scheduled maintenance of data analytics systems"
+      "headline": "Grevon Biotech begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause minor, temporary disruptions but is generally a neutral or slightly positive sign of good system management.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports 5% increase in customer acquisition"
+      "headline": "Relvos Biosciences reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a positive indicator of growing demand, which can lead to increased revenue.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries opens new office in Scandinavia"
+      "headline": "Zrovex Industries opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office signifies geographical expansion, which can lead to increased market reach and potential revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 3% margin improvement in latest quarter"
+      "headline": "Zrovex Industries sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates increased profitability, which is a direct positive for the company's financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics faces class action over digital payments service disruption"
+      "headline": "Myrnon Therapeutics faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class-action lawsuit over service disruption is a significant negative event that can lead to legal costs, potential damages, and reputational harm.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports 20% increase in customer acquisition"
+      "headline": "Relvos Biosciences reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A substantial 20% increase in customer acquisition is a strong positive indicator of growing demand and future revenue potential.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Myrnon Therapeutics reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with an 18% year-over-year increase is a very strong positive financial indicator.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:11.123Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial withdraws from Southeast Asia market citing unfavorable conditions"
+      "headline": "Wrelal Financial withdraws from Southeast Asia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market due to unfavorable conditions suggests a negative impact on revenue and growth prospects, though it could also be a strategic move to cut losses.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments CFO addresses investor concerns in open letter"
+      "headline": "Halven Investments CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CFO addressing investor concerns in an open letter indicates existing negative sentiment or issues, but the act itself could be an attempt to mitigate damage or provide clarity.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in automated logistics line due to quality concerns"
+      "headline": "Plevum Partners recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur immediate costs, damage reputation, and potentially reduce future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $75M contract with a global retailer"
+      "headline": "Ulvyn Microchips secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with a global retailer is a clear positive for revenue and market presence.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips completes planned facility upgrade in North America"
+      "headline": "Ulvyn Microchips completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or increased capacity, which is generally positive for future performance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners enters joint venture with a national infrastructure agency"
+      "headline": "Plevum Partners enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a national infrastructure agency suggests new business opportunities and potential revenue growth, leveraging a strong partner.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $800M contract with a leading cloud platform"
+      "headline": "Halven Investments secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial $800M contract with a leading cloud platform is a highly significant positive for revenue and market position.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips confirms participation in Emerging Markets Forum"
+      "headline": "Ulvyn Microchips confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a minor event, primarily for networking and visibility, with no direct or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:35.659Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

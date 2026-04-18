@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 8% decline in operating income"
+      "headline": "Nerval Biopharma reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "The reported decline in operating income indicates a negative financial performance for the company.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power warns of supply chain disruptions affecting Europe operations"
+      "headline": "Kelvik Power warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions in a key region suggests potential negative impacts on production, costs, and revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $320M contract with a national infrastructure agency"
+      "headline": "Xelvol Biotech secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a national agency represents a significant positive revenue stream and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power launches next-generation process automation platform"
+      "headline": "Kelvik Power launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform indicates innovation and potential for new revenue streams or improved operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 12,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics enters joint venture with an international consortium"
+      "headline": "Zelvix Therapeutics enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with an international consortium suggests strategic expansion and potential for shared resources, market access, and new opportunities.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech to host investor day focused on enterprise software strategy"
+      "headline": "Xelvol Biotech to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy provides an opportunity for the company to articulate its vision and potentially boost investor confidence, though it's not a direct financial event.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Zelvix Therapeutics reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth indicates strong financial performance and market demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces significant capital expenditure plan for Middle East"
+      "headline": "Xelvol Biotech announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a new region signals strategic expansion and potential for future growth, though it also implies upfront costs.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:25.456Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

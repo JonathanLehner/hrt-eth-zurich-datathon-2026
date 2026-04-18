@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources reports 7% decline in operating income"
+      "headline": "Nolvol Resources reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates weaker financial performance, likely leading to a negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces significant capital expenditure plan for Scandinavia"
+      "headline": "Zrovex Industries announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion suggests future growth potential but also involves upfront costs and execution risk.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $650M contract with a multinational manufacturer"
+      "headline": "Urvel Grid secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear boost to future revenue and demonstrates strong business performance.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $75M contract with a multinational manufacturer"
+      "headline": "Zrovex Industries secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract provides a positive boost to future revenue.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Zrovex Industries completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "A strategic acquisition aims to enhance capabilities and market position, but integration risks can introduce short-term uncertainty.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports 15% increase in customer acquisition"
+      "headline": "Zrovex Industries reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A significant increase in customer acquisition suggests growing demand for the company's products or services, leading to future revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources faces class action over wireless connectivity service disruption"
+      "headline": "Nolvol Resources faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption poses significant financial and reputational risks, leading to negative market sentiment.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions revises long-term strategy with focus on digital payments"
+      "headline": "Orevov Solutions revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on a growth area like digital payments can be positive, but execution and market acceptance introduce uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:21:24.889Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

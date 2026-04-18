@@ -46,21 +46,62 @@
       "barIx": 32,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma reports 5% decline in operating income"
+      "headline": "Zrovum Biopharma reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates a negative financial performance, likely impacting investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences recalls products in automated logistics line due to quality concerns"
+      "headline": "Zelvon Biosciences recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially reduce future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $320M contract with a multinational manufacturer"
+      "headline": "Krevum Pharmaceuticals secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract represents a clear positive revenue stream and validates the company's offerings.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:51.868Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -2,7 +2,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.1-flash-lite-preview";
 const DEFAULT_INPUT_DIR = "analysis/company-ids";
 const DEFAULT_CONCURRENCY = 100;
 const DEFAULT_RETRIES = 3;

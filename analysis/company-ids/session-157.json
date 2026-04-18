@@ -1,0 +1,107 @@
+{
+  "session": "157",
+  "companyCount": 3,
+  "headlineCount": 3,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Frelex Outlets",
+      "headlineCount": 1,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Frelex Outlets reports unexpected decline in Scandinavia revenue"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Zelvix Therapeutics",
+      "headlineCount": 1,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Zelvix Therapeutics secures $50M contract with a global retailer"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Relvos Biosciences",
+      "headlineCount": 1,
+      "firstBarIx": 22,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Relvos Biosciences faces class action over automated logistics service disruption"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 8,
+      "companyId": 0,
+      "companyName": "Frelex Outlets",
+      "headline": "Frelex Outlets reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "The unexpected decline in Scandinavia revenue indicates a negative impact on the company's financial performance due to reduced demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 8,
+      "companyId": 1,
+      "companyName": "Zelvix Therapeutics",
+      "headline": "Zelvix Therapeutics secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a global retailer represents a significant positive revenue stream and market validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 22,
+      "companyId": 2,
+      "companyName": "Relvos Biosciences",
+      "headline": "Relvos Biosciences faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit due to service disruption indicates potential legal costs, reputational damage, and financial liabilities.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:22:05.313Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

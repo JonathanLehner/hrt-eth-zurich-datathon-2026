@@ -48,28 +48,79 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce confirms participation in Capital Markets Day"
+      "headline": "Arnik Commerce confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Confirmation of participation in a Capital Markets Day is a neutral event that signals upcoming communication but provides no immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks files routine patent applications in digital payments"
+      "headline": "Halvax Networks files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications indicates ongoing R&D and intellectual property protection, which is a minor positive for future potential but has no immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $120M contract with a multinational manufacturer"
+      "headline": "Ixenix Technologies secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce delays product launch in wireless connectivity segment"
+      "headline": "Arnik Commerce delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative event, indicating potential missed revenue opportunities and operational setbacks.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:19.568Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

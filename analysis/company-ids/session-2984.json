@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces breakthrough in supply chain optimization"
+      "headline": "Xelvol Biotech announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests improved efficiency and cost savings, which is positive for operations.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels recalls products in process automation line due to quality concerns"
+      "headline": "Jorvis Fuels recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event, incurring costs and potentially damaging reputation and future sales.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions launches next-generation enterprise software platform"
+      "headline": "Orevov Solutions launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation software platform is a positive development, indicating innovation and potential for new revenue streams.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions signs multi-year partnership with a major logistics provider"
+      "headline": "Orevov Solutions signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a major logistics provider suggests a significant new revenue stream and market validation.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels revises long-term strategy with focus on precision manufacturing"
+      "headline": "Jorvis Fuels revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Revising a long-term strategy to focus on precision manufacturing suggests an effort to improve efficiency and product quality, which is generally positive.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions to present at Corporate Strategy Symposium"
+      "headline": "Wyrnor Solutions to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium offers visibility and networking opportunities but does not directly translate to immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels opens new office in Middle East"
+      "headline": "Jorvis Fuels opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office in the Middle East indicates geographical expansion, suggesting potential for new market penetration and revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:49.101Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

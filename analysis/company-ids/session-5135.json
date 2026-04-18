@@ -48,28 +48,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech launches next-generation automated logistics platform"
+      "headline": "Xelvol Biotech launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform suggests potential for increased efficiency and market share, but immediate financial impact is uncertain.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports strong demand in Europe, raises outlook"
+      "headline": "Grevel Diagnostics reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook indicate improved financial performance and positive investor sentiment.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 12% drop in new customer orders this quarter"
+      "headline": "Xelvol Biotech sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly implies reduced future revenue and negative financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences files for regulatory approval of new supply chain optimization offering"
+      "headline": "Calvis Sciences files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards commercialization, indicating future potential but no immediate revenue.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 7,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:46.296Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

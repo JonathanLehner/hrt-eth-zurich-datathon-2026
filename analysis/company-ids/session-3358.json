@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Talvix Holdings reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue indicates strong financial performance, positively impacting investor sentiment.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings loses key contract in Southeast Asia to competitor"
+      "headline": "Talvix Holdings loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor will negatively impact future revenue and market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores loses key contract in Asia Pacific to competitor"
+      "headline": "Xovep Stores loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor will negatively impact future revenue and market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co completes planned facility upgrade in Middle East"
+      "headline": "Jorval Trading Co completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which can positively impact future performance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets expands operations into Southeast Asia markets"
+      "headline": "Ixenis Outlets expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets indicates growth potential and increased revenue opportunities.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets faces class action over digital payments service disruption"
+      "headline": "Ixenis Outlets faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption poses financial risks from legal costs, potential damages, and reputational harm.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores begins scheduled maintenance of renewable storage systems"
+      "headline": "Xovep Stores begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that ensures system reliability but typically has minimal direct financial impact beyond expected costs.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:57.468Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

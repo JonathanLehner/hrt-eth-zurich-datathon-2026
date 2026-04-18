@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces $2.5B share buyback program"
+      "headline": "Talvix Holdings announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost EPS, leading to a positive short-term and potentially sustained long-term impact on share price.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial loses key contract in Southeast Asia to competitor"
+      "headline": "Ilval Financial loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a 'key contract' in a specific region indicates a direct negative impact on revenue and market position for Ilval Financial.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial names new head of precision manufacturing division"
+      "headline": "Ilval Financial names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "A change in divisional leadership is generally neutral unless specific positive or negative details about the new hire or the previous leader are provided.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces breakthrough in process automation"
+      "headline": "Talvix Holdings announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' in process automation suggests potential for increased efficiency, cost savings, or new revenue streams, which is positive.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $250M contract with an international consortium"
+      "headline": "Grevon Biotech secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with an international consortium represents a clear and significant positive revenue event for Grevon Biotech.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial revises long-term strategy with focus on enterprise software"
+      "headline": "Ilval Financial revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "A strategic shift towards enterprise software could be positive if it aligns with market trends, but the headline provides no details on execution or expected outcomes, making the immediate impact neutral and long-term uncertain.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings names new head of data analytics division"
+      "headline": "Halvix Holdings names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "A change in divisional leadership is generally neutral without further information about the new hire's background or specific plans.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:09.314Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

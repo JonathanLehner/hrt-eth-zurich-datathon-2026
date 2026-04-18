@@ -54,49 +54,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities files routine patent applications in precision manufacturing"
+      "headline": "Jorvyl Securities files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard operational activity with no immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Relvon Fuels begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational activity that might temporarily reduce output but is necessary for long-term efficiency and is unlikely to have a significant negative financial impact if planned.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $400M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract is a significant positive event that will boost revenue and potentially profitability.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $500M contract with an international consortium"
+      "headline": "Relvon Fuels secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract is a very significant positive event, indicating strong demand and future revenue.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees 7% drop in new customer orders this quarter"
+      "headline": "Relvon Fuels sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates weakening demand, which will negatively impact future revenue and growth prospects.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital expands operations into Europe markets"
+      "headline": "Zelvel Capital expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets represents a strategic growth initiative that could lead to increased revenue and market share, though initial costs may be incurred.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces regulatory review of digital payments practices"
+      "headline": "Zelvel Capital faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage, which could negatively impact the company.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:23.934Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

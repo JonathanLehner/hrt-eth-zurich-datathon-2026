@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports strong demand in Scandinavia, raises outlook"
+      "headline": "Dralol Computing reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in Scandinavia and a raised outlook indicate improved future financial performance for Dralol Computing.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores sees 5% drop in new customer orders this quarter"
+      "headline": "Holtar Stores sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders directly indicates weakening demand, which will negatively impact revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips announces significant capital expenditure plan for Middle East"
+      "headline": "Brevon Microchips announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in a new region suggests future growth potential but also involves immediate costs and execution risks.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing explores strategic alternatives for digital payments unit"
+      "headline": "Dralol Computing explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could unlock value or streamline operations, but also introduces uncertainty.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing recalls products in process automation line due to quality concerns"
+      "headline": "Dralol Computing recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially impact future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Holtar Stores completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen supply chain optimization is generally positive for efficiency and competitiveness, but integration risks exist.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:27.697Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

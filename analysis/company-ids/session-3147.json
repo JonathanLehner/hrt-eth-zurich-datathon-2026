@@ -38,28 +38,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $250M contract with a national infrastructure agency"
+      "headline": "Xovol Goods secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract is a direct and significant positive revenue event for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports 3% increase in customer acquisition"
+      "headline": "Xovol Goods reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition indicates positive business momentum and potential for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods announces significant capital expenditure plan for North America"
+      "headline": "Xovol Goods announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests future growth and expansion, but also implies immediate costs and execution risk.",
+        "longTerm": 6,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group CEO steps down unexpectedly citing personal reasons"
+      "headline": "Crevol Retail Group CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates leadership uncertainty and can disrupt strategic direction, typically viewed negatively by the market.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:16.121Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

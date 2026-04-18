@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for data analytics unit"
+      "headline": "Plevik Energy explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential sale or restructuring, which could unlock value or indicate underperformance.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group opens new office in Europe"
+      "headline": "Holtum Asset Group opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in Europe indicates business expansion and potential for increased market reach and revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for precision manufacturing unit"
+      "headline": "Plevik Energy explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a manufacturing unit suggests potential restructuring or divestiture to optimize operations or unlock value.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors sees mixed results in cloud infrastructure pilot program"
+      "headline": "Zrovov Advisors sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the future success and scalability of the cloud infrastructure initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces $3.8B share buyback program"
+      "headline": "Zrovov Advisors announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost shareholder value by reducing share count and increasing EPS.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners beats analyst expectations with strong earnings growth"
+      "headline": "Yorval Partners beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations with strong earnings growth is a clear positive signal for the company's financial performance and future prospects.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports strong demand in North America, raises outlook"
+      "headline": "Yorval Partners reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region combined with a raised outlook indicates improved business performance and positive future expectations.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces restructuring plan, cites challenging market conditions"
+      "headline": "Yorval Partners announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when citing challenging market conditions, suggests efforts to improve efficiency but also signals underlying business difficulties.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:56.359Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

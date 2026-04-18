@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Crevex Labs announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests future growth potential and increased operational capacity in a key region, but also involves immediate costs.",
+        "longTerm": 5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $500M contract with a multinational manufacturer"
+      "headline": "Ulvyn Microchips secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a multinational manufacturer provides a clear and substantial revenue stream.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $250M contract with a top-tier research institute"
+      "headline": "Talvep Computing secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a top-tier research institute indicates a significant revenue stream and validates the company's technology.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports unexpected decline in North America revenue"
+      "headline": "Crevex Labs reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a major region signals weakening demand or competitive pressures, negatively impacting financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips begins scheduled maintenance of automated logistics systems"
+      "headline": "Ulvyn Microchips begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that might cause minor, temporary disruptions but is generally expected and necessary for long-term efficiency.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports 12% decline in operating income"
+      "headline": "Brevon Microchips reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates reduced profitability, which is a clear negative for financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $120M contract with a major logistics provider"
+      "headline": "Talvep Computing secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a major logistics provider adds a significant revenue stream and demonstrates market penetration.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $250M contract with a national infrastructure agency"
+      "headline": "Talvep Computing secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national infrastructure agency provides a significant and stable revenue source, often implying government backing or critical sector involvement.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:03.190Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

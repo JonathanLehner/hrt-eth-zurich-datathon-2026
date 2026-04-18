@@ -34,14 +34,45 @@
       "barIx": 32,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics loses key contract in Middle East to competitor"
+      "headline": "Frelis Genomics loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Frelis Genomics losing a key contract will negatively impact its revenue and market position.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces regulatory review of process automation practices"
+      "headline": "Plevik Energy faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, which could negatively impact Plevik Energy's operations and reputation.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:53.784Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

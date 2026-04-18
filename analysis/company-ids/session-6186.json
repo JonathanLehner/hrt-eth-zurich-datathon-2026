@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $120M contract with a major logistics provider"
+      "headline": "Nerval Biopharma secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract is a direct positive financial event for the company, indicating future revenue.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries withdraws from Southeast Asia market citing unfavorable conditions"
+      "headline": "Strynal Industries withdraws from Southeast Asia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market due to unfavorable conditions suggests a negative impact on revenue and potentially a write-down of assets, though it could also be a strategic move to cut losses.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports unexpected decline in Scandinavia revenue"
+      "headline": "Nerval Biopharma reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region is a negative financial indicator for the company's performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma names new head of wireless connectivity division"
+      "headline": "Nerval Biopharma names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "A change in divisional leadership is generally neutral unless the new leader has a particularly strong or weak reputation, which is not stated here.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries CTO addresses investor concerns in open letter"
+      "headline": "Strynal Industries CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CTO addressing investor concerns suggests existing negative sentiment, and the impact depends on the content and effectiveness of the letter, which is not detailed.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics names new head of digital payments division"
+      "headline": "Grevel Diagnostics names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "A change in divisional leadership is generally neutral without further information about the new appointee or the division's strategic importance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics files for regulatory approval of new renewable storage offering"
+      "headline": "Grevel Diagnostics files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering is a positive step towards potential future revenue, but the approval and market success are not guaranteed.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:02.279Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

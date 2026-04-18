@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Ixenis Outlets warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "The warning of supply chain disruptions in a key region suggests potential negative impacts on production, delivery, and profitability for the company.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 15% drop in new customer orders this quarter"
+      "headline": "Zrovex Industries sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 15% drop in new customer orders directly indicates weakening demand and will negatively impact future revenue and earnings.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 7% drop in new customer orders this quarter"
+      "headline": "Zrovex Industries sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders, while less severe than 15%, still indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $250M contract with a major logistics provider"
+      "headline": "Wyrnor Solutions secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial $250M contract with a major provider is a clear positive for future revenue and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Ixenis Outlets begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a necessary operational activity that can temporarily reduce production capacity but is generally a positive for long-term operational efficiency and reliability.",
+        "longTerm": 2,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power faces regulatory review of enterprise software practices"
+      "headline": "Kelvik Power faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review, especially concerning software practices, introduces uncertainty and potential for fines, operational changes, or reputational damage.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:40.508Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

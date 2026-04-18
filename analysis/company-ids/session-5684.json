@@ -66,56 +66,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Wrelal Financial recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "The product recall due to quality concerns will likely lead to immediate costs, reputational damage, and potential loss of future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces breakthrough in process automation"
+      "headline": "Jovik Asset Group announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for improved efficiency and cost savings, which could positively impact profitability.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group expands operations into Central Europe markets"
+      "headline": "Jovik Asset Group expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets indicates potential for revenue growth and increased market share, though initial costs may be incurred.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy completes strategic acquisition to strengthen renewable storage"
+      "headline": "Zelval Energy completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a key business area like renewable storage is generally positive for long-term growth and market position.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments CEO steps down unexpectedly citing personal reasons"
+      "headline": "Krevan Investments CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure, especially citing personal reasons without further context, often creates uncertainty and can be perceived negatively by the market.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group sees 18% margin improvement in latest quarter"
+      "headline": "Jovik Asset Group sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 18% margin improvement in the latest quarter is a strong positive indicator of operational efficiency and profitability.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy launches next-generation process automation platform"
+      "headline": "Zelval Energy launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation process automation platform suggests innovation and potential for improved efficiency or new revenue streams.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy completes planned facility upgrade in Central Europe"
+      "headline": "Zelval Energy completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive for the company's long-term capabilities.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:32.643Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

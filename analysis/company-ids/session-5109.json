@@ -65,56 +65,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $650M contract with a national infrastructure agency"
+      "headline": "Zrovov Advisors secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national agency is a clear positive for revenue and business stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $650M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a major logistics provider is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors delays product launch in process automation segment"
+      "headline": "Zrovov Advisors delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can signal development issues, missed revenue opportunities, and potential competitive disadvantages.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets publishes annual sustainability report"
+      "headline": "Ixenis Outlets publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing a sustainability report is a standard corporate practice that generally has a neutral to slightly positive impact on reputation, but no direct financial impact is implied.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces breakthrough in enterprise software"
+      "headline": "Zrovov Advisors announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough in enterprise software suggests future product innovation and potential for new revenue streams, but lacks specific details on commercialization or immediate impact.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets revises long-term strategy with focus on automated logistics"
+      "headline": "Ixenis Outlets revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "Revising a long-term strategy towards automated logistics suggests potential for efficiency gains and cost reductions, but the financial impact is speculative and far off.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors wins industry award for excellence in renewable storage"
+      "headline": "Zrovov Advisors wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Winning an industry award is a positive for reputation and brand recognition, potentially aiding sales and talent acquisition, but has no direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports unexpected decline in Latin America revenue"
+      "headline": "Talvix Holdings reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region is a negative indicator for current performance and potentially future growth, impacting earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:48.084Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

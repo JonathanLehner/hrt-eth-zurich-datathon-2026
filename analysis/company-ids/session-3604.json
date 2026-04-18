@@ -50,35 +50,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics opens new office in Europe"
+      "headline": "Frelis Genomics opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in Europe indicates business expansion, which could lead to increased market reach and potential revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores lowers full-year guidance amid softening demand"
+      "headline": "Xovep Stores lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a clear negative signal for future financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $320M contract with a multinational manufacturer"
+      "headline": "Xovep Stores secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $320M contract is a strong positive for future revenue and business stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Xovep Stores reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth indicates strong current business performance.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands sees 20% margin improvement in latest quarter"
+      "headline": "Joval Brands sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates significantly enhanced profitability and operational efficiency.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:39.811Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

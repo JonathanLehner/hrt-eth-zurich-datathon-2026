@@ -1,0 +1,116 @@
+{
+  "session": "512",
+  "companyCount": 2,
+  "headlineCount": 4,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Strynal Industries",
+      "headlineCount": 3,
+      "firstBarIx": 1,
+      "headlineIds": [
+        "H001",
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Strynal Industries secures $400M contract with a global retailer",
+        "Strynal Industries revises long-term strategy with focus on automated logistics",
+        "Strynal Industries faces regulatory review of enterprise software practices"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Plevik Energy",
+      "headlineCount": 1,
+      "firstBarIx": 16,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Plevik Energy secures $75M contract with a major logistics provider"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 1,
+      "companyId": 0,
+      "companyName": "Strynal Industries",
+      "headline": "Strynal Industries secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "This significant contract win with a global retailer will positively impact revenue and market sentiment.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 16,
+      "companyId": 1,
+      "companyName": "Plevik Energy",
+      "headline": "Plevik Energy secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "This substantial contract win for Plevik Energy indicates new revenue and potential market expansion.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 21,
+      "companyId": 0,
+      "companyName": "Strynal Industries",
+      "headline": "Strynal Industries revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy signals a potential shift in business direction and future growth areas, but lacks immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "guidance",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 49,
+      "companyId": 0,
+      "companyName": "Strynal Industries",
+      "headline": "Strynal Industries faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant uncertainty and potential negative financial consequences, including fines and operational changes.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:23:14.048Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

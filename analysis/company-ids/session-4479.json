@@ -48,28 +48,79 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors sees 3% margin improvement in latest quarter"
+      "headline": "Zrovov Advisors sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "The reported 3% margin improvement indicates stronger profitability for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $250M contract with a global retailer"
+      "headline": "Zrovov Advisors secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $250M contract with a global retailer represents a substantial revenue boost and market validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners loses key contract in North America to competitor"
+      "headline": "Yorval Partners loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract to a competitor signifies a reduction in future revenue and market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Zelvel Capital reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a significant 25% year-over-year increase indicates strong business performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:47.438Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

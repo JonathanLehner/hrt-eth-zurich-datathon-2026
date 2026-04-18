@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group completes planned facility upgrade in North America"
+      "headline": "Holtum Asset Group completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces major organizational restructuring"
+      "headline": "Yorval Partners announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring can be a mixed signal, potentially leading to efficiency gains or disruption, making the immediate financial impact uncertain.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces $5.7B share buyback program"
+      "headline": "Holtum Asset Group announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $650M contract with a global retailer"
+      "headline": "Holtum Asset Group secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a global retailer is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets loses key contract in Central Europe to competitor"
+      "headline": "Ixenis Outlets loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially to a competitor, implies a loss of revenue and market share, which is a significant negative.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Ixenis Outlets warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions indicates potential operational issues, increased costs, and revenue shortfalls, leading to a negative outlook.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:55.676Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

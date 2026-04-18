@@ -65,56 +65,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs misses quarterly revenue estimates by 3%"
+      "headline": "Yorven Labs misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates weaker-than-expected financial performance, likely leading to a negative market reaction.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 3% decline in operating income"
+      "headline": "Yorvov Pharmaceuticals reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income signals reduced profitability from core operations, which is a negative financial indicator.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals lowers full-year guidance amid softening demand"
+      "headline": "Yorvov Pharmaceuticals lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a strong negative signal for future revenue and profitability.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces regulatory review of automated logistics practices"
+      "headline": "Ulvyn Microchips faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, fines, or operational changes, which is a negative for the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $120M contract with a national infrastructure agency"
+      "headline": "Frelol Software secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear positive revenue stream and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports strong demand in Middle East, raises outlook"
+      "headline": "Ulvyn Microchips reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region leading to a raised outlook is a significant positive indicator for future financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals misses quarterly revenue estimates by 10%"
+      "headline": "Yorvov Pharmaceuticals misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A significant 10% revenue miss indicates much weaker-than-expected financial performance, likely leading to a strong negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Yorvov Pharmaceuticals Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive, especially a Chief Strategy Officer, introduces uncertainty about future strategic direction and stability.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:21:28.453Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

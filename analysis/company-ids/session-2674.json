@@ -48,28 +48,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Grevon Biotech reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly indicate a negative impact on profitability for Grevon Biotech.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy misses quarterly revenue estimates by 15%"
+      "headline": "Plevik Energy misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $400M contract with a leading cloud platform"
+      "headline": "Zelval Energy secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a leading platform is a significant positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $250M contract with a multinational manufacturer"
+      "headline": "Zelval Energy secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing another substantial contract further boosts revenue and diversifies Zelval Energy's client base.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:48.397Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

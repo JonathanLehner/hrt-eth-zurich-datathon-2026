@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions misses quarterly revenue estimates by 20%"
+      "headline": "Wyrnor Solutions misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss indicates weaker-than-expected financial performance, negatively impacting investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports unexpected decline in Latin America revenue"
+      "headline": "Wyrnik Sciences reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional revenue stream suggests weakening demand or operational issues in that market, negatively affecting overall financial outlook.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables sees 8% drop in new customer orders this quarter"
+      "headline": "Orevex Renewables sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A drop in new customer orders directly indicates weakening demand for the company's offerings, negatively impacting future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files for regulatory approval of new renewable storage offering"
+      "headline": "Orevex Renewables files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step towards launching a new product, indicating potential future revenue streams and market expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions confirms participation in Global Innovation Summit"
+      "headline": "Wyrnor Solutions confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a minor positive for visibility and networking, but has no direct or quantifiable financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $320M contract with a multinational manufacturer"
+      "headline": "Plevep Power secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and substantial boost to future revenue and order backlog, positively impacting financial performance.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables announces breakthrough in wireless connectivity"
+      "headline": "Orevex Renewables announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' suggests potential for new products or improved offerings, which could lead to future revenue, but the financial impact is highly speculative without more details.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports 25% decline in operating income"
+      "headline": "Wyrnik Sciences reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates a substantial deterioration in profitability from core operations, negatively impacting financial health.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:37.423Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

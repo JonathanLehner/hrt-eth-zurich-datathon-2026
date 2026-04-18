@@ -53,49 +53,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co CEO steps down unexpectedly citing personal reasons"
+      "headline": "Jorval Trading Co CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CEO, even for personal reasons, typically creates uncertainty and can be perceived negatively by the market.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Frelis Genomics reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook indicate improved financial performance and positive future prospects for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces breakthrough in wireless connectivity"
+      "headline": "Frelis Genomics announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A breakthrough in technology suggests potential for new products, market advantage, and future revenue streams.",
+        "longTerm": 8,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $650M contract with a top-tier research institute"
+      "headline": "Frelis Genomics secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a reputable institute provides a clear and substantial revenue stream and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores wins industry award for excellence in supply chain optimization"
+      "headline": "Xovep Stores wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Winning an industry award for operational excellence enhances reputation and may signal improved efficiency, but lacks direct financial quantification.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports 8% increase in customer acquisition"
+      "headline": "Jorval Trading Co reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition indicates growing demand and potential for future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics recalls products in renewable storage line due to quality concerns"
+      "headline": "Frelis Genomics recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will likely result in significant costs, reputational damage, and potential loss of sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:49.803Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

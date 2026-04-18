@@ -46,21 +46,62 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Frelol Software Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a COO can create short-term operational uncertainty and potentially signal underlying issues, though the long-term impact depends on the replacement and company stability.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Nolvav Commerce reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial health and operational success.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over precision manufacturing service disruption"
+      "headline": "Jovor Networks faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption implies potential significant financial and reputational damage, creating immediate negative sentiment and long-term legal costs and uncertainty.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:54.514Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

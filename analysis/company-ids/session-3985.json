@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities delays product launch in cloud infrastructure segment"
+      "headline": "Jorvyl Securities delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch in a key segment indicates operational issues and a potential loss of market opportunity.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 7% drop in new customer orders this quarter"
+      "headline": "Talvix Holdings sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly impacts future revenue and indicates weakening demand for the company's offerings.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Halvix Holdings reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth indicates strong financial performance and market demand.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $180M contract with a leading cloud platform"
+      "headline": "Holtar Stores secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a leading platform represents a significant revenue stream and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Jorvyl Securities completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a specific area suggests growth and improved capabilities, though integration risks are inherent.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $50M contract with a global retailer"
+      "headline": "Halvix Holdings secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a global retailer is a positive development, indicating new revenue and market penetration.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:53.186Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

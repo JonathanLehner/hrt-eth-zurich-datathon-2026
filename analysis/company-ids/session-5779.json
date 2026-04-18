@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices achieves key regulatory milestone ahead of schedule"
+      "headline": "Volval Devices achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a key regulatory milestone ahead of schedule is a positive operational development that can accelerate product commercialization or market access.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $250M contract with a major logistics provider"
+      "headline": "Yorven Labs secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant $250M contract with a major provider is a clear and substantial positive for revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices loses key contract in Latin America to competitor"
+      "headline": "Volval Devices loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor in a specific region is a negative event, indicating lost revenue and competitive pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs withdraws from Central Europe market citing unfavorable conditions"
+      "headline": "Yorven Labs withdraws from Central Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market, even due to unfavorable conditions, implies a reduction in potential revenue and market presence, which is generally negative.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software names new head of process automation division"
+      "headline": "Relvan Software names new head of process automation division",
+      "sentiment": {
+        "reasoning": "A change in divisional leadership is a neutral event unless specific positive or negative attributes of the new leader or the circumstances of the change are mentioned.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Nerval Biopharma announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a region indicates future investment and potential growth, but also immediate costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports unexpected decline in Latin America revenue"
+      "headline": "Volval Devices reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a specific region is a clear negative financial indicator.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:47.408Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

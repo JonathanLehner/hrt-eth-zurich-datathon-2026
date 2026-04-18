@@ -1,0 +1,145 @@
+{
+  "session": "402",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Plevep Power",
+      "headlineCount": 2,
+      "firstBarIx": 4,
+      "headlineIds": [
+        "H001",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Plevep Power begins scheduled maintenance of supply chain optimization systems",
+        "Plevep Power to host investor day focused on process automation strategy"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Relvon Fuels",
+      "headlineCount": 2,
+      "firstBarIx": 7,
+      "headlineIds": [
+        "H002",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Relvon Fuels delays product launch in cloud infrastructure segment",
+        "Relvon Fuels revises long-term strategy with focus on precision manufacturing"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Wyrnor Solutions",
+      "headlineCount": 1,
+      "firstBarIx": 44,
+      "headlineIds": [
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Wyrnor Solutions sees 3% margin improvement in latest quarter"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 4,
+      "companyId": 0,
+      "companyName": "Plevep Power",
+      "headline": "Plevep Power begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause minor, temporary disruptions but is generally a positive for long-term efficiency.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 7,
+      "companyId": 1,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is generally negative as it postpones potential revenue and could signal underlying issues, though the long-term impact depends on the reason for the delay.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 10,
+      "companyId": 1,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "A strategic revision towards precision manufacturing suggests a potential for improved efficiency and product quality, which could be positive long-term, but the immediate impact is uncertain as execution details are unknown.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 26,
+      "companyId": 0,
+      "companyName": "Plevep Power",
+      "headline": "Plevep Power to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy can be a positive signal for transparency and future growth prospects, but the actual impact depends on the information revealed.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 44,
+      "companyId": 2,
+      "companyName": "Wyrnor Solutions",
+      "headline": "Wyrnor Solutions sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement is a clear positive financial indicator, suggesting increased profitability.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:22:52.962Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

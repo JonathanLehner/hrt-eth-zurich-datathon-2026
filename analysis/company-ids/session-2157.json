@@ -64,49 +64,130 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace files routine patent applications in data analytics"
+      "headline": "Arnos Marketplace files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a minor positive signal for future innovation but has no immediate direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods opens new office in Middle East"
+      "headline": "Xovol Goods opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates market expansion, which is a positive long-term strategic move but involves initial costs and uncertain immediate returns.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $650M contract with a national infrastructure agency"
+      "headline": "Jovik Asset Group secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national agency is a significant positive event, indicating future revenue and strong business prospects.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group loses key contract in Asia Pacific to competitor"
+      "headline": "Jovik Asset Group loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor is a significant negative event, implying a loss of revenue and market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands enters joint venture with a global retailer"
+      "headline": "Halvav Brands enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a global retailer is a strategic move that can lead to market expansion and increased sales, but initial benefits may be offset by integration challenges.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods expands operations into Latin America markets"
+      "headline": "Xovol Goods expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets is a strategic growth initiative that entails initial investment and uncertain returns, but offers long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports 15% decline in operating income"
+      "headline": "Jovik Asset Group reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported 15% decline in operating income is a clear negative financial indicator, reflecting reduced profitability.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:16.496Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

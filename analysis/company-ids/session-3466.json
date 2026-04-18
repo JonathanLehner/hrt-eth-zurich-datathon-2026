@@ -56,56 +56,147 @@
       "barIx": 25,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics delays product launch in enterprise software segment"
+      "headline": "Myrnon Therapeutics delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch is a negative operational event that can impact future revenue and market position.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Jorval Trading Co recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event impacting reputation, costs, and potentially future sales.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees 20% drop in new customer orders this quarter"
+      "headline": "Zelvon Biosciences sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics opens new office in Central Europe"
+      "headline": "Myrnon Therapeutics opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in a region suggests business expansion, which could lead to increased market reach and future revenue, but also involves initial costs.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $120M contract with a leading cloud platform"
+      "headline": "Zelvon Biosciences secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a leading platform is a clear positive event, indicating future revenue and market validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences files routine patent applications in renewable storage"
+      "headline": "Zelvon Biosciences files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard business activity that protects intellectual property but does not have an immediate or significant direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co files routine patent applications in data analytics"
+      "headline": "Jorval Trading Co files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard business activity that protects intellectual property but does not have an immediate or significant direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $650M contract with a leading cloud platform"
+      "headline": "Myrnon Therapeutics secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a very large contract with a leading platform is a highly positive event, indicating substantial future revenue and strong market validation.",
+        "longTerm": 9,
+        "shortTerm": 10,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:20.182Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

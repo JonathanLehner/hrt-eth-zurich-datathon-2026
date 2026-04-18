@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 18% decline in operating income"
+      "headline": "Krevan Investments reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates poor financial performance, negatively impacting investor sentiment and future outlook.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 18% margin improvement in latest quarter"
+      "headline": "Calvis Sciences sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A substantial margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive for the company's financial health.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments delays product launch in automated logistics segment"
+      "headline": "Krevan Investments delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can signal development issues, missed market opportunities, and potentially impact future revenue projections.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces breakthrough in automated logistics"
+      "headline": "Halven Investments announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough suggests potential for new products, competitive advantage, and future revenue streams, creating positive market sentiment.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports unexpected decline in Central Europe revenue"
+      "headline": "Zelvel Capital reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in regional revenue indicates weakening demand or competitive pressures, negatively impacting financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital loses key contract in Asia Pacific to competitor"
+      "headline": "Zelvel Capital loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts revenue, market share, and competitive standing, leading to negative financial implications.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments launches next-generation wireless connectivity platform"
+      "headline": "Krevan Investments launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform indicates innovation, potential for new revenue streams, and competitive advantage, which is a positive development.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:21.691Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

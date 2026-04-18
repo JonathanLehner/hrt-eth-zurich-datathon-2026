@@ -54,56 +54,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables begins scheduled maintenance of process automation systems"
+      "headline": "Ulvon Renewables begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause minor, temporary disruptions but is generally expected and necessary for long-term efficiency.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables names new head of automated logistics division"
+      "headline": "Ulvon Renewables names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division can bring new strategies or efficiencies, but the immediate financial impact is often neutral or slightly positive due to potential future improvements.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources faces regulatory review of supply chain optimization practices"
+      "headline": "Nolvol Resources faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, which is generally negative for a company, especially in the short term.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources begins scheduled maintenance of data analytics systems"
+      "headline": "Nolvol Resources begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause minor, temporary disruptions but is generally expected and necessary for long-term efficiency.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables files routine patent applications in renewable storage"
+      "headline": "Ulvon Renewables files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications indicates ongoing R&D and potential future innovation, which is a long-term positive, but has no immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $400M contract with a top-tier research institute"
+      "headline": "Ulvon Renewables secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a reputable entity is a clear positive for revenue and market validation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports rising costs pressuring margins in enterprise software"
+      "headline": "Jorvis Fuels reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins are a clear negative for profitability and financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $650M contract with a leading cloud platform"
+      "headline": "Ulvon Renewables secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a leading technology platform is a strong positive for revenue, market position, and future growth potential.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:20.590Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

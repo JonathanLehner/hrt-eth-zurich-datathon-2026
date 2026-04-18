@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions opens new office in Europe"
+      "headline": "Orevov Solutions opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in Europe indicates business expansion, which is generally positive for growth but the immediate financial impact is likely minimal.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions announces breakthrough in automated logistics"
+      "headline": "Wyrnor Solutions announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in automated logistics suggests a potential competitive advantage and future revenue streams, but the immediate financial impact is speculative.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports 10% increase in customer acquisition"
+      "headline": "Wyrnor Solutions reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition indicates strong demand and potential for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources revises long-term strategy with focus on wireless connectivity"
+      "headline": "Nolvol Resources revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "Revising a long-term strategy to focus on wireless connectivity indicates a significant directional shift that could lead to future growth, but its immediate impact is uncertain.",
+        "longTerm": 4,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma completes strategic acquisition to strengthen automated logistics"
+      "headline": "Zrovum Biopharma completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen logistics suggests operational improvements and potential cost efficiencies, but also involves integration risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions faces regulatory review of renewable storage practices"
+      "headline": "Wyrnor Solutions faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Facing a regulatory review introduces uncertainty and potential for fines or operational changes, which is generally negative.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:17.925Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

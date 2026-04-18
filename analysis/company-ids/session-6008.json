@@ -65,56 +65,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities misses quarterly revenue estimates by 12%"
+      "headline": "Creven Securities misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin indicates weaker-than-expected financial performance, likely leading to a negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities begins scheduled maintenance of digital payments systems"
+      "headline": "Creven Securities begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that might cause minor, temporary disruptions but is generally expected and necessary for system health.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group expands operations into Asia Pacific markets"
+      "headline": "Jovik Asset Group expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into new, potentially high-growth markets like Asia Pacific suggests strategic growth and increased revenue opportunities.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities recalls products in enterprise software line due to quality concerns"
+      "headline": "Creven Securities recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns indicates operational issues, potential financial costs, and reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities faces regulatory review of precision manufacturing practices"
+      "headline": "Creven Securities faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review indicates potential compliance issues, which could lead to fines, operational changes, or reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels board meeting to discuss major strategic initiative"
+      "headline": "Jorvis Fuels board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a major strategic initiative is a neutral event that signals potential future changes but provides no concrete information on the nature or impact of the initiative.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group files for regulatory approval of new renewable storage offering"
+      "headline": "Holtum Asset Group files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new renewable storage offering indicates progress towards a new product launch in a potentially growing market.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels to present at Emerging Markets Forum"
+      "headline": "Jorvis Fuels to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a marketing and investor relations activity that can increase visibility but does not directly imply a financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:29.423Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

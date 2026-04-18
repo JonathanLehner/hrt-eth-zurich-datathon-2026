@@ -6,7 +6,7 @@ import { asyncBufferFromFile, parquetReadObjects } from "hyparquet";
 import { compressors } from "hyparquet-compressors";
 
 const DEFAULT_FILE = "data/headlines_seen_train.parquet";
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.1-flash-lite-preview";
 const DEFAULT_CONCURRENCY = 3;
 const DEFAULT_RETRIES = 3;
 const DEFAULT_OUTPUT_DIR = "analysis";

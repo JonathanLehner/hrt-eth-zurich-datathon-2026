@@ -65,56 +65,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences faces class action over data analytics service disruption"
+      "headline": "Zelvon Biosciences faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption is a significant negative event that could lead to financial penalties and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 8% decline in operating income"
+      "headline": "Yorvov Pharmaceuticals reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income indicates a significant negative performance trend for the company.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group wins industry award for excellence in renewable storage"
+      "headline": "Crevol Retail Group wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Winning an industry award for excellence can enhance reputation and potentially attract new business, but the direct financial impact is indirect.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group recalls products in enterprise software line due to quality concerns"
+      "headline": "Crevol Retail Group recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially lead to lost sales.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech begins scheduled maintenance of data analytics systems"
+      "headline": "Grevon Biotech begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is unlikely to have a significant financial impact unless it causes unexpected disruptions.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 15% decline in operating income"
+      "headline": "Grevon Biotech reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a substantial negative financial indicator, suggesting significant operational challenges.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group delays product launch in wireless connectivity segment"
+      "headline": "Crevol Retail Group delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can result in missed revenue opportunities, increased development costs, and potential loss of market share.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces regulatory review of precision manufacturing practices"
+      "headline": "Crevol Retail Group faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review indicates potential non-compliance, which could lead to fines, operational changes, or reputational damage.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:41.943Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

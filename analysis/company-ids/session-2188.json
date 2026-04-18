@@ -62,42 +62,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group explores strategic alternatives for precision manufacturing unit"
+      "headline": "Holtum Asset Group explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests potential divestiture or restructuring, which could unlock value or streamline operations, but the outcome is uncertain.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces $2.5B share buyback program"
+      "headline": "Holtum Asset Group announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals confidence from management and can boost earnings per share, thus being positive for shareholders.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $500M contract with a national infrastructure agency"
+      "headline": "Halven Investments secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a national agency represents a significant revenue stream and validates the company's capabilities.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports rising costs pressuring margins in digital payments"
+      "headline": "Yorval Partners reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins indicate a negative financial trend for the company's profitability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems confirms participation in Emerging Markets Forum"
+      "headline": "Brevep Systems confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a minor event that offers networking and visibility, but does not directly translate to immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $650M contract with a multinational manufacturer"
+      "headline": "Yorval Partners secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a multinational manufacturer represents a significant revenue stream and validates the company's capabilities.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:25.709Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

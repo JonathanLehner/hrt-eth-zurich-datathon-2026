@@ -53,49 +53,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $120M contract with a major logistics provider"
+      "headline": "Kelvik Power secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract indicates new revenue and business growth for Kelvik Power.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports 7% decline in operating income"
+      "headline": "Kelvik Power reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates weaker financial performance, likely due to increased costs or reduced revenue efficiency.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions opens new office in Scandinavia"
+      "headline": "Wyrnor Solutions opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office in a new region suggests business expansion and potential for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Kelvik Power reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region and an increased outlook signal positive future financial performance and investor confidence.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $250M contract with an international consortium"
+      "headline": "Kelvik Power secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with an international consortium represents significant new revenue and market validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions files for regulatory approval of new enterprise software offering"
+      "headline": "Wyrnor Solutions files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a step towards launching a new product, indicating potential future revenue streams, but success is not guaranteed.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces $4.1B share buyback program"
+      "headline": "Creven Securities announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically boosts EPS and signals management confidence, returning value to shareholders.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:34.648Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

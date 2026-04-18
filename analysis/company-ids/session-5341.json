@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial names new head of enterprise software division"
+      "headline": "Ilval Financial names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head suggests a strategic move to potentially improve or refocus the enterprise software division, but the immediate financial impact is uncertain.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems sees 8% drop in new customer orders this quarter"
+      "headline": "Brevep Systems sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders directly indicates reduced demand, which will negatively impact future revenue and earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 8% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders directly indicates reduced demand, which will negatively impact future revenue and earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes planned facility upgrade in Central Europe"
+      "headline": "Ilval Financial completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which can lead to long-term cost savings or increased output.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Brevep Systems files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards launching a new product, indicating potential future revenue growth, but the approval and market success are not guaranteed.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces significant capital expenditure plan for Scandinavia"
+      "headline": "Ilval Financial announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates future investment and potential growth or operational improvements in a new or existing region, but also involves immediate costs and execution risk.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:28.869Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources files for regulatory approval of new automated logistics offering"
+      "headline": "Kelvos Resources files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering indicates progress towards a potential new revenue stream, but the actual impact is delayed and subject to approval.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 7,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries launches next-generation digital payments platform"
+      "headline": "Strynal Industries launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform suggests potential for increased market share and revenue, but immediate financial impact depends on adoption.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Urvel Grid reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial performance.",
+        "longTerm": 5,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports 5% decline in operating income"
+      "headline": "Urvel Grid reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates a negative trend in profitability, which is a concern for investors.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries recalls products in renewable storage line due to quality concerns"
+      "headline": "Strynal Industries recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event, impacting reputation, costs, and potentially future sales.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments files routine patent applications in cloud infrastructure"
+      "headline": "Halven Investments files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a standard business activity that protects intellectual property but typically has minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources faces regulatory review of data analytics practices"
+      "headline": "Kelvos Resources faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review indicates potential issues that could lead to fines, operational changes, or reputational damage, creating significant negative uncertainty.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries misses quarterly revenue estimates by 15%"
+      "headline": "Strynal Industries misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin is a strong negative indicator of financial performance and market expectations.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:33.509Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

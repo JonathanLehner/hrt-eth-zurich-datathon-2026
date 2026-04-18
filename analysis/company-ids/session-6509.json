@@ -60,35 +60,96 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group completes planned facility upgrade in Middle East"
+      "headline": "Varvov Retail Group completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency and capacity, which is generally positive.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands launches next-generation enterprise software platform"
+      "headline": "Joval Brands launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation software platform indicates potential for new revenue streams or improved internal efficiency, but initial adoption and success are uncertain.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Xovol Goods warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions suggests potential negative impacts on production, delivery, and costs.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Pleven Trading Co revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Revising strategy to focus on cloud infrastructure suggests potential for future efficiency and scalability, but immediate financial benefits are unclear and there might be transition costs.",
+        "longTerm": 5,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports 10% increase in customer acquisition"
+      "headline": "Joval Brands reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition is a clear positive indicator for future revenue and market share.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:30.639Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

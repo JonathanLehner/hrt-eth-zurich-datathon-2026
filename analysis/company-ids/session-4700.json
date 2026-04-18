@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets begins scheduled maintenance of process automation systems"
+      "headline": "Frelex Outlets begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause minor, temporary disruptions but is generally a positive for long-term efficiency.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $250M contract with a national infrastructure agency"
+      "headline": "Nerval Biopharma secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a national agency is a clear positive for revenue and business stability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech confirms participation in Capital Markets Day"
+      "headline": "Grevon Biotech confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day indicates an intent to communicate with investors, which can be positive for transparency and investor relations, but the direct financial impact is uncertain until information is released.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $650M contract with a leading cloud platform"
+      "headline": "Xelvol Biotech secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a leading cloud platform is a significant positive for revenue and strategic positioning.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech launches next-generation renewable storage platform"
+      "headline": "Grevon Biotech launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform in a growing sector like renewable storage is a positive for future revenue and market position.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Grevon Biotech warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations is a negative for efficiency, costs, and potentially revenue.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports strong demand in North America, raises outlook"
+      "headline": "Xelvol Biotech reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Reporting strong demand and raising the outlook is a clear positive signal for current and future financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma launches next-generation automated logistics platform"
+      "headline": "Nerval Biopharma launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching an internal next-generation automated logistics platform is a positive for operational efficiency and cost reduction.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:34.800Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

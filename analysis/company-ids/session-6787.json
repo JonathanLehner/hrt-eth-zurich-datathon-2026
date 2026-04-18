@@ -54,49 +54,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies to host investor day focused on data analytics strategy"
+      "headline": "Myrnep Technologies to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that typically provide clarity on strategy without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies misses quarterly revenue estimates by 12%"
+      "headline": "Myrnep Technologies misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss directly impacts investor sentiment and valuation in the short term.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Talvep Computing reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a clear positive signal for both immediate and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software files for regulatory approval of new enterprise software offering"
+      "headline": "Frelol Software files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates future growth potential but lacks immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies files for regulatory approval of new automated logistics offering"
+      "headline": "Myrnep Technologies files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Regulatory filing for a new product line suggests future expansion, though the timeline for approval and revenue generation remains uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software opens new office in Central Europe"
+      "headline": "Frelol Software opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that typically incurs costs before generating meaningful revenue.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing wins industry award for excellence in wireless connectivity"
+      "headline": "Talvep Computing wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand validation but rarely translate into direct, measurable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:14.043Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

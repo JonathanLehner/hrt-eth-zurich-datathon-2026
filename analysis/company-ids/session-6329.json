@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods faces class action over supply chain optimization service disruption"
+      "headline": "Talvyn Goods faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption is a negative event that could lead to significant legal costs and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces significant capital expenditure plan for Europe"
+      "headline": "Talvyn Goods announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in Europe indicates future growth potential but also involves substantial upfront costs.",
+        "longTerm": 5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores expands operations into Latin America markets"
+      "headline": "Holtar Stores expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets like Latin America suggests growth opportunities but also carries execution risks and initial investment costs.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees mixed results in precision manufacturing pilot program"
+      "headline": "Jorval Trading Co sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the future success and scalability of a new initiative.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 14,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods signs multi-year partnership with a national infrastructure agency"
+      "headline": "Xovol Goods signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national infrastructure agency represents a significant and stable revenue stream.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co raises full-year guidance citing robust demand"
+      "headline": "Jorval Trading Co raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance due to robust demand is a strong positive indicator for current and near-future financial performance.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Jorval Trading Co recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event that incurs costs, damages reputation, and could lead to lost sales.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods in talks for potential merger, details undisclosed"
+      "headline": "Talvyn Goods in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Being in talks for a potential merger creates significant speculation and uncertainty, with potential for either a premium acquisition or a failed deal.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:52.551Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

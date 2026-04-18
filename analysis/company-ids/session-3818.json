@@ -52,42 +52,113 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports strong demand in Central Europe, raises outlook"
+      "headline": "Halvav Brands reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region and a raised outlook indicate improved future financial performance for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group board meeting to discuss major strategic initiative"
+      "headline": "Jovik Asset Group board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a major strategic initiative suggests potential significant changes, but the outcome and nature are entirely unknown.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores files routine patent applications in enterprise software"
+      "headline": "Xovep Stores files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations and do not indicate a significant immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores misses quarterly revenue estimates by 25%"
+      "headline": "Xovep Stores misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant 25% indicates weaker-than-expected financial performance, likely leading to a strong negative market reaction.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports 7% increase in customer acquisition"
+      "headline": "Xovep Stores reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition suggests growing demand and potential for future revenue, which is a positive indicator for the business.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands sees 12% margin improvement in latest quarter"
+      "headline": "Halvav Brands sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 12% margin improvement indicates increased profitability and operational efficiency, which is a strong positive for financial performance.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:23.330Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

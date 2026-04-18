@@ -48,28 +48,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries misses quarterly revenue estimates by 7%"
+      "headline": "Zrovex Industries misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy files for regulatory approval of new precision manufacturing offering"
+      "headline": "Zelval Energy files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering suggests potential future revenue growth and market expansion, but the approval is not guaranteed.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 5% decline in operating income"
+      "headline": "Holtum Asset Group reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates a reduction in profitability from core operations, which is a negative financial signal.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy names new head of cloud infrastructure division"
+      "headline": "Zelval Energy names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a key division can signal strategic shifts or a focus on improving that area, but the impact depends on the individual's capabilities and future actions.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:40.099Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

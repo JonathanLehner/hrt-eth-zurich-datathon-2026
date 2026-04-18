@@ -66,56 +66,147 @@
       "barIx": 27,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports rising costs pressuring margins in process automation"
+      "headline": "Plevik Energy reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly indicate negative pressure on profitability, which will likely impact earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy files routine patent applications in precision manufacturing"
+      "headline": "Plevik Energy files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a standard business activity and do not imply a significant immediate or long-term financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $50M contract with a top-tier research institute"
+      "headline": "Ulvyn Microchips secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a reputable institute is a clear positive for revenue and reputation.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 8% drop in new customer orders this quarter"
+      "headline": "Ulvyn Microchips sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders indicates weakening demand, which will negatively impact future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy signs multi-year partnership with a global retailer"
+      "headline": "Plevik Energy signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer suggests expanded market reach and potential for sustained revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions launches next-generation enterprise software platform"
+      "headline": "Orevov Solutions launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "A new product launch, especially a \"next-generation\" platform, has the potential to drive new sales and market share.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions recalls products in renewable storage line due to quality concerns"
+      "headline": "Orevov Solutions recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event, incurring costs, damaging reputation, and potentially reducing future sales.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables misses quarterly revenue estimates by 18%"
+      "headline": "Orevex Renewables misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a substantial 18% is a clear negative indicator of financial performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:44.005Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands names new head of automated logistics division"
+      "headline": "Joval Brands names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division suggests potential operational improvements or strategic shifts, but the immediate financial impact is uncertain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports 18% decline in operating income"
+      "headline": "Joval Brands reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates poor financial performance, negatively impacting investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports rising costs pressuring margins in digital payments"
+      "headline": "Halvav Brands reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins in a specific business segment indicate a negative financial outlook for that segment.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace expands operations into Central Europe markets"
+      "headline": "Arnos Marketplace expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets represents potential for revenue growth and increased market share, but also involves initial investment and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands expands operations into Southeast Asia markets"
+      "headline": "Joval Brands expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets represents potential for revenue growth and increased market share, but also involves initial investment and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital explores strategic alternatives for wireless connectivity unit"
+      "headline": "Zelvel Capital explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests a potential divestiture or restructuring, which could unlock value or signal underperformance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace announces restructuring plan, cites challenging market conditions"
+      "headline": "Arnos Marketplace announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when citing challenging market conditions, often implies cost-cutting and efficiency improvements but also signals underlying business difficulties.",
+        "longTerm": 2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:21:28.116Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

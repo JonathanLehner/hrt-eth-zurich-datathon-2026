@@ -1,0 +1,116 @@
+{
+  "session": "669",
+  "companyCount": 2,
+  "headlineCount": 4,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Halven Investments",
+      "headlineCount": 3,
+      "firstBarIx": 3,
+      "headlineIds": [
+        "H001",
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Halven Investments confirms participation in Global Innovation Summit",
+        "Halven Investments names new head of enterprise software division",
+        "Halven Investments misses quarterly revenue estimates by 5%"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Zrovov Advisors",
+      "headlineCount": 1,
+      "firstBarIx": 11,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Zrovov Advisors warns of supply chain disruptions affecting Scandinavia operations"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 3,
+      "companyId": 0,
+      "companyName": "Halven Investments",
+      "headline": "Halven Investments confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a minor positive for visibility and networking, but lacks immediate or significant direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 11,
+      "companyId": 1,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations suggests potential negative financial consequences for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 29,
+      "companyId": 0,
+      "companyName": "Halven Investments",
+      "headline": "Halven Investments names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "A new divisional head can bring strategic changes, but the immediate financial impact is typically neutral or slightly positive due to potential for new direction, with high uncertainty.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 45,
+      "companyId": 0,
+      "companyName": "Halven Investments",
+      "headline": "Halven Investments misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a notable margin is a clear negative signal for the company's financial performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:23:40.517Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces significant capital expenditure plan for Middle East"
+      "headline": "Ulvon Renewables announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in the Middle East suggests future growth potential, but also immediate costs.",
+        "longTerm": 5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Orevov Solutions warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions in a specific region indicates potential negative impact on operations and revenue.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports unexpected decline in Scandinavia revenue"
+      "headline": "Ulvon Renewables reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue in a specific region is a clear negative signal for the company's performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces regulatory review of enterprise software practices"
+      "headline": "Relvon Fuels faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Facing a regulatory review introduces uncertainty and potential for fines or operational changes, which is generally negative.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions misses quarterly revenue estimates by 25%"
+      "headline": "Orevov Solutions misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 25% is a strong negative indicator of current financial performance.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels wins industry award for excellence in precision manufacturing"
+      "headline": "Relvon Fuels wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Winning an industry award can enhance reputation and brand image, potentially leading to indirect positive financial benefits.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:54.848Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

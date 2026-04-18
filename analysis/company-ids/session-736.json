@@ -1,0 +1,153 @@
+{
+  "session": "736",
+  "companyCount": 2,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Crevol Retail Group",
+      "headlineCount": 4,
+      "firstBarIx": 25,
+      "headlineIds": [
+        "H001",
+        "H002",
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Crevol Retail Group secures $50M contract with a major logistics provider",
+        "Crevol Retail Group announces significant capital expenditure plan for Asia Pacific",
+        "Crevol Retail Group sees 15% margin improvement in latest quarter"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Brevep Systems",
+      "headlineCount": 2,
+      "firstBarIx": 46,
+      "headlineIds": [
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Brevep Systems sees 10% margin improvement in latest quarter",
+        "Brevep Systems reports unexpected decline in Latin America revenue"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 25,
+      "companyId": 0,
+      "companyName": "Crevol Retail Group",
+      "headline": "Crevol Retail Group secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a clear positive event that will boost revenue and potentially future business.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 34,
+      "companyId": 0,
+      "companyName": "Crevol Retail Group",
+      "headline": "Crevol Retail Group announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan in Asia Pacific indicates future growth potential and market expansion, though it involves immediate costs.",
+        "longTerm": 7,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 34,
+      "companyId": 0,
+      "companyName": "Crevol Retail Group",
+      "headline": "Crevol Retail Group sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive financial signal.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 36,
+      "companyId": 0,
+      "companyName": "Crevol Retail Group",
+      "headline": "Crevol Retail Group reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a 25% year-over-year increase is a strong indicator of robust demand and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 46,
+      "companyId": 1,
+      "companyName": "Brevep Systems",
+      "headline": "Brevep Systems sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement signifies enhanced profitability and operational efficiency, which is a positive financial indicator.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 49,
+      "companyId": 1,
+      "companyName": "Brevep Systems",
+      "headline": "Brevep Systems reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates weakening demand or operational issues, which is a negative financial development.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:23:53.389Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

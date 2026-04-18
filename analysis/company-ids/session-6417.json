@@ -52,42 +52,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing sees 3% margin improvement in latest quarter"
+      "headline": "Talvep Computing sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates better profitability, which is a positive financial development for the company.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs withdraws from North America market citing unfavorable conditions"
+      "headline": "Yorven Labs withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market due to unfavorable conditions suggests significant operational challenges and a loss of revenue potential, despite potentially cutting losses.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs enters joint venture with a major logistics provider"
+      "headline": "Yorven Labs enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests a strategic move to enhance operations, distribution, or market reach, potentially leading to new revenue streams or cost efficiencies.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $50M contract with a national infrastructure agency"
+      "headline": "Talvep Computing secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a direct and significant revenue positive, indicating strong demand for the company's services or products.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks announces restructuring plan, cites challenging market conditions"
+      "headline": "Halvax Networks announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when citing challenging market conditions, often implies cost-cutting, layoffs, or divestitures, which can be disruptive and signal underlying business weakness.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing CEO addresses investor concerns in open letter"
+      "headline": "Talvep Computing CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CEO addressing investor concerns in an open letter suggests that there are significant underlying issues or anxieties among investors that the company feels compelled to publicly address.",
+        "longTerm": 0,
+        "shortTerm": -3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:16.510Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

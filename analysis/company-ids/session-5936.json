@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Halvax Networks announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for Southeast Asia suggests future growth potential and market expansion, but also immediate costs.",
+        "longTerm": 5,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing opens new office in Central Europe"
+      "headline": "Talvep Computing opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates market expansion and potential for increased sales, but also involves initial setup costs.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips explores strategic alternatives for automated logistics unit"
+      "headline": "Ulvyn Microchips explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests potential restructuring, divestiture, or sale, which could unlock value or signal underperformance.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 7% drop in new customer orders this quarter"
+      "headline": "Ulvyn Microchips sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates weakening demand, which will negatively impact future revenue and earnings.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks recalls products in data analytics line due to quality concerns"
+      "headline": "Halvax Networks recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially lead to lost sales and customer trust.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals enters joint venture with a major logistics provider"
+      "headline": "Yorvov Pharmaceuticals enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests an effort to improve operational efficiency and supply chain capabilities, potentially leading to cost savings or better market reach.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks expands operations into Asia Pacific markets"
+      "headline": "Halvax Networks expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets indicates growth strategy and potential for increased revenue, but also involves initial investment and execution risk.",
+        "longTerm": 5,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:16.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

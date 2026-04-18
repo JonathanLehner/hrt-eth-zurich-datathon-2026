@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing opens new office in Scandinavia"
+      "headline": "Talvep Computing opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates business expansion and potential for future growth, though immediate financial impact might be limited.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports 8% decline in operating income"
+      "headline": "Relvan Software reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates weaker financial performance, negatively impacting profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing misses quarterly revenue estimates by 3%"
+      "headline": "Talvep Computing misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates indicates underperformance relative to market expectations, which is typically viewed negatively.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software signs multi-year partnership with an international consortium"
+      "headline": "Relvan Software signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with an international consortium suggests new business opportunities and potential for sustained revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips revises long-term strategy with focus on wireless connectivity"
+      "headline": "Ulvyn Microchips revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on wireless connectivity indicates a significant operational and market pivot, with potential for future growth in a key sector.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $120M contract with an international consortium"
+      "headline": "Ulvyn Microchips secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear and substantial revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks announces $4.1B share buyback program"
+      "headline": "Halvax Networks announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence, returns capital to shareholders, and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:36.337Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

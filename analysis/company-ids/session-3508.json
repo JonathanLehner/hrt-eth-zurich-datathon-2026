@@ -52,42 +52,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Zelval Energy reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue indicates strong financial performance, positively impacting investor sentiment.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy wins industry award for excellence in process automation"
+      "headline": "Zelval Energy wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances the company's reputation and may indirectly lead to future business opportunities.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals delays product launch in precision manufacturing segment"
+      "headline": "Krevum Pharmaceuticals delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact anticipated revenue streams and market expectations.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals completes planned facility upgrade in Central Europe"
+      "headline": "Krevum Pharmaceuticals completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or increased capacity, which can positively impact future production and costs.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $180M contract with a top-tier research institute"
+      "headline": "Krevum Pharmaceuticals secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a top-tier institute provides a clear revenue stream and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions sees 18% margin improvement in latest quarter"
+      "headline": "Orevov Solutions sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates enhanced profitability and operational efficiency, positively impacting financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:23.319Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

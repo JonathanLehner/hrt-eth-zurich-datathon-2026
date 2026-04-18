@@ -54,49 +54,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid faces regulatory review of process automation practices"
+      "headline": "Urvel Grid faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative outcomes, which could impact operations and reputation.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports 7% increase in customer acquisition"
+      "headline": "Urvel Grid reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition indicates growing demand and potential for future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 25% drop in new customer orders this quarter"
+      "headline": "Kelvos Resources sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders indicates weakening demand and will likely lead to reduced future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources announces $2.5B share buyback program"
+      "headline": "Kelvos Resources announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to positive investor sentiment.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports unexpected decline in Latin America revenue"
+      "headline": "Jorvis Fuels reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates underperformance and will likely negatively impact overall financial results.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "earnings",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid launches next-generation enterprise software platform"
+      "headline": "Urvel Grid launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "A new product launch, especially a 'next-generation' platform, can drive new sales, expand market share, and improve competitive positioning.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels delays product launch in data analytics segment"
+      "headline": "Jorvis Fuels delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch, especially in a new segment, can signal operational issues, missed revenue opportunities, and competitive setbacks.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:50.135Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

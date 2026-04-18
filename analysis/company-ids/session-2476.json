@@ -60,35 +60,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy wins industry award for excellence in process automation"
+      "headline": "Plevik Energy wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides a positive reputational boost, which could indirectly support future business, but its direct financial impact is not immediately quantifiable.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables misses quarterly revenue estimates by 15%"
+      "headline": "Orevex Renewables misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin indicates weaker-than-expected financial performance, negatively impacting investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Varvov Retail Group reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with an 8% year-over-year increase indicates strong financial performance and positive demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group sees 8% margin improvement in latest quarter"
+      "headline": "Varvov Retail Group sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates enhanced operational efficiency and profitability, which is a strong positive financial signal.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports 25% decline in operating income"
+      "headline": "Strynal Industries reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income signifies a substantial negative impact on profitability and operational efficiency.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:12.613Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing recalls products in digital payments line due to quality concerns"
+      "headline": "Talvep Computing recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in the digital payments line directly impacts revenue and brand reputation, creating immediate negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $400M contract with a global retailer"
+      "headline": "Plevum Partners secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, significant boost to revenue visibility and market confidence.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing delays product launch in supply chain optimization segment"
+      "headline": "Talvep Computing delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment signals operational friction and pushes back expected revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $650M contract with a leading cloud platform"
+      "headline": "Creven Securities secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $650M contract win with a major cloud platform is a strong positive indicator of growth and market demand.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners misses quarterly revenue estimates by 8%"
+      "headline": "Plevum Partners misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% is a significant negative signal regarding current business performance and demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial loses key contract in Central Europe to competitor"
+      "headline": "Wrelal Financial loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts market share and future revenue streams in the region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces significant capital expenditure plan for North America"
+      "headline": "Creven Securities announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates aggressive expansion, which is generally viewed as a positive long-term growth signal.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial delays product launch in supply chain optimization segment"
+      "headline": "Wrelal Financial delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch creates uncertainty regarding the company's ability to execute on its roadmap and capture market share.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:18.712Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

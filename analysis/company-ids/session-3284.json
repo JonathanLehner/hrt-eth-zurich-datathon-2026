@@ -52,42 +52,113 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods faces regulatory review of data analytics practices"
+      "headline": "Talvyn Goods faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of data analytics practices introduces uncertainty and potential negative consequences for the company.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports strong demand in Middle East, raises outlook"
+      "headline": "Talvyn Goods reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a specific region and a raised outlook indicate positive business performance and future expectations.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $400M contract with a global retailer"
+      "headline": "Dralol Computing secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $400M contract with a global retailer is a clear positive for revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips files routine patent applications in enterprise software"
+      "headline": "Ulvyn Microchips files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a normal business activity that does not imply immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods misses quarterly revenue estimates by 25%"
+      "headline": "Talvyn Goods misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 25% indicates underperformance and will likely lead to a negative market reaction.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Ulvyn Microchips reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a 7% year-over-year increase indicates strong financial performance and positive business momentum.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:41.517Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

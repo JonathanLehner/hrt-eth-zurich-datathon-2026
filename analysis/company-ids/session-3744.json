@@ -48,28 +48,79 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $800M contract with a global retailer"
+      "headline": "Ervan Capital secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract with a global retailer is a significant positive event for the company's revenue and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Halven Investments reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins in a core business segment indicate a negative financial outlook due to reduced profitability.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group sees 5% drop in new customer orders this quarter"
+      "headline": "Holtum Asset Group sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders indicates weakening demand, which will negatively impact future revenue and growth prospects.",
+        "longTerm": -6,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports rising costs pressuring margins in digital payments"
+      "headline": "Halven Investments reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs impacting margins in the digital payments segment suggest a negative financial impact on profitability in a key growth area.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:06.650Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

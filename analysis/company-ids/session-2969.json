@@ -65,56 +65,147 @@
       "barIx": 28,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports 5% decline in operating income"
+      "headline": "Calvos Genomics reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates weaker financial performance, negatively impacting investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $180M contract with a leading cloud platform"
+      "headline": "Myrnon Therapeutics secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a leading platform is a clear positive for revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics explores strategic alternatives for renewable storage unit"
+      "headline": "Myrnon Therapeutics explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could be positive if it streamlines operations or negative if it indicates distress.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Myrnon Therapeutics Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CSO addressing investor concerns suggests existing issues and an attempt to reassure, but the effectiveness is uncertain.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $800M contract with a national infrastructure agency"
+      "headline": "Myrnon Therapeutics secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a very large contract with a national agency is a significant positive for revenue, stability, and market credibility.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $500M contract with a global retailer"
+      "headline": "Relvos Biosciences secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a global retailer is a strong positive for revenue and market reach.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Calvis Sciences warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations signals potential revenue loss and increased costs.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences loses key contract in Central Europe to competitor"
+      "headline": "Calvis Sciences loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor represents a direct loss of revenue and market share, negatively impacting financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:46.588Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

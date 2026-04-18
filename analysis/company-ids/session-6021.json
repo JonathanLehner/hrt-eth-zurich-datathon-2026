@@ -36,21 +36,62 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Jorvyl Securities recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will negatively impact sales, reputation, and incur costs for Jorvyl Securities.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $400M contract with a major logistics provider"
+      "headline": "Creven Securities secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant $400M contract with a major logistics provider represents a substantial positive revenue stream for Creven Securities.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities launches next-generation enterprise software platform"
+      "headline": "Jorvyl Securities launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation enterprise software platform could drive new revenue and market share for Jorvyl Securities.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:24.554Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -36,21 +36,62 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace misses quarterly revenue estimates by 18%"
+      "headline": "Orevar Marketplace misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "The significant revenue miss indicates weaker-than-expected financial performance, likely leading to a negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips loses key contract in Middle East to competitor"
+      "headline": "Ulvyn Microchips loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor will negatively impact future revenue and market share, signaling a competitive disadvantage.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips files routine patent applications in wireless connectivity"
+      "headline": "Ulvyn Microchips files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations and intellectual property protection, but do not signal an immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:29.867Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

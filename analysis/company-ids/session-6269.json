@@ -62,42 +62,113 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Plevum Partners reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue indicates strong financial performance and increased demand for the company's services.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees mixed results in wireless connectivity pilot program"
+      "headline": "Halvix Holdings sees mixed results in wireless connectivity pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program suggest uncertainty regarding the future success and scalability of the new initiative.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $250M contract with an international consortium"
+      "headline": "Jorvyl Securities secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a significant $250M contract with an international consortium represents a substantial revenue boost and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings opens new office in Scandinavia"
+      "headline": "Halvix Holdings opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office in Scandinavia indicates geographical expansion and potential for new market penetration.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings launches next-generation automated logistics platform"
+      "headline": "Halvix Holdings launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform suggests innovation and potential for new revenue streams or increased market share.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co reports rising costs pressuring margins in data analytics"
+      "headline": "Pleven Trading Co reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly indicates a negative impact on profitability for the data analytics segment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:25.947Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

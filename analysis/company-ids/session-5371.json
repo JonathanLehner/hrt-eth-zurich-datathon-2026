@@ -62,42 +62,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports strong demand in Central Europe, raises outlook"
+      "headline": "Zrovov Advisors reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in Central Europe and a raised outlook indicate improved future financial performance for Zrovov Advisors.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces $6.3B share buyback program"
+      "headline": "Varvov Retail Group announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically boosts shareholder value by reducing share count and increasing EPS, signaling confidence from management.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors names new head of enterprise software division"
+      "headline": "Plevyl Advisors names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "A new division head can bring fresh strategy and execution, but the immediate impact is uncertain without more information on the individual or their plans.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital faces class action over precision manufacturing service disruption"
+      "headline": "Ervan Capital faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption implies potential significant legal costs, reputational damage, and financial penalties.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $800M contract with a national infrastructure agency"
+      "headline": "Varvov Retail Group secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national agency represents a significant revenue stream and validates the company's capabilities.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces significant capital expenditure plan for Central Europe"
+      "headline": "Ervan Capital announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates future growth potential and investment in operations, but also involves upfront costs and execution risk.",
+        "longTerm": 4,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:30.887Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

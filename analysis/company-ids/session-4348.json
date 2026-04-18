@@ -63,49 +63,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals opens new office in Middle East"
+      "headline": "Krevum Pharmaceuticals opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office in the Middle East indicates market expansion, which could lead to increased sales and market share over time.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma launches next-generation data analytics platform"
+      "headline": "Zrovum Biopharma launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation data analytics platform suggests improved operational efficiency and potential for better decision-making, which could lead to cost savings or revenue growth.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics begins scheduled maintenance of digital payments systems"
+      "headline": "Zelvix Therapeutics begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance of critical systems is a necessary operational activity that ensures stability but may cause temporary disruptions or incur costs without immediate positive financial impact.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech expands operations into Central Europe markets"
+      "headline": "Xelvol Biotech expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets indicates growth strategy and potential for increased revenue and market share.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma announces $2.5B share buyback program"
+      "headline": "Zrovum Biopharma announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost shareholder value by reducing share count and increasing EPS, but it uses capital that could be invested elsewhere.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma reports 25% increase in customer acquisition"
+      "headline": "Zrovum Biopharma reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong positive indicator of growing demand and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Zrovum Biopharma warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions in a specific region indicates potential negative impacts on production, sales, and profitability in the short to medium term.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:21:12.867Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

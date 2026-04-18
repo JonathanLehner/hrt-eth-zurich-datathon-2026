@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores wins industry award for excellence in process automation"
+      "headline": "Xovep Stores wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award can enhance reputation and potentially attract new business, but its direct financial impact is indirect and not immediately quantifiable.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Strynal Industries reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue and significant year-over-year growth indicate strong financial performance, which is a clear positive for the company.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy sees mixed results in enterprise software pilot program"
+      "headline": "Plevik Energy sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program suggest uncertainty regarding the success and future rollout of a new initiative, indicating potential delays or re-evaluation.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $320M contract with a leading cloud platform"
+      "headline": "Strynal Industries secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial $320M contract with a leading platform is a significant positive financial event, indicating new revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels faces regulatory review of cloud infrastructure practices"
+      "headline": "Jorvis Fuels faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, fines, or operational changes, which is a negative development for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries revises long-term strategy with focus on wireless connectivity"
+      "headline": "Strynal Industries revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy, especially with a new focus, indicates a significant directional change that could be positive or negative depending on execution and market reception, making its immediate financial impact uncertain.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Plevik Energy announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in a region like Asia Pacific indicates future growth potential but also involves substantial investment and execution risk.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels achieves key regulatory milestone ahead of schedule"
+      "headline": "Jorvis Fuels achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a key regulatory milestone ahead of schedule is a clear positive, reducing uncertainty and potentially accelerating project timelines or market access.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:38.625Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

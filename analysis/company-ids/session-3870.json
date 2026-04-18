@@ -56,56 +56,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 15% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "The reported 15% margin improvement indicates strong operational efficiency and profitability for the latest quarter.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing loses key contract in Asia Pacific to competitor"
+      "headline": "Dralol Computing loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially to a competitor, implies a direct negative impact on revenue and market share in a significant region.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips files for regulatory approval of new wireless connectivity offering"
+      "headline": "Brevon Microchips files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards launching a new product, indicating potential future revenue but with inherent approval risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks completes planned facility upgrade in Europe"
+      "headline": "Halvax Networks completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or increased capacity, which could lead to cost savings or higher output.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips wins industry award for excellence in wireless connectivity"
+      "headline": "Brevon Microchips wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and brand recognition, which can indirectly support sales and market positioning.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Dralol Computing recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur direct costs for the recall process, potential lost sales, and reputational damage.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports 3% decline in operating income"
+      "headline": "Brevon Microchips reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 3% decline in operating income indicates a negative financial performance for the reporting period, impacting profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing confirms participation in Capital Markets Day"
+      "headline": "Dralol Computing confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a routine investor relations event, providing an opportunity for management to communicate strategy but not inherently a financial impact event itself.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:34.757Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -54,7 +54,7 @@ Useful flags:
 - `--file` or `-f`: parquet file to analyze
 - `--session` or `-s`: analyze only one session, repeatable
 - `--max-sessions`: limit number of sessions
-- `--model` or `-m`: Gemini model, default is `gemini-2.5-flash`
+- `--model` or `-m`: Gemini model, default is `gemini-3.1-flash-lite-preview`
 - `--concurrency` or `-c`: parallel Gemini requests
 - `--retries`: retries per session
 - `--output` or `-o`: custom output file
@@ -120,7 +120,7 @@ Useful flags:
 - `--input-dir` or `-i`: directory containing session files
 - `--session` or `-s`: score only one session, repeatable
 - `--max-sessions`: limit number of sessions
-- `--model` or `-m`: Gemini model, default is `gemini-2.5-flash`
+- `--model` or `-m`: Gemini model, default is `gemini-3.1-flash-lite-preview`
 - `--concurrency` or `-c`: parallel Gemini requests
 - `--retries`: retries per session
 

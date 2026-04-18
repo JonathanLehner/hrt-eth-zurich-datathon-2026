@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports 20% increase in customer acquisition"
+      "headline": "Xovol Goods reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong positive indicator of growth and market penetration.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports strong demand in Scandinavia, raises outlook"
+      "headline": "Nolvav Commerce reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with an upward revision of financial guidance is a clear positive signal for earnings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $250M contract with a national infrastructure agency"
+      "headline": "Strynal Industries secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $250M infrastructure contract provides significant, concrete revenue visibility.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce delays product launch in precision manufacturing segment"
+      "headline": "Nolvav Commerce delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals operational friction or market readiness issues, negatively impacting near-term sentiment.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce expands operations into North America markets"
+      "headline": "Arnik Commerce expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding into a major new geographic market like North America is a positive strategic move for long-term growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce sees 12% drop in new customer orders this quarter"
+      "headline": "Arnik Commerce sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a direct negative indicator of current demand and future revenue potential.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods expands operations into North America markets"
+      "headline": "Xovol Goods expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into North America represents a significant growth opportunity for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods expands operations into Asia Pacific markets"
+      "headline": "Xovol Goods expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into the Asia Pacific market provides a new growth vector, though execution risks remain.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:08.830Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments confirms participation in Capital Markets Day"
+      "headline": "Halven Investments confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a neutral event that typically involves communication with investors, but the headline itself provides no specific positive or negative news.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments sees 8% drop in new customer orders this quarter"
+      "headline": "Krevan Investments sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders indicates a significant negative trend in demand, directly impacting future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital loses key contract in Latin America to competitor"
+      "headline": "Zelvel Capital loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a 'key' contract, especially to a competitor, implies a direct negative impact on revenue and market share.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $800M contract with a multinational manufacturer"
+      "headline": "Halven Investments secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract with a multinational manufacturer is a significant positive event, indicating future revenue and business growth.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Jorvix Diagnostics recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will lead to immediate costs, potential revenue loss, and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces class action over process automation service disruption"
+      "headline": "Halven Investments faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit implies potential legal costs, damages, and reputational harm due to service disruption.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Krevan Investments recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will lead to immediate costs, potential revenue loss, and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:59.348Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

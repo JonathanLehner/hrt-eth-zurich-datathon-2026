@@ -60,35 +60,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Nerven Grid reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue indicates strong financial performance and increased sales for the company.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands names new head of digital payments division"
+      "headline": "Joval Brands names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division can signal strategic shifts or renewed focus, but the immediate financial impact is often neutral or slightly positive depending on the new leader's reputation.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Nerven Grid warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations suggests potential negative effects on production, sales, and profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $75M contract with a major logistics provider"
+      "headline": "Xovol Goods secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a major provider is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $75M contract with a major logistics provider"
+      "headline": "Halvav Brands secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a major provider is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:45.553Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

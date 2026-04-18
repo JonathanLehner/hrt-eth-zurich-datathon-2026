@@ -60,35 +60,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices files routine patent applications in wireless connectivity"
+      "headline": "Volval Devices files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations and do not indicate a significant immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software explores strategic alternatives for wireless connectivity unit"
+      "headline": "Relvan Software explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests potential restructuring, divestiture, or sale, which could lead to a positive or negative financial outcome depending on the specifics.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co schedules annual shareholder meeting for next month"
+      "headline": "Pleven Trading Co schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling an annual shareholder meeting is a standard corporate governance event and does not inherently carry financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 0,
+        "shortTermUncertainty": 0,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 0
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co delays product launch in enterprise software segment"
+      "headline": "Pleven Trading Co delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact anticipated revenue, market share, and investor confidence in the short term, with potential lingering effects.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports unexpected decline in Latin America revenue"
+      "headline": "Prynis Systems reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative financial performance that could impact overall earnings and future guidance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:45.590Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

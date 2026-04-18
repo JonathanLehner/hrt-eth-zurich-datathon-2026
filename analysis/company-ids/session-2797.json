@@ -38,28 +38,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace wins industry award for excellence in enterprise software"
+      "headline": "Arnos Marketplace wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and may indirectly support future sales, but its direct financial impact is not immediately quantifiable.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $75M contract with a major logistics provider"
+      "headline": "Arnos Marketplace secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with a major logistics provider represents a significant and direct revenue increase for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports 3% increase in customer acquisition"
+      "headline": "Arnos Marketplace reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition indicates positive growth in demand and potential for future revenue.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets misses quarterly revenue estimates by 10%"
+      "headline": "Frelex Outlets misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 10% indicates weaker-than-expected financial performance and will likely lead to negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:13.162Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

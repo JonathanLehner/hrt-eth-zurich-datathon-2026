@@ -56,56 +56,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities sees 15% margin improvement in latest quarter"
+      "headline": "Creven Securities sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates stronger profitability, which is a positive financial signal for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities CTO addresses investor concerns in open letter"
+      "headline": "Creven Securities CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CTO addressing investor concerns suggests underlying issues that the company is trying to mitigate, creating mixed signals.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands misses quarterly revenue estimates by 25%"
+      "headline": "Joval Brands misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant 25% indicates a substantial underperformance, which is a strong negative financial signal.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands announces $4.1B share buyback program"
+      "headline": "Joval Brands announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and aims to boost shareholder value by reducing share count.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Joval Brands Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A COO addressing investor concerns suggests underlying operational issues that the company is trying to mitigate, creating mixed signals.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces restructuring plan, cites challenging market conditions"
+      "headline": "Creven Securities announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when citing challenging market conditions, often implies cost-cutting and operational adjustments to improve efficiency, but also signals current difficulties.",
+        "longTerm": 2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees mixed results in supply chain optimization pilot program"
+      "headline": "Yorval Partners sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate that the initiative did not fully succeed, suggesting potential delays or re-evaluation of the program's benefits.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners faces regulatory review of renewable storage practices"
+      "headline": "Yorval Partners faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Facing a regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage, which is a negative signal.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:55.045Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

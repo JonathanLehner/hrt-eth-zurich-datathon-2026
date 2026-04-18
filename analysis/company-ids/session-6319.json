@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power names new head of supply chain optimization division"
+      "headline": "Kelvik Power names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "The appointment of a new head for supply chain optimization could lead to operational efficiencies, but the immediate financial impact is uncertain and depends on future actions.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources delays product launch in enterprise software segment"
+      "headline": "Nolvol Resources delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is generally negative as it postpones potential revenue and could signal development issues or market challenges.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions publishes annual sustainability report"
+      "headline": "Wyrnor Solutions publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing a sustainability report is a routine corporate governance and public relations activity with no direct or immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Jorval Trading Co warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly implies potential negative impacts on operations, costs, and revenue, particularly in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $650M contract with a major logistics provider"
+      "headline": "Nolvol Resources secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a major provider is a significant positive event, indicating future revenue and market validation.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources loses key contract in Middle East to competitor"
+      "headline": "Nolvol Resources loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially to a competitor, is a significant negative event that implies a loss of revenue and potentially market share.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co launches next-generation renewable storage platform"
+      "headline": "Jorval Trading Co launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation product in a growing sector like renewable storage is a positive development that could drive future revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions launches next-generation wireless connectivity platform"
+      "headline": "Wyrnor Solutions launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation product, especially a platform, suggests potential for new revenue streams and strengthening market position.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:34.005Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

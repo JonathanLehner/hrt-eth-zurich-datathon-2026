@@ -52,42 +52,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics misses quarterly revenue estimates by 25%"
+      "headline": "Zelvix Therapeutics misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss indicates weaker-than-expected financial performance, likely leading to a negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces class action over cloud infrastructure service disruption"
+      "headline": "Crevol Retail Group faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit due to service disruption implies potential legal costs, reputational damage, and financial penalties.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets sees 20% margin improvement in latest quarter"
+      "headline": "Ixenis Outlets sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 20% margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive for the company.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $650M contract with a leading cloud platform"
+      "headline": "Ixenis Outlets secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract with a leading platform represents a significant revenue boost and validates the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 12% decline in operating income"
+      "headline": "Crevol Retail Group reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income indicates reduced profitability from core operations, which is a negative financial signal.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics reports rising costs pressuring margins in data analytics"
+      "headline": "Zelvix Therapeutics reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins indicate reduced profitability and operational challenges within a specific business segment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:48.636Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

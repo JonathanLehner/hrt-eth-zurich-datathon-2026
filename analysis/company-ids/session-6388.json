@@ -56,56 +56,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Brevon Microchips completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition is framed as strategic and strengthening, suggesting a positive long-term impact on the company's capabilities.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 18% increase in customer acquisition"
+      "headline": "Grevon Biotech reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition indicates strong demand for the company's products or services, which is positive for revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports 18% decline in operating income"
+      "headline": "Frelis Genomics reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income is a significant negative financial indicator, suggesting reduced profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $500M contract with a global retailer"
+      "headline": "Brevon Microchips secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $500M contract is a clear positive event, indicating significant future revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics misses quarterly revenue estimates by 10%"
+      "headline": "Frelis Genomics misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 10% indicates underperformance relative to market expectations, which is a negative financial signal.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports 5% decline in operating income"
+      "headline": "Brevon Microchips reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income is a negative financial indicator, though less severe than a larger decline.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $320M contract with a global retailer"
+      "headline": "Frelis Genomics secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $320M contract is a clear positive event, indicating significant future revenue and business growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces significant capital expenditure plan for Europe"
+      "headline": "Grevon Biotech announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for Europe indicates strategic expansion and potential for future growth, though it also implies upfront costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:07.319Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

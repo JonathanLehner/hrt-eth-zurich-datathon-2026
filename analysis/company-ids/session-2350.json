@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces breakthrough in supply chain optimization"
+      "headline": "Yorven Labs announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests a significant improvement in efficiency or a new marketable product, which could lead to increased revenue or reduced costs.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips revises long-term strategy with focus on supply chain optimization"
+      "headline": "Brevon Microchips revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Revising strategy to focus on supply chain optimization indicates a proactive effort to improve efficiency and potentially reduce costs, which is generally positive.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "guidance",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips CFO steps down unexpectedly citing personal reasons"
+      "headline": "Brevon Microchips CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO, especially citing personal reasons, can create uncertainty and concern regarding financial stability and future leadership.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips announces significant capital expenditure plan for Latin America"
+      "headline": "Brevon Microchips announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion into Latin America suggests future growth potential but also involves substantial investment and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods signs multi-year partnership with a national infrastructure agency"
+      "headline": "Talvyn Goods signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Signing a multi-year partnership with a national infrastructure agency represents a stable and significant revenue stream, indicating strong demand and market position.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks expands operations into North America markets"
+      "headline": "Jovor Networks expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into North America markets indicates a strategic move for growth and increased market share, but also involves investment and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks misses quarterly revenue estimates by 8%"
+      "headline": "Jovor Networks misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin of 8% indicates underperformance and could lead to negative investor sentiment and revised future expectations.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks opens new office in Scandinavia"
+      "headline": "Jovor Networks opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office in Scandinavia signifies a minor geographical expansion, suggesting potential for new market penetration and growth.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:53.992Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

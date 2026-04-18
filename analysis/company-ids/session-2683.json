@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities to present at Global Innovation Summit"
+      "headline": "Creven Securities to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit offers visibility but doesn't guarantee direct financial impact, making the immediate and long-term effects uncertain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods announces significant capital expenditure plan for Europe"
+      "headline": "Xovol Goods announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates future growth and expansion, but also involves immediate costs and execution risk.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities to host investor day focused on digital payments strategy"
+      "headline": "Creven Securities to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy can improve investor confidence and clarity, but its direct financial impact is indirect and depends on the strategy's perceived strength.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Wrelal Financial reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue with significant year-over-year growth is a strong positive indicator of current business performance.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports strong demand in Scandinavia, raises outlook"
+      "headline": "Creven Securities reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a specific region and a raised outlook are positive indicators for future revenue and profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group sees mixed results in process automation pilot program"
+      "headline": "Jovik Asset Group sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program suggest that the anticipated operational benefits are not fully realized, leading to uncertainty and potential delays.",
+        "longTerm": -2,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial loses key contract in Middle East to competitor"
+      "headline": "Wrelal Financial loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor is a direct negative impact on revenue and market share.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group faces class action over enterprise software service disruption"
+      "headline": "Jovik Asset Group faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption implies potential legal costs, reputational damage, and financial penalties.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:56.509Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

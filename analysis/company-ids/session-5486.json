@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals misses quarterly revenue estimates by 3%"
+      "headline": "Yorvov Pharmaceuticals misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "The revenue miss indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 18% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders signals weakening demand, which will negatively impact future revenue and growth.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $180M contract with a global retailer"
+      "headline": "Yorvov Pharmaceuticals secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract provides a clear boost to future revenue and demonstrates market confidence in the company's offerings.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals CEO addresses investor concerns in open letter"
+      "headline": "Yorvov Pharmaceuticals CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "The CEO addressing concerns suggests existing negative sentiment, and the letter's effectiveness in alleviating these concerns is uncertain.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces $6.3B share buyback program"
+      "headline": "Talvep Computing announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to positive investor sentiment.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Brevon Microchips reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand and a raised outlook indicate improved future financial performance and positive business momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:52.907Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

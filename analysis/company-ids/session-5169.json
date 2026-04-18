@@ -66,56 +66,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy delays product launch in renewable storage segment"
+      "headline": "Zelval Energy delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch in a key segment is a negative operational event, potentially impacting future revenue and market position.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources announces $1.2B share buyback program"
+      "headline": "Nolvol Resources announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $250M contract with a top-tier research institute"
+      "headline": "Plevep Power secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a reputable institute is a clear positive for revenue and credibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables signs multi-year partnership with a leading cloud platform"
+      "headline": "Orevex Renewables signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a leading cloud platform suggests strategic growth, potential for operational efficiencies, and expanded reach.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources announces breakthrough in digital payments"
+      "headline": "Nolvol Resources announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' in digital payments suggests significant innovation with potential for new revenue streams and competitive advantage.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power CTO steps down unexpectedly citing personal reasons"
+      "headline": "Plevep Power CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive like a CTO can raise concerns about leadership stability and future technological direction.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces $3.8B share buyback program"
+      "headline": "Plevep Power announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A very large share buyback program indicates strong financial health and commitment to shareholder returns, likely boosting EPS.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources faces class action over automated logistics service disruption"
+      "headline": "Nolvol Resources faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit, especially over service disruption, is a significant negative event that could lead to financial penalties and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:02.043Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

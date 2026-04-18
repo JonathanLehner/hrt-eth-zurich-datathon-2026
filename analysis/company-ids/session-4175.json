@@ -56,56 +56,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences wins industry award for excellence in digital payments"
+      "headline": "Calvis Sciences wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "An industry award can enhance reputation and potentially attract new business, but its direct financial impact is indirect and difficult to quantify.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "The acquisition aims to strengthen supply chain optimization, which is a positive operational development with potential for efficiency gains.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 2,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Calvis Sciences warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions in a specific region indicates potential negative operational and financial impact for the company.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 5,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech delays product launch in automated logistics segment"
+      "headline": "Grevon Biotech delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is generally negative as it postpones potential revenue and indicates possible development or market issues.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals signs multi-year partnership with a major logistics provider"
+      "headline": "Krevum Pharmaceuticals signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a major logistics provider should enhance operational efficiency and supply chain reliability, leading to positive financial outcomes.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals announces $3.8B share buyback program"
+      "headline": "Krevum Pharmaceuticals announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost shareholder value by reducing share count.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech revises long-term strategy with focus on wireless connectivity"
+      "headline": "Grevon Biotech revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on a new area like wireless connectivity indicates a significant shift that could have future positive or negative implications, but details are vague.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "guidance",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $75M contract with an international consortium"
+      "headline": "Calvis Sciences secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract with an international consortium is a clear positive for revenue and business growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:31.490Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

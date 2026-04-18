@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions faces regulatory review of supply chain optimization practices"
+      "headline": "Orevov Solutions faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative consequences for the company's operations and reputation.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs revises long-term strategy with focus on wireless connectivity"
+      "headline": "Crevex Labs revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on wireless connectivity indicates a potential shift in future growth areas, but the immediate financial impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions publishes annual sustainability report"
+      "headline": "Orevov Solutions publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing a sustainability report is a routine corporate governance action that typically has minimal direct financial impact, though it can contribute to brand image.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software misses quarterly revenue estimates by 25%"
+      "headline": "Relvan Software misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $800M contract with a global retailer"
+      "headline": "Crevex Labs secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a global retailer represents a significant positive revenue stream and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips announces breakthrough in enterprise software"
+      "headline": "Ulvyn Microchips announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough announcement suggests future product innovation and potential market advantage, but the financial impact is speculative without details on commercialization.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions lowers full-year guidance amid softening demand"
+      "headline": "Orevov Solutions lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand indicates a negative outlook for future financial performance, directly impacting investor expectations.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software to present at Corporate Strategy Symposium"
+      "headline": "Relvan Software to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a routine corporate event that typically has no direct or significant financial impact, unless specific news is announced there.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:45.914Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

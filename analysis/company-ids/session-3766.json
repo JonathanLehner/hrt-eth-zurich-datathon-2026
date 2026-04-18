@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $180M contract with a top-tier research institute"
+      "headline": "Arnik Commerce secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a top-tier institute is a clear positive for revenue and reputation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores sees 15% margin improvement in latest quarter"
+      "headline": "Xovep Stores sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates better operational efficiency and profitability, positively impacting earnings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 5% decline in operating income"
+      "headline": "Arnik Commerce reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates reduced profitability from core operations, which is a negative financial signal.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group delays product launch in automated logistics segment"
+      "headline": "Crevol Retail Group delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can lead to missed revenue opportunities, increased development costs, and negative market perception.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Crevol Retail Group begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is generally neutral or slightly positive as it ensures system reliability.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $500M contract with a top-tier research institute"
+      "headline": "Varvov Retail Group secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a top-tier institute is a strong positive for future revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Varvov Retail Group warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Warnings of supply chain disruptions indicate potential negative impacts on operations, costs, and sales in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group recalls products in digital payments line due to quality concerns"
+      "headline": "Varvov Retail Group recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event, leading to costs, reputational damage, and potential loss of sales.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:16.183Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

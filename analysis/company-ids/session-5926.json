@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial files for regulatory approval of new renewable storage offering"
+      "headline": "Ilval Financial files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval of a new offering indicates potential future revenue but the immediate impact is limited until approval and launch.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group enters joint venture with a leading cloud platform"
+      "headline": "Jovik Asset Group enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a leading cloud platform suggests strategic expansion and potential for new revenue streams and operational efficiencies.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $180M contract with an international consortium"
+      "headline": "Ixenis Outlets secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial $180M contract provides a clear and significant boost to future revenue and order backlog.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $50M contract with a major logistics provider"
+      "headline": "Wrelal Financial secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a major logistics provider represents a solid revenue increase and market validation.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets delays product launch in precision manufacturing segment"
+      "headline": "Ixenis Outlets delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact anticipated revenue, market share, and investor confidence.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Ixenis Outlets recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur significant costs, damage brand reputation, and potentially lead to lost sales and future litigation.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files routine patent applications in process automation"
+      "headline": "Wrelal Financial files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications indicates ongoing innovation and intellectual property protection, but has no immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:13.341Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

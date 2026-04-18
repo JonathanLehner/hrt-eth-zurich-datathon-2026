@@ -34,14 +34,45 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Calvis Sciences withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "The withdrawal from a major geographic market indicates a loss of revenue streams and potential restructuring costs.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Nerval Biopharma revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic pivot to cloud infrastructure is vague regarding immediate financial impact and execution timelines.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:14.203Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

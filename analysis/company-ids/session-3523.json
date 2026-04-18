@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 18% drop in new customer orders this quarter"
+      "headline": "Calvos Genomics sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders indicates a significant negative impact on future revenue and growth for the company.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $320M contract with a multinational manufacturer"
+      "headline": "Grevon Biotech secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $320M contract with a multinational manufacturer is a clear positive for revenue and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees 12% margin improvement in latest quarter"
+      "headline": "Zelvon Biosciences sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $500M contract with an international consortium"
+      "headline": "Zelvon Biosciences secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a significant $500M contract with an international consortium represents a substantial positive impact on future revenue and market presence.",
+        "longTerm": 9,
+        "shortTerm": 10,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences withdraws from Latin America market citing unfavorable conditions"
+      "headline": "Zelvon Biosciences withdraws from Latin America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market due to unfavorable conditions suggests a negative operational environment and potential loss of revenue, though it could also be a strategic move to cut losses.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:25.108Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

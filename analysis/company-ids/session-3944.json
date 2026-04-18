@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 3% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A reported drop in new customer orders indicates weakening demand, negatively impacting future revenue.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 5% margin improvement in latest quarter"
+      "headline": "Brevon Microchips sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement directly boosts profitability and indicates operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces $6.3B share buyback program"
+      "headline": "Ixenix Technologies announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically boosts EPS and signals management confidence, positively impacting share price.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy announces significant capital expenditure plan for Europe"
+      "headline": "Plevik Energy announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in Europe suggests future growth opportunities but also involves substantial investment.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees mixed results in enterprise software pilot program"
+      "headline": "Nolvis Devices sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the future success and rollout of a new product, creating ambiguity for revenue prospects.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips explores strategic alternatives for precision manufacturing unit"
+      "headline": "Brevon Microchips explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests a potential divestiture or restructuring, which could streamline operations or raise capital, but also indicates uncertainty about the unit's future.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports 7% decline in operating income"
+      "headline": "Nolvis Devices reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported decline in operating income directly negatively impacts profitability and signals potential operational challenges.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces significant capital expenditure plan for Middle East"
+      "headline": "Ixenix Technologies announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in the Middle East suggests future growth opportunities but also involves substantial investment.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:48.924Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

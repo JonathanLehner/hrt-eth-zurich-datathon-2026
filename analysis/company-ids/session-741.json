@@ -1,0 +1,134 @@
+{
+  "session": "741",
+  "companyCount": 2,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Kelvik Power",
+      "headlineCount": 4,
+      "firstBarIx": 0,
+      "headlineIds": [
+        "H001",
+        "H003",
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Kelvik Power secures $800M contract with a multinational manufacturer",
+        "Kelvik Power reports record quarterly revenue, up 25% year-over-year",
+        "Kelvik Power sees 18% drop in new customer orders this quarter"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Ilval Financial",
+      "headlineCount": 1,
+      "firstBarIx": 5,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Ilval Financial secures $50M contract with a national infrastructure agency"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 0,
+      "companyId": 0,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract with a multinational manufacturer is a significant positive event for Kelvik Power, indicating strong future revenue.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 5,
+      "companyId": 1,
+      "companyName": "Ilval Financial",
+      "headline": "Ilval Financial secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a national infrastructure agency is a positive development for Ilval Financial, indicating new business and potential for future government work.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 28,
+      "companyId": 0,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a significant 25% year-over-year increase indicates strong operational performance and demand for Kelvik Power's products/services.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 36,
+      "companyId": 0,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders is a significant negative indicator for future revenue and demand for Kelvik Power's offerings.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 37,
+      "companyId": 0,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A large $7.9B share buyback program typically signals management confidence and can boost shareholder value by reducing share count and increasing EPS.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:23:54.362Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

@@ -52,42 +52,113 @@
       "barIx": 17,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $650M contract with a global retailer"
+      "headline": "Plevyl Advisors secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a global retailer is a clear positive for revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors misses quarterly revenue estimates by 12%"
+      "headline": "Plevyl Advisors misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance, negatively impacting investor confidence.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial faces class action over process automation service disruption"
+      "headline": "Ilval Financial faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption poses significant financial and reputational risks, including legal costs and potential damages.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial recalls products in enterprise software line due to quality concerns"
+      "headline": "Ilval Financial recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs for the company and damage its reputation, potentially affecting future sales.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial explores strategic alternatives for process automation unit"
+      "headline": "Ilval Financial explores strategic alternatives for process automation unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could be positive if it streamlines operations or negative if it indicates distress.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments loses key contract in Latin America to competitor"
+      "headline": "Krevan Investments loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor represents a direct loss of revenue and market share, negatively impacting financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:28.162Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

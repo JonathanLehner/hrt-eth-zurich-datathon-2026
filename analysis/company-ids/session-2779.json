@@ -56,56 +56,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces regulatory review of enterprise software practices"
+      "headline": "Relvon Fuels faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative consequences for the company's operations and reputation.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks announces significant capital expenditure plan for Latin America"
+      "headline": "Jovor Networks announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in Latin America indicates future growth potential but also involves immediate costs and execution risks.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels enters joint venture with a major logistics provider"
+      "headline": "Relvon Fuels enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a major logistics provider suggests strategic expansion and potential operational synergies.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems wins industry award for excellence in enterprise software"
+      "headline": "Prynis Systems wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances the company's reputation and brand, potentially leading to increased sales or market recognition.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks warns of supply chain disruptions affecting North America operations"
+      "headline": "Jovor Networks warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly implies potential negative impacts on operations, production, and profitability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems confirms participation in Corporate Strategy Symposium"
+      "headline": "Prynis Systems confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a routine corporate activity that offers visibility but has no direct or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks enters joint venture with a top-tier research institute"
+      "headline": "Jovor Networks enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a research institute suggests investment in innovation and potential for future product development or technological advancements.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $400M contract with an international consortium"
+      "headline": "Prynis Systems secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract directly indicates a significant increase in future revenue and positive business momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:12.288Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

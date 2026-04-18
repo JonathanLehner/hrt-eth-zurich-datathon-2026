@@ -64,49 +64,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce completes strategic acquisition to strengthen process automation"
+      "headline": "Arnik Commerce completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to strengthen process automation, which should be beneficial for the company's long-term capabilities.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets announces $5.7B share buyback program"
+      "headline": "Frelex Outlets announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost shareholder value by reducing share count.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce warns of supply chain disruptions affecting North America operations"
+      "headline": "Arnik Commerce warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly implies negative impacts on operations, potentially leading to increased costs or reduced sales.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $120M contract with a major logistics provider"
+      "headline": "Varvov Retail Group secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a major provider is a clear positive for revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets files routine patent applications in process automation"
+      "headline": "Frelex Outlets files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent applications indicate ongoing R&D and IP protection, which is generally positive but not a major catalyst.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces $4.1B share buyback program"
+      "headline": "Jovik Asset Group announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial share buyback program typically signals management confidence and can boost shareholder value by reducing share count.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group to host investor day focused on renewable storage strategy"
+      "headline": "Jovik Asset Group to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on a specific strategy like renewable storage suggests potential future growth and strategic direction, which can generate positive interest.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "guidance",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:22.658Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -1,0 +1,182 @@
+{
+  "session": "786",
+  "companyCount": 3,
+  "headlineCount": 7,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Strynal Industries",
+      "headlineCount": 1,
+      "firstBarIx": 2,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Strynal Industries misses quarterly revenue estimates by 25%"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Yorval Partners",
+      "headlineCount": 2,
+      "firstBarIx": 23,
+      "headlineIds": [
+        "H002",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Yorval Partners wins industry award for excellence in process automation",
+        "Yorval Partners reports 7% decline in operating income"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Nolvol Resources",
+      "headlineCount": 4,
+      "firstBarIx": 29,
+      "headlineIds": [
+        "H004",
+        "H005",
+        "H006",
+        "H007"
+      ],
+      "sampleHeadlines": [
+        "Nolvol Resources launches next-generation wireless connectivity platform",
+        "Nolvol Resources expands operations into Asia Pacific markets",
+        "Nolvol Resources completes strategic acquisition to strengthen data analytics"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 2,
+      "companyId": 0,
+      "companyName": "Strynal Industries",
+      "headline": "Strynal Industries misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss indicates weaker-than-expected financial performance, likely leading to a negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 23,
+      "companyId": 1,
+      "companyName": "Yorval Partners",
+      "headline": "Yorval Partners wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and could indirectly lead to increased client interest or improved brand perception.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 24,
+      "companyId": 1,
+      "companyName": "Yorval Partners",
+      "headline": "Yorval Partners reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates a weakening in core business profitability, which is a negative financial signal.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 29,
+      "companyId": 2,
+      "companyName": "Nolvol Resources",
+      "headline": "Nolvol Resources launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "A new product launch, especially a 'next-generation' platform, suggests potential for future revenue growth and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 32,
+      "companyId": 2,
+      "companyName": "Nolvol Resources",
+      "headline": "Nolvol Resources expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into new markets indicates growth strategy and potential for increased revenue streams.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 39,
+      "companyId": 2,
+      "companyName": "Nolvol Resources",
+      "headline": "Nolvol Resources completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "A strategic acquisition aimed at strengthening a key capability like data analytics suggests potential for improved competitive positioning and future growth.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H007",
+      "barIx": 46,
+      "companyId": 2,
+      "companyName": "Nolvol Resources",
+      "headline": "Nolvol Resources begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause temporary, minor disruptions but is essential for long-term efficiency and reliability.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:24:07.393Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

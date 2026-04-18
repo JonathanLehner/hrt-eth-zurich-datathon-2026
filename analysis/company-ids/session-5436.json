@@ -38,28 +38,79 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power delays product launch in precision manufacturing segment"
+      "headline": "Plevep Power delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch is a negative operational event that can impact future revenue expectations.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces breakthrough in enterprise software"
+      "headline": "Plevep Power announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough in enterprise software suggests potential for new products, competitive advantage, and future revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power sees 3% drop in new customer orders this quarter"
+      "headline": "Plevep Power sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A drop in new customer orders indicates weakening demand, which directly impacts current and future revenue.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports 18% increase in customer acquisition"
+      "headline": "Orevov Solutions reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition indicates strong demand and potential for future revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:41.097Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

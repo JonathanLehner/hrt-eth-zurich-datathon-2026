@@ -60,35 +60,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports 15% decline in operating income"
+      "headline": "Halven Investments reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates weaker financial performance, negatively impacting investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group opens new office in Middle East"
+      "headline": "Holtum Asset Group opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office in the Middle East represents a strategic expansion aimed at increasing market presence and potential revenue.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $180M contract with a multinational manufacturer"
+      "headline": "Jovik Asset Group secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $180M contract with a multinational manufacturer provides a clear and significant revenue boost.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 25%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 25% indicates weaker-than-expected financial performance and will negatively impact investor confidence.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips CFO addresses investor concerns in open letter"
+      "headline": "Ulvyn Microchips CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "The CFO addressing investor concerns suggests existing negative sentiment or issues, and the impact depends entirely on the content and effectiveness of the letter, which is not provided.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "leadership",
+        "evidenceStrength": 2,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:15.422Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

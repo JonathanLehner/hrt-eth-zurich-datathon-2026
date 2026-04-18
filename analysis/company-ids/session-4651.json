@@ -56,56 +56,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports unexpected decline in Europe revenue"
+      "headline": "Halven Investments reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in Europe revenue indicates weaker demand, negatively impacting financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors delays product launch in data analytics segment"
+      "headline": "Zrovov Advisors delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can lead to missed revenue opportunities and increased development costs, negatively impacting future earnings.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors misses quarterly revenue estimates by 8%"
+      "headline": "Zrovov Advisors misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin indicates underperformance and will likely lead to a negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Creven Securities reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial health and performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities names new head of cloud infrastructure division"
+      "headline": "Creven Securities names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a key division can signal strategic changes or a renewed focus, with potential for positive or negative impact depending on the individual's reputation and strategy.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces significant capital expenditure plan for Central Europe"
+      "headline": "Zrovov Advisors announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates investment in future growth and expansion, which can be positive for long-term prospects but may incur short-term costs.",
+        "longTerm": 5,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Halven Investments Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A COO addressing investor concerns in an open letter suggests existing issues and an attempt at damage control, which could be seen as a positive step towards transparency but also highlights underlying problems.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $500M contract with a major logistics provider"
+      "headline": "Creven Securities secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial $500M contract with a major provider is a significant positive event, indicating strong demand and future revenue.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:25.460Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

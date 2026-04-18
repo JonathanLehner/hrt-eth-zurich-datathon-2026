@@ -48,28 +48,79 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 18% decline in operating income"
+      "headline": "Yorven Labs reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income directly signals weakened profitability and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Yorven Labs completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition of cloud infrastructure assets is a strategic move intended to bolster long-term competitive positioning.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems files for regulatory approval of new data analytics offering"
+      "headline": "Brevep Systems files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates progress toward a new product launch.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing files for regulatory approval of new enterprise software offering"
+      "headline": "Talvep Computing files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "The regulatory filing for new enterprise software represents a standard milestone in the product development lifecycle.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:14.480Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

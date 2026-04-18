@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Holtum Asset Group recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "The product recall due to quality concerns will negatively impact sales, reputation, and incur costs for Holtum Asset Group.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $800M contract with a multinational manufacturer"
+      "headline": "Plevyl Advisors secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $800M contract is a significant positive for Plevyl Advisors' revenue and market position.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors enters joint venture with a multinational manufacturer"
+      "headline": "Plevyl Advisors enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a multinational manufacturer suggests potential for market expansion, shared resources, and new revenue streams for Plevyl Advisors.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group files for regulatory approval of new digital payments offering"
+      "headline": "Jovik Asset Group files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new digital payments offering indicates a future product launch that could expand Jovik Asset Group's market presence and revenue.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 13,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings publishes annual sustainability report"
+      "headline": "Talvix Holdings publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing an annual sustainability report is a standard corporate disclosure that generally has a neutral direct financial impact, though it can positively influence ESG ratings and investor perception.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $75M contract with a top-tier research institute"
+      "headline": "Jovik Asset Group secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract is a positive development for Jovik Asset Group, indicating new revenue and a strong partnership.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 5% margin improvement in latest quarter"
+      "headline": "Talvix Holdings sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates enhanced profitability and operational efficiency for Talvix Holdings, which is a strong positive financial signal.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings completes planned facility upgrade in Europe"
+      "headline": "Talvix Holdings completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade suggests improved operational efficiency, increased capacity, or enhanced capabilities, which can positively impact future performance for Talvix Holdings.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:43.711Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

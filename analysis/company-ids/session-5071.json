@@ -62,42 +62,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels to present at Emerging Markets Forum"
+      "headline": "Relvon Fuels to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum offers some visibility but does not guarantee direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices faces regulatory review of precision manufacturing practices"
+      "headline": "Nolvis Devices faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, which is a negative signal for the company.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $120M contract with a national infrastructure agency"
+      "headline": "Relvan Software secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a national agency provides a clear and substantial revenue boost.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 3,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Ixenix Technologies completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a core area is generally positive, indicating growth and market position improvement.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Nolvis Devices reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue with significant year-over-year growth indicates strong financial performance and demand for products.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports 3% increase in customer acquisition"
+      "headline": "Relvon Fuels reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition is a positive indicator of growth and future revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:37.262Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

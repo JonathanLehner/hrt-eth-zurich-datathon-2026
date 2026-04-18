@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries files for regulatory approval of new precision manufacturing offering"
+      "headline": "Zrovex Industries files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering indicates potential future revenue growth, but the impact is delayed and subject to approval.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Halvax Networks reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue indicates strong financial performance and positive demand for the company's products or services.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks completes strategic acquisition to strengthen digital payments"
+      "headline": "Halvax Networks completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition in digital payments suggests expansion into a growing market and potential for increased revenue and market share.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $120M contract with a multinational manufacturer"
+      "headline": "Zrovex Industries secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $120M contract provides a clear and substantial boost to future revenue and order backlog.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Halvax Networks reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins indicate a negative effect on profitability and potentially future earnings.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy CFO steps down unexpectedly citing personal reasons"
+      "headline": "Plevik Energy CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO can create uncertainty regarding financial leadership and future financial strategy.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy names new head of precision manufacturing division"
+      "headline": "Plevik Energy names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Naming a new division head can signal a strategic focus or change in direction for that specific business unit, with potential for future operational improvements.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid faces class action over cloud infrastructure service disruption"
+      "headline": "Nerven Grid faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption indicates potential legal costs, reputational damage, and financial liabilities.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:25.710Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

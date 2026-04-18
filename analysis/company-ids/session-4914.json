@@ -48,28 +48,79 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies delays product launch in automated logistics segment"
+      "headline": "Myrnep Technologies delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch indicates missed revenue opportunities and potential competitive disadvantages.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports 18% decline in operating income"
+      "headline": "Relvan Software reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income signals poor financial performance and will likely impact investor confidence negatively.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $75M contract with a major logistics provider"
+      "headline": "Relvan Software secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract provides a clear boost to future revenue and demonstrates strong market traction.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports unexpected decline in Europe revenue"
+      "headline": "Brevon Microchips reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a key regional revenue stream suggests weakening demand or competitive pressures, negatively impacting the financial outlook.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:09.479Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

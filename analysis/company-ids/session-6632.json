@@ -41,49 +41,130 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces significant capital expenditure plan for Scandinavia"
+      "headline": "Relvon Fuels announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Relvon Fuels begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports 3% increase in customer acquisition"
+      "headline": "Relvon Fuels reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive indicator of demand growth that should translate to revenue.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources recalls products in process automation line due to quality concerns"
+      "headline": "Nolvol Resources recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall introduces immediate costs and potential reputational damage to the process automation line.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces breakthrough in enterprise software"
+      "headline": "Relvon Fuels announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough in enterprise software suggests potential for future revenue growth and competitive advantage.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels recalls products in renewable storage line due to quality concerns"
+      "headline": "Relvon Fuels recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling products in the renewable storage line creates immediate financial liability and operational disruption.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces regulatory review of wireless connectivity practices"
+      "headline": "Relvon Fuels faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty regarding future compliance costs and potential operational restrictions.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:08.583Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

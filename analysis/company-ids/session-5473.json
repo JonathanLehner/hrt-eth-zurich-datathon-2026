@@ -38,28 +38,79 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods wins industry award for excellence in automated logistics"
+      "headline": "Xovol Goods wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and could indirectly lead to increased demand or partnerships, but the direct financial impact is not immediate or guaranteed.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods files routine patent applications in precision manufacturing"
+      "headline": "Xovol Goods files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent applications indicate ongoing innovation and intellectual property protection, which is a positive operational sign but does not imply immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports rising costs pressuring margins in data analytics"
+      "headline": "Orevex Renewables reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressuring margins indicate a negative financial outlook for the company's profitability.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports 25% decline in operating income"
+      "headline": "Orevex Renewables reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant 25% decline in operating income is a clear negative financial indicator, directly impacting profitability.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:47.478Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

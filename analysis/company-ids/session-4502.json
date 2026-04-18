@@ -62,42 +62,113 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech revises long-term strategy with focus on data analytics"
+      "headline": "Grevon Biotech revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on data analytics suggests potential future operational improvements and competitive advantages, but the immediate impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals faces regulatory review of digital payments practices"
+      "headline": "Krevum Pharmaceuticals faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of payment practices introduces uncertainty and potential for fines or operational changes, creating a negative overhang.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries begins scheduled maintenance of process automation systems"
+      "headline": "Strynal Industries begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that might cause minor, temporary disruptions but is generally a positive for long-term system reliability.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports strong demand in Central Europe, raises outlook"
+      "headline": "Myrnon Therapeutics reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region and a raised outlook indicate improved financial performance expectations, positively impacting both short and long-term sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $800M contract with a leading cloud platform"
+      "headline": "Myrnon Therapeutics secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial $800M contract with a leading cloud platform represents a significant revenue increase and validates the company's offerings.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces $2.5B share buyback program"
+      "headline": "Grevon Biotech announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:54.302Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

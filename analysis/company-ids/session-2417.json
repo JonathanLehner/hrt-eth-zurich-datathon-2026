@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets files routine patent applications in supply chain optimization"
+      "headline": "Ixenis Outlets files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent applications suggest ongoing innovation but typically have minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid opens new office in Southeast Asia"
+      "headline": "Nerven Grid opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Opening a new office in a growth region indicates business expansion and potential for increased market presence.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid revises long-term strategy with focus on renewable storage"
+      "headline": "Nerven Grid revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic shift towards renewable storage indicates a potential pivot to a growing market, which could be positive but also involves execution risk.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "guidance",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Jorvis Fuels recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will likely result in immediate costs, reputational damage, and potential loss of sales.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy completes strategic acquisition to strengthen enterprise software"
+      "headline": "Zelval Energy completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a specific business area is generally positive for growth and market position, though integration risks exist.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets revises long-term strategy with focus on process automation"
+      "headline": "Ixenis Outlets revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "Revising strategy to focus on process automation suggests efforts to improve efficiency and reduce costs, which could be positive for profitability.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "guidance",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets faces regulatory review of digital payments practices"
+      "headline": "Ixenis Outlets faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of digital payments practices introduces uncertainty and potential for fines or operational changes, which is generally negative.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:07.383Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group opens new office in Latin America"
+      "headline": "Varvov Retail Group opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office in Latin America indicates business expansion, which is generally positive for growth, though the immediate financial impact is likely minimal.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co to present at Capital Markets Day"
+      "headline": "Jorval Trading Co to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Presenting at a Capital Markets Day provides an opportunity to communicate strategy and performance to investors, which can improve investor relations and potentially attract capital.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores CTO addresses investor concerns in open letter"
+      "headline": "Xovep Stores CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "The CTO addressing investor concerns in an open letter aims to reassure the market, which could mitigate negative sentiment, but the effectiveness depends on the content of the letter and the nature of the concerns.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co faces class action over process automation service disruption"
+      "headline": "Jorval Trading Co faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption is a significant negative event that can lead to legal costs, potential damages, and reputational harm.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores explores strategic alternatives for precision manufacturing unit"
+      "headline": "Xovep Stores explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests a potential divestiture or restructuring, which could unlock value or streamline operations, but also indicates uncertainty about the unit's future.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace files for regulatory approval of new precision manufacturing offering"
+      "headline": "Arnos Marketplace files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering is a positive step towards a potential product launch, indicating future revenue opportunities, though approval is not guaranteed.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:29.337Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

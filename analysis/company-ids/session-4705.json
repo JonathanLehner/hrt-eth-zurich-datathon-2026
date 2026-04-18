@@ -51,42 +51,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power opens new office in North America"
+      "headline": "Kelvik Power opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office in North America suggests business expansion and potential for increased revenue and market presence.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners opens new office in Central Europe"
+      "headline": "Yorval Partners opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in Central Europe indicates business expansion, potentially leading to new market opportunities and revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces breakthrough in digital payments"
+      "headline": "Ilval Financial announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments could significantly enhance the company's product offerings, attract new customers, and increase market share.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $250M contract with a major logistics provider"
+      "headline": "Ilval Financial secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial $250M contract with a major logistics provider represents a significant revenue increase and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial to host investor day focused on cloud infrastructure strategy"
+      "headline": "Ilval Financial to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on a cloud infrastructure strategy indicates the company is actively communicating its future direction, which can build investor confidence and clarify growth plans.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees mixed results in data analytics pilot program"
+      "headline": "Ilval Financial sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest that the company's investment in data analytics may not yield clear positive returns immediately, potentially delaying or complicating future initiatives.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:32.967Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

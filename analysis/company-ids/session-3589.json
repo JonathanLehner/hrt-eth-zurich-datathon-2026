@@ -55,56 +55,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports unexpected decline in Europe revenue"
+      "headline": "Ilval Financial reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in European revenue indicates weaker demand and will negatively impact the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports rising costs pressuring margins in data analytics"
+      "headline": "Jorvyl Securities reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs in a specific segment will negatively impact the company's profitability and margins.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees 15% margin improvement in latest quarter"
+      "headline": "Ilval Financial sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 15% margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Ilval Financial Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive like the COO creates uncertainty and potential disruption to operations.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports unexpected decline in Latin America revenue"
+      "headline": "Ilval Financial reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in Latin America revenue indicates weaker demand in that region, negatively impacting the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Wrelal Financial files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering is a necessary step towards a potential product launch, indicating future growth opportunities.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees mixed results in enterprise software pilot program"
+      "headline": "Jorvyl Securities sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the future success and scalability of the enterprise software, creating ambiguity for future performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces breakthrough in cloud infrastructure"
+      "headline": "Jorvyl Securities announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' in cloud infrastructure suggests a significant technological advancement that could lead to new products, improved services, or competitive advantage.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:45.806Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

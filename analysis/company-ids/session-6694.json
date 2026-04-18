@@ -62,42 +62,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips opens new office in Latin America"
+      "headline": "Ulvyn Microchips opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software announces breakthrough in data analytics"
+      "headline": "Relvan Software announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A technological breakthrough provides a competitive advantage, though the commercialization timeline remains vague.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks loses key contract in Europe to competitor"
+      "headline": "Halvax Networks loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks delays product launch in cloud infrastructure segment"
+      "headline": "Halvax Networks delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue and may signal internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices files routine patent applications in process automation"
+      "headline": "Nolvis Devices files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not indicate immediate financial change.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software begins scheduled maintenance of process automation systems"
+      "headline": "Relvan Software begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational activity with no expected material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:09.630Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

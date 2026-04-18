@@ -65,56 +65,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Zrovex Industries reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 5% indicates solid operational performance and positive momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy delays product launch in data analytics segment"
+      "headline": "Zelval Energy delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals operational friction and pushes back expected revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Zrovex Industries announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests long-term growth investment but implies near-term cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software completes strategic acquisition to strengthen data analytics"
+      "headline": "Frelol Software completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to bolster competitive positioning and long-term capability in data analytics.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 17,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels wins industry award for excellence in enterprise software"
+      "headline": "Relvon Fuels wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software sees mixed results in renewable storage pilot program"
+      "headline": "Frelol Software sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the viability and scalability of the renewable storage offering.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software sees mixed results in precision manufacturing pilot program"
+      "headline": "Frelol Software sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest inconsistent performance, leading to uncertainty about future adoption in precision manufacturing.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software faces class action over data analytics service disruption"
+      "headline": "Frelol Software faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal risk and potential financial liability for the company.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:10.113Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

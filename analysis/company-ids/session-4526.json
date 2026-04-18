@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces major organizational restructuring"
+      "headline": "Zelvel Capital announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring can be disruptive in the short term but aims for long-term efficiency, creating mixed immediate signals and potential future benefits.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $800M contract with a major logistics provider"
+      "headline": "Wrelal Financial secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract is a clear positive for revenue and business growth, providing a strong positive impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial to host investor day focused on wireless connectivity strategy"
+      "headline": "Ilval Financial to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy can generate interest and provide clarity, potentially leading to a positive re-evaluation, but the impact depends on the disclosed strategy.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces $4.1B share buyback program"
+      "headline": "Zelvel Capital announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports unexpected decline in Scandinavia revenue"
+      "headline": "Zelvel Capital reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region is a negative indicator for financial performance and can raise concerns about future growth.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Ilval Financial announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a specific region indicates future growth ambitions and investment, which can be positive for long-term prospects but may incur short-term costs.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:59.802Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

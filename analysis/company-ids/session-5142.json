@@ -64,49 +64,130 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces major organizational restructuring"
+      "headline": "Krevan Investments announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "A major organizational restructuring can create short-term disruption but aims for long-term efficiency, making the immediate impact uncertain and the long-term potential positive but also uncertain.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in a key region suggests future growth potential, though it involves immediate costs and execution risk.",
+        "longTerm": 6,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Ilval Financial completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a specific business area is generally positive for long-term growth and market position, despite potential short-term integration challenges.",
+        "longTerm": 7,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial recalls products in enterprise software line due to quality concerns"
+      "headline": "Ilval Financial recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event, leading to immediate costs, reputational damage, and potential loss of future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors signs multi-year partnership with a national infrastructure agency"
+      "headline": "Plevyl Advisors signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Signing a multi-year partnership with a national infrastructure agency represents a significant and durable revenue stream and validates the company's expertise.",
+        "longTerm": 8,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors completes planned facility upgrade in Europe"
+      "headline": "Plevyl Advisors completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive for the business, though the immediate financial impact might be minor.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $50M contract with a national infrastructure agency"
+      "headline": "Ervan Capital secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a national infrastructure agency is a clear and significant positive event, providing a substantial revenue boost.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:56.052Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

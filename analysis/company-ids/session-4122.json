@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables enters joint venture with a global retailer"
+      "headline": "Orevex Renewables enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a global retailer suggests potential for market expansion and increased revenue for Orevex Renewables.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources loses key contract in Central Europe to competitor"
+      "headline": "Kelvos Resources loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract will negatively impact Kelvos Resources' revenue and market position in Central Europe.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources announces $5.7B share buyback program"
+      "headline": "Kelvos Resources announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically boosts shareholder value by reducing share count and increasing EPS, signaling confidence from management.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports strong demand in Central Europe, raises outlook"
+      "headline": "Calvis Sciences reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook indicate improved financial performance and positive future prospects for Calvis Sciences.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences faces regulatory review of process automation practices"
+      "headline": "Calvis Sciences faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage for Calvis Sciences.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files for regulatory approval of new renewable storage offering"
+      "headline": "Orevex Renewables files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards launching a new product, indicating potential future revenue streams for Orevex Renewables.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions sees 8% drop in new customer orders this quarter"
+      "headline": "Orevov Solutions sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders indicates weakening demand, which will negatively impact Orevov Solutions' future revenue.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:17.766Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

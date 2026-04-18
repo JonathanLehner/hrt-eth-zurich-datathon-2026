@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group wins industry award for excellence in precision manufacturing"
+      "headline": "Holtum Asset Group wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and may indirectly lead to future business, but its direct financial impact is limited.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Kelvik Power reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressure margins, indicating a negative financial impact for the company.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces major organizational restructuring"
+      "headline": "Halven Investments announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring can lead to short-term disruption and costs, but aims for long-term efficiency and strategic alignment.",
+        "longTerm": 3,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group names new head of data analytics division"
+      "headline": "Holtum Asset Group names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "A new division head can bring fresh strategy and execution, but the immediate financial impact is usually neutral unless the individual is highly prominent.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments names new head of wireless connectivity division"
+      "headline": "Halven Investments names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "A new division head can bring fresh strategy and execution, but the immediate financial impact is usually neutral unless the individual is highly prominent.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments names new head of digital payments division"
+      "headline": "Halven Investments names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "A new division head can bring fresh strategy and execution, but the immediate financial impact is usually neutral unless the individual is highly prominent.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power announces breakthrough in supply chain optimization"
+      "headline": "Kelvik Power announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential for significant cost savings and improved efficiency, leading to positive financial impact.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees 3% margin improvement in latest quarter"
+      "headline": "Plevum Partners sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A reported 3% margin improvement indicates direct positive financial performance in the latest quarter.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:15.986Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces $8.4B share buyback program"
+      "headline": "Relvon Fuels announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees mixed results in supply chain optimization pilot program"
+      "headline": "Relvon Fuels sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from an optimization program suggest inefficiency or lack of clear improvement, which is a neutral to slightly negative signal for operational efficiency.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries files routine patent applications in process automation"
+      "headline": "Strynal Industries files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations and do not typically signal a significant immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries loses key contract in Europe to competitor"
+      "headline": "Strynal Industries loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor in a significant market like Europe is a clear negative for revenue and market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Grevel Diagnostics begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational activity and typically does not have a significant financial impact unless it causes unexpected disruptions.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Zrovex Industries reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with strong year-over-year growth is a very positive financial indicator, suggesting strong demand or successful operations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Relvon Fuels completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a key area like wireless connectivity is generally viewed positively, indicating growth and strategic positioning.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics signs multi-year partnership with a national infrastructure agency"
+      "headline": "Grevel Diagnostics signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Signing a multi-year partnership with a national infrastructure agency is a significant positive development, indicating stable revenue streams and market validation.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:27.458Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

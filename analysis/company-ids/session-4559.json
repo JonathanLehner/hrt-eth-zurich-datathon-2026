@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $500M contract with a major logistics provider"
+      "headline": "Varvov Retail Group secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract is a direct positive financial event for the company, indicating future revenue.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports strong demand in Middle East, raises outlook"
+      "headline": "Arnik Commerce reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook indicate improved future financial performance and market confidence.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods begins scheduled maintenance of process automation systems"
+      "headline": "Xovol Goods begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that might temporarily reduce output but is necessary for long-term efficiency.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Varvov Retail Group announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates future growth and expansion, but also involves immediate costs.",
+        "longTerm": 6,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Talvyn Goods reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins are a negative financial indicator for profitability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods delays product launch in data analytics segment"
+      "headline": "Xovol Goods delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact anticipated revenue and market positioning.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods completes planned facility upgrade in Southeast Asia"
+      "headline": "Talvyn Goods completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce faces regulatory review of digital payments practices"
+      "headline": "Arnik Commerce faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines or operational changes, which is generally negative.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:05.022Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

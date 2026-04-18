@@ -48,28 +48,79 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial faces regulatory review of automated logistics practices"
+      "headline": "Ilval Financial faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative outcomes for the company's operations and reputation.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $250M contract with a leading cloud platform"
+      "headline": "Halvix Holdings secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a leading platform is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems files for regulatory approval of new process automation offering"
+      "headline": "Brevep Systems files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering indicates progress towards a potential product launch, which could expand market reach.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $75M contract with a top-tier research institute"
+      "headline": "Ilval Financial secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with a reputable institute is a positive development for revenue and credibility.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:33.045Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

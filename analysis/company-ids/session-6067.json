@@ -62,42 +62,113 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees 5% drop in new customer orders this quarter"
+      "headline": "Grevon Biotech sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders indicates reduced demand, negatively impacting revenue and growth prospects.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees mixed results in wireless connectivity pilot program"
+      "headline": "Grevon Biotech sees mixed results in wireless connectivity pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program suggest potential delays or challenges in bringing a new wireless connectivity solution to market, creating uncertainty about future revenue streams.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals signs multi-year partnership with a major logistics provider"
+      "headline": "Krevum Pharmaceuticals signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a major logistics provider should improve operational efficiency and supply chain reliability, potentially reducing costs and improving product delivery.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Nerval Biopharma recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur significant costs, damage reputation, and potentially lead to lost sales and regulatory scrutiny.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences confirms participation in Emerging Markets Forum"
+      "headline": "Relvos Biosciences confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a minor event that offers networking and visibility, but its direct financial impact is speculative and generally low.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals to present at Capital Markets Day"
+      "headline": "Krevum Pharmaceuticals to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Presenting at a Capital Markets Day provides an opportunity to communicate strategy and updates to investors, potentially improving investor confidence and visibility, but without guaranteed direct financial outcomes.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:40.983Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

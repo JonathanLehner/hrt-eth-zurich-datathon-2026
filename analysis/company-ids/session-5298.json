@@ -62,42 +62,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace misses quarterly revenue estimates by 3%"
+      "headline": "Orevar Marketplace misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 3% indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 15% decline in operating income"
+      "headline": "Grevon Biotech reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income signals significant operational challenges or reduced profitability, which is a strong negative indicator for investors.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $75M contract with a national infrastructure agency"
+      "headline": "Relvos Biosciences secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with a national agency represents a significant revenue stream and validates the company's capabilities, leading to positive financial impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences expands operations into Asia Pacific markets"
+      "headline": "Relvos Biosciences expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets like Asia Pacific suggests growth potential and increased addressable market, which is generally viewed positively.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Grevon Biotech reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a significant 20% year-over-year increase indicates strong business performance and growth, which is highly positive for investors.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma begins scheduled maintenance of digital payments systems"
+      "headline": "Nerval Biopharma begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance of critical systems is a routine operational activity that, while potentially causing minor temporary disruption, is generally a neutral event for financial impact as it ensures system stability.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:18.237Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences sees 8% drop in new customer orders this quarter"
+      "headline": "Wyrnik Sciences sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders indicates a significant negative impact on future revenue and growth for the company.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $75M contract with a leading cloud platform"
+      "headline": "Krevum Pharmaceuticals secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with a leading cloud platform is a clear positive for Krevum Pharmaceuticals, indicating new revenue and market validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group misses quarterly revenue estimates by 15%"
+      "headline": "Holtum Asset Group misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 15% indicates underperformance and will likely lead to a negative market reaction.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $75M contract with a major logistics provider"
+      "headline": "Krevum Pharmaceuticals secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing another $75M contract, this time with a major logistics provider, further strengthens Krevum Pharmaceuticals' revenue pipeline and market reach.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences begins scheduled maintenance of automated logistics systems"
+      "headline": "Wyrnik Sciences begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that, while potentially causing minor temporary disruptions, is generally expected and necessary for long-term efficiency, thus having a neutral to slightly negative short-term impact.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals wins industry award for excellence in cloud infrastructure"
+      "headline": "Krevum Pharmaceuticals wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Winning an industry award for excellence in cloud infrastructure is a positive reputational boost that could indirectly lead to future business, but its direct financial impact is not immediate or quantifiable.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:53.037Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

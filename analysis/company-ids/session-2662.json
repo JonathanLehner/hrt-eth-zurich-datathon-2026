@@ -48,28 +48,79 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals delays product launch in process automation segment"
+      "headline": "Yorvov Pharmaceuticals delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "A delayed product launch typically indicates a setback in revenue generation and market penetration, negatively impacting short-term expectations and potentially long-term growth prospects.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Frelis Genomics announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in a new region suggests future growth opportunities but also implies immediate costs and execution risks.",
+        "longTerm": 6,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $400M contract with a national infrastructure agency"
+      "headline": "Frelis Genomics secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a national agency provides a clear positive signal for future revenue and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma secures $650M contract with a multinational manufacturer"
+      "headline": "Zrovum Biopharma secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a multinational manufacturer is a significant positive for revenue generation and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:47.114Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

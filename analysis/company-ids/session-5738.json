@@ -52,42 +52,113 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores confirms participation in Annual Industry Forum"
+      "headline": "Holtar Stores confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a minor operational event with no direct, quantifiable financial impact from the headline alone.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $250M contract with a multinational manufacturer"
+      "headline": "Holtar Stores secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract will positively impact revenue and future earnings for Holtar Stores.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Relvos Biosciences reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth indicates strong financial performance and increased demand.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics faces regulatory review of precision manufacturing practices"
+      "headline": "Myrnon Therapeutics faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of manufacturing practices introduces uncertainty and potential for negative outcomes like fines, production halts, or product delays.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores names new head of enterprise software division"
+      "headline": "Holtar Stores names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "A new division head can bring strategic changes, but the immediate financial impact is generally neutral unless specific details about the new leader or their mandate are provided.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $250M contract with an international consortium"
+      "headline": "Myrnon Therapeutics secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with an international consortium will positively impact revenue and future earnings for Myrnon Therapeutics.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:38.180Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

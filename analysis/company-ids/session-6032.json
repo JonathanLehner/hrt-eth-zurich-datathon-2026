@@ -55,56 +55,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics wins industry award for excellence in precision manufacturing"
+      "headline": "Frelis Genomics wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances company reputation and could indirectly attract new business, but its direct financial impact is not immediately quantifiable.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech completes planned facility upgrade in Central Europe"
+      "headline": "Grevon Biotech completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational capacity or efficiency, which is generally positive for future production and cost structure.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities CEO addresses investor concerns in open letter"
+      "headline": "Creven Securities CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "The CEO addressing investor concerns could alleviate negative sentiment or provide clarity, but the actual impact depends on the content of the letter and the nature of the concerns.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics opens new office in Southeast Asia"
+      "headline": "Frelis Genomics opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Opening a new office in a region indicates business expansion, which could lead to new market penetration and revenue growth, but also involves initial costs.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities misses quarterly revenue estimates by 10%"
+      "headline": "Creven Securities misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin is a clear negative signal for the company's financial performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees 20% drop in new customer orders this quarter"
+      "headline": "Frelis Genomics sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a significant negative indicator for future revenue and demand for the company's offerings.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports 3% increase in customer acquisition"
+      "headline": "Frelis Genomics reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive indicator for future revenue growth and market penetration.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $500M contract with a global retailer"
+      "headline": "Creven Securities secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract is a highly significant positive event, guaranteeing substantial future revenue for the company.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:34.285Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

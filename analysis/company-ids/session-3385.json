@@ -48,28 +48,79 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 15% margin improvement in latest quarter"
+      "headline": "Zrovex Industries sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates stronger profitability and operational efficiency for the company in the latest quarter.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Prynis Systems warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions in a key region suggests potential negative impacts on production, sales, and costs.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $400M contract with a national infrastructure agency"
+      "headline": "Zelval Energy secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national agency provides a significant revenue stream and validates the company's capabilities.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces significant capital expenditure plan for Middle East"
+      "headline": "Prynis Systems announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion indicates future growth potential but also involves upfront costs and execution risks.",
+        "longTerm": 6,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:59.746Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

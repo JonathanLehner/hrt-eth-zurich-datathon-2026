@@ -50,35 +50,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital names new head of data analytics division"
+      "headline": "Zelvel Capital names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new head for a division can signal strategic shifts or improvements, but the immediate impact is often uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Creven Securities revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on cloud infrastructure suggests potential for efficiency gains and future growth, but the immediate financial impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Jovor Networks reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial performance.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities delays product launch in precision manufacturing segment"
+      "headline": "Creven Securities delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can signal development issues, missed market opportunities, or a setback in revenue generation.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces regulatory review of data analytics practices"
+      "headline": "Zelvel Capital faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review, especially concerning data analytics practices, introduces uncertainty and potential for fines or operational restrictions, which is generally negative.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:16.187Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

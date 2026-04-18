@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $50M contract with a major logistics provider"
+      "headline": "Plevik Energy secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a clear positive for revenue and business growth.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Kelvik Power reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue and an 8% year-over-year increase indicate strong financial performance.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals sees 7% drop in new customer orders this quarter"
+      "headline": "Krevum Pharmaceuticals sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates weakening demand and potential future revenue decline.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports 8% increase in customer acquisition"
+      "headline": "Plevik Energy reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a positive indicator for future revenue growth and market penetration.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals launches next-generation supply chain optimization platform"
+      "headline": "Krevum Pharmaceuticals launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new supply chain optimization platform could improve operational efficiency and potentially reduce costs.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources begins scheduled maintenance of renewable storage systems"
+      "headline": "Nolvol Resources begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational activity that can temporarily reduce output but is necessary for long-term asset health.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power faces class action over automated logistics service disruption"
+      "headline": "Kelvik Power faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption poses significant legal and financial risks, including potential damages and reputational harm.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources sees 25% drop in new customer orders this quarter"
+      "headline": "Nolvol Resources sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A substantial 25% drop in new customer orders indicates a significant decline in demand, posing a serious threat to future revenue.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:40.367Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -60,35 +60,96 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace announces $0.8B share buyback program"
+      "headline": "Orevar Marketplace announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A share buyback program typically signals management confidence and can boost EPS, leading to a positive short-term and potentially sustained long-term impact.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees 8% drop in new customer orders this quarter"
+      "headline": "Zelvon Biosciences sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders indicates weakening demand, which will negatively impact revenue and future growth prospects.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences in talks for potential merger, details undisclosed"
+      "headline": "Zelvon Biosciences in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Merger talks introduce significant uncertainty and speculation, which can lead to volatility but the outcome and terms are unknown.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace faces class action over process automation service disruption"
+      "headline": "Arnos Marketplace faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption poses financial and reputational risks, leading to a negative impact.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce names new head of supply chain optimization division"
+      "headline": "Nolvav Commerce names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "A new divisional head can signal strategic changes or improvements, but the impact is uncertain without knowing the individual's track record or specific plans.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:25.869Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

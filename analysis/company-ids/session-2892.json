@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power faces regulatory review of data analytics practices"
+      "headline": "Plevep Power faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review indicates potential negative consequences such as fines, operational restrictions, or reputational damage, creating uncertainty for the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy expands operations into North America markets"
+      "headline": "Plevik Energy expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets suggests potential for revenue growth and increased market share, though initial costs may be incurred.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy names new head of digital payments division"
+      "headline": "Plevik Energy names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division can signal strategic changes or renewed focus, but the impact is highly dependent on the individual's capabilities and future actions.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 20% margin improvement in latest quarter"
+      "headline": "Strynal Industries sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive financial indicator.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Plevik Energy warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations suggests potential for increased costs, reduced production, and negative financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $800M contract with a multinational manufacturer"
+      "headline": "Strynal Industries secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract represents a significant increase in future revenue and backlog, providing a clear positive financial outlook.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid sees 3% drop in new customer orders this quarter"
+      "headline": "Nerven Grid sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A drop in new customer orders indicates weakening demand for the company's products or services, which will negatively impact future revenue.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries files for regulatory approval of new data analytics offering"
+      "headline": "Strynal Industries files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering indicates progress towards a product launch, which could open new revenue streams, but the approval and market success are not guaranteed.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:33.270Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

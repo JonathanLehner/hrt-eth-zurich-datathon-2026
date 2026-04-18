@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 5% decline in operating income"
+      "headline": "Ulvon Renewables reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income indicates a negative financial performance for the company.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings delays product launch in wireless connectivity segment"
+      "headline": "Halvix Holdings delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact future revenue expectations and market perception.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports rising costs pressuring margins in process automation"
+      "headline": "Ulvon Renewables reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressuring margins indicate a negative operational challenge for the company.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments sees 7% margin improvement in latest quarter"
+      "headline": "Krevan Investments sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates positive operational efficiency and profitability for the company.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Ulvon Renewables reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue with significant year-over-year growth indicates strong demand and positive business performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $250M contract with a leading cloud platform"
+      "headline": "Halvix Holdings secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a leading platform represents a significant positive revenue stream and validation for the company.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces breakthrough in enterprise software"
+      "headline": "Talvix Holdings announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough in enterprise software suggests potential for new revenue streams and enhanced competitive advantage.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings misses quarterly revenue estimates by 3%"
+      "headline": "Halvix Holdings misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates indicates underperformance relative to market expectations, leading to negative sentiment.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:06.784Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

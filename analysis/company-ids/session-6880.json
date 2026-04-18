@@ -48,28 +48,79 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $400M contract with a major logistics provider"
+      "headline": "Zelvel Capital secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "The $400M contract provides a clear, significant revenue boost that will positively impact financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources faces class action over automated logistics service disruption"
+      "headline": "Kelvos Resources faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability, creating significant uncertainty regarding the company's near-term stability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $180M contract with a major logistics provider"
+      "headline": "Kelvos Resources secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a solid revenue tailwind, though the impact is smaller than the previous headline and carries standard execution expectations.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports strong demand in North America, raises outlook"
+      "headline": "Jorvis Fuels reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a direct, positive signal for earnings growth that typically drives immediate and sustained investor confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:16.692Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

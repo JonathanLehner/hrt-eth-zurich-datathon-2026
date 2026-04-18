@@ -65,56 +65,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors completes planned facility upgrade in Central Europe"
+      "headline": "Zrovov Advisors completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital faces regulatory review of data analytics practices"
+      "headline": "Ervan Capital faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review implies potential negative outcomes such as fines, operational restrictions, or reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees mixed results in supply chain optimization pilot program"
+      "headline": "Ervan Capital sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate that the initiative did not achieve clear success, suggesting limited immediate positive impact and potential for further investment without guaranteed returns.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital files routine patent applications in cloud infrastructure"
+      "headline": "Ervan Capital files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations for technology companies, indicating ongoing innovation and intellectual property protection without implying a significant immediate financial event.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital raises full-year guidance citing robust demand"
+      "headline": "Ervan Capital raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance due to robust demand is a strong positive signal for future revenue and profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $250M contract with a top-tier research institute"
+      "headline": "Zrovov Advisors secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear and substantial boost to future revenue and backlog.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $320M contract with a top-tier research institute"
+      "headline": "Calvos Genomics secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear and substantial boost to future revenue and backlog.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $800M contract with a major logistics provider"
+      "headline": "Plevum Partners secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a very large contract provides a clear and substantial boost to future revenue and backlog.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:41:14.600Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

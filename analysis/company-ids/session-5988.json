@@ -48,28 +48,79 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees 7% drop in new customer orders this quarter"
+      "headline": "Urvel Grid sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates reduced demand, negatively impacting future revenue and growth prospects.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Kelvos Resources recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially reduce future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy completes strategic acquisition to strengthen data analytics"
+      "headline": "Plevik Energy completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen data analytics is generally a positive move for long-term operational efficiency and competitive advantage.",
+        "longTerm": 7,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources signs multi-year partnership with an international consortium"
+      "headline": "Kelvos Resources signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "Signing a multi-year partnership with an international consortium suggests new revenue streams and market expansion, positively impacting future business.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:23.363Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

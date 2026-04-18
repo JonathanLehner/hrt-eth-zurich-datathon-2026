@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences revises long-term strategy with focus on data analytics"
+      "headline": "Calvis Sciences revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy with a new focus introduces potential for future growth but lacks immediate, concrete financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $75M contract with an international consortium"
+      "headline": "Calvis Sciences secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract is a clear positive financial event, indicating new revenue.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $800M contract with a major logistics provider"
+      "headline": "Relvos Biosciences secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial $800M contract is a highly significant positive financial event, indicating a major revenue stream.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports rising costs pressuring margins in automated logistics"
+      "headline": "Plevik Energy reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins indicate a negative financial outlook for profitability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals misses quarterly revenue estimates by 20%"
+      "headline": "Krevum Pharmaceuticals misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 20% is a clear negative financial indicator, suggesting underperformance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 8% drop in new customer orders this quarter"
+      "headline": "Calvis Sciences sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders indicates weakening demand, which will negatively impact future revenue.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:33.889Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

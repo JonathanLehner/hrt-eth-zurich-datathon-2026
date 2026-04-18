@@ -62,42 +62,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial sees 12% drop in new customer orders this quarter"
+      "headline": "Wrelal Financial sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders indicates reduced demand, negatively impacting revenue and future growth.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets loses key contract in Southeast Asia to competitor"
+      "headline": "Frelex Outlets loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially to a competitor, implies a direct loss of revenue and market share.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $650M contract with an international consortium"
+      "headline": "Yorval Partners secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract with an international consortium represents a significant revenue increase and market expansion.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $320M contract with a major logistics provider"
+      "headline": "Wrelal Financial secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a major logistics provider will significantly boost revenue and market presence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $800M contract with a national infrastructure agency"
+      "headline": "Yorval Partners secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a very large contract with a national infrastructure agency indicates a substantial revenue increase and strengthens the company's position in a critical sector.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $500M contract with a multinational manufacturer"
+      "headline": "Creven Securities secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a multinational manufacturer will provide a significant revenue boost and enhance the company's reputation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:42.109Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

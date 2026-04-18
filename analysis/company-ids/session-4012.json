@@ -60,35 +60,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech expands operations into North America markets"
+      "headline": "Xelvol Biotech expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets is generally a positive strategic move that can lead to increased revenue and market share.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma delays product launch in renewable storage segment"
+      "headline": "Nerval Biopharma delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact anticipated revenue streams and market positioning, signaling potential operational or development issues.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Nerval Biopharma begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is generally necessary for system stability and performance, implying no direct negative or positive financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences faces regulatory review of supply chain optimization practices"
+      "headline": "Relvos Biosciences faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "A regulatory review, especially concerning supply chain practices, introduces uncertainty and potential for fines, operational changes, or reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems files routine patent applications in enterprise software"
+      "headline": "Brevep Systems files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard business practice for intellectual property protection and does not typically have a direct, immediate, or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:57.192Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

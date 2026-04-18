@@ -60,35 +60,96 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports unexpected decline in Middle East revenue"
+      "headline": "Brevep Systems reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative impact on the company's sales and potentially future growth prospects.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies misses quarterly revenue estimates by 12%"
+      "headline": "Myrnep Technologies misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin of 12% indicates underperformance and will likely lead to a negative market reaction.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $650M contract with a top-tier research institute"
+      "headline": "Jovor Networks secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial $650M contract with a top-tier institute is a significant positive development for revenue and reputation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics faces class action over automated logistics service disruption"
+      "headline": "Myrnon Therapeutics faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit, especially over service disruption, implies potential legal costs, reputational damage, and financial penalties.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over cloud infrastructure service disruption"
+      "headline": "Jovor Networks faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over cloud infrastructure service disruption suggests potential legal costs, reputational damage, and financial penalties.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:04.355Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

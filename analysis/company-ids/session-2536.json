@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma secures $800M contract with a multinational manufacturer"
+      "headline": "Zrovum Biopharma secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract is a clear positive for revenue and future business, indicating strong demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group faces regulatory review of precision manufacturing practices"
+      "headline": "Jovik Asset Group faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, which is a negative signal for the company's operations and reputation.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $650M contract with a top-tier research institute"
+      "headline": "Jovik Asset Group secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a reputable institute is a strong positive for revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma files routine patent applications in cloud infrastructure"
+      "headline": "Nerval Biopharma files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business and do not indicate a significant immediate financial impact, though they build long-term intellectual property.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports unexpected decline in Middle East revenue"
+      "headline": "Zelvon Biosciences reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region is a negative indicator for financial performance and suggests potential demand issues.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences begins scheduled maintenance of automated logistics systems"
+      "headline": "Zelvon Biosciences begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational activity and typically has a neutral or slightly negative short-term impact due to temporary disruption.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma announces breakthrough in data analytics"
+      "headline": "Zrovum Biopharma announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' in data analytics suggests potential for new products, efficiencies, or competitive advantage, which is a positive but vague signal.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:28.740Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

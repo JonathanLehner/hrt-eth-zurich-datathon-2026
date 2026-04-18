@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $500M contract with an international consortium"
+      "headline": "Xovol Goods secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear positive revenue stream and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma announces breakthrough in process automation"
+      "headline": "Nerval Biopharma announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for increased efficiency and cost savings, which is a positive operational development.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $650M contract with a national infrastructure agency"
+      "headline": "Varvov Retail Group secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a national agency provides a strong, clear positive revenue stream and enhances company credibility.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group announces significant capital expenditure plan for Europe"
+      "headline": "Crevol Retail Group announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in Europe indicates future growth potential but also implies immediate costs and execution risk.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees 18% drop in new customer orders this quarter"
+      "headline": "Nerval Biopharma sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma completes strategic acquisition to strengthen process automation"
+      "headline": "Nerval Biopharma completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a key area is generally positive for growth and operational efficiency, but financial details are missing.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group announces $1.2B share buyback program"
+      "headline": "Crevol Retail Group announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and returns capital to shareholders, which is generally positive for share price.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:29.154Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

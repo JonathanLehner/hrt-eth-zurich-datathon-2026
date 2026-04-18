@@ -53,49 +53,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports 18% increase in customer acquisition"
+      "headline": "Jovik Asset Group reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition suggests positive business momentum and potential for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes planned facility upgrade in Middle East"
+      "headline": "Ilval Financial completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally a positive but expected development.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $180M contract with a global retailer"
+      "headline": "Ilval Financial secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract with a global retailer is a clear positive for future revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices announces $1.2B share buyback program"
+      "headline": "Volval Devices announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial share buyback program typically signals management confidence and can boost shareholder value by reducing share count and increasing EPS.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group to present at Corporate Strategy Symposium"
+      "headline": "Jovik Asset Group to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a neutral event that offers visibility but does not inherently imply a direct financial impact without further information about the presentation content.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports 10% increase in customer acquisition"
+      "headline": "Ilval Financial reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition suggests positive business momentum and potential for future revenue growth, though less significant than H001.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial faces regulatory review of process automation practices"
+      "headline": "Ilval Financial faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage, which is a negative signal.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:00.374Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -1,0 +1,126 @@
+{
+  "session": "217",
+  "companyCount": 3,
+  "headlineCount": 4,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Kelvik Power",
+      "headlineCount": 2,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H001",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Kelvik Power reports record quarterly revenue, up 10% year-over-year",
+        "Kelvik Power announces $3.8B share buyback program"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Nerven Grid",
+      "headlineCount": 1,
+      "firstBarIx": 28,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Nerven Grid reports rising costs pressuring margins in data analytics"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Urvel Grid",
+      "headlineCount": 1,
+      "firstBarIx": 33,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Urvel Grid loses key contract in Europe to competitor"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 8,
+      "companyId": 0,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Kelvik Power's report of record quarterly revenue indicates strong financial performance and increased demand.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 28,
+      "companyId": 1,
+      "companyName": "Nerven Grid",
+      "headline": "Nerven Grid reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Nerven Grid is facing increased operational costs, which will negatively impact profitability in its data analytics segment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 33,
+      "companyId": 2,
+      "companyName": "Urvel Grid",
+      "headline": "Urvel Grid loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Urvel Grid's loss of a key European contract will negatively impact its revenue and market position.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 47,
+      "companyId": 0,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "Kelvik Power's substantial share buyback program is a positive signal for shareholders, indicating financial strength and a commitment to returning capital.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:22:19.928Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

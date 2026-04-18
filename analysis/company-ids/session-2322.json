@@ -54,56 +54,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics opens new office in Central Europe"
+      "headline": "Calvos Genomics opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates business expansion, which can lead to increased market presence and potential revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 18% drop in new customer orders this quarter"
+      "headline": "Calvos Genomics sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders directly indicates weakening demand, which will negatively impact future revenue and earnings.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics faces class action over precision manufacturing service disruption"
+      "headline": "Calvos Genomics faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption implies potential significant legal costs, damages, and reputational harm.",
+        "longTerm": -8,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Zelvix Therapeutics completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen supply chain optimization suggests potential for improved operational efficiency and cost savings.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods wins industry award for excellence in automated logistics"
+      "headline": "Xovol Goods wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances the company's reputation and may indirectly lead to increased customer trust and business opportunities.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Xovol Goods Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive like the COO can create uncertainty regarding operational stability and future strategic direction.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $650M contract with a national infrastructure agency"
+      "headline": "Calvos Genomics secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract with a national agency represents a significant revenue increase and validates the company's capabilities.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics wins industry award for excellence in enterprise software"
+      "headline": "Calvos Genomics wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award for excellence in enterprise software enhances the company's reputation and may indirectly lead to increased customer trust and business opportunities.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:50.164Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

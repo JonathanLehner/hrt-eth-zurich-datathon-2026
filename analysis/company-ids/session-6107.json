@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Talvix Holdings reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in Southeast Asia and a raised outlook indicate positive future performance for Talvix Holdings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group revises long-term strategy with focus on renewable storage"
+      "headline": "Holtum Asset Group revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on renewable storage suggests a potential future growth area, but the immediate financial impact is unclear.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 15% drop in new customer orders this quarter"
+      "headline": "Talvix Holdings sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports 15% increase in customer acquisition"
+      "headline": "Plevum Partners reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong positive indicator for future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners faces class action over supply chain optimization service disruption"
+      "headline": "Plevum Partners faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption poses significant financial and reputational risks for Plevum Partners.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $400M contract with a top-tier research institute"
+      "headline": "Calvis Sciences secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract with a top-tier institute is a significant positive financial event for Calvis Sciences.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 0,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $50M contract with a leading cloud platform"
+      "headline": "Holtum Asset Group secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a leading cloud platform is a positive financial event.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 0,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group misses quarterly revenue estimates by 18%"
+      "headline": "Holtum Asset Group misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 18% indicates underperformance and will negatively impact investor confidence and future outlook.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:44.324Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

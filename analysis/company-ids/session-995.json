@@ -1,0 +1,135 @@
+{
+  "session": "995",
+  "companyCount": 2,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Zelvel Capital",
+      "headlineCount": 3,
+      "firstBarIx": 6,
+      "headlineIds": [
+        "H001",
+        "H002",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Zelvel Capital faces class action over cloud infrastructure service disruption",
+        "Zelvel Capital launches next-generation renewable storage platform",
+        "Zelvel Capital warns of supply chain disruptions affecting Central Europe operations"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Creven Securities",
+      "headlineCount": 2,
+      "firstBarIx": 42,
+      "headlineIds": [
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Creven Securities sees 3% margin improvement in latest quarter",
+        "Creven Securities secures $75M contract with a top-tier research institute"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 6,
+      "companyId": 0,
+      "companyName": "Zelvel Capital",
+      "headline": "Zelvel Capital faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption is a clear negative event that could lead to significant financial and reputational costs.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 31,
+      "companyId": 0,
+      "companyName": "Zelvel Capital",
+      "headline": "Zelvel Capital launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform in a growing sector like renewable storage is a positive development for future revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 41,
+      "companyId": 0,
+      "companyName": "Zelvel Capital",
+      "headline": "Zelvel Capital warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "A warning about supply chain disruptions directly impacting operations in a specific region indicates potential negative financial consequences.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 42,
+      "companyId": 1,
+      "companyName": "Creven Securities",
+      "headline": "Creven Securities sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A reported 3% margin improvement indicates increased profitability, which is a strong positive financial signal.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 44,
+      "companyId": 1,
+      "companyName": "Creven Securities",
+      "headline": "Creven Securities secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract with a reputable client is a clear positive for future revenue and business prospects.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:24:40.658Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

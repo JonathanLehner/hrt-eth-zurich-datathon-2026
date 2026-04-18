@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences sees 10% margin improvement in latest quarter"
+      "headline": "Wyrnik Sciences sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates stronger profitability, which is a significant positive financial development for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech confirms participation in Global Innovation Summit"
+      "headline": "Grevon Biotech confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit provides visibility and networking opportunities, which are generally positive but lack direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Wyrnik Sciences reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with 10% year-over-year growth indicates strong business performance and increased demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences wins industry award for excellence in automated logistics"
+      "headline": "Wyrnik Sciences wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and brand image, which can indirectly support future business but has no direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech files for regulatory approval of new supply chain optimization offering"
+      "headline": "Grevon Biotech files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards commercializing a new offering, indicating progress but not guaranteed success or immediate revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $800M contract with a multinational manufacturer"
+      "headline": "Grevon Biotech secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $800M contract with a multinational manufacturer represents a significant and direct positive revenue stream for the company.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Wyrnik Sciences announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a region indicates strategic expansion, which requires investment but aims for future growth and market penetration.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions sees 7% drop in new customer orders this quarter"
+      "headline": "Wyrnor Solutions sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates weakening demand, which is a negative signal for future revenue and growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:17.509Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

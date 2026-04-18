@@ -62,42 +62,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $500M contract with a major logistics provider"
+      "headline": "Holtum Asset Group secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant $500M contract is a clear positive for the company's revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces breakthrough in data analytics"
+      "headline": "Yorven Labs announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' suggests significant innovation that could lead to new products, increased market share, and competitive advantage, but lacks specific financial details.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Holtum Asset Group recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will likely incur costs, damage reputation, and potentially reduce future sales.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities withdraws from Europe market citing unfavorable conditions"
+      "headline": "Jorvyl Securities withdraws from Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market indicates a loss of revenue potential and could signal underlying operational challenges or strategic shifts.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs CTO addresses investor concerns in open letter"
+      "headline": "Yorven Labs CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CTO addressing investor concerns suggests existing issues that are impacting investor confidence, but the letter itself could be a positive step towards resolution.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities names new head of supply chain optimization division"
+      "headline": "Creven Securities names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "Appointing a new head for a key division like supply chain optimization is a neutral event on its own, with potential for future positive or negative impact depending on the new leader's performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:43.450Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

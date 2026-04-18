@@ -54,49 +54,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors enters joint venture with a leading cloud platform"
+      "headline": "Zrovov Advisors enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a leading cloud platform suggests potential for new revenue streams and market reach.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables misses quarterly revenue estimates by 10%"
+      "headline": "Orevex Renewables misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $320M contract with an international consortium"
+      "headline": "Orevex Renewables secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial $320M contract provides a clear and significant boost to future revenue and order backlog.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels files for regulatory approval of new process automation offering"
+      "headline": "Relvon Fuels files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering indicates progress towards a potential product launch, which could open new revenue streams.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces significant capital expenditure plan for Scandinavia"
+      "headline": "Zrovov Advisors announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a new region signals strategic expansion, which could lead to future growth but also involves upfront costs and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels names new head of renewable storage division"
+      "headline": "Relvon Fuels names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "Appointing a new head for a division can signal strategic focus or a change in direction, but the immediate financial impact is often neutral or slightly positive depending on the individual's reputation.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables withdraws from Central Europe market citing unfavorable conditions"
+      "headline": "Orevex Renewables withdraws from Central Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market, even due to unfavorable conditions, suggests a reduction in operational scope and potential revenue, though it could also be a cost-saving measure.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:40.867Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees mixed results in data analytics pilot program"
+      "headline": "Relvon Fuels sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest uncertainty about future operational improvements, leading to a neutral to slightly negative short-term impact and continued uncertainty long-term.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports unexpected decline in North America revenue"
+      "headline": "Orevov Solutions reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in North America revenue indicates a negative financial impact due to reduced demand in a significant market.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources enters joint venture with an international consortium"
+      "headline": "Kelvos Resources enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with an international consortium suggests potential for growth and resource sharing, which is generally positive for the company.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels wins industry award for excellence in process automation"
+      "headline": "Relvon Fuels wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides a reputational boost and validates operational excellence, which can indirectly support business, but has no direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $650M contract with an international consortium"
+      "headline": "Kelvos Resources secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial $650M contract is a clear and significant positive financial event, indicating future revenue.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:39.827Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

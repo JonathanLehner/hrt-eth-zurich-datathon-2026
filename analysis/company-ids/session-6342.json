@@ -56,56 +56,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software sees 10% margin improvement in latest quarter"
+      "headline": "Relvan Software sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates stronger profitability and operational efficiency, which is a clear positive for the company's financial health.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems faces class action over data analytics service disruption"
+      "headline": "Prynis Systems faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption represents a significant legal and reputational risk, potentially leading to financial penalties and customer loss.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software begins scheduled maintenance of process automation systems"
+      "headline": "Frelol Software begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that, while potentially causing temporary service interruptions, is necessary for system health and typically has a neutral to slightly positive long-term impact by ensuring reliability.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software achieves key regulatory milestone ahead of schedule"
+      "headline": "Frelol Software achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a key regulatory milestone ahead of schedule is a strong positive signal, indicating efficient operations and potentially accelerating market access or product launches.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $800M contract with a leading cloud platform"
+      "headline": "Prynis Systems secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a leading platform is a significant positive event, indicating strong demand for the company's services and a substantial revenue boost.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces $1.2B share buyback program"
+      "headline": "Prynis Systems announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial share buyback program signals management confidence, can boost EPS, and returns capital to shareholders, typically leading to a positive market reaction.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software announces $1.2B share buyback program"
+      "headline": "Relvan Software announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial share buyback program signals management confidence, can boost EPS, and returns capital to shareholders, typically leading to a positive market reaction.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software faces regulatory review of cloud infrastructure practices"
+      "headline": "Frelol Software faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "A regulatory review indicates potential issues with compliance or practices, posing a risk of fines, operational changes, or reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:42.809Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

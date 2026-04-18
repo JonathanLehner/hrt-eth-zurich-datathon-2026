@@ -62,42 +62,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Wrelal Financial recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will negatively impact sales, reputation, and incur costs for Wrelal Financial.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $50M contract with a global retailer"
+      "headline": "Jorval Trading Co secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a global retailer is a clear positive for Jorval Trading Co's revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co warns of supply chain disruptions affecting North America operations"
+      "headline": "Jorval Trading Co warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions affecting North America operations indicates potential negative impacts on production, costs, and delivery for Jorval Trading Co.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial confirms participation in Tech Leadership Conference"
+      "headline": "Wrelal Financial confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a tech leadership conference is a minor positive for visibility and networking, but unlikely to have a significant direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial names new head of digital payments division"
+      "headline": "Ilval Financial names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Naming a new head of a division can signal strategic shifts or renewed focus, but the financial impact is highly dependent on the individual's future actions and is not immediately clear.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings loses key contract in Middle East to competitor"
+      "headline": "Talvix Holdings loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially to a competitor, will negatively impact Talvix Holdings' revenue, market share, and potentially future growth prospects.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:20.985Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

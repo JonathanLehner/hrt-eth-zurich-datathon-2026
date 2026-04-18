@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions announces $3.8B share buyback program"
+      "headline": "Wyrnor Solutions announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, positively impacting shareholder value.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $320M contract with a national infrastructure agency"
+      "headline": "Grevon Biotech secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear revenue stream and validates the company's capabilities, leading to a positive financial impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power beats analyst expectations with strong earnings growth"
+      "headline": "Kelvik Power beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations with strong earnings growth indicates better-than-anticipated financial performance, which is a strong positive signal for investors.",
+        "longTerm": 5,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power begins scheduled maintenance of digital payments systems"
+      "headline": "Kelvik Power begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that ensures system reliability and typically has a neutral to slightly negative short-term impact due to potential temporary service disruptions, but a positive long-term impact by preventing larger issues.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources opens new office in North America"
+      "headline": "Nolvol Resources opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office in a key region like North America indicates strategic expansion and potential for future revenue growth, though immediate financial impact is limited.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power names new head of precision manufacturing division"
+      "headline": "Kelvik Power names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "A new divisional head can bring fresh strategy and operational improvements, but the immediate financial impact is typically neutral as their influence takes time to materialize.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:34.799Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -56,56 +56,147 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace names new head of automated logistics division"
+      "headline": "Orevar Marketplace names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division can signal strategic changes or a renewed focus, but the immediate financial impact is often uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $180M contract with a top-tier research institute"
+      "headline": "Brevon Microchips secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a reputable institute is a clear positive for revenue and market validation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 15% drop in new customer orders this quarter"
+      "headline": "Talvyn Goods sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $650M contract with an international consortium"
+      "headline": "Brevon Microchips secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a very large contract with an international consortium is a strong positive for revenue, market position, and future growth.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods completes planned facility upgrade in Asia Pacific"
+      "headline": "Talvyn Goods completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade suggests improved operational efficiency or increased capacity, which is generally positive for future performance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace opens new office in Scandinavia"
+      "headline": "Orevar Marketplace opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates market expansion and potential for future revenue growth, though initial costs may offset immediate gains.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips delays product launch in automated logistics segment"
+      "headline": "Brevon Microchips delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can lead to missed revenue opportunities, increased development costs, and potential loss of market share.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces breakthrough in renewable storage"
+      "headline": "Talvyn Goods announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A breakthrough in a significant technology area like renewable storage suggests future product development, market leadership, and potential for substantial revenue, though commercialization is not guaranteed.",
+        "longTerm": 7,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:51.684Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

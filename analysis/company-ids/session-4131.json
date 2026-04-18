@@ -66,56 +66,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $500M contract with a national infrastructure agency"
+      "headline": "Jorval Trading Co secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and significant positive revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 10% drop in new customer orders this quarter"
+      "headline": "Talvyn Goods sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders directly indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands achieves key regulatory milestone ahead of schedule"
+      "headline": "Joval Brands achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a key regulatory milestone ahead of schedule removes a significant hurdle and accelerates market entry or product availability, indicating operational efficiency.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co files for regulatory approval of new digital payments offering"
+      "headline": "Jorval Trading Co files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards launching a new product, indicating potential future revenue growth but with inherent uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid explores strategic alternatives for automated logistics unit"
+      "headline": "Nerven Grid explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit often signals a potential divestiture or restructuring, which can be positive if it streamlines operations or negative if it indicates underperformance.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands sees 5% drop in new customer orders this quarter"
+      "headline": "Joval Brands sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A drop in new customer orders indicates weakening demand, which will negatively affect future revenue, though less severely than a 10% drop.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co CEO addresses investor concerns in open letter"
+      "headline": "Jorval Trading Co CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CEO addressing investor concerns can be a positive step to restore confidence, but the existence of 'concerns' implies underlying issues, and the effectiveness of the letter is uncertain.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports strong demand in Scandinavia, raises outlook"
+      "headline": "Talvyn Goods reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Reporting strong demand in a specific region and raising the outlook provides a clear positive signal for future revenue and profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:23.440Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

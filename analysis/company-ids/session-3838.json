@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores faces regulatory review of supply chain optimization practices"
+      "headline": "Xovep Stores faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative outcomes for the company's operations and reputation.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores sees mixed results in enterprise software pilot program"
+      "headline": "Xovep Stores sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate a lack of clear success, potentially delaying or complicating future operational improvements.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co misses quarterly revenue estimates by 3%"
+      "headline": "Jorval Trading Co misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a notable margin typically leads to negative investor sentiment and potential downward revisions of future expectations.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $75M contract with a leading cloud platform"
+      "headline": "Ixenix Technologies secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a leading platform is a clear positive for revenue, market position, and future growth prospects.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods in talks for potential merger, details undisclosed"
+      "headline": "Xovol Goods in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Being in merger talks creates significant speculation and potential for a premium buyout, but also uncertainty regarding the outcome and terms.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies files routine patent applications in digital payments"
+      "headline": "Ixenix Technologies files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business and do not typically signal an immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co confirms participation in Annual Industry Forum"
+      "headline": "Jorval Trading Co confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a standard business activity and does not inherently imply a significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:27.191Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands misses quarterly revenue estimates by 25%"
+      "headline": "Joval Brands misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss indicates weaker-than-expected performance, likely leading to a negative short-term market reaction and potentially raising concerns about future growth.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $75M contract with a major logistics provider"
+      "headline": "Frelol Software secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a new contract with a major provider is a clear positive for revenue and market position.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes planned facility upgrade in Middle East"
+      "headline": "Joval Brands completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or increased capacity, which is generally positive for the company's long-term prospects.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software misses quarterly revenue estimates by 8%"
+      "headline": "Relvan Software misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates, even by a smaller margin, is a negative signal for current performance and can affect investor confidence.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Myrnep Technologies completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic acquisition aimed at strengthening core infrastructure is generally viewed as a positive long-term move, though short-term integration challenges or costs might exist.",
+        "longTerm": 7,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software to host investor day focused on enterprise software strategy"
+      "headline": "Relvan Software to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day provides an opportunity for the company to articulate its strategy, which can be positive if the strategy is well-received, but the immediate financial impact is uncertain until the event occurs.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $400M contract with a top-tier research institute"
+      "headline": "Frelol Software secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a top-tier institute is a significant positive for revenue, market validation, and future growth prospects.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:02.757Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences delays product launch in wireless connectivity segment"
+      "headline": "Zelvon Biosciences delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically indicates operational issues or market readiness problems, negatively impacting future revenue expectations.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports 8% decline in operating income"
+      "headline": "Wyrnik Sciences reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported decline in operating income indicates weaker financial performance, which is a direct negative for the company.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports 7% decline in operating income"
+      "headline": "Halvav Brands reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported decline in operating income indicates weaker financial performance, which is a direct negative for the company.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics faces class action over enterprise software service disruption"
+      "headline": "Myrnon Therapeutics faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption implies potential legal costs, reputational damage, and financial liabilities.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands announces $5.7B share buyback program"
+      "headline": "Halvav Brands announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost shareholder value by reducing share count and increasing EPS.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics raises full-year guidance citing robust demand"
+      "headline": "Myrnon Therapeutics raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance due to robust demand indicates stronger-than-expected future financial performance and positive business momentum.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences explores strategic alternatives for data analytics unit"
+      "headline": "Zelvon Biosciences explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could be positive if the unit is underperforming or negative if it's a core asset.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:31.081Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -34,14 +34,45 @@
       "barIx": 34,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports 10% increase in customer acquisition"
+      "headline": "Xovep Stores reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition indicates positive business momentum and potential for increased revenue.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co faces class action over process automation service disruption"
+      "headline": "Pleven Trading Co faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit due to service disruption implies potential legal costs, reputational damage, and financial penalties.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:30.843Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

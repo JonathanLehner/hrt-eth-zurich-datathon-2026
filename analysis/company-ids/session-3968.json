@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics revises long-term strategy with focus on wireless connectivity"
+      "headline": "Jorvix Diagnostics revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on wireless connectivity suggests potential future growth but lacks immediate, concrete financial details.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences misses quarterly revenue estimates by 5%"
+      "headline": "Calvis Sciences misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin is a clear negative signal for the company's financial performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in renewable storage line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and likely reduce sales in the affected product line.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $120M contract with a major logistics provider"
+      "headline": "Zelvix Therapeutics secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant $120M contract with a major provider is a clear positive for future revenue and market position.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce sees mixed results in process automation pilot program"
+      "headline": "Nolvav Commerce sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding the success and future rollout of the initiative, providing no clear positive or negative signal.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Zelvix Therapeutics reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a 7% year-over-year increase is a strong positive indicator of financial health and growth.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics beats analyst expectations with strong earnings growth"
+      "headline": "Jorvix Diagnostics beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations with strong earnings growth is a clear positive signal for the company's financial performance and market perception.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:50.744Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

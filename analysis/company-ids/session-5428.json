@@ -62,42 +62,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities faces regulatory review of precision manufacturing practices"
+      "headline": "Creven Securities faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review suggests potential penalties, operational disruptions, or reputational damage, leading to a negative financial impact.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group revises long-term strategy with focus on digital payments"
+      "headline": "Jovik Asset Group revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "A strategic shift towards digital payments indicates a potential for future growth and market relevance, though immediate financial impact is unclear.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Ilval Financial recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs for the recall itself, potential lost sales, and reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group to host investor day focused on process automation strategy"
+      "headline": "Jovik Asset Group to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on a process automation strategy could generate positive investor interest and provide clarity on future operational efficiencies.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $120M contract with a national infrastructure agency"
+      "headline": "Zelval Energy secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear revenue stream and validates the company's capabilities, leading to a positive financial impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy sees 3% margin improvement in latest quarter"
+      "headline": "Zelval Energy sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates enhanced profitability and operational efficiency, which is a strong positive financial signal.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:43.805Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

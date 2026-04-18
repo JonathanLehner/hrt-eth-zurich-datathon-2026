@@ -50,35 +50,96 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $400M contract with a leading cloud platform"
+      "headline": "Talvyn Goods secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a leading platform is a clear positive for future revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Kelvik Power reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with an 8% year-over-year increase indicates strong top-line performance.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports 18% decline in operating income"
+      "headline": "Kelvik Power reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income signals significant profitability challenges for the company.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power faces regulatory review of data analytics practices"
+      "headline": "Kelvik Power faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty, potential fines, and operational disruptions, which is a negative signal.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid names new head of enterprise software division"
+      "headline": "Urvel Grid names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "A change in divisional leadership can bring new strategies and focus, but its immediate financial impact is often neutral or slightly positive due to potential for improvement.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:45.208Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

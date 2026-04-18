@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets to host investor day focused on wireless connectivity strategy"
+      "headline": "Ixenis Outlets to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy provides an opportunity for the company to articulate its vision and potentially attract investor interest, but the direct financial impact is not guaranteed.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $320M contract with a global retailer"
+      "headline": "Ixenis Outlets secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $320M contract with a global retailer is a clear positive for revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Jorval Trading Co reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with an 8% year-over-year increase indicates strong financial performance and demand for the company's products or services.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands misses quarterly revenue estimates by 8%"
+      "headline": "Joval Brands misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 8% indicates weaker-than-expected financial performance, potentially signaling issues with demand or operations.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands announces $1.2B share buyback program"
+      "headline": "Joval Brands announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial $1.2B share buyback program typically signals management confidence, can boost EPS, and returns capital to shareholders, which is generally viewed positively.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:16.931Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

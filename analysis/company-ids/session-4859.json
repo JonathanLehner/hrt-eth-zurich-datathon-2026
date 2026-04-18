@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co confirms participation in Global Innovation Summit"
+      "headline": "Pleven Trading Co confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit offers potential networking and visibility benefits, but direct financial impact is not guaranteed or immediate.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings files for regulatory approval of new data analytics offering"
+      "headline": "Talvix Holdings files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval indicates progress towards a new product offering, which could generate future revenue, but the approval and market success are not guaranteed.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports strong demand in Middle East, raises outlook"
+      "headline": "Talvix Holdings reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook directly indicate improved financial performance expectations for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings completes strategic acquisition to strengthen enterprise software"
+      "headline": "Talvix Holdings completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The completion of a strategic acquisition aims to strengthen the company's enterprise software, suggesting future growth and market position improvements.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group misses quarterly revenue estimates by 5%"
+      "headline": "Varvov Retail Group misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a notable margin indicates weaker-than-expected financial performance, likely leading to negative market sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace faces class action over cloud infrastructure service disruption"
+      "headline": "Arnos Marketplace faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption introduces significant legal and financial risks, including potential damages and reputational harm.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Varvov Retail Group reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a year-over-year increase indicates strong financial performance and positive business momentum.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group delays product launch in automated logistics segment"
+      "headline": "Varvov Retail Group delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can signal operational issues, missed revenue opportunities, and potentially allow competitors to gain an advantage.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:01.496Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

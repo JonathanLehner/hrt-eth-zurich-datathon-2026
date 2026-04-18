@@ -55,56 +55,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports unexpected decline in Latin America revenue"
+      "headline": "Yorval Partners reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative financial performance, likely impacting overall earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices withdraws from North America market citing unfavorable conditions"
+      "headline": "Nolvis Devices withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market due to unfavorable conditions suggests significant operational challenges and a loss of revenue potential.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 12% decline in operating income"
+      "headline": "Holtum Asset Group reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant 12% decline in operating income directly indicates a negative financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $50M contract with a multinational manufacturer"
+      "headline": "Yorval Partners secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a clear positive for revenue and future earnings.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners faces regulatory review of renewable storage practices"
+      "headline": "Yorval Partners faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential costs, which is generally negative for a company.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Yorval Partners reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial health and demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $120M contract with a global retailer"
+      "headline": "Holtum Asset Group secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $120M contract with a global retailer is a significant positive for future revenue and business stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports 10% decline in operating income"
+      "headline": "Nolvis Devices reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income indicates a negative financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:44.357Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

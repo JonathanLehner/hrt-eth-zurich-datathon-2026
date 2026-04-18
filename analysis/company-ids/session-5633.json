@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources in talks for potential merger, details undisclosed"
+      "headline": "Nolvol Resources in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "The headline indicates potential M&A activity, which can significantly impact a company's valuation, though the lack of details introduces high uncertainty.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "acquisition",
+        "evidenceStrength": 3,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources warns of supply chain disruptions affecting Europe operations"
+      "headline": "Nolvol Resources warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions affecting operations in a key region suggests negative operational and financial impact.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors confirms participation in Capital Markets Day"
+      "headline": "Plevyl Advisors confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard investor relations event and does not inherently imply a direct financial impact, but rather an opportunity for communication.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $120M contract with a top-tier research institute"
+      "headline": "Plevum Partners secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $120M contract with a top-tier institute is a clear positive for revenue and reputation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports 8% decline in operating income"
+      "headline": "Plevyl Advisors reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income is a direct negative financial indicator, suggesting reduced profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital wins industry award for excellence in automated logistics"
+      "headline": "Zelvel Capital wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and could indirectly lead to new business, but its direct financial impact is not guaranteed.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors completes planned facility upgrade in Asia Pacific"
+      "headline": "Plevyl Advisors completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive for future operations.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces breakthrough in digital payments"
+      "headline": "Zelvel Capital announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A 'breakthrough' in digital payments suggests significant innovation with potential for new products, market share, and revenue.",
+        "longTerm": 8,
+        "shortTerm": 5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:22.000Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

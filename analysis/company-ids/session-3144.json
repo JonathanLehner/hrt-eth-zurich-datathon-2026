@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 20% drop in new customer orders this quarter"
+      "headline": "Yorven Labs sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders indicates reduced demand, negatively impacting revenue and future growth.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $650M contract with a leading cloud platform"
+      "headline": "Volval Devices secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a leading platform is a significant positive for revenue and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 5% decline in operating income"
+      "headline": "Talvep Computing reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates reduced profitability, which is a direct negative financial impact.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Yorven Labs begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might temporarily impact service availability but is generally a neutral or slightly positive long-term event for system reliability.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions CFO addresses investor concerns in open letter"
+      "headline": "Orevov Solutions CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CFO addressing investor concerns suggests existing negative sentiment, and the impact depends entirely on the content and effectiveness of the letter, which is not provided.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing wins industry award for excellence in cloud infrastructure"
+      "headline": "Talvep Computing wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and brand image, which can indirectly lead to increased sales or customer loyalty over time.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 21,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions completes planned facility upgrade in Scandinavia"
+      "headline": "Orevov Solutions completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally a positive for future operations.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage"
+      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a specific business area is generally a positive move for growth and market position, though integration risks exist.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:20.385Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

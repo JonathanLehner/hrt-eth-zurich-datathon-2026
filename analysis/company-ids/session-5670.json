@@ -65,56 +65,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences opens new office in Central Europe"
+      "headline": "Wyrnik Sciences opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates business expansion, which can lead to increased market presence and potential revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $50M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear revenue stream and validates the company's offerings.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings completes planned facility upgrade in Middle East"
+      "headline": "Talvix Holdings completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade suggests improved operational efficiency or capacity, which can positively impact future performance.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces class action over cloud infrastructure service disruption"
+      "headline": "Talvix Holdings faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption indicates potential legal costs, reputational damage, and financial liabilities.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces regulatory review of wireless connectivity practices"
+      "headline": "Halven Investments faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "A regulatory review suggests potential non-compliance, which could lead to fines, operational changes, or reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 8%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance, which typically leads to negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings opens new office in Latin America"
+      "headline": "Talvix Holdings opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates business expansion, which can lead to increased market presence and potential revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $800M contract with a multinational manufacturer"
+      "headline": "Talvix Holdings secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a very large contract provides a substantial revenue stream and strong validation of the company's capabilities.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:27.347Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

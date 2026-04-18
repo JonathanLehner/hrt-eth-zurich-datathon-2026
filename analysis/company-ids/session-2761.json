@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods expands operations into Middle East markets"
+      "headline": "Talvyn Goods expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets suggests potential for increased revenue and market share, but the immediate financial impact is uncertain.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Calvos Genomics recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will likely incur immediate costs, damage reputation, and potentially reduce future sales.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 15% margin improvement in latest quarter"
+      "headline": "Calvos Genomics sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates better profitability, which is a strong positive financial signal for the company.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $500M contract with an international consortium"
+      "headline": "Talvyn Goods secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and significant revenue stream, indicating strong demand and future financial benefit.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $320M contract with an international consortium"
+      "headline": "Jorval Trading Co secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract provides a clear and significant revenue stream, indicating strong demand and future financial benefit.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports unexpected decline in Europe revenue"
+      "headline": "Frelex Outlets reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue in a key market indicates weakening demand and will negatively impact the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports 3% increase in customer acquisition"
+      "headline": "Frelex Outlets reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition suggests growing demand and potential for future revenue growth, though the direct financial impact is not immediately quantified.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:07.595Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

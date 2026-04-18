@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in enterprise software line due to quality concerns"
+      "headline": "Plevum Partners recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will negatively impact sales, reputation, and potentially incur costs for Plevum Partners.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences confirms participation in Corporate Strategy Symposium"
+      "headline": "Relvos Biosciences confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a routine corporate activity and does not inherently indicate a direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 0
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Calvis Sciences reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue, even with a modest 3% year-over-year increase, is a positive indicator of business performance.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in data analytics line due to quality concerns"
+      "headline": "Plevum Partners recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A second product recall from Plevum Partners due to quality concerns further exacerbates negative impacts on sales, reputation, and costs.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees 15% drop in new customer orders this quarter"
+      "headline": "Plevum Partners sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 15% drop in new customer orders indicates declining demand and will negatively impact future revenue and growth for Plevum Partners.",
+        "longTerm": -9,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $250M contract with a multinational manufacturer"
+      "headline": "Calvis Sciences secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a substantial $250M contract with a multinational manufacturer is a significant positive event for Calvis Sciences, boosting future revenue and market position.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Wyrnik Sciences begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that ensures system reliability and does not typically have a direct positive or negative financial impact unless unexpected issues arise.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 0
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences expands operations into Southeast Asia markets"
+      "headline": "Relvos Biosciences expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets represents a strategic growth initiative with potential for increased revenue and market share for Relvos Biosciences.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:33.323Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

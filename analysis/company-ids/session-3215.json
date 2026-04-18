@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods wins industry award for excellence in enterprise software"
+      "headline": "Talvyn Goods wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides a positive reputational boost which could indirectly lead to increased demand or market perception.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $400M contract with a national infrastructure agency"
+      "headline": "Plevyl Advisors secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a significant and direct positive financial impact through increased revenue.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Plevum Partners reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth indicates strong financial performance and positive market sentiment.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports 8% decline in operating income"
+      "headline": "Wrelal Financial reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income indicates a negative financial performance, likely leading to negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 7% drop in new customer orders this quarter"
+      "headline": "Talvyn Goods sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders indicates weakening demand, which will negatively impact future revenue and growth.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors announces significant capital expenditure plan for North America"
+      "headline": "Plevyl Advisors announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests future growth and expansion, which can be positive for long-term prospects but may incur short-term costs.",
+        "longTerm": 5,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $75M contract with a top-tier research institute"
+      "headline": "Plevum Partners secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a reputable entity provides a clear positive financial impact and validates the company's offerings.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners enters joint venture with a national infrastructure agency"
+      "headline": "Plevum Partners enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a national infrastructure agency suggests a strategic expansion into a potentially lucrative market, offering long-term growth opportunities.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:32.697Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

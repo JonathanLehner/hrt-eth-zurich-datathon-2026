@@ -54,49 +54,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities names new head of data analytics division"
+      "headline": "Jorvyl Securities names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head suggests a potential strategic shift or renewed focus, but the immediate financial impact is uncertain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Yorval Partners completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a core area is generally positive, indicating growth and market position improvement.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners delays product launch in data analytics segment"
+      "headline": "Yorval Partners delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is generally negative as it can signal development issues, missed revenue opportunities, and competitive disadvantages.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems sees mixed results in enterprise software pilot program"
+      "headline": "Brevep Systems sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding the product's effectiveness and future commercial viability, leading to a neutral to slightly negative outlook.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities explores strategic alternatives for precision manufacturing unit"
+      "headline": "Jorvyl Securities explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal a potential divestiture or restructuring, which could be positive if it streamlines operations or negative if it indicates underperformance.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Yorval Partners recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event, impacting reputation, sales, and potentially incurring costs.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports strong demand in North America, raises outlook"
+      "headline": "Jorvyl Securities reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive indicators for future revenue and profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:24.931Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

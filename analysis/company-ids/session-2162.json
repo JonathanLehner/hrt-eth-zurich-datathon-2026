@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics faces regulatory review of data analytics practices"
+      "headline": "Jorvix Diagnostics faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of data analytics practices suggests potential negative consequences, including fines or operational restrictions.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports 3% decline in operating income"
+      "headline": "Halvax Networks reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates weaker financial performance, which is a negative signal for investors.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies explores strategic alternatives for precision manufacturing unit"
+      "headline": "Myrnep Technologies explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit often signals a potential divestiture or restructuring, which can be positive if the unit is underperforming or negative if it's a core asset.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices signs multi-year partnership with an international consortium"
+      "headline": "Nolvis Devices signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with an international consortium suggests new business opportunities, expanded market reach, and potential revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics names new head of renewable storage division"
+      "headline": "Jorvix Diagnostics names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division can signal strategic focus or a change in direction, but its immediate financial impact is often neutral or mildly positive/negative depending on the individual's reputation.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Jorvix Diagnostics reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial performance and market demand.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies reports strong demand in Middle East, raises outlook"
+      "headline": "Myrnep Technologies reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region combined with a raised outlook indicates improved business prospects and expected higher future earnings.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:18.983Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

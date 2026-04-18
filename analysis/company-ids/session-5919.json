@@ -62,42 +62,113 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands announces $5.7B share buyback program"
+      "headline": "Joval Brands announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically boosts shareholder value by reducing the number of outstanding shares, increasing EPS.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group launches next-generation automated logistics platform"
+      "headline": "Crevol Retail Group launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching an automated logistics platform suggests potential for improved efficiency, cost savings, and faster delivery, which are positive for operations.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips misses quarterly revenue estimates by 3%"
+      "headline": "Brevon Microchips misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates indicates weaker-than-expected financial performance, which is typically negative for investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Brevon Microchips completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen cloud infrastructure is generally positive, indicating growth and competitive positioning, though integration risks exist.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods loses key contract in Asia Pacific to competitor"
+      "headline": "Talvyn Goods loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially in a significant region like Asia Pacific, implies a direct negative impact on revenue and market share.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips wins industry award for excellence in supply chain optimization"
+      "headline": "Brevon Microchips wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Winning an industry award for supply chain optimization is a positive reputational boost, potentially signaling operational efficiency and attracting new business.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:39:10.307Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

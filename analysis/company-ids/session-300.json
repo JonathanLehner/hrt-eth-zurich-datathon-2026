@@ -1,0 +1,145 @@
+{
+  "session": "300",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Holtar Stores",
+      "headlineCount": 2,
+      "firstBarIx": 0,
+      "headlineIds": [
+        "H001",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Holtar Stores reports 15% increase in customer acquisition",
+        "Holtar Stores reports 5% increase in customer acquisition"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Crevol Retail Group",
+      "headlineCount": 2,
+      "firstBarIx": 16,
+      "headlineIds": [
+        "H002",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Crevol Retail Group enters joint venture with a top-tier research institute",
+        "Crevol Retail Group launches next-generation supply chain optimization platform"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Joval Brands",
+      "headlineCount": 1,
+      "firstBarIx": 37,
+      "headlineIds": [
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Joval Brands explores strategic alternatives for enterprise software unit"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 0,
+      "companyId": 0,
+      "companyName": "Holtar Stores",
+      "headline": "Holtar Stores reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A significant increase in customer acquisition indicates strong demand and potential for revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 16,
+      "companyId": 1,
+      "companyName": "Crevol Retail Group",
+      "headline": "Crevol Retail Group enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a top-tier research institute suggests future innovation and potential for new products or market expansion.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 28,
+      "companyId": 0,
+      "companyName": "Holtar Stores",
+      "headline": "Holtar Stores reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A moderate increase in customer acquisition indicates continued demand, though less impactful than a larger percentage.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 37,
+      "companyId": 2,
+      "companyName": "Joval Brands",
+      "headline": "Joval Brands explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit suggests a potential divestiture or restructuring, which could streamline operations or raise capital.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 41,
+      "companyId": 1,
+      "companyName": "Crevol Retail Group",
+      "headline": "Crevol Retail Group launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new supply chain optimization platform suggests potential for improved operational efficiency and cost savings.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:22:36.394Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

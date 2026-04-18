@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software begins scheduled maintenance of digital payments systems"
+      "headline": "Frelol Software begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance of critical systems could temporarily disrupt services, leading to minor short-term operational impact.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands announces $1.2B share buyback program"
+      "headline": "Joval Brands announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost EPS, positively impacting shareholder value.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software files routine patent applications in data analytics"
+      "headline": "Frelol Software files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations and do not typically have an immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes strategic acquisition to strengthen automated logistics"
+      "headline": "Joval Brands completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen logistics suggests potential for improved efficiency and competitive advantage, which is generally positive.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software files for regulatory approval of new wireless connectivity offering"
+      "headline": "Frelol Software files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards a new product launch, indicating future potential but no immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands files for regulatory approval of new digital payments offering"
+      "headline": "Joval Brands files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new digital payments offering indicates future growth potential, but the actual impact depends on approval and market adoption.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces regulatory review of data analytics practices"
+      "headline": "Ulvyn Microchips faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of data analytics practices introduces uncertainty and potential for fines or operational changes, which is a negative signal.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Brevon Microchips reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue, even with a modest 3% year-over-year growth, is a positive indicator of business performance.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:03.215Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

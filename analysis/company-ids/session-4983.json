@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software names new head of process automation division"
+      "headline": "Relvan Software names new head of process automation division",
+      "sentiment": {
+        "reasoning": "A new division head can bring fresh strategy and execution, but the immediate financial impact is uncertain and depends on the individual's track record and future actions.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports 5% decline in operating income"
+      "headline": "Halvav Brands reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported decline in operating income is a clear negative financial indicator for the company's current performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems publishes annual sustainability report"
+      "headline": "Prynis Systems publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing an annual sustainability report is a routine corporate governance action with no direct or immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Prynis Systems reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins indicate a negative financial outlook for a key business segment.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $800M contract with a national infrastructure agency"
+      "headline": "Brevon Microchips secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national agency is a significant positive event, indicating future revenue and strong demand.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software completes planned facility upgrade in Scandinavia"
+      "headline": "Relvan Software completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive but without immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software faces class action over renewable storage service disruption"
+      "headline": "Relvan Software faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit is a significant negative event due to potential legal costs, damages, and reputational harm.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Halvav Brands warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "A warning about supply chain disruptions indicates potential negative impacts on production, sales, and costs in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:36:24.189Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

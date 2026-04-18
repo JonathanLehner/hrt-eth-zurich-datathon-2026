@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions enters joint venture with an international consortium"
+      "headline": "Orevov Solutions enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with an international consortium suggests potential for growth and market expansion, but the immediate financial impact and success are uncertain.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Myrnep Technologies Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A COO addressing investor concerns in an open letter aims to reassure the market, but the effectiveness of this communication and the underlying issues remain unclear.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Halvax Networks Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CSO addressing investor concerns in an open letter aims to reassure the market, but the effectiveness of this communication and the underlying issues remain unclear.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 3,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs names new head of data analytics division"
+      "headline": "Crevex Labs names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Namin g a new head of a division is a routine operational change that typically has minimal immediate market impact unless the individual is a high-profile hire or the division is critical and underperforming.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions revises long-term strategy with focus on enterprise software"
+      "headline": "Orevov Solutions revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "Revising a long-term strategy to focus on enterprise software indicates a significant strategic shift with potential for future growth, but also implies a period of transition and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $400M contract with a major logistics provider"
+      "headline": "Myrnep Technologies secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract with a major logistics provider is a significant positive event, indicating strong demand and future revenue.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports 25% increase in customer acquisition"
+      "headline": "Halvax Networks reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong positive indicator of growing demand and future revenue potential, though the impact on profitability depends on customer value and retention.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies misses quarterly revenue estimates by 3%"
+      "headline": "Myrnep Technologies misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 3% is a negative financial event that typically leads to a negative market reaction due to underperformance relative to expectations.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:51.742Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands expands operations into Europe markets"
+      "headline": "Joval Brands expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets like Europe is generally a positive strategic move for growth, though initial costs may temper immediate gains.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies sees 3% drop in new customer orders this quarter"
+      "headline": "Myrnep Technologies sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A drop in new customer orders indicates weakening demand, which will negatively impact future revenue and potentially earnings.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands names new head of cloud infrastructure division"
+      "headline": "Halvav Brands names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "A new division head can bring fresh strategy and execution, which is generally a neutral to slightly positive development, depending on the individual's reputation.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce sees 3% drop in new customer orders this quarter"
+      "headline": "Nolvav Commerce sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A drop in new customer orders indicates weakening demand, which will negatively impact future revenue and potentially earnings.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Halvav Brands files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards a new product launch, indicating progress and potential future revenue, but the outcome is not guaranteed.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Halvav Brands reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressure profit margins, indicating a negative impact on profitability.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:13.188Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

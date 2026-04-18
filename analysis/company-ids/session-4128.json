@@ -66,56 +66,147 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports unexpected decline in Latin America revenue"
+      "headline": "Prynis Systems reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "The unexpected decline in Latin America revenue indicates a negative financial performance for the company.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 20% drop in new customer orders this quarter"
+      "headline": "Halvax Networks sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 20% drop in new customer orders directly indicates weakening demand and will negatively impact future revenue.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks explores strategic alternatives for data analytics unit"
+      "headline": "Jovor Networks explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests potential restructuring, divestiture, or a change in operational focus, which introduces uncertainty.",
+        "longTerm": 0,
+        "shortTerm": -3,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks begins scheduled maintenance of digital payments systems"
+      "headline": "Halvax Networks begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is unlikely to have a significant financial impact unless it causes unexpected disruptions.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks delays product launch in automated logistics segment"
+      "headline": "Jovor Networks delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can negatively impact anticipated revenue, market share, and investor confidence.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices misses quarterly revenue estimates by 12%"
+      "headline": "Volval Devices misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant 12% indicates underperformance and will likely lead to a negative market reaction.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Volval Devices reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly implies reduced profitability, which is a negative financial indicator.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $500M contract with a major logistics provider"
+      "headline": "Prynis Systems secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract is a significant positive event that will boost future revenue and market confidence.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:22.424Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

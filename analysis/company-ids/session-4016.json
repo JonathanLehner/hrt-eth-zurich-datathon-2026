@@ -41,49 +41,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co withdraws from Southeast Asia market citing unfavorable conditions"
+      "headline": "Pleven Trading Co withdraws from Southeast Asia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "The withdrawal from a market due to unfavorable conditions suggests a negative impact on revenue and profitability, though it could also be a strategic move to cut losses.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports unexpected decline in Middle East revenue"
+      "headline": "Xovep Stores reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates immediate negative financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores completes planned facility upgrade in Southeast Asia"
+      "headline": "Xovep Stores completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive for future performance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores loses key contract in Central Europe to competitor"
+      "headline": "Xovep Stores loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor will negatively impact future revenue and market share.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $180M contract with a multinational manufacturer"
+      "headline": "Xovep Stores secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract with a multinational manufacturer is a clear positive for future revenue and business prospects.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores names new head of precision manufacturing division"
+      "headline": "Xovep Stores names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Naming a new division head is a routine leadership change with no immediate or guaranteed financial impact without further information about the individual or strategic shift.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Xovep Stores warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations suggests potential negative effects on production, sales, and costs.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:58.388Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

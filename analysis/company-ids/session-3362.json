@@ -34,14 +34,45 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 25% margin improvement in latest quarter"
+      "headline": "Xelvol Biotech sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 25% margin improvement indicates stronger profitability and operational efficiency, which is a clear positive for the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech completes strategic acquisition to strengthen enterprise software"
+      "headline": "Grevon Biotech completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The completion of a strategic acquisition aimed at strengthening enterprise software is generally a positive move for growth and market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:50.829Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports unexpected decline in Southeast Asia revenue"
+      "headline": "Jorvix Diagnostics reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "The unexpected decline in revenue indicates a negative financial performance for the company.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $50M contract with a top-tier research institute"
+      "headline": "Yorven Labs secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a reputable institute is a clear positive for future revenue and credibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies begins scheduled maintenance of renewable storage systems"
+      "headline": "Ixenix Technologies begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might temporarily impact service availability but is necessary for long-term system health.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies in talks for potential merger, details undisclosed"
+      "headline": "Ixenix Technologies in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Talks for a potential merger introduce significant uncertainty and speculation, which can lead to volatility.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "acquisition",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics revises long-term strategy with focus on digital payments"
+      "headline": "Jorvix Diagnostics revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "A strategic shift towards digital payments indicates a potential new growth area, but its success and financial impact are uncertain.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:33.544Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

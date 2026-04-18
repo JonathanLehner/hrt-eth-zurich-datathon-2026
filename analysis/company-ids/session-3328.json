@@ -38,28 +38,79 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power announces major organizational restructuring"
+      "headline": "Kelvik Power announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "A major organizational restructuring can create short-term disruption but aims for long-term efficiency, making the immediate impact uncertain and the long-term potential positive but also uncertain.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Varvov Retail Group Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "The CSO addressing investor concerns aims to alleviate negative sentiment, which could provide a short-term boost to confidence, but the long-term impact depends on the substance of the letter and actual resolution of concerns.",
+        "longTerm": 0,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group faces regulatory review of precision manufacturing practices"
+      "headline": "Varvov Retail Group faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of manufacturing practices introduces significant short-term uncertainty and potential long-term financial penalties or operational changes, indicating a negative outlook.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group revises long-term strategy with focus on enterprise software"
+      "headline": "Varvov Retail Group revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "Revising a long-term strategy to focus on enterprise software suggests a potential for future growth and market expansion, but the immediate impact is neutral or slightly negative due to execution uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:50.563Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

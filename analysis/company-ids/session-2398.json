@@ -48,28 +48,79 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports unexpected decline in Scandinavia revenue"
+      "headline": "Calvos Genomics reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative operational performance, likely impacting short-term financial results and potentially raising concerns about future growth.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 20% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 20% drop in new customer orders indicates a substantial negative impact on future revenue generation and market demand for the company's services.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics signs multi-year partnership with a leading cloud platform"
+      "headline": "Calvos Genomics signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a leading cloud platform suggests potential for improved operational efficiency, expanded capabilities, or new revenue streams, indicating a positive long-term strategic move.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics confirms participation in Emerging Markets Forum"
+      "headline": "Myrnon Therapeutics confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a minor event that could lead to networking or visibility, but it does not directly imply a significant or immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:58.413Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

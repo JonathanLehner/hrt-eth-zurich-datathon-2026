@@ -62,42 +62,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group faces regulatory review of digital payments practices"
+      "headline": "Holtum Asset Group faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential penalties, negatively impacting the company's reputation and operations.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports 20% decline in operating income"
+      "headline": "Xelvol Biotech reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates poor financial performance, negatively impacting investor confidence and future outlook.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees 25% margin improvement in latest quarter"
+      "headline": "Zelvon Biosciences sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A substantial margin improvement indicates enhanced operational efficiency and profitability, positively impacting investor sentiment.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Calvos Genomics recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage brand reputation, and potentially reduce future sales.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $650M contract with an international consortium"
+      "headline": "Calvos Genomics secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a significant revenue stream and validates the company's offerings, positively impacting its financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group misses quarterly revenue estimates by 10%"
+      "headline": "Holtum Asset Group misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected sales performance, negatively impacting investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:28.255Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -53,49 +53,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors faces class action over automated logistics service disruption"
+      "headline": "Zrovov Advisors faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption is a significant negative event that could lead to financial penalties and reputational damage.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities misses quarterly revenue estimates by 15%"
+      "headline": "Creven Securities misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant 15% indicates weaker-than-expected financial performance, which is a clear negative signal to the market.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors revises long-term strategy with focus on supply chain optimization"
+      "headline": "Zrovov Advisors revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on supply chain optimization suggests potential for improved efficiency and cost savings, which is generally positive but with delayed effects.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors wins industry award for excellence in precision manufacturing"
+      "headline": "Zrovov Advisors wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and validates operational excellence, which is a positive but generally minor financial driver.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy withdraws from Middle East market citing unfavorable conditions"
+      "headline": "Zelval Energy withdraws from Middle East market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market, even due to unfavorable conditions, implies a loss of revenue streams and potential write-offs, which is a negative event.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $75M contract with an international consortium"
+      "headline": "Zrovov Advisors secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities explores strategic alternatives for cloud infrastructure unit"
+      "headline": "Creven Securities explores strategic alternatives for cloud infrastructure unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit often signals a potential divestiture or restructuring, which can be positive if the unit is underperforming or negative if it's a core asset.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:52.012Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

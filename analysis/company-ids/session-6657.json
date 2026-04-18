@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 3% margin improvement in latest quarter"
+      "headline": "Nolvis Devices sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates direct operational efficiency gains that typically translate into immediate earnings growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group launches next-generation supply chain optimization platform"
+      "headline": "Holtum Asset Group launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform suggests potential for revenue growth and market expansion, though the immediate financial impact depends on adoption rates.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks delays product launch in precision manufacturing segment"
+      "headline": "Jovor Networks delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch creates immediate uncertainty and potential revenue shortfalls for the affected segment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group faces regulatory review of supply chain optimization practices"
+      "headline": "Holtum Asset Group faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential for future operational restrictions or fines.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks loses key contract in Central Europe to competitor"
+      "headline": "Jovor Networks loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market share in a specific geographic region.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group recalls products in automated logistics line due to quality concerns"
+      "headline": "Holtum Asset Group recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall implies immediate costs, potential liability, and reputational damage that can persist over time.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:08.966Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

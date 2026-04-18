@@ -1,0 +1,163 @@
+{
+  "session": "203",
+  "companyCount": 3,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Arnos Marketplace",
+      "headlineCount": 1,
+      "firstBarIx": 3,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Arnos Marketplace misses quarterly revenue estimates by 25%"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Nolvav Commerce",
+      "headlineCount": 1,
+      "firstBarIx": 3,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Nolvav Commerce secures $650M contract with a national infrastructure agency"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Relvos Biosciences",
+      "headlineCount": 4,
+      "firstBarIx": 9,
+      "headlineIds": [
+        "H003",
+        "H004",
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Relvos Biosciences withdraws from Central Europe market citing unfavorable conditions",
+        "Relvos Biosciences completes strategic acquisition to strengthen enterprise software",
+        "Relvos Biosciences secures $500M contract with a global retailer"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 3,
+      "companyId": 0,
+      "companyName": "Arnos Marketplace",
+      "headline": "Arnos Marketplace misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 3,
+      "companyId": 1,
+      "companyName": "Nolvav Commerce",
+      "headline": "Nolvav Commerce secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a national agency represents a significant revenue boost and validates the company's capabilities.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 9,
+      "companyId": 2,
+      "companyName": "Relvos Biosciences",
+      "headline": "Relvos Biosciences withdraws from Central Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market, even if due to unfavorable conditions, suggests a reduction in potential revenue and market presence, which is generally negative.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 20,
+      "companyId": 2,
+      "companyName": "Relvos Biosciences",
+      "headline": "Relvos Biosciences completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to strengthen a core business area is generally viewed positively as it expands capabilities and market share.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 29,
+      "companyId": 2,
+      "companyName": "Relvos Biosciences",
+      "headline": "Relvos Biosciences secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a global retailer indicates strong demand for the company's services and a significant revenue opportunity.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 35,
+      "companyId": 2,
+      "companyName": "Relvos Biosciences",
+      "headline": "Relvos Biosciences announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when citing challenging market conditions, often implies cost-cutting measures and potential operational disruptions, which can be viewed negatively in the short term but potentially positive long term if successful.",
+        "longTerm": 3,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:22:18.864Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

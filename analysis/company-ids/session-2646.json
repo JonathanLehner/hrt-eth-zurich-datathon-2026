@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $50M contract with a national infrastructure agency"
+      "headline": "Frelex Outlets secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces restructuring plan, cites challenging market conditions"
+      "headline": "Holtar Stores announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when citing challenging market conditions, typically signals operational difficulties and potential short-term disruption, though it aims for long-term efficiency.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $500M contract with a leading cloud platform"
+      "headline": "Xovol Goods secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial $500M contract with a leading cloud platform is a significant positive event, indicating strong demand and future revenue.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports unexpected decline in Middle East revenue"
+      "headline": "Xovol Goods reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates weakening demand or competitive pressures, negatively impacting financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets files for regulatory approval of new renewable storage offering"
+      "headline": "Frelex Outlets files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering is a necessary step towards a potential product launch, indicating future growth opportunities but with inherent regulatory risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Frelex Outlets reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with significant year-over-year growth is a strong positive indicator of financial health and market performance.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods in talks for potential merger, details undisclosed"
+      "headline": "Talvyn Goods in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Being in talks for a potential merger introduces significant uncertainty and speculation, which can lead to volatility and depends heavily on the undisclosed details and outcome.",
+        "longTerm": 0,
+        "shortTerm": 4,
+        "longTermUncertainty": 10,
+        "shortTermUncertainty": 8,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:47.585Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

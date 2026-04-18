@@ -41,42 +41,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods misses quarterly revenue estimates by 10%"
+      "headline": "Xovol Goods misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Xovol Goods' significant revenue miss indicates weaker-than-expected financial performance, likely leading to negative investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores announces significant capital expenditure plan for Latin America"
+      "headline": "Xovep Stores announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion into Latin America suggests future growth potential but also involves immediate costs and execution risks.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $400M contract with a top-tier research institute"
+      "headline": "Xovep Stores secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial $400M contract with a top-tier research institute represents a significant revenue boost and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods loses key contract in North America to competitor"
+      "headline": "Xovol Goods loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract in North America to a competitor indicates a significant revenue reduction and potential competitive weakness.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $75M contract with an international consortium"
+      "headline": "Xovep Stores secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with an international consortium provides a positive revenue stream and demonstrates international market penetration.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores raises full-year guidance citing robust demand"
+      "headline": "Xovep Stores raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance due to robust demand indicates stronger-than-expected future financial performance and positive business momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:16.907Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

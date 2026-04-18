@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports strong demand in Scandinavia, raises outlook"
+      "headline": "Halvav Brands reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised guidance provide a clear positive signal for near-term and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $250M contract with an international consortium"
+      "headline": "Halvav Brands secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides immediate revenue visibility and long-term growth support.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports 5% increase in customer acquisition"
+      "headline": "Zrovov Advisors reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a positive growth indicator that should compound over the 100-day period.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $800M contract with a national infrastructure agency"
+      "headline": "Halvav Brands secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "An $800M contract is a significant win that provides substantial revenue backing for the company's long-term outlook.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group opens new office in North America"
+      "headline": "Crevol Retail Group opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates expansion, though the immediate financial impact is likely muted compared to long-term growth potential.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets delays product launch in data analytics segment"
+      "headline": "Ixenis Outlets delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch creates immediate negative sentiment and potential revenue shortfalls in the near term.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group loses key contract in North America to competitor"
+      "headline": "Crevol Retail Group loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract is a direct negative hit to revenue and market position in the region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors loses key contract in North America to competitor"
+      "headline": "Zrovov Advisors loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract negatively impacts revenue expectations and competitive standing.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:12.259Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -1,0 +1,164 @@
+{
+  "session": "911",
+  "companyCount": 3,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Relvon Fuels",
+      "headlineCount": 3,
+      "firstBarIx": 2,
+      "headlineIds": [
+        "H001",
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Relvon Fuels misses quarterly revenue estimates by 20%",
+        "Relvon Fuels secures $180M contract with a multinational manufacturer",
+        "Relvon Fuels enters joint venture with an international consortium"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Ulvon Renewables",
+      "headlineCount": 2,
+      "firstBarIx": 16,
+      "headlineIds": [
+        "H002",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Ulvon Renewables delays product launch in digital payments segment",
+        "Ulvon Renewables reports strong demand in Central Europe, raises outlook"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Wyrnor Solutions",
+      "headlineCount": 1,
+      "firstBarIx": 24,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Wyrnor Solutions faces regulatory review of renewable storage practices"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 2,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin indicates weaker-than-expected financial performance, likely leading to a negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 16,
+      "companyId": 1,
+      "companyName": "Ulvon Renewables",
+      "headline": "Ulvon Renewables delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch, especially in a new segment, can signal operational issues, missed revenue opportunities, or competitive disadvantages, leading to negative investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 24,
+      "companyId": 2,
+      "companyName": "Wyrnor Solutions",
+      "headline": "Wyrnor Solutions faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage, which is generally negative for a company.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 40,
+      "companyId": 1,
+      "companyName": "Ulvon Renewables",
+      "headline": "Ulvon Renewables reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region coupled with a raised outlook indicates improving business performance and positive future expectations, which is beneficial for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 43,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract is a clear positive event, indicating revenue growth and business expansion.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 44,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with an international consortium suggests strategic expansion, potential for new markets or technologies, and shared resources, which is generally positive.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:24:28.974Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

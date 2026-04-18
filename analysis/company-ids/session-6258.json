@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group revises long-term strategy with focus on renewable storage"
+      "headline": "Holtum Asset Group revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on renewable storage suggests potential future growth and market relevance, but the immediate financial impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces significant capital expenditure plan for Central Europe"
+      "headline": "Jovik Asset Group announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates future growth and investment, which is generally positive for long-term prospects but could be a short-term cost.",
+        "longTerm": 5,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets wins industry award for excellence in automated logistics"
+      "headline": "Frelex Outlets wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Winning an industry award for excellence in automated logistics enhances reputation and could indirectly lead to future business, but has no direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $120M contract with an international consortium"
+      "headline": "Frelex Outlets secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract is a clear positive financial event, indicating new revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $180M contract with a top-tier research institute"
+      "headline": "Wrelal Financial secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract with a top-tier research institute is a significant positive financial event, indicating new revenue and prestigious business.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets announces significant capital expenditure plan for Europe"
+      "headline": "Frelex Outlets announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for Europe indicates future growth and investment, which is generally positive for long-term prospects but could be a short-term cost.",
+        "longTerm": 5,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Wrelal Financial warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacts operations and suggests potential negative financial consequences due to delays or increased costs.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:40:35.760Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

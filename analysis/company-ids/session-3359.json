@@ -48,28 +48,79 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing warns of supply chain disruptions affecting Europe operations"
+      "headline": "Dralol Computing warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "Dralol Computing's warning of supply chain disruptions in Europe indicates potential negative impacts on production and sales.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies recalls products in digital payments line due to quality concerns"
+      "headline": "Myrnep Technologies recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Myrnep Technologies' product recall due to quality concerns will negatively impact sales, reputation, and incur costs.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics wins industry award for excellence in enterprise software"
+      "headline": "Calvos Genomics wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances Calvos Genomics' reputation and could positively influence future sales and partnerships.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics faces class action over renewable storage service disruption"
+      "headline": "Calvos Genomics faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Calvos Genomics facing a class action lawsuit over service disruption implies potential legal costs, damages, and reputational harm.",
+        "longTerm": -9,
+        "shortTerm": -8,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:54.323Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

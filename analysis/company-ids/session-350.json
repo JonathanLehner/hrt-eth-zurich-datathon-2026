@@ -1,0 +1,145 @@
+{
+  "session": "350",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Zelval Energy",
+      "headlineCount": 1,
+      "firstBarIx": 6,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Zelval Energy announces $4.1B share buyback program"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Urvel Grid",
+      "headlineCount": 3,
+      "firstBarIx": 9,
+      "headlineIds": [
+        "H002",
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Urvel Grid opens new office in Central Europe",
+        "Urvel Grid secures $320M contract with a multinational manufacturer",
+        "Urvel Grid revises long-term strategy with focus on automated logistics"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Ulvon Renewables",
+      "headlineCount": 1,
+      "firstBarIx": 23,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Ulvon Renewables Chief Operating Officer steps down unexpectedly citing personal reasons"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 6,
+      "companyId": 0,
+      "companyName": "Zelval Energy",
+      "headline": "Zelval Energy announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and can boost EPS, leading to a positive short-term and potentially sustained long-term impact on share price.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 9,
+      "companyId": 1,
+      "companyName": "Urvel Grid",
+      "headline": "Urvel Grid opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in a region suggests business expansion and potential for new revenue streams, indicating a positive but potentially gradual impact.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 23,
+      "companyId": 2,
+      "companyName": "Ulvon Renewables",
+      "headline": "Ulvon Renewables Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive like a COO can create uncertainty and raise concerns about operational stability and future strategy, leading to a negative short-term impact.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 35,
+      "companyId": 1,
+      "companyName": "Urvel Grid",
+      "headline": "Urvel Grid secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear and immediate positive impact on future revenue and order backlog.",
+        "longTerm": 7,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 42,
+      "companyId": 1,
+      "companyName": "Urvel Grid",
+      "headline": "Urvel Grid revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy, especially one focusing on a specific area like automated logistics, indicates potential for future efficiency or market positioning, but the immediate financial impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:22:45.199Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

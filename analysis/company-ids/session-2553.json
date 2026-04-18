@@ -50,35 +50,96 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments begins scheduled maintenance of process automation systems"
+      "headline": "Halven Investments begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a necessary operational activity that might temporarily reduce efficiency but is unlikely to have a significant direct financial impact unless it's unexpectedly prolonged or costly.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings revises long-term strategy with focus on wireless connectivity"
+      "headline": "Halvix Holdings revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on wireless connectivity indicates a potential future growth area, but the immediate financial impact is uncertain as it's a strategic intent, not an immediate action or outcome.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Frelex Outlets completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The completion of a strategic acquisition to strengthen a core business area is generally positive, indicating growth and potential synergies, though integration risks are not mentioned.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets files for regulatory approval of new digital payments offering"
+      "headline": "Frelex Outlets files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new digital payments offering is a positive step towards a potential new revenue stream, but the actual launch and market success are not guaranteed.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets names new head of automated logistics division"
+      "headline": "Frelex Outlets names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Naming a new head for a division is a routine leadership change that typically has a neutral immediate financial impact unless the new leader has a particularly strong or weak reputation, which is not stated.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:29.074Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems opens new office in Asia Pacific"
+      "headline": "Brevep Systems opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office in Asia Pacific indicates business expansion, which is generally positive for growth but has associated costs and execution risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power recalls products in renewable storage line due to quality concerns"
+      "headline": "Kelvik Power recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event, leading to costs, potential revenue loss, and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems expands operations into Europe markets"
+      "headline": "Brevep Systems expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into Europe markets signals growth and potential for increased revenue, though initial investment costs are expected.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $75M contract with an international consortium"
+      "headline": "Brevep Systems secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems to host investor day focused on enterprise software strategy"
+      "headline": "Prynis Systems to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy can provide clarity and potentially boost investor confidence if the strategy is well-received, but the actual impact depends on the content.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $320M contract with a national infrastructure agency"
+      "headline": "Kelvik Power secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial $320M contract with a national infrastructure agency is a significant positive development, indicating strong revenue generation and market trust.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:58.557Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

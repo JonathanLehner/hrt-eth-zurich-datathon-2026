@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing names new head of process automation division"
+      "headline": "Dralol Computing names new head of process automation division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head suggests potential strategic shifts or operational improvements, but the immediate financial impact is uncertain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports unexpected decline in North America revenue"
+      "headline": "Crevex Labs reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in North America revenue is a clear negative signal for the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $650M contract with a top-tier research institute"
+      "headline": "Halvav Brands secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $650M contract with a top-tier institute is a strong positive financial event for the company.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software faces class action over wireless connectivity service disruption"
+      "headline": "Frelol Software faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption represents a significant potential financial and reputational risk.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports unexpected decline in Southeast Asia revenue"
+      "headline": "Crevex Labs reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in Southeast Asia revenue is a clear negative signal for the company's financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands sees 20% drop in new customer orders this quarter"
+      "headline": "Halvav Brands sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders indicates a significant decline in demand, negatively impacting future revenue.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs confirms participation in Annual Industry Forum"
+      "headline": "Crevex Labs confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine business activity that typically has no direct or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:30:46.163Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

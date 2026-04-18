@@ -52,42 +52,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports strong demand in Middle East, raises outlook"
+      "headline": "Relvon Fuels reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region directly leads to an improved financial outlook for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees mixed results in supply chain optimization pilot program"
+      "headline": "Zrovex Industries sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding the effectiveness and future implementation of operational improvements.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power revises long-term strategy with focus on digital payments"
+      "headline": "Kelvik Power revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "A strategic shift towards digital payments indicates a potential pivot for future growth, but its immediate financial impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $75M contract with a major logistics provider"
+      "headline": "Kelvik Power secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a major provider is a clear positive for revenue and business expansion.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels CEO steps down unexpectedly citing personal reasons"
+      "headline": "Relvon Fuels CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates uncertainty and can be perceived negatively due to potential disruption in leadership and strategy.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports 8% increase in customer acquisition"
+      "headline": "Kelvik Power reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition indicates positive business growth and potentially higher future revenue.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:33:06.320Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

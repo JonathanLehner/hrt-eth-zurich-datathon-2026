@@ -50,35 +50,96 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group completes strategic acquisition to strengthen enterprise software"
+      "headline": "Holtum Asset Group completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The strategic acquisition to strengthen enterprise software suggests a positive long-term impact on the company's capabilities and market position.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $320M contract with a global retailer"
+      "headline": "Zelvel Capital secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $320M contract with a global retailer is a clear positive event, indicating increased revenue and market presence.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Holtum Asset Group reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with a significant 20% year-over-year increase is a strong positive indicator of financial performance.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities completes planned facility upgrade in Middle East"
+      "headline": "Jorvyl Securities completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally a positive development for the company.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 10% decline in operating income"
+      "headline": "Holtum Asset Group reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a clear negative financial indicator, suggesting reduced profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:35:21.287Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

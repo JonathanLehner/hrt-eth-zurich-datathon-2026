@@ -1,0 +1,78 @@
+{
+  "session": "497",
+  "companyCount": 2,
+  "headlineCount": 2,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Jorvyl Securities",
+      "headlineCount": 1,
+      "firstBarIx": 22,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Jorvyl Securities reports 10% increase in customer acquisition"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Ilval Financial",
+      "headlineCount": 1,
+      "firstBarIx": 42,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Ilval Financial faces regulatory review of automated logistics practices"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 22,
+      "companyId": 0,
+      "companyName": "Jorvyl Securities",
+      "headline": "Jorvyl Securities reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition indicates positive business growth and potential for increased revenue.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 42,
+      "companyId": 1,
+      "companyName": "Ilval Financial",
+      "headline": "Ilval Financial faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines, operational changes, or reputational damage, negatively impacting the company.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:23:04.903Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

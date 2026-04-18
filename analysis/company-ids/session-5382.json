@@ -65,56 +65,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces $3.8B share buyback program"
+      "headline": "Dralol Computing announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost EPS, leading to a positive market reaction.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing names new head of process automation division"
+      "headline": "Dralol Computing names new head of process automation division",
+      "sentiment": {
+        "reasoning": "A new division head is a standard operational change with generally neutral immediate financial impact unless specific details about the individual or their mandate are provided.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources opens new office in Latin America"
+      "headline": "Nolvol Resources opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office in a region suggests business expansion, which could lead to increased market reach and revenue, but also involves initial costs.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 7% decline in operating income"
+      "headline": "Ulvon Renewables reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported decline in operating income is a clear negative financial indicator, suggesting reduced profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports rising costs pressuring margins in data analytics"
+      "headline": "Zrovex Industries reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressuring margins indicate reduced profitability in a specific segment, which is a negative financial development.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries expands operations into North America markets"
+      "headline": "Zrovex Industries expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets suggests potential for revenue growth and market share, but also implies initial investment and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries launches next-generation wireless connectivity platform"
+      "headline": "Zrovex Industries launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "A new product launch, especially a 'next-generation' platform, indicates innovation and potential for future revenue growth and market competitiveness.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 10% drop in new customer orders this quarter"
+      "headline": "Zrovex Industries sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of future revenue and demand for the company's products or services.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:37:37.364Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

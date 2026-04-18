@@ -50,35 +50,96 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports unexpected decline in Scandinavia revenue"
+      "headline": "Grevon Biotech reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "The unexpected decline in Scandinavia revenue indicates a negative operational performance in a specific region, likely impacting overall financial results.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital misses quarterly revenue estimates by 3%"
+      "headline": "Zelvel Capital misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 3% indicates underperformance against market expectations, which typically leads to a negative market reaction.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital names new head of digital payments division"
+      "headline": "Zelvel Capital names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Naming a new head for a division can signal a strategic shift or an effort to improve performance, with potential positive or negative implications depending on the new leader's reputation and strategy.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors names new head of digital payments division"
+      "headline": "Zrovov Advisors names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Naming a new head for a division can signal a strategic shift or an effort to improve performance, with potential positive or negative implications depending on the new leader's reputation and strategy.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $180M contract with a national infrastructure agency"
+      "headline": "Zelvel Capital secures $180M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract with a national agency represents a substantial revenue increase and validates the company's capabilities, leading to a positive financial impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:28.826Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs delays product launch in cloud infrastructure segment"
+      "headline": "Yorven Labs delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch in a key segment indicates a setback that could impact future revenue and market position.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group faces class action over data analytics service disruption"
+      "headline": "Jovik Asset Group faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption implies potential legal costs, reputational damage, and financial penalties.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group sees 7% margin improvement in latest quarter"
+      "headline": "Jovik Asset Group sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates better operational efficiency and profitability, which is a strong positive financial signal.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 12% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A substantial drop in new customer orders directly indicates weakening demand and potential future revenue decline.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $120M contract with a top-tier research institute"
+      "headline": "Creven Securities secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a reputable client provides a clear positive revenue stream and validates the company's offerings.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports rising costs pressuring margins in enterprise software"
+      "headline": "Zelvel Capital reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly pressuring margins indicate reduced profitability and potential earnings headwinds.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:32.458Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

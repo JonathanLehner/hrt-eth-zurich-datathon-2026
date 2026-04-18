@@ -46,21 +46,62 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks lowers full-year guidance amid softening demand"
+      "headline": "Halvax Networks lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Halvax Networks lowering its full-year guidance due to softening demand signals a negative outlook for future financial performance.",
+        "longTerm": -8,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems misses quarterly revenue estimates by 15%"
+      "headline": "Brevep Systems misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Brevep Systems' significant 15% revenue miss indicates weaker-than-expected financial performance, likely leading to a strong negative market reaction.",
+        "longTerm": -7,
+        "shortTerm": -10,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies faces regulatory review of supply chain optimization practices"
+      "headline": "Ixenix Technologies faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant uncertainty and potential for negative outcomes such as fines, operational changes, or reputational damage.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:48.759Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -43,49 +43,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks raises full-year guidance citing robust demand"
+      "headline": "Jovor Networks raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Jovor Networks raising full-year guidance due to robust demand indicates a positive financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech misses quarterly revenue estimates by 12%"
+      "headline": "Xelvol Biotech misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Xelvol Biotech missing quarterly revenue estimates by a significant margin indicates a negative financial performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech wins industry award for excellence in digital payments"
+      "headline": "Xelvol Biotech wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Winning an industry award for excellence in digital payments enhances Xelvol Biotech's reputation and could indirectly boost business.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Jovor Networks Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a Chief Operating Officer can create uncertainty and potential operational disruption for Jovor Networks.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $75M contract with an international consortium"
+      "headline": "Jovor Networks secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Jovor Networks securing a $75M contract with an international consortium represents a clear and significant revenue increase.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports strong demand in Latin America, raises outlook"
+      "headline": "Jovor Networks reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Jovor Networks reporting strong demand in Latin America and raising its outlook indicates positive regional growth and improved financial expectations.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports 3% increase in customer acquisition"
+      "headline": "Xelvol Biotech reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "Xelvol Biotech's 3% increase in customer acquisition indicates positive growth in its customer base, suggesting future revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:29:55.463Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

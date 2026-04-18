@@ -48,28 +48,79 @@
       "barIx": 29,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities faces class action over digital payments service disruption"
+      "headline": "Creven Securities faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "The class action lawsuit over service disruption is a negative event that could lead to significant legal costs and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings files routine patent applications in digital payments"
+      "headline": "Talvix Holdings files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent applications are a normal part of business operations and do not indicate a significant immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial misses quarterly revenue estimates by 8%"
+      "headline": "Ilval Financial misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin is a clear negative indicator for the company's financial performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial begins scheduled maintenance of enterprise software systems"
+      "headline": "Ilval Financial begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational activity that is unlikely to have a significant financial impact unless it causes unexpected disruptions.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:38:52.683Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

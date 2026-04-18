@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces breakthrough in precision manufacturing"
+      "headline": "Halven Investments announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in manufacturing could lead to improved efficiency or new product capabilities, positively impacting future revenue and costs.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Creven Securities completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition is framed as strategic and aimed at strengthening cloud infrastructure, suggesting a positive long-term move for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Yorval Partners reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue with significant year-over-year growth indicates strong current performance and positive market demand.",
+        "longTerm": 5,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces significant capital expenditure plan for North America"
+      "headline": "Prynis Systems announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests future expansion and investment in growth, which can be positive for long-term capacity and revenue.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $50M contract with a top-tier research institute"
+      "headline": "Prynis Systems secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a top-tier research institute represents a clear and immediate revenue boost and validates the company's offerings.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities misses quarterly revenue estimates by 18%"
+      "headline": "Creven Securities misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin indicates weaker-than-expected performance and could signal underlying operational or demand issues.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems launches next-generation enterprise software platform"
+      "headline": "Prynis Systems launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation software platform has the potential to drive new sales and market share, positively impacting future revenue.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $650M contract with a major logistics provider"
+      "headline": "Yorval Partners secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a substantial $650M contract with a major logistics provider represents a significant revenue boost and strong market validation.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:34:07.326Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

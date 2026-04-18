@@ -64,49 +64,130 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces regulatory review of process automation practices"
+      "headline": "Ulvyn Microchips faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative outcomes, which could lead to fines or operational changes.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports 15% increase in customer acquisition"
+      "headline": "Grevel Diagnostics reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A significant increase in customer acquisition indicates strong demand and potential for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports unexpected decline in Scandinavia revenue"
+      "headline": "Prynis Systems reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates weakening demand or competitive pressure, negatively impacting financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees mixed results in wireless connectivity pilot program"
+      "headline": "Grevel Diagnostics sees mixed results in wireless connectivity pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding the success and future rollout of a new initiative, potentially delaying or complicating its impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $250M contract with a leading cloud platform"
+      "headline": "Prynis Systems secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a major client is a clear positive for future revenue and market validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices to host investor day focused on precision manufacturing strategy"
+      "headline": "Nolvis Devices to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is generally a neutral event, but can generate interest and provide clarity on future direction.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices secures $250M contract with a national infrastructure agency"
+      "headline": "Nolvis Devices secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a national infrastructure agency is a clear positive for future revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:31:57.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

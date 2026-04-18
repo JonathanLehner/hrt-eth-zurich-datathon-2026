@@ -55,56 +55,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $800M contract with a major logistics provider"
+      "headline": "Strynal Industries secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a major logistics provider is a clear positive for revenue and future business prospects.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries revises long-term strategy with focus on supply chain optimization"
+      "headline": "Strynal Industries revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "A revised long-term strategy focusing on optimization suggests potential future efficiency gains, but the immediate financial impact is unclear.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces regulatory review of automated logistics practices"
+      "headline": "Plevik Energy faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Facing a regulatory review introduces uncertainty and potential costs, which is a negative signal for the company.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy confirms participation in Capital Markets Day"
+      "headline": "Plevik Energy confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a routine investor relations event that does not inherently signal a specific financial impact without knowing the content.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for precision manufacturing unit"
+      "headline": "Plevik Energy explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit suggests a potential divestiture or restructuring, which could be positive for focus or negative if it signals distress.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources CTO steps down unexpectedly citing personal reasons"
+      "headline": "Nolvol Resources CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO can create uncertainty regarding technological direction and project continuity.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $250M contract with a global retailer"
+      "headline": "Nolvol Resources secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a global retailer is a clear positive for revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports 15% increase in customer acquisition"
+      "headline": "Plevik Energy reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A significant increase in customer acquisition indicates strong demand and potential for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:32:00.346Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -53,49 +53,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports 10% decline in operating income"
+      "headline": "Volval Devices reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A reported decline in operating income indicates weaker financial performance, negatively impacting investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Volval Devices reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region and a raised outlook are positive indicators for future revenue and profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies names new head of renewable storage division"
+      "headline": "Ixenix Technologies names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "A new leadership appointment in a specific division can signal strategic focus or a change in direction, but its immediate financial impact is often uncertain.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices misses quarterly revenue estimates by 18%"
+      "headline": "Volval Devices misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected sales performance, leading to negative investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $800M contract with a major logistics provider"
+      "headline": "Prynis Systems secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and substantial boost to future revenue and order backlog.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces $4.1B share buyback program"
+      "headline": "Prynis Systems announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically boosts earnings per share and signals management confidence, positively impacting shareholder value.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports strong demand in Europe, raises outlook"
+      "headline": "Volval Devices reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in Europe and a raised outlook are positive indicators for future revenue and profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:28:29.453Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }
