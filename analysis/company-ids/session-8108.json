@@ -52,49 +52,130 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities expands operations into North America markets"
+      "headline": "Creven Securities expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expansion into a new geographic market represents a strategic growth initiative that typically increases long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets recalls products in enterprise software line due to quality concerns"
+      "headline": "Ixenis Outlets recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate negative sentiment and potential operational costs, with lingering reputational risk.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $400M contract with a top-tier research institute"
+      "headline": "Zrovov Advisors secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a top-tier institution provides a clear, immediate boost to revenue visibility and market credibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $320M contract with a national infrastructure agency"
+      "headline": "Ixenis Outlets secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A significant contract win with a national agency provides a substantial and reliable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets completes planned facility upgrade in Latin America"
+      "headline": "Ixenis Outlets completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that improves efficiency but has a limited immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $320M contract with a national infrastructure agency"
+      "headline": "Ixenis Outlets secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "This is a repeat of the previous contract win announcement, providing consistent positive news regarding the company's order book.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets signs multi-year partnership with a global retailer"
+      "headline": "Ixenis Outlets signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer suggests a stable, long-term revenue channel that enhances market positioning.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:02.530Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

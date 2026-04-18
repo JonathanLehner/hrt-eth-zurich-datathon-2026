@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 25%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss indicates immediate operational weakness that will likely weigh on investor sentiment throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces class action over data analytics service disruption"
+      "headline": "Plevik Energy faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces immediate legal risk and potential financial liability that creates persistent uncertainty for the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for supply chain optimization unit"
+      "headline": "Plevik Energy explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a neutral to slightly positive signal that the company is seeking to unlock value, though the outcome remains speculative.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables launches next-generation digital payments platform"
+      "headline": "Orevex Renewables launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive growth signal, though the immediate financial contribution is typically modest.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Plevik Energy Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a COO creates immediate leadership instability and raises questions about internal operations.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables sees 25% drop in new customer orders this quarter"
+      "headline": "Orevex Renewables sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a strong negative indicator of future revenue growth and demand health.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy explores strategic alternatives for supply chain optimization unit"
+      "headline": "Zelval Energy explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit is a neutral corporate action that lacks immediate financial impact until a deal is reached.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $320M contract with an international consortium"
+      "headline": "Orevex Renewables secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, tangible revenue visibility and is a strong positive for the company's financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:31.256Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

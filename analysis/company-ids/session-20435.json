@@ -51,42 +51,113 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Xovep Stores reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 25% provides strong, concrete evidence of immediate financial success.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports strong demand in Scandinavia, raises outlook"
+      "headline": "Xovep Stores reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising guidance based on regional demand strength is a clear positive signal for both immediate and medium-term performance.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Nolvav Commerce files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates future growth potential but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods opens new office in Asia Pacific"
+      "headline": "Xovol Goods opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a strategic expansion that typically incurs costs before generating significant revenue.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores names new head of data analytics division"
+      "headline": "Xovep Stores names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change with minimal immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores faces class action over precision manufacturing service disruption"
+      "headline": "Xovep Stores faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate negative sentiment and potential future financial liability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:22.441Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

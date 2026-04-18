@@ -54,49 +54,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports strong demand in Europe, raises outlook"
+      "headline": "Zrovov Advisors reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for near-term and medium-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files routine patent applications in cloud infrastructure"
+      "headline": "Zrovov Advisors files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $50M contract with a national infrastructure agency"
+      "headline": "Plevum Partners secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a government agency provides a concrete revenue stream and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors beats analyst expectations with strong earnings growth"
+      "headline": "Zrovov Advisors beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations for earnings growth is a direct positive indicator of operational efficiency and market strength.",
+        "longTerm": 5,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital completes strategic acquisition to strengthen data analytics"
+      "headline": "Ervan Capital completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Acquiring a company to strengthen data analytics is a strategic move that typically requires time to realize value and integrate.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces significant capital expenditure plan for Scandinavia"
+      "headline": "Ervan Capital announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees 12% drop in new customer orders this quarter"
+      "headline": "Ervan Capital sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a clear negative signal regarding demand and future revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:50.889Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma confirms participation in Emerging Markets Forum"
+      "headline": "Nerval Biopharma confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate event with no direct financial impact or material news.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 10% decline in operating income"
+      "headline": "Nerval Biopharma reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Dralol Computing Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the COO suggests existing investor anxiety, which creates uncertainty regarding management's ability to stabilize sentiment.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Relvan Software reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a clear positive signal for revenue growth and operational performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing begins scheduled maintenance of automated logistics systems"
+      "headline": "Dralol Computing begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs signs multi-year partnership with a leading cloud platform"
+      "headline": "Yorven Labs signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a major cloud provider indicates long-term revenue potential and strategic validation.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports rising costs pressuring margins in renewable storage"
+      "headline": "Relvan Software reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and suggests potential headwinds for the renewable storage segment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs to host investor day focused on wireless connectivity strategy"
+      "headline": "Yorven Labs to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that provides a platform for strategy communication but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:55.627Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

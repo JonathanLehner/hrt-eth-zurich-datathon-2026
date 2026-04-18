@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences files routine patent applications in supply chain optimization"
+      "headline": "Wyrnik Sciences files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees 10% drop in new customer orders this quarter"
+      "headline": "Jorval Trading Co sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of revenue growth and demand.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Wyrnik Sciences announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may pressure short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $400M contract with an international consortium"
+      "headline": "Nerval Biopharma secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co faces class action over data analytics service disruption"
+      "headline": "Jorval Trading Co faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk with uncertain outcomes.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co faces class action over precision manufacturing service disruption"
+      "headline": "Jorval Trading Co faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A second class action lawsuit regarding service disruption compounds reputational and financial risk for the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences signs multi-year partnership with a national infrastructure agency"
+      "headline": "Wyrnik Sciences signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides stable, long-term revenue and operational validation.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:33.971Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

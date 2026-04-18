@@ -54,49 +54,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems faces regulatory review of precision manufacturing practices"
+      "headline": "Prynis Systems faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational uncertainty and potential legal or compliance costs that typically weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Yorval Partners reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong positive indicator of business health and market demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners completes planned facility upgrade in Asia Pacific"
+      "headline": "Yorval Partners completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Facility upgrades are standard operational improvements that generally yield incremental long-term efficiency gains rather than immediate financial spikes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $800M contract with a top-tier research institute"
+      "headline": "Zrovov Advisors secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, high-value revenue visibility and strengthens the company's competitive position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports rising costs pressuring margins in enterprise software"
+      "headline": "Zrovov Advisors reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and margins, which is a negative signal for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners completes planned facility upgrade in Central Europe"
+      "headline": "Yorval Partners completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Similar to the previous facility upgrade, this represents a planned operational enhancement with modest, long-term positive implications.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $180M contract with a multinational manufacturer"
+      "headline": "Zrovov Advisors secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $180M contract win is a significant positive development that bolsters revenue and demonstrates ongoing business momentum.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:19.448Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences begins scheduled maintenance of digital payments systems"
+      "headline": "Relvos Biosciences begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions announces significant capital expenditure plan for Central Europe"
+      "headline": "Orevov Solutions announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Orevov Solutions completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Acquisitions provide immediate strategic positioning in wireless connectivity, though integration outcomes remain to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $400M contract with an international consortium"
+      "headline": "Orevov Solutions secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, immediate revenue visibility and long-term financial stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences recalls products in renewable storage line due to quality concerns"
+      "headline": "Calvis Sciences recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate financial costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences wins industry award for excellence in data analytics"
+      "headline": "Calvis Sciences wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into direct, measurable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:45.362Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

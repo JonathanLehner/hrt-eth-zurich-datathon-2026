@@ -46,21 +46,62 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces significant capital expenditure plan for North America"
+      "headline": "Dralol Computing announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but creates immediate cash outflow pressure.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces significant capital expenditure plan for Central Europe"
+      "headline": "Nerven Grid announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Expanding capital expenditure in Central Europe signals strategic growth, though the immediate impact is a reduction in free cash flow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid enters joint venture with a leading cloud platform"
+      "headline": "Urvel Grid enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a leading cloud platform provides a clear strategic partnership that enhances market reach and service capabilities.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:23.194Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -36,21 +36,62 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips enters joint venture with a leading cloud platform"
+      "headline": "Brevon Microchips enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a major cloud platform suggests a strategic partnership that should drive long-term revenue growth and market positioning.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Yorven Labs warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue shortfalls for the upcoming quarter.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips recalls products in process automation line due to quality concerns"
+      "headline": "Brevon Microchips recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate financial costs and potential reputational damage that will likely persist through the 100-day window.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:33.572Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

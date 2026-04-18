@@ -60,35 +60,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Xovep Stores recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns typically triggers immediate negative sentiment and operational costs, with lingering uncertainty regarding brand reputation.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 3% increase in customer acquisition"
+      "headline": "Arnik Commerce reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive growth signal that suggests improved market penetration and potential revenue upside.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces $4.1B share buyback program"
+      "headline": "Holtar Stores announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of capital allocation that typically boosts earnings per share and investor confidence.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces regulatory review of wireless connectivity practices"
+      "headline": "Ulvyn Microchips faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential legal or operational headwinds that can weigh on stock performance.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $75M contract with a multinational manufacturer"
+      "headline": "Arnik Commerce secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, tangible revenue visibility and strengthens the company's competitive position.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:27.764Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

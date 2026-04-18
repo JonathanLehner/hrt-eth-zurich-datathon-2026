@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing sees mixed results in supply chain optimization pilot program"
+      "headline": "Talvep Computing sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "The mixed results of the pilot program create ambiguity regarding the effectiveness and scalability of the supply chain optimization efforts.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing sees 5% drop in new customer orders this quarter"
+      "headline": "Dralol Computing sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% decline in new customer orders is a direct negative indicator of demand and near-term revenue growth.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $50M contract with a global retailer"
+      "headline": "Prynis Systems secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive, and quantifiable boost to revenue and business validation.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $120M contract with an international consortium"
+      "headline": "Prynis Systems secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $120M contract represents a significant and material revenue win that strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing wins industry award for excellence in cloud infrastructure"
+      "headline": "Dralol Computing wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct, immediate financial impact on the bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies opens new office in Southeast Asia"
+      "headline": "Myrnep Technologies opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates strategic expansion, though the financial benefits are typically realized over a longer horizon.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $50M contract with a global retailer"
+      "headline": "Myrnep Technologies secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a concrete financial win that provides immediate and sustained revenue visibility.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:56.845Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

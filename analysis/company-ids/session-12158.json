@@ -48,28 +48,79 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports unexpected decline in Middle East revenue"
+      "headline": "Krevan Investments reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a key geographic region directly impacts earnings expectations and investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $320M contract with a national infrastructure agency"
+      "headline": "Plevum Partners secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a clear, quantifiable boost to future revenue and operational visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces regulatory review of wireless connectivity practices"
+      "headline": "Krevan Investments faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential legal and operational risks that create immediate uncertainty and potential long-term costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Talvix Holdings begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is typically priced in and has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:36.710Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

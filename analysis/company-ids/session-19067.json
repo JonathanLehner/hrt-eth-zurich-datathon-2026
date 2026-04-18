@@ -54,49 +54,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces breakthrough in process automation"
+      "headline": "Jovik Asset Group announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough in process automation suggests potential long-term efficiency gains but lacks immediate financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Wyrnor Solutions recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in cloud infrastructure directly impacts revenue and reputation, creating immediate negative pressure.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $120M contract with a top-tier research institute"
+      "headline": "Zelvel Capital secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, quantifiable revenue growth for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions recalls products in data analytics line due to quality concerns"
+      "headline": "Wyrnor Solutions recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A second product recall within a short timeframe signals systemic quality control issues, compounding negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions to host investor day focused on supply chain optimization strategy"
+      "headline": "Wyrnor Solutions to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on supply chain optimization is a neutral event that aims to reassure stakeholders but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital beats analyst expectations with strong earnings growth"
+      "headline": "Zelvel Capital beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations with strong earnings growth is a direct positive indicator of financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $50M contract with a national infrastructure agency"
+      "headline": "Zelvel Capital secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing an additional $50M contract reinforces the company's growth trajectory and revenue stability.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:31.974Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Halvix Holdings reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 7% indicates strong operational performance and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics files for regulatory approval of new data analytics offering"
+      "headline": "Jorvix Diagnostics files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that signals future product expansion but lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital enters joint venture with a major logistics provider"
+      "headline": "Zelvel Capital enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major provider suggests strategic growth potential, though the immediate financial contribution remains undefined.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings to host investor day focused on renewable storage strategy"
+      "headline": "Halvix Holdings to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a communication event that typically has minimal immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports 3% increase in customer acquisition"
+      "headline": "Plevum Partners reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive indicator of demand, though the scale of impact is relatively modest.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports rising costs pressuring margins in automated logistics"
+      "headline": "Zelvel Capital reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for near-term financial health.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $250M contract with an international consortium"
+      "headline": "Halvix Holdings secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, significant, and durable revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $250M contract with a global retailer"
+      "headline": "Jorvix Diagnostics secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $250M contract with a global retailer represents a major win that significantly bolsters the company's revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:21.884Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

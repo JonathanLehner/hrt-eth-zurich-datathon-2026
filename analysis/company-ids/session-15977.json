@@ -55,56 +55,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports 5% decline in operating income"
+      "headline": "Plevik Energy reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and investor sentiment in the short term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid names new head of process automation division"
+      "headline": "Nerven Grid names new head of process automation division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division create moderate uncertainty regarding future operational strategy.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores wins industry award for excellence in digital payments"
+      "headline": "Holtar Stores wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but have limited direct financial impact on the bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores opens new office in Asia Pacific"
+      "headline": "Holtar Stores opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic region signals growth potential but involves initial capital expenditure.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $500M contract with a leading cloud platform"
+      "headline": "Holtar Stores secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A large contract win provides clear, immediate, and long-term revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces breakthrough in renewable storage"
+      "headline": "Nerven Grid announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in a high-growth sector suggests significant long-term competitive advantages.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Holtar Stores warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region pose a direct threat to operational efficiency and revenue.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy launches next-generation wireless connectivity platform"
+      "headline": "Plevik Energy launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform indicates product innovation that could drive future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:38.009Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

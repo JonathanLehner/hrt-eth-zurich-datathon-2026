@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Xovep Stores begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $50M contract with a top-tier research institute"
+      "headline": "Jorval Trading Co secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive revenue boost with high visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co warns of supply chain disruptions affecting North America operations"
+      "headline": "Jorval Trading Co warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions indicates immediate operational headwinds and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Crevol Retail Group completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance capabilities, though the immediate financial impact is neutral until integration occurs.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $120M contract with a major logistics provider"
+      "headline": "Holtar Stores secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $120M contract win is a significant positive development that directly improves revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Crevol Retail Group files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that does not guarantee immediate financial gain.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:59.049Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

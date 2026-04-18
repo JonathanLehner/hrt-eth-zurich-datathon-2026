@@ -62,42 +62,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics announces $3.8B share buyback program"
+      "headline": "Grevel Diagnostics announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A $3.8B share buyback program directly increases earnings per share and signals management confidence in the company's valuation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports rising costs pressuring margins in process automation"
+      "headline": "Zelvon Biosciences reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs in process automation indicate a direct negative pressure on profit margins that is likely to persist until addressed.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Plevyl Advisors recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate operational disruption and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors signs multi-year partnership with a top-tier research institute"
+      "headline": "Plevyl Advisors signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a top-tier research institute provides long-term strategic value and potential for future innovation.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports 5% decline in operating income"
+      "headline": "Zelvon Biosciences reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income is a clear negative indicator of financial performance that typically impacts investor sentiment immediately.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports unexpected decline in Middle East revenue"
+      "headline": "Nerval Biopharma reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in regional revenue suggests a localized demand issue that may signal broader weakness in that market.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:55.520Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

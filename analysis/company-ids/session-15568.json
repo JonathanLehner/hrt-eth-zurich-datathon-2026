@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group misses quarterly revenue estimates by 20%"
+      "headline": "Crevol Retail Group misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a significant negative indicator of current operational performance and demand.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Calvos Genomics announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans indicate long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group publishes annual sustainability report"
+      "headline": "Crevol Retail Group publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Sustainability reports are standard corporate disclosures that rarely impact financial performance directly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma misses quarterly revenue estimates by 3%"
+      "headline": "Nerval Biopharma misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "A 3% revenue miss is a minor negative deviation that suggests slight underperformance against expectations.",
+        "longTerm": -1,
+        "shortTerm": -3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals to present at Corporate Strategy Symposium"
+      "headline": "Yorvov Pharmaceuticals to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a routine corporate activity with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports unexpected decline in Southeast Asia revenue"
+      "headline": "Calvos Genomics reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals potential structural or competitive issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group signs multi-year partnership with a multinational manufacturer"
+      "headline": "Crevol Retail Group signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides revenue visibility and potential operational efficiencies over the long term.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:22.818Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

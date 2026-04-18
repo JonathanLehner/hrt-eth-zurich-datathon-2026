@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks names new head of process automation division"
+      "headline": "Jovor Networks names new head of process automation division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Xelvol Biotech recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates operational failure and potential revenue loss, creating immediate negative sentiment and long-term brand/cost risks.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma opens new office in Asia Pacific"
+      "headline": "Nerval Biopharma opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a strategic growth move that typically requires time to generate meaningful revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks misses quarterly revenue estimates by 25%"
+      "headline": "Jovor Networks misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss is a strong negative indicator of current business health and market demand.",
+        "longTerm": -5,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 7% margin improvement in latest quarter"
+      "headline": "Xelvol Biotech sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement directly signals increased operational efficiency and higher profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech names new head of cloud infrastructure division"
+      "headline": "Xelvol Biotech names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head for cloud infrastructure is a routine leadership change with low immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:25.661Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks faces class action over digital payments service disruption"
+      "headline": "Halvax Networks faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and reputational risk that typically weighs on stock performance until resolved.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors wins industry award for excellence in precision manufacturing"
+      "headline": "Zrovov Advisors wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into immediate or sustained material financial gains.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $50M contract with a multinational manufacturer"
+      "headline": "Brevon Microchips secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost that will likely be recognized over the coming quarters.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region directly threaten operational efficiency and revenue realization for the affected segment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors sees 18% drop in new customer orders this quarter"
+      "headline": "Zrovov Advisors sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders is a strong negative indicator of future revenue growth and demand health.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks announces $0.8B share buyback program"
+      "headline": "Halvax Networks announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 5% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly enhances profitability and is a strong indicator of operational efficiency gains.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:13.805Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

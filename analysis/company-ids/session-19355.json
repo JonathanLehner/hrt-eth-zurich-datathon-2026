@@ -40,35 +40,96 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports unexpected decline in Middle East revenue"
+      "headline": "Zrovov Advisors reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional revenue stream directly impacts earnings expectations and investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors names new head of enterprise software division"
+      "headline": "Zrovov Advisors names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a key division introduce strategic uncertainty until the new executive's direction is clarified.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Halvix Holdings reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal that typically persists until operational efficiencies are realized.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $120M contract with a national infrastructure agency"
+      "headline": "Zrovov Advisors secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports unexpected decline in Asia Pacific revenue"
+      "headline": "Halvix Holdings reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "A decline in revenue from a major geographic market signals potential demand weakness that will likely weigh on future earnings reports.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:42.340Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software completes strategic acquisition to strengthen renewable storage"
+      "headline": "Relvan Software completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "The acquisition of a renewable storage firm provides a clear strategic expansion into a growth sector, though integration success remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 8% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a direct negative signal regarding near-term revenue growth and demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips faces regulatory review of data analytics practices"
+      "headline": "Brevon Microchips faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational uncertainty and potential legal or compliance costs that could weigh on the stock.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips faces class action over precision manufacturing service disruption"
+      "headline": "Brevon Microchips faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal risk and potential financial liability.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices wins industry award for excellence in data analytics"
+      "headline": "Volval Devices wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but generally have minimal direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:13.862Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

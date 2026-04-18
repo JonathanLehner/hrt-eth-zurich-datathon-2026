@@ -60,35 +60,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $120M contract with a global retailer"
+      "headline": "Calvos Genomics secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "The $120M contract provides a clear, immediate revenue boost and long-term operational stability for Calvos Genomics.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports rising costs pressuring margins in process automation"
+      "headline": "Wyrnik Sciences reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profit margins, creating a negative outlook for both immediate and sustained financial performance.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports strong demand in Latin America, raises outlook"
+      "headline": "Jorvix Diagnostics reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with an upward revision of guidance is a strong positive signal for near-term and medium-term growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Nolvav Commerce announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "Increased capital expenditure signals growth investment but creates immediate cash outflow pressure, with long-term benefits dependent on execution.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce files routine patent applications in data analytics"
+      "headline": "Nolvav Commerce files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations that provide negligible immediate financial impact or clear long-term valuation shifts.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:32.150Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

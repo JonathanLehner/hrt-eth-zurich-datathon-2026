@@ -66,56 +66,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals names new head of automated logistics division"
+      "headline": "Krevum Pharmaceuticals names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma delays product launch in data analytics segment"
+      "headline": "Nerval Biopharma delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential operational or development friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 18% decline in operating income"
+      "headline": "Calvis Sciences reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income is a significant negative indicator of core business profitability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences files routine patent applications in digital payments"
+      "headline": "Calvis Sciences files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate financial upside or material change.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma names new head of automated logistics division"
+      "headline": "Nerval Biopharma names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division are generally neutral events unless accompanied by strategic shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma launches next-generation wireless connectivity platform"
+      "headline": "Nerval Biopharma launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive development that can drive future revenue growth and market expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $75M contract with a multinational manufacturer"
+      "headline": "Relvos Biosciences secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue visibility and positive financial momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals delays product launch in precision manufacturing segment"
+      "headline": "Krevum Pharmaceuticals delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "A product launch delay creates immediate uncertainty regarding revenue targets and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:05.080Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

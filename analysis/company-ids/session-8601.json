@@ -53,49 +53,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Crevol Retail Group reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Crevol Retail Group Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the COO is a reactive measure that creates ambiguity regarding the severity of underlying issues.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group announces breakthrough in precision manufacturing"
+      "headline": "Crevol Retail Group announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in manufacturing suggests potential long-term efficiency gains or competitive advantages.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 12% decline in operating income"
+      "headline": "Crevol Retail Group reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a concrete negative financial result that will likely weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $120M contract with a top-tier research institute"
+      "headline": "Nolvav Commerce secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co announces $1.2B share buyback program"
+      "headline": "Jorval Trading Co announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program is a direct positive signal for shareholder value and capital allocation.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce opens new office in Southeast Asia"
+      "headline": "Nolvav Commerce opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Expanding into a new region indicates growth potential but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:22.076Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

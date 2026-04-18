@@ -38,28 +38,79 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports unexpected decline in Scandinavia revenue"
+      "headline": "Plevum Partners reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional revenue stream suggests potential underlying demand or operational issues in that market.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Zrovov Advisors reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 20% indicates strong market demand and successful execution of the current business strategy.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Plevum Partners Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The sudden departure of a key executive like the Chief Strategy Officer creates immediate leadership uncertainty and potential strategic drift.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors CFO steps down unexpectedly citing personal reasons"
+      "headline": "Zrovov Advisors CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected resignation of a CFO typically triggers market concern regarding financial oversight and internal stability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:19.603Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -60,35 +60,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Halvav Brands reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% indicates strong operational performance and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $75M contract with an international consortium"
+      "headline": "Pleven Trading Co secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost that will likely impact financial results over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co reports 15% increase in customer acquisition"
+      "headline": "Pleven Trading Co reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong leading indicator of future revenue growth and market share expansion.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce faces class action over enterprise software service disruption"
+      "headline": "Nolvav Commerce faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal risk and potential reputational damage that may persist.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace sees 12% margin improvement in latest quarter"
+      "headline": "Orevar Marketplace sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly enhances profitability and is a strong signal of operational efficiency gains.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:06.038Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

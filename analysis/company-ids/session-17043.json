@@ -53,49 +53,130 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks explores strategic alternatives for renewable storage unit"
+      "headline": "Jovor Networks explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential sale or restructuring, which typically creates positive speculative momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks schedules annual shareholder meeting for next month"
+      "headline": "Jovor Networks schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate governance event with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports strong demand in Central Europe, raises outlook"
+      "headline": "Kelvos Resources reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a direct positive indicator of financial performance and growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels signs multi-year partnership with a leading cloud platform"
+      "headline": "Relvon Fuels signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks delays product launch in supply chain optimization segment"
+      "headline": "Jovor Networks delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch negatively impacts revenue realization and suggests potential operational or technical hurdles.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 10% margin improvement in latest quarter"
+      "headline": "Kelvos Resources sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates enhanced operational efficiency and profitability, which is a strong fundamental positive.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks loses key contract in Southeast Asia to competitor"
+      "headline": "Jovor Networks loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly reduces future revenue and signals competitive weakness in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:17.013Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

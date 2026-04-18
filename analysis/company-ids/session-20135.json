@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Yorval Partners recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in precision manufacturing suggests immediate operational disruption and potential reputational damage that may persist.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Grevon Biotech reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% provides strong positive momentum for the company's financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $320M contract with a global retailer"
+      "headline": "Jorvyl Securities secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear and significant boost to future revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 20%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a substantial negative indicator of current business performance.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports 12% decline in operating income"
+      "headline": "Halven Investments reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income signals underlying margin pressure or inefficiency.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $650M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $650M contract win is a major positive development that significantly bolsters the company's long-term revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech loses key contract in Asia Pacific to competitor"
+      "headline": "Grevon Biotech loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a major region like Asia Pacific represents a direct loss of market share and revenue.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces significant capital expenditure plan for Middle East"
+      "headline": "Yorval Partners announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth ambitions but implies near-term cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:12.102Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

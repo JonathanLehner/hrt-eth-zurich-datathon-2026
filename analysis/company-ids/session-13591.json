@@ -66,56 +66,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners recalls products in process automation line due to quality concerns"
+      "headline": "Yorval Partners recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company manages the logistics of the recall.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings enters joint venture with a top-tier research institute"
+      "headline": "Halvix Holdings enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a top-tier research institute suggests long-term R&D benefits, though the immediate financial impact is likely minimal.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital beats analyst expectations with strong earnings growth"
+      "headline": "Zelvel Capital beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a clear, positive signal of financial health that typically drives immediate investor confidence.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Zelvel Capital begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and generally neutral for long-term financial performance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 12% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a direct negative indicator of demand that will likely impact revenue growth throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing to present at Global Innovation Summit"
+      "headline": "Dralol Computing to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a standard corporate event that rarely results in immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners files for regulatory approval of new process automation offering"
+      "headline": "Yorval Partners files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for future growth, but the outcome and timing remain uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital board meeting to discuss major strategic initiative"
+      "headline": "Zelvel Capital board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a strategic initiative is speculative in nature until the specific details and financial implications are disclosed.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:32.496Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

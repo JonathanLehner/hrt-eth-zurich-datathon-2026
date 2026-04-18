@@ -56,56 +56,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $500M contract with a multinational manufacturer"
+      "headline": "Frelis Genomics secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "The $500M contract provides a clear, significant revenue boost that will positively impact the company's financial performance over the next 100 days.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma completes planned facility upgrade in Scandinavia"
+      "headline": "Nerval Biopharma completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that likely has already been priced in and offers limited immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners faces class action over cloud infrastructure service disruption"
+      "headline": "Plevum Partners faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners names new head of renewable storage division"
+      "headline": "Plevum Partners names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact until strategic shifts are announced.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports strong demand in Scandinavia, raises outlook"
+      "headline": "Nerval Biopharma reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a direct positive signal for future earnings and market confidence.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics warns of supply chain disruptions affecting North America operations"
+      "headline": "Frelis Genomics warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a major market represent a clear operational headwind that will likely compress margins and revenue.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees 5% margin improvement in latest quarter"
+      "headline": "Plevum Partners sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement is a concrete indicator of increased profitability and operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $120M contract with a leading cloud platform"
+      "headline": "Frelis Genomics secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a solid, verifiable revenue stream that strengthens the company's financial position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:02.256Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

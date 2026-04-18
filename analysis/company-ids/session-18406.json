@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Zelval Energy warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands sees 5% margin improvement in latest quarter"
+      "headline": "Joval Brands sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates successful cost management or pricing power that typically sustains over the medium term.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Varvov Retail Group recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls cause immediate reputational damage and direct costs, with lingering uncertainty regarding the scope of the quality issue.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Arnos Marketplace warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in the Middle East present a clear negative operational impact with potential for near-term earnings pressure.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group signs multi-year partnership with a leading cloud platform"
+      "headline": "Varvov Retail Group signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year cloud partnership suggests long-term operational efficiency gains rather than immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $650M contract with a national infrastructure agency"
+      "headline": "Varvov Retail Group secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $650M contract provides significant, concrete revenue visibility for the company over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $120M contract with a multinational manufacturer"
+      "headline": "Joval Brands secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract is a clear positive catalyst for revenue growth and market confidence.",
+        "longTerm": 5,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Zelval Energy reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators for both immediate and future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:07.778Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

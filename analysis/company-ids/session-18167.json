@@ -46,21 +46,62 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries revises long-term strategy with focus on automated logistics"
+      "headline": "Zrovex Industries revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automated logistics indicates a long-term operational shift but lacks immediate financial impact or specific implementation details.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace faces regulatory review of wireless connectivity practices"
+      "headline": "Orevar Marketplace faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential downside risk for business practices, often leading to prolonged legal or operational scrutiny.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports strong demand in Europe, raises outlook"
+      "headline": "Joval Brands reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook provide clear, positive financial signals that typically drive immediate investor confidence and sustained performance expectations.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:58.189Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands delays product launch in enterprise software segment"
+      "headline": "Halvav Brands delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment typically signals operational friction and deferred revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy recalls products in data analytics line due to quality concerns"
+      "headline": "Zelval Energy recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate reputational damage and direct costs, with potential for lingering customer trust issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Halvav Brands warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region suggest potential margin compression and volume constraints for the company.",
+        "longTerm": -3,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Zelval Energy reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% is a strong indicator of market demand and successful execution.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace announces $4.1B share buyback program"
+      "headline": "Orevar Marketplace announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands files routine patent applications in digital payments"
+      "headline": "Halvav Brands files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and generally do not provide immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group wins industry award for excellence in supply chain optimization"
+      "headline": "Crevol Retail Group wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into direct, measurable financial gains in the short term.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports 20% decline in operating income"
+      "headline": "Zelval Energy reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a significant negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:07.923Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

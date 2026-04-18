@@ -52,42 +52,113 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors opens new office in Europe"
+      "headline": "Plevyl Advisors opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market represents a strategic growth initiative that typically signals long-term revenue potential.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments enters joint venture with an international consortium"
+      "headline": "Halven Investments enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "A joint venture with an international consortium suggests collaborative growth and resource sharing, though the specific financial impact remains vague.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments files routine patent applications in digital payments"
+      "headline": "Halven Investments files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operational activities that rarely provide immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces $8.4B share buyback program"
+      "headline": "Zrovov Advisors announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "A large-scale share buyback program directly increases earnings per share and signals management confidence, providing a clear positive financial signal.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 20% drop in new customer orders this quarter"
+      "headline": "Plevyl Advisors sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant decline in new customer orders is a direct negative indicator of near-term revenue performance and demand health.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Plevyl Advisors begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational necessity that is expected and typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:16.646Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

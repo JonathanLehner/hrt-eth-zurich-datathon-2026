@@ -53,49 +53,130 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips CFO addresses investor concerns in open letter"
+      "headline": "Ulvyn Microchips CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO addressing investor concerns is typically a reactive measure that creates uncertainty regarding the underlying financial health of the company.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices secures $500M contract with a national infrastructure agency"
+      "headline": "Nolvis Devices secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides clear, high-value revenue visibility and positive sentiment for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Nolvis Devices reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 5% is a positive indicator of operational success and market demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen digital payments"
+      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "A strategic acquisition to strengthen digital payments capabilities suggests a positive long-term growth initiative.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports strong demand in North America, raises outlook"
+      "headline": "Ulvyn Microchips reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct, positive signals for both immediate and future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 5% margin improvement in latest quarter"
+      "headline": "Ulvyn Microchips sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates better operational efficiency and profitability, which is a strong positive for the bottom line.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 12% drop in new customer orders this quarter"
+      "headline": "Halvax Networks sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a significant negative indicator of weakening demand and future revenue potential.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:03.127Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

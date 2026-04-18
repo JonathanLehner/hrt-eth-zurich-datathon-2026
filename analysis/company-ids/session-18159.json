@@ -51,42 +51,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 10% increase in customer acquisition"
+      "headline": "Calvis Sciences reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition directly signals revenue growth potential and improved market penetration.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Calvis Sciences completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance manufacturing capabilities, which typically provides long-term operational efficiency gains.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences misses quarterly revenue estimates by 18%"
+      "headline": "Calvis Sciences misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current business performance and market demand.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Calvis Sciences completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "This is a duplicate report of the strategic acquisition, reinforcing the company's focus on manufacturing expansion.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics withdraws from North America market citing unfavorable conditions"
+      "headline": "Frelis Genomics withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market like North America indicates a significant contraction in the company's operational footprint and revenue base.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals sees 12% drop in new customer orders this quarter"
+      "headline": "Krevum Pharmaceuticals sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a clear leading indicator of slowing future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:58.915Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Dralol Computing warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group begins scheduled maintenance of automated logistics systems"
+      "headline": "Varvov Retail Group begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is typically priced in and has minimal financial impact.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices CTO steps down unexpectedly citing personal reasons"
+      "headline": "Nolvis Devices CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership uncertainty and potential strategic instability.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $800M contract with a top-tier research institute"
+      "headline": "Dralol Computing secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a clear, significant boost to future revenue visibility and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices names new head of process automation division"
+      "headline": "Nolvis Devices names new head of process automation division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard management update that provides stability but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Yorven Labs warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain warnings in a major region like Asia Pacific signal potential production or delivery bottlenecks.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group signs multi-year partnership with a multinational manufacturer"
+      "headline": "Varvov Retail Group signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term revenue stability and improved operational efficiency for the retail group.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Nolvis Devices completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquiring a company to optimize the supply chain is a strategic move that should yield efficiency gains over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:49.487Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

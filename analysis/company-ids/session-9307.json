@@ -54,49 +54,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports unexpected decline in North America revenue"
+      "headline": "Plevyl Advisors reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a core revenue region indicates immediate operational weakness and potential structural issues.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid faces regulatory review of digital payments practices"
+      "headline": "Nerven Grid faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny creates significant overhang and potential legal or operational costs that are difficult to quantify.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors misses quarterly revenue estimates by 10%"
+      "headline": "Plevyl Advisors misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss is a material negative event that directly impacts valuation and investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $180M contract with an international consortium"
+      "headline": "Halvix Holdings secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides a clear, quantifiable boost to revenue and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $120M contract with an international consortium"
+      "headline": "Halvix Holdings secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $120M contract win is a positive development that reinforces the company's growth trajectory.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid delays product launch in data analytics segment"
+      "headline": "Nerven Grid delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch suggests internal execution challenges and pushes back expected revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors to host investor day focused on wireless connectivity strategy"
+      "headline": "Plevyl Advisors to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that aims to provide clarity but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:48.212Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

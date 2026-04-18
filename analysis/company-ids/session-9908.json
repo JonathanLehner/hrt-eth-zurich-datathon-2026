@@ -66,56 +66,147 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets names new head of cloud infrastructure division"
+      "headline": "Frelex Outlets names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets announces $1.2B share buyback program"
+      "headline": "Ixenis Outlets announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program directly increases earnings per share and signals management confidence in capital allocation.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces class action over data analytics service disruption"
+      "headline": "Relvon Fuels faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces potential financial liability and reputational risk that may persist over the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets files routine patent applications in renewable storage"
+      "headline": "Ixenis Outlets files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or guaranteed financial upside.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $75M contract with a top-tier research institute"
+      "headline": "Frelex Outlets secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue stream that positively impacts the company's financial outlook.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports 20% increase in customer acquisition"
+      "headline": "Ixenis Outlets reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong indicator of growth and improved future revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces regulatory review of precision manufacturing practices"
+      "headline": "Relvon Fuels faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review creates uncertainty regarding operational compliance and potential future costs or restrictions.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace misses quarterly revenue estimates by 25%"
+      "headline": "Orevar Marketplace misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 25% is a significant negative indicator of current business performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:09.896Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks loses key contract in Europe to competitor"
+      "headline": "Jovor Networks loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share in the European region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees 12% drop in new customer orders this quarter"
+      "headline": "Jorval Trading Co sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders indicates a significant decline in immediate demand and growth momentum.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co faces regulatory review of automated logistics practices"
+      "headline": "Jorval Trading Co faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create operational uncertainty and potential for future fines or forced changes to business practices.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $400M contract with an international consortium"
+      "headline": "Brevon Microchips secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, substantial boost to revenue and long-term backlog.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $50M contract with a national infrastructure agency"
+      "headline": "Talvep Computing secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $50M contract with a national agency provides stable, high-quality revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing faces class action over digital payments service disruption"
+      "headline": "Talvep Computing faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability related to service reliability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing signs multi-year partnership with a multinational manufacturer"
+      "headline": "Talvep Computing signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term revenue visibility and strategic growth opportunities.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:02.961Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

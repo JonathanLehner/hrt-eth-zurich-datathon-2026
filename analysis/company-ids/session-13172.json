@@ -48,28 +48,79 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $400M contract with a top-tier research institute"
+      "headline": "Yorven Labs secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $400M contract provides a clear, significant, and immediate revenue boost for Yorven Labs.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems signs multi-year partnership with a top-tier research institute"
+      "headline": "Brevep Systems signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests stable long-term revenue growth, though the immediate financial impact is less defined than a specific contract value.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems faces class action over digital payments service disruption"
+      "headline": "Brevep Systems faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and reputational risk that typically weighs on sentiment over the medium term.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing opens new office in Latin America"
+      "headline": "Dralol Computing opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion, which is a positive growth signal but lacks immediate material financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:20.398Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

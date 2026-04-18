@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 7% increase in customer acquisition"
+      "headline": "Nerval Biopharma reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition indicates positive growth momentum that should translate into immediate and sustained revenue benefits.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Nerval Biopharma revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward cloud infrastructure are directional but lack immediate financial quantification, leading to high long-term uncertainty.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences misses quarterly revenue estimates by 10%"
+      "headline": "Calvis Sciences misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 10% is a clear negative signal that typically triggers immediate downward pressure on stock valuation.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences files routine patent applications in cloud infrastructure"
+      "headline": "Calvis Sciences files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that rarely provide immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences expands operations into Middle East markets"
+      "headline": "Calvis Sciences expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a growth opportunity, though the financial payoff is often delayed and subject to execution risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen renewable storage"
+      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions provide clear inorganic growth potential, though the long-term value depends on successful integration.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences completes planned facility upgrade in Central Europe"
+      "headline": "Calvis Sciences completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that likely has already been priced in by the market.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees 12% margin improvement in latest quarter"
+      "headline": "Nerval Biopharma sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly enhances profitability and is a strong indicator of operational efficiency gains.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:49.565Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

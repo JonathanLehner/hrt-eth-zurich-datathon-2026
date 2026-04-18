@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Arnik Commerce begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid begins scheduled maintenance of enterprise software systems"
+      "headline": "Urvel Grid begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Routine software maintenance is a standard operational procedure with no expected material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid to host investor day focused on precision manufacturing strategy"
+      "headline": "Urvel Grid to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that generally do not cause immediate material financial shifts unless specific guidance is provided.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce sees 8% drop in new customer orders this quarter"
+      "headline": "Arnik Commerce sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a direct negative indicator of near-term revenue growth and demand.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $180M contract with a top-tier research institute"
+      "headline": "Ulvon Renewables secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a clear, positive, and durable revenue stream for the company.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports unexpected decline in Europe revenue"
+      "headline": "Orevex Renewables reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a major region is a significant negative signal for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables board meeting to discuss major strategic initiative"
+      "headline": "Orevex Renewables board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss strategic initiatives is speculative and lacks sufficient detail to determine a financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:56.510Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

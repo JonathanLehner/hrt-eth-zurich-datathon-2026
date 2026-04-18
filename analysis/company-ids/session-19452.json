@@ -52,42 +52,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources reports 15% increase in customer acquisition"
+      "headline": "Nolvol Resources reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a direct positive indicator of growth and revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources files for regulatory approval of new enterprise software offering"
+      "headline": "Nolvol Resources files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that signals future product expansion but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power explores strategic alternatives for wireless connectivity unit"
+      "headline": "Plevep Power explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often implies a potential divestiture or sale, which creates significant uncertainty regarding the unit's future.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces significant capital expenditure plan for Scandinavia"
+      "headline": "Plevep Power announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term investment in growth but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries revises long-term strategy with focus on wireless connectivity"
+      "headline": "Zrovex Industries revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "Revising strategy is a qualitative shift that lacks immediate financial quantification, leading to high uncertainty about execution.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources to host investor day focused on digital payments strategy"
+      "headline": "Nolvol Resources to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a standard corporate communication event that typically has minimal direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:46.063Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

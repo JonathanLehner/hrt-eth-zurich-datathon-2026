@@ -54,49 +54,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments confirms participation in Tech Leadership Conference"
+      "headline": "Krevan Investments confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference is a standard corporate activity that typically lacks material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports 3% increase in customer acquisition"
+      "headline": "Frelis Genomics reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive operational metric that suggests steady growth.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals faces regulatory review of wireless connectivity practices"
+      "headline": "Yorvov Pharmaceuticals faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create potential legal and operational headwinds that can weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics loses key contract in Europe to competitor"
+      "headline": "Frelis Genomics loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $320M contract with a multinational manufacturer"
+      "headline": "Frelis Genomics secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, significant boost to future revenue and company valuation.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $800M contract with a national infrastructure agency"
+      "headline": "Yorvov Pharmaceuticals secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial win that significantly improves the company's long-term revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals recalls products in renewable storage line due to quality concerns"
+      "headline": "Yorvov Pharmaceuticals recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control failures that lead to immediate costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:03.870Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

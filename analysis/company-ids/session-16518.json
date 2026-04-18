@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital opens new office in Latin America"
+      "headline": "Zelvel Capital opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market represents a strategic growth initiative that typically signals long-term investment rather than immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 3% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator of demand that will likely weigh on financial performance in the near term.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees mixed results in supply chain optimization pilot program"
+      "headline": "Talvix Holdings sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the effectiveness and scalability of the supply chain optimization efforts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital misses quarterly revenue estimates by 12%"
+      "headline": "Zelvel Capital misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin of 12% is a clear negative signal that typically triggers an immediate downward market reaction.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Plevum Partners reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins indicate a structural headwind that will likely persist and negatively impact profitability over the coming months.",
+        "longTerm": -6,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:57.908Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

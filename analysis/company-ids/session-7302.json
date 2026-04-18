@@ -48,28 +48,79 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports 15% decline in operating income"
+      "headline": "Frelex Outlets reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports unexpected decline in Scandinavia revenue"
+      "headline": "Arnik Commerce reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region suggests localized demand issues or competitive pressure.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $400M contract with an international consortium"
+      "headline": "Arnik Commerce secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, significant boost to future revenue and backlog.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software in talks for potential merger, details undisclosed"
+      "headline": "Relvan Software in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "The mention of potential merger talks without disclosed details creates significant speculation and market volatility.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:33.173Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

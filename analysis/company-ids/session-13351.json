@@ -46,21 +46,62 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports strong demand in Latin America, raises outlook"
+      "headline": "Urvel Grid reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co warns of supply chain disruptions affecting North America operations"
+      "headline": "Pleven Trading Co warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions represent a direct operational headwind that will likely impact near-term revenue and potentially persist through the quarter.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands names new head of precision manufacturing division"
+      "headline": "Joval Brands names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with neutral immediate financial impact and high uncertainty regarding future strategic execution.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:21.682Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries names new head of wireless connectivity division"
+      "headline": "Strynal Industries names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries misses quarterly revenue estimates by 18%"
+      "headline": "Strynal Industries misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current operational performance and market demand.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables recalls products in process automation line due to quality concerns"
+      "headline": "Ulvon Renewables recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall introduces immediate costs and potential reputational damage that may persist over the coming months.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power sees 18% margin improvement in latest quarter"
+      "headline": "Kelvik Power sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement indicates strong operational efficiency and positive bottom-line growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group misses quarterly revenue estimates by 18%"
+      "headline": "Jovik Asset Group misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss signals underlying weakness in the business model or market conditions for the asset group.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables begins scheduled maintenance of digital payments systems"
+      "headline": "Ulvon Renewables begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group explores strategic alternatives for data analytics unit"
+      "headline": "Jovik Asset Group explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives creates potential for future value realization but remains highly speculative at this stage.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables loses key contract in Latin America to competitor"
+      "headline": "Ulvon Renewables loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts future revenue streams and signals competitive disadvantage.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:20.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

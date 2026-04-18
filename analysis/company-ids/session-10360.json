@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores raises full-year guidance citing robust demand"
+      "headline": "Holtar Stores raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a direct positive signal for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Holtar Stores recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational costs and potential reputational damage that may persist.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces breakthrough in process automation"
+      "headline": "Ervan Capital announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential long-term efficiency gains but lacks immediate financial quantification.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $650M contract with a multinational manufacturer"
+      "headline": "Jovik Asset Group secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital misses quarterly revenue estimates by 15%"
+      "headline": "Ervan Capital misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss is a significant negative indicator of current operational performance.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $250M contract with a major logistics provider"
+      "headline": "Ervan Capital secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $250M contract win provides a solid, quantifiable boost to the company's revenue pipeline.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group faces class action over digital payments service disruption"
+      "headline": "Holtum Asset Group faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal and financial uncertainty that typically weighs on sentiment.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $800M contract with a national infrastructure agency"
+      "headline": "Ervan Capital secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "An $800M contract with a national agency is a major, high-impact win that significantly improves revenue outlook.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:27.263Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

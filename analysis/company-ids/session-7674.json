@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 3% increase in customer acquisition"
+      "headline": "Arnik Commerce reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition indicates modest growth momentum for Arnik Commerce.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce sees 8% margin improvement in latest quarter"
+      "headline": "Arnik Commerce sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly enhances profitability and is a strong positive signal for financial health.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software sees 12% drop in new customer orders this quarter"
+      "headline": "Relvan Software sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders signals a significant decline in demand for Relvan Software.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Brevon Microchips reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% demonstrates strong market position and execution for Brevon Microchips.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing enters joint venture with an international consortium"
+      "headline": "Dralol Computing enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests potential for future expansion but lacks immediate financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 15% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a sharp negative indicator for Brevon Microchips' near-term revenue outlook.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce wins industry award for excellence in enterprise software"
+      "headline": "Arnik Commerce wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides reputational value but has limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $250M contract with a leading cloud platform"
+      "headline": "Dralol Computing secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, high-value revenue visibility for Dralol Computing.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:47.474Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

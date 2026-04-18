@@ -65,56 +65,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial delays product launch in automated logistics segment"
+      "headline": "Ilval Financial delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a growth segment signals operational friction and potential revenue deferral.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co names new head of supply chain optimization division"
+      "headline": "Pleven Trading Co names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "A leadership change in a specific division is a standard operational update with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports 20% decline in operating income"
+      "headline": "Ilval Financial reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $320M contract with an international consortium"
+      "headline": "Varvov Retail Group secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, quantifiable revenue visibility and positive financial momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group launches next-generation wireless connectivity platform"
+      "headline": "Varvov Retail Group launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform suggests potential for market expansion and future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group to host investor day focused on cloud infrastructure strategy"
+      "headline": "Varvov Retail Group to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but no immediate financial change.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $650M contract with a global retailer"
+      "headline": "Nolvav Commerce secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $650M contract is a significant positive development that will materially impact the company's financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group wins industry award for excellence in data analytics"
+      "headline": "Varvov Retail Group wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards are positive for brand reputation but generally have negligible direct impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:54.885Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics misses quarterly revenue estimates by 8%"
+      "headline": "Zelvix Therapeutics misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% indicates a clear negative performance gap that typically triggers immediate downward price pressure.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics signs multi-year partnership with a major logistics provider"
+      "headline": "Calvos Genomics signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and operational efficiency, though the immediate financial impact is often modest.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports unexpected decline in Central Europe revenue"
+      "headline": "Calvos Genomics reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected regional revenue decline signals potential structural or competitive issues that may persist beyond the initial reporting period.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics announces $2.5B share buyback program"
+      "headline": "Zelvix Therapeutics announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of management confidence and provides immediate support to earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $120M contract with a major logistics provider"
+      "headline": "Zelvix Therapeutics secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a concrete, quantifiable boost to future revenue streams with high certainty.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees 20% drop in new customer orders this quarter"
+      "headline": "Nerval Biopharma sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a significant leading indicator of future revenue weakness and suggests a sharp deterioration in demand.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:06.394Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

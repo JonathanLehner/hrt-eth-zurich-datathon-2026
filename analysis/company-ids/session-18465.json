@@ -50,35 +50,96 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences signs multi-year partnership with a multinational manufacturer"
+      "headline": "Zelvon Biosciences signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for Zelvon Biosciences.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $50M contract with an international consortium"
+      "headline": "Calvis Sciences secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a specific $50M contract provides an immediate and quantifiable boost to Calvis Sciences' revenue outlook.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences announces significant capital expenditure plan for Scandinavia"
+      "headline": "Calvis Sciences announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment but will likely weigh on short-term cash flow and margins.",
+        "longTerm": 5,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid warns of supply chain disruptions affecting North America operations"
+      "headline": "Nerven Grid warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions represent a direct operational headwind that will negatively impact near-term output and financial performance.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid sees 5% margin improvement in latest quarter"
+      "headline": "Nerven Grid sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement is a strong indicator of operational efficiency gains that directly benefit the bottom line.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:09.220Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

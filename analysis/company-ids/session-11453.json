@@ -36,21 +36,62 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software CFO addresses investor concerns in open letter"
+      "headline": "Relvan Software CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO addressing investor concerns is a reactive measure that typically signals underlying instability or market skepticism, creating short-term volatility.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group recalls products in process automation line due to quality concerns"
+      "headline": "Jovik Asset Group recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall directly impacts revenue, incurs immediate costs, and damages brand reputation, leading to a clear negative short-term and potentially lingering long-term effect.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group files routine patent applications in wireless connectivity"
+      "headline": "Jovik Asset Group files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operational activities that do not provide immediate financial impact or clear competitive advantage within a 100-day window.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:05.800Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

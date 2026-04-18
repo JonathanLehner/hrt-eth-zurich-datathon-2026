@@ -60,35 +60,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech begins scheduled maintenance of digital payments systems"
+      "headline": "Xelvol Biotech begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences completes strategic acquisition to strengthen digital payments"
+      "headline": "Wyrnik Sciences completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Acquisitions provide a clear strategic expansion, though the immediate financial benefit is often offset by integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $50M contract with a leading cloud platform"
+      "headline": "Ilval Financial secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a direct, quantifiable boost to revenue and market confidence.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports unexpected decline in Europe revenue"
+      "headline": "Myrnon Therapeutics reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a negative indicator that typically triggers immediate downward pressure on stock valuation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial signs multi-year partnership with a national infrastructure agency"
+      "headline": "Ilval Financial signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and stability, though the immediate impact is often smaller than the long-term benefit.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:20.850Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

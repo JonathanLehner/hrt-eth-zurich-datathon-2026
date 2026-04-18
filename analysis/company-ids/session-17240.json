@@ -54,49 +54,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems completes planned facility upgrade in Asia Pacific"
+      "headline": "Prynis Systems completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "The completion of a facility upgrade is a routine operational milestone that likely improves efficiency but lacks immediate transformative financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems explores strategic alternatives for automated logistics unit"
+      "headline": "Prynis Systems explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit introduces significant uncertainty regarding the future structure and potential divestiture of the asset.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Volval Devices reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% provides clear, positive evidence of strong market demand and financial performance.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces major organizational restructuring"
+      "headline": "Prynis Systems announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals internal disruption and potential short-term costs, creating uncertainty about future operational efficiency.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods wins industry award for excellence in renewable storage"
+      "headline": "Xovol Goods wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "An industry award serves as positive brand validation but typically has a negligible direct impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports 15% decline in operating income"
+      "headline": "Xovol Goods reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a clear negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices revises long-term strategy with focus on precision manufacturing"
+      "headline": "Volval Devices revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Revising long-term strategy indicates a shift in focus, but the lack of specific details makes the financial outcome highly speculative.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "guidance",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:24.709Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

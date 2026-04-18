@@ -65,56 +65,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 5% margin improvement in latest quarter"
+      "headline": "Jorvis Fuels sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates operational efficiency gains that directly boost profitability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources misses quarterly revenue estimates by 10%"
+      "headline": "Kelvos Resources misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss is a significant negative indicator of demand or execution issues.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid confirms participation in Global Innovation Summit"
+      "headline": "Nerven Grid confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a networking event with no clear direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid delays product launch in supply chain optimization segment"
+      "headline": "Nerven Grid delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and signals potential operational friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $75M contract with a leading cloud platform"
+      "headline": "Ulvyn Microchips secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost with a major client.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources announces $1.2B share buyback program"
+      "headline": "Kelvos Resources announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program signals management confidence and provides immediate support to share price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $180M contract with an international consortium"
+      "headline": "Nerven Grid secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $180M contract win is a substantial positive development for long-term revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid sees 18% margin improvement in latest quarter"
+      "headline": "Nerven Grid sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement is a strong indicator of improved profitability and operational leverage.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:45.586Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

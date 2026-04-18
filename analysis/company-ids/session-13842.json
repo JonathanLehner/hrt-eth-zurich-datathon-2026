@@ -53,49 +53,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies completes planned facility upgrade in Southeast Asia"
+      "headline": "Myrnep Technologies completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power enters joint venture with a multinational manufacturer"
+      "headline": "Kelvik Power enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a multinational manufacturer suggests potential for growth and market expansion.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $250M contract with an international consortium"
+      "headline": "Prynis Systems secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, immediate, and long-term revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power to host investor day focused on cloud infrastructure strategy"
+      "headline": "Kelvik Power to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a standard corporate communication event that rarely triggers significant immediate market movement.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems recalls products in data analytics line due to quality concerns"
+      "headline": "Prynis Systems recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event that creates immediate financial and reputational risk.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power loses key contract in Southeast Asia to competitor"
+      "headline": "Kelvik Power loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts revenue and market share in the specified region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Kelvik Power warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "A warning regarding supply chain disruptions indicates potential near-term operational headwinds and margin pressure.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:41.102Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

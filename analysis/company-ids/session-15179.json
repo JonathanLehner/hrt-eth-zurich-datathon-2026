@@ -42,42 +42,113 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs delays product launch in process automation segment"
+      "headline": "Crevex Labs delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment typically signals operational friction and immediate revenue deferral.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks revises long-term strategy with focus on data analytics"
+      "headline": "Halvax Networks revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "Strategic pivots are often vague and lack immediate financial quantification, leading to market caution.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks secures $180M contract with a major logistics provider"
+      "headline": "Halvax Networks secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, immediate, and durable revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $75M contract with a leading cloud platform"
+      "headline": "Crevex Labs secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A significant contract win with a major cloud provider serves as a strong positive catalyst for revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks wins industry award for excellence in process automation"
+      "headline": "Halvax Networks wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive sentiment but lack direct, quantifiable financial impact on the bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports 10% increase in customer acquisition"
+      "headline": "Crevex Labs reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A double-digit increase in customer acquisition is a direct indicator of improved growth momentum.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:49.810Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

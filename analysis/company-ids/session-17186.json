@@ -62,42 +62,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Brevon Microchips completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to improve supply chain efficiency, which typically provides long-term operational benefits rather than immediate financial gains.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports unexpected decline in Latin America revenue"
+      "headline": "Ulvyn Microchips reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a negative signal that typically triggers immediate market concern regarding growth sustainability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences opens new office in North America"
+      "headline": "Zelvon Biosciences opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard expansion activity that generally has a neutral to slightly positive impact on long-term growth prospects.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $75M contract with a global retailer"
+      "headline": "Brevep Systems secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract provides clear, immediate revenue visibility and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Zelvon Biosciences Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CSO is a reactive measure to address investor sentiment, which creates uncertainty about the underlying issues being addressed.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips CTO addresses investor concerns in open letter"
+      "headline": "Ulvyn Microchips CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "The CTO addressing investor concerns suggests ongoing internal or technical challenges that may persist, leading to continued market caution.",
+        "longTerm": -2,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:22.580Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

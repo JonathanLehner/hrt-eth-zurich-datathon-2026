@@ -60,35 +60,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy withdraws from Scandinavia market citing unfavorable conditions"
+      "headline": "Zelval Energy withdraws from Scandinavia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a market indicates a contraction in revenue potential and suggests underlying operational or competitive challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors announces $6.3B share buyback program"
+      "headline": "Plevyl Advisors announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Jovik Asset Group warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization in a specific geographic segment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments launches next-generation data analytics platform"
+      "headline": "Halven Investments launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive growth indicator that may drive future revenue, though adoption rates remain to be seen.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Halven Investments completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Acquisitions are strategic moves intended to enhance capabilities, though the immediate impact is often neutral until integration progress is clear.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:33.484Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

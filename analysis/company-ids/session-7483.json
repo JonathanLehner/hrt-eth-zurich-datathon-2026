@@ -38,28 +38,79 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $400M contract with a multinational manufacturer"
+      "headline": "Plevik Energy secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and long-term growth potential for Plevik Energy.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Kelvos Resources begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy names new head of process automation division"
+      "headline": "Plevik Energy names new head of process automation division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with unclear immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Kelvos Resources reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 15% indicates strong market demand and positive momentum for Kelvos Resources.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:39.126Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

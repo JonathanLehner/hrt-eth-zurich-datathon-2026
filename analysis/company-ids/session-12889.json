@@ -64,49 +64,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources faces regulatory review of precision manufacturing practices"
+      "headline": "Nolvol Resources faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce operational uncertainty and potential compliance costs that weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports strong demand in Central Europe, raises outlook"
+      "headline": "Plevik Energy reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and a raised outlook provide a clear positive signal for both immediate and sustained financial performance.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $120M contract with a national infrastructure agency"
+      "headline": "Zelval Energy secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and long-term operational stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports 3% increase in customer acquisition"
+      "headline": "Plevep Power reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A modest 3% increase in customer acquisition is a positive growth indicator but lacks significant scale to move the needle dramatically.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Plevik Energy reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth confirms operational success, though a 3% year-over-year increase is relatively modest in magnitude.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy announces $1.2B share buyback program"
+      "headline": "Plevik Energy announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides direct support to earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $320M contract with a global retailer"
+      "headline": "Nolvol Resources secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A significant $320M contract win provides a substantial and durable boost to the company's revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:05.263Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

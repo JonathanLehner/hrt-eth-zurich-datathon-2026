@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $75M contract with a multinational manufacturer"
+      "headline": "Zrovov Advisors secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, immediate revenue boost and long-term operational validation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial sees 3% margin improvement in latest quarter"
+      "headline": "Wrelal Financial sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates enhanced operational efficiency that typically sustains profitability over the coming months.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files routine patent applications in digital payments"
+      "headline": "Zrovov Advisors files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors to present at Emerging Markets Forum"
+      "headline": "Plevyl Advisors to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity that rarely moves financial metrics significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors announces significant capital expenditure plan for North America"
+      "headline": "Plevyl Advisors announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 7% decline in operating income"
+      "headline": "Talvep Computing reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income is a direct negative signal for profitability and investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $250M contract with a leading cloud platform"
+      "headline": "Wrelal Financial secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $250M contract with a major cloud platform is a substantial win that provides both immediate and sustained revenue growth.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $250M contract with a multinational manufacturer"
+      "headline": "Talvep Computing secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a significant positive catalyst for the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:13.090Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands wins industry award for excellence in automated logistics"
+      "headline": "Joval Brands wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid names new head of wireless connectivity division"
+      "headline": "Urvel Grid names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "Leadership changes in specific divisions are standard corporate updates with minimal immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid to present at Annual Industry Forum"
+      "headline": "Urvel Grid to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a routine corporate activity that rarely moves stock prices or financial metrics.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $120M contract with a top-tier research institute"
+      "headline": "Joval Brands secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost that will impact financial performance over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $50M contract with a national infrastructure agency"
+      "headline": "Urvel Grid secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $50M contract with a national agency is a significant, concrete win that strengthens the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Joval Brands reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% is a strong indicator of operational success and positive momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets recalls products in data analytics line due to quality concerns"
+      "headline": "Ixenis Outlets recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate negative sentiment and potential costs, though the long-term impact depends on the scale of the issue.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce announces significant capital expenditure plan for Europe"
+      "headline": "Arnik Commerce announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:28.726Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

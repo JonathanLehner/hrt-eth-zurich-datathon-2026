@@ -38,28 +38,79 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Plevum Partners warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce sees 12% drop in new customer orders this quarter"
+      "headline": "Nolvav Commerce sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A double-digit decline in new customer orders is a direct negative signal for near-term revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners names new head of automated logistics division"
+      "headline": "Plevum Partners names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners withdraws from Central Europe market citing unfavorable conditions"
+      "headline": "Plevum Partners withdraws from Central Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a market is a significant strategic shift that removes future revenue streams while potentially incurring one-time exit costs.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:12.682Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech wins industry award for excellence in enterprise software"
+      "headline": "Xelvol Biotech wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces significant capital expenditure plan for Latin America"
+      "headline": "Xelvol Biotech announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans indicate long-term growth investment but represent a near-term cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $320M contract with a multinational manufacturer"
+      "headline": "Yorvov Pharmaceuticals secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, immediate, and sustained revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Crevex Labs warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Xelvol Biotech reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong indicator of current business health and positive momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Yorvov Pharmaceuticals begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal impact on long-term financial performance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics announces breakthrough in cloud infrastructure"
+      "headline": "Grevel Diagnostics announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A breakthrough in cloud infrastructure suggests potential for future efficiency or product innovation, though the financial impact is not yet quantified.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs sees 3% drop in new customer orders this quarter"
+      "headline": "Crevex Labs sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative signal for future revenue growth.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:34.145Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

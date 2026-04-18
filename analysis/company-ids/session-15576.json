@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $120M contract with a leading cloud platform"
+      "headline": "Plevyl Advisors secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, immediate revenue boost and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group lowers full-year guidance amid softening demand"
+      "headline": "Crevol Retail Group lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a direct negative signal for both immediate and medium-term financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors to host investor day focused on enterprise software strategy"
+      "headline": "Plevyl Advisors to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day is a standard corporate event that typically lacks immediate material financial impact until specific details are disclosed.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Crevol Retail Group recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall introduces immediate operational costs and potential reputational damage that may persist through the quarter.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Holtar Stores completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance manufacturing capabilities, though the long-term financial benefit depends on integration success.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces $0.8B share buyback program"
+      "headline": "Holtar Stores announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:22.818Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics confirms participation in Emerging Markets Forum"
+      "headline": "Frelis Genomics confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate event that rarely provides material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 15% decline in operating income"
+      "headline": "Yorven Labs reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a significant negative indicator of core profitability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Frelis Genomics reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 3% is positive but modest, suggesting steady performance rather than a breakout.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Yorven Labs completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquisitions aimed at supply chain optimization provide long-term operational efficiency benefits but often involve short-term integration costs.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces breakthrough in wireless connectivity"
+      "headline": "Yorven Labs announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A breakthrough in wireless connectivity is a high-potential event that could significantly impact future product competitiveness.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics completes planned facility upgrade in North America"
+      "headline": "Zelvix Therapeutics completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "A planned facility upgrade is a routine operational improvement that is unlikely to drive immediate stock price movement.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 7% decline in operating income"
+      "headline": "Grevon Biotech reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income indicates a moderate contraction in profitability that will likely weigh on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:23.814Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

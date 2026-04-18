@@ -57,63 +57,164 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Wrelal Financial recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in precision manufacturing indicates immediate operational disruption and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid expands operations into Southeast Asia markets"
+      "headline": "Urvel Grid expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a clear growth opportunity with long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Zelvel Capital begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is unlikely to have a material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees mixed results in supply chain optimization pilot program"
+      "headline": "Urvel Grid sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid board meeting to discuss major strategic initiative"
+      "headline": "Urvel Grid board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a strategic initiative is speculative and lacks sufficient detail to determine financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid loses key contract in Scandinavia to competitor"
+      "headline": "Urvel Grid loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market share in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files for regulatory approval of new enterprise software offering"
+      "headline": "Wrelal Financial files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step toward product commercialization.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces breakthrough in wireless connectivity"
+      "headline": "Wrelal Financial announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough suggests significant competitive advantage and future growth potential.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H009",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital delays product launch in process automation segment"
+      "headline": "Zelvel Capital delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue and may signal internal execution challenges.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:52.682Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

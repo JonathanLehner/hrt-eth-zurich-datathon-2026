@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries recalls products in automated logistics line due to quality concerns"
+      "headline": "Strynal Industries recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company manages the logistics of the recall.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy signs multi-year partnership with a multinational manufacturer"
+      "headline": "Zelval Energy signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 5% drop in new customer orders this quarter"
+      "headline": "Strynal Industries sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative signal for revenue growth and market demand.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $180M contract with a top-tier research institute"
+      "headline": "Zelval Energy secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract with a reputable entity provides a clear and immediate boost to financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital confirms participation in Tech Leadership Conference"
+      "headline": "Zelvel Capital confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference is a routine corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital confirms participation in Global Innovation Summit"
+      "headline": "Zelvel Capital confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a standard industry event that does not imply a material change in financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital begins scheduled maintenance of automated logistics systems"
+      "headline": "Zelvel Capital begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational expense that is expected and does not typically impact financial results significantly.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:38.990Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Zelvel Capital warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Jovor Networks recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls typically trigger immediate negative sentiment and direct costs associated with remediation.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Volval Devices warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain warnings indicate operational friction that will likely impact regional output and financial performance.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs begins scheduled maintenance of renewable storage systems"
+      "headline": "Yorven Labs begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is generally priced in and expected by the market.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs completes planned facility upgrade in Middle East"
+      "headline": "Yorven Labs completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a positive operational milestone that enhances long-term capacity.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Jovor Networks Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from an executive is a reactive communication measure that rarely changes fundamental financial outlooks.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks sees 3% drop in new customer orders this quarter"
+      "headline": "Jovor Networks sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative signal regarding demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:31.504Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

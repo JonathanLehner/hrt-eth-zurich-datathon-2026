@@ -48,28 +48,79 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma revises long-term strategy with focus on automated logistics"
+      "headline": "Nerval Biopharma revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward automated logistics indicates a shift in operational focus that lacks immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 8% drop in new customer orders this quarter"
+      "headline": "Calvos Genomics sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a direct negative indicator of near-term revenue growth and demand.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma secures $800M contract with a major logistics provider"
+      "headline": "Zrovum Biopharma secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics signs multi-year partnership with a top-tier research institute"
+      "headline": "Calvos Genomics signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a top-tier research institute suggests long-term collaborative value but lacks immediate revenue impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:08.618Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

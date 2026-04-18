@@ -43,49 +43,130 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Grevel Diagnostics recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company addresses quality control.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees mixed results in renewable storage pilot program"
+      "headline": "Zelvon Biosciences sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the viability and future revenue potential of the storage technology.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics loses key contract in Central Europe to competitor"
+      "headline": "Grevel Diagnostics loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct and quantifiable reduction in future revenue streams for the company.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees mixed results in wireless connectivity pilot program"
+      "headline": "Grevel Diagnostics sees mixed results in wireless connectivity pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest uncertainty about the success of the wireless connectivity line, though the impact is less severe than a recall.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces major organizational restructuring"
+      "headline": "Zelvon Biosciences announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals internal instability and potential short-term costs, with long-term benefits remaining speculative.",
+        "longTerm": 1,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences expands operations into Central Europe markets"
+      "headline": "Zelvon Biosciences expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a clear strategic move that signals growth potential and increased market reach.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces $6.3B share buyback program"
+      "headline": "Zelvon Biosciences announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:48.682Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

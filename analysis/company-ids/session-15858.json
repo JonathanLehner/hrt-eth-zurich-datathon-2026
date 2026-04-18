@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies faces regulatory review of cloud infrastructure practices"
+      "headline": "Myrnep Technologies faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational friction for cloud infrastructure providers.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing expands operations into Europe markets"
+      "headline": "Dralol Computing expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion represents a strategic growth initiative that typically requires time to scale and contribute to revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing lowers full-year guidance amid softening demand"
+      "headline": "Dralol Computing lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowered guidance due to softening demand is a direct negative signal for financial performance and investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Relvan Software reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth indicates strong business momentum and positive financial health.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software files routine patent applications in process automation"
+      "headline": "Relvan Software files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and generally do not provide immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $50M contract with a multinational manufacturer"
+      "headline": "Yorven Labs secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear, positive boost to revenue visibility and business growth.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies delays product launch in renewable storage segment"
+      "headline": "Myrnep Technologies delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue and may signal internal execution challenges.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $800M contract with a multinational manufacturer"
+      "headline": "Yorven Labs secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A large-scale contract win significantly improves the company's financial outlook and long-term revenue stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:34.016Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

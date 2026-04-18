@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Creven Securities reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid recalls products in data analytics line due to quality concerns"
+      "headline": "Urvel Grid recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls typically trigger immediate negative sentiment and potential long-term brand or financial damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Creven Securities warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create operational headwinds that likely persist over the medium term.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $180M contract with a national infrastructure agency"
+      "headline": "Wyrnor Solutions secures $180M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a clear, quantifiable boost to revenue expectations.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables expands operations into Scandinavia markets"
+      "headline": "Orevex Renewables expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Market expansion is a growth signal, though the immediate financial impact is often muted compared to long-term potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions to host investor day focused on process automation strategy"
+      "headline": "Wyrnor Solutions to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral-to-positive event that lacks immediate financial quantification.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid enters joint venture with a national infrastructure agency"
+      "headline": "Urvel Grid enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests future revenue stability and strategic alignment.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:48.770Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

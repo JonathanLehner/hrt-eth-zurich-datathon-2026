@@ -63,49 +63,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments delays product launch in automated logistics segment"
+      "headline": "Krevan Investments delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals operational setbacks or competitive challenges, negatively impacting investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries to host investor day focused on renewable storage strategy"
+      "headline": "Zrovex Industries to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that generally provide neutral to slightly positive sentiment depending on market expectations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial completes planned facility upgrade in Europe"
+      "headline": "Wrelal Financial completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that is generally expected and has minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Yorval Partners reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability and financial performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries recalls products in automated logistics line due to quality concerns"
+      "headline": "Zrovex Industries recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event that damages reputation and incurs immediate costs.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries completes planned facility upgrade in North America"
+      "headline": "Zrovex Industries completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completion of a planned facility upgrade is a standard operational update with limited impact on stock valuation.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $320M contract with a global retailer"
+      "headline": "Zrovex Industries secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, tangible revenue growth and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:16.324Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips misses quarterly revenue estimates by 10%"
+      "headline": "Brevon Microchips misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss indicates immediate operational weakness and negative sentiment for the stock.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips announces $2.5B share buyback program"
+      "headline": "Ulvyn Microchips announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces significant capital expenditure plan for Latin America"
+      "headline": "Holtar Stores announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Increased capital expenditure indicates long-term growth strategy but may weigh on short-term cash flow.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips announces $9.6B share buyback program"
+      "headline": "Brevon Microchips announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A massive $9.6B buyback program is a strong positive signal for shareholder value and stock price support.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces breakthrough in cloud infrastructure"
+      "headline": "Holtar Stores announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A breakthrough in cloud infrastructure suggests potential for future revenue growth and competitive advantage.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores wins industry award for excellence in process automation"
+      "headline": "Holtar Stores wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips schedules annual shareholder meeting for next month"
+      "headline": "Ulvyn Microchips schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate event with no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices files for regulatory approval of new supply chain optimization offering"
+      "headline": "Nolvis Devices files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for a new product but does not guarantee future revenue.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:45.409Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

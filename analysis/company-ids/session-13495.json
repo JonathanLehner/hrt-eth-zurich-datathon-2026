@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Jovor Networks Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive creates immediate leadership uncertainty and potential strategic instability.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports rising costs pressuring margins in renewable storage"
+      "headline": "Prynis Systems reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and margins, signaling a negative trend for the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen data analytics"
+      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance capabilities, which is generally viewed as a positive long-term growth driver.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports 25% increase in customer acquisition"
+      "headline": "Jovor Networks reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong indicator of growing demand and positive momentum for the business.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 15,
       "companyId": 3,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Crevex Labs reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Increased costs in precision manufacturing indicate margin compression that will likely weigh on earnings until resolved.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $320M contract with a major logistics provider"
+      "headline": "Prynis Systems secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides significant revenue visibility and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $50M contract with a national infrastructure agency"
+      "headline": "Ulvyn Microchips secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $50M contract with a national agency provides stable, long-term revenue and strengthens the company's project pipeline.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Prynis Systems warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region pose a direct threat to operational efficiency and revenue realization.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:28.709Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 18%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current operational performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports unexpected decline in Latin America revenue"
+      "headline": "Ervan Capital reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific geographic segment suggests localized headwinds that may persist.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 5% increase in customer acquisition"
+      "headline": "Holtum Asset Group reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a clear positive signal for growth and market share expansion.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Ervan Capital completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition of cloud infrastructure assets is a strategic move that typically signals long-term value creation despite short-term integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Holtum Asset Group announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments confirms participation in Emerging Markets Forum"
+      "headline": "Halven Investments confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:49.799Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

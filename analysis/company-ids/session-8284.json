@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries wins industry award for excellence in data analytics"
+      "headline": "Strynal Industries wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but rarely translate into immediate or sustained financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group publishes annual sustainability report"
+      "headline": "Jovik Asset Group publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Sustainability reports are standard corporate disclosures that typically have negligible impact on short-term or long-term financial outcomes.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees mixed results in data analytics pilot program"
+      "headline": "Strynal Industries sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the viability and scalability of the company's data analytics initiatives.",
+        "longTerm": -2,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $400M contract with a national infrastructure agency"
+      "headline": "Nolvol Resources secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables sees mixed results in digital payments pilot program"
+      "headline": "Orevex Renewables sees mixed results in digital payments pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest potential operational challenges or lack of immediate product-market fit for the new payment system.",
+        "longTerm": -2,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources enters joint venture with a national infrastructure agency"
+      "headline": "Nolvol Resources enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests strategic alignment and potential for future revenue, though the immediate financial impact is less direct than a contract.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $800M contract with a major logistics provider"
+      "headline": "Nolvol Resources secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "An $800M contract is a significant revenue driver that will positively impact the company's financial standing over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces breakthrough in process automation"
+      "headline": "Jovik Asset Group announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for improved operational efficiency and margin expansion, though the timeline for realization is uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:09.457Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

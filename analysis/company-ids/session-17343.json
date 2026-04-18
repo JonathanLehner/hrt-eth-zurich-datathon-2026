@@ -50,35 +50,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources completes planned facility upgrade in Southeast Asia"
+      "headline": "Kelvos Resources completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves efficiency but has a neutral immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid recalls products in data analytics line due to quality concerns"
+      "headline": "Nerven Grid recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate financial costs and potential reputational damage that will likely persist through the 100-day window.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports unexpected decline in Central Europe revenue"
+      "headline": "Orevex Renewables reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a direct negative signal for financial performance that will likely weigh on investor sentiment for the remainder of the quarter.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports strong demand in Latin America, raises outlook"
+      "headline": "Nerven Grid reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive indicators for both immediate and medium-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables delays product launch in automated logistics segment"
+      "headline": "Orevex Renewables delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch removes expected revenue streams and creates uncertainty regarding the company's execution timeline.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:29.068Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

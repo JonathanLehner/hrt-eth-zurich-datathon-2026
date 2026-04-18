@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics revises long-term strategy with focus on enterprise software"
+      "headline": "Zelvix Therapeutics revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "A pivot from therapeutics to enterprise software represents a major strategic shift with significant execution risk and unclear revenue implications.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels loses key contract in North America to competitor"
+      "headline": "Relvon Fuels loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational failure and potential reputational damage with associated costs.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics files for regulatory approval of new automated logistics offering"
+      "headline": "Zelvix Therapeutics files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product commercialization but does not guarantee immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Zelval Energy begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has minimal financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces breakthrough in data analytics"
+      "headline": "Relvon Fuels announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics suggests potential for future efficiency gains or new product capabilities.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:33.724Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

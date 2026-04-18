@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors misses quarterly revenue estimates by 12%"
+      "headline": "Plevyl Advisors misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A 12% revenue miss indicates immediate negative sentiment regarding the company's current growth trajectory.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces $5.7B share buyback program"
+      "headline": "Ervan Capital announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A $5.7B share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports 8% decline in operating income"
+      "headline": "Talvix Holdings reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income reflects underlying margin pressure that will likely weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces class action over cloud infrastructure service disruption"
+      "headline": "Talvix Holdings faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that creates significant uncertainty.",
+        "longTerm": -6,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors announces major organizational restructuring"
+      "headline": "Plevyl Advisors announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals internal issues and creates short-term operational uncertainty.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces significant capital expenditure plan for Europe"
+      "headline": "Talvix Holdings announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests long-term growth investment but may pressure short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports strong demand in Europe, raises outlook"
+      "headline": "Jorvyl Securities reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive indicators for both immediate and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:37.096Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

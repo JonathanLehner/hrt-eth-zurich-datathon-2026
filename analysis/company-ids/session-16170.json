@@ -62,42 +62,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group expands operations into Europe markets"
+      "headline": "Crevol Retail Group expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a clear growth opportunity that typically drives long-term revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce schedules annual shareholder meeting for next month"
+      "headline": "Nolvav Commerce schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate governance event with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 0,
+        "shortTermUncertainty": 0,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce faces class action over supply chain optimization service disruption"
+      "headline": "Nolvav Commerce faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal uncertainty and potential financial liability that can persist throughout the litigation process.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands warns of supply chain disruptions affecting North America operations"
+      "headline": "Joval Brands warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization, creating immediate negative pressure.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands files for regulatory approval of new enterprise software offering"
+      "headline": "Joval Brands files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for product launch, though the outcome and timing remain subject to regulatory review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Orevex Renewables files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Regulatory filing for a new product offering indicates potential future revenue streams but carries inherent uncertainty regarding approval timelines.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:45.051Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

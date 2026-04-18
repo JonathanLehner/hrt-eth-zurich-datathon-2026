@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power completes planned facility upgrade in Latin America"
+      "headline": "Kelvik Power completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that should improve efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Kelvik Power reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability that likely persists until mitigated.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid names new head of renewable storage division"
+      "headline": "Urvel Grid names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "A leadership change in a specific division is a neutral event until the new head's strategy is implemented.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands sees 10% margin improvement in latest quarter"
+      "headline": "Halvav Brands sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement is a strong, quantifiable positive indicator of operational efficiency.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports unexpected decline in North America revenue"
+      "headline": "Plevep Power reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market is a significant negative signal for near-term performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power sees mixed results in enterprise software pilot program"
+      "headline": "Plevep Power sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the new product.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports strong demand in Central Europe, raises outlook"
+      "headline": "Halvav Brands reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive indicators for future financial performance.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:01.795Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

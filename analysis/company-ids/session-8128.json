@@ -36,21 +36,62 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Frelol Software begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces significant capital expenditure plan for Europe"
+      "headline": "Yorven Labs announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflows and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $800M contract with a leading cloud platform"
+      "headline": "Yorven Labs secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear, substantial, and durable revenue stream for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:01.939Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

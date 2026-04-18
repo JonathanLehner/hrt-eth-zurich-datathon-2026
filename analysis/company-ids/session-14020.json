@@ -58,28 +58,79 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores faces class action over automated logistics service disruption"
+      "headline": "Holtar Stores faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability for Holtar Stores.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce delays product launch in automated logistics segment"
+      "headline": "Arnik Commerce delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment signals operational friction and potential loss of near-term revenue growth.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 10% increase in customer acquisition"
+      "headline": "Talvep Computing reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition is a direct positive indicator of growth and market demand for Talvep Computing.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $120M contract with a national infrastructure agency"
+      "headline": "Arnos Marketplace secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract with a national agency provides clear, high-value revenue visibility for Arnos Marketplace.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:46.974Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

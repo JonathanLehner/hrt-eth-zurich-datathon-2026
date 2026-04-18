@@ -36,21 +36,62 @@
       "barIx": 31,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Jovor Networks recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that will likely persist as the company manages the logistics and customer fallout.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals enters joint venture with a top-tier research institute"
+      "headline": "Krevum Pharmaceuticals enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a top-tier research institute signals long-term R&D potential, though the immediate financial impact is likely muted until specific projects are announced.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Krevum Pharmaceuticals begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected to have negligible impact on the company's financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:54.554Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

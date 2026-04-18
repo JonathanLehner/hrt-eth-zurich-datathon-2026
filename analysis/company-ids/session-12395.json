@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries to host investor day focused on automated logistics strategy"
+      "headline": "Strynal Industries to host investor day focused on automated logistics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic events that typically provide clarity on long-term goals but rarely trigger immediate material financial shifts.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $500M contract with a major logistics provider"
+      "headline": "Wyrnor Solutions secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $500M contract represents a significant, concrete revenue stream that provides immediate positive sentiment and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power CTO addresses investor concerns in open letter"
+      "headline": "Plevep Power CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CTO is a reactive measure to address uncertainty, which may stabilize sentiment but does not change fundamental financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions raises full-year guidance citing robust demand"
+      "headline": "Wyrnor Solutions raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance is a strong, direct indicator of improved financial performance and sustained demand for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports unexpected decline in North America revenue"
+      "headline": "Strynal Industries reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market is a negative signal that directly impacts financial results and creates immediate concern.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:46.236Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

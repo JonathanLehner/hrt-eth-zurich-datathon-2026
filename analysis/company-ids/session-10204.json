@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports rising costs pressuring margins in data analytics"
+      "headline": "Wrelal Financial reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors loses key contract in Europe to competitor"
+      "headline": "Plevyl Advisors loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct revenue hit and a competitive disadvantage in a major market.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors revises long-term strategy with focus on automated logistics"
+      "headline": "Plevyl Advisors revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automated logistics is a long-term operational shift with unclear immediate financial benefits.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial recalls products in data analytics line due to quality concerns"
+      "headline": "Wrelal Financial recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate financial costs and potential reputational damage to the data analytics line.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial CTO steps down unexpectedly citing personal reasons"
+      "headline": "Ilval Financial CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates leadership instability and uncertainty regarding technical direction.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 8% drop in new customer orders this quarter"
+      "headline": "Talvyn Goods sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a clear indicator of weakening demand and revenue headwinds.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files for regulatory approval of new precision manufacturing offering"
+      "headline": "Wrelal Financial files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a neutral to slightly positive step toward future growth, though success is not guaranteed.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods faces regulatory review of precision manufacturing practices"
+      "headline": "Talvyn Goods faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of manufacturing practices introduces significant operational risk and potential for future penalties.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:21.180Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

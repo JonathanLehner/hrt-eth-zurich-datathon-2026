@@ -36,21 +36,62 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $75M contract with a national infrastructure agency"
+      "headline": "Varvov Retail Group secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "The $75M contract provides a clear, immediate revenue boost and long-term operational stability for the retail group.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips delays product launch in wireless connectivity segment"
+      "headline": "Ulvyn Microchips delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "A product launch delay typically signals operational friction and lost near-term revenue, with potential for lingering market share erosion.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces class action over data analytics service disruption"
+      "headline": "Ulvyn Microchips faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial uncertainty that often persists well beyond the initial news cycle.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:03.056Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co signs multi-year partnership with a top-tier research institute"
+      "headline": "Pleven Trading Co signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a research institute suggests long-term innovation potential but lacks immediate revenue impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $250M contract with a multinational manufacturer"
+      "headline": "Xovol Goods secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, immediate, and durable boost to the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $250M contract with a major logistics provider"
+      "headline": "Pleven Trading Co secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $250M contract with a major logistics provider is a significant, concrete win that improves revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings misses quarterly revenue estimates by 10%"
+      "headline": "Halvix Holdings misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 10% is a direct negative signal regarding current operational performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods explores strategic alternatives for cloud infrastructure unit"
+      "headline": "Xovol Goods explores strategic alternatives for cloud infrastructure unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates significant uncertainty regarding the future structure and value of the company.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings faces regulatory review of precision manufacturing practices"
+      "headline": "Halvix Holdings faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential legal and operational risks that could negatively impact the company's standing.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings announces significant capital expenditure plan for Scandinavia"
+      "headline": "Halvix Holdings announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment, though it may pressure short-term cash flow.",
+        "longTerm": 5,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores sees 10% drop in new customer orders this quarter"
+      "headline": "Holtar Stores sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a clear indicator of weakening demand that will likely persist.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:09.004Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

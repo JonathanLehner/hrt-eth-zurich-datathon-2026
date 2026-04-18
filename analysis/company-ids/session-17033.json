@@ -51,42 +51,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co loses key contract in Central Europe to competitor"
+      "headline": "Jorval Trading Co loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods explores strategic alternatives for process automation unit"
+      "headline": "Talvyn Goods explores strategic alternatives for process automation unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague corporate action that creates uncertainty regarding the future of the business unit.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Jorval Trading Co revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic pivot to cloud infrastructure indicates a long-term shift in focus but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands expands operations into Southeast Asia markets"
+      "headline": "Joval Brands expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets represents a clear growth initiative with potential for increased revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co delays product launch in process automation segment"
+      "headline": "Jorval Trading Co delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals operational friction and pushes back expected revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co revises long-term strategy with focus on renewable storage"
+      "headline": "Jorval Trading Co revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "Revising strategy toward renewable storage suggests a pivot that may require significant capital allocation and time to materialize.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:16.649Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

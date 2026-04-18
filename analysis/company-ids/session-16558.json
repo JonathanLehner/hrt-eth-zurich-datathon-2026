@@ -56,56 +56,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Myrnep Technologies recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in precision manufacturing suggests immediate operational disruption and potential long-term reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks faces regulatory review of process automation practices"
+      "headline": "Halvax Networks faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential future compliance costs or operational restrictions.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Varvov Retail Group reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth provides strong positive momentum for the company's financial health.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group signs multi-year partnership with a global retailer"
+      "headline": "Varvov Retail Group signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership indicates stable future revenue streams and strategic growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $320M contract with a major logistics provider"
+      "headline": "Myrnep Technologies secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate financial validation and revenue visibility.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks to host investor day focused on data analytics strategy"
+      "headline": "Halvax Networks to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that typically aims to clarify future direction without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces breakthrough in automated logistics"
+      "headline": "Varvov Retail Group announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in automated logistics suggests potential efficiency gains, though the financial impact depends on implementation success.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies reports 15% increase in customer acquisition"
+      "headline": "Myrnep Technologies reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong indicator of growing market demand and future revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:59.909Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

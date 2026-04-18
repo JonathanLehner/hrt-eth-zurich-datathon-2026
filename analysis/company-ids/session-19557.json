@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems wins industry award for excellence in precision manufacturing"
+      "headline": "Prynis Systems wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but have minimal direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips opens new office in Middle East"
+      "headline": "Ulvyn Microchips opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market indicates growth potential but involves initial capital expenditure and uncertain market penetration.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks to present at Emerging Markets Forum"
+      "headline": "Jovor Networks to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity that rarely results in immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks warns of supply chain disruptions affecting Europe operations"
+      "headline": "Jovor Networks warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization in the affected region.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Brevon Microchips warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain warnings indicate immediate operational headwinds that negatively impact production and delivery capabilities.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 8% drop in new customer orders this quarter"
+      "headline": "Ulvyn Microchips sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator of future revenue growth and demand.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Jovor Networks reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong positive signal of current business health and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips CFO addresses investor concerns in open letter"
+      "headline": "Ulvyn Microchips CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO suggests underlying investor anxiety that the company is attempting to manage through communication.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:51.014Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

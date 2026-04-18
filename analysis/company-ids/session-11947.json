@@ -64,49 +64,130 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Zelvel Capital reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% provides strong, concrete evidence of financial health and positive momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods revises long-term strategy with focus on precision manufacturing"
+      "headline": "Xovol Goods revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic pivots are vague and lack immediate financial quantification, leading to high uncertainty regarding actual impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods names new head of data analytics division"
+      "headline": "Xovol Goods names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces restructuring plan, cites challenging market conditions"
+      "headline": "Yorval Partners announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans due to challenging market conditions signal underlying financial stress and potential near-term costs.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners misses quarterly revenue estimates by 10%"
+      "headline": "Yorval Partners misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss is a clear negative indicator of performance that typically triggers immediate market repricing.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces breakthrough in digital payments"
+      "headline": "Zelvel Capital announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments is a positive development, but the lack of specific commercialization details creates long-term uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $800M contract with a leading cloud platform"
+      "headline": "Ervan Capital secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear, high-value revenue stream that significantly bolsters the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:29.139Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

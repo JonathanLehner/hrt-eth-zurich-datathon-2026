@@ -54,49 +54,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries wins industry award for excellence in data analytics"
+      "headline": "Strynal Industries wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or earnings.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports strong demand in Latin America, raises outlook"
+      "headline": "Zelvel Capital reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a direct positive signal for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports 20% decline in operating income"
+      "headline": "Kelvos Resources reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a significant negative indicator of core business profitability.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces significant capital expenditure plan for Middle East"
+      "headline": "Strynal Industries announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans indicate long-term growth investment but represent an immediate cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital explores strategic alternatives for digital payments unit"
+      "headline": "Zelvel Capital explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is ambiguous and could lead to a sale, spin-off, or no action at all.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $250M contract with a top-tier research institute"
+      "headline": "Strynal Industries secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, quantifiable revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees mixed results in automated logistics pilot program"
+      "headline": "Kelvos Resources sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create uncertainty regarding the success and scalability of the initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:15.977Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

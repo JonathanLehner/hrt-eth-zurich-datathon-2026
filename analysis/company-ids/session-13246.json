@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Plevep Power announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but may weigh on short-term cash flow and margins.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions to present at Annual Industry Forum"
+      "headline": "Wyrnor Solutions to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a routine corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports 5% increase in customer acquisition"
+      "headline": "Kelvik Power reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition directly correlates to revenue growth and improved market share.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $500M contract with a multinational manufacturer"
+      "headline": "Wyrnor Solutions secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables faces regulatory review of supply chain optimization practices"
+      "headline": "Ulvon Renewables faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create uncertainty and potential operational disruption, negatively impacting investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $180M contract with an international consortium"
+      "headline": "Wyrnor Solutions secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "An additional $180M contract win reinforces the company's growth trajectory and strengthens its order book.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power loses key contract in Latin America to competitor"
+      "headline": "Kelvik Power loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and potential market share erosion in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:18.507Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

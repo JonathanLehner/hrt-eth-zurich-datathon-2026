@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies reports unexpected decline in Asia Pacific revenue"
+      "headline": "Ixenix Technologies reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural demand issues or competitive pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips signs multi-year partnership with a multinational manufacturer"
+      "headline": "Brevon Microchips signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 18% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement indicates strong operational efficiency and immediate bottom-line growth.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co begins scheduled maintenance of data analytics systems"
+      "headline": "Pleven Trading Co begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity with negligible impact on long-term financial performance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks wins industry award for excellence in wireless connectivity"
+      "headline": "Halvax Networks wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Industry awards provide brand validation but lack direct, quantifiable financial impact on revenue or margins.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Pleven Trading Co completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic acquisition to strengthen infrastructure is a growth-oriented move that typically requires time to realize synergies.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:22.477Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

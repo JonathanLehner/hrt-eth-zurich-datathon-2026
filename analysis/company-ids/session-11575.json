@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees mixed results in cloud infrastructure pilot program"
+      "headline": "Zrovex Industries sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the cloud infrastructure initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power misses quarterly revenue estimates by 5%"
+      "headline": "Plevep Power misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "A revenue miss directly impacts financial performance and typically triggers a negative market reaction in the short term.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $650M contract with a top-tier research institute"
+      "headline": "Talvep Computing secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant, and durable boost to revenue and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $320M contract with an international consortium"
+      "headline": "Plevep Power secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $320M contract win provides a positive financial catalyst that helps offset previous negative news for the company.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to host investor day focused on data analytics strategy"
+      "headline": "Plevep Power to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports rising costs pressuring margins in renewable storage"
+      "headline": "Strynal Industries reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a direct negative signal for profitability that likely persists until operational efficiencies are found.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $120M contract with a national infrastructure agency"
+      "headline": "Strynal Industries secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $120M contract win provides a tangible positive revenue stream that helps mitigate the impact of rising costs.",
+        "longTerm": 3,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:11.471Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

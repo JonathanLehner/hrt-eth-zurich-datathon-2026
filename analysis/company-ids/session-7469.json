@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces breakthrough in digital payments"
+      "headline": "Jorvyl Securities announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough in digital payments suggests a positive product development, though the lack of specific commercialization details limits immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 5% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders is a direct negative indicator of slowing demand that will likely impact revenue in the near term.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports strong demand in Scandinavia, raises outlook"
+      "headline": "Halvix Holdings reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand provides a clear positive signal for financial performance over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports unexpected decline in Europe revenue"
+      "headline": "Jorvyl Securities reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a major region is a negative financial event that creates immediate concern for the company's growth trajectory.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities names new head of wireless connectivity division"
+      "headline": "Jorvyl Securities names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has a neutral to slightly positive impact depending on the market's perception of the new hire.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech launches next-generation supply chain optimization platform"
+      "headline": "Grevon Biotech launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new supply chain platform is a positive operational development that could improve efficiency, though the financial benefit depends on adoption rates.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:39.445Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

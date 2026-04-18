@@ -56,56 +56,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities completes planned facility upgrade in Southeast Asia"
+      "headline": "Creven Securities completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "The completion of a facility upgrade is an operational milestone that typically improves efficiency but lacks immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Calvos Genomics reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 15% provides clear positive financial momentum for the company.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $650M contract with a multinational manufacturer"
+      "headline": "Zrovov Advisors secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a significant and concrete boost to future revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Calvos Genomics reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a direct positive signal for future financial performance.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics completes strategic acquisition to strengthen digital payments"
+      "headline": "Calvos Genomics completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move, but the immediate financial impact is uncertain due to integration and capital outlay.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports rising costs pressuring margins in data analytics"
+      "headline": "Creven Securities reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a clear negative indicator for profitability in the near and medium term.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $250M contract with a leading cloud platform"
+      "headline": "Creven Securities secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $250M contract win provides a clear and immediate positive impact on the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors confirms participation in Emerging Markets Forum"
+      "headline": "Zrovov Advisors confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:55.521Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power signs multi-year partnership with a leading cloud platform"
+      "headline": "Kelvik Power signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic growth potential for Kelvik Power.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing sees 10% drop in new customer orders this quarter"
+      "headline": "Dralol Computing sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders indicates a direct decline in demand that will likely pressure near-term financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing sees 18% margin improvement in latest quarter"
+      "headline": "Dralol Computing sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement demonstrates significant operational efficiency gains that positively impact bottom-line profitability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power signs multi-year partnership with a leading cloud platform"
+      "headline": "Kelvik Power signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "This is a duplicate of the previous partnership announcement, reinforcing the strategic shift but offering no new incremental information.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $650M contract with a top-tier research institute"
+      "headline": "Relvon Fuels secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract provides a substantial and concrete boost to future revenue and company valuation.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels misses quarterly revenue estimates by 15%"
+      "headline": "Relvon Fuels misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 15% is a significant negative indicator of current business performance and market execution.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:04.969Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

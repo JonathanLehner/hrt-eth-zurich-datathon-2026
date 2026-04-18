@@ -52,42 +52,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions signs multi-year partnership with a multinational manufacturer"
+      "headline": "Wyrnor Solutions signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and growth potential for Wyrnor Solutions.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries names new head of data analytics division"
+      "headline": "Strynal Industries names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports unexpected decline in Asia Pacific revenue"
+      "headline": "Strynal Industries reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region signals immediate financial weakness and potential ongoing demand issues.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Wyrnor Solutions begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that does not materially impact financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces $5.7B share buyback program"
+      "headline": "Xelvol Biotech announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions confirms participation in Corporate Strategy Symposium"
+      "headline": "Wyrnor Solutions confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a standard corporate event with no direct impact on financial results.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:54.811Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 8% margin improvement in latest quarter"
+      "headline": "Nolvis Devices sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates direct operational efficiency gains that should immediately boost profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces restructuring plan, cites challenging market conditions"
+      "headline": "Dralol Computing announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans often signal underlying financial stress and potential near-term costs, creating uncertainty about future performance.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs sees mixed results in automated logistics pilot program"
+      "headline": "Crevex Labs sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide no clear directional signal for the company's future performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs signs multi-year partnership with a leading cloud platform"
+      "headline": "Crevex Labs signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Dralol Computing reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong positive indicator of market demand and business health.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices launches next-generation precision manufacturing platform"
+      "headline": "Nolvis Devices launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive catalyst for future growth, though the immediate financial impact depends on adoption rates.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences loses key contract in Latin America to competitor"
+      "headline": "Wyrnik Sciences loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share in a specific region.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices faces regulatory review of renewable storage practices"
+      "headline": "Nolvis Devices faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential compliance costs that could weigh on the stock.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:44.745Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

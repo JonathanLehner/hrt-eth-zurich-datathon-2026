@@ -56,56 +56,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy sees 20% margin improvement in latest quarter"
+      "headline": "Plevik Energy sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency and immediate profitability gains.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Xovol Goods reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising supply chain costs directly threaten profitability and suggest ongoing margin compression.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy delays product launch in digital payments segment"
+      "headline": "Plevik Energy delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and signals potential execution issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $800M contract with a leading cloud platform"
+      "headline": "Nolvav Commerce secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "An $800M contract represents a significant revenue boost and validates the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods completes planned facility upgrade in Middle East"
+      "headline": "Xovol Goods completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is a routine operational milestone that likely has minimal immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy wins industry award for excellence in enterprise software"
+      "headline": "Plevik Energy wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $75M contract with a national infrastructure agency"
+      "headline": "Nolvav Commerce secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, positive revenue contribution for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce recalls products in process automation line due to quality concerns"
+      "headline": "Nolvav Commerce recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate financial liability and potential long-term reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:19.093Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

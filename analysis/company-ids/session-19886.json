@@ -63,49 +63,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital expands operations into Europe markets"
+      "headline": "Zelvel Capital expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into European markets represents a strategic growth initiative that typically provides long-term revenue potential despite initial setup costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Plevyl Advisors reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability that often persists until operational efficiencies are realized.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial faces class action over cloud infrastructure service disruption"
+      "headline": "Ilval Financial faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk, creating immediate negative sentiment and long-term uncertainty regarding potential settlements.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors names new head of data analytics division"
+      "headline": "Plevyl Advisors names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has a neutral to slightly positive impact depending on the individual's track record.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports unexpected decline in North America revenue"
+      "headline": "Yorval Partners reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue is a strong negative indicator for financial performance that usually triggers immediate market concern.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors achieves key regulatory milestone ahead of schedule"
+      "headline": "Plevyl Advisors achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a regulatory milestone ahead of schedule removes a key barrier to entry or operation, providing a clear positive catalyst.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 12% margin improvement in latest quarter"
+      "headline": "Plevyl Advisors sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement is a concrete indicator of enhanced operational efficiency and profitability, which is highly favorable for the company's financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:02.591Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

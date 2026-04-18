@@ -51,42 +51,113 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports rising costs pressuring margins in enterprise software"
+      "headline": "Zelval Energy reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions to present at Annual Industry Forum"
+      "headline": "Orevov Solutions to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a routine corporate event with no clear financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports strong demand in Central Europe, raises outlook"
+      "headline": "Zelval Energy reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and a raised outlook are strong positive indicators for future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $180M contract with a leading cloud platform"
+      "headline": "Zelval Energy secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides immediate revenue visibility and positive momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces $6.3B share buyback program"
+      "headline": "Strynal Industries announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is typically viewed as a positive signal for shareholder value and capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Zelval Energy announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:02.550Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Jovor Networks reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% year-over-year provides strong fundamental validation of business performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies to host investor day focused on precision manufacturing strategy"
+      "headline": "Myrnep Technologies to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a standard corporate event that typically lacks immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies to host investor day focused on cloud infrastructure strategy"
+      "headline": "Myrnep Technologies to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Similar to the previous announcement, a strategy-focused investor day provides little concrete financial data to move the stock.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $50M contract with a leading cloud platform"
+      "headline": "Jovor Networks secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost that is positive for the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals misses quarterly revenue estimates by 25%"
+      "headline": "Krevum Pharmaceuticals misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a significant negative indicator of operational performance and market demand.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks files routine patent applications in process automation"
+      "headline": "Jovor Networks files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operational activities that do not imply immediate or guaranteed financial gain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:07.206Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports 20% increase in customer acquisition"
+      "headline": "Strynal Industries reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition directly signals revenue growth and improved market penetration.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors faces regulatory review of precision manufacturing practices"
+      "headline": "Zrovov Advisors faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational constraints for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions faces class action over data analytics service disruption"
+      "headline": "Wyrnor Solutions faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits represent significant legal and financial risk that can weigh on sentiment.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Zrovov Advisors recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls in cloud infrastructure imply direct costs and potential reputational damage to core services.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces breakthrough in cloud infrastructure"
+      "headline": "Strynal Industries announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in cloud infrastructure suggests a competitive advantage and potential for future growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors launches next-generation cloud infrastructure platform"
+      "headline": "Zrovov Advisors launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive operational milestone that expands the company's service offerings.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources enters joint venture with a major logistics provider"
+      "headline": "Kelvos Resources enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider indicates strategic expansion and potential operational synergies.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees mixed results in digital payments pilot program"
+      "headline": "Kelvos Resources sees mixed results in digital payments pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the new initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:59.662Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

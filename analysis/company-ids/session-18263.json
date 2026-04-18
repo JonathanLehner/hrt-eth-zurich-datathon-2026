@@ -54,56 +54,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces breakthrough in data analytics"
+      "headline": "Wrelal Financial announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough is positive but lacks specific financial details or commercialization timelines.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $650M contract with an international consortium"
+      "headline": "Halvix Holdings secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides clear, immediate, and durable revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Halvix Holdings Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter addressing investor concerns suggests underlying instability or lack of confidence, which is generally viewed negatively.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $320M contract with a major logistics provider"
+      "headline": "Halvix Holdings secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $320M contract win is a concrete positive development that bolsters revenue expectations.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial explores strategic alternatives for supply chain optimization unit"
+      "headline": "Wrelal Financial explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals potential divestiture or restructuring, creating uncertainty about future operations.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings faces regulatory review of process automation practices"
+      "headline": "Halvix Holdings faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of core practices introduce significant risk and potential for operational disruption or fines.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings loses key contract in North America to competitor"
+      "headline": "Halvix Holdings loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share, representing a clear negative event.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports 7% decline in operating income"
+      "headline": "Zelval Energy reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income is a direct negative indicator of financial performance.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:02.790Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

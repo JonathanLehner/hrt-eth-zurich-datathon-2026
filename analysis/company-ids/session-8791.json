@@ -40,35 +40,96 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions faces regulatory review of enterprise software practices"
+      "headline": "Orevov Solutions faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant legal and operational uncertainty that typically weighs on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions begins scheduled maintenance of renewable storage systems"
+      "headline": "Orevov Solutions begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and generally neutral for financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables beats analyst expectations with strong earnings growth"
+      "headline": "Orevex Renewables beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a clear positive signal for financial health and market confidence.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $400M contract with a leading cloud platform"
+      "headline": "Orevov Solutions secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a direct and material boost to revenue visibility and growth prospects.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables delays product launch in supply chain optimization segment"
+      "headline": "Orevex Renewables delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch suggests potential internal friction or market readiness issues, negatively impacting growth expectations.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:28.007Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

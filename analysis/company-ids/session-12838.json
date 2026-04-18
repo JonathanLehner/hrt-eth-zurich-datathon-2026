@@ -48,28 +48,79 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group explores strategic alternatives for enterprise software unit"
+      "headline": "Holtum Asset Group explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential divestiture or sale, which typically creates positive sentiment regarding capital allocation and shareholder value.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments to host investor day focused on renewable storage strategy"
+      "headline": "Halven Investments to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on a specific growth strategy is generally viewed as a positive engagement effort, though the actual market impact depends on the content revealed.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports unexpected decline in North America revenue"
+      "headline": "Halven Investments reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a direct negative indicator of financial performance that typically triggers immediate downward pressure on stock price.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals completes planned facility upgrade in Southeast Asia"
+      "headline": "Yorvov Pharmaceuticals completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that has minimal immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:02.522Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma to host investor day focused on precision manufacturing strategy"
+      "headline": "Nerval Biopharma to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that typically provide incremental information without immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma announces significant capital expenditure plan for Latin America"
+      "headline": "Nerval Biopharma announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow and potential short-term margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences secures $120M contract with a major logistics provider"
+      "headline": "Wyrnik Sciences secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, immediate revenue visibility and positive sentiment for the company's growth trajectory.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences sees 7% margin improvement in latest quarter"
+      "headline": "Wyrnik Sciences sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement is a strong indicator of operational efficiency gains that directly benefit bottom-line profitability.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma withdraws from Latin America market citing unfavorable conditions"
+      "headline": "Nerval Biopharma withdraws from Latin America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market due to unfavorable conditions suggests a strategic retreat that may negatively impact growth expectations and incur exit costs.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Wyrnik Sciences Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CSO indicates existing investor anxiety, which may persist despite management's attempts to clarify the situation.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma confirms participation in Annual Industry Forum"
+      "headline": "Zrovum Biopharma confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate activity that carries no specific material financial implication.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:11.664Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

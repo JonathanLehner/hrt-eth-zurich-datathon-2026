@@ -48,28 +48,79 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy confirms participation in Global Innovation Summit"
+      "headline": "Plevik Energy confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a standard industry event that rarely provides material financial impact or competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing expands operations into Middle East markets"
+      "headline": "Dralol Computing expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into the Middle East represents a strategic growth initiative that typically requires significant upfront investment before yielding revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $400M contract with a leading cloud platform"
+      "headline": "Dralol Computing secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, quantifiable revenue boost that will positively impact financial performance in both the near and long term.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables recalls products in renewable storage line due to quality concerns"
+      "headline": "Orevex Renewables recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate financial liability and operational disruption, with potential long-term brand damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:12.036Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

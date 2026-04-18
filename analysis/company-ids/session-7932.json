@@ -60,35 +60,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Talvyn Goods announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but often signals short-term cash outflow and potential margin pressure.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace enters joint venture with a multinational manufacturer"
+      "headline": "Arnos Marketplace enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a multinational manufacturer provides clear strategic growth potential and market access.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports 8% increase in customer acquisition"
+      "headline": "Holtar Stores reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a direct positive indicator of revenue growth and market share expansion.",
+        "longTerm": 5,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces significant capital expenditure plan for Latin America"
+      "headline": "Jovik Asset Group announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans for Latin America suggest a commitment to regional growth, though the immediate impact is a reduction in free cash flow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group wins industry award for excellence in process automation"
+      "headline": "Jovik Asset Group wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award for process automation is a positive reputational signal but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:55.600Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -43,49 +43,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries names new head of wireless connectivity division"
+      "headline": "Strynal Industries names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Strynal Industries revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic pivot to cloud infrastructure signals a long-term shift in focus, though the immediate financial impact remains speculative.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "guidance",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems files routine patent applications in data analytics"
+      "headline": "Prynis Systems files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operating procedure and do not provide actionable financial information for investors.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees mixed results in process automation pilot program"
+      "headline": "Strynal Industries sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the automation initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems sees 3% drop in new customer orders this quarter"
+      "headline": "Prynis Systems sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator of demand and immediate revenue growth potential.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems publishes annual sustainability report"
+      "headline": "Prynis Systems publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Sustainability reports are generally non-financial disclosures that rarely impact short-term stock performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces significant capital expenditure plan for North America"
+      "headline": "Prynis Systems announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:31.746Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

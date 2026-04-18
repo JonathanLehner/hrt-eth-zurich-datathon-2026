@@ -39,35 +39,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces significant capital expenditure plan for Central Europe"
+      "headline": "Ervan Capital announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Increased capital expenditure signals growth investment but creates short-term cash outflow concerns.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners announces $2.5B share buyback program"
+      "headline": "Plevum Partners announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program directly increases earnings per share and signals management confidence in valuation.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital faces class action over supply chain optimization service disruption"
+      "headline": "Ervan Capital faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces immediate legal risk and potential financial liability for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital completes strategic acquisition to strengthen process automation"
+      "headline": "Ervan Capital completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Strategic acquisition to enhance automation capabilities is a positive long-term move for operational efficiency.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $500M contract with a multinational manufacturer"
+      "headline": "Ervan Capital secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides immediate revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:48.750Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

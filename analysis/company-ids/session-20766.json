@@ -56,56 +56,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Holtum Asset Group begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces restructuring plan, cites challenging market conditions"
+      "headline": "Talvix Holdings announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans often signal underlying financial distress and potential short-term costs, creating uncertainty about future profitability.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Jorvix Diagnostics Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "Unexpected departure of a key executive like the COO creates immediate leadership instability and market concern.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics launches next-generation enterprise software platform"
+      "headline": "Jorvix Diagnostics launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a new software platform is a positive growth catalyst that can drive revenue expansion over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces breakthrough in renewable storage"
+      "headline": "Holtum Asset Group announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A breakthrough in renewable storage represents a significant long-term value driver, though commercialization timelines remain unclear.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings to present at Corporate Strategy Symposium"
+      "headline": "Talvix Holdings to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a standard corporate activity that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics to present at Capital Markets Day"
+      "headline": "Jorvix Diagnostics to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Day events are routine investor relations activities that generally do not provide immediate material impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings delays product launch in process automation segment"
+      "headline": "Talvix Holdings delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch suggests potential internal execution issues or competitive pressures, negatively impacting short-term sentiment.",
+        "longTerm": -1,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:35.344Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

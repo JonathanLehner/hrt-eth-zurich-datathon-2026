@@ -53,49 +53,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics announces significant capital expenditure plan for Central Europe"
+      "headline": "Jorvix Diagnostics announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $320M contract with an international consortium"
+      "headline": "Jorvix Diagnostics secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides immediate revenue visibility and long-term financial stability.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences files for regulatory approval of new data analytics offering"
+      "headline": "Relvos Biosciences files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward commercialization but carries inherent uncertainty regarding the approval timeline.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co delays product launch in supply chain optimization segment"
+      "headline": "Pleven Trading Co delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal that directly impacts short-term revenue expectations and market sentiment.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports strong demand in Central Europe, raises outlook"
+      "headline": "Jorvix Diagnostics reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are direct positive indicators for both immediate and future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences files for regulatory approval of new precision manufacturing offering"
+      "headline": "Relvos Biosciences files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering signals potential future growth, though the outcome remains subject to regulatory review.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics sees mixed results in process automation pilot program"
+      "headline": "Jorvix Diagnostics sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the process automation initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:57.871Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

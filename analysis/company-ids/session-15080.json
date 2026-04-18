@@ -55,56 +55,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals sees 12% margin improvement in latest quarter"
+      "headline": "Yorvov Pharmaceuticals sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly signals increased profitability and operational efficiency for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals withdraws from Southeast Asia market citing unfavorable conditions"
+      "headline": "Yorvov Pharmaceuticals withdraws from Southeast Asia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a regional market indicates a loss of revenue streams and potential strategic challenges.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals files for regulatory approval of new automated logistics offering"
+      "headline": "Yorvov Pharmaceuticals files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion but remains subject to external approval timelines.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics faces class action over renewable storage service disruption"
+      "headline": "Frelis Genomics faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits represent significant legal and financial risk that can weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces significant capital expenditure plan for Central Europe"
+      "headline": "Frelis Genomics announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals announces breakthrough in process automation"
+      "headline": "Yorvov Pharmaceuticals announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for long-term cost savings and efficiency gains.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Zelvon Biosciences begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics schedules annual shareholder meeting for next month"
+      "headline": "Frelis Genomics schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling an annual shareholder meeting is a standard corporate governance procedure with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:46.887Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

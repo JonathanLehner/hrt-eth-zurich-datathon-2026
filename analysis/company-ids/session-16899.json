@@ -50,35 +50,96 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Halvax Networks recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational costs and potential reputational damage that may linger as the company addresses quality control.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $500M contract with a global retailer"
+      "headline": "Jovor Networks secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a clear, immediate, and sustained boost to revenue expectations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid faces regulatory review of wireless connectivity practices"
+      "headline": "Nerven Grid faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential long-term legal or operational constraints for the company.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports 10% increase in customer acquisition"
+      "headline": "Jovor Networks reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition is a strong indicator of growth momentum that should positively impact financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks secures $400M contract with a major logistics provider"
+      "headline": "Halvax Networks secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $400M contract win provides a significant and reliable revenue stream that offsets previous negative news for the company.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:12.052Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

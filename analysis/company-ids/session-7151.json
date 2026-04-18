@@ -65,56 +65,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce raises full-year guidance citing robust demand"
+      "headline": "Arnik Commerce raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance is a direct positive signal of financial health and strong market demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $650M contract with a top-tier research institute"
+      "headline": "Zelvel Capital secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce files for regulatory approval of new wireless connectivity offering"
+      "headline": "Arnik Commerce files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for product expansion but carries inherent uncertainty regarding the outcome.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital expands operations into Middle East markets"
+      "headline": "Zelvel Capital expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets signals growth intent but involves execution risk and initial capital expenditure.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital delays product launch in cloud infrastructure segment"
+      "headline": "Zelvel Capital delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal that suggests operational friction or development setbacks.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital files routine patent applications in cloud infrastructure"
+      "headline": "Zelvel Capital files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and generally have negligible impact on short-term financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group files for regulatory approval of new digital payments offering"
+      "headline": "Crevol Retail Group files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Regulatory filings for new offerings are standard procedural steps that indicate future growth potential but lack immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $400M contract with a major logistics provider"
+      "headline": "Ixenis Outlets secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $400M contract win is a significant positive event that directly improves revenue outlook and market positioning.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:28.911Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

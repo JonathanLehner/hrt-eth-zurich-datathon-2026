@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Kelvos Resources reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "A 3% year-over-year revenue increase is a modest positive signal of stable growth.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Orevov Solutions completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions to strengthen core capabilities typically signal long-term value creation despite integration risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels in talks for potential merger, details undisclosed"
+      "headline": "Relvon Fuels in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Speculative merger talks create high uncertainty as the outcome and terms remain entirely undisclosed.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Kelvos Resources completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Acquiring assets to enhance precision manufacturing provides a clear, positive operational expansion signal.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions explores strategic alternatives for data analytics unit"
+      "headline": "Wyrnor Solutions explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a neutral to positive signal that management is seeking to unlock value, though the outcome is highly uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions schedules annual shareholder meeting for next month"
+      "headline": "Wyrnor Solutions schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate governance event with no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions misses quarterly revenue estimates by 15%"
+      "headline": "Orevov Solutions misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss is a significant negative indicator that typically triggers immediate downward pressure on stock performance.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:55.905Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

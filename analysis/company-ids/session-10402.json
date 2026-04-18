@@ -50,35 +50,96 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics to present at Annual Industry Forum"
+      "headline": "Myrnon Therapeutics to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a routine corporate event that typically lacks significant material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Xovol Goods recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates operational failure and potential financial liability, creating immediate negative sentiment and long-term brand/cost risks.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics sees 10% margin improvement in latest quarter"
+      "headline": "Myrnon Therapeutics sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement directly signals increased profitability and operational efficiency, which is a strong positive indicator for financial health.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co wins industry award for excellence in digital payments"
+      "headline": "Pleven Trading Co wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but rarely translate into immediate or sustained material financial gains.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co explores strategic alternatives for digital payments unit"
+      "headline": "Pleven Trading Co explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague signal that could lead to a sale, spin-off, or restructuring, creating high uncertainty regarding future value.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:28.389Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

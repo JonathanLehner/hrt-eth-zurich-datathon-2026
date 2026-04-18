@@ -50,35 +50,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace recalls products in data analytics line due to quality concerns"
+      "headline": "Orevar Marketplace recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in the core data analytics line directly impacts revenue and brand reputation, creating immediate negative pressure.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in enterprise software line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling enterprise software products suggests significant technical failure, likely leading to customer churn and immediate negative market sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace files for regulatory approval of new precision manufacturing offering"
+      "headline": "Orevar Marketplace files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward future revenue growth, though the outcome remains subject to the regulatory timeline.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace completes strategic acquisition to strengthen process automation"
+      "headline": "Orevar Marketplace completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to enhance automation capabilities provides a clear path to operational efficiency and potential market expansion.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands faces regulatory review of renewable storage practices"
+      "headline": "Halvav Brands faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of storage practices introduces uncertainty and potential compliance costs, weighing negatively on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:33.122Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

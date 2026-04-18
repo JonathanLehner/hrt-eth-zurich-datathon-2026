@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma faces class action over digital payments service disruption"
+      "headline": "Nerval Biopharma faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate reputational and financial risk for the company.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics misses quarterly revenue estimates by 25%"
+      "headline": "Calvos Genomics misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss indicates fundamental operational weakness that will likely weigh on investor sentiment for the entire quarter.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics secures $500M contract with a multinational manufacturer"
+      "headline": "Grevel Diagnostics secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a clear and substantial boost to future revenue visibility and company valuation.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $250M contract with a national infrastructure agency"
+      "headline": "Nerval Biopharma secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $250M contract win with a government agency provides a stable and positive long-term revenue stream.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics to present at Tech Leadership Conference"
+      "headline": "Calvos Genomics to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate activity that typically lacks significant material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics expands operations into North America markets"
+      "headline": "Frelis Genomics expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding into a major new geographic market represents a significant growth opportunity, though execution risks remain.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees 10% margin improvement in latest quarter"
+      "headline": "Grevel Diagnostics sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement directly enhances profitability and suggests improved operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:34.308Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

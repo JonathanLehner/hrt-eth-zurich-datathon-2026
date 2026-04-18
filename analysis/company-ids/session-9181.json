@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co confirms participation in Emerging Markets Forum"
+      "headline": "Jorval Trading Co confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard networking event that rarely provides direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $400M contract with a major logistics provider"
+      "headline": "Arnos Marketplace secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, immediate, and sustained revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co loses key contract in Middle East to competitor"
+      "headline": "Jorval Trading Co loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and signals competitive weakness in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores faces class action over wireless connectivity service disruption"
+      "headline": "Xovep Stores faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal uncertainty and potential financial liability for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings completes planned facility upgrade in Southeast Asia"
+      "headline": "Halvix Holdings completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "A planned facility upgrade is an operational milestone that typically improves efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports 15% increase in customer acquisition"
+      "headline": "Xovep Stores reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong indicator of growth and improved market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings names new head of digital payments division"
+      "headline": "Halvix Holdings names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with uncertain strategic impact until results are seen.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:43.400Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

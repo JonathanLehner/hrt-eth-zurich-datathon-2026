@@ -56,56 +56,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial expands operations into Southeast Asia markets"
+      "headline": "Ilval Financial expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a positive growth signal but involves execution risk and delayed revenue realization.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial loses key contract in Central Europe to competitor"
+      "headline": "Ilval Financial loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract is a direct negative impact on revenue with immediate and lingering financial consequences.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma files for regulatory approval of new digital payments offering"
+      "headline": "Zrovum Biopharma files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive milestone but the outcome and timeline remain subject to external regulatory review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $800M contract with a top-tier research institute"
+      "headline": "Zelvix Therapeutics secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, high-value revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics sees 18% drop in new customer orders this quarter"
+      "headline": "Zelvix Therapeutics sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders is a clear negative indicator of demand that will likely impact financial performance for the remainder of the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Ilval Financial completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Acquiring infrastructure assets is a strategic move that provides long-term operational benefits but may cause short-term integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma enters joint venture with a leading cloud platform"
+      "headline": "Zrovum Biopharma enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a major cloud platform suggests future growth potential but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics announces breakthrough in digital payments"
+      "headline": "Zelvix Therapeutics announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments is a positive technological development that could lead to new revenue streams, though commercialization timelines are unclear.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:32.129Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

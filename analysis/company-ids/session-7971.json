@@ -52,42 +52,113 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid to host investor day focused on process automation strategy"
+      "headline": "Urvel Grid to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that typically have minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $500M contract with an international consortium"
+      "headline": "Wyrnor Solutions secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $500M contract win provides a clear, significant, and durable revenue boost for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power revises long-term strategy with focus on renewable storage"
+      "headline": "Kelvik Power revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward renewable storage indicate long-term repositioning but lack immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $50M contract with a major logistics provider"
+      "headline": "Urvel Grid secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a positive development that directly contributes to near-term revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid delays product launch in cloud infrastructure segment"
+      "headline": "Urvel Grid delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment creates immediate negative sentiment and potential revenue deferral.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions loses key contract in Scandinavia to competitor"
+      "headline": "Wyrnor Solutions loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share, negatively impacting financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:57.333Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

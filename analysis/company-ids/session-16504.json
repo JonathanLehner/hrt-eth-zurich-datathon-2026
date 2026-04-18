@@ -62,42 +62,113 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings loses key contract in Europe to competitor"
+      "headline": "Halvix Holdings loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly reduces revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces significant capital expenditure plan for Middle East"
+      "headline": "Holtum Asset Group announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Zrovov Advisors reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and margin stability in the near and medium term.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $320M contract with a global retailer"
+      "headline": "Holtum Asset Group secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, positive revenue boost for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $250M contract with a leading cloud platform"
+      "headline": "Zrovov Advisors secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $250M contract win with a major platform validates the company's service offering and revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $800M contract with a national infrastructure agency"
+      "headline": "Creven Securities secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "An $800M contract with a national agency represents a substantial, high-visibility revenue stream.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:57.431Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

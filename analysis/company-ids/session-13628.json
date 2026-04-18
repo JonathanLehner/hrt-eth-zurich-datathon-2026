@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 25% margin improvement in latest quarter"
+      "headline": "Yorven Labs sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement indicates significant operational efficiency gains that directly boost profitability.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $250M contract with a leading cloud platform"
+      "headline": "Myrnep Technologies secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, substantial revenue boost and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $800M contract with a leading cloud platform"
+      "headline": "Prynis Systems secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial event that significantly improves the company's revenue outlook.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Prynis Systems warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $250M contract with a major logistics provider"
+      "headline": "Myrnep Technologies secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A second major contract win within a short period signals strong demand and consistent business development success.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports 5% increase in customer acquisition"
+      "headline": "Crevex Labs reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a positive growth indicator that suggests successful market penetration.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Yorven Labs reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% demonstrates strong underlying business momentum and scaling capabilities.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:33.258Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

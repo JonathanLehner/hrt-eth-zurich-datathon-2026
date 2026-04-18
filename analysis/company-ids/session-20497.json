@@ -38,28 +38,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks wins industry award for excellence in digital payments"
+      "headline": "Jovor Networks wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but rarely translate into immediate or sustained material financial gains.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries delays product launch in automated logistics segment"
+      "headline": "Zrovex Industries delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly impacts revenue realization and suggests potential operational or technical hurdles.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries expands operations into Central Europe markets"
+      "headline": "Zrovex Industries expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion indicates growth potential, though the immediate financial impact is often muted by initial setup costs.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $320M contract with a national infrastructure agency"
+      "headline": "Jovor Networks secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, high-confidence revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:24.043Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

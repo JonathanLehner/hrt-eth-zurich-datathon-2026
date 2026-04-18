@@ -39,35 +39,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands misses quarterly revenue estimates by 8%"
+      "headline": "Halvav Brands misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss indicates immediate operational weakness and likely negative sentiment in the short term.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables faces regulatory review of renewable storage practices"
+      "headline": "Ulvon Renewables faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential operational constraints that weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $250M contract with a global retailer"
+      "headline": "Ulvon Renewables secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, tangible revenue growth and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables recalls products in automated logistics line due to quality concerns"
+      "headline": "Ulvon Renewables recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate financial costs and reputational damage, with lingering uncertainty regarding the scope of the quality issue.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces significant capital expenditure plan for Central Europe"
+      "headline": "Ulvon Renewables announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth ambitions but may pressure short-term cash flow and margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:36.873Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

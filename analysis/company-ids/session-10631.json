@@ -46,21 +46,62 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $75M contract with a leading cloud platform"
+      "headline": "Frelol Software secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "The $75M contract provides a clear, immediate revenue boost and validates the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces $7.9B share buyback program"
+      "headline": "Nolvav Commerce announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to the stock price.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 10% drop in new customer orders this quarter"
+      "headline": "Yorven Labs sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% decline in new customer orders indicates a direct hit to growth momentum and future revenue potential.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:36.759Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

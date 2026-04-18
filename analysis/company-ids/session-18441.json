@@ -54,49 +54,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports unexpected decline in Asia Pacific revenue"
+      "headline": "Grevon Biotech reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural demand issues or competitive pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics files for regulatory approval of new enterprise software offering"
+      "headline": "Grevel Diagnostics files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress but does not guarantee immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces breakthrough in automated logistics"
+      "headline": "Frelis Genomics announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in automated logistics suggests potential for improved operational efficiency and margin expansion.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Frelis Genomics completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquiring a company to optimize the supply chain is a strategic move that typically yields long-term efficiency gains rather than immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics secures $500M contract with a top-tier research institute"
+      "headline": "Grevel Diagnostics secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics completes planned facility upgrade in Scandinavia"
+      "headline": "Frelis Genomics completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that is likely already priced in by the market.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech misses quarterly revenue estimates by 20%"
+      "headline": "Grevon Biotech misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A significant 20% revenue miss relative to estimates is a strong negative indicator of current business performance.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:09.037Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

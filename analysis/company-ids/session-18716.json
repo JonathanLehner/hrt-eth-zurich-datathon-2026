@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports rising costs pressuring margins in automated logistics"
+      "headline": "Brevep Systems reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability in the near and medium term.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences completes planned facility upgrade in Central Europe"
+      "headline": "Wyrnik Sciences completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a neutral to slightly positive operational milestone that is already priced in.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences board meeting to discuss major strategic initiative"
+      "headline": "Wyrnik Sciences board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a strategic initiative is speculative and lacks concrete details to assess financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $320M contract with an international consortium"
+      "headline": "Jovor Networks secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, positive revenue boost with high visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks to host investor day focused on enterprise software strategy"
+      "headline": "Jovor Networks to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day is a standard corporate event that rarely moves the stock price significantly without specific new disclosures.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $500M contract with a leading cloud platform"
+      "headline": "Jovor Networks secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $500M contract with a major cloud platform is a significant positive development for revenue growth and market positioning.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:18.726Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

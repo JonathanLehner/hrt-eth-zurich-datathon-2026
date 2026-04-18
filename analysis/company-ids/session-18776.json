@@ -62,42 +62,113 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Zelval Energy reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising supply chain costs directly threaten profit margins, signaling immediate and persistent financial headwinds.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Nerven Grid Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the COO is a reactive communication measure that lacks specific financial guidance or operational changes.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $320M contract with a national infrastructure agency"
+      "headline": "Zelval Energy secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, quantifiable revenue growth and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power announces major organizational restructuring"
+      "headline": "Kelvik Power announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring creates significant operational ambiguity and potential short-term disruption to productivity.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets announces $1.2B share buyback program"
+      "headline": "Frelex Outlets announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program is a direct capital allocation action that typically boosts earnings per share and investor sentiment.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power wins industry award for excellence in precision manufacturing"
+      "headline": "Kelvik Power wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "An industry award for manufacturing excellence is a positive reputational signal but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:20.792Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

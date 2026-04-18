@@ -40,35 +40,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports unexpected decline in Central Europe revenue"
+      "headline": "Relvos Biosciences reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional revenue stream indicates a negative operational trend that will likely weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports unexpected decline in Scandinavia revenue"
+      "headline": "Relvos Biosciences reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "A second regional revenue decline suggests broader systemic weakness in the company's European operations, compounding the negative impact.",
+        "longTerm": -6,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $250M contract with a multinational manufacturer"
+      "headline": "Grevon Biotech secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides a clear, quantifiable boost to future revenue and validates the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences launches next-generation automated logistics platform"
+      "headline": "Relvos Biosciences launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "The launch of a new logistics platform is a positive operational development that could improve efficiency, though the immediate financial impact is not yet quantified.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees 20% margin improvement in latest quarter"
+      "headline": "Grevon Biotech sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement is a strong indicator of increased profitability and operational efficiency that will likely be viewed favorably by the market.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:43.396Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

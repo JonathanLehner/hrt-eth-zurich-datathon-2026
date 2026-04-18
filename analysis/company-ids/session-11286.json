@@ -66,56 +66,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies signs multi-year partnership with an international consortium"
+      "headline": "Myrnep Technologies signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for Myrnep Technologies.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $50M contract with a multinational manufacturer"
+      "headline": "Myrnep Technologies secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a specific $50M contract provides immediate financial inflow and confirms strong market demand for the company's services.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Myrnep Technologies reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs in cloud infrastructure directly threaten profitability and margin stability for the company.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs misses quarterly revenue estimates by 18%"
+      "headline": "Crevex Labs misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of operational performance and market demand.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma revises long-term strategy with focus on renewable storage"
+      "headline": "Zrovum Biopharma revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage introduces significant execution risk and uncertainty regarding future profitability.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems completes strategic acquisition to strengthen renewable storage"
+      "headline": "Brevep Systems completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "The acquisition of a company to strengthen renewable storage capabilities is a clear strategic expansion move.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma launches next-generation process automation platform"
+      "headline": "Zrovum Biopharma launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new automation platform is a positive product development that could drive future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs announces $8.4B share buyback program"
+      "headline": "Crevex Labs announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:01.083Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -65,56 +65,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands begins scheduled maintenance of enterprise software systems"
+      "headline": "Halvav Brands begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands opens new office in Scandinavia"
+      "headline": "Halvav Brands opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a minor expansion effort with limited immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $75M contract with an international consortium"
+      "headline": "Nerven Grid secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports strong demand in Scandinavia, raises outlook"
+      "headline": "Urvel Grid reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a direct positive signal for future financial performance.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 3% margin improvement in latest quarter"
+      "headline": "Kelvos Resources sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates increased operational efficiency and profitability.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands revises long-term strategy with focus on precision manufacturing"
+      "headline": "Halvav Brands revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic revisions are qualitative and lack immediate financial quantification, leading to high uncertainty.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Urvel Grid reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% is a strong indicator of current business momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Halvav Brands recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall introduces immediate negative financial costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:00.257Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

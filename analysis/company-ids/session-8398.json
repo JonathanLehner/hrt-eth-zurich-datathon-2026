@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 15% increase in customer acquisition"
+      "headline": "Nerval Biopharma reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition directly signals revenue growth potential and improved market penetration.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Nerval Biopharma completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquiring assets to optimize supply chain provides structural efficiency gains that typically manifest over time.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma expands operations into Europe markets"
+      "headline": "Nerval Biopharma expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into Europe represents a significant growth opportunity but involves initial setup costs and market entry risks.",
+        "longTerm": 6,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Ixenis Outlets recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate negative sentiment and direct costs related to logistics and potential brand damage.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces significant capital expenditure plan for Middle East"
+      "headline": "Zelvon Biosciences announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports unexpected decline in Latin America revenue"
+      "headline": "Zelvon Biosciences reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a negative indicator of demand or competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets revises long-term strategy with focus on renewable storage"
+      "headline": "Ixenis Outlets revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage is a long-term directional shift that lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen automated logistics"
+      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Acquiring logistics capabilities is a strategic move to improve operational efficiency and margin control.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:14.452Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

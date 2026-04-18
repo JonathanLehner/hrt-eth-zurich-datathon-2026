@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports rising costs pressuring margins in automated logistics"
+      "headline": "Xovol Goods reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability, creating a negative outlook for margins in the near and medium term.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports strong demand in Scandinavia, raises outlook"
+      "headline": "Frelis Genomics reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and a raised outlook provide clear positive signals for both immediate and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Calvos Genomics reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Margin pressure due to rising infrastructure costs is a negative indicator for profitability that likely persists through the quarter.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Calvos Genomics reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand and an improved outlook are positive indicators for revenue growth and operational success.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $500M contract with a top-tier research institute"
+      "headline": "Yorvov Pharmaceuticals secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A large, specific contract win provides immediate revenue visibility and long-term stability for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics explores strategic alternatives for wireless connectivity unit"
+      "headline": "Frelis Genomics explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is ambiguous and creates uncertainty regarding the future of the business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals launches next-generation precision manufacturing platform"
+      "headline": "Yorvov Pharmaceuticals launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "The launch of a new platform is a positive development that suggests future revenue potential and competitive advantage.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:20.804Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

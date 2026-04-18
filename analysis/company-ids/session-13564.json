@@ -64,49 +64,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics sees 5% margin improvement in latest quarter"
+      "headline": "Zelvix Therapeutics sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly indicates increased profitability and operational efficiency for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics sees mixed results in precision manufacturing pilot program"
+      "headline": "Zelvix Therapeutics sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the new manufacturing initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital expands operations into Southeast Asia markets"
+      "headline": "Zelvel Capital expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets represents a strategic growth initiative that typically signals long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports unexpected decline in Asia Pacific revenue"
+      "headline": "Frelis Genomics reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a key region is a negative indicator for short-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics delays product launch in supply chain optimization segment"
+      "headline": "Jorvix Diagnostics delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and suggests potential internal execution issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $650M contract with a national infrastructure agency"
+      "headline": "Frelis Genomics secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant, concrete revenue visibility and strengthens the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics begins scheduled maintenance of process automation systems"
+      "headline": "Frelis Genomics begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:30.845Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems names new head of precision manufacturing division"
+      "headline": "Brevep Systems names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has neutral immediate impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices files routine patent applications in wireless connectivity"
+      "headline": "Nolvis Devices files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operating procedure and do not provide immediate or predictable financial upside.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces significant capital expenditure plan for Scandinavia"
+      "headline": "Talvep Computing announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals growth investment but implies near-term cash outflows.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing signs multi-year partnership with a major logistics provider"
+      "headline": "Talvep Computing signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing begins scheduled maintenance of digital payments systems"
+      "headline": "Talvep Computing begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and should not impact financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports rising costs pressuring margins in automated logistics"
+      "headline": "Nolvis Devices reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profit margins, creating a clear negative financial signal.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing explores strategic alternatives for automated logistics unit"
+      "headline": "Talvep Computing explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit introduces significant uncertainty regarding the future structure and value of the segment.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees mixed results in data analytics pilot program"
+      "headline": "Nolvis Devices sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate lack of clear success, leading to uncertainty about future adoption and revenue.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:40.443Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

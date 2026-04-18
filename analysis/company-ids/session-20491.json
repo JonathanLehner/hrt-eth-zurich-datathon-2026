@@ -43,49 +43,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees mixed results in renewable storage pilot program"
+      "headline": "Jorvyl Securities sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the viability and future revenue potential of the renewable storage initiative.",
+        "longTerm": -2,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces significant capital expenditure plan for Scandinavia"
+      "headline": "Creven Securities announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports 12% decline in operating income"
+      "headline": "Creven Securities reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a direct negative indicator of current profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $400M contract with a leading cloud platform"
+      "headline": "Creven Securities secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides clear, high-value revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $800M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "An $800M contract win is a substantial positive catalyst that significantly boosts revenue outlook and investor confidence.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities files routine patent applications in enterprise software"
+      "headline": "Jorvyl Securities files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces significant capital expenditure plan for Latin America"
+      "headline": "Jorvyl Securities announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Capital expenditure for expansion into Latin America indicates a strategic growth phase that will likely weigh on short-term cash flow while promising long-term returns.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:24.723Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports 3% decline in operating income"
+      "headline": "Talvyn Goods reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 3% decline in operating income indicates a moderate contraction in profitability that will likely weigh on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports unexpected decline in Middle East revenue"
+      "headline": "Talvyn Goods reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region creates immediate concern regarding growth sustainability and regional operational health.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets announces $5.7B share buyback program"
+      "headline": "Ixenis Outlets announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to the stock price through capital return.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports strong demand in Europe, raises outlook"
+      "headline": "Holtum Asset Group reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are clear positive indicators of operational momentum and future earnings potential.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods loses key contract in Central Europe to competitor"
+      "headline": "Talvyn Goods loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts future revenue streams and suggests a competitive disadvantage in the region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 25% decline in operating income"
+      "headline": "Holtum Asset Group reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative event that suggests substantial operational or margin pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores enters joint venture with a major logistics provider"
+      "headline": "Xovep Stores enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests potential for operational efficiency improvements and long-term growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:25.331Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

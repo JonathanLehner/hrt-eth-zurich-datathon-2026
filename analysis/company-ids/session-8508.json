@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to present at Corporate Strategy Symposium"
+      "headline": "Plevep Power to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a strategy symposium is a standard corporate event that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Talvix Holdings Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive creates immediate leadership uncertainty and potential strategic instability.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $250M contract with an international consortium"
+      "headline": "Holtum Asset Group secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power files routine patent applications in automated logistics"
+      "headline": "Plevep Power files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate financial impact or competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $500M contract with a major logistics provider"
+      "headline": "Plevep Power secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $500M contract is a significant revenue driver that will positively impact financial performance over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments recalls products in automated logistics line due to quality concerns"
+      "headline": "Halven Investments recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control issues that will lead to immediate costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group expands operations into Scandinavia markets"
+      "headline": "Holtum Asset Group expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets represents a growth opportunity, though the financial payoff is typically gradual.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:17.536Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

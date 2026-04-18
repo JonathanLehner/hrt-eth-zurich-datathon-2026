@@ -36,21 +36,62 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions begins scheduled maintenance of data analytics systems"
+      "headline": "Orevov Solutions begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables beats analyst expectations with strong earnings growth"
+      "headline": "Ulvon Renewables beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a clear positive signal for investor sentiment and valuation in the near term.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $320M contract with a multinational manufacturer"
+      "headline": "Ulvon Renewables secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a concrete revenue boost that will likely impact financial results over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:36.506Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

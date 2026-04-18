@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $800M contract with a multinational manufacturer"
+      "headline": "Xelvol Biotech secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "The $800M contract provides a clear, significant revenue boost that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals faces regulatory review of process automation practices"
+      "headline": "Krevum Pharmaceuticals faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational friction, which typically weighs on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources enters joint venture with a top-tier research institute"
+      "headline": "Kelvos Resources enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a top-tier institute suggests long-term R&D potential but lacks immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma signs multi-year partnership with an international consortium"
+      "headline": "Nerval Biopharma signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides stable, long-term revenue visibility and strategic validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals launches next-generation process automation platform"
+      "headline": "Krevum Pharmaceuticals launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive growth signal that could drive future revenue, though adoption rates remain to be seen.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Xelvol Biotech recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control issues that will likely cause immediate financial and reputational damage.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports 3% increase in customer acquisition"
+      "headline": "Xelvol Biotech reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a modest positive indicator of growth, though the impact is relatively small.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:51.158Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

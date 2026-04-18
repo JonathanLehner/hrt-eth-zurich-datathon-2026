@@ -46,21 +46,62 @@
       "barIx": 26,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma secures $800M contract with an international consortium"
+      "headline": "Zrovum Biopharma secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $800M contract provides a clear, significant revenue boost that will positively impact the company's financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce files for regulatory approval of new automated logistics offering"
+      "headline": "Nolvav Commerce files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, but the outcome and timeline remain subject to external regulatory review.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees 10% margin improvement in latest quarter"
+      "headline": "Grevel Diagnostics sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates immediate operational efficiency gains that are likely to persist throughout the current quarter.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:36.923Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial to host investor day focused on renewable storage strategy"
+      "headline": "Wrelal Financial to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions schedules annual shareholder meeting for next month"
+      "headline": "Wyrnor Solutions schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling an annual shareholder meeting is a standard administrative requirement with no direct financial implication.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Plevum Partners reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $400M contract with a multinational manufacturer"
+      "headline": "Halven Investments secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, immediate, and durable revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces breakthrough in precision manufacturing"
+      "headline": "Halven Investments announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in manufacturing technology suggests potential long-term competitive advantages but lacks immediate financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Wrelal Financial reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins indicate a persistent operational headwind that negatively affects bottom-line performance.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:27.491Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

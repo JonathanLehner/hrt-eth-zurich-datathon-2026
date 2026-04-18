@@ -48,28 +48,79 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy enters joint venture with a major logistics provider"
+      "headline": "Zelval Energy enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "The joint venture with a major logistics provider suggests a strategic expansion of operational capabilities that should provide long-term growth benefits.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Orevex Renewables reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs in cloud infrastructure directly threaten profitability and margins, creating a negative outlook for the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels recalls products in process automation line due to quality concerns"
+      "headline": "Relvon Fuels recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage, with lingering uncertainty regarding the scope of the quality issue.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $650M contract with a leading cloud platform"
+      "headline": "Relvon Fuels secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant revenue boost that will positively impact the company's financial standing over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:22.102Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Jorvix Diagnostics warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics misses quarterly revenue estimates by 5%"
+      "headline": "Jorvix Diagnostics misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates immediate negative sentiment and potential downward pressure on stock valuation.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Nerval Biopharma reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth provides strong positive momentum and validates current business performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma loses key contract in North America to competitor"
+      "headline": "Nerval Biopharma loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts future revenue streams and competitive positioning.",
+        "longTerm": -7,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands signs multi-year partnership with a multinational manufacturer"
+      "headline": "Halvav Brands signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term revenue stability and strategic growth potential.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma sees 8% drop in new customer orders this quarter"
+      "headline": "Zrovum Biopharma sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new orders signals weakening demand that could persist throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:39.760Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 17,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables to present at Tech Leadership Conference"
+      "headline": "Orevex Renewables to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate activity that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy announces significant capital expenditure plan for Europe"
+      "headline": "Zelval Energy announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources opens new office in Middle East"
+      "headline": "Nolvol Resources opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion and potential for new revenue streams in the region.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables delays product launch in wireless connectivity segment"
+      "headline": "Orevex Renewables delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal regarding operational execution and potential revenue timing.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files routine patent applications in automated logistics"
+      "headline": "Orevex Renewables files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard business practice that does not provide immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:59.454Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

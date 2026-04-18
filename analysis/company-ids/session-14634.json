@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co misses quarterly revenue estimates by 18%"
+      "headline": "Jorval Trading Co misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current financial performance and market demand.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co faces regulatory review of digital payments practices"
+      "headline": "Jorval Trading Co faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational risk and potential for future fines or forced business model changes.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports 18% increase in customer acquisition"
+      "headline": "Talvyn Goods reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition is a strong positive signal for growth and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods launches next-generation cloud infrastructure platform"
+      "headline": "Xovol Goods launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a new cloud platform suggests product innovation that could drive long-term competitive advantage and revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Xovol Goods warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential margin pressure.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets faces class action over process automation service disruption"
+      "headline": "Frelex Outlets faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit creates legal and financial uncertainty, potentially impacting brand reputation and bottom-line costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods faces regulatory review of data analytics practices"
+      "headline": "Talvyn Goods faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny of data analytics practices poses a risk to core service offerings and potential compliance costs.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $250M contract with an international consortium"
+      "headline": "Frelex Outlets secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, substantial, and durable boost to future revenue streams.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:29.920Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

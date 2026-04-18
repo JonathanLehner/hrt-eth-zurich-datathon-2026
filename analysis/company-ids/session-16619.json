@@ -34,14 +34,45 @@
       "barIx": 27,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees mixed results in data analytics pilot program"
+      "headline": "Zelvon Biosciences sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "The term mixed results indicates a lack of clear success or failure, creating ambiguity regarding the program's future viability.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid delays product launch in digital payments segment"
+      "headline": "Nerven Grid delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly postpones expected revenue streams and signals potential operational or technical challenges.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:00.325Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

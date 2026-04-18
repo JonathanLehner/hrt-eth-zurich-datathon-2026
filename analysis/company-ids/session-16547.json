@@ -48,28 +48,79 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Relvos Biosciences recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns directly impacts revenue and brand reputation, creating immediate negative pressure.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics recalls products in process automation line due to quality concerns"
+      "headline": "Calvos Genomics recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling products from a process automation line suggests operational disruption and potential customer dissatisfaction.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports strong demand in Europe, raises outlook"
+      "headline": "Calvos Genomics reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are clear positive indicators of financial performance and growth momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors revises long-term strategy with focus on data analytics"
+      "headline": "Plevyl Advisors revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics is a qualitative shift that lacks immediate financial quantification or guaranteed outcomes.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:58.510Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

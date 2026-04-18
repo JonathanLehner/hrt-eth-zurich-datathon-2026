@@ -52,42 +52,113 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports 18% decline in operating income"
+      "headline": "Relvos Biosciences reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Ixenis Outlets announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences wins industry award for excellence in supply chain optimization"
+      "headline": "Relvos Biosciences wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences launches next-generation renewable storage platform"
+      "headline": "Zelvon Biosciences launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation product platform creates potential for new revenue streams and market share growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets sees mixed results in supply chain optimization pilot program"
+      "headline": "Ixenis Outlets sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the effectiveness and scalability of the supply chain initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences completes strategic acquisition to strengthen automated logistics"
+      "headline": "Relvos Biosciences completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition of automated logistics capabilities is a strategic move to improve long-term operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:14.842Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -60,35 +60,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies wins industry award for excellence in cloud infrastructure"
+      "headline": "Ixenix Technologies wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct, quantifiable financial impact on revenue or margins.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 25% drop in new customer orders this quarter"
+      "headline": "Ulvyn Microchips sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a direct, material indicator of slowing demand that will negatively impact future revenue.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital faces class action over automated logistics service disruption"
+      "headline": "Ervan Capital faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial uncertainty, though the ultimate liability remains speculative.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies reports rising costs pressuring margins in process automation"
+      "headline": "Ixenix Technologies reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability, signaling a persistent margin squeeze that will likely impact upcoming earnings reports.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports unexpected decline in Europe revenue"
+      "headline": "Volval Devices reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market indicates a negative trend that will likely weigh on overall financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:55.719Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

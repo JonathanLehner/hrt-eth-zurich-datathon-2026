@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital signs multi-year partnership with a national infrastructure agency"
+      "headline": "Ervan Capital signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides stable, long-term revenue visibility for Ervan Capital.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital expands operations into Europe markets"
+      "headline": "Ervan Capital expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into European markets represents a significant growth opportunity but involves initial execution and regulatory hurdles.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics expands operations into Scandinavia markets"
+      "headline": "Zelvix Therapeutics expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into Scandinavia is a positive growth signal for Zelvix Therapeutics, though the immediate financial impact is likely modest.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences announces breakthrough in precision manufacturing"
+      "headline": "Wyrnik Sciences announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing suggests potential for improved margins or competitive advantage for Wyrnik Sciences.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences sees 20% drop in new customer orders this quarter"
+      "headline": "Wyrnik Sciences sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a clear negative indicator of weakening demand for Wyrnik Sciences.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences delays product launch in digital payments segment"
+      "headline": "Wyrnik Sciences delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in the digital payments segment creates immediate uncertainty and potential revenue deferral for Wyrnik Sciences.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:06.689Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

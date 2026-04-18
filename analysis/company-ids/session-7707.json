@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions opens new office in Middle East"
+      "headline": "Orevov Solutions opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal but lacks immediate revenue impact details.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group enters joint venture with an international consortium"
+      "headline": "Crevol Retail Group enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "A joint venture with an international consortium suggests strategic growth, though the specific financial contribution remains undefined.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources loses key contract in Europe to competitor"
+      "headline": "Kelvos Resources loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract is a direct negative event that will likely impact revenue and market share immediately.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions enters joint venture with a leading cloud platform"
+      "headline": "Orevov Solutions enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Partnering with a leading cloud platform provides a clear strategic advantage for service delivery and potential market reach.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries wins industry award for excellence in renewable storage"
+      "headline": "Zrovex Industries wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Crevol Retail Group reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% is a strong indicator of operational success and market demand.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Kelvos Resources reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "A 15% year-over-year revenue increase is a significant positive financial indicator that strengthens the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:48.125Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

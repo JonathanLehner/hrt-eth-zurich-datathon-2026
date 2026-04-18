@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals names new head of automated logistics division"
+      "headline": "Krevum Pharmaceuticals names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments enters joint venture with a leading cloud platform"
+      "headline": "Halven Investments enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a cloud platform suggests future growth potential but lacks specific financial details or immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees 7% margin improvement in latest quarter"
+      "headline": "Ervan Capital sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement is a direct, positive indicator of operational efficiency and profitability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $75M contract with a major logistics provider"
+      "headline": "Halven Investments secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue growth for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities completes strategic acquisition to strengthen enterprise software"
+      "headline": "Jorvyl Securities completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The acquisition of an enterprise software firm is a strategic move that typically requires time to integrate and realize value.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $800M contract with a leading cloud platform"
+      "headline": "Ervan Capital secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "An $800M contract is a significant, high-value win that will materially impact the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals faces regulatory review of process automation practices"
+      "headline": "Krevum Pharmaceuticals faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential compliance costs, which is viewed negatively by the market.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:38.951Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

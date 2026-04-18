@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces class action over precision manufacturing service disruption"
+      "headline": "Plevik Energy faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk that typically triggers immediate negative market sentiment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports rising costs pressuring margins in renewable storage"
+      "headline": "Nerven Grid reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a fundamental negative signal for profitability that investors react to immediately.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables wins industry award for excellence in automated logistics"
+      "headline": "Orevex Renewables wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but generally have a negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group files for regulatory approval of new wireless connectivity offering"
+      "headline": "Varvov Retail Group files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates future growth potential but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports rising costs pressuring margins in renewable storage"
+      "headline": "Nerven Grid reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "This is a duplicate report of cost pressures, which reinforces the negative outlook on margins for the company.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Plevik Energy reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs in a specific business segment create a clear headwind for earnings that will likely persist over the coming months.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Orevex Renewables announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment, though it may cause short-term cash flow concerns.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:58.873Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

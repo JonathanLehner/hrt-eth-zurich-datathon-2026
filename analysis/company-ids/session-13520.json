@@ -42,49 +42,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace to present at Emerging Markets Forum"
+      "headline": "Arnos Marketplace to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity with minimal immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace confirms participation in Capital Markets Day"
+      "headline": "Arnos Marketplace confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a routine investor relations event that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Halvav Brands reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 15% is a strong positive indicator of business health and market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands sees 7% drop in new customer orders this quarter"
+      "headline": "Halvav Brands sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders suggests a moderate cooling of demand that could impact future revenue.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands sees 25% drop in new customer orders this quarter"
+      "headline": "Halvav Brands sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative signal indicating a sharp decline in demand.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands recalls products in process automation line due to quality concerns"
+      "headline": "Halvav Brands recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls typically lead to immediate costs and potential reputational damage that can persist.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands faces regulatory review of process automation practices"
+      "headline": "Halvav Brands faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential legal or operational costs for the company.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:28.815Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences sees 7% drop in new customer orders this quarter"
+      "headline": "Wyrnik Sciences sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates a direct decline in revenue growth momentum.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports strong demand in Middle East, raises outlook"
+      "headline": "Frelis Genomics reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with a raised outlook provides a clear positive signal for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences sees 25% drop in new customer orders this quarter"
+      "headline": "Relvos Biosciences sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 25% drop in new customer orders suggests a severe contraction in business activity.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $400M contract with a top-tier research institute"
+      "headline": "Xovol Goods secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a substantial and concrete boost to future revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences enters joint venture with a top-tier research institute"
+      "headline": "Relvos Biosciences enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture is a strategic move that implies future collaboration but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces breakthrough in automated logistics"
+      "headline": "Frelis Genomics announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in logistics suggests potential operational efficiency gains, though the financial impact is not yet quantified.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences announces $2.5B share buyback program"
+      "headline": "Relvos Biosciences announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program is a direct signal of management confidence and provides immediate support for earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods wins industry award for excellence in enterprise software"
+      "headline": "Xovol Goods wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award is a positive reputational signal but has no direct or immediate impact on financial statements.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:40.291Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

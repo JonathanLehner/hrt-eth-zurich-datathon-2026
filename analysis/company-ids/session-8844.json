@@ -53,49 +53,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 15% margin improvement in latest quarter"
+      "headline": "Jorvis Fuels sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement indicates strong operational efficiency gains that directly boost profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech faces regulatory review of data analytics practices"
+      "headline": "Grevon Biotech faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny of data practices introduces significant operational risk and potential legal costs.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $400M contract with a top-tier research institute"
+      "headline": "Kelvos Resources secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, substantial revenue boost and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 20% margin improvement in latest quarter"
+      "headline": "Kelvos Resources sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement signals significant cost-cutting or pricing power that enhances bottom-line performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports unexpected decline in Southeast Asia revenue"
+      "headline": "Kelvos Resources reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region suggests potential demand issues or competitive pressure.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels completes strategic acquisition to strengthen enterprise software"
+      "headline": "Jorvis Fuels completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The acquisition of an enterprise software firm represents a strategic pivot that may offer long-term growth but carries integration risks.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources signs multi-year partnership with a global retailer"
+      "headline": "Kelvos Resources signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer provides long-term revenue visibility and market expansion opportunities.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:30.801Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

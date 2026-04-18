@@ -54,49 +54,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners wins industry award for excellence in renewable storage"
+      "headline": "Yorval Partners wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial completes strategic acquisition to strengthen renewable storage"
+      "headline": "Wrelal Financial completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions typically signal growth and market consolidation, though integration risks remain.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital launches next-generation process automation platform"
+      "headline": "Ervan Capital launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a direct growth catalyst that can drive immediate market interest and future revenue.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Wrelal Financial announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term expansion strategy but represents an immediate cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners recalls products in process automation line due to quality concerns"
+      "headline": "Yorval Partners recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate negative financial impact through costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners signs multi-year partnership with a multinational manufacturer"
+      "headline": "Yorval Partners signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides revenue visibility and long-term stability for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital misses quarterly revenue estimates by 18%"
+      "headline": "Ervan Capital misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin typically triggers immediate negative market sentiment and valuation adjustments.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:02.527Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

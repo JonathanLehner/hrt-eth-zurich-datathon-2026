@@ -60,35 +60,96 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Talvyn Goods reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% indicates strong operational performance and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods sees 10% drop in new customer orders this quarter"
+      "headline": "Xovol Goods sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders signals a direct decline in future revenue potential.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group launches next-generation precision manufacturing platform"
+      "headline": "Crevol Retail Group launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "The launch of a new manufacturing platform suggests potential for long-term efficiency gains but lacks immediate financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group sees 8% margin improvement in latest quarter"
+      "headline": "Crevol Retail Group sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly enhances profitability and is a clear positive indicator for financial health.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics in talks for potential merger, details undisclosed"
+      "headline": "Jorvix Diagnostics in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Speculative merger talks create significant uncertainty as the outcome and financial terms remain undisclosed.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:40.806Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

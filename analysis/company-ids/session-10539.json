@@ -52,49 +52,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities to host investor day focused on precision manufacturing strategy"
+      "headline": "Creven Securities to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that rarely trigger significant immediate market movement unless specific guidance is provided.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities wins industry award for excellence in renewable storage"
+      "headline": "Creven Securities wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct financial impact on revenue or earnings.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities launches next-generation process automation platform"
+      "headline": "Creven Securities launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive development that can drive future revenue growth through adoption.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies faces regulatory review of digital payments practices"
+      "headline": "Myrnep Technologies faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential downside risk regarding compliance costs or operational restrictions.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Ixenix Technologies announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports rising costs pressuring margins in data analytics"
+      "headline": "Creven Securities reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and are a negative signal for near-term margin performance.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports 8% decline in operating income"
+      "headline": "Creven Securities reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income is a clear negative financial result that directly impacts valuation.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:33.669Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

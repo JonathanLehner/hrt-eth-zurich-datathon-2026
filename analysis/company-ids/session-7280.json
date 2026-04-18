@@ -53,49 +53,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software confirms participation in Tech Leadership Conference"
+      "headline": "Relvan Software confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference is a standard corporate activity that rarely impacts financial performance or stock valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Zrovex Industries reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong regional demand provides a clear, positive signal for near-term and medium-term earnings growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Zrovex Industries files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step for product expansion, but the outcome and timeline remain uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Zrovex Industries begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries faces regulatory review of process automation practices"
+      "headline": "Zrovex Industries faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of internal practices introduce potential legal or operational risks that create negative sentiment and uncertainty.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software sees mixed results in automated logistics pilot program"
+      "headline": "Relvan Software sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest inconsistent performance, creating ambiguity regarding the success of the initiative.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid completes planned facility upgrade in Scandinavia"
+      "headline": "Urvel Grid completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine capital expenditure that is already priced in and does not change the financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:32.746Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

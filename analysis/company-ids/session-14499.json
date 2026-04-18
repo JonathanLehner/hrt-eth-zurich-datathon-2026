@@ -52,42 +52,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences faces class action over automated logistics service disruption"
+      "headline": "Wyrnik Sciences faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability for Wyrnik Sciences.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics delays product launch in enterprise software segment"
+      "headline": "Myrnon Therapeutics delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and signals potential internal execution issues.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences files for regulatory approval of new enterprise software offering"
+      "headline": "Wyrnik Sciences files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates progress toward future market entry.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co sees mixed results in automated logistics pilot program"
+      "headline": "Pleven Trading Co sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide insufficient data to determine the ultimate success or failure of the initiative.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Myrnon Therapeutics warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $400M contract with a multinational manufacturer"
+      "headline": "Myrnon Therapeutics secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, significant, and durable boost to future revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:05.792Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

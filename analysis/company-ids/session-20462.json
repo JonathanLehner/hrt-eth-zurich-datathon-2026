@@ -54,49 +54,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Frelis Genomics recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that will likely persist through the 100-day window.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing wins industry award for excellence in supply chain optimization"
+      "headline": "Dralol Computing wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but typically have limited direct financial impact on near-term revenue.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics delays product launch in wireless connectivity segment"
+      "headline": "Frelis Genomics delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts expected revenue timelines and signals potential internal execution issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing withdraws from Middle East market citing unfavorable conditions"
+      "headline": "Dralol Computing withdraws from Middle East market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a geographic market represents a permanent loss of revenue potential and indicates strategic contraction.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Dralol Computing recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core business line creates immediate financial liability and operational strain.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences announces breakthrough in wireless connectivity"
+      "headline": "Relvos Biosciences announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough suggests future competitive advantages and potential revenue growth, though commercialization timelines remain unclear.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences files for regulatory approval of new enterprise software offering"
+      "headline": "Relvos Biosciences files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward market entry, signaling progress but not immediate revenue generation.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:23.523Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

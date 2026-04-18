@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces significant capital expenditure plan for Latin America"
+      "headline": "Ervan Capital announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "The capital expenditure plan signals long-term growth investment but implies immediate cash outflow and potential short-term margin pressure.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports 8% increase in customer acquisition"
+      "headline": "Ervan Capital reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a direct positive indicator of revenue growth and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Zrovov Advisors reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs in precision manufacturing directly threaten profitability and margins, creating a clear negative financial impact.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports 7% increase in customer acquisition"
+      "headline": "Plevep Power reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition indicates strong demand and positive momentum for the company's services.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports unexpected decline in Asia Pacific revenue"
+      "headline": "Ervan Capital reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a negative signal that directly impacts earnings expectations.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power faces regulatory review of precision manufacturing practices"
+      "headline": "Plevep Power faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant uncertainty and potential operational or legal costs for the company's manufacturing practices.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:18.776Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

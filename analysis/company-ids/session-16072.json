@@ -52,42 +52,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce announces restructuring plan, cites challenging market conditions"
+      "headline": "Arnik Commerce announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans often signal underlying financial distress and operational inefficiency, leading to negative market sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co reports 12% increase in customer acquisition"
+      "headline": "Pleven Trading Co reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A double-digit increase in customer acquisition is a strong indicator of growth and market share expansion.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co recalls products in digital payments line due to quality concerns"
+      "headline": "Pleven Trading Co recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls in a core business line create immediate reputational damage and potential financial liability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces $1.2B share buyback program"
+      "headline": "Holtar Stores announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is typically viewed as a positive signal of management confidence and capital return to shareholders.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Arnik Commerce withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major geographic market suggests a contraction in growth strategy and potential loss of future revenue streams.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co files for regulatory approval of new renewable storage offering"
+      "headline": "Pleven Trading Co files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for product expansion, though the outcome remains subject to external review.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:41.909Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

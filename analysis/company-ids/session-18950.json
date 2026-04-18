@@ -62,42 +62,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports unexpected decline in Southeast Asia revenue"
+      "headline": "Zrovex Industries reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a key regional market signals immediate negative pressure on earnings and growth expectations.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $75M contract with an international consortium"
+      "headline": "Plevik Energy secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a specific $75M contract provides a clear, quantifiable boost to revenue and backlog visibility.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid enters joint venture with a national infrastructure agency"
+      "headline": "Nerven Grid enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests long-term strategic alignment but lacks immediate financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 5% margin improvement in latest quarter"
+      "headline": "Zrovex Industries sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly enhances profitability and is a strong indicator of operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions announces breakthrough in wireless connectivity"
+      "headline": "Orevov Solutions announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough offers significant long-term potential but the commercialization timeline remains highly speculative.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Zrovex Industries warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions create immediate operational headwinds and uncertainty regarding the duration of the impact.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:27.353Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

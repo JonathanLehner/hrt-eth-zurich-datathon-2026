@@ -66,56 +66,147 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports 5% increase in customer acquisition"
+      "headline": "Jorvyl Securities reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition indicates positive growth momentum for the firm.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $800M contract with a national infrastructure agency"
+      "headline": "Jovik Asset Group secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear and substantial revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors delays product launch in digital payments segment"
+      "headline": "Zrovov Advisors delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment creates immediate uncertainty and potential revenue loss.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $400M contract with a global retailer"
+      "headline": "Zrovov Advisors secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $400M contract with a global retailer represents a significant and positive revenue development.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners delays product launch in precision manufacturing segment"
+      "headline": "Yorval Partners delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in precision manufacturing suggests operational setbacks that negatively impact growth.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors sees 3% margin improvement in latest quarter"
+      "headline": "Zrovov Advisors sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement directly enhances profitability and is viewed positively by the market.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $500M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract with a major logistics provider is a strong indicator of business expansion.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces significant capital expenditure plan for Scandinavia"
+      "headline": "Jorvyl Securities announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests long-term investment in growth, though it may impact short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:12.320Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

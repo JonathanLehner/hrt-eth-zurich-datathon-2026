@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments to host investor day focused on digital payments strategy"
+      "headline": "Halven Investments to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that typically provide clarity on strategy without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments confirms participation in Annual Industry Forum"
+      "headline": "Halven Investments confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate activity with negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group announces major organizational restructuring"
+      "headline": "Jovik Asset Group announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals internal turmoil or cost-cutting, creating short-term uncertainty and potential long-term efficiency gains.",
+        "longTerm": 2,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors revises long-term strategy with focus on supply chain optimization"
+      "headline": "Zrovov Advisors revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic revisions focused on supply chain optimization are long-term initiatives that rarely yield immediate financial results.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners announces $1.2B share buyback program"
+      "headline": "Plevum Partners announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program is a direct positive signal for shareholder value and capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners CEO steps down unexpectedly citing personal reasons"
+      "headline": "Plevum Partners CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates immediate leadership instability and market concern regarding future direction.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group recalls products in digital payments line due to quality concerns"
+      "headline": "Jovik Asset Group recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control failures, leading to immediate costs and potential long-term reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports 25% decline in operating income"
+      "headline": "Plevum Partners reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative indicator of core business performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:00.041Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

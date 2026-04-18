@@ -50,35 +50,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems delays product launch in cloud infrastructure segment"
+      "headline": "Prynis Systems delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch typically signals operational friction and deferred revenue, negatively impacting investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies names new head of data analytics division"
+      "headline": "Ixenix Technologies names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division are generally neutral to slightly positive depending on the new hire's track record, which is not provided here.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips publishes annual sustainability report"
+      "headline": "Ulvyn Microchips publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Annual sustainability reports are standard corporate disclosures that rarely move stock prices unless they contain unexpected negative or positive data.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $180M contract with a national infrastructure agency"
+      "headline": "Ixenix Technologies secures $180M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen automated logistics"
+      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term growth, though the immediate market reaction often reflects the cost of the deal.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:41.061Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

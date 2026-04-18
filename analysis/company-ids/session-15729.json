@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports unexpected decline in North America revenue"
+      "headline": "Prynis Systems reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a core market indicates immediate operational or demand-side weakness.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports strong demand in North America, raises outlook"
+      "headline": "Xovep Stores reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook provide clear positive signals for both immediate and medium-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems begins scheduled maintenance of automated logistics systems"
+      "headline": "Prynis Systems begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $250M contract with a multinational manufacturer"
+      "headline": "Ixenix Technologies secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a clear, durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies announces breakthrough in digital payments"
+      "headline": "Myrnep Technologies announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough announcement is positive but lacks specific financial details or timelines for monetization.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies files for regulatory approval of new automated logistics offering"
+      "headline": "Myrnep Technologies files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for future growth but carries significant uncertainty regarding outcome and timing.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores sees 18% drop in new customer orders this quarter"
+      "headline": "Xovep Stores sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders suggests a weakening demand trend that will likely persist.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems files routine patent applications in digital payments"
+      "headline": "Prynis Systems files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or predictable financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:28.854Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

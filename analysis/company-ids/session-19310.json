@@ -64,49 +64,130 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables sees 5% drop in new customer orders this quarter"
+      "headline": "Orevex Renewables sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds for the upcoming quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $320M contract with a major logistics provider"
+      "headline": "Orevex Renewables secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, positive boost to revenue visibility and operational growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $120M contract with a top-tier research institute"
+      "headline": "Strynal Industries secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $120M contract win provides a solid, verifiable revenue stream that strengthens the company's financial position.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments loses key contract in Europe to competitor"
+      "headline": "Krevan Investments loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a major market like Europe represents a direct loss of revenue and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports unexpected decline in Europe revenue"
+      "headline": "Strynal Industries reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a major region suggests underlying operational or market challenges that may persist.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $180M contract with a top-tier research institute"
+      "headline": "Urvel Grid secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $180M contract win is a significant positive development that enhances the company's growth prospects.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces $5.7B share buyback program"
+      "headline": "Strynal Industries announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and provides immediate support to the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:41.316Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

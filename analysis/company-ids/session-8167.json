@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries recalls products in automated logistics line due to quality concerns"
+      "headline": "Strynal Industries recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company addresses quality control.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries signs multi-year partnership with an international consortium"
+      "headline": "Zrovex Industries signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation, though immediate financial impact is often limited.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Strynal Industries withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market signals a contraction in growth potential and suggests underlying operational or competitive challenges.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions launches next-generation precision manufacturing platform"
+      "headline": "Orevov Solutions launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive catalyst for future revenue growth, though the immediate financial contribution remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries revises long-term strategy with focus on process automation"
+      "headline": "Zrovex Industries revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "A strategic pivot to process automation is a long-term efficiency play with little immediate impact on current financial performance.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "guidance",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports strong demand in Latin America, raises outlook"
+      "headline": "Plevyl Advisors reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand is a direct positive signal for near-term and medium-term financial performance.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $50M contract with a leading cloud platform"
+      "headline": "Zrovex Industries secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable boost to revenue and validates the company's market position.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:05.511Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

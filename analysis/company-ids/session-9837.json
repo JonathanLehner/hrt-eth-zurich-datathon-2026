@@ -56,56 +56,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power faces class action over enterprise software service disruption"
+      "headline": "Plevep Power faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that may persist as the litigation unfolds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners files for regulatory approval of new process automation offering"
+      "headline": "Plevum Partners files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the timeline for approval remains inherently uncertain.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $800M contract with a top-tier research institute"
+      "headline": "Plevum Partners secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports strong demand in Scandinavia, raises outlook"
+      "headline": "Halven Investments reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are direct indicators of improved financial performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Halven Investments warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue shortfalls.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power loses key contract in North America to competitor"
+      "headline": "Plevep Power loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct loss of revenue and competitive standing in a major market.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments begins scheduled maintenance of enterprise software systems"
+      "headline": "Halven Investments begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has minimal long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports unexpected decline in Scandinavia revenue"
+      "headline": "Plevum Partners reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals potential underlying demand or competitive issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:08.110Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

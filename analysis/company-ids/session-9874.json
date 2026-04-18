@@ -66,56 +66,147 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $400M contract with a top-tier research institute"
+      "headline": "Grevon Biotech secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and long-term growth validation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences misses quarterly revenue estimates by 10%"
+      "headline": "Relvos Biosciences misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss indicates immediate operational weakness and potential negative sentiment for the coming quarter.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports strong demand in Scandinavia, raises outlook"
+      "headline": "Talvep Computing reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a clear positive signal for both immediate and sustained performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics loses key contract in North America to competitor"
+      "headline": "Frelis Genomics loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market share, creating a negative outlook for the remainder of the period.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing opens new office in Middle East"
+      "headline": "Talvep Computing opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Expanding into a new region is a strategic growth move, though the immediate financial impact is likely minimal.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees 20% drop in new customer orders this quarter"
+      "headline": "Frelis Genomics sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new orders is a significant indicator of weakening demand that will likely persist through the quarter.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees mixed results in renewable storage pilot program"
+      "headline": "Frelis Genomics sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and future revenue potential of the project.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing warns of supply chain disruptions affecting North America operations"
+      "headline": "Talvep Computing warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions represent a tangible operational risk that will likely weigh on performance until resolved.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:08.822Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

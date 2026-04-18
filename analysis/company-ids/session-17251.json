@@ -66,56 +66,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Crevex Labs warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region directly threaten operational output and revenue realization.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips recalls products in process automation line due to quality concerns"
+      "headline": "Ulvyn Microchips recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial liability and potential long-term reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software confirms participation in Annual Industry Forum"
+      "headline": "Relvan Software confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs delays product launch in cloud infrastructure segment"
+      "headline": "Crevex Labs delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and signals potential internal execution issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports rising costs pressuring margins in renewable storage"
+      "headline": "Crevex Labs reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly compress profit margins, creating a persistent headwind for financial performance.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes planned facility upgrade in Latin America"
+      "headline": "Joval Brands completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is a standard operational milestone that typically yields incremental efficiency gains.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands sees mixed results in process automation pilot program"
+      "headline": "Joval Brands sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software completes strategic acquisition to strengthen process automation"
+      "headline": "Relvan Software completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "A strategic acquisition indicates a proactive effort to expand market share and capabilities in a key segment.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:25.625Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group launches next-generation enterprise software platform"
+      "headline": "Jovik Asset Group launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a new enterprise software platform represents a strategic product expansion that typically drives long-term revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 10% margin improvement in latest quarter"
+      "headline": "Zelvel Capital sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement directly signals increased operational efficiency and higher profitability for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $120M contract with a leading cloud platform"
+      "headline": "Jovik Asset Group secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable boost to revenue and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Jovik Asset Group warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees 25% drop in new customer orders this quarter"
+      "headline": "Ervan Capital sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative indicator of weakening demand and future revenue contraction.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $650M contract with a major logistics provider"
+      "headline": "Ervan Capital secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $650M contract win is a major positive catalyst that significantly bolsters the company's revenue outlook and financial stability.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:27.479Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

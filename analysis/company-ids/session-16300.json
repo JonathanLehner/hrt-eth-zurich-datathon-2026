@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports strong demand in Scandinavia, raises outlook"
+      "headline": "Grevel Diagnostics reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong regional demand provides a clear positive signal for near-term and medium-term performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics publishes annual sustainability report"
+      "headline": "Calvos Genomics publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Annual sustainability reports are standard corporate disclosures that rarely impact financial performance or stock valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma faces class action over automated logistics service disruption"
+      "headline": "Zrovum Biopharma faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate negative sentiment and potential long-term financial liabilities through legal costs and settlements.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics loses key contract in Middle East to competitor"
+      "headline": "Calvos Genomics loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue streams and signals competitive weakness in a specific market.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics wins industry award for excellence in process automation"
+      "headline": "Grevel Diagnostics wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards for process automation are positive for brand reputation but lack direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Zelvon Biosciences reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 20% is a strong fundamental indicator that typically drives positive market sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics announces breakthrough in automated logistics"
+      "headline": "Grevel Diagnostics announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in automated logistics suggests potential future efficiency gains or new product capabilities, though the financial scale is currently undefined.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:50.496Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

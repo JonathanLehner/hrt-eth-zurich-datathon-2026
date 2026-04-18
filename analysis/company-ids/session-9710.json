@@ -55,56 +55,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics completes planned facility upgrade in Europe"
+      "headline": "Zelvix Therapeutics completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves efficiency but has a neutral immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals revises long-term strategy with focus on supply chain optimization"
+      "headline": "Yorvov Pharmaceuticals revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic revisions regarding supply chain optimization are vague and lack immediate financial quantification, leading to market uncertainty.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $250M contract with an international consortium"
+      "headline": "Plevyl Advisors secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, significant, and durable revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $180M contract with a top-tier research institute"
+      "headline": "Yorvov Pharmaceuticals secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $180M contract win is a strong positive indicator of business growth and revenue stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics launches next-generation digital payments platform"
+      "headline": "Zelvix Therapeutics launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "Launching a new digital payments platform represents a product expansion that could open new revenue streams, though adoption success is uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals launches next-generation digital payments platform"
+      "headline": "Yorvov Pharmaceuticals launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "Launching a digital payments platform is a significant product expansion, though its impact depends on market penetration and adoption rates.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 12% drop in new customer orders this quarter"
+      "headline": "Plevyl Advisors sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a direct negative signal for revenue growth and market demand.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports unexpected decline in Europe revenue"
+      "headline": "Yorvov Pharmaceuticals reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue is a negative financial indicator that typically triggers immediate investor concern.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:03.021Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

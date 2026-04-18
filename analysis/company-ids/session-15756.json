@@ -64,49 +64,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 3% decline in operating income"
+      "headline": "Holtum Asset Group reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and investor sentiment in the short term.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $250M contract with a global retailer"
+      "headline": "Krevum Pharmaceuticals secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides immediate revenue visibility and positive growth signals.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $50M contract with a top-tier research institute"
+      "headline": "Yorvov Pharmaceuticals secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $50M contract with a research institute provides a moderate boost to revenue and validates the company's technical capabilities.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals signs multi-year partnership with a global retailer"
+      "headline": "Yorvov Pharmaceuticals signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term revenue stability and strategic growth potential.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group sees 15% drop in new customer orders this quarter"
+      "headline": "Holtum Asset Group sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a significant negative indicator for future revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences faces class action over automated logistics service disruption"
+      "headline": "Zelvon Biosciences faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal risk and potential financial liability that creates uncertainty.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $800M contract with a global retailer"
+      "headline": "Yorvov Pharmaceuticals secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial win that significantly enhances revenue projections and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:29.819Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

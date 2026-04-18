@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 8% margin improvement in latest quarter"
+      "headline": "Strynal Industries sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly signals increased profitability and operational efficiency for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables names new head of precision manufacturing division"
+      "headline": "Orevex Renewables names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $75M contract with a global retailer"
+      "headline": "Strynal Industries secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $120M contract with a global retailer"
+      "headline": "Strynal Industries secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $120M contract win represents a significant and positive revenue event for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences confirms participation in Corporate Strategy Symposium"
+      "headline": "Relvos Biosciences confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a routine corporate event with no direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences wins industry award for excellence in data analytics"
+      "headline": "Relvos Biosciences wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Winning an industry award for data analytics is a positive reputational signal but lacks direct financial quantification.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to host investor day focused on supply chain optimization strategy"
+      "headline": "Plevep Power to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day regarding strategy is a communication event that does not immediately alter financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables announces significant capital expenditure plan for North America"
+      "headline": "Orevex Renewables announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates future growth investment but implies immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:31.882Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -38,28 +38,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies begins scheduled maintenance of process automation systems"
+      "headline": "Myrnep Technologies begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies sees 10% drop in new customer orders this quarter"
+      "headline": "Myrnep Technologies sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders indicates a direct decline in demand that will likely impact revenue growth for the quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports 12% decline in operating income"
+      "headline": "Jovor Networks reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a clear negative indicator of profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Jovor Networks completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance manufacturing capabilities, which is generally viewed as a positive long-term growth driver.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:10.001Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

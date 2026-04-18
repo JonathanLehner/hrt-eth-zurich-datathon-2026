@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes planned facility upgrade in Asia Pacific"
+      "headline": "Joval Brands completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "The completion of a facility upgrade is an operational milestone that typically improves efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 15% decline in operating income"
+      "headline": "Arnik Commerce reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a direct negative indicator of current profitability and operational health.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces breakthrough in supply chain optimization"
+      "headline": "Strynal Industries announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential cost savings or margin improvements, though the scale is not quantified.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce completes strategic acquisition to strengthen enterprise software"
+      "headline": "Arnik Commerce completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Acquisitions are strategic moves intended to bolster long-term capabilities, though they often involve short-term integration costs.",
+        "longTerm": 4,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co misses quarterly revenue estimates by 15%"
+      "headline": "Jorval Trading Co misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 15% is a significant negative signal regarding demand and market performance.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co files routine patent applications in digital payments"
+      "headline": "Jorval Trading Co files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that rarely provide immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands faces class action over enterprise software service disruption"
+      "headline": "Joval Brands faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption introduces legal risk and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $650M contract with a top-tier research institute"
+      "headline": "Jorval Trading Co secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:43.419Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

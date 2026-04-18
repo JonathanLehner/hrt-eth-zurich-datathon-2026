@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports 20% decline in operating income"
+      "headline": "Zelvel Capital reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income indicates a significant deterioration in core profitability that will likely weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $650M contract with a multinational manufacturer"
+      "headline": "Holtum Asset Group secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, tangible boost to revenue visibility and market positioning.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces $2.5B share buyback program"
+      "headline": "Holtum Asset Group announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital loses key contract in Central Europe to competitor"
+      "headline": "Zelvel Capital loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract in a specific region represents a direct hit to revenue and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $800M contract with a leading cloud platform"
+      "headline": "Zrovov Advisors secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "An $800M contract with a major cloud platform is a strong indicator of growth and successful market penetration.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group raises full-year guidance citing robust demand"
+      "headline": "Holtum Asset Group raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance due to robust demand is a strong positive signal for future financial performance.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics faces regulatory review of wireless connectivity practices"
+      "headline": "Grevel Diagnostics faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential operational constraints that could negatively impact the business.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports rising costs pressuring margins in digital payments"
+      "headline": "Grevel Diagnostics reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly threatens profitability and suggests potential headwinds for the bottom line.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:10.151Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

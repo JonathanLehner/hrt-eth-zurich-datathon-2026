@@ -52,42 +52,113 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences faces class action over enterprise software service disruption"
+      "headline": "Calvis Sciences faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate reputational and potential financial liability risks.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files routine patent applications in process automation"
+      "headline": "Krevan Investments files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments sees 12% margin improvement in latest quarter"
+      "headline": "Krevan Investments sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly signals increased profitability and operational efficiency for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Middle East"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment but implies near-term cash outflow before future returns.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics signs multi-year partnership with a national infrastructure agency"
+      "headline": "Myrnon Therapeutics signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides long-term revenue visibility and stability.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Calvis Sciences reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth demonstrates strong market demand and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:43.083Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

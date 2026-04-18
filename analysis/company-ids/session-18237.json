@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power files routine patent applications in digital payments"
+      "headline": "Plevep Power files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files for regulatory approval of new renewable storage offering"
+      "headline": "Zrovov Advisors files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for future growth but does not guarantee immediate revenue or success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power sees 5% margin improvement in latest quarter"
+      "headline": "Plevep Power sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly impacts profitability and is a strong positive signal for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors loses key contract in North America to competitor"
+      "headline": "Zrovov Advisors loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct negative impact on revenue and market position.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors launches next-generation automated logistics platform"
+      "headline": "Zrovov Advisors launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform indicates potential for future revenue growth and market expansion.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries faces regulatory review of precision manufacturing practices"
+      "headline": "Strynal Industries faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of manufacturing practices introduces operational risk and potential for future penalties or costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:01.354Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

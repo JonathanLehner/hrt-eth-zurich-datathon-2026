@@ -64,49 +64,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports strong demand in Latin America, raises outlook"
+      "headline": "Plevep Power reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised guidance provide a clear positive signal for near-term and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $320M contract with a major logistics provider"
+      "headline": "Talvep Computing secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A large, specific contract win provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power recalls products in enterprise software line due to quality concerns"
+      "headline": "Plevep Power recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates operational failure and potential financial liability, creating immediate negative sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables sees mixed results in renewable storage pilot program"
+      "headline": "Orevex Renewables sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the project.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $650M contract with a top-tier research institute"
+      "headline": "Orevex Renewables secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A significant contract win with a research institute provides a strong, durable boost to revenue expectations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power sees 18% drop in new customer orders this quarter"
+      "headline": "Kelvik Power sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A double-digit drop in new customer orders is a direct negative indicator for future revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $500M contract with a major logistics provider"
+      "headline": "Talvep Computing secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing another large contract reinforces the company's growth trajectory and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:36.538Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

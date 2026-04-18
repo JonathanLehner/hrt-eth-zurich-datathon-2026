@@ -54,49 +54,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace wins industry award for excellence in automated logistics"
+      "headline": "Orevar Marketplace wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes planned facility upgrade in Middle East"
+      "headline": "Joval Brands completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that improves efficiency but is already priced in.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores expands operations into Southeast Asia markets"
+      "headline": "Xovep Stores expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Market expansion into Southeast Asia represents a significant growth opportunity that will likely contribute to revenue over the coming months.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace faces regulatory review of wireless connectivity practices"
+      "headline": "Orevar Marketplace faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential legal and operational risks that create immediate uncertainty and potential long-term costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $50M contract with a multinational manufacturer"
+      "headline": "Joval Brands secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable boost to revenue and validates the company's service offering.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Xovep Stores reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators of financial performance that typically drive immediate investor confidence.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports unexpected decline in Middle East revenue"
+      "headline": "Xovep Stores reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue is a negative signal that directly impacts financial results and raises concerns about regional performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:19.893Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

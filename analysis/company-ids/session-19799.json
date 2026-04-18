@@ -65,56 +65,147 @@
       "barIx": 23,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 15% drop in new customer orders this quarter"
+      "headline": "Yorven Labs sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a direct negative indicator of revenue growth and demand.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software files routine patent applications in enterprise software"
+      "headline": "Relvan Software files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices confirms participation in Annual Industry Forum"
+      "headline": "Volval Devices confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine marketing event with no clear financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 9,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices lowers full-year guidance amid softening demand"
+      "headline": "Volval Devices lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a significant negative signal for financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $320M contract with a leading cloud platform"
+      "headline": "Volval Devices secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, quantifiable boost to future revenue and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices revises long-term strategy with focus on supply chain optimization"
+      "headline": "Volval Devices revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic revisions are qualitative and lack immediate financial quantification, making their impact uncertain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems revises long-term strategy with focus on enterprise software"
+      "headline": "Brevep Systems revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "A strategic pivot to enterprise software is a long-term directional change with no immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 9,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs faces class action over automated logistics service disruption"
+      "headline": "Yorven Labs faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal risk and potential financial liability for the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:59.316Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

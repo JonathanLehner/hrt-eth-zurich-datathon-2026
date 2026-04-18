@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software opens new office in Asia Pacific"
+      "headline": "Relvan Software opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Expanding into the Asia Pacific region represents a strategic growth initiative that typically signals long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software loses key contract in Central Europe to competitor"
+      "headline": "Frelol Software loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a major market directly impacts revenue and suggests competitive weakness in that region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $250M contract with a multinational manufacturer"
+      "headline": "Myrnep Technologies secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides immediate revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software faces class action over process automation service disruption"
+      "headline": "Relvan Software faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption introduces significant legal and reputational risk that could weigh on the stock.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Dralol Computing reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% year-over-year is a strong indicator of operational success and market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $800M contract with a national infrastructure agency"
+      "headline": "Dralol Computing secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "An $800M contract with a national agency is a major win that provides substantial, long-term revenue stability.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $800M contract with a national infrastructure agency"
+      "headline": "Frelol Software secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a massive $800M contract significantly improves the company's financial outlook and competitive standing.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing misses quarterly revenue estimates by 7%"
+      "headline": "Dralol Computing misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 7% indicates a potential slowdown in demand or operational inefficiencies that negatively impacts investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:43.843Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

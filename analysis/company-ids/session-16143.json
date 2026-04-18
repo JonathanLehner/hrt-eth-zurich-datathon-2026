@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables names new head of precision manufacturing division"
+      "headline": "Ulvon Renewables names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions sees 18% margin improvement in latest quarter"
+      "headline": "Orevov Solutions sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement is a significant positive indicator of operational efficiency and profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $180M contract with a multinational manufacturer"
+      "headline": "Relvon Fuels secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides clear, quantifiable revenue growth and improved financial visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables completes planned facility upgrade in Scandinavia"
+      "headline": "Ulvon Renewables completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that should lead to incremental efficiency gains over time.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels enters joint venture with a top-tier research institute"
+      "headline": "Relvon Fuels enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a research institute suggests potential for future innovation but lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables files routine patent applications in supply chain optimization"
+      "headline": "Ulvon Renewables files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate material financial benefit.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy misses quarterly revenue estimates by 20%"
+      "headline": "Plevik Energy misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a substantial negative indicator that directly impacts investor sentiment and valuation.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:45.111Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

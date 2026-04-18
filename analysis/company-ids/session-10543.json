@@ -55,56 +55,147 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries completes planned facility upgrade in Southeast Asia"
+      "headline": "Zrovex Industries completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "The completion of a facility upgrade is an operational milestone that should improve efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Relvon Fuels reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth provides strong positive momentum for the company's financial health.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels loses key contract in Europe to competitor"
+      "headline": "Relvon Fuels loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct negative impact on future revenue streams.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces regulatory review of automated logistics practices"
+      "headline": "Crevol Retail Group faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential operational constraints for the company's logistics practices.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports 25% increase in customer acquisition"
+      "headline": "Zrovex Industries reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong indicator of growth and market demand.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels launches next-generation automated logistics platform"
+      "headline": "Relvon Fuels launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching a new logistics platform is a strategic move that could improve long-term operational efficiency.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels files for regulatory approval of new digital payments offering"
+      "headline": "Relvon Fuels files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for expansion but carries inherent uncertainty regarding the outcome.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces breakthrough in digital payments"
+      "headline": "Zrovex Industries announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments suggests potential for new revenue streams and competitive advantage.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:33.544Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

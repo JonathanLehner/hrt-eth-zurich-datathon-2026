@@ -40,42 +40,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid opens new office in Central Europe"
+      "headline": "Urvel Grid opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion but lacks immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports 15% decline in operating income"
+      "headline": "Orevex Renewables reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a direct negative indicator of current profitability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid faces class action over precision manufacturing service disruption"
+      "headline": "Urvel Grid faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial risk with unpredictable outcomes.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees 8% margin improvement in latest quarter"
+      "headline": "Urvel Grid sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly signals increased operational efficiency and profitability.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $320M contract with an international consortium"
+      "headline": "Urvel Grid secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, substantial revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $75M contract with a national infrastructure agency"
+      "headline": "Urvel Grid secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $75M contract win is a positive development that adds to the company's revenue backlog.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:42.644Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -40,35 +40,96 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 20% increase in customer acquisition"
+      "headline": "Krevan Investments reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition directly signals revenue growth potential and improved market share.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $800M contract with an international consortium"
+      "headline": "Krevan Investments secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear, substantial, and long-term revenue stream for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces class action over digital payments service disruption"
+      "headline": "Halven Investments faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk, potentially damaging reputation and bottom-line results.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Central Europe"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $75M contract with a leading cloud platform"
+      "headline": "Halven Investments secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $75M contract win provides a positive, concrete boost to revenue and validates the company's service offering.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:12.104Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

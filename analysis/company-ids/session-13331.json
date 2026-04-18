@@ -48,28 +48,79 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces $4.1B share buyback program"
+      "headline": "Wrelal Financial announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A $4.1B share buyback program directly increases earnings per share and signals management confidence in capital allocation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial CEO addresses investor concerns in open letter"
+      "headline": "Wrelal Financial CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CEO is a reactive measure that suggests existing investor dissatisfaction without providing concrete operational changes.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings misses quarterly revenue estimates by 25%"
+      "headline": "Halvix Holdings misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a significant negative indicator of operational performance and market demand for the company's offerings.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $650M contract with a major logistics provider"
+      "headline": "Kelvos Resources secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract provides a clear, substantial revenue stream that bolsters the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:20.869Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

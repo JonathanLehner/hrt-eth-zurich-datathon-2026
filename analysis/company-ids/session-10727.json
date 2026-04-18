@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Holtum Asset Group announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $400M contract with a leading cloud platform"
+      "headline": "Zelvel Capital secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, immediate, and sustained revenue visibility for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group wins industry award for excellence in precision manufacturing"
+      "headline": "Varvov Retail Group wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but have negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 10% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital files routine patent applications in digital payments"
+      "headline": "Zelvel Capital files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or predictable financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group to host investor day focused on enterprise software strategy"
+      "headline": "Holtum Asset Group to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that serves as a platform for communication rather than a direct financial driver.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports unexpected decline in Latin America revenue"
+      "headline": "Ervan Capital reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in regional revenue is a clear negative signal for earnings and operational performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:40.612Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

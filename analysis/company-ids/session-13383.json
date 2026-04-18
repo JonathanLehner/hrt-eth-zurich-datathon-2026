@@ -63,49 +63,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports unexpected decline in Central Europe revenue"
+      "headline": "Zelvel Capital reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a key geographic segment directly impacts financial performance and investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities to host investor day focused on enterprise software strategy"
+      "headline": "Jorvyl Securities to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a standard corporate communication event that typically lacks immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 20% margin improvement in latest quarter"
+      "headline": "Zelvel Capital sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency and directly boosts profitability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces regulatory review of digital payments practices"
+      "headline": "Zelvel Capital faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create uncertainty and potential legal or operational costs that weigh on investor confidence.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings faces regulatory review of wireless connectivity practices"
+      "headline": "Halvix Holdings faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny of core wireless practices introduces potential compliance risks and operational headwinds.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities launches next-generation supply chain optimization platform"
+      "headline": "Creven Securities launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform suggests potential for future revenue growth, though the immediate financial contribution is often speculative.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces regulatory review of precision manufacturing practices"
+      "headline": "Zelvel Capital faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Repeated regulatory reviews across different business segments suggest systemic compliance issues, increasing long-term risk.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:24.046Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

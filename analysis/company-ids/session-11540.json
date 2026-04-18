@@ -48,28 +48,79 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables faces class action over cloud infrastructure service disruption"
+      "headline": "Orevex Renewables faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption introduces significant legal and reputational risk that will likely weigh on the stock in both the short and long term.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics wins industry award for excellence in cloud infrastructure"
+      "headline": "Zelvix Therapeutics wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but generally lack direct, quantifiable financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics CTO steps down unexpectedly citing personal reasons"
+      "headline": "Zelvix Therapeutics CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership instability and uncertainty regarding the company's technical roadmap.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics confirms participation in Global Innovation Summit"
+      "headline": "Jorvix Diagnostics confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a standard corporate activity that provides minimal incremental financial value or market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:09.097Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

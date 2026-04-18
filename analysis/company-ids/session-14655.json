@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics begins scheduled maintenance of process automation systems"
+      "headline": "Zelvix Therapeutics begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics faces class action over digital payments service disruption"
+      "headline": "Zelvix Therapeutics faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal uncertainty and potential financial liability that can persist throughout the 100-day window.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma loses key contract in Southeast Asia to competitor"
+      "headline": "Zrovum Biopharma loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct negative impact on revenue that will likely persist over the 100-day period.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $320M contract with a major logistics provider"
+      "headline": "Nerval Biopharma secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, positive, and durable boost to the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals names new head of digital payments division"
+      "headline": "Krevum Pharmaceuticals names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with uncertain immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $500M contract with a leading cloud platform"
+      "headline": "Zelvix Therapeutics secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $500M contract is a significant positive development that will materially improve revenue expectations for the duration of the period.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma wins industry award for excellence in data analytics"
+      "headline": "Nerval Biopharma wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma faces class action over digital payments service disruption"
+      "headline": "Nerval Biopharma faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces negative financial and reputational risk that is likely to weigh on the company throughout the 100-day window.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:30.629Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

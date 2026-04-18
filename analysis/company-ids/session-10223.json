@@ -65,56 +65,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences opens new office in Southeast Asia"
+      "headline": "Zelvon Biosciences opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $320M contract with an international consortium"
+      "headline": "Krevum Pharmaceuticals secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A large, specific contract win provides clear, immediate, and durable financial benefit.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics announces breakthrough in digital payments"
+      "headline": "Zelvix Therapeutics announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in a sector unrelated to the company's core business creates significant strategic ambiguity.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables confirms participation in Global Innovation Summit"
+      "headline": "Ulvon Renewables confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a standard corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports unexpected decline in Scandinavia revenue"
+      "headline": "Zelvon Biosciences reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a clear negative indicator for short-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics announces breakthrough in digital payments"
+      "headline": "Zelvix Therapeutics announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "Repeating a previous announcement without new details provides no additional value or clarity.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "product_launch",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics to host investor day focused on wireless connectivity strategy"
+      "headline": "Zelvix Therapeutics to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that signals management's intent to communicate strategy.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in digital payments line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a direct negative event with immediate operational and reputational costs.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:24.027Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

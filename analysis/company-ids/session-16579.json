@@ -53,49 +53,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to present at Capital Markets Day"
+      "headline": "Plevep Power to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Days are standard corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid opens new office in Central Europe"
+      "headline": "Nerven Grid opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a routine operational expansion that typically has negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $500M contract with a leading cloud platform"
+      "headline": "Zrovex Industries secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides clear, material revenue visibility and positive financial momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees mixed results in data analytics pilot program"
+      "headline": "Zrovex Industries sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of a new product initiative.",
+        "longTerm": -2,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries launches next-generation automated logistics platform"
+      "headline": "Zrovex Industries launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive strategic move, though the immediate financial contribution remains to be proven.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power expands operations into Scandinavia markets"
+      "headline": "Plevep Power expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market represents a growth opportunity, though it involves initial setup costs and execution risk.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries CFO addresses investor concerns in open letter"
+      "headline": "Zrovex Industries CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO addressing concerns suggests existing investor anxiety, which can create short-term volatility.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:00.327Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

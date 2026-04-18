@@ -48,28 +48,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities loses key contract in Europe to competitor"
+      "headline": "Creven Securities loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market position in the European region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports rising costs pressuring margins in process automation"
+      "headline": "Holtum Asset Group reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs in process automation directly threaten the company's profitability and operating margins.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $75M contract with a leading cloud platform"
+      "headline": "Halvix Holdings secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable boost to revenue and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Holtum Asset Group reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Persistent cost pressures in cloud infrastructure indicate a structural challenge to margins that will likely weigh on performance over the coming months.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:37.151Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,56 +64,147 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy names new head of automated logistics division"
+      "headline": "Zelval Energy names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma misses quarterly revenue estimates by 8%"
+      "headline": "Nerval Biopharma misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss is a clear negative signal that typically triggers immediate downward pressure on stock valuation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics loses key contract in Europe to competitor"
+      "headline": "Jorvix Diagnostics loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor represents a direct loss of future revenue and market share.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Zelval Energy reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a fundamental negative indicator for profitability that often persists until operational changes are made.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy to host investor day focused on wireless connectivity strategy"
+      "headline": "Zelval Energy to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day announcement is a neutral event that signals management's intent to communicate strategy but lacks immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Zelval Energy reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% is a strong positive indicator of business health and market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy files routine patent applications in process automation"
+      "headline": "Zelval Energy files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or predictable financial upside.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences secures $650M contract with an international consortium"
+      "headline": "Wyrnik Sciences secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a significant and concrete boost to future revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:31.592Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

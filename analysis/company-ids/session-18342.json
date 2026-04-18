@@ -58,28 +58,79 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy faces class action over cloud infrastructure service disruption"
+      "headline": "Zelval Energy faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal and reputational risk with potential for ongoing financial liability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $650M contract with an international consortium"
+      "headline": "Pleven Trading Co secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant revenue boost that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets announces major organizational restructuring"
+      "headline": "Ixenis Outlets announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring introduces significant operational uncertainty and potential short-term disruption while the long-term benefits remain speculative.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports rising costs pressuring margins in renewable storage"
+      "headline": "Varvov Retail Group reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability, signaling a negative trend that is likely to persist throughout the quarter.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:04.551Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

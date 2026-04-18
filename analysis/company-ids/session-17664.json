@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports 20% decline in operating income"
+      "headline": "Frelis Genomics reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income indicates significant fundamental weakness that will likely weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 12% decline in operating income"
+      "headline": "Krevan Investments reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income represents a negative earnings trend that will likely pressure the stock price.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings begins scheduled maintenance of digital payments systems"
+      "headline": "Halvix Holdings begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments enters joint venture with a multinational manufacturer"
+      "headline": "Krevan Investments enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a multinational manufacturer suggests potential for future growth and market expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors names new head of renewable storage division"
+      "headline": "Zrovov Advisors names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with uncertain immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $800M contract with a national infrastructure agency"
+      "headline": "Halvix Holdings secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear, substantial revenue boost that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:40.576Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

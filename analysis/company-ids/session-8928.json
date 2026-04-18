@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Ixenix Technologies reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 15% year-over-year indicates strong operational performance and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Relvan Software warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software faces class action over process automation service disruption"
+      "headline": "Relvan Software faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal risk and potential financial liability that could persist over the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 5% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly enhances profitability and reflects improved operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $75M contract with a multinational manufacturer"
+      "headline": "Ixenix Technologies secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable boost to future revenue and backlog.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources to present at Tech Leadership Conference"
+      "headline": "Nolvol Resources to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $120M contract with a top-tier research institute"
+      "headline": "Nolvol Resources secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $120M contract win is a significant positive event that strengthens the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Ixenix Technologies reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly threatens profitability and indicates potential headwinds in the wireless segment.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:34.257Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

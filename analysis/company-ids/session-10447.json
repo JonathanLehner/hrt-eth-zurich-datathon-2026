@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 3% drop in new customer orders this quarter"
+      "headline": "Nolvis Devices sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds for the current quarter.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports rising costs pressuring margins in digital payments"
+      "headline": "Frelol Software reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs in a specific business segment indicate margin compression that will likely persist until operational efficiencies are found.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $250M contract with an international consortium"
+      "headline": "Jorval Trading Co secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides a clear, significant boost to future revenue and demonstrates strong market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software announces $1.2B share buyback program"
+      "headline": "Frelol Software announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program is a positive signal of management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices begins scheduled maintenance of enterprise software systems"
+      "headline": "Nolvis Devices begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and carries no significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:29.825Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

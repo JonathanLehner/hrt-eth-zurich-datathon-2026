@@ -48,28 +48,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees mixed results in supply chain optimization pilot program"
+      "headline": "Relvon Fuels sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "The term mixed results indicates an unclear outcome for the pilot program, suggesting limited immediate impact and high uncertainty regarding future operational efficiency.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors misses quarterly revenue estimates by 3%"
+      "headline": "Zrovov Advisors misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "A revenue miss is a direct negative indicator of financial performance that typically triggers immediate downward pressure on stock price.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $250M contract with a multinational manufacturer"
+      "headline": "Zrovov Advisors secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear, positive revenue catalyst that will likely bolster investor confidence over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $500M contract with a leading cloud platform"
+      "headline": "Urvel Grid secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A significant $500M contract win with a major cloud platform is a strong positive signal for growth and revenue stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:55.719Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

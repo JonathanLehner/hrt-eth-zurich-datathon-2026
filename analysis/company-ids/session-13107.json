@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software files for regulatory approval of new enterprise software offering"
+      "headline": "Relvan Software files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates progress but does not guarantee immediate revenue or approval.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks opens new office in Asia Pacific"
+      "headline": "Jovor Networks opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office is a positive signal of growth and market expansion, though the financial impact is typically gradual.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks expands operations into Central Europe markets"
+      "headline": "Jovor Networks expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new geographic markets represents a clear strategic growth initiative with potential for long-term revenue scaling.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips to present at Tech Leadership Conference"
+      "headline": "Ulvyn Microchips to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a routine corporate activity that rarely results in immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices files routine patent applications in enterprise software"
+      "headline": "Nolvis Devices files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations that do not provide immediate competitive advantage or financial gain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips announces breakthrough in supply chain optimization"
+      "headline": "Ulvyn Microchips announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential for improved margins and operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices confirms participation in Corporate Strategy Symposium"
+      "headline": "Nolvis Devices confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Confirming participation in a symposium is a standard networking event with no direct impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks completes planned facility upgrade in Middle East"
+      "headline": "Jovor Networks completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that likely improves existing capacity rather than driving new growth.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:13.944Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

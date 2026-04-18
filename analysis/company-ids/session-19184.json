@@ -48,28 +48,79 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Talvix Holdings recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in precision manufacturing indicates immediate operational disruption and potential reputational damage that may persist as the company addresses quality control.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $650M contract with a leading cloud platform"
+      "headline": "Prynis Systems secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant revenue boost that will positively impact the company's financial outlook over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $50M contract with a leading cloud platform"
+      "headline": "Creven Securities secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $50M contract win is a positive development for revenue growth, though its relative impact is smaller than larger scale deals.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems schedules annual shareholder meeting for next month"
+      "headline": "Prynis Systems schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a standard annual shareholder meeting is a routine corporate governance event with no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 0,
+        "shortTermUncertainty": 0,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:35.586Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

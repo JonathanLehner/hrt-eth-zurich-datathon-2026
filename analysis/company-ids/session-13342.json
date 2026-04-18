@@ -39,35 +39,96 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs opens new office in Scandinavia"
+      "headline": "Crevex Labs opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a minor operational expansion that typically has negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs recalls products in renewable storage line due to quality concerns"
+      "headline": "Crevex Labs recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate financial costs and potential reputational damage that will likely persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs completes planned facility upgrade in Scandinavia"
+      "headline": "Crevex Labs completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone with limited direct impact on near-term revenue.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $75M contract with a leading cloud platform"
+      "headline": "Crevex Labs secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, positive revenue boost that will be recognized over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels CEO steps down unexpectedly citing personal reasons"
+      "headline": "Relvon Fuels CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates significant leadership uncertainty and potential strategic instability for the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:22.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

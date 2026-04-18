@@ -51,42 +51,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports unexpected decline in Europe revenue"
+      "headline": "Grevon Biotech reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural issues or competitive pressure that will likely weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Grevon Biotech reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand coupled with a raised outlook provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 8% decline in operating income"
+      "headline": "Nerval Biopharma reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is typically viewed negatively by the market in the short term.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces breakthrough in data analytics"
+      "headline": "Grevon Biotech announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics is a positive development, but the financial impact is speculative and lacks immediate revenue quantification.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $650M contract with an international consortium"
+      "headline": "Grevon Biotech secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a concrete boost to revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Prynis Systems reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% is a strong indicator of operational success and market momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:31.706Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -55,56 +55,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports strong demand in North America, raises outlook"
+      "headline": "Brevep Systems reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand provides clear positive momentum for both short and long-term performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions expands operations into Latin America markets"
+      "headline": "Wyrnor Solutions expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion is a positive growth signal but typically involves a slow ramp-up period before material financial impact.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $400M contract with a multinational manufacturer"
+      "headline": "Brevep Systems secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and long-term backlog support.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $500M contract with a leading cloud platform"
+      "headline": "Ulvon Renewables secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $500M contract with a major cloud provider is a significant positive catalyst for revenue growth and market positioning.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables misses quarterly revenue estimates by 25%"
+      "headline": "Ulvon Renewables misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a substantial negative indicator that will likely weigh on investor sentiment for the remainder of the quarter.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces $0.8B share buyback program"
+      "headline": "Ulvon Renewables announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a positive signal of capital allocation and management confidence in the stock.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Wyrnor Solutions begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables to present at Corporate Strategy Symposium"
+      "headline": "Ulvon Renewables to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a standard corporate activity that rarely provides enough new information to move the stock price.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:21.964Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

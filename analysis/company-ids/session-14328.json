@@ -60,35 +60,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Plevyl Advisors reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% indicates strong operational performance and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources launches next-generation automated logistics platform"
+      "headline": "Kelvos Resources launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform suggests potential for market share expansion and long-term revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy sees 12% margin improvement in latest quarter"
+      "headline": "Plevik Energy sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly enhances profitability and is a strong indicator of operational efficiency gains.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 15% increase in customer acquisition"
+      "headline": "Ulvon Renewables reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition signals strong market demand and effective sales execution.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports rising costs pressuring margins in data analytics"
+      "headline": "Kelvos Resources reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins in a key segment presents a clear headwind to profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:58.791Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

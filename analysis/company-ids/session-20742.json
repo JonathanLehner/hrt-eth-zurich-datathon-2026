@@ -66,56 +66,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Halvix Holdings recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in precision manufacturing suggests immediate operational costs and potential reputational damage that may persist.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing names new head of automated logistics division"
+      "headline": "Talvep Computing names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing files for regulatory approval of new automated logistics offering"
+      "headline": "Talvep Computing files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive procedural step toward future revenue generation.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices revises long-term strategy with focus on data analytics"
+      "headline": "Volval Devices revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics is a long-term directional shift with no immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen digital payments"
+      "headline": "Volval Devices completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Completing an acquisition to strengthen a business segment is a positive growth signal.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports unexpected decline in North America revenue"
+      "headline": "Halvix Holdings reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market is a clear negative indicator for financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software to present at Global Innovation Summit"
+      "headline": "Frelol Software to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a standard corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing delays product launch in digital payments segment"
+      "headline": "Talvep Computing delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts expected revenue timelines and suggests potential execution issues.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:34.536Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

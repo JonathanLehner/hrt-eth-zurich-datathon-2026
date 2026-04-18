@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce recalls products in digital payments line due to quality concerns"
+      "headline": "Arnik Commerce recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core business line creates immediate negative sentiment and potential financial liability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores to host investor day focused on digital payments strategy"
+      "headline": "Xovep Stores to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that typically have a neutral to slightly positive impact depending on market expectations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees mixed results in precision manufacturing pilot program"
+      "headline": "Grevel Diagnostics sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the success and scalability of the new manufacturing initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $250M contract with an international consortium"
+      "headline": "Nolvav Commerce secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides clear, immediate, and long-term revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics to present at Corporate Strategy Symposium"
+      "headline": "Grevel Diagnostics to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a strategy symposium is a routine corporate activity with minimal direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $250M contract with a national infrastructure agency"
+      "headline": "Xovep Stores secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $250M contract with a national agency is a significant positive development for revenue and company profile.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores explores strategic alternatives for enterprise software unit"
+      "headline": "Xovep Stores explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit introduces significant uncertainty regarding the future structure and asset value of the company.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores opens new office in Central Europe"
+      "headline": "Xovep Stores opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates expansion, though the immediate financial impact is likely muted by setup costs.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:49.588Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

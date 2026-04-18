@@ -66,56 +66,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips confirms participation in Global Innovation Summit"
+      "headline": "Ulvyn Microchips confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a standard industry event that rarely provides material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies sees 3% margin improvement in latest quarter"
+      "headline": "Myrnep Technologies sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates operational efficiency gains that directly benefit profitability.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 7% increase in customer acquisition"
+      "headline": "Calvis Sciences reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition is a clear positive indicator of growth and market demand.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences warns of supply chain disruptions affecting North America operations"
+      "headline": "Calvis Sciences warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions represent a direct operational headwind that will likely impact near-term output.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $250M contract with a major logistics provider"
+      "headline": "Myrnep Technologies secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a significant and concrete revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces $6.3B share buyback program"
+      "headline": "Ixenix Technologies announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A $6.3B share buyback program is a major capital allocation event that typically boosts earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences enters joint venture with an international consortium"
+      "headline": "Calvis Sciences enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests potential for future growth, though the immediate financial impact is speculative.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies faces regulatory review of process automation practices"
+      "headline": "Myrnep Technologies faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create uncertainty and potential compliance costs, which are generally viewed negatively by the market.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:07.367Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

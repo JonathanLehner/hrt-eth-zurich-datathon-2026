@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid faces class action over renewable storage service disruption"
+      "headline": "Nerven Grid faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that may persist throughout the 100-day period.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $400M contract with a major logistics provider"
+      "headline": "Zelval Energy secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, positive revenue catalyst with high visibility for the company's financial performance.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries launches next-generation enterprise software platform"
+      "headline": "Zrovex Industries launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a new software platform is a positive growth indicator, though the immediate financial impact depends on adoption rates.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $250M contract with a major logistics provider"
+      "headline": "Nerven Grid secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "This $250M contract win provides a significant positive financial boost that helps offset the negative sentiment from the earlier litigation news.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Zrovex Industries recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core infrastructure line creates immediate operational disruption and potential long-term brand and financial liability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $400M contract with a top-tier research institute"
+      "headline": "Yorven Labs secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $400M contract with a research institute is a strong, positive indicator of demand and future revenue stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Yorven Labs begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has minimal impact on financial performance or market sentiment.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:21.362Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

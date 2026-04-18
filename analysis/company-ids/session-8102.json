@@ -53,49 +53,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce names new head of data analytics division"
+      "headline": "Arnik Commerce names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech revises long-term strategy with focus on data analytics"
+      "headline": "Xelvol Biotech revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward data analytics is a long-term directional shift that lacks immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $180M contract with an international consortium"
+      "headline": "Xelvol Biotech secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides clear, tangible revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Xelvol Biotech begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets sees 10% drop in new customer orders this quarter"
+      "headline": "Frelex Outlets sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of revenue growth and demand.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets delays product launch in renewable storage segment"
+      "headline": "Frelex Outlets delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones potential revenue and suggests internal execution challenges.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports strong demand in Europe, raises outlook"
+      "headline": "Xelvol Biotech reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a clear positive signal for future earnings performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:02.525Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

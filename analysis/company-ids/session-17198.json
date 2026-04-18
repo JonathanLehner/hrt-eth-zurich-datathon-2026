@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $500M contract with a global retailer"
+      "headline": "Jorvix Diagnostics secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "The $500M contract provides a clear, substantial revenue boost that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces significant capital expenditure plan for Central Europe"
+      "headline": "Ilval Financial announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans indicate long-term growth investment but often signal short-term cash outflows and potential margin pressure.",
+        "longTerm": 5,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $500M contract with a global retailer"
+      "headline": "Jorvix Diagnostics secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "This is a duplicate of the previous contract win, confirming the same positive financial impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings announces $1.2B share buyback program"
+      "headline": "Halvix Holdings announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program is a direct positive signal for shareholder value and earnings per share.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports unexpected decline in Southeast Asia revenue"
+      "headline": "Plevyl Advisors reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a negative indicator for growth and profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $75M contract with a national infrastructure agency"
+      "headline": "Halvix Holdings secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M infrastructure contract provides a stable and positive revenue stream for the company.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports 7% decline in operating income"
+      "headline": "Jorvix Diagnostics reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income directly impacts profitability and suggests underlying operational inefficiencies.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:23.668Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

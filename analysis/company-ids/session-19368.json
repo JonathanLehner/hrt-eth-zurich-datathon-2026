@@ -53,49 +53,130 @@
       "barIx": 27,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities to host investor day focused on data analytics strategy"
+      "headline": "Jorvyl Securities to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that typically provide clarity but rarely trigger immediate material financial shifts.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports strong demand in Central Europe, raises outlook"
+      "headline": "Plevum Partners reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong regional demand is a direct positive signal for near-term and medium-term earnings performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities signs multi-year partnership with a major logistics provider"
+      "headline": "Jorvyl Securities signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation, though immediate financial impact is often back-loaded.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Jorvyl Securities begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a standard operational procedure that is expected and typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital delays product launch in cloud infrastructure segment"
+      "headline": "Ervan Capital delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and signals potential execution or development challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports rising costs pressuring margins in data analytics"
+      "headline": "Ervan Capital reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profit margins and indicate a negative trend in operational efficiency that may persist.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $75M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a specific $75M contract provides immediate, quantifiable revenue growth and strengthens the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:43.233Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

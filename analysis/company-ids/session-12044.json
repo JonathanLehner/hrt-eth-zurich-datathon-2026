@@ -64,49 +64,130 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments enters joint venture with a national infrastructure agency"
+      "headline": "Halven Investments enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency provides a stable, long-term revenue stream and enhances the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces breakthrough in supply chain optimization"
+      "headline": "Halven Investments announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential cost savings and improved operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports 7% decline in operating income"
+      "headline": "Wrelal Financial reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income is a direct negative indicator of financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees mixed results in automated logistics pilot program"
+      "headline": "Grevel Diagnostics sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the logistics initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments revises long-term strategy with focus on supply chain optimization"
+      "headline": "Halven Investments revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "A strategic pivot indicates a shift in focus but lacks immediate financial quantification or concrete outcomes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group recalls products in process automation line due to quality concerns"
+      "headline": "Jovik Asset Group recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns poses immediate reputational and financial risks.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $250M contract with a leading cloud platform"
+      "headline": "Jovik Asset Group secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:32.991Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

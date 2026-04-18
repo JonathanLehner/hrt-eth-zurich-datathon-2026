@@ -48,28 +48,79 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports 15% decline in operating income"
+      "headline": "Kelvik Power reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $400M contract with a multinational manufacturer"
+      "headline": "Orevex Renewables secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, significant revenue boost and validates market demand for the company's services.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners to host investor day focused on supply chain optimization strategy"
+      "headline": "Yorval Partners to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day to discuss strategy is a standard corporate event that lacks immediate financial impact or concrete operational changes.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files routine patent applications in renewable storage"
+      "headline": "Orevex Renewables files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business maintenance and do not provide immediate or guaranteed financial upside.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:40.849Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

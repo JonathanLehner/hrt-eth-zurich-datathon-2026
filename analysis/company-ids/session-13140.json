@@ -65,56 +65,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals CFO steps down unexpectedly citing personal reasons"
+      "headline": "Yorvov Pharmaceuticals CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership instability and market concern regarding internal financial oversight.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $75M contract with a global retailer"
+      "headline": "Talvyn Goods secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost that strengthens the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods warns of supply chain disruptions affecting North America operations"
+      "headline": "Talvyn Goods warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions represent a direct operational headwind that will likely impact margins and fulfillment capabilities.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores expands operations into Asia Pacific markets"
+      "headline": "Holtar Stores expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Entering the Asia Pacific market signals a long-term growth strategy, though the immediate financial impact is likely muted by initial investment costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 7% increase in customer acquisition"
+      "headline": "Yorvov Pharmaceuticals reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition is a positive indicator of demand and potential future revenue growth.",
+        "longTerm": 3,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace to host investor day focused on digital payments strategy"
+      "headline": "Arnos Marketplace to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but does not inherently change financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 20% decline in operating income"
+      "headline": "Yorvov Pharmaceuticals reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a significant negative signal regarding the company's core profitability and efficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals to host investor day focused on wireless connectivity strategy"
+      "headline": "Yorvov Pharmaceuticals to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day on a specific strategy is a neutral corporate communication event that lacks immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:14.790Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

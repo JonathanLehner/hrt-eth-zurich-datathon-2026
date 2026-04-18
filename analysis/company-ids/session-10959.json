@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Urvel Grid reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% indicates strong market demand and operational success.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Plevep Power completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions to bolster infrastructure typically signal long-term growth potential despite initial integration costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels faces regulatory review of renewable storage practices"
+      "headline": "Jorvis Fuels faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential operational constraints for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports 10% decline in operating income"
+      "headline": "Plevep Power reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income directly impacts profitability and investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices delays product launch in supply chain optimization segment"
+      "headline": "Volval Devices delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and may signal internal execution issues.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power faces class action over precision manufacturing service disruption"
+      "headline": "Plevep Power faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create legal and financial liability that can persist over several months.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices loses key contract in Central Europe to competitor"
+      "headline": "Volval Devices loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly reduces future revenue and market share.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices launches next-generation precision manufacturing platform"
+      "headline": "Volval Devices launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform provides a catalyst for potential revenue growth and competitive differentiation.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:49.572Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

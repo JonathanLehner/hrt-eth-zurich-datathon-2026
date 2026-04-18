@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Halven Investments reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% provides strong fundamental validation of current business performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $75M contract with a leading cloud platform"
+      "headline": "Krevan Investments secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue stream that bolsters financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group enters joint venture with an international consortium"
+      "headline": "Jovik Asset Group enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests potential for growth, but the specific financial impact remains vague without deal terms.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments revises long-term strategy with focus on data analytics"
+      "headline": "Halven Investments revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics indicates a long-term shift, but offers no immediate financial benefit or clarity on execution.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Ilval Financial begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and carries minimal financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 5% increase in customer acquisition"
+      "headline": "Krevan Investments reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a positive growth signal that likely compounds over time.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments opens new office in Latin America"
+      "headline": "Krevan Investments opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion, though the immediate financial contribution is likely offset by initial setup costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:51.188Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

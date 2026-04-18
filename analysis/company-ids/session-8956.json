@@ -60,35 +60,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports 25% increase in customer acquisition"
+      "headline": "Frelol Software reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition directly signals revenue growth and improved market penetration.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy delays product launch in automated logistics segment"
+      "headline": "Plevik Energy delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and may signal internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices announces major organizational restructuring"
+      "headline": "Volval Devices announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring creates significant uncertainty regarding operational efficiency and potential short-term disruption.",
+        "longTerm": 0,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies begins scheduled maintenance of renewable storage systems"
+      "headline": "Ixenix Technologies begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Frelol Software reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand provides a clear positive signal for future financial performance.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:34.309Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

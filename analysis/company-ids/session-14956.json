@@ -64,49 +64,130 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences to present at Capital Markets Day"
+      "headline": "Wyrnik Sciences to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Days are standard corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports rising costs pressuring margins in process automation"
+      "headline": "Xelvol Biotech reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability that will likely persist until addressed.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Zrovum Biopharma warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma announces $9.6B share buyback program"
+      "headline": "Zrovum Biopharma announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a significant capital allocation move that typically boosts earnings per share and signals management confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics files routine patent applications in data analytics"
+      "headline": "Zelvix Therapeutics files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or predictable financial upside.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Xelvol Biotech recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls due to quality concerns represent a direct financial hit and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $250M contract with a leading cloud platform"
+      "headline": "Xelvol Biotech secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:42.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

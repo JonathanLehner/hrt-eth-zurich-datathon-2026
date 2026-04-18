@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $120M contract with an international consortium"
+      "headline": "Orevex Renewables secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $120M contract provides a clear, immediate revenue boost and long-term backlog visibility for Orevex Renewables.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports 3% decline in operating income"
+      "headline": "Jorvix Diagnostics reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income signals operational inefficiency that typically weighs on investor sentiment in the short and medium term.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen data analytics"
+      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions often involve integration costs and uncertainty, leading to a neutral or slightly negative short-term impact despite long-term potential.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics sees 25% margin improvement in latest quarter"
+      "headline": "Zelvix Therapeutics sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement is a strong indicator of operational efficiency that directly boosts profitability and market valuation.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $400M contract with a leading cloud platform"
+      "headline": "Krevum Pharmaceuticals secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $400M contract is a significant revenue driver that provides substantial financial stability and growth for Krevum Pharmaceuticals.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $650M contract with a multinational manufacturer"
+      "headline": "Jorvix Diagnostics secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "This large $650M contract significantly improves the revenue outlook and financial health of Jorvix Diagnostics.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics wins industry award for excellence in process automation"
+      "headline": "Jorvix Diagnostics wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but have a limited and indirect impact on actual financial performance.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:42.758Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

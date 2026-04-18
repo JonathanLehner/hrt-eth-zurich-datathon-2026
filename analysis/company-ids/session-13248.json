@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions faces class action over supply chain optimization service disruption"
+      "headline": "Wyrnor Solutions faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that could persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power to host investor day focused on precision manufacturing strategy"
+      "headline": "Kelvik Power to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that typically provide neutral to slightly positive sentiment depending on the clarity of the strategy presented.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power delays product launch in cloud infrastructure segment"
+      "headline": "Kelvik Power delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch signals operational friction and potential revenue deferral, creating a negative impact on near-term expectations.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences recalls products in renewable storage line due to quality concerns"
+      "headline": "Relvos Biosciences recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall is a significant negative event that directly impacts revenue and brand trust, with effects likely to linger.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries confirms participation in Global Innovation Summit"
+      "headline": "Zrovex Industries confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a routine corporate activity that generally lacks material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries expands operations into North America markets"
+      "headline": "Zrovex Industries expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding into a new market is a growth signal that suggests long-term revenue potential, though near-term costs may be elevated.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions board meeting to discuss major strategic initiative"
+      "headline": "Wyrnor Solutions board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The announcement of a board meeting to discuss strategy is vague and lacks sufficient detail to determine a specific financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries to host investor day focused on digital payments strategy"
+      "headline": "Zrovex Industries to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Focusing an investor day on a specific growth area like digital payments is a positive signal of strategic intent.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:19.218Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

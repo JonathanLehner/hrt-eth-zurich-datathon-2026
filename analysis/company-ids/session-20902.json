@@ -64,49 +64,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports unexpected decline in North America revenue"
+      "headline": "Plevyl Advisors reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a key region is a direct negative signal for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma faces regulatory review of wireless connectivity practices"
+      "headline": "Zrovum Biopharma faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny regarding connectivity practices introduces potential operational risk and legal uncertainty.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments files routine patent applications in digital payments"
+      "headline": "Halven Investments files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $400M contract with a global retailer"
+      "headline": "Halven Investments secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, positive, and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments sees 15% drop in new customer orders this quarter"
+      "headline": "Halven Investments sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a significant weakening in demand that will likely impact future earnings.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma sees mixed results in data analytics pilot program"
+      "headline": "Zrovum Biopharma sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide insufficient information to determine a clear financial trajectory.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings explores strategic alternatives for precision manufacturing unit"
+      "headline": "Talvix Holdings explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates significant uncertainty regarding the future structure and value of the company.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:39.998Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 18% decline in operating income"
+      "headline": "Krevan Investments reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income directly signals weakened profitability and operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 5% increase in customer acquisition"
+      "headline": "Krevan Investments reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition indicates positive growth momentum and market demand.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces breakthrough in data analytics"
+      "headline": "Holtum Asset Group announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics suggests a potential competitive advantage or product improvement.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces significant capital expenditure plan for Central Europe"
+      "headline": "Zrovov Advisors announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure signals long-term investment in growth but implies near-term cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings expands operations into North America markets"
+      "headline": "Talvix Holdings expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding into North America represents a strategic growth move to capture new market share.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors to present at Tech Leadership Conference"
+      "headline": "Zrovov Advisors to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate activity with minimal immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group begins scheduled maintenance of renewable storage systems"
+      "headline": "Holtum Asset Group begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically neutral for financial performance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:33.091Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

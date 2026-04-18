@@ -53,49 +53,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces $4.1B share buyback program"
+      "headline": "Plevep Power announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A $4.1B share buyback program provides immediate support to the stock price and signals management confidence in capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports unexpected decline in Southeast Asia revenue"
+      "headline": "Strynal Industries reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region suggests potential structural demand issues or competitive pressure.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power files routine patent applications in cloud infrastructure"
+      "headline": "Plevep Power files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $400M contract with a multinational manufacturer"
+      "headline": "Plevep Power secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, quantifiable boost to future revenue and backlog.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power faces regulatory review of precision manufacturing practices"
+      "headline": "Plevep Power faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce uncertainty and potential operational costs or restrictions on manufacturing processes.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels loses key contract in Central Europe to competitor"
+      "headline": "Jorvis Fuels loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and suggests a loss of market share to competitors.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels opens new office in Asia Pacific"
+      "headline": "Jorvis Fuels opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates an expansion strategy, though the financial impact is speculative and long-term.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:33.858Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

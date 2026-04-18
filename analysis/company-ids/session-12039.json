@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports unexpected decline in North America revenue"
+      "headline": "Grevon Biotech reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a key geographic region is a direct negative signal for financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics to present at Annual Industry Forum"
+      "headline": "Myrnon Therapeutics to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity that rarely provides immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips expands operations into Europe markets"
+      "headline": "Brevon Microchips expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets is a growth-oriented move that typically signals future revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports rising costs pressuring margins in automated logistics"
+      "headline": "Grevon Biotech reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative indicator for profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics revises long-term strategy with focus on process automation"
+      "headline": "Myrnon Therapeutics revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward process automation is a long-term operational change with unclear immediate financial benefits.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences confirms participation in Emerging Markets Forum"
+      "headline": "Relvos Biosciences confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Confirming participation in a forum is a routine event that lacks specific financial catalysts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Myrnon Therapeutics begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational task that is expected and typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips to host investor day focused on enterprise software strategy"
+      "headline": "Brevon Microchips to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a communication event that may influence sentiment but does not change underlying financials directly.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:33.345Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

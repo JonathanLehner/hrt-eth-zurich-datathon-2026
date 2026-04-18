@@ -54,49 +54,130 @@
       "barIx": 17,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences sees 7% margin improvement in latest quarter"
+      "headline": "Relvos Biosciences sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement indicates enhanced operational efficiency and profitability directly impacting the bottom line.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports 3% decline in operating income"
+      "headline": "Grevel Diagnostics reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income reflects weaker core business performance and potential cost management issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports unexpected decline in Asia Pacific revenue"
+      "headline": "Relvos Biosciences reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key geographic region signals potential market share loss or demand weakness.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Relvos Biosciences recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls due to quality concerns create immediate financial costs and potential long-term reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Yorvov Pharmaceuticals reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% demonstrates strong market momentum and successful execution.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals board meeting to discuss major strategic initiative"
+      "headline": "Yorvov Pharmaceuticals board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The mention of a major strategic initiative is vague and lacks specific details regarding the nature or impact of the change.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Grevel Diagnostics reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with a raised outlook provides a clear positive signal for future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:26.621Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial misses quarterly revenue estimates by 25%"
+      "headline": "Ilval Financial misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss indicates immediate operational weakness and likely negative investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments files for regulatory approval of new automated logistics offering"
+      "headline": "Halven Investments files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward expansion but carries inherent uncertainty regarding the timeline and outcome.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments sees 10% margin improvement in latest quarter"
+      "headline": "Halven Investments sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement directly signals increased operational efficiency and profitability potential.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $400M contract with a multinational manufacturer"
+      "headline": "Jorvyl Securities secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Ilval Financial reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 10% year-over-year demonstrates strong market demand and positive business momentum.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:34.382Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

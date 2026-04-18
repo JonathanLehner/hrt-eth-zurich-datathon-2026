@@ -38,28 +38,79 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing withdraws from Middle East market citing unfavorable conditions"
+      "headline": "Talvep Computing withdraws from Middle East market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a market reduces revenue potential and indicates operational challenges, likely leading to a negative market reaction.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs schedules annual shareholder meeting for next month"
+      "headline": "Crevex Labs schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate governance event with no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs opens new office in Europe"
+      "headline": "Crevex Labs opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic region suggests growth potential and increased market reach for the company.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs delays product launch in cloud infrastructure segment"
+      "headline": "Crevex Labs delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment typically signals internal execution issues or competitive pressure, negatively impacting short-term sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:21.748Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

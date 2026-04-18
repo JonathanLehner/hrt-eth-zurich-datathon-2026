@@ -64,49 +64,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports unexpected decline in Scandinavia revenue"
+      "headline": "Kelvos Resources reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region suggests potential operational or demand issues that will likely weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources enters joint venture with an international consortium"
+      "headline": "Kelvos Resources enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture is a strategic expansion move that typically signals growth potential but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Strynal Industries reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 5% is a positive indicator of business health and operational success.",
+        "longTerm": 2,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions recalls products in automated logistics line due to quality concerns"
+      "headline": "Wyrnor Solutions recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core logistics line creates immediate operational disruption and potential reputational damage.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $50M contract with a multinational manufacturer"
+      "headline": "Strynal Industries secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable boost to future revenue and validates market demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy raises full-year guidance citing robust demand"
+      "headline": "Plevik Energy raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance is a strong signal of management confidence and sustained demand strength.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $75M contract with a global retailer"
+      "headline": "Kelvos Resources secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $75M contract win is a significant positive development that directly improves the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:43.844Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

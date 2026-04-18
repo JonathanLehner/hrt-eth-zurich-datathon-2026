@@ -67,63 +67,164 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports unexpected decline in Latin America revenue"
+      "headline": "Creven Securities reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region signals immediate negative financial performance and potential structural issues.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities completes planned facility upgrade in Europe"
+      "headline": "Creven Securities completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone with limited immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital signs multi-year partnership with a leading cloud platform"
+      "headline": "Ervan Capital signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic growth potential.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Urvel Grid warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports strong demand in Middle East, raises outlook"
+      "headline": "Ervan Capital reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are direct positive indicators of financial health and growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees 18% drop in new customer orders this quarter"
+      "headline": "Urvel Grid sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new orders is a significant negative signal for future revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid announces major organizational restructuring"
+      "headline": "Urvel Grid announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring introduces significant execution risk and uncertainty regarding future performance.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid completes strategic acquisition to strengthen data analytics"
+      "headline": "Urvel Grid completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "A strategic acquisition to strengthen capabilities is a positive long-term move, though integration risks remain.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H009",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports rising costs pressuring margins in renewable storage"
+      "headline": "Jovik Asset Group reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a common concern in the sector.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:51.314Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

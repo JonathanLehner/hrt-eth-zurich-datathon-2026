@@ -63,49 +63,130 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks misses quarterly revenue estimates by 7%"
+      "headline": "Halvax Networks misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "A 7% revenue miss indicates immediate underperformance relative to market expectations, likely triggering a negative stock reaction.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees mixed results in enterprise software pilot program"
+      "headline": "Yorven Labs sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding future adoption and revenue potential for the enterprise software segment.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "demand",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks opens new office in Middle East"
+      "headline": "Halvax Networks opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that signals growth but lacks immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks expands operations into Scandinavia markets"
+      "headline": "Halvax Networks expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets represents a strategic growth initiative that typically yields long-term revenue benefits.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Halvax Networks begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and should have negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels announces breakthrough in digital payments"
+      "headline": "Jorvis Fuels announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments for a fuel company is a significant strategic pivot that could open new revenue streams.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs sees 12% margin improvement in latest quarter"
+      "headline": "Crevex Labs sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly enhances profitability and is a strong positive indicator of operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:17.686Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

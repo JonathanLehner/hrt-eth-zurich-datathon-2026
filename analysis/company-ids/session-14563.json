@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power completes planned facility upgrade in Latin America"
+      "headline": "Plevep Power completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves efficiency without immediate revenue spikes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces significant capital expenditure plan for Central Europe"
+      "headline": "Ulvon Renewables announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Announcing a significant capital expenditure plan signals future growth but implies immediate cash outflow and potential execution risk.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics revises long-term strategy with focus on automated logistics"
+      "headline": "Jorvix Diagnostics revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automated logistics is a long-term directional change that lacks immediate financial impact or clarity on implementation.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables beats analyst expectations with strong earnings growth"
+      "headline": "Ulvon Renewables beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations with strong earnings growth is a direct positive catalyst for stock performance in the short term.",
+        "longTerm": 2,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics CEO steps down unexpectedly citing personal reasons"
+      "headline": "Jorvix Diagnostics CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates immediate leadership instability and uncertainty regarding future strategic direction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $50M contract with a national infrastructure agency"
+      "headline": "Jorvix Diagnostics secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost that is positive for both short and long-term financial outlooks.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Jorvix Diagnostics warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions indicates immediate operational headwinds and potential negative impact on earnings.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees mixed results in automated logistics pilot program"
+      "headline": "Strynal Industries sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide little clarity on the success or scalability of the initiative, leading to neutral market sentiment.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:08.964Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

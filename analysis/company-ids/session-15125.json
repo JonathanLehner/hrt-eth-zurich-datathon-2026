@@ -27,28 +27,79 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs delays product launch in process automation segment"
+      "headline": "Crevex Labs delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly impacts revenue realization and market positioning in the process automation segment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs misses quarterly revenue estimates by 10%"
+      "headline": "Crevex Labs misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss indicates immediate operational underperformance and typically triggers negative market sentiment.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs signs multi-year partnership with a top-tier research institute"
+      "headline": "Crevex Labs signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a research institute suggests long-term R&D benefits but lacks immediate revenue impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs signs multi-year partnership with a global retailer"
+      "headline": "Crevex Labs signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer provides clear evidence of future revenue growth and market expansion.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:47.402Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees 20% margin improvement in latest quarter"
+      "headline": "Yorval Partners sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates immediate operational efficiency gains that directly boost profitability.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities loses key contract in North America to competitor"
+      "headline": "Jorvyl Securities loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct revenue headwind and a loss of market share to a competitor.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities revises long-term strategy with focus on data analytics"
+      "headline": "Creven Securities revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward data analytics are directional shifts that lack immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces breakthrough in supply chain optimization"
+      "headline": "Ilval Financial announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests future cost savings but lacks specific financial impact details.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 20% increase in customer acquisition"
+      "headline": "Yorval Partners reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong leading indicator for future revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners completes strategic acquisition to strengthen automated logistics"
+      "headline": "Yorval Partners completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition of automated logistics capabilities is a strategic move that requires integration before value is realized.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial misses quarterly revenue estimates by 18%"
+      "headline": "Ilval Financial misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current business performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:42.430Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

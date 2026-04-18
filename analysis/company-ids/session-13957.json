@@ -62,42 +62,113 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group secures $50M contract with an international consortium"
+      "headline": "Crevol Retail Group secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, immediate, and tangible revenue boost for the company.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores misses quarterly revenue estimates by 3%"
+      "headline": "Xovep Stores misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% indicates a negative performance trend that typically triggers immediate investor concern.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group wins industry award for excellence in supply chain optimization"
+      "headline": "Crevol Retail Group wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "An industry award for supply chain optimization is a positive reputational signal but lacks direct, immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces regulatory review of enterprise software practices"
+      "headline": "Crevol Retail Group faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant operational uncertainty and potential legal or compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce signs multi-year partnership with a multinational manufacturer"
+      "headline": "Nolvav Commerce signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests stable, long-term revenue growth potential, though the immediate financial impact is not specified.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands revises long-term strategy with focus on data analytics"
+      "headline": "Halvav Brands revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "Revising strategy toward data analytics is a qualitative shift that lacks immediate financial evidence or guaranteed outcomes.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:45.546Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

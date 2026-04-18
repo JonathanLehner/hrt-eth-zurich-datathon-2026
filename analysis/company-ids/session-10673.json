@@ -36,21 +36,62 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Brevon Microchips reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook due to strong regional demand provides a clear positive signal for near-term and sustained financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips delays product launch in data analytics segment"
+      "headline": "Brevon Microchips delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch creates immediate negative sentiment and potential revenue deferral, though the long-term impact depends on the duration of the delay.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 20% margin improvement in latest quarter"
+      "headline": "Kelvos Resources sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement in the latest quarter indicates strong operational efficiency that likely persists through the 100-day window.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:37.663Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

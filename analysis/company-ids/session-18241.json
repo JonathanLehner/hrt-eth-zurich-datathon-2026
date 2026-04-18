@@ -56,56 +56,147 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports rising costs pressuring margins in digital payments"
+      "headline": "Plevik Energy reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy delays product launch in precision manufacturing segment"
+      "headline": "Plevik Energy delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and suggests potential operational friction.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $180M contract with an international consortium"
+      "headline": "Ixenix Technologies secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract provides clear revenue visibility and growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $800M contract with a multinational manufacturer"
+      "headline": "Nerven Grid secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "An $800M contract win is a major positive catalyst for revenue and market positioning.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $650M contract with a national infrastructure agency"
+      "headline": "Nerven Grid secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $650M contract with a national agency provides stable, long-term revenue backing.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $800M contract with a national infrastructure agency"
+      "headline": "Plevik Energy secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "This large contract win provides a significant positive offset to previous margin concerns.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies revises long-term strategy with focus on data analytics"
+      "headline": "Ixenix Technologies revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics is a long-term directional change with unclear immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces major organizational restructuring"
+      "headline": "Ixenix Technologies announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often introduces short-term execution risk and uncertainty regarding future efficiency.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:02.130Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

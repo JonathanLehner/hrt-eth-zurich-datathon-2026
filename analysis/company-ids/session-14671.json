@@ -64,49 +64,130 @@
       "barIx": 17,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics expands operations into Middle East markets"
+      "headline": "Myrnon Therapeutics expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a strategic growth initiative that typically yields long-term revenue potential rather than immediate financial gains.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces breakthrough in automated logistics"
+      "headline": "Ervan Capital announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in logistics suggests significant operational efficiency improvements, though the timeline for commercialization and financial impact remains speculative.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $180M contract with a top-tier research institute"
+      "headline": "Myrnon Therapeutics secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and strengthens the company's financial position for the coming quarters.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings announces major organizational restructuring"
+      "headline": "Halvix Holdings announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals internal instability or a pivot, creating short-term market uncertainty regarding operational continuity.",
+        "longTerm": 0,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 5% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator of demand that typically impacts financial performance immediately and potentially persists.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports 3% increase in customer acquisition"
+      "headline": "Plevyl Advisors reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition is a positive growth signal that directly correlates with revenue expansion over the near and medium term.",
+        "longTerm": 3,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 18% margin improvement in latest quarter"
+      "headline": "Plevyl Advisors sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant margin improvement indicates enhanced operational efficiency and profitability, which is a strong positive driver for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:31.327Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

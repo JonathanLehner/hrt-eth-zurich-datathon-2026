@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma faces regulatory review of automated logistics practices"
+      "headline": "Nerval Biopharma faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential operational friction and legal uncertainty for Nerval Biopharma.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma withdraws from Central Europe market citing unfavorable conditions"
+      "headline": "Nerval Biopharma withdraws from Central Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a regional market signals a contraction in growth prospects and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma secures $250M contract with a major logistics provider"
+      "headline": "Zrovum Biopharma secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides immediate revenue visibility and validates the company's service offering.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma announces $8.4B share buyback program"
+      "headline": "Zrovum Biopharma announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings misses quarterly revenue estimates by 25%"
+      "headline": "Halvix Holdings misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a substantial negative indicator of current business performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma recalls products in digital payments line due to quality concerns"
+      "headline": "Nerval Biopharma recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls damage brand reputation and incur immediate costs, creating significant near-term headwinds.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics completes strategic acquisition to strengthen data analytics"
+      "headline": "Myrnon Therapeutics completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Acquiring data analytics capabilities is a strategic move that likely enhances long-term operational efficiency.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings announces breakthrough in wireless connectivity"
+      "headline": "Halvix Holdings announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in wireless connectivity offers potential for future product differentiation and market expansion.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:32.150Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

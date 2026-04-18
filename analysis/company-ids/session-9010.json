@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports unexpected decline in Latin America revenue"
+      "headline": "Arnik Commerce reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a key regional market signals potential structural weakness or competitive pressure in Arnik Commerce's growth strategy.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial misses quarterly revenue estimates by 5%"
+      "headline": "Ilval Financial misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "A 5% revenue miss relative to analyst expectations typically triggers an immediate negative market reaction and potential downward revisions for the quarter.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Xovol Goods recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls in precision manufacturing imply significant operational costs and potential reputational damage that may persist beyond the initial event.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce delays product launch in digital payments segment"
+      "headline": "Arnik Commerce delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a growth segment like digital payments directly postpones expected revenue streams and may signal internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports 12% decline in operating income"
+      "headline": "Xovol Goods reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income indicates margin compression or rising costs that directly impact the bottom line and investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $320M contract with a leading cloud platform"
+      "headline": "Arnik Commerce secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, quantifiable boost to future revenue and validates the company's competitive position in the cloud sector.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:36.957Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

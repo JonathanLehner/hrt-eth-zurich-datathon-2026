@@ -65,56 +65,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Talvix Holdings recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core business line creates immediate negative sentiment and potential financial liability.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings loses key contract in Latin America to competitor"
+      "headline": "Talvix Holdings loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue projections and signals competitive weakness.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $650M contract with a global retailer"
+      "headline": "Yorval Partners secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a significant and durable boost to revenue and market confidence.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files routine patent applications in supply chain optimization"
+      "headline": "Zrovov Advisors files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $180M contract with a major logistics provider"
+      "headline": "Yorval Partners secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $180M contract win is a positive development that strengthens the company's revenue pipeline.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings files routine patent applications in automated logistics"
+      "headline": "Talvix Holdings files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings in automated logistics are standard operational activities with no immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips delays product launch in renewable storage segment"
+      "headline": "Ulvyn Microchips delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue and may signal internal execution challenges.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings delays product launch in enterprise software segment"
+      "headline": "Talvix Holdings delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in the enterprise software segment creates uncertainty regarding revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:53.995Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

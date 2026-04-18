@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports 12% increase in customer acquisition"
+      "headline": "Relvan Software reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition indicates positive growth momentum for Relvan Software.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports 12% increase in customer acquisition"
+      "headline": "Creven Securities reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition suggests strong market traction for Creven Securities.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks delays product launch in supply chain optimization segment"
+      "headline": "Jovor Networks delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch negatively impacts revenue expectations and market positioning for Jovor Networks.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Ulvyn Microchips reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook provide a clear positive signal for Ulvyn Microchips' financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software announces restructuring plan, cites challenging market conditions"
+      "headline": "Relvan Software announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan due to challenging market conditions signals internal pressure and potential near-term earnings headwinds.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Relvan Software completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to expand capabilities, though the immediate financial impact is neutral until integration.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $250M contract with a major logistics provider"
+      "headline": "Jovor Networks secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides significant, concrete revenue visibility for Jovor Networks.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities to host investor day focused on cloud infrastructure strategy"
+      "headline": "Creven Securities to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:14.993Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners completes strategic acquisition to strengthen automated logistics"
+      "headline": "Plevum Partners completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition of logistics technology provides a clear strategic expansion that should enhance operational capabilities over the medium term.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels wins industry award for excellence in digital payments"
+      "headline": "Relvon Fuels wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but generally lack direct, quantifiable financial impact on near-term earnings.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners wins industry award for excellence in enterprise software"
+      "headline": "Plevum Partners wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Similar to other industry awards, this recognition serves as a marketing benefit with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $400M contract with a multinational manufacturer"
+      "headline": "Halvix Holdings secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a significant, concrete revenue boost that will positively impact financial results throughout the 100-day window.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners enters joint venture with a leading cloud platform"
+      "headline": "Plevum Partners enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a cloud leader suggests a strategic partnership that could improve service offerings and market reach over time.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors opens new office in North America"
+      "headline": "Zrovov Advisors opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates growth and investment in a new market, which is a positive signal for long-term revenue potential.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors withdraws from Southeast Asia market citing unfavorable conditions"
+      "headline": "Zrovov Advisors withdraws from Southeast Asia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market due to unfavorable conditions is a negative signal regarding regional performance and potential asset impairment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:31.256Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

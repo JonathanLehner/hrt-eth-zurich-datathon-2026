@@ -65,56 +65,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group names new head of precision manufacturing division"
+      "headline": "Varvov Retail Group names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $250M contract with a multinational manufacturer"
+      "headline": "Varvov Retail Group secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, quantifiable revenue growth for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces significant capital expenditure plan for Scandinavia"
+      "headline": "Varvov Retail Group announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace launches next-generation data analytics platform"
+      "headline": "Arnos Marketplace launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that may drive future revenue growth.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $400M contract with a leading cloud platform"
+      "headline": "Arnos Marketplace secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $400M contract with a major cloud provider is a substantial positive catalyst for revenue.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Varvov Retail Group completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition is a positive move to strengthen core manufacturing capabilities.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores schedules annual shareholder meeting for next month"
+      "headline": "Holtar Stores schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate event with no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Myrnep Technologies recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event that creates immediate financial and reputational risk.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:51.243Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

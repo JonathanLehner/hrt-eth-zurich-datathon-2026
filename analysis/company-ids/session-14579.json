@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Nolvol Resources begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically results in a temporary, expected dip in production capacity.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors files for regulatory approval of new renewable storage offering"
+      "headline": "Plevyl Advisors files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the outcome and timeline remain subject to external review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Zelvel Capital recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational and reputational damage with potential long-term costs associated with remediation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors to host investor day focused on digital payments strategy"
+      "headline": "Plevyl Advisors to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day is a strategic communication event that typically generates neutral to slightly positive sentiment depending on market expectations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities names new head of automated logistics division"
+      "headline": "Jorvyl Securities names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that carries moderate uncertainty regarding future strategic execution.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities recalls products in enterprise software line due to quality concerns"
+      "headline": "Jorvyl Securities recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling enterprise software products suggests significant quality control issues that could impact client trust and future revenue.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital files routine patent applications in cloud infrastructure"
+      "headline": "Zelvel Capital files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that provide minimal immediate financial impact or signal.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:08.635Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

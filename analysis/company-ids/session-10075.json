@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies explores strategic alternatives for enterprise software unit"
+      "headline": "Myrnep Technologies explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential divestiture or restructuring, creating both opportunity and uncertainty for the enterprise unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports unexpected decline in Central Europe revenue"
+      "headline": "Plevep Power reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region directly impacts financial performance and investor sentiment negatively.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $180M contract with a multinational manufacturer"
+      "headline": "Plevep Power secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract provides a clear, positive boost to revenue visibility and operational growth.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions sees 3% drop in new customer orders this quarter"
+      "headline": "Wyrnor Solutions sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct indicator of weakening demand, which typically leads to downward revisions in growth expectations.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions explores strategic alternatives for wireless connectivity unit"
+      "headline": "Wyrnor Solutions explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "The exploration of strategic alternatives for a business unit introduces potential for value realization but also operational ambiguity.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources completes planned facility upgrade in Central Europe"
+      "headline": "Nolvol Resources completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that typically improves efficiency but has a neutral immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources names new head of renewable storage division"
+      "headline": "Nolvol Resources names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that carries moderate uncertainty regarding future strategic direction.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $320M contract with a top-tier research institute"
+      "headline": "Plevep Power secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A large $320M contract win provides a strong, positive signal for long-term revenue stability and market positioning.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:16.376Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

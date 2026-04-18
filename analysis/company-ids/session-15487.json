@@ -65,56 +65,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems files for regulatory approval of new precision manufacturing offering"
+      "headline": "Prynis Systems files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates progress but does not guarantee immediate revenue or market success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Varvov Retail Group begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $75M contract with an international consortium"
+      "headline": "Nolvav Commerce secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable boost to revenue visibility and financial health.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group enters joint venture with a major logistics provider"
+      "headline": "Varvov Retail Group enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests potential for operational efficiency and growth, though the financial impact depends on execution.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group CEO addresses investor concerns in open letter"
+      "headline": "Varvov Retail Group CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CEO addressing investor concerns implies existing instability or lack of confidence that the letter attempts to mitigate.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group launches next-generation data analytics platform"
+      "headline": "Varvov Retail Group launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive development that could drive future revenue, though its immediate market adoption remains to be seen.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Nolvav Commerce reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record revenue growth of 15% is a strong, objective indicator of current business health and market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces regulatory review of supply chain optimization practices"
+      "headline": "Crevol Retail Group faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Facing a regulatory review introduces uncertainty and potential legal or operational costs, which typically weighs on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:19.793Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

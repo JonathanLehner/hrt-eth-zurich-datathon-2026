@@ -46,21 +46,62 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods expands operations into Middle East markets"
+      "headline": "Talvyn Goods expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a clear growth opportunity that typically yields long-term revenue benefits despite initial setup costs.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Crevol Retail Group recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate negative sentiment and potential financial liability, with long-term impacts depending on the scale of the quality issue.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies recalls products in digital payments line due to quality concerns"
+      "headline": "Myrnep Technologies recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling digital payment products poses significant reputational and operational risks that likely persist beyond the initial announcement.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:36.262Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

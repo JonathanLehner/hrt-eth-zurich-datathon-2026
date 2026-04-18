@@ -39,35 +39,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Jovik Asset Group reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 3% is a positive indicator of financial health, though the modest growth rate limits the magnitude of the impact.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities revises long-term strategy with focus on process automation"
+      "headline": "Creven Securities revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward process automation is a long-term efficiency play that lacks immediate financial impact or clear implementation timelines.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $120M contract with a major logistics provider"
+      "headline": "Jovik Asset Group secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost that will positively impact the company's financial performance over the coming months.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group confirms participation in Global Innovation Summit"
+      "headline": "Jovik Asset Group confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in an industry summit is a standard corporate event that provides minimal direct financial impact or material change to the company's outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Jovik Asset Group recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in the cloud infrastructure line introduces immediate financial costs and potential reputational damage that will likely persist throughout the quarter.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:50.995Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

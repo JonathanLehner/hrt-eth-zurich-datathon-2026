@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets withdraws from Scandinavia market citing unfavorable conditions"
+      "headline": "Frelex Outlets withdraws from Scandinavia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a market reduces operational footprint and revenue potential, signaling strategic retreat.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets recalls products in renewable storage line due to quality concerns"
+      "headline": "Frelex Outlets recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial liability and damage brand reputation, with long-term recovery uncertainty.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores loses key contract in Europe to competitor"
+      "headline": "Xovep Stores loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Loss of a key contract directly impacts revenue streams and market share against competitors.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets faces regulatory review of renewable storage practices"
+      "headline": "Ixenis Outlets faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential for future operational restrictions or fines.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets beats analyst expectations with strong earnings growth"
+      "headline": "Frelex Outlets beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a positive catalyst for stock performance and investor sentiment.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $320M contract with an international consortium"
+      "headline": "Ixenis Outlets secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear revenue visibility and growth validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports unexpected decline in Southeast Asia revenue"
+      "headline": "Arnik Commerce reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region signals potential demand issues or competitive pressure.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:34.795Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

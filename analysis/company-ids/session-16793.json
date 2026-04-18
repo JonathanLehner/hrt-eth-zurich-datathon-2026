@@ -42,42 +42,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce files for regulatory approval of new wireless connectivity offering"
+      "headline": "Nolvav Commerce files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress but does not guarantee immediate revenue or market success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in data analytics"
+      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into direct, measurable financial impact for the company.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $180M contract with a multinational manufacturer"
+      "headline": "Yorvov Pharmaceuticals secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides clear, quantifiable revenue visibility and strengthens the company's financial position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Nolvav Commerce reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a positive indicator of demand, though a 3% year-over-year increase is relatively modest.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Nolvav Commerce announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth ambition but implies immediate cash outflows that may weigh on short-term margins.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Yorvov Pharmaceuticals completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquiring a company to optimize the supply chain is a strategic move that should improve operational efficiency and margins over time.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:07.923Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

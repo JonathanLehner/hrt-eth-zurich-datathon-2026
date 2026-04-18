@@ -40,35 +40,96 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels announces major organizational restructuring"
+      "headline": "Jorvis Fuels announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring often signals cost-cutting or strategic shifts that create short-term volatility and long-term uncertainty regarding operational efficiency.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces $9.6B share buyback program"
+      "headline": "Wrelal Financial announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program directly increases earnings per share and signals management confidence, providing a clear positive impact on shareholder value.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial launches next-generation renewable storage platform"
+      "headline": "Wrelal Financial launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform indicates growth potential, though the immediate financial contribution is typically speculative until adoption metrics emerge.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels secures $320M contract with a leading cloud platform"
+      "headline": "Jorvis Fuels secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a specific $320M contract provides immediate, quantifiable revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files routine patent applications in enterprise software"
+      "headline": "Wrelal Financial files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that rarely provide immediate material financial impact or significant market movement.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:29.617Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

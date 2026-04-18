@@ -38,28 +38,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments explores strategic alternatives for data analytics unit"
+      "headline": "Krevan Investments explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential divestiture or sale, which creates immediate investor interest but carries significant uncertainty regarding the outcome.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 0,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $50M contract with a multinational manufacturer"
+      "headline": "Yorval Partners secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost that is positive for the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners to host investor day focused on supply chain optimization strategy"
+      "headline": "Yorval Partners to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a standard corporate event that typically has a neutral to slightly positive impact depending on market sentiment.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $120M contract with a leading cloud platform"
+      "headline": "Yorval Partners secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $120M contract win with a major cloud platform is a significant, high-value event that directly improves revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:57.276Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

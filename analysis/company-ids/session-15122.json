@@ -36,21 +36,62 @@
       "barIx": 33,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces breakthrough in automated logistics"
+      "headline": "Nolvav Commerce announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough in automated logistics suggests potential operational efficiency gains, though the lack of specific financial impact or deployment timeline creates uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $250M contract with a national infrastructure agency"
+      "headline": "Talvyn Goods secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, quantifiable revenue growth and long-term stability for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce misses quarterly revenue estimates by 18%"
+      "headline": "Nolvav Commerce misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current business performance that will likely weigh on investor sentiment in the short and medium term.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:47.122Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

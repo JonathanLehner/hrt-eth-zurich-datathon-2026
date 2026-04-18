@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $320M contract with a national infrastructure agency"
+      "headline": "Yorven Labs secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software misses quarterly revenue estimates by 15%"
+      "headline": "Relvan Software misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss indicates significant operational or demand issues that will likely weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies expands operations into Latin America markets"
+      "headline": "Ixenix Technologies expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets represents a strategic growth initiative that typically takes time to materialize into earnings.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software loses key contract in Latin America to competitor"
+      "headline": "Relvan Software loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts revenue and signals potential competitive weakness.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs faces regulatory review of digital payments practices"
+      "headline": "Yorven Labs faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create significant uncertainty and potential legal or operational costs for the company.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $800M contract with a major logistics provider"
+      "headline": "Ixenix Technologies secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "An $800M contract is a substantial win that significantly bolsters the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies sees 5% drop in new customer orders this quarter"
+      "headline": "Ixenix Technologies sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders suggests a cooling in demand that could impact future revenue growth.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands announces major organizational restructuring"
+      "headline": "Joval Brands announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals internal turmoil or a pivot, creating short-term volatility and long-term execution risk.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:35.228Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -38,28 +38,79 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks delays product launch in precision manufacturing segment"
+      "headline": "Jovor Networks delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch directly impacts revenue realization and market positioning in the precision manufacturing segment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Ulvyn Microchips reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising supply chain costs directly threaten profit margins, signaling potential earnings headwinds for the upcoming quarter.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips announces breakthrough in digital payments"
+      "headline": "Ulvyn Microchips announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in digital payments suggests new revenue streams and competitive advantages for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Ulvyn Microchips reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 25% indicates strong market demand and operational success, providing a positive signal for financial health.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:08.312Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

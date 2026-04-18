@@ -52,42 +52,113 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Nolvol Resources begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports unexpected decline in Europe revenue"
+      "headline": "Creven Securities reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a negative signal for earnings and growth expectations.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners launches next-generation renewable storage platform"
+      "headline": "Yorval Partners launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive development that suggests future revenue growth potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces breakthrough in renewable storage"
+      "headline": "Creven Securities announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A breakthrough in technology is a positive indicator for long-term competitive advantage and market positioning.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Yorval Partners recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate financial costs and potential reputational damage.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces $5.7B share buyback program"
+      "headline": "Creven Securities announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a positive signal for shareholder value and indicates management confidence in cash flow.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:34.598Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

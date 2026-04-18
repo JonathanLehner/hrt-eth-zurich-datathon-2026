@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports strong demand in Middle East, raises outlook"
+      "headline": "Joval Brands reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for future earnings growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software delays product launch in process automation segment"
+      "headline": "Frelol Software delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch typically signals operational friction and a postponement of expected revenue streams.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Frelol Software reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Upward revision of guidance due to strong demand in a major market is a direct positive indicator for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $120M contract with a global retailer"
+      "headline": "Talvyn Goods secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and validates market competitiveness.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software sees 3% drop in new customer orders this quarter"
+      "headline": "Frelol Software sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a negative leading indicator for future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets delays product launch in digital payments segment"
+      "headline": "Ixenis Outlets delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a competitive segment like digital payments creates uncertainty regarding market share and revenue timing.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Ixenis Outlets completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to bolster long-term capabilities, though the immediate financial impact is often neutral or slightly negative due to integration costs.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:56.175Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs completes planned facility upgrade in Asia Pacific"
+      "headline": "Yorven Labs completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves long-term efficiency rather than providing an immediate revenue spike.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports strong demand in Latin America, raises outlook"
+      "headline": "Halvix Holdings reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising guidance based on strong regional demand is a clear positive signal that typically drives immediate investor optimism and sustained revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 10% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator for revenue growth that will likely weigh on investor sentiment in both the short and long term.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 5% drop in new customer orders this quarter"
+      "headline": "Yorven Labs sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% decline in new customer orders signals a cooling of demand that will likely impact financial performance throughout the remainder of the quarter.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports rising costs pressuring margins in automated logistics"
+      "headline": "Jorvyl Securities reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a fundamental negative that directly impacts profitability and is likely to persist until operational adjustments are made.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $800M contract with a top-tier research institute"
+      "headline": "Jorvyl Securities secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a significant and durable revenue boost that will positively influence financial performance over the long term.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:21.734Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

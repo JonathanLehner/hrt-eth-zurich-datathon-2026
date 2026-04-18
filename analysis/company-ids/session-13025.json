@@ -64,49 +64,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $250M contract with a multinational manufacturer"
+      "headline": "Orevar Marketplace secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "The $250M contract provides a clear, significant revenue boost that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings names new head of supply chain optimization division"
+      "headline": "Talvix Holdings names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with unclear immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities wins industry award for excellence in cloud infrastructure"
+      "headline": "Jorvyl Securities wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack a direct, quantifiable link to immediate financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports unexpected decline in Central Europe revenue"
+      "headline": "Plevum Partners reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a direct negative signal for the company's near-term financial health.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $500M contract with a national infrastructure agency"
+      "headline": "Orevar Marketplace secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $500M contract with a national agency represents a major, high-value win that significantly strengthens the company's revenue pipeline.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces class action over enterprise software service disruption"
+      "headline": "Talvix Holdings faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liabilities.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners CTO addresses investor concerns in open letter"
+      "headline": "Plevum Partners CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO is a reactive communication attempt that does not inherently resolve underlying investor concerns.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:10.025Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

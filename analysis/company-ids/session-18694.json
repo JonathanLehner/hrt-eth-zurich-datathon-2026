@@ -66,56 +66,147 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 7% margin improvement in latest quarter"
+      "headline": "Xelvol Biotech sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement indicates direct operational efficiency gains that typically boost profitability immediately and sustainably.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices files routine patent applications in automated logistics"
+      "headline": "Nolvis Devices files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices in talks for potential merger, details undisclosed"
+      "headline": "Nolvis Devices in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Merger talks are speculative and lack concrete details, creating high uncertainty regarding the final outcome and financial impact.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 7,
+        "impactType": "acquisition",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices expands operations into Southeast Asia markets"
+      "headline": "Nolvis Devices expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets represents a strategic growth initiative that typically incurs upfront costs before generating long-term revenue.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces $6.3B share buyback program"
+      "headline": "Grevon Biotech announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 15% decline in operating income"
+      "headline": "Calvis Sciences reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a significant negative indicator of core business performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech launches next-generation renewable storage platform"
+      "headline": "Grevon Biotech launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive catalyst for future revenue growth, though market adoption remains to be seen.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech begins scheduled maintenance of process automation systems"
+      "headline": "Xelvol Biotech begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:18.170Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

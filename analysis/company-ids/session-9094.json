@@ -66,56 +66,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences faces class action over process automation service disruption"
+      "headline": "Zelvon Biosciences faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal and reputational risk that may persist as the litigation unfolds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities faces regulatory review of cloud infrastructure practices"
+      "headline": "Jorvyl Securities faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of core infrastructure practices introduce significant uncertainty and potential operational constraints for the firm.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics files for regulatory approval of new supply chain optimization offering"
+      "headline": "Zelvix Therapeutics files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product commercialization, though the outcome remains subject to external review.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences expands operations into Asia Pacific markets"
+      "headline": "Zelvon Biosciences expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into the Asia Pacific market signals growth potential, though the immediate financial impact is likely to be muted by setup costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 14,
       "companyId": 3,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports rising costs pressuring margins in renewable storage"
+      "headline": "Yorvov Pharmaceuticals reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability that will likely weigh on performance until mitigated.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences revises long-term strategy with focus on wireless connectivity"
+      "headline": "Zelvon Biosciences revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A strategic pivot to wireless connectivity indicates a long-term shift in focus, but the immediate financial implications are highly speculative.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 17,
       "companyId": 3,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Yorvov Pharmaceuticals completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition of a precision manufacturing firm is a concrete step to improve operational capabilities, likely yielding long-term efficiency gains.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities completes planned facility upgrade in Central Europe"
+      "headline": "Jorvyl Securities completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is a routine operational milestone that provides incremental efficiency improvements without immediate market-moving impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:40.339Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

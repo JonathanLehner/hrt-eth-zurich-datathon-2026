@@ -60,35 +60,96 @@
       "barIx": 30,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings faces class action over cloud infrastructure service disruption"
+      "headline": "Halvix Holdings faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that may persist as the litigation process unfolds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce files routine patent applications in enterprise software"
+      "headline": "Nolvav Commerce files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operational activities that do not provide immediate or predictable financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 9,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group opens new office in Latin America"
+      "headline": "Jovik Asset Group opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a strategic expansion that typically incurs costs in the short term before generating revenue in the long term.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $320M contract with a major logistics provider"
+      "headline": "Talvix Holdings secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate positive revenue visibility and long-term operational stability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings lowers full-year guidance amid softening demand"
+      "headline": "Talvix Holdings lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering guidance due to softening demand is a direct negative signal for both immediate investor sentiment and future earnings performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:43.114Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities explores strategic alternatives for renewable storage unit"
+      "headline": "Jorvyl Securities explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential sale or restructuring, which creates immediate speculative interest but long-term uncertainty regarding the outcome.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial signs multi-year partnership with a top-tier research institute"
+      "headline": "Ilval Financial signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term credibility and potential innovation benefits, though the immediate financial impact is likely muted.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial launches next-generation wireless connectivity platform"
+      "headline": "Ilval Financial launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a direct growth catalyst that typically drives positive sentiment and potential revenue expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities faces class action over enterprise software service disruption"
+      "headline": "Jorvyl Securities faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits represent a direct legal and financial risk that creates immediate negative sentiment and lingering uncertainty.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities faces class action over digital payments service disruption"
+      "headline": "Jorvyl Securities faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A second class action lawsuit regarding service disruption compounds the negative sentiment and increases the perceived operational risk.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels files for regulatory approval of new supply chain optimization offering"
+      "headline": "Relvon Fuels files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for growth, though the outcome and timeline remain subject to external review.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:08.754Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

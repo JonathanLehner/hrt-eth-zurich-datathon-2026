@@ -50,35 +50,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences launches next-generation process automation platform"
+      "headline": "Calvis Sciences launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "The launch of a new automation platform represents a direct product expansion that should drive incremental revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports 7% increase in customer acquisition"
+      "headline": "Nolvis Devices reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition is a clear positive indicator of demand growth and market share expansion.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Zrovum Biopharma recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event that will likely cause immediate operational and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma announces breakthrough in renewable storage"
+      "headline": "Zrovum Biopharma announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A breakthrough in renewable storage is a positive development that could significantly enhance the company's long-term competitive positioning.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 25% drop in new customer orders this quarter"
+      "headline": "Nolvis Devices sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a strong negative signal regarding current demand and future revenue performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:42.377Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

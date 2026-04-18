@@ -54,49 +54,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $800M contract with an international consortium"
+      "headline": "Halven Investments secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments expands operations into Latin America markets"
+      "headline": "Halven Investments expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets signals growth but involves execution risk and delayed financial returns.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems enters joint venture with a top-tier research institute"
+      "headline": "Prynis Systems enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a research institute suggests future innovation potential but lacks immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs announces $1.2B share buyback program"
+      "headline": "Crevex Labs announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program directly increases earnings per share and signals management confidence in valuation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems schedules annual shareholder meeting for next month"
+      "headline": "Prynis Systems schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate event with no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 0,
+        "shortTermUncertainty": 0,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 0
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems delays product launch in process automation segment"
+      "headline": "Prynis Systems delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch negatively impacts short-term revenue expectations and suggests potential operational or technical issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 7%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 7% is a clear negative signal regarding current demand or operational performance.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:53.828Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

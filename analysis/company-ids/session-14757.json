@@ -34,14 +34,45 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports 10% increase in customer acquisition"
+      "headline": "Ilval Financial reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition directly signals revenue growth potential and improved market penetration.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital signs multi-year partnership with a leading cloud platform"
+      "headline": "Zelvel Capital signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a leading cloud platform provides long-term strategic stability and potential for operational efficiency.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:32.890Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

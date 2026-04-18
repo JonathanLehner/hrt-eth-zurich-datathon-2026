@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners delays product launch in automated logistics segment"
+      "headline": "Yorval Partners delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key growth segment typically signals operational friction and deferred revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $180M contract with a leading cloud platform"
+      "headline": "Plevum Partners secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a major cloud platform provides immediate revenue visibility and validates market positioning.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $120M contract with a top-tier research institute"
+      "headline": "Halvix Holdings secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $120M contract with a top-tier research institute represents a significant and stable revenue stream for the company.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Zelvel Capital warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and margin performance in the specified region.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports 20% increase in customer acquisition"
+      "headline": "Halvix Holdings reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong indicator of growth momentum and market demand.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital loses key contract in Southeast Asia to competitor"
+      "headline": "Zelvel Capital loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor indicates a loss of market share and potential revenue headwinds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports strong demand in Latin America, raises outlook"
+      "headline": "Zelvel Capital reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive signals for future financial performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Plevum Partners recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate reputational risk and potential financial liability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:23.622Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,49 +52,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices names new head of automated logistics division"
+      "headline": "Volval Devices names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices sees 8% drop in new customer orders this quarter"
+      "headline": "Volval Devices sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders directly signals a contraction in revenue growth for the current period.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies loses key contract in Southeast Asia to competitor"
+      "headline": "Ixenix Technologies loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share to a competitor.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices delays product launch in data analytics segment"
+      "headline": "Volval Devices delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and may signal internal operational challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software faces regulatory review of precision manufacturing practices"
+      "headline": "Frelol Software faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create uncertainty and potential compliance costs, which typically weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices loses key contract in Southeast Asia to competitor"
+      "headline": "Volval Devices loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract is a negative event that directly impacts the company's revenue outlook.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $250M contract with an international consortium"
+      "headline": "Volval Devices secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, positive boost to future revenue and backlog.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:58.464Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

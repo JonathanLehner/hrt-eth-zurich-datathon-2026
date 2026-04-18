@@ -52,49 +52,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies sees 12% drop in new customer orders this quarter"
+      "headline": "Myrnep Technologies sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders indicates a direct decline in demand that will likely impact revenue immediately and persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Myrnep Technologies completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition of cloud infrastructure assets is a strategic move that typically requires integration time before yielding tangible financial benefits.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports 15% decline in operating income"
+      "headline": "Crevex Labs reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a clear negative signal regarding the company's current profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 15% margin improvement in latest quarter"
+      "headline": "Calvos Genomics sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement demonstrates enhanced operational efficiency that should positively influence the bottom line for the remainder of the quarter.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies names new head of enterprise software division"
+      "headline": "Myrnep Technologies names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that carries moderate uncertainty regarding the individual's future strategic impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies revises long-term strategy with focus on digital payments"
+      "headline": "Myrnep Technologies revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "Revising a long-term strategy toward digital payments signals a shift in focus, but the financial impact remains speculative until execution begins.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies delays product launch in digital payments segment"
+      "headline": "Myrnep Technologies delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and creates immediate negative sentiment regarding operational execution.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:35.516Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -48,28 +48,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces breakthrough in enterprise software"
+      "headline": "Talvyn Goods announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough in enterprise software suggests potential for future growth but lacks specific financial details or immediate revenue impact.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces $2.5B share buyback program"
+      "headline": "Varvov Retail Group announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program provides immediate support to the stock price and signals management confidence in capital allocation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 25% drop in new customer orders this quarter"
+      "headline": "Talvyn Goods sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative indicator for near-term revenue and growth momentum.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Yorven Labs reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 3% year-over-year indicates stable performance but suggests slowing growth momentum compared to historical records.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:09.873Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

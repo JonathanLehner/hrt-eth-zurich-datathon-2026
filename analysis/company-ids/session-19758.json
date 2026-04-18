@@ -52,42 +52,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics sees 20% margin improvement in latest quarter"
+      "headline": "Myrnon Therapeutics sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency and immediate profitability gains.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks opens new office in Asia Pacific"
+      "headline": "Jovor Networks opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Expanding into a new region is a strategic growth move but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $180M contract with a multinational manufacturer"
+      "headline": "Calvis Sciences secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, immediate revenue visibility and positive financial impact.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences signs multi-year partnership with a national infrastructure agency"
+      "headline": "Calvis Sciences signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a government agency offers long-term revenue stability and growth potential.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports rising costs pressuring margins in automated logistics"
+      "headline": "Calvis Sciences reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and indicate a negative trend in operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics announces significant capital expenditure plan for Latin America"
+      "headline": "Myrnon Therapeutics announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term investment but implies immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:57.480Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

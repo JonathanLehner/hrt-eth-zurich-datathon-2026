@@ -66,56 +66,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $320M contract with a top-tier research institute"
+      "headline": "Wyrnor Solutions secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, quantifiable revenue boost that will positively impact financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions enters joint venture with a global retailer"
+      "headline": "Wyrnor Solutions enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests significant growth potential, though the immediate financial impact is less defined than a direct contract win.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources faces class action over automated logistics service disruption"
+      "headline": "Nolvol Resources faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability, creating negative sentiment in the short and long term.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Nolvol Resources Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CSO is a reactive measure to investor concerns, which typically signals underlying instability without providing concrete financial improvement.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions raises full-year guidance citing robust demand"
+      "headline": "Wyrnor Solutions raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a strong positive signal for both immediate investor confidence and sustained financial performance.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Nolvol Resources warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region directly threaten operational efficiency and revenue, creating a clear negative impact.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power misses quarterly revenue estimates by 3%"
+      "headline": "Kelvik Power misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% is a negative indicator of performance, though the magnitude is relatively small, limiting the severity of the impact.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Halven Investments reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% year-over-year demonstrates strong business momentum and positive financial health.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:35.781Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

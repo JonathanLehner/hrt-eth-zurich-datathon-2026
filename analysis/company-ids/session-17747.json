@@ -66,56 +66,147 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $500M contract with a global retailer"
+      "headline": "Talvep Computing secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $500M contract provides a clear, significant, and durable revenue boost for Talvep Computing.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs announces major organizational restructuring"
+      "headline": "Crevex Labs announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring creates immediate operational uncertainty and potential short-term costs, with long-term benefits remaining speculative.",
+        "longTerm": 2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Brevon Microchips recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate financial loss and potential reputational damage that will likely persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs beats analyst expectations with strong earnings growth"
+      "headline": "Crevex Labs beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a strong positive signal for the company's current financial health and market sentiment.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma faces class action over process automation service disruption"
+      "headline": "Nerval Biopharma faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal risk and uncertainty regarding potential financial liabilities.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Talvep Computing files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step, but the outcome and timing remain subject to external regulatory review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $320M contract with a global retailer"
+      "headline": "Crevex Labs secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract is a clear positive development that will contribute to revenue growth over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma misses quarterly revenue estimates by 12%"
+      "headline": "Nerval Biopharma misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 12% is a significant negative indicator of current business performance.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:44.564Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -54,49 +54,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences names new head of supply chain optimization division"
+      "headline": "Wyrnik Sciences names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with limited immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech wins industry award for excellence in supply chain optimization"
+      "headline": "Xelvol Biotech wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into direct, measurable financial gains.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences faces class action over enterprise software service disruption"
+      "headline": "Zelvon Biosciences faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal and reputational risk with potential for long-term financial liability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports 25% increase in customer acquisition"
+      "headline": "Xelvol Biotech reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong indicator of revenue growth and market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Wyrnik Sciences warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region pose a direct threat to operational efficiency and revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces $5.7B share buyback program"
+      "headline": "Xelvol Biotech announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences to host investor day focused on cloud infrastructure strategy"
+      "headline": "Zelvon Biosciences to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a routine corporate communication event that typically lacks immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:44.575Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

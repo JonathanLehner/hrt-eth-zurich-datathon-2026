@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group CTO steps down unexpectedly citing personal reasons"
+      "headline": "Crevol Retail Group CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership instability and uncertainty regarding the company's technical roadmap.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace announces $8.4B share buyback program"
+      "headline": "Arnos Marketplace announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid loses key contract in North America to competitor"
+      "headline": "Nerven Grid loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue projections and suggests a competitive disadvantage in the North American market.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid launches next-generation enterprise software platform"
+      "headline": "Nerven Grid launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a new software platform indicates potential for future revenue growth and product differentiation.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace revises long-term strategy with focus on wireless connectivity"
+      "headline": "Arnos Marketplace revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A strategic pivot to wireless connectivity is a long-term directional shift that lacks immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid to present at Annual Industry Forum"
+      "headline": "Nerven Grid to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:25.058Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

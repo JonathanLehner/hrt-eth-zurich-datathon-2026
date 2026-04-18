@@ -64,49 +64,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports rising costs pressuring margins in enterprise software"
+      "headline": "Grevon Biotech reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $75M contract with a multinational manufacturer"
+      "headline": "Myrnon Therapeutics secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, immediate revenue visibility and positive growth momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics explores strategic alternatives for precision manufacturing unit"
+      "headline": "Grevel Diagnostics explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals potential divestiture or restructuring, creating significant uncertainty regarding future operations.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $50M contract with a leading cloud platform"
+      "headline": "Myrnon Therapeutics secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $50M contract win with a major cloud platform reinforces the company's growth trajectory and market demand.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics misses quarterly revenue estimates by 3%"
+      "headline": "Grevel Diagnostics misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% is a negative indicator of operational performance and market expectations.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $500M contract with a major logistics provider"
+      "headline": "Myrnon Therapeutics secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $500M contract is a substantial win that significantly bolsters the company's long-term revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports strong demand in Scandinavia, raises outlook"
+      "headline": "Xelvol Biotech reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with an upward revision of guidance is a strong positive signal for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:34.933Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -48,28 +48,79 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports 10% decline in operating income"
+      "headline": "Wrelal Financial reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports strong demand in North America, raises outlook"
+      "headline": "Talvix Holdings reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and raised guidance are clear positive indicators of financial performance and growth momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial completes planned facility upgrade in Asia Pacific"
+      "headline": "Wrelal Financial completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that typically improves long-term efficiency rather than immediate financial results.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners board meeting to discuss major strategic initiative"
+      "headline": "Yorval Partners board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The announcement of a board meeting to discuss a strategic initiative is vague and lacks specific details on the nature or impact of the plan.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:55.204Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

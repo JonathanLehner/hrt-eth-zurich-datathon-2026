@@ -56,56 +56,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces class action over precision manufacturing service disruption"
+      "headline": "Krevan Investments faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Central Europe"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables sees 8% margin improvement in latest quarter"
+      "headline": "Ulvon Renewables sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly indicates increased profitability and operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables expands operations into Central Europe markets"
+      "headline": "Ulvon Renewables expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets provides a clear pathway for revenue growth in the coming months.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings to host investor day focused on supply chain optimization strategy"
+      "headline": "Talvix Holdings to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but no immediate financial change.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings names new head of process automation division"
+      "headline": "Talvix Holdings names new head of process automation division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments completes strategic acquisition to strengthen renewable storage"
+      "headline": "Krevan Investments completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic acquisition in a growth sector like renewable storage is a positive long-term development.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings recalls products in enterprise software line due to quality concerns"
+      "headline": "Talvix Holdings recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate negative sentiment and potential costs related to remediation.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:02.379Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

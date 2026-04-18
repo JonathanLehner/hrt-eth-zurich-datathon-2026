@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $650M contract with an international consortium"
+      "headline": "Orevov Solutions secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $650M contract provides a clear, significant revenue boost that will positively impact the company's financial outlook over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods misses quarterly revenue estimates by 25%"
+      "headline": "Xovol Goods misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a substantial negative indicator that will likely trigger immediate downward pressure on the stock price.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $250M contract with a leading cloud platform"
+      "headline": "Xovol Goods secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract with a major cloud platform provides a strong positive signal for future growth and revenue stability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces class action over process automation service disruption"
+      "headline": "Xovol Goods faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and reputational risk that will likely weigh on investor sentiment in the short and long term.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources completes strategic acquisition to strengthen data analytics"
+      "headline": "Kelvos Resources completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance capabilities, though the immediate financial impact is neutral until integration progress is shown.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Relvon Fuels reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 10% year-over-year is a strong fundamental indicator of business health and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees 5% margin improvement in latest quarter"
+      "headline": "Relvon Fuels sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly signals increased operational efficiency and higher profitability per unit sold.",
+        "longTerm": 5,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels schedules annual shareholder meeting for next month"
+      "headline": "Relvon Fuels schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate governance event with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 0,
+        "shortTermUncertainty": 0,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:53.789Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

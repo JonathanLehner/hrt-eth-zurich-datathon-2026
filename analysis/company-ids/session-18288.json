@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings loses key contract in Latin America to competitor"
+      "headline": "Talvix Holdings loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue streams and market position in the Latin American region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors delays product launch in process automation segment"
+      "headline": "Zrovov Advisors delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch typically signals operational friction and pushes back expected revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports 25% increase in customer acquisition"
+      "headline": "Talvix Holdings reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong indicator of growth and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors to host investor day focused on digital payments strategy"
+      "headline": "Zrovov Advisors to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that aims to provide clarity but does not guarantee immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Talvix Holdings reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% demonstrates strong operational performance and market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes planned facility upgrade in Europe"
+      "headline": "Ilval Financial completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that is likely already priced in by the market.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $180M contract with an international consortium"
+      "headline": "Jorval Trading Co secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides a clear, significant, and durable boost to the company's revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:03.392Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

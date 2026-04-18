@@ -54,49 +54,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics names new head of digital payments division"
+      "headline": "Calvos Genomics names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports strong demand in North America, raises outlook"
+      "headline": "Calvos Genomics reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong demand is a direct positive indicator for near-term and medium-term revenue growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics wins industry award for excellence in precision manufacturing"
+      "headline": "Grevel Diagnostics wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack a direct, quantifiable link to immediate financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports unexpected decline in Latin America revenue"
+      "headline": "Grevel Diagnostics reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a negative signal that typically triggers immediate investor concern.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Frelol Software recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational costs and potential reputational damage that can persist over the medium term.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics secures $800M contract with a top-tier research institute"
+      "headline": "Grevel Diagnostics secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, long-term revenue visibility and strengthens the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software loses key contract in North America to competitor"
+      "headline": "Frelol Software loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts future revenue and signals potential competitive weakness.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:00.309Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

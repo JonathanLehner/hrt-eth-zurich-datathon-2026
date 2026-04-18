@@ -67,63 +67,164 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports rising costs pressuring margins in data analytics"
+      "headline": "Relvan Software reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces $5.7B share buyback program"
+      "headline": "Talvix Holdings announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a positive signal for shareholder value and capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 20% margin improvement in latest quarter"
+      "headline": "Talvix Holdings sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency and profitability growth.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing misses quarterly revenue estimates by 18%"
+      "headline": "Dralol Computing misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of demand and growth performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies publishes annual sustainability report"
+      "headline": "Myrnep Technologies publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Sustainability reports are standard corporate disclosures with minimal direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software publishes annual sustainability report"
+      "headline": "Relvan Software publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Sustainability reports are standard corporate disclosures with minimal direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software launches next-generation supply chain optimization platform"
+      "headline": "Relvan Software launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that could drive future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $50M contract with a global retailer"
+      "headline": "Relvan Software secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides clear, immediate revenue visibility and positive growth momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H009",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings expands operations into Latin America markets"
+      "headline": "Talvix Holdings expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a positive signal for long-term growth potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:53.080Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

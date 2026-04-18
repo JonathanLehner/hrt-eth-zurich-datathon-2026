@@ -41,42 +41,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences delays product launch in automated logistics segment"
+      "headline": "Wyrnik Sciences delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment typically signals operational friction and delays revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $400M contract with a multinational manufacturer"
+      "headline": "Calvos Genomics secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 5% margin improvement in latest quarter"
+      "headline": "Calvos Genomics sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates better operational efficiency and profitability, which is a positive fundamental signal.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports 25% increase in customer acquisition"
+      "headline": "Calvos Genomics reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition suggests strong market demand and growth momentum for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics faces regulatory review of enterprise software practices"
+      "headline": "Calvos Genomics faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential legal and operational risks that often create market apprehension.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences files for regulatory approval of new process automation offering"
+      "headline": "Wyrnik Sciences files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step toward commercialization, representing a neutral to slightly positive milestone.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:58.630Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

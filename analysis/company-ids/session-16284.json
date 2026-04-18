@@ -44,56 +44,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power sees 20% margin improvement in latest quarter"
+      "headline": "Kelvik Power sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency gains that directly boost profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power wins industry award for excellence in process automation"
+      "headline": "Kelvik Power wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct, quantifiable financial impact on the bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid loses key contract in Scandinavia to competitor"
+      "headline": "Nerven Grid loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports 8% increase in customer acquisition"
+      "headline": "Kelvik Power reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition suggests successful growth initiatives and potential for future revenue scaling.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power to host investor day focused on precision manufacturing strategy"
+      "headline": "Kelvik Power to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that typically do not move the stock price unless specific new guidance is provided.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid signs multi-year partnership with a global retailer"
+      "headline": "Nerven Grid signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic stability for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $500M contract with a national infrastructure agency"
+      "headline": "Nerven Grid secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract is a significant, high-value win that provides substantial revenue certainty.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Kelvik Power Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from an executive is a reactive measure to address uncertainty, which may signal underlying issues to investors.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:50.134Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

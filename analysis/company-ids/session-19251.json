@@ -40,35 +40,96 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports rising costs pressuring margins in automated logistics"
+      "headline": "Halvax Networks reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $250M contract with a leading cloud platform"
+      "headline": "Jovor Networks secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides immediate revenue visibility and validates the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks announces significant capital expenditure plan for Scandinavia"
+      "headline": "Jovor Networks announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals growth investment but creates short-term cash outflow pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over process automation service disruption"
+      "headline": "Jovor Networks faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal risk and potential financial liability, negatively impacting investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks expands operations into Middle East markets"
+      "headline": "Halvax Networks expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new geographic markets indicates a growth strategy that could increase long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:38.098Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

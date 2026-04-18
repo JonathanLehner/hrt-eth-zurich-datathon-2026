@@ -53,49 +53,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees mixed results in renewable storage pilot program"
+      "headline": "Talvyn Goods sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest neither a clear success nor a failure, leading to neutral market sentiment.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in process automation line due to quality concerns"
+      "headline": "Plevum Partners recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls typically trigger immediate negative sentiment and potential operational costs, with lingering uncertainty regarding brand reputation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports strong demand in Latin America, raises outlook"
+      "headline": "Plevum Partners reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators for financial performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods files routine patent applications in precision manufacturing"
+      "headline": "Talvyn Goods files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that rarely impact market valuation in the short or long term.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners faces class action over renewable storage service disruption"
+      "headline": "Plevum Partners faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal risk and potential financial liability, with high uncertainty regarding the ultimate settlement outcome.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports 18% decline in operating income"
+      "headline": "Plevum Partners reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income is a significant negative financial signal that directly impacts investor confidence.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial launches next-generation cloud infrastructure platform"
+      "headline": "Ilval Financial launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a strategic expansion that signals potential future revenue growth, though the immediate financial impact is often delayed.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:13.492Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

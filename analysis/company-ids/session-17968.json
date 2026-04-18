@@ -53,49 +53,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group revises long-term strategy with focus on data analytics"
+      "headline": "Jovik Asset Group revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward data analytics is a long-term directional shift that lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics sees 8% margin improvement in latest quarter"
+      "headline": "Myrnon Therapeutics sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly signals increased profitability and operational efficiency for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $400M contract with a multinational manufacturer"
+      "headline": "Myrnon Therapeutics secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear and significant boost to future revenue expectations.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $180M contract with a multinational manufacturer"
+      "headline": "Myrnon Therapeutics secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $180M contract win is a positive development that strengthens the company's revenue pipeline.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics files routine patent applications in automated logistics"
+      "headline": "Myrnon Therapeutics files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 9,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Jovik Asset Group warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region pose a direct threat to operational output and profitability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $75M contract with an international consortium"
+      "headline": "Krevum Pharmaceuticals secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $75M contract win provides a clear, positive, and quantifiable revenue stream for the company.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:52.318Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

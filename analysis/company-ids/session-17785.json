@@ -53,56 +53,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods files for regulatory approval of new wireless connectivity offering"
+      "headline": "Talvyn Goods files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates progress but does not guarantee immediate revenue or market success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech explores strategic alternatives for data analytics unit"
+      "headline": "Xelvol Biotech explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a neutral to positive signal that often precedes a sale or spin-off, creating potential value realization.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods revises long-term strategy with focus on digital payments"
+      "headline": "Talvyn Goods revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "A strategic pivot to digital payments signals a long-term shift in business focus, though the immediate financial impact remains speculative.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $800M contract with a multinational manufacturer"
+      "headline": "Krevum Pharmaceuticals secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, high-value revenue visibility that will positively impact financial performance.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $75M contract with a national infrastructure agency"
+      "headline": "Talvyn Goods secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $75M contract win with a government agency provides a solid, reliable revenue stream that bolsters the company's financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods expands operations into Europe markets"
+      "headline": "Talvyn Goods expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into European markets represents a significant growth opportunity that will likely increase revenue potential over the long term.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods completes strategic acquisition to strengthen automated logistics"
+      "headline": "Talvyn Goods completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Completing an acquisition to strengthen logistics capabilities is a concrete step toward operational efficiency and competitive advantage.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Talvyn Goods reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a direct negative indicator for profitability that will likely persist until supply chain issues are resolved.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:45.596Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

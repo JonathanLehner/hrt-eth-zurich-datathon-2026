@@ -46,21 +46,62 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports strong demand in Latin America, raises outlook"
+      "headline": "Zelval Energy reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong regional demand provides a clear positive signal for near-term and medium-term earnings growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels enters joint venture with a multinational manufacturer"
+      "headline": "Jorvis Fuels enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture is a strategic expansion move, but the lack of financial specifics makes the immediate and long-term impact difficult to quantify.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $400M contract with a national infrastructure agency"
+      "headline": "Talvep Computing secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific dollar-value contract provides immediate revenue visibility and long-term operational stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:15.851Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

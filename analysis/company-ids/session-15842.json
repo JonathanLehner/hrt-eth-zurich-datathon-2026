@@ -66,56 +66,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $250M contract with a top-tier research institute"
+      "headline": "Holtar Stores secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, immediate, and durable revenue boost for Holtar Stores.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports unexpected decline in North America revenue"
+      "headline": "Crevol Retail Group reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market signals fundamental weakness that will likely weigh on investor sentiment for the duration of the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group wins industry award for excellence in enterprise software"
+      "headline": "Crevol Retail Group wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct, quantifiable financial impact on the company's bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co wins industry award for excellence in supply chain optimization"
+      "headline": "Pleven Trading Co wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Recognition for supply chain optimization is a positive reputational signal but does not guarantee immediate or long-term financial improvement.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports 8% decline in operating income"
+      "headline": "Holtar Stores reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and will likely cause sustained negative pressure on the stock price.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores wins industry award for excellence in precision manufacturing"
+      "headline": "Holtar Stores wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "An award for precision manufacturing enhances brand prestige but has no clear, immediate, or long-term impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces $0.8B share buyback program"
+      "headline": "Relvon Fuels announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program is a direct, positive signal of capital allocation that typically supports the stock price over the medium term.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $75M contract with a global retailer"
+      "headline": "Relvon Fuels secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a concrete, positive revenue stream that will benefit the company throughout the 100-day window.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:33.524Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

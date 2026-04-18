@@ -52,49 +52,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports rising costs pressuring margins in process automation"
+      "headline": "Varvov Retail Group reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Strynal Industries files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion but carries inherent uncertainty regarding the approval timeline.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $800M contract with a national infrastructure agency"
+      "headline": "Varvov Retail Group secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, high-value revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces $9.6B share buyback program"
+      "headline": "Varvov Retail Group announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A massive $9.6B share buyback program signals strong capital allocation and management confidence in the stock.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports 7% increase in customer acquisition"
+      "headline": "Orevov Solutions reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition indicates positive growth momentum and demand.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $180M contract with a major logistics provider"
+      "headline": "Varvov Retail Group secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing an additional $180M contract reinforces the company's growth trajectory and revenue pipeline.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Varvov Retail Group reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 20% is a strong indicator of operational success and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:44.744Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

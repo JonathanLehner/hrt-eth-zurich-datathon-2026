@@ -51,42 +51,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy files routine patent applications in data analytics"
+      "headline": "Zelval Energy files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not indicate immediate financial impact or competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Relvon Fuels announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure signals long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries to present at Emerging Markets Forum"
+      "headline": "Strynal Industries to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate communication event with no guaranteed financial outcome.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees 10% drop in new customer orders this quarter"
+      "headline": "Relvon Fuels sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of near-term revenue growth and demand.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels explores strategic alternatives for enterprise software unit"
+      "headline": "Relvon Fuels explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates uncertainty regarding potential divestiture or restructuring outcomes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Relvon Fuels begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:52.166Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

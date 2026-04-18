@@ -50,35 +50,96 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels achieves key regulatory milestone ahead of schedule"
+      "headline": "Jorvis Fuels achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a regulatory milestone ahead of schedule removes a significant hurdle and accelerates potential commercialization timelines.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports 25% increase in customer acquisition"
+      "headline": "Zrovex Industries reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition directly signals strong market demand and potential revenue growth acceleration.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces $8.4B share buyback program"
+      "headline": "Zrovex Industries announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program provides immediate support for the stock price and signals management confidence in capital allocation.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 5% margin improvement in latest quarter"
+      "headline": "Jorvis Fuels sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates enhanced operational efficiency and profitability, which typically compounds over time.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce recalls products in renewable storage line due to quality concerns"
+      "headline": "Arnik Commerce recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate negative sentiment and potential financial liabilities, with long-term brand impact remaining uncertain.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:49.871Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

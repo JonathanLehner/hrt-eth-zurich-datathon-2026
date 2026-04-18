@@ -55,56 +55,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks opens new office in Europe"
+      "headline": "Jovor Networks opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive operational step but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries explores strategic alternatives for enterprise software unit"
+      "headline": "Zrovex Industries explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals potential divestiture or restructuring, creating significant uncertainty regarding future operations.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $500M contract with a leading cloud platform"
+      "headline": "Jovor Networks secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides clear, immediate, and long-term revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $320M contract with a global retailer"
+      "headline": "Zrovex Industries secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $320M contract win is a significant positive development that directly impacts the company's revenue outlook.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $800M contract with a leading cloud platform"
+      "headline": "Jovor Networks secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial win that significantly bolsters the company's growth trajectory.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices misses quarterly revenue estimates by 3%"
+      "headline": "Nolvis Devices misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% is a negative signal that typically triggers immediate downward pressure on stock performance.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $800M contract with a major logistics provider"
+      "headline": "Jovor Networks secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing another $800M contract reinforces the company's strong market position and revenue growth potential.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Nolvis Devices reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% is a strong indicator of business health and market demand.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:17.781Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -54,49 +54,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Krevum Pharmaceuticals reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Strong year-over-year revenue growth of 12% provides clear positive financial momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports unexpected decline in North America revenue"
+      "headline": "Nerval Biopharma reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major market like North America signals immediate negative financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Nerval Biopharma warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create operational headwinds that will likely impact near-term revenue and margins.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals wins industry award for excellence in supply chain optimization"
+      "headline": "Krevum Pharmaceuticals wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "An industry award for supply chain optimization is a positive reputational signal but lacks direct immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma enters joint venture with a top-tier research institute"
+      "headline": "Nerval Biopharma enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A joint venture with a top-tier research institute suggests long-term R&D potential but offers little immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group recalls products in process automation line due to quality concerns"
+      "headline": "Jovik Asset Group recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event that triggers immediate costs and potential reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports rising costs pressuring margins in enterprise software"
+      "headline": "Jovik Asset Group reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins in a core segment directly threaten profitability and indicate ongoing operational challenges.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:30.731Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

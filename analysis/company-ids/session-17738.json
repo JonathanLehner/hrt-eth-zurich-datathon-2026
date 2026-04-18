@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces significant capital expenditure plan for Europe"
+      "headline": "Zrovex Industries announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 0,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports 5% increase in customer acquisition"
+      "headline": "Holtar Stores reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a clear positive indicator of growth and market share expansion.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports strong demand in Middle East, raises outlook"
+      "headline": "Holtar Stores reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand combined with a raised outlook provides a direct and positive signal for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries names new head of precision manufacturing division"
+      "headline": "Zrovex Industries names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy recalls products in renewable storage line due to quality concerns"
+      "headline": "Zelval Energy recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a negative event that creates immediate financial and reputational risk.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid to host investor day focused on wireless connectivity strategy"
+      "headline": "Nerven Grid to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a strategic communication event that typically lacks immediate financial impact until details are revealed.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:43.397Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

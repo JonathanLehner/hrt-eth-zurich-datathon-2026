@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Halvax Networks reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 8% indicates strong operational performance and market demand for Halvax Networks.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Prynis Systems reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability and operational efficiency at Prynis Systems.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices announces restructuring plan, cites challenging market conditions"
+      "headline": "Volval Devices announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan in response to challenging market conditions suggests internal stress and potential near-term disruption for Volval Devices.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks faces regulatory review of supply chain optimization practices"
+      "headline": "Halvax Networks faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory review of supply chain practices introduces significant uncertainty and potential operational risk for Halvax Networks.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems files for regulatory approval of new digital payments offering"
+      "headline": "Prynis Systems files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval of a new product is a positive step toward expansion, though the outcome remains subject to approval.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices announces $8.4B share buyback program"
+      "headline": "Volval Devices announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program is a strong signal of capital strength and management confidence in Volval Devices' value.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:13.213Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

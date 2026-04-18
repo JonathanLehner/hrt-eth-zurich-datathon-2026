@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners completes strategic acquisition to strengthen automated logistics"
+      "headline": "Plevum Partners completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition of logistics technology provides a clear strategic expansion that should improve operational capabilities over the medium term.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $500M contract with a multinational manufacturer"
+      "headline": "Creven Securities secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides immediate revenue visibility and long-term growth potential for the firm.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports 5% decline in operating income"
+      "headline": "Jovik Asset Group reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of profitability that typically triggers an immediate market sell-off.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports 15% increase in customer acquisition"
+      "headline": "Jovik Asset Group reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong leading indicator of future revenue growth and market share expansion.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports strong demand in Central Europe, raises outlook"
+      "headline": "Halvix Holdings reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand provides a clear positive signal for both immediate and sustained financial performance.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings launches next-generation automated logistics platform"
+      "headline": "Halvix Holdings launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that may drive future revenue, though the immediate financial impact is less certain than a contract win.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:44.053Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

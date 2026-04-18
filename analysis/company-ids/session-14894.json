@@ -62,42 +62,113 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital names new head of renewable storage division"
+      "headline": "Zelvel Capital names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees 3% margin improvement in latest quarter"
+      "headline": "Jorvyl Securities sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates operational efficiency gains that directly benefit profitability in the current quarter.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces breakthrough in process automation"
+      "headline": "Zelvel Capital announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "Process automation breakthroughs typically lead to cost savings, though the timeline for realization remains somewhat speculative.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports 3% increase in customer acquisition"
+      "headline": "Jorvyl Securities reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "Increased customer acquisition is a direct positive indicator of revenue growth potential for the company.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage"
+      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions provide immediate expansion of capabilities, though integration success is a variable factor.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners faces class action over wireless connectivity service disruption"
+      "headline": "Plevum Partners faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:39.351Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

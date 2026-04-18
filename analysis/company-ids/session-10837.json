@@ -51,42 +51,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace announces $6.3B share buyback program"
+      "headline": "Arnos Marketplace announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A $6.3B share buyback program directly increases earnings per share and signals management confidence in the company's valuation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics recalls products in enterprise software line due to quality concerns"
+      "headline": "Jorvix Diagnostics recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls indicate operational failure and quality control issues that typically lead to immediate reputational damage and potential financial liabilities.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports 10% decline in operating income"
+      "headline": "Jorvix Diagnostics reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a direct negative indicator of core business profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports strong demand in Scandinavia, raises outlook"
+      "headline": "Jorvix Diagnostics reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand provides a clear positive signal for future revenue growth and operational performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group delays product launch in supply chain optimization segment"
+      "headline": "Crevol Retail Group delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch suggests internal execution challenges or supply chain bottlenecks that postpone expected revenue streams.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $320M contract with a major logistics provider"
+      "headline": "Jorvix Diagnostics secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a concrete, high-value revenue stream that strengthens the company's financial position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:44.224Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

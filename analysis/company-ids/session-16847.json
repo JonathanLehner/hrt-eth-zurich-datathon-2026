@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports rising costs pressuring margins in renewable storage"
+      "headline": "Holtar Stores reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores to host investor day focused on wireless connectivity strategy"
+      "headline": "Holtar Stores to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but no immediate financial gain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores CFO addresses investor concerns in open letter"
+      "headline": "Holtar Stores CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CFO suggests existing investor anxiety, which creates a volatile sentiment environment.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals names new head of renewable storage division"
+      "headline": "Yorvov Pharmaceuticals names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "A leadership change in a specific division is a standard operational update with limited immediate impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics launches next-generation data analytics platform"
+      "headline": "Calvos Genomics launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive growth indicator that typically drives long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics misses quarterly revenue estimates by 5%"
+      "headline": "Calvos Genomics misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates is a clear negative signal that often triggers immediate downward price pressure.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $50M contract with a national infrastructure agency"
+      "headline": "Frelis Genomics secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides clear, quantifiable revenue visibility for the company.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:10.216Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

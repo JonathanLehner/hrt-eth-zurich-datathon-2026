@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments begins scheduled maintenance of process automation systems"
+      "headline": "Krevan Investments begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments launches next-generation supply chain optimization platform"
+      "headline": "Krevan Investments launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "The launch of a new optimization platform suggests potential for improved operational efficiency or new revenue streams.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments confirms participation in Tech Leadership Conference"
+      "headline": "Halven Investments confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference is a standard corporate activity that rarely influences market valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software announces breakthrough in precision manufacturing"
+      "headline": "Frelol Software announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing implies a significant competitive advantage or potential for new product capabilities.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities recalls products in renewable storage line due to quality concerns"
+      "headline": "Jorvyl Securities recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns represents a direct negative impact on costs and potential brand reputation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files for regulatory approval of new precision manufacturing offering"
+      "headline": "Krevan Investments files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward commercialization but does not guarantee future revenue.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Frelol Software announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may pressure short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:59.475Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

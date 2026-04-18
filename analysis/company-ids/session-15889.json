@@ -65,56 +65,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Kelvik Power reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "A 3% year-over-year revenue increase is a modest growth signal that provides stable but limited positive momentum.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions announces $7.9B share buyback program"
+      "headline": "Orevov Solutions announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A massive $7.9B share buyback program directly increases earnings per share and signals management confidence in capital allocation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions faces regulatory review of supply chain optimization practices"
+      "headline": "Orevov Solutions faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational uncertainty and potential legal or compliance costs that weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power completes planned facility upgrade in North America"
+      "headline": "Kelvik Power completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that improves efficiency but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $650M contract with a national infrastructure agency"
+      "headline": "Frelis Genomics secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract with a national agency provides a clear, high-value revenue stream that significantly boosts long-term financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Orevov Solutions reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "A 20% year-over-year revenue increase is a strong growth indicator that likely drives significant positive market reaction.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports unexpected decline in North America revenue"
+      "headline": "Orevov Solutions reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural issues or competitive pressure, negatively impacting investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces breakthrough in cloud infrastructure"
+      "headline": "Zrovex Industries announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A breakthrough in cloud infrastructure suggests potential for future competitive advantage and market expansion, though the immediate financial impact is speculative.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:34.746Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

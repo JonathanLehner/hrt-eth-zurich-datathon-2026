@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces $1.2B share buyback program"
+      "headline": "Halven Investments announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program directly increases earnings per share and signals management confidence in the company's valuation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group sees 15% drop in new customer orders this quarter"
+      "headline": "Jovik Asset Group sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a significant decline in demand that will negatively impact revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group revises long-term strategy with focus on automated logistics"
+      "headline": "Jovik Asset Group revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward automation are positive for long-term efficiency but lack immediate financial impact or clear execution timelines.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments files for regulatory approval of new wireless connectivity offering"
+      "headline": "Halven Investments files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for product expansion but does not guarantee approval or immediate revenue generation.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Talvix Holdings warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a major region create immediate operational headwinds and potential margin pressure.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments enters joint venture with a leading cloud platform"
+      "headline": "Halven Investments enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a cloud platform suggests future growth opportunities but lacks specific financial details or immediate impact.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $400M contract with a major logistics provider"
+      "headline": "Talvix Holdings secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:15.636Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals enters joint venture with a major logistics provider"
+      "headline": "Yorvov Pharmaceuticals enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests operational efficiency improvements, though the immediate financial impact is not quantified.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences completes strategic acquisition to strengthen data analytics"
+      "headline": "Relvos Biosciences completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Acquiring data analytics capabilities is a strategic move that enhances internal capabilities, though the integration success remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences revises long-term strategy with focus on renewable storage"
+      "headline": "Relvos Biosciences revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage indicates a long-term shift in business focus, which may cause near-term uncertainty regarding execution.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels files for regulatory approval of new renewable storage offering"
+      "headline": "Jorvis Fuels files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that signals future growth potential but does not guarantee immediate revenue.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Yorvov Pharmaceuticals reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a direct negative indicator for profitability that will likely weigh on financial performance in the near term.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports strong demand in Europe, raises outlook"
+      "headline": "Relvos Biosciences reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are clear positive signals that directly impact investor expectations for financial performance.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:52.925Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

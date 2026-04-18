@@ -50,35 +50,96 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports 3% decline in operating income"
+      "headline": "Dralol Computing reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 3% decline in operating income indicates a minor contraction in profitability that will likely weigh on investor sentiment in the short term.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports 8% decline in operating income"
+      "headline": "Prynis Systems reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income is a significant negative signal for the company's core profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems sees mixed results in renewable storage pilot program"
+      "headline": "Prynis Systems sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the future commercial viability and scalability of the renewable storage technology.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing launches next-generation wireless connectivity platform"
+      "headline": "Dralol Computing launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "The launch of a next-generation platform suggests potential for future revenue growth and market share expansion.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce completes planned facility upgrade in Scandinavia"
+      "headline": "Nolvav Commerce completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that likely has minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:20.102Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

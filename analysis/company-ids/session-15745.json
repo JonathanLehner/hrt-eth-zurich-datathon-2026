@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports rising costs pressuring margins in digital payments"
+      "headline": "Relvon Fuels reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels files routine patent applications in cloud infrastructure"
+      "headline": "Relvon Fuels files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 9,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Kelvos Resources reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong positive indicator of business performance.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels raises full-year guidance citing robust demand"
+      "headline": "Relvon Fuels raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a direct positive signal for future earnings.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces breakthrough in digital payments"
+      "headline": "Zelvon Biosciences announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in a new sector is positive but lacks specific financial quantification or timeline.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees mixed results in cloud infrastructure pilot program"
+      "headline": "Kelvos Resources sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the project.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions delays product launch in cloud infrastructure segment"
+      "headline": "Wyrnor Solutions delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal that typically impacts revenue expectations.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Wyrnor Solutions begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with no expected material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:29.333Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

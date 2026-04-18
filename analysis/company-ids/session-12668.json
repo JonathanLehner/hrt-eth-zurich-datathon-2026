@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences completes planned facility upgrade in Europe"
+      "headline": "Relvos Biosciences completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves long-term efficiency without immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $75M contract with an international consortium"
+      "headline": "Kelvos Resources secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable boost to revenue and backlog, offering immediate positive sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions opens new office in Scandinavia"
+      "headline": "Orevov Solutions opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a strategic expansion move that signals growth but has a negligible immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources to host investor day focused on digital payments strategy"
+      "headline": "Nolvol Resources to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a standard corporate communication event that rarely moves the stock price significantly on its own.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports unexpected decline in Southeast Asia revenue"
+      "headline": "Orevov Solutions reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a negative signal that directly impacts financial performance and investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $400M contract with a leading cloud platform"
+      "headline": "Orevov Solutions secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $400M contract is a significant positive development that provides substantial revenue visibility and growth potential.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences delays product launch in automated logistics segment"
+      "headline": "Relvos Biosciences delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative operational signal that suggests potential execution issues or market headwinds.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:57.414Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces restructuring plan, cites challenging market conditions"
+      "headline": "Yorval Partners announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans often signal near-term operational disruption and uncertainty regarding future cost savings.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Nerven Grid completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions provide clear long-term growth potential but often involve short-term integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 8% margin improvement in latest quarter"
+      "headline": "Kelvos Resources sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement is a direct, positive indicator of operational efficiency and profitability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources recalls products in renewable storage line due to quality concerns"
+      "headline": "Nolvol Resources recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate negative financial impact and potential long-term brand damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $800M contract with a national infrastructure agency"
+      "headline": "Nolvol Resources secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides significant, predictable revenue growth over the long term.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $120M contract with a national infrastructure agency"
+      "headline": "Nerven Grid secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $120M contract win is a clear positive catalyst for revenue and market positioning.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources names new head of renewable storage division"
+      "headline": "Nolvol Resources names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "Leadership changes introduce uncertainty as the market waits to see the new executive's strategy and performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Nerven Grid reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profit margins and indicate potential ongoing financial pressure.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:31.725Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

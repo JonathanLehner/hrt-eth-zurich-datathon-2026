@@ -54,49 +54,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Urvel Grid recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a precision manufacturing line suggests immediate operational disruption and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems delays product launch in digital payments segment"
+      "headline": "Brevep Systems delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a competitive segment like digital payments typically signals execution issues and delays revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid misses quarterly revenue estimates by 8%"
+      "headline": "Urvel Grid misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 8% is a clear negative signal regarding current demand and financial performance.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports 12% decline in operating income"
+      "headline": "Brevep Systems reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income indicates margin compression or rising costs that directly impact profitability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid expands operations into Europe markets"
+      "headline": "Urvel Grid expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new geographic markets is a strategic growth move that typically signals long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources to host investor day focused on digital payments strategy"
+      "headline": "Nolvol Resources to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day focused on strategy is a neutral event that provides information but does not guarantee immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources to present at Emerging Markets Forum"
+      "headline": "Nolvol Resources to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate communication activity with minimal direct impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:36.884Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

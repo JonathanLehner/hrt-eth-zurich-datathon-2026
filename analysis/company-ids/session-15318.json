@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Volval Devices recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that will likely persist through the quarter.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices withdraws from Latin America market citing unfavorable conditions"
+      "headline": "Volval Devices withdraws from Latin America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a geographic market signals a contraction in growth strategy, which is generally viewed negatively by investors.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports 8% decline in operating income"
+      "headline": "Frelol Software reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income is a direct negative indicator of profitability that typically triggers immediate downward price pressure.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems signs multi-year partnership with a leading cloud platform"
+      "headline": "Prynis Systems signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a major cloud provider suggests long-term revenue stability and strategic validation.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $500M contract with a global retailer"
+      "headline": "Volval Devices secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a clear, significant boost to revenue expectations and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software to host investor day focused on automated logistics strategy"
+      "headline": "Frelol Software to host investor day focused on automated logistics strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that aims to clarify strategy but does not guarantee immediate financial improvement.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $650M contract with a national infrastructure agency"
+      "headline": "Relvan Software secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $650M contract with a national agency represents a substantial, high-quality revenue win that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:14.030Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

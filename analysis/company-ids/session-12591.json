@@ -44,56 +44,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals completes planned facility upgrade in Asia Pacific"
+      "headline": "Yorvov Pharmaceuticals completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that improves long-term capacity but has limited immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals loses key contract in Latin America to competitor"
+      "headline": "Yorvov Pharmaceuticals loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands loses key contract in Central Europe to competitor"
+      "headline": "Joval Brands loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract in Central Europe is a negative development that directly impacts regional revenue streams.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Joval Brands warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in the Middle East create immediate operational hurdles and potential revenue delays.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals signs multi-year partnership with a leading cloud platform"
+      "headline": "Yorvov Pharmaceuticals signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a cloud platform suggests long-term digital transformation and efficiency gains.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals announces significant capital expenditure plan for North America"
+      "headline": "Yorvov Pharmaceuticals announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports rising costs pressuring margins in digital payments"
+      "headline": "Joval Brands reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a direct negative signal for profitability in the digital payments segment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports unexpected decline in Middle East revenue"
+      "headline": "Yorvov Pharmaceuticals reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue is a clear negative indicator for financial performance in the specified region.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:54.852Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

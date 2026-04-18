@@ -56,56 +56,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy withdraws from North America market citing unfavorable conditions"
+      "headline": "Plevik Energy withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a major market indicates a significant contraction in revenue potential and operational footprint.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions misses quarterly revenue estimates by 20%"
+      "headline": "Orevov Solutions misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a substantial negative indicator of current business performance and demand.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels files for regulatory approval of new supply chain optimization offering"
+      "headline": "Relvon Fuels files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion but carries inherent uncertainty regarding the outcome.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels explores strategic alternatives for precision manufacturing unit"
+      "headline": "Relvon Fuels explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is ambiguous and could imply either a divestiture or a restructuring, creating significant uncertainty.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $250M contract with a multinational manufacturer"
+      "headline": "Orevov Solutions secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, immediate, and durable revenue growth for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces class action over automated logistics service disruption"
+      "headline": "Relvon Fuels faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces potential financial liability and reputational risk that may persist over time.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions sees 20% margin improvement in latest quarter"
+      "headline": "Orevov Solutions sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency and profitability gains.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy announces breakthrough in renewable storage"
+      "headline": "Plevik Energy announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in renewable storage has high long-term potential but lacks immediate commercialization details.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:46.035Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

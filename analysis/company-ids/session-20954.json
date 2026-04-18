@@ -50,35 +50,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods signs multi-year partnership with a national infrastructure agency"
+      "headline": "Xovol Goods signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides long-term revenue visibility and stability for Xovol Goods.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods in talks for potential merger, details undisclosed"
+      "headline": "Xovol Goods in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Speculative merger talks create significant market volatility and uncertainty regarding the final terms or likelihood of completion.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips enters joint venture with a global retailer"
+      "headline": "Brevon Microchips enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests a strategic expansion into new distribution channels for Brevon Microchips.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips announces significant capital expenditure plan for Middle East"
+      "headline": "Brevon Microchips announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential execution risk.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Talvep Computing reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth confirms strong demand and operational success for Talvep Computing.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:41.483Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

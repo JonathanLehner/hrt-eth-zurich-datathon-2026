@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy delays product launch in cloud infrastructure segment"
+      "headline": "Plevik Energy delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key growth segment signals operational friction and potential revenue deferral.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 7% drop in new customer orders this quarter"
+      "headline": "Calvos Genomics sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly impacts revenue growth expectations for the current quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy loses key contract in Europe to competitor"
+      "headline": "Plevik Energy loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct reduction in future revenue and competitive positioning.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $50M contract with a global retailer"
+      "headline": "Orevov Solutions secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive boost to revenue visibility and market validation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $75M contract with a global retailer"
+      "headline": "Ulvon Renewables secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $75M contract win provides significant revenue growth and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics enters joint venture with a major logistics provider"
+      "headline": "Calvos Genomics enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests potential for operational efficiency and market expansion.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $400M contract with a global retailer"
+      "headline": "Orevov Solutions secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $400M contract is a substantial win that significantly improves revenue outlook and demonstrates strong market demand.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy files for regulatory approval of new automated logistics offering"
+      "headline": "Plevik Energy files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward product commercialization but does not guarantee immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:14.012Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

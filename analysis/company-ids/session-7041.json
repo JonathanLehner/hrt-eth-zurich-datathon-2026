@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group reports rising costs pressuring margins in renewable storage"
+      "headline": "Jovik Asset Group reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $250M contract with a global retailer"
+      "headline": "Orevov Solutions secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $250M contract provides clear, immediate, and durable revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions files routine patent applications in precision manufacturing"
+      "headline": "Wyrnor Solutions files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Zrovex Industries withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Market withdrawal indicates a loss of revenue stream and potential restructuring costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports 15% increase in customer acquisition"
+      "headline": "Wyrnor Solutions reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong indicator of growth and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions announces $8.4B share buyback program"
+      "headline": "Orevov Solutions announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program is a significant capital allocation move that typically boosts earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group expands operations into Asia Pacific markets"
+      "headline": "Jovik Asset Group expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expansion into a new market represents a strategic growth initiative with long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $180M contract with a global retailer"
+      "headline": "Jovik Asset Group secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a clear, positive boost to the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:24.118Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

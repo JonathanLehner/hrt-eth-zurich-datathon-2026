@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $50M contract with a top-tier research institute"
+      "headline": "Zrovex Industries secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive revenue boost for Zrovex Industries.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $650M contract with an international consortium"
+      "headline": "Orevex Renewables secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $650M contract is a significant revenue driver that will positively impact Orevex Renewables' financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy begins scheduled maintenance of data analytics systems"
+      "headline": "Plevik Energy begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal expected financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables confirms participation in Emerging Markets Forum"
+      "headline": "Orevex Renewables confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a networking event with no direct, quantifiable financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Plevik Energy Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a COO creates leadership instability and uncertainty for Plevik Energy.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces class action over supply chain optimization service disruption"
+      "headline": "Plevik Energy faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces potential legal costs and reputational risk for Plevik Energy.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $180M contract with a multinational manufacturer"
+      "headline": "Orevar Marketplace secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a substantial and clear revenue increase for Orevar Marketplace.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:11.189Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Jorvyl Securities recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a precision manufacturing line indicates immediate operational disruption and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions opens new office in Central Europe"
+      "headline": "Wyrnor Solutions opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a strategic expansion that typically signals growth and market confidence.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group faces class action over cloud infrastructure service disruption"
+      "headline": "Holtum Asset Group faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal risk and potential financial liability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial names new head of enterprise software division"
+      "headline": "Ilval Financial names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that typically has a neutral to slightly positive impact until performance is proven.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions recalls products in enterprise software line due to quality concerns"
+      "headline": "Wyrnor Solutions recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in software suggests potential technical debt or quality control issues that could impact customer retention.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces significant capital expenditure plan for Europe"
+      "headline": "Holtum Asset Group announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term investment in growth, though it may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:55.345Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

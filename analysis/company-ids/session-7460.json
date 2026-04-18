@@ -55,56 +55,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy to present at Corporate Strategy Symposium"
+      "headline": "Plevik Energy to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a strategy symposium is a routine corporate event that typically lacks immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy CEO steps down unexpectedly citing personal reasons"
+      "headline": "Plevik Energy CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates immediate leadership instability and market concern regarding the company's strategic direction.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports 8% increase in customer acquisition"
+      "headline": "Plevik Energy reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a clear positive indicator of growth and demand for the company's services.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy to host investor day focused on cloud infrastructure strategy"
+      "headline": "Zelval Energy to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a standard communication event that provides transparency but does not inherently change financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces breakthrough in digital payments"
+      "headline": "Strynal Industries announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments suggests potential for new revenue streams and competitive advantage, though commercialization timelines remain vague.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy signs multi-year partnership with a major logistics provider"
+      "headline": "Plevik Energy signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and operational stability for the company.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy explores strategic alternatives for automated logistics unit"
+      "headline": "Zelval Energy explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit introduces significant uncertainty regarding the future structure and asset value of the company.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries misses quarterly revenue estimates by 20%"
+      "headline": "Strynal Industries misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a significant negative indicator of current operational performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:39.336Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

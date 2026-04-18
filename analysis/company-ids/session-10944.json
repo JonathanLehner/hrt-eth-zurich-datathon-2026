@@ -53,49 +53,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $400M contract with a major logistics provider"
+      "headline": "Jorval Trading Co secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "The secured $400M contract provides a clear, immediate, and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co reports unexpected decline in Latin America revenue"
+      "headline": "Pleven Trading Co reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a key regional market signals immediate operational or demand headwinds.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 7% drop in new customer orders this quarter"
+      "headline": "Nolvis Devices sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates a softening demand environment that will likely persist.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees 18% drop in new customer orders this quarter"
+      "headline": "Jorval Trading Co sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders is a significant negative indicator for near-term and medium-term revenue growth.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $500M contract with a top-tier research institute"
+      "headline": "Jorval Trading Co secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract with a top-tier institute provides a substantial and long-lasting positive financial impact.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees mixed results in automated logistics pilot program"
+      "headline": "Jorval Trading Co sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the future success and scalability of the initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co sees 5% margin improvement in latest quarter"
+      "headline": "Pleven Trading Co sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly enhances profitability and is generally viewed as a positive operational outcome.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:48.930Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

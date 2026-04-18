@@ -48,28 +48,79 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial confirms participation in Corporate Strategy Symposium"
+      "headline": "Wrelal Financial confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a strategy symposium is a routine corporate event that provides no material financial impact or strategic shift.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces $1.2B share buyback program"
+      "headline": "Zelvel Capital announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program directly increases earnings per share and signals management confidence in the company's valuation.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Yorval Partners reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 8% year-over-year indicates strong operational performance and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces breakthrough in precision manufacturing"
+      "headline": "Zelvel Capital announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing suggests potential for future cost efficiencies or product quality improvements, though the timeline for commercialization remains vague.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:38.887Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

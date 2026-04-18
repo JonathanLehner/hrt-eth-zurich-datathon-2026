@@ -50,35 +50,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $400M contract with a multinational manufacturer"
+      "headline": "Halven Investments secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and long-term growth potential for Halven Investments.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces regulatory review of automated logistics practices"
+      "headline": "Halven Investments faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of core logistics practices introduces significant operational uncertainty and potential legal or compliance costs.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $500M contract with a national infrastructure agency"
+      "headline": "Jovik Asset Group secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "The $500M contract with a national agency represents a major, stable revenue stream for Jovik Asset Group.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees 5% drop in new customer orders this quarter"
+      "headline": "Ervan Capital sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% decline in new customer orders indicates a softening in demand that directly impacts near-term revenue projections.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital delays product launch in digital payments segment"
+      "headline": "Ervan Capital delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in the digital payments segment postpones expected revenue and may signal internal execution challenges.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:31.912Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

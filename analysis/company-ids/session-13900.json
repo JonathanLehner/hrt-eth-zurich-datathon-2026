@@ -62,42 +62,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces significant capital expenditure plan for North America"
+      "headline": "Yorval Partners announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners loses key contract in Asia Pacific to competitor"
+      "headline": "Yorval Partners loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market share in a specific region, creating a clear negative financial headwind.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities in talks for potential merger, details undisclosed"
+      "headline": "Creven Securities in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Merger talks are speculative and lack concrete details, leading to high uncertainty regarding the actual financial outcome.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "acquisition",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees mixed results in supply chain optimization pilot program"
+      "headline": "Yorval Partners sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide no clear directional signal for financial performance, resulting in neutral impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $400M contract with a national infrastructure agency"
+      "headline": "Ilval Financial secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract with a government agency provides a clear, durable revenue stream.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group signs multi-year partnership with a leading cloud platform"
+      "headline": "Jovik Asset Group signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a cloud leader suggests operational efficiency gains and potential revenue growth over time.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:43.117Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

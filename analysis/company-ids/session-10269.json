@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments files routine patent applications in enterprise software"
+      "headline": "Halven Investments files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not indicate immediate financial impact or strategic shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 25% decline in operating income"
+      "headline": "Holtum Asset Group reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income directly impacts profitability and investor sentiment in the short and long term.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners to host investor day focused on wireless connectivity strategy"
+      "headline": "Yorval Partners to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but does not guarantee immediate financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports unexpected decline in Europe revenue"
+      "headline": "Halven Investments reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region signals potential structural or demand issues that will likely persist.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments recalls products in enterprise software line due to quality concerns"
+      "headline": "Halven Investments recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls due to quality concerns create immediate operational costs and potential long-term reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $180M contract with a top-tier research institute"
+      "headline": "Zelvel Capital secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear, positive revenue stream that strengthens the company's financial position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $50M contract with a multinational manufacturer"
+      "headline": "Yorval Partners secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A new contract win is a positive indicator of business growth and revenue stability for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:23.181Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

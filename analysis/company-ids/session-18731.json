@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files routine patent applications in digital payments"
+      "headline": "Krevan Investments files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not indicate immediate financial impact or competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $250M contract with an international consortium"
+      "headline": "Yorven Labs secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides immediate revenue visibility and positive sentiment for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems misses quarterly revenue estimates by 8%"
+      "headline": "Brevep Systems misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% is a clear negative signal that typically triggers immediate downward price pressure.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Krevan Investments warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational risk and potential revenue headwinds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs to host investor day focused on supply chain optimization strategy"
+      "headline": "Crevex Labs to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that signals management's intent to communicate strategy but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs CEO addresses investor concerns in open letter"
+      "headline": "Crevex Labs CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CEO suggests existing investor dissatisfaction, creating uncertainty regarding management's ability to resolve concerns.",
+        "longTerm": -2,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems sees 10% margin improvement in latest quarter"
+      "headline": "Brevep Systems sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement is a strong indicator of operational efficiency and improved profitability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Krevan Investments completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to address supply chain issues is a proactive move that should improve long-term operational stability.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:19.577Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 28,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Middle East"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential execution risk.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports strong demand in Central Europe, raises outlook"
+      "headline": "Halven Investments reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a direct positive signal for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Latin America"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Similar to the Middle East plan, this capital expenditure signals strategic expansion with associated short-term costs.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics faces regulatory review of automated logistics practices"
+      "headline": "Zelvix Therapeutics faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory review of logistics practices introduces operational uncertainty and potential compliance costs.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Halven Investments reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth is a clear positive indicator of business health and market position.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports rising costs pressuring margins in renewable storage"
+      "headline": "Halven Investments reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for near-term earnings.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:10.274Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

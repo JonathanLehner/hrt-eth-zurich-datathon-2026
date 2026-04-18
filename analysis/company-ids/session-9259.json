@@ -50,35 +50,96 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Jorvix Diagnostics warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region directly threaten operational efficiency and revenue realization in the near term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports 18% decline in operating income"
+      "headline": "Myrnon Therapeutics reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates fundamental profitability challenges that typically trigger immediate negative market sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics opens new office in Europe"
+      "headline": "Jorvix Diagnostics opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard expansion activity that suggests growth but lacks immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Xovep Stores reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth provides clear positive evidence of strong demand and operational success.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics completes strategic acquisition to strengthen automated logistics"
+      "headline": "Myrnon Therapeutics completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition of logistics capabilities is a strategic move intended to improve long-term efficiency rather than provide immediate financial gains.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:45.609Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

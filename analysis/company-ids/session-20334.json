@@ -48,28 +48,79 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets names new head of data analytics division"
+      "headline": "Ixenis Outlets names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $120M contract with a multinational manufacturer"
+      "headline": "Arnos Marketplace secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost that will positively impact financial results over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace confirms participation in Capital Markets Day"
+      "headline": "Arnos Marketplace confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a routine investor relations event that typically does not move the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics launches next-generation supply chain optimization platform"
+      "headline": "Jorvix Diagnostics launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive strategic development, though the immediate financial contribution remains uncertain until adoption rates are clear.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:18.331Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

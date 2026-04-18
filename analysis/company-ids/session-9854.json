@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports 8% decline in operating income"
+      "headline": "Wyrnik Sciences reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 0,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech to host investor day focused on cloud infrastructure strategy"
+      "headline": "Grevon Biotech to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral corporate event that provides information but does not inherently change financial performance.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Holtum Asset Group begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences enters joint venture with an international consortium"
+      "headline": "Wyrnik Sciences enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests potential for future growth and market expansion, though the immediate financial benefit is not quantified.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees 5% margin improvement in latest quarter"
+      "headline": "Grevon Biotech sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates increased operational efficiency and higher profitability per unit of revenue.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech completes planned facility upgrade in Latin America"
+      "headline": "Grevon Biotech completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine capital expenditure that is expected to support operations but does not immediately change earnings.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $800M contract with a major logistics provider"
+      "headline": "Zelvix Therapeutics secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a significant, concrete boost to future revenue and business visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:07.887Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

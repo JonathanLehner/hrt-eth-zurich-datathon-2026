@@ -54,56 +54,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces major organizational restructuring"
+      "headline": "Zelvel Capital announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring often signals internal disruption and potential cost-cutting, creating short-term uncertainty regarding operational efficiency.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports 25% increase in customer acquisition"
+      "headline": "Arnos Marketplace reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong, direct indicator of growth and improved revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital wins industry award for excellence in enterprise software"
+      "headline": "Zelvel Capital wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand validation but typically have limited direct financial impact on near-term earnings.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital withdraws from Scandinavia market citing unfavorable conditions"
+      "headline": "Zelvel Capital withdraws from Scandinavia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market is a negative signal regarding regional performance and future revenue growth in that territory.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Crevol Retail Group completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions to bolster infrastructure are generally viewed as long-term investments that may cause short-term cash outflows.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group launches next-generation renewable storage platform"
+      "headline": "Crevol Retail Group launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform creates potential for new revenue streams, though market adoption remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports strong demand in Scandinavia, raises outlook"
+      "headline": "Zelvel Capital reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a direct, positive financial signal that typically impacts stock valuation immediately.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital enters joint venture with a multinational manufacturer"
+      "headline": "Zelvel Capital enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A joint venture indicates a strategic partnership that could lead to future growth, but the immediate financial impact is often speculative.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:27.885Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

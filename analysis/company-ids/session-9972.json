@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices faces regulatory review of precision manufacturing practices"
+      "headline": "Volval Devices faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of manufacturing practices introduce significant operational risk and potential for future penalties or production delays.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces major organizational restructuring"
+      "headline": "Creven Securities announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring often signals internal friction or cost-cutting measures that create short-term uncertainty regarding operational efficiency.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $75M contract with a leading cloud platform"
+      "headline": "Creven Securities secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, immediate revenue visibility and positive sentiment for the company's growth trajectory.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices announces $8.4B share buyback program"
+      "headline": "Nolvis Devices announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of capital strength and management confidence, typically boosting shareholder value.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $180M contract with a leading cloud platform"
+      "headline": "Ixenix Technologies secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "The $180M contract win represents a substantial revenue boost that strengthens the company's market position and financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices files routine patent applications in digital payments"
+      "headline": "Nolvis Devices files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that rarely impact market valuation or financial performance in the short or long term.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:11.902Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

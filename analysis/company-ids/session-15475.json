@@ -55,56 +55,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks to host investor day focused on automated logistics strategy"
+      "headline": "Jovor Networks to host investor day focused on automated logistics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are standard corporate events that typically provide strategic clarity without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing to present at Corporate Strategy Symposium"
+      "headline": "Talvep Computing to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a routine corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software faces class action over enterprise software service disruption"
+      "headline": "Relvan Software faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate reputational and potential financial liability risks for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $500M contract with a top-tier research institute"
+      "headline": "Talvep Computing secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $500M contract win provides a significant and verifiable boost to future revenue and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing misses quarterly revenue estimates by 15%"
+      "headline": "Talvep Computing misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss is a substantial negative indicator of current operational performance and market demand.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $800M contract with a leading cloud platform"
+      "headline": "Relvan Software secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "An $800M contract with a major cloud platform is a strong positive signal for long-term growth and market positioning.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $400M contract with a top-tier research institute"
+      "headline": "Talvep Computing secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $400M contract win provides a clear and positive financial contribution to the company's outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software expands operations into North America markets"
+      "headline": "Relvan Software expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding into North America represents a strategic growth initiative that could increase market share over time.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:18.928Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

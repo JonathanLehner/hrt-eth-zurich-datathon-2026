@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Jovor Networks warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices launches next-generation process automation platform"
+      "headline": "Volval Devices launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that typically drives future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports 20% increase in customer acquisition"
+      "headline": "Kelvos Resources reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong indicator of market demand and top-line growth potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software sees 10% margin improvement in latest quarter"
+      "headline": "Frelol Software sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement directly signals enhanced profitability and operational efficiency.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Volval Devices completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to provide long-term competitive advantages in manufacturing capabilities.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software opens new office in Latin America"
+      "headline": "Frelol Software opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion and potential for future market penetration.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources wins industry award for excellence in wireless connectivity"
+      "headline": "Kelvos Resources wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand validation but have limited direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices begins scheduled maintenance of digital payments systems"
+      "headline": "Volval Devices begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is unlikely to have a material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:05.856Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

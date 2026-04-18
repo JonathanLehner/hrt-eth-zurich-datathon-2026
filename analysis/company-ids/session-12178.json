@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Relvos Biosciences warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences faces regulatory review of process automation practices"
+      "headline": "Relvos Biosciences faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential compliance costs, though the outcome is currently unknown.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics expands operations into Southeast Asia markets"
+      "headline": "Myrnon Therapeutics expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets is a strategic growth move that typically yields long-term benefits rather than immediate financial gains.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $800M contract with a major logistics provider"
+      "headline": "Crevex Labs secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics loses key contract in Scandinavia to competitor"
+      "headline": "Myrnon Therapeutics loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market share, creating a negative financial drag.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports unexpected decline in Latin America revenue"
+      "headline": "Grevon Biotech reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in regional revenue signals potential underlying demand issues or competitive pressure.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $320M contract with a national infrastructure agency"
+      "headline": "Myrnon Therapeutics secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $320M contract win with a government agency provides stable, long-term revenue support.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics lowers full-year guidance amid softening demand"
+      "headline": "Myrnon Therapeutics lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a clear negative signal for future financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:38.553Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

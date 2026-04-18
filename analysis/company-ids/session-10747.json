@@ -36,21 +36,62 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies loses key contract in Asia Pacific to competitor"
+      "headline": "Ixenix Technologies loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue projections and market share in a significant geographic region.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices delays product launch in digital payments segment"
+      "headline": "Volval Devices delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch postpones expected revenue streams and may signal internal operational or technical challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies launches next-generation wireless connectivity platform"
+      "headline": "Ixenix Technologies launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "The launch of a new technology platform provides a clear catalyst for potential revenue growth and market expansion.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:40.875Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -53,49 +53,130 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power expands operations into Asia Pacific markets"
+      "headline": "Kelvik Power expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expansion into a new geographic market represents a strategic growth initiative that typically signals long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports unexpected decline in Middle East revenue"
+      "headline": "Grevel Diagnostics reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region is a negative indicator for near-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals confirms participation in Capital Markets Day"
+      "headline": "Yorvov Pharmaceuticals confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that rarely provides immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics reports strong demand in Central Europe, raises outlook"
+      "headline": "Grevel Diagnostics reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators for both immediate and near-future financial results.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals to present at Annual Industry Forum"
+      "headline": "Yorvov Pharmaceuticals to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a routine corporate activity that does not inherently change the company's financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 10% decline in operating income"
+      "headline": "Yorvov Pharmaceuticals reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a clear negative signal regarding the company's current profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals files routine patent applications in wireless connectivity"
+      "headline": "Yorvov Pharmaceuticals files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard business process that does not provide immediate financial impact or clear future value.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:21.681Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

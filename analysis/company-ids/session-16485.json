@@ -36,21 +36,62 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports 8% decline in operating income"
+      "headline": "Jorval Trading Co reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income directly signals reduced profitability and operational inefficiency, likely triggering an immediate negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co files for regulatory approval of new wireless connectivity offering"
+      "headline": "Jorval Trading Co files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the ultimate financial impact remains contingent on the approval timeline.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $250M contract with a multinational manufacturer"
+      "headline": "Talvyn Goods secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, high-value revenue visibility that will positively impact the company's financial outlook over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:56.041Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

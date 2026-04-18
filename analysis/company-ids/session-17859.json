@@ -54,49 +54,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace names new head of precision manufacturing division"
+      "headline": "Orevar Marketplace names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group announces major organizational restructuring"
+      "headline": "Crevol Retail Group announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring often signals internal friction or cost-cutting measures, creating short-term uncertainty regarding operational efficiency.",
+        "longTerm": 1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace confirms participation in Annual Industry Forum"
+      "headline": "Orevar Marketplace confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate event that provides no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group announces $9.6B share buyback program"
+      "headline": "Crevol Retail Group announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program is a significant capital allocation event that directly benefits shareholders and signals management confidence.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 12% increase in customer acquisition"
+      "headline": "Crevol Retail Group reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition is a strong indicator of growth and improved revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce faces class action over renewable storage service disruption"
+      "headline": "Arnik Commerce faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption poses a clear legal and reputational risk to the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace launches next-generation data analytics platform"
+      "headline": "Orevar Marketplace launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform is a positive product development that could drive future revenue growth.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:47.775Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software files for regulatory approval of new renewable storage offering"
+      "headline": "Frelol Software files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates progress but does not guarantee immediate revenue or market success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices announces significant capital expenditure plan for Scandinavia"
+      "headline": "Volval Devices announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflows that may weigh on short-term margins.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $800M contract with a global retailer"
+      "headline": "Volval Devices secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, high-value revenue visibility that is strongly positive for both short and long-term financial outlooks.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks explores strategic alternatives for renewable storage unit"
+      "headline": "Jovor Networks explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates significant uncertainty regarding the future structure and potential divestiture of the asset.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software files routine patent applications in data analytics"
+      "headline": "Frelol Software files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations that do not provide material financial impact or competitive differentiation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:34.984Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

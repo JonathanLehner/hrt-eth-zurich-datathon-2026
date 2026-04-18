@@ -64,49 +64,130 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $50M contract with a global retailer"
+      "headline": "Calvos Genomics secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "The $50M contract provides a clear, immediate revenue boost and positive sentiment for Calvos Genomics.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources reports unexpected decline in Scandinavia revenue"
+      "headline": "Nolvol Resources reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region signals operational or demand issues that will likely weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports rising costs pressuring margins in process automation"
+      "headline": "Nerven Grid reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal that typically persists until addressed.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $500M contract with a top-tier research institute"
+      "headline": "Calvos Genomics secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A significant $500M contract win represents a major positive catalyst for long-term revenue growth and company valuation.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels signs multi-year partnership with a top-tier research institute"
+      "headline": "Relvon Fuels signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests stable, long-term strategic benefits rather than an immediate financial windfall.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces $6.3B share buyback program"
+      "headline": "Nerven Grid announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a strong signal of management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources begins scheduled maintenance of digital payments systems"
+      "headline": "Nolvol Resources begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on market valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:18.686Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

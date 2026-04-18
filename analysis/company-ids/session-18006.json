@@ -60,35 +60,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 3% drop in new customer orders this quarter"
+      "headline": "Talvix Holdings sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds for the current quarter.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $650M contract with a multinational manufacturer"
+      "headline": "Plevum Partners secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant boost to future revenue and demonstrates strong market competitiveness.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners to present at Annual Industry Forum"
+      "headline": "Plevum Partners to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity that typically lacks material financial impact on the company's valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports unexpected decline in Europe revenue"
+      "headline": "Yorval Partners reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a major geographic region is a negative indicator of operational performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $180M contract with an international consortium"
+      "headline": "Relvos Biosciences secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $180M contract win provides a concrete and positive financial catalyst for the company's growth trajectory.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:53.109Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

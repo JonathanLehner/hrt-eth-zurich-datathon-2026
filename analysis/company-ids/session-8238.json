@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports unexpected decline in North America revenue"
+      "headline": "Plevum Partners reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major revenue region indicates immediate operational headwinds and potential downward pressure on future earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces significant capital expenditure plan for Central Europe"
+      "headline": "Zrovov Advisors announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure signals long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces significant capital expenditure plan for Scandinavia"
+      "headline": "Zelvel Capital announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure signals long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Zelvel Capital reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook provide clear positive signals for both immediate and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors in talks for potential merger, details undisclosed"
+      "headline": "Zrovov Advisors in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Merger talks create speculative upside but the lack of details introduces high uncertainty regarding the final outcome and valuation.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners names new head of renewable storage division"
+      "headline": "Plevum Partners names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "A leadership change in a specific division is a neutral to slightly positive operational update with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:07.898Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

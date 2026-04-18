@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees 18% drop in new customer orders this quarter"
+      "headline": "Plevum Partners sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders indicates a significant decline in demand that will likely impact revenue growth throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners files for regulatory approval of new process automation offering"
+      "headline": "Plevum Partners files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that signals future growth potential but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $500M contract with a multinational manufacturer"
+      "headline": "Holtar Stores secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract provides a clear and substantial boost to future revenue visibility and operational scale.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Varvov Retail Group recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate negative financial and reputational pressure with potential for lingering operational costs.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores to host investor day focused on wireless connectivity strategy"
+      "headline": "Holtar Stores to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a strategic communication event that typically does not have a direct or immediate financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Joval Brands completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition provides immediate inorganic growth and long-term capability expansion in the wireless sector.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Holtar Stores completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Completing an acquisition to optimize the supply chain is a positive operational move that should yield efficiency gains over the coming months.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:15.866Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

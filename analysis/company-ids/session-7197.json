@@ -62,42 +62,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace recalls products in enterprise software line due to quality concerns"
+      "headline": "Arnos Marketplace recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in an enterprise software line suggests immediate operational disruption and potential reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals explores strategic alternatives for data analytics unit"
+      "headline": "Krevum Pharmaceuticals explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague signal that could lead to a sale, spin-off, or no action at all.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports strong demand in North America, raises outlook"
+      "headline": "Halvav Brands reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators of financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods launches next-generation enterprise software platform"
+      "headline": "Xovol Goods launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive growth signal, though the immediate financial impact depends on adoption rates.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods opens new office in Asia Pacific"
+      "headline": "Xovol Goods opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion, which is a long-term growth driver with minimal immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces class action over process automation service disruption"
+      "headline": "Xovol Goods faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that can persist over time.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:29.563Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

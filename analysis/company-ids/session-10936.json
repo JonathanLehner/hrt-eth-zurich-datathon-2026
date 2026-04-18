@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices begins scheduled maintenance of data analytics systems"
+      "headline": "Nolvis Devices begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks faces class action over process automation service disruption"
+      "headline": "Halvax Networks faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial uncertainty, typically weighing on sentiment in the short and long term.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software announces significant capital expenditure plan for Middle East"
+      "headline": "Frelol Software announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment but implies immediate cash outflow and delayed returns.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks revises long-term strategy with focus on supply chain optimization"
+      "headline": "Halvax Networks revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward supply chain optimization are generally viewed as positive for long-term efficiency but lack immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Frelol Software reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth is a strong, direct indicator of positive financial performance and market demand.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports 8% increase in customer acquisition"
+      "headline": "Halvax Networks reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition is a clear positive signal for future revenue growth and market share expansion.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:47.962Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

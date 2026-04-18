@@ -51,42 +51,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities faces regulatory review of digital payments practices"
+      "headline": "Creven Securities faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential legal or operational headwinds for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports 15% increase in customer acquisition"
+      "headline": "Creven Securities reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a clear positive indicator of growth and market demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners faces regulatory review of enterprise software practices"
+      "headline": "Yorval Partners faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny of software practices introduces potential compliance costs and reputational risk.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels announces significant capital expenditure plan for Latin America"
+      "headline": "Jorvis Fuels announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans signal long-term expansion but often weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities loses key contract in Middle East to competitor"
+      "headline": "Creven Securities loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and signals competitive weakness.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities completes planned facility upgrade in Central Europe"
+      "headline": "Creven Securities completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that typically improves efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:27.059Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

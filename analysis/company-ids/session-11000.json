@@ -52,42 +52,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces regulatory review of automated logistics practices"
+      "headline": "Krevan Investments faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational uncertainty and potential legal costs that weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group sees 7% margin improvement in latest quarter"
+      "headline": "Crevol Retail Group sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement indicates strong operational efficiency and direct bottom-line growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Ervan Capital completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions in core business areas typically signal long-term growth potential despite initial integration costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group confirms participation in Corporate Strategy Symposium"
+      "headline": "Crevol Retail Group confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a corporate symposium is a routine event with negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces regulatory review of wireless connectivity practices"
+      "headline": "Krevan Investments faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "A second regulatory review in a short period increases the perceived risk of systemic compliance issues.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments sees 7% drop in new customer orders this quarter"
+      "headline": "Krevan Investments sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders is a direct negative indicator of future revenue and demand.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:50.380Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

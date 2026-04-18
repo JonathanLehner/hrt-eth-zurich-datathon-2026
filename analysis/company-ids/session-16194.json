@@ -50,35 +50,96 @@
       "barIx": 25,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics to host investor day focused on renewable storage strategy"
+      "headline": "Zelvix Therapeutics to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a standard corporate event that rarely provides immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences enters joint venture with a global retailer"
+      "headline": "Wyrnik Sciences enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests a significant new distribution channel or partnership, likely driving positive sentiment.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports unexpected decline in Central Europe revenue"
+      "headline": "Talvyn Goods reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region is a direct negative signal for near-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports strong demand in Latin America, raises outlook"
+      "headline": "Wyrnik Sciences reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive indicators of improved financial performance for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics files for regulatory approval of new renewable storage offering"
+      "headline": "Zelvix Therapeutics files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward commercialization, though the outcome and timing remain uncertain.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:45.892Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

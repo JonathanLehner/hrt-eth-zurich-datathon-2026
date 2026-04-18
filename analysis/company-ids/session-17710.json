@@ -50,35 +50,96 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 7% decline in operating income"
+      "headline": "Krevan Investments reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income directly impacts profitability and investor sentiment in the short term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports strong demand in Europe, raises outlook"
+      "headline": "Yorval Partners reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments names new head of supply chain optimization division"
+      "headline": "Krevan Investments names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace names new head of cloud infrastructure division"
+      "headline": "Orevar Marketplace names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new head of cloud infrastructure is a routine leadership change that does not provide immediate financial evidence.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Krevan Investments reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a direct negative indicator for profitability that is likely to persist over the coming months.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:41.799Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

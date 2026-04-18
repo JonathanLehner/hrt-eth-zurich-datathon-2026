@@ -53,49 +53,130 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $180M contract with a multinational manufacturer"
+      "headline": "Wrelal Financial secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides immediate revenue visibility and positive sentiment for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial delays product launch in data analytics segment"
+      "headline": "Wrelal Financial delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals operational friction or development setbacks, negatively impacting short-term growth expectations.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital delays product launch in cloud infrastructure segment"
+      "headline": "Ervan Capital delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "A product launch delay in a key growth segment like cloud infrastructure creates uncertainty regarding future revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces significant capital expenditure plan for Middle East"
+      "headline": "Wrelal Financial announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure indicates long-term growth investment but may weigh on short-term cash flow and earnings sentiment.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments CTO addresses investor concerns in open letter"
+      "headline": "Krevan Investments CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO suggests existing investor anxiety, and the market reaction depends heavily on the perceived credibility of the response.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial sees 15% margin improvement in latest quarter"
+      "headline": "Wrelal Financial sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement is a strong indicator of operational efficiency and directly boosts profitability expectations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments names new head of automated logistics division"
+      "headline": "Krevan Investments names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that typically has a neutral to slightly positive impact pending execution results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:38.193Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

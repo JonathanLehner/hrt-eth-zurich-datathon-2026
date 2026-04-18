@@ -53,49 +53,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks CFO steps down unexpectedly citing personal reasons"
+      "headline": "Halvax Networks CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership uncertainty and potential market concern regarding internal stability.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 8% increase in customer acquisition"
+      "headline": "Ulvon Renewables reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a direct positive indicator of growth and demand for the company's services.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions opens new office in Latin America"
+      "headline": "Orevov Solutions opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion, though the immediate financial impact is likely muted by setup costs.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions confirms participation in Annual Industry Forum"
+      "headline": "Orevov Solutions confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a standard corporate activity with negligible direct financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions explores strategic alternatives for digital payments unit"
+      "headline": "Orevov Solutions explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit introduces significant uncertainty regarding the future structure and potential divestiture of the segment.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports 10% decline in operating income"
+      "headline": "Orevov Solutions reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a clear negative signal regarding the company's current profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Ulvon Renewables announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment, though it will likely weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:28.163Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

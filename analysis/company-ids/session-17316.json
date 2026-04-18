@@ -38,28 +38,79 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy recalls products in enterprise software line due to quality concerns"
+      "headline": "Plevik Energy recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in the enterprise software line indicates immediate operational failure and potential reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy enters joint venture with a leading cloud platform"
+      "headline": "Plevik Energy enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a leading cloud platform suggests a strategic expansion of distribution and service capabilities.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels misses quarterly revenue estimates by 10%"
+      "headline": "Relvon Fuels misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 10% is a clear negative signal regarding current demand and operational performance.",
+        "longTerm": -3,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy revises long-term strategy with focus on digital payments"
+      "headline": "Plevik Energy revises long-term strategy with focus on digital payments",
+      "sentiment": {
+        "reasoning": "A strategic pivot to digital payments represents a long-term shift in business model with uncertain immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:27.138Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

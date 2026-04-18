@@ -58,28 +58,79 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports unexpected decline in Latin America revenue"
+      "headline": "Yorval Partners reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a specific geographic region indicates a negative trend that will likely weigh on investor sentiment in both the short and long term.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces class action over digital payments service disruption"
+      "headline": "Talvix Holdings faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk, creating immediate negative pressure and lingering uncertainty regarding potential settlement costs.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power names new head of precision manufacturing division"
+      "headline": "Plevep Power names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change that typically has minimal immediate financial impact and high uncertainty regarding future performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $180M contract with a major logistics provider"
+      "headline": "Jovik Asset Group secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a clear, positive revenue catalyst that will likely be viewed favorably by the market in both the near and medium term.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:06.747Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

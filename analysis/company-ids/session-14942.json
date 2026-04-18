@@ -50,35 +50,96 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports strong demand in Europe, raises outlook"
+      "headline": "Volval Devices reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised guidance provide a clear positive signal for near-term and sustained financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports unexpected decline in Scandinavia revenue"
+      "headline": "Brevon Microchips reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals potential operational or market-specific headwinds.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $500M contract with a top-tier research institute"
+      "headline": "Brevon Microchips secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a concrete revenue boost that will likely materialize over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices faces class action over digital payments service disruption"
+      "headline": "Volval Devices faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and reputational risk that creates immediate uncertainty.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 25% margin improvement in latest quarter"
+      "headline": "Ulvyn Microchips sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement is a strong indicator of operational efficiency that should positively impact profitability throughout the quarter.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:41.026Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

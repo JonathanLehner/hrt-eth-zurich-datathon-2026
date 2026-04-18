@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Nolvis Devices reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software recalls products in automated logistics line due to quality concerns"
+      "headline": "Relvan Software recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational disruption and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen data analytics"
+      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are generally viewed as growth-oriented, though integration success remains to be seen.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips explores strategic alternatives for supply chain optimization unit"
+      "headline": "Ulvyn Microchips explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a neutral to positive signal that often precedes a sale or restructuring.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software revises long-term strategy with focus on process automation"
+      "headline": "Relvan Software revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automation is a long-term directional shift with unclear immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "guidance",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees 7% drop in new customer orders this quarter"
+      "headline": "Grevel Diagnostics sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator for future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics files routine patent applications in precision manufacturing"
+      "headline": "Grevel Diagnostics files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and have negligible immediate market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Nolvis Devices reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Repeated reporting of cost pressures confirms a persistent negative trend affecting margins.",
+        "longTerm": -6,
+        "shortTerm": -3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:27.966Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

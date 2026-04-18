@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces $7.9B share buyback program"
+      "headline": "Creven Securities announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A $7.9B share buyback program provides immediate support to the stock price and signals management confidence in capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports 7% increase in customer acquisition"
+      "headline": "Nerven Grid reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition indicates strong market demand and potential for sustained revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels enters joint venture with a global retailer"
+      "headline": "Relvon Fuels enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a global retailer provides a strategic growth opportunity but lacks specific financial details.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables launches next-generation automated logistics platform"
+      "headline": "Orevex Renewables launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching a new logistics platform is a positive operational development that could improve long-term efficiency and competitive positioning.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables lowers full-year guidance amid softening demand"
+      "headline": "Orevex Renewables lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a clear negative signal for future financial performance.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables beats analyst expectations with strong earnings growth"
+      "headline": "Orevex Renewables beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations with strong earnings growth provides immediate validation of the company's current financial health.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid withdraws from Europe market citing unfavorable conditions"
+      "headline": "Nerven Grid withdraws from Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from the European market is a significant strategic retreat that reduces future revenue potential and signals regional failure.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities recalls products in enterprise software line due to quality concerns"
+      "headline": "Creven Securities recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate reputational risk and potential costs that could linger.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:22.383Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

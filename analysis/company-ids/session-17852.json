@@ -48,28 +48,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals withdraws from North America market citing unfavorable conditions"
+      "headline": "Krevum Pharmaceuticals withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a major market like North America signals a significant loss of revenue potential and operational contraction.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $800M contract with a national infrastructure agency"
+      "headline": "Strynal Industries secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large-scale $800M infrastructure contract provides a clear, substantial boost to future revenue and backlog.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $250M contract with a multinational manufacturer"
+      "headline": "Strynal Industries secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $250M contract win with a multinational manufacturer represents a solid, positive addition to the company's revenue pipeline.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics begins scheduled maintenance of enterprise software systems"
+      "headline": "Jorvix Diagnostics begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:46.509Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

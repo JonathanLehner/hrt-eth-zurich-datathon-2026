@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports rising costs pressuring margins in data analytics"
+      "headline": "Jorvix Diagnostics reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems sees 8% drop in new customer orders this quarter"
+      "headline": "Prynis Systems sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders indicates weakening demand and potential future revenue headwinds.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $650M contract with an international consortium"
+      "headline": "Prynis Systems secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant revenue visibility and growth potential.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics begins scheduled maintenance of renewable storage systems"
+      "headline": "Jorvix Diagnostics begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal expected financial impact.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $500M contract with a leading cloud platform"
+      "headline": "Jorvix Diagnostics secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $500M contract with a major cloud platform is a strong positive indicator for future revenue.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics names new head of precision manufacturing division"
+      "headline": "Zelvix Therapeutics names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division have uncertain outcomes until the new head's strategy is implemented.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees mixed results in supply chain optimization pilot program"
+      "headline": "Grevel Diagnostics sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the optimization effort.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics announces $9.6B share buyback program"
+      "headline": "Zelvix Therapeutics announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is generally viewed as a positive signal of management confidence and capital return.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:56.390Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

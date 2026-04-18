@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace begins scheduled maintenance of automated logistics systems"
+      "headline": "Arnos Marketplace begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $320M contract with a top-tier research institute"
+      "headline": "Talvyn Goods secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods misses quarterly revenue estimates by 12%"
+      "headline": "Talvyn Goods misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A 12% revenue miss is a significant negative indicator of current demand and operational performance.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets revises long-term strategy with focus on wireless connectivity"
+      "headline": "Frelex Outlets revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A strategic pivot to wireless connectivity is a long-term directional change with uncertain immediate financial outcomes.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace faces regulatory review of automated logistics practices"
+      "headline": "Arnos Marketplace faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential legal and operational risks that create immediate market apprehension.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace files routine patent applications in renewable storage"
+      "headline": "Arnos Marketplace files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that rarely impact financial valuation in the short or long term.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $250M contract with a major logistics provider"
+      "headline": "Frelex Outlets secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $250M contract win is a substantial positive development that strengthens the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace CTO steps down unexpectedly citing personal reasons"
+      "headline": "Arnos Marketplace CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates leadership instability and uncertainty regarding future technical direction.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:40.580Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

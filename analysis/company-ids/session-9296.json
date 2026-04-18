@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Varvov Retail Group begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $75M contract with a leading cloud platform"
+      "headline": "Frelex Outlets secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, positive, and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets explores strategic alternatives for data analytics unit"
+      "headline": "Ixenis Outlets explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is speculative and creates significant uncertainty regarding the future of the business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Varvov Retail Group reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 7% is a strong positive indicator of market demand and operational success.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce completes strategic acquisition to strengthen process automation"
+      "headline": "Arnik Commerce completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Acquisitions to strengthen automation are generally viewed as positive for long-term efficiency, though integration risks exist.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports 3% decline in operating income"
+      "headline": "Varvov Retail Group reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is typically viewed negatively by investors.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Ixenis Outlets warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a major region pose a clear threat to operational output and financial results.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:47.928Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -55,56 +55,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 7% margin improvement in latest quarter"
+      "headline": "Plevyl Advisors sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement indicates direct operational efficiency gains that typically lead to immediate positive earnings sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables publishes annual sustainability report"
+      "headline": "Ulvon Renewables publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Annual sustainability reports are standard corporate disclosures that rarely trigger significant market movement or financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $320M contract with a leading cloud platform"
+      "headline": "Ulvon Renewables secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, high-value revenue visibility that is highly positive for the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors delays product launch in wireless connectivity segment"
+      "headline": "Plevyl Advisors delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential internal execution or technical challenges.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $180M contract with a global retailer"
+      "headline": "Ulvon Renewables secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $180M contract win represents a significant revenue boost that strengthens the company's growth trajectory.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors wins industry award for excellence in process automation"
+      "headline": "Plevyl Advisors wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct, quantifiable financial impact on the company's bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables names new head of wireless connectivity division"
+      "headline": "Ulvon Renewables names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that carries inherent uncertainty regarding future strategic direction.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Kelvik Power warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key operational region pose a direct threat to production capacity and cost structures.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:31.937Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

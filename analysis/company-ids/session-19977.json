@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $650M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides immediate revenue visibility and positive sentiment for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities misses quarterly revenue estimates by 5%"
+      "headline": "Jorvyl Securities misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 5% is a clear negative signal that typically triggers immediate downward price pressure.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech to present at Emerging Markets Forum"
+      "headline": "Xelvol Biotech to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate event that rarely provides significant material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech wins industry award for excellence in process automation"
+      "headline": "Xelvol Biotech wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards for process automation are positive for reputation but lack direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces $6.3B share buyback program"
+      "headline": "Jorvyl Securities announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A $6.3B share buyback program is a significant capital allocation move that directly supports earnings per share and investor confidence.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics revises long-term strategy with focus on data analytics"
+      "headline": "Calvos Genomics revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics is a long-term directional change with no immediate financial impact and high execution uncertainty.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:05.489Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -34,14 +34,45 @@
       "barIx": 25,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks expands operations into Scandinavia markets"
+      "headline": "Halvax Networks expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets provides a clear growth catalyst that typically yields incremental revenue over the medium to long term.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs delays product launch in automated logistics segment"
+      "headline": "Yorven Labs delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly postpones expected revenue streams and signals potential operational or development friction.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:26.981Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

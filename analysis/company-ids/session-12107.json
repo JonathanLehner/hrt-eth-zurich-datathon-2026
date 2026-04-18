@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices announces breakthrough in supply chain optimization"
+      "headline": "Nolvis Devices announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Supply chain optimization typically leads to gradual margin improvements rather than immediate revenue spikes.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores sees 20% drop in new customer orders this quarter"
+      "headline": "Xovep Stores sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders indicates immediate demand weakness that will likely persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $650M contract with a national infrastructure agency"
+      "headline": "Brevon Microchips secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A large, concrete contract win provides immediate positive sentiment and long-term revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips announces breakthrough in precision manufacturing"
+      "headline": "Brevon Microchips announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Technological breakthroughs in manufacturing offer long-term competitive advantages but often lack immediate financial impact.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $250M contract with a leading cloud platform"
+      "headline": "Xovep Stores secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a major contract provides a clear, positive financial boost that will be recognized over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices recalls products in process automation line due to quality concerns"
+      "headline": "Volval Devices recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial costs and reputational damage that can linger for several months.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices explores strategic alternatives for precision manufacturing unit"
+      "headline": "Nolvis Devices explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is ambiguous and creates uncertainty regarding the future of the business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores misses quarterly revenue estimates by 8%"
+      "headline": "Xovep Stores misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin is a direct negative indicator of current business performance.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:36.113Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

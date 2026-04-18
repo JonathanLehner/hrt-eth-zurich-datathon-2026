@@ -53,56 +53,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners expands operations into Scandinavia markets"
+      "headline": "Yorval Partners expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets typically signals growth potential but involves initial setup costs and execution risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $120M contract with a top-tier research institute"
+      "headline": "Plevik Energy secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Yorval Partners reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and margin stability, which is a negative signal for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners faces class action over renewable storage service disruption"
+      "headline": "Yorval Partners faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports unexpected decline in Southeast Asia revenue"
+      "headline": "Yorval Partners reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a key region is a strong negative indicator of demand or competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees 20% drop in new customer orders this quarter"
+      "headline": "Ilval Financial sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a clear, quantifiable indicator of weakening demand that will negatively impact future earnings.",
+        "longTerm": -7,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 25% increase in customer acquisition"
+      "headline": "Yorval Partners reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong positive signal for growth and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners names new head of cloud infrastructure division"
+      "headline": "Yorval Partners names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that creates uncertainty regarding future strategy and operational direction.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:09.737Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

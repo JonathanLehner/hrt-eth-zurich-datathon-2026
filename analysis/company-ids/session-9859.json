@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial files routine patent applications in supply chain optimization"
+      "headline": "Ilval Financial files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operational activities that do not provide immediate or long-term material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings announces breakthrough in renewable storage"
+      "headline": "Halvix Holdings announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A breakthrough in renewable storage is a positive development, but the lack of commercialization details creates significant uncertainty regarding financial realization.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $120M contract with a national infrastructure agency"
+      "headline": "Orevar Marketplace secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace faces class action over renewable storage service disruption"
+      "headline": "Orevar Marketplace faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability that could persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports strong demand in Scandinavia, raises outlook"
+      "headline": "Halvix Holdings reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a direct, positive signal for financial performance in the near and medium term.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial raises full-year guidance citing robust demand"
+      "headline": "Ilval Financial raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "An upward revision of full-year guidance is a strong, positive indicator of financial health and operational momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Orevar Marketplace announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment, but it represents a cash outflow that may weigh on short-term results before long-term benefits materialize.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:08.328Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

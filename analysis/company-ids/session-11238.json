@@ -52,49 +52,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners explores strategic alternatives for supply chain optimization unit"
+      "headline": "Yorval Partners explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit often signals potential divestiture or restructuring, creating moderate uncertainty regarding future cash flows.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners opens new office in Scandinavia"
+      "headline": "Yorval Partners opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard expansion move that typically has a minor, gradual impact on long-term growth rather than an immediate financial shock.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces breakthrough in process automation"
+      "headline": "Yorval Partners announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential margin improvements, though the financial scale remains unquantified in the headline.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners delays product launch in cloud infrastructure segment"
+      "headline": "Yorval Partners delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment like cloud infrastructure is a negative signal for near-term revenue growth and operational execution.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Zelvel Capital announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflows that may weigh on short-term margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports strong demand in Middle East, raises outlook"
+      "headline": "Plevep Power reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct, positive indicators of improved financial performance for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 25% increase in customer acquisition"
+      "headline": "Yorval Partners reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong, quantifiable metric that directly correlates with revenue growth potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:59.293Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

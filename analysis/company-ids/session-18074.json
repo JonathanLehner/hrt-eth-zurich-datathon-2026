@@ -55,56 +55,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy signs multi-year partnership with a national infrastructure agency"
+      "headline": "Zelval Energy signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides long-term revenue visibility and operational stability.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid sees 15% drop in new customer orders this quarter"
+      "headline": "Nerven Grid sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a direct negative impact on near-term revenue growth and market demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy completes strategic acquisition to strengthen data analytics"
+      "headline": "Plevik Energy completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Acquiring data analytics capabilities is a strategic move to improve long-term operational efficiency and service offerings.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy announces $6.3B share buyback program"
+      "headline": "Plevik Energy announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for supply chain optimization unit"
+      "headline": "Plevik Energy explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates uncertainty regarding the future structure and potential divestiture of the asset.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $180M contract with a leading cloud platform"
+      "headline": "Nerven Grid secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract with a major cloud provider offers a clear, immediate boost to revenue and market positioning.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy announces $9.6B share buyback program"
+      "headline": "Zelval Energy announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program is a significant capital allocation event that typically drives positive investor sentiment.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy loses key contract in Asia Pacific to competitor"
+      "headline": "Plevik Energy loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a major region directly impacts revenue and suggests competitive pressure in the Asia Pacific market.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:56.328Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

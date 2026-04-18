@@ -65,56 +65,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Talvix Holdings reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% indicates strong financial performance and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Zelvel Capital withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major geographic market signals a contraction in growth strategy and potential loss of future revenue streams.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports 18% increase in customer acquisition"
+      "headline": "Talvix Holdings reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition is a strong leading indicator of future revenue growth and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 8% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders directly impacts near-term revenue and suggests weakening demand.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors faces regulatory review of supply chain optimization practices"
+      "headline": "Plevyl Advisors faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential operational costs or restrictions for the company.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital loses key contract in Southeast Asia to competitor"
+      "headline": "Zelvel Capital loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor is a direct negative impact on revenue and market positioning.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables explores strategic alternatives for renewable storage unit"
+      "headline": "Ulvon Renewables explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is ambiguous and could imply a potential sale, spin-off, or restructuring of the business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Zelvel Capital begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is unlikely to have a material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:05.941Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

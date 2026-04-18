@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals announces breakthrough in process automation"
+      "headline": "Krevum Pharmaceuticals announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "Process automation improvements typically lead to long-term margin expansion rather than immediate revenue spikes.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets launches next-generation digital payments platform"
+      "headline": "Ixenis Outlets launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that signals growth potential but requires time for adoption.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $120M contract with an international consortium"
+      "headline": "Holtar Stores secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets completes strategic acquisition to strengthen renewable storage"
+      "headline": "Ixenis Outlets completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Acquisitions provide long-term strategic growth but often involve short-term integration costs and uncertainty.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports unexpected decline in Asia Pacific revenue"
+      "headline": "Ixenis Outlets reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a clear negative signal for both immediate and near-term performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals files routine patent applications in enterprise software"
+      "headline": "Krevum Pharmaceuticals files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and generally have negligible impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals loses key contract in Middle East to competitor"
+      "headline": "Krevum Pharmaceuticals loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract is a direct negative hit to revenue and market position with lasting implications.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:44.524Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -40,35 +40,96 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors signs multi-year partnership with an international consortium"
+      "headline": "Plevyl Advisors signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic growth potential for Plevyl Advisors.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees 10% drop in new customer orders this quarter"
+      "headline": "Ilval Financial sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders indicates immediate revenue pressure and potential weakness in the sales pipeline for Ilval Financial.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports 15% increase in customer acquisition"
+      "headline": "Plevyl Advisors reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition directly signals growth and improved market penetration for Plevyl Advisors.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors lowers full-year guidance amid softening demand"
+      "headline": "Plevyl Advisors lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a clear negative signal regarding the company's financial outlook.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports 10% increase in customer acquisition"
+      "headline": "Ilval Financial reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition suggests positive momentum and improved business performance for Ilval Financial.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:23.130Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees mixed results in process automation pilot program"
+      "headline": "Jorvyl Securities sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "The mixed results of the pilot program create ambiguity regarding the effectiveness and future scalability of the automation initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities wins industry award for excellence in process automation"
+      "headline": "Jorvyl Securities wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct evidence of immediate financial gain or operational improvement.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities misses quarterly revenue estimates by 8%"
+      "headline": "Jorvyl Securities misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss is a clear negative indicator of financial performance that typically triggers immediate market repricing.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $120M contract with a global retailer"
+      "headline": "Ervan Capital secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a concrete, quantifiable revenue boost that will positively impact financial results over the coming months.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings enters joint venture with a global retailer"
+      "headline": "Halvix Holdings enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a global retailer suggests potential for future growth and market expansion, though the immediate financial impact is not specified.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:53.877Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

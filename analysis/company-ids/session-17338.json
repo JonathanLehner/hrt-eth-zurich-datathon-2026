@@ -54,49 +54,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets opens new office in North America"
+      "headline": "Ixenis Outlets opens new office in North America",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace enters joint venture with a major logistics provider"
+      "headline": "Orevar Marketplace enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a major logistics provider suggests operational efficiency improvements and potential scale.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $75M contract with a leading cloud platform"
+      "headline": "Xovol Goods secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue growth and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports rising costs pressuring margins in data analytics"
+      "headline": "Ixenis Outlets reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative indicator for profitability and financial health.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Xovol Goods recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control failures that damage brand reputation and incur immediate costs.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Orevar Marketplace warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create operational headwinds and revenue uncertainty.",
+        "longTerm": -3,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports unexpected decline in Middle East revenue"
+      "headline": "Xovol Goods reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in regional revenue is a direct negative signal for financial performance.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:28.592Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

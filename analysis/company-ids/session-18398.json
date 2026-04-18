@@ -65,56 +65,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $120M contract with an international consortium"
+      "headline": "Strynal Industries secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, immediate revenue boost and long-term backlog visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 12% drop in new customer orders this quarter"
+      "headline": "Strynal Industries sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders signals weakening demand that will likely impact revenue growth throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital in talks for potential merger, details undisclosed"
+      "headline": "Zelvel Capital in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Merger talks are speculative and lack concrete details, creating high uncertainty regarding the actual financial outcome.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports 15% decline in operating income"
+      "headline": "Strynal Industries reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners opens new office in Central Europe"
+      "headline": "Plevum Partners opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard expansion move that suggests growth but lacks immediate quantifiable financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries launches next-generation precision manufacturing platform"
+      "headline": "Strynal Industries launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that could drive future revenue, though adoption rates remain uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial completes strategic acquisition to strengthen enterprise software"
+      "headline": "Wrelal Financial completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition is a definitive action that expands capabilities, though the immediate financial benefit is subject to integration.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Plevum Partners warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions indicates potential operational headwinds and cost pressures in the near to medium term.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:07.240Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

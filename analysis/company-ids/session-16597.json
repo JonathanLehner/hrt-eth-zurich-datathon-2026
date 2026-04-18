@@ -40,42 +40,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group sees 8% drop in new customer orders this quarter"
+      "headline": "Varvov Retail Group sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds for the current quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners launches next-generation digital payments platform"
+      "headline": "Yorval Partners launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "The launch of a new platform indicates a strategic expansion of product capabilities that could drive future growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports rising costs pressuring margins in process automation"
+      "headline": "Yorval Partners reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal that typically weighs on profitability expectations.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $75M contract with a national infrastructure agency"
+      "headline": "Yorval Partners secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract provides clear, quantifiable revenue visibility and positive momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners files routine patent applications in enterprise software"
+      "headline": "Yorval Partners files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 9,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners confirms participation in Capital Markets Day"
+      "headline": "Yorval Partners confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard investor relations event that rarely moves the stock price significantly on its own.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 9,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:00.625Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

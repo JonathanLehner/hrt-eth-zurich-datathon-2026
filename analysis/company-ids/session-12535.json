@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores signs multi-year partnership with a multinational manufacturer"
+      "headline": "Holtar Stores signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic stability for Holtar Stores.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Arnik Commerce reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% indicates strong market demand and operational success for Arnik Commerce.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports unexpected decline in Southeast Asia revenue"
+      "headline": "Crevol Retail Group reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region signals potential structural or competitive issues for Crevol Retail Group.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Relvos Biosciences recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate operational costs and potential reputational damage for Relvos Biosciences.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences signs multi-year partnership with a major logistics provider"
+      "headline": "Relvos Biosciences signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year logistics partnership should improve operational efficiency and cost structures for Relvos Biosciences over time.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores expands operations into Middle East markets"
+      "headline": "Holtar Stores expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expansion into the Middle East represents a significant growth opportunity but involves initial capital expenditure and market entry risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce announces breakthrough in automated logistics"
+      "headline": "Arnik Commerce announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in automated logistics suggests potential for significant margin improvement and competitive advantage for Arnik Commerce.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:52.044Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

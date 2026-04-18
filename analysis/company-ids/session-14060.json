@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports 20% decline in operating income"
+      "headline": "Talvyn Goods reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace reports 25% increase in customer acquisition"
+      "headline": "Orevar Marketplace reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong positive signal for growth and market share expansion.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Halvav Brands Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a COO creates immediate leadership instability and uncertainty regarding operational continuity.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets confirms participation in Emerging Markets Forum"
+      "headline": "Ixenis Outlets confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a neutral event that lacks specific financial implications or strategic commitments.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports rising costs pressuring margins in automated logistics"
+      "headline": "Halvav Brands reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs in a core operational area like logistics directly threaten profit margins.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports rising costs pressuring margins in enterprise software"
+      "headline": "Talvyn Goods reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs in enterprise software indicate potential margin compression for the company's software division.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets faces regulatory review of automated logistics practices"
+      "headline": "Ixenis Outlets faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant legal and operational uncertainty regarding the company's logistics practices.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands misses quarterly revenue estimates by 20%"
+      "headline": "Halvav Brands misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a significant negative performance indicator that typically triggers immediate market repricing.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:49.718Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

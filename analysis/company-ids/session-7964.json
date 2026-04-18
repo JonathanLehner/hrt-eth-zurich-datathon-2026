@@ -44,56 +44,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings faces regulatory review of automated logistics practices"
+      "headline": "Halvix Holdings faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational constraints for the company's logistics business.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports rising costs pressuring margins in data analytics"
+      "headline": "Halvix Holdings reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impact profitability, signaling a negative trend for upcoming earnings reports.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings revises long-term strategy with focus on supply chain optimization"
+      "headline": "Halvix Holdings revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic pivots are vague and lack immediate financial quantification, leading to neutral short-term impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 7% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a clear negative indicator for revenue growth and demand.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics names new head of process automation division"
+      "headline": "Jorvix Diagnostics names new head of process automation division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division have minimal immediate impact on overall company financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics files routine patent applications in automated logistics"
+      "headline": "Jorvix Diagnostics files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate financial upside.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics recalls products in process automation line due to quality concerns"
+      "headline": "Jorvix Diagnostics recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls cause immediate financial loss and reputational damage, with lingering effects on future sales.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $180M contract with a leading cloud platform"
+      "headline": "Halvix Holdings secures $180M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:57.551Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

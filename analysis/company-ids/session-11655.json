@@ -53,49 +53,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks sees mixed results in digital payments pilot program"
+      "headline": "Jovor Networks sees mixed results in digital payments pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the commercial viability and future revenue potential of the digital payments segment.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals announces significant capital expenditure plan for Central Europe"
+      "headline": "Krevum Pharmaceuticals announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies near-term cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech faces class action over supply chain optimization service disruption"
+      "headline": "Grevon Biotech faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that could persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $120M contract with an international consortium"
+      "headline": "Grevon Biotech secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports strong demand in Europe, raises outlook"
+      "headline": "Grevon Biotech reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are direct positive indicators of financial performance and operational momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech delays product launch in process automation segment"
+      "headline": "Grevon Biotech delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential operational or development hurdles.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals launches next-generation supply chain optimization platform"
+      "headline": "Krevum Pharmaceuticals launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive operational development that could drive future revenue growth and market competitiveness.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:16.031Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

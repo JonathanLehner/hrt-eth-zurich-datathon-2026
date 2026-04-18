@@ -54,56 +54,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial revises long-term strategy with focus on enterprise software"
+      "headline": "Wrelal Financial revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "A strategic pivot to enterprise software signals a long-term shift in business model but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group withdraws from Asia Pacific market citing unfavorable conditions"
+      "headline": "Holtum Asset Group withdraws from Asia Pacific market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a major market indicates a contraction of revenue streams and potential restructuring costs.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial misses quarterly revenue estimates by 12%"
+      "headline": "Wrelal Financial misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss directly impacts investor sentiment and valuation in the short term.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files for regulatory approval of new enterprise software offering"
+      "headline": "Wrelal Financial files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates progress but does not guarantee immediate revenue.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial wins industry award for excellence in data analytics"
+      "headline": "Wrelal Financial wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but have negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports 12% decline in operating income"
+      "headline": "Wrelal Financial reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly reflects reduced profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces $9.6B share buyback program"
+      "headline": "Holtum Asset Group announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct capital allocation move that typically boosts earnings per share and investor confidence.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $650M contract with a multinational manufacturer"
+      "headline": "Halvix Holdings secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, tangible revenue growth and validates the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:43.956Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

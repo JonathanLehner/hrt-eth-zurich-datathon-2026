@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files for regulatory approval of new process automation offering"
+      "headline": "Krevan Investments files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates future growth potential but lacks immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial to present at Global Innovation Summit"
+      "headline": "Wrelal Financial to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a routine corporate event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners wins industry award for excellence in supply chain optimization"
+      "headline": "Yorval Partners wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but do not directly translate into immediate financial gains or contract wins.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files for regulatory approval of new precision manufacturing offering"
+      "headline": "Krevan Investments files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering is a positive indicator of product pipeline expansion but remains subject to approval timelines.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $75M contract with a multinational manufacturer"
+      "headline": "Yorval Partners secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable boost to revenue and demonstrates strong market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial confirms participation in Global Innovation Summit"
+      "headline": "Wrelal Financial confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Confirming participation in a summit is a non-material update that does not change the company's financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:20.607Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy delays product launch in digital payments segment"
+      "headline": "Zelval Energy delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a new segment directly postpones expected revenue growth and signals potential operational friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Plevep Power reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% provides strong positive momentum for the company's financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables sees 12% margin improvement in latest quarter"
+      "headline": "Ulvon Renewables sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement indicates enhanced operational efficiency and profitability, which is a strong positive signal.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics recalls products in enterprise software line due to quality concerns"
+      "headline": "Myrnon Therapeutics recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event that damages reputation and incurs immediate costs.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics wins industry award for excellence in process automation"
+      "headline": "Myrnon Therapeutics wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award for process automation is a positive reputational signal but lacks direct immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy announces $9.6B share buyback program"
+      "headline": "Zelval Energy announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program is a significant capital allocation move that typically boosts earnings per share and signals management confidence.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables sees 20% drop in new customer orders this quarter"
+      "headline": "Ulvon Renewables sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a clear indicator of weakening demand that will negatively impact future revenue.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $120M contract with a national infrastructure agency"
+      "headline": "Plevep Power secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, tangible boost to the revenue pipeline and long-term visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:15.476Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

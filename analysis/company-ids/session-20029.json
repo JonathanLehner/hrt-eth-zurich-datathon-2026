@@ -66,56 +66,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 10% drop in new customer orders this quarter"
+      "headline": "Xelvol Biotech sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders directly signals weakening demand and immediate revenue headwinds.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences expands operations into Europe markets"
+      "headline": "Zelvon Biosciences expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion represents a strategic growth initiative that typically requires time to scale and contribute to earnings.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics faces class action over precision manufacturing service disruption"
+      "headline": "Frelis Genomics faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $50M contract with a top-tier research institute"
+      "headline": "Zelvon Biosciences secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable boost to revenue and validates the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences revises long-term strategy with focus on renewable storage"
+      "headline": "Relvos Biosciences revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage is a long-term directional change with unclear immediate financial implications.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Frelis Genomics reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% is a strong indicator of current operational success and market demand.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech reports rising costs pressuring margins in enterprise software"
+      "headline": "Xelvol Biotech reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for near-term financial performance.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech faces regulatory review of precision manufacturing practices"
+      "headline": "Xelvol Biotech faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of manufacturing practices introduces uncertainty and potential operational disruption or compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:08.147Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

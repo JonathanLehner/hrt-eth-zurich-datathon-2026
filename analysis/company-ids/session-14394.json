@@ -62,42 +62,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing loses key contract in Southeast Asia to competitor"
+      "headline": "Talvep Computing loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share in a specific region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce misses quarterly revenue estimates by 20%"
+      "headline": "Nolvav Commerce misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A significant 20% revenue miss indicates underlying operational or demand issues that typically trigger immediate negative market sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets launches next-generation data analytics platform"
+      "headline": "Frelex Outlets launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive development that may drive future growth, though the immediate financial impact is often speculative.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce files routine patent applications in automated logistics"
+      "headline": "Arnik Commerce files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce confirms participation in Global Innovation Summit"
+      "headline": "Nolvav Commerce confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a branding event with no clear or direct financial impact on the company's bottom line.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $50M contract with an international consortium"
+      "headline": "Nolvav Commerce secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive, and quantifiable boost to future revenue.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:54:01.594Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

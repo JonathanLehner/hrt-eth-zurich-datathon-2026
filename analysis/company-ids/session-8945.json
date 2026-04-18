@@ -64,49 +64,130 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 25%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss indicates immediate operational weakness and likely negative market sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce to present at Emerging Markets Forum"
+      "headline": "Nolvav Commerce to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce loses key contract in Scandinavia to competitor"
+      "headline": "Nolvav Commerce loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts future revenue streams and suggests competitive disadvantage.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $800M contract with a top-tier research institute"
+      "headline": "Joval Brands secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, long-term revenue visibility and growth.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands sees 10% margin improvement in latest quarter"
+      "headline": "Joval Brands sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates enhanced operational efficiency and profitability.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports 3% increase in customer acquisition"
+      "headline": "Talvix Holdings reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a modest positive indicator of growth.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces $1.2B share buyback program"
+      "headline": "Talvyn Goods announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program signals management confidence and provides immediate support to share price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:34.429Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

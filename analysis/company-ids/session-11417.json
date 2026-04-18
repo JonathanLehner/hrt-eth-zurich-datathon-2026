@@ -55,56 +55,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports rising costs pressuring margins in data analytics"
+      "headline": "Holtar Stores reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability margins, which typically triggers immediate negative market sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces $0.8B share buyback program"
+      "headline": "Grevon Biotech announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics confirms participation in Annual Industry Forum"
+      "headline": "Zelvix Therapeutics confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports rising costs pressuring margins in enterprise software"
+      "headline": "Grevon Biotech reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Margin pressure in a core business segment is a negative indicator for future earnings performance.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $180M contract with a global retailer"
+      "headline": "Holtar Stores secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Holtar Stores reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% is a strong fundamental indicator that typically drives positive investor sentiment.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores misses quarterly revenue estimates by 8%"
+      "headline": "Holtar Stores misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% is a significant negative signal that undermines investor confidence in growth targets.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech completes strategic acquisition to strengthen process automation"
+      "headline": "Grevon Biotech completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to improve long-term operational efficiency, though the immediate impact is often neutral or slightly negative due to integration costs.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:05.915Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

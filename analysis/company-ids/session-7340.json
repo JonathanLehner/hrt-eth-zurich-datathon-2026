@@ -42,42 +42,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices faces regulatory review of data analytics practices"
+      "headline": "Volval Devices faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny creates immediate uncertainty and potential legal or operational headwinds for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics sees 15% drop in new customer orders this quarter"
+      "headline": "Myrnon Therapeutics sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A double-digit drop in new customer orders is a direct negative signal for revenue growth and market demand.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports 8% increase in customer acquisition"
+      "headline": "Volval Devices reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An increase in customer acquisition is a positive indicator of growth and market penetration.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports unexpected decline in Asia Pacific revenue"
+      "headline": "Volval Devices reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key geographic region signals potential operational or competitive issues.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Myrnon Therapeutics begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal expected impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Myrnon Therapeutics reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with a raised outlook provides a clear positive catalyst for future earnings.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:35.166Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

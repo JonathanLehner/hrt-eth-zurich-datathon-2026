@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems files routine patent applications in supply chain optimization"
+      "headline": "Prynis Systems files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks loses key contract in Europe to competitor"
+      "headline": "Jovor Networks loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue and market position, creating immediate negative sentiment and potential long-term earnings pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 5% drop in new customer orders this quarter"
+      "headline": "Nolvis Devices sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct indicator of slowing demand that negatively impacts short-term revenue and long-term growth prospects.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems to host investor day focused on wireless connectivity strategy"
+      "headline": "Prynis Systems to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that typically have neutral immediate impact but can influence long-term sentiment based on the content shared.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech opens new office in Latin America"
+      "headline": "Xelvol Biotech opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion, which is a positive long-term growth signal but has negligible immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces $5.7B share buyback program"
+      "headline": "Xelvol Biotech announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct positive signal for shareholder value and capital allocation, typically boosting stock price.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 3% margin improvement in latest quarter"
+      "headline": "Nolvis Devices sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "Margin improvement directly correlates with increased profitability and operational efficiency, providing a clear positive signal for financial performance.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices faces regulatory review of digital payments practices"
+      "headline": "Nolvis Devices faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce uncertainty and potential legal or operational costs, which typically weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:57.078Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

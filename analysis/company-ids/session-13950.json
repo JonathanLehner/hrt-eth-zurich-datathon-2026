@@ -53,49 +53,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co to present at Emerging Markets Forum"
+      "headline": "Jorval Trading Co to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity that rarely results in immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports strong demand in Middle East, raises outlook"
+      "headline": "Arnos Marketplace reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand provides clear, positive financial guidance that typically drives immediate investor confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co opens new office in Asia Pacific"
+      "headline": "Jorval Trading Co opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates strategic expansion, though the financial contribution is usually gradual rather than immediate.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Jorval Trading Co reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal that typically triggers immediate downward pressure on stock valuation.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace faces class action over renewable storage service disruption"
+      "headline": "Arnos Marketplace faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial uncertainty, creating immediate negative sentiment.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $250M contract with a top-tier research institute"
+      "headline": "Jorval Trading Co secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a concrete revenue boost that is highly positive for the company's financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels loses key contract in Central Europe to competitor"
+      "headline": "Relvon Fuels loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract is a direct negative event that impacts revenue visibility and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:48.754Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

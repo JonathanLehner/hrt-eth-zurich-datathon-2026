@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions beats analyst expectations with strong earnings growth"
+      "headline": "Wyrnor Solutions beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations typically triggers an immediate positive market reaction and reinforces investor confidence in the company's current growth trajectory.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $75M contract with a major logistics provider"
+      "headline": "Nerven Grid secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract provides a clear, quantifiable revenue boost that improves the company's financial outlook for the coming quarters.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions publishes annual sustainability report"
+      "headline": "Wyrnor Solutions publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "The publication of a sustainability report is a standard corporate disclosure that rarely impacts financial performance or stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid CFO addresses investor concerns in open letter"
+      "headline": "Nerven Grid CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO addressing investor concerns suggests existing uncertainty or negative sentiment that the company is attempting to mitigate.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries misses quarterly revenue estimates by 5%"
+      "headline": "Strynal Industries misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 5% is a direct negative signal that typically leads to immediate downward pressure on the stock price.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy names new head of supply chain optimization division"
+      "headline": "Plevik Energy names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a routine operational change that lacks sufficient information to determine a material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:53.575Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

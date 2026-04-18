@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power revises long-term strategy with focus on supply chain optimization"
+      "headline": "Kelvik Power revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic shifts toward supply chain optimization are vague and lack immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Ixenix Technologies reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 15% provides clear, positive financial evidence of strong market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files for regulatory approval of new precision manufacturing offering"
+      "headline": "Orevex Renewables files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates future growth potential but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces regulatory review of process automation practices"
+      "headline": "Plevik Energy faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory review of internal practices introduces potential operational risk and uncertainty regarding future compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables delays product launch in wireless connectivity segment"
+      "headline": "Orevex Renewables delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "A product launch delay directly postpones expected revenue and signals potential execution challenges.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables completes planned facility upgrade in North America"
+      "headline": "Orevex Renewables completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that improves capacity but does not guarantee immediate financial returns.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces breakthrough in automated logistics"
+      "headline": "Ixenix Technologies announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in logistics suggests potential long-term efficiency gains and competitive advantage.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy recalls products in digital payments line due to quality concerns"
+      "headline": "Plevik Energy recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate negative financial impact and potential reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:27.679Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

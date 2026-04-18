@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co CEO steps down unexpectedly citing personal reasons"
+      "headline": "Jorval Trading Co CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CEO creates immediate leadership instability and market uncertainty regarding future strategic direction.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group names new head of precision manufacturing division"
+      "headline": "Crevol Retail Group names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational update with minimal immediate impact on overall company valuation.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports unexpected decline in Asia Pacific revenue"
+      "headline": "Nolvav Commerce reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region directly impacts financial performance and investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands explores strategic alternatives for supply chain optimization unit"
+      "headline": "Joval Brands explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a neutral to positive signal that suggests potential value unlocking but lacks concrete outcomes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Joval Brands warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions indicates imminent operational headwinds that will likely pressure margins.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group secures $800M contract with a global retailer"
+      "headline": "Crevol Retail Group secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear, positive boost to revenue visibility and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group secures $500M contract with a national infrastructure agency"
+      "headline": "Crevol Retail Group secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A significant contract win with a government agency provides stable, long-term revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co in talks for potential merger, details undisclosed"
+      "headline": "Jorval Trading Co in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "Being in merger talks is a high-impact event, but the lack of details creates significant uncertainty regarding the deal's viability.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:45.231Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

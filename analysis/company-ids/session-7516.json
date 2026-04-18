@@ -60,35 +60,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports 25% decline in operating income"
+      "headline": "Jovor Networks reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income directly signals weakened profitability and operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $75M contract with a major logistics provider"
+      "headline": "Xovep Stores secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost for the company.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce in talks for potential merger, details undisclosed"
+      "headline": "Nolvav Commerce in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "The mention of undisclosed details regarding a potential merger creates significant ambiguity about the outcome and valuation.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $650M contract with a national infrastructure agency"
+      "headline": "Jovor Networks secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A large $650M contract with a national agency provides substantial, long-term revenue visibility.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets launches next-generation enterprise software platform"
+      "headline": "Frelex Outlets launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a new software platform suggests potential for future growth, though market adoption remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:40.631Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

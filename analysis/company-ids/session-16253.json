@@ -55,56 +55,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods warns of supply chain disruptions affecting North America operations"
+      "headline": "Talvyn Goods warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization in the near term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods misses quarterly revenue estimates by 10%"
+      "headline": "Talvyn Goods misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss is a significant negative indicator of current demand and operational performance.",
+        "longTerm": -2,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods names new head of renewable storage division"
+      "headline": "Talvyn Goods names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division have a neutral to slightly positive impact depending on the new hire's track record.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports unexpected decline in Europe revenue"
+      "headline": "Arnos Marketplace reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural or competitive issues.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets launches next-generation supply chain optimization platform"
+      "headline": "Frelex Outlets launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new optimization platform suggests potential for future margin improvement and operational efficiency.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Arnos Marketplace recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls in precision manufacturing imply immediate costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets recalls products in process automation line due to quality concerns"
+      "headline": "Frelex Outlets recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalls in process automation indicate quality control failures that will likely impact near-term financials and customer trust.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces $2.5B share buyback program"
+      "headline": "Talvyn Goods announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a strong signal of management confidence and provides immediate support to the stock price.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:49.286Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

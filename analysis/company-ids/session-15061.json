@@ -43,49 +43,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial begins scheduled maintenance of process automation systems"
+      "headline": "Wrelal Financial begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Wrelal Financial reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% indicates strong business momentum and positive financial health.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial misses quarterly revenue estimates by 8%"
+      "headline": "Wrelal Financial misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss relative to estimates is a negative signal that typically triggers immediate downward price pressure.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group confirms participation in Corporate Strategy Symposium"
+      "headline": "Holtum Asset Group confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a standard corporate activity that does not provide specific financial catalysts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $75M contract with a national infrastructure agency"
+      "headline": "Holtum Asset Group secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue stream that improves the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $650M contract with a global retailer"
+      "headline": "Wrelal Financial secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $650M contract win is a significant positive development that materially enhances revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Holtum Asset Group begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance of internal systems is a routine operational task with no expected financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:45.837Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

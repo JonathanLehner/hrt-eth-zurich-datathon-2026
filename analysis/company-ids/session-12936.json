@@ -24,14 +24,45 @@
       "barIx": 38,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports rising costs pressuring margins in automated logistics"
+      "headline": "Plevum Partners reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal that typically leads to immediate downward pressure on earnings expectations.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners faces class action over renewable storage service disruption"
+      "headline": "Plevum Partners faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial uncertainty that often weighs on investor sentiment until a resolution or settlement is reached.",
+        "longTerm": -6,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:05.212Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

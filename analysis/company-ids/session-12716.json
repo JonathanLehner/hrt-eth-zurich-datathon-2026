@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries names new head of automated logistics division"
+      "headline": "Zrovex Industries names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports 12% increase in customer acquisition"
+      "headline": "Zrovex Industries reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition is a positive indicator of growth and revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $120M contract with a national infrastructure agency"
+      "headline": "Wyrnor Solutions secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear and significant boost to revenue and backlog.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries faces regulatory review of automated logistics practices"
+      "headline": "Zrovex Industries faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential operational constraints for the logistics division.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions completes strategic acquisition to strengthen automated logistics"
+      "headline": "Wyrnor Solutions completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to bolster capabilities, though the financial benefit depends on integration success.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels secures $400M contract with a top-tier research institute"
+      "headline": "Jorvis Fuels secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $400M contract is a major financial win that significantly improves revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies wins industry award for excellence in wireless connectivity"
+      "headline": "Ixenix Technologies wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "An industry award provides positive brand recognition but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies sees mixed results in enterprise software pilot program"
+      "headline": "Ixenix Technologies sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the enterprise software.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:58.939Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

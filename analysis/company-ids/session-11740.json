@@ -48,28 +48,79 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Talvix Holdings warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 10%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss relative to analyst expectations is a significant negative signal for investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Halven Investments reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 10% year-over-year indicates strong business momentum and positive financial health.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports unexpected decline in Southeast Asia revenue"
+      "headline": "Krevan Investments reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a key regional market suggests potential structural or competitive issues in that territory.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:18.989Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

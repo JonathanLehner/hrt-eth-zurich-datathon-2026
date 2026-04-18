@@ -48,28 +48,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software to host investor day focused on data analytics strategy"
+      "headline": "Relvan Software to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that typically provide clarity on long-term goals without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs faces regulatory review of enterprise software practices"
+      "headline": "Yorven Labs faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational uncertainty and potential legal costs that weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co faces class action over precision manufacturing service disruption"
+      "headline": "Pleven Trading Co faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits represent a direct financial and reputational risk that creates immediate negative pressure.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software to present at Global Innovation Summit"
+      "headline": "Relvan Software to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Industry conference presentations are standard corporate activities that rarely move the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:22.077Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

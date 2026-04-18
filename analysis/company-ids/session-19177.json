@@ -50,35 +50,96 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Zrovov Advisors reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips wins industry award for excellence in data analytics"
+      "headline": "Brevon Microchips wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct financial impact on revenue or costs.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $320M contract with a top-tier research institute"
+      "headline": "Dralol Computing secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $320M contract provides clear, quantifiable revenue growth and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips names new head of supply chain optimization division"
+      "headline": "Brevon Microchips names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "Leadership changes are neutral until the new appointee demonstrates strategic impact or operational improvement.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing recalls products in process automation line due to quality concerns"
+      "headline": "Dralol Computing recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial liability and potential long-term reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:35.292Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

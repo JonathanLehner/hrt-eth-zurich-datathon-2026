@@ -62,42 +62,113 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics sees 15% drop in new customer orders this quarter"
+      "headline": "Zelvix Therapeutics sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a direct and immediate decline in revenue growth potential.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Grevel Diagnostics Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a COO creates immediate operational uncertainty and potential leadership instability.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics delays product launch in data analytics segment"
+      "headline": "Frelis Genomics delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and signals potential internal execution issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics wins industry award for excellence in digital payments"
+      "headline": "Jorvix Diagnostics wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "An industry award for excellence provides positive brand sentiment but lacks direct financial impact on the bottom line.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $120M contract with a multinational manufacturer"
+      "headline": "Frelis Genomics secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable boost to future revenue and business stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics wins industry award for excellence in supply chain optimization"
+      "headline": "Zelvix Therapeutics wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Winning an award for supply chain optimization suggests improved operational efficiency, though the financial impact is indirect.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:05.546Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

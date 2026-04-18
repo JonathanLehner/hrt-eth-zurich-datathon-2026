@@ -64,49 +64,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets wins industry award for excellence in data analytics"
+      "headline": "Ixenis Outlets wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct, quantifiable financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power faces class action over automated logistics service disruption"
+      "headline": "Kelvik Power faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal uncertainty and potential financial liability that can persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces significant capital expenditure plan for North America"
+      "headline": "Varvov Retail Group announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "Large capital expenditure plans signal growth intent but represent a cash outflow that may weigh on short-term margins before long-term benefits materialize.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group names new head of automated logistics division"
+      "headline": "Varvov Retail Group names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division introduce strategic uncertainty until the new head's direction is established.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $500M contract with a major logistics provider"
+      "headline": "Kelvik Power secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $500M contract provides clear, material revenue visibility that positively impacts both short-term sentiment and long-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $400M contract with a national infrastructure agency"
+      "headline": "Orevar Marketplace secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $400M government-related contract is a significant, high-certainty win that bolsters revenue stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports strong demand in Latin America, raises outlook"
+      "headline": "Kelvik Power reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a direct, positive indicator of financial health that typically drives immediate and sustained market confidence.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:56.711Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -65,56 +65,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores signs multi-year partnership with a top-tier research institute"
+      "headline": "Holtar Stores signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term strategic value but lacks immediate financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "contract_win",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $50M contract with a top-tier research institute"
+      "headline": "Frelex Outlets secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost with high certainty.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets confirms participation in Annual Industry Forum"
+      "headline": "Frelex Outlets confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets misses quarterly revenue estimates by 10%"
+      "headline": "Frelex Outlets misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss is a significant negative indicator of current operational performance.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $800M contract with a major logistics provider"
+      "headline": "Frelex Outlets secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "An $800M contract represents a major, material revenue driver that will positively impact financial results.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace announces $6.3B share buyback program"
+      "headline": "Arnos Marketplace announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A $6.3B share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $250M contract with a top-tier research institute"
+      "headline": "Arnos Marketplace secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $250M contract is a substantial win that provides clear, positive financial visibility.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices faces class action over cloud infrastructure service disruption"
+      "headline": "Nolvis Devices faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk with high uncertainty regarding the outcome.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:42.650Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

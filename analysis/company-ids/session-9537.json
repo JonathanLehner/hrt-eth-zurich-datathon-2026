@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments expands operations into Central Europe markets"
+      "headline": "Krevan Investments expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets typically signals growth potential but involves initial capital expenditure and execution risk.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities explores strategic alternatives for supply chain optimization unit"
+      "headline": "Jorvyl Securities explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague corporate action that could lead to a sale, spin-off, or restructuring, creating significant market speculation.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces class action over renewable storage service disruption"
+      "headline": "Zelvel Capital faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits represent a direct legal and financial threat that typically triggers immediate negative sentiment and potential long-term liability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Zelvel Capital reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth is a strong, objective indicator of current business health and positive momentum.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $800M contract with an international consortium"
+      "headline": "Jorvyl Securities secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, high-confidence revenue visibility and positive financial impact.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees 7% drop in new customer orders this quarter"
+      "headline": "Jorvyl Securities sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a leading indicator of slowing demand that negatively impacts future revenue projections.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:56.561Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 3% drop in new customer orders this quarter"
+      "headline": "Halvax Networks sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Frelol Software reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 15% indicates strong market performance and operational success.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 8% drop in new customer orders this quarter"
+      "headline": "Yorven Labs sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a significant negative indicator for near-term and mid-term growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Joval Brands files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates progress but does not guarantee immediate financial gain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $50M contract with a top-tier research institute"
+      "headline": "Frelol Software secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable boost to future revenue and validates market position.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software revises long-term strategy with focus on data analytics"
+      "headline": "Frelol Software revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "Strategic pivots are high-level shifts that lack immediate financial quantification or guaranteed outcomes.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands wins industry award for excellence in renewable storage"
+      "headline": "Joval Brands wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but have a limited and indirect impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:08.993Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

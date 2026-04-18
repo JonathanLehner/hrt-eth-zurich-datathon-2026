@@ -62,42 +62,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands explores strategic alternatives for automated logistics unit"
+      "headline": "Joval Brands explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential divestiture or sale, which creates speculative upside but significant operational uncertainty.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $250M contract with a global retailer"
+      "headline": "Joval Brands secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides immediate revenue visibility and a clear positive catalyst for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices wins industry award for excellence in precision manufacturing"
+      "headline": "Volval Devices wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into direct, measurable financial impact on the bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace misses quarterly revenue estimates by 25%"
+      "headline": "Orevar Marketplace misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a significant negative indicator of demand or operational execution that typically triggers immediate market repricing.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports unexpected decline in Latin America revenue"
+      "headline": "Ixenis Outlets reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected regional revenue decline suggests localized demand weakness that may persist or indicate broader structural issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Joval Brands warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential cost pressures that impact margins.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:25.183Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

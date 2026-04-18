@@ -46,21 +46,62 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace reports 15% increase in customer acquisition"
+      "headline": "Orevar Marketplace reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition indicates strong organic growth and improved market penetration for Orevar Marketplace.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $650M contract with a national infrastructure agency"
+      "headline": "Jovor Networks secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract with a national agency provides significant, high-visibility revenue certainty for Jovor Networks.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores misses quarterly revenue estimates by 25%"
+      "headline": "Holtar Stores misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a substantial negative indicator of operational performance and demand for Holtar Stores.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:23.066Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

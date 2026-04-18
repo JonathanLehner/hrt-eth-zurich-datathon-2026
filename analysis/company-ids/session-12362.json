@@ -54,49 +54,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital CFO addresses investor concerns in open letter"
+      "headline": "Ervan Capital CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO addressing investor concerns is a reactive measure that typically signals underlying instability or lack of confidence.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities faces regulatory review of renewable storage practices"
+      "headline": "Jorvyl Securities faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate headline risk and potential long-term operational constraints or fines.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Jorvyl Securities completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions aimed at supply chain optimization are generally viewed as positive long-term efficiency drivers.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $650M contract with a top-tier research institute"
+      "headline": "Ervan Capital secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides immediate revenue visibility and positive sentiment for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels delays product launch in enterprise software segment"
+      "headline": "Relvon Fuels delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a growth segment is a negative signal regarding execution and near-term revenue potential.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports 7% decline in operating income"
+      "headline": "Jorvyl Securities reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income is a direct negative indicator of financial performance and profitability.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $650M contract with a multinational manufacturer"
+      "headline": "Ervan Capital secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing another major $650M contract reinforces the company's strong market position and revenue growth trajectory.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:45.364Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

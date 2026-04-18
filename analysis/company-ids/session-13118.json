@@ -62,42 +62,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions to present at Tech Leadership Conference"
+      "headline": "Orevov Solutions to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a routine corporate activity that rarely impacts financial performance or stock valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power begins scheduled maintenance of automated logistics systems"
+      "headline": "Kelvik Power begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a standard operational procedure that is expected and typically factored into existing guidance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Plevyl Advisors warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region represent a direct negative impact on operational efficiency and potential revenue.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions announces major organizational restructuring"
+      "headline": "Orevov Solutions announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring introduces significant uncertainty regarding costs, efficiency gains, and potential leadership turnover.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $320M contract with a multinational manufacturer"
+      "headline": "Orevov Solutions secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, tangible revenue growth and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid announces restructuring plan, cites challenging market conditions"
+      "headline": "Urvel Grid announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring due to challenging market conditions signals underlying financial weakness and potential future earnings pressure.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:13.144Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

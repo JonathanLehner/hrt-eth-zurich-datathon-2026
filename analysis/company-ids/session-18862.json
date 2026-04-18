@@ -54,49 +54,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Prynis Systems reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% indicates strong operational performance and positive momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $650M contract with a global retailer"
+      "headline": "Wrelal Financial secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant revenue boost and validates market demand.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Wrelal Financial Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive like the CSO creates immediate uncertainty regarding strategic direction.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems CFO steps down unexpectedly citing personal reasons"
+      "headline": "Prynis Systems CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The sudden resignation of a CFO typically triggers market concern regarding financial oversight and stability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems delays product launch in renewable storage segment"
+      "headline": "Prynis Systems delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a growth segment like renewable storage directly impacts revenue expectations and competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings confirms participation in Annual Industry Forum"
+      "headline": "Talvix Holdings confirms participation in Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Participation in an industry forum is a routine corporate event with negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 5% drop in new customer orders this quarter"
+      "headline": "Talvix Holdings sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders signals weakening demand and potential headwinds for future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:24.093Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

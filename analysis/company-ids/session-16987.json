@@ -48,28 +48,79 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics misses quarterly revenue estimates by 18%"
+      "headline": "Frelis Genomics misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current operational performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech withdraws from Europe market citing unfavorable conditions"
+      "headline": "Xelvol Biotech withdraws from Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a major geographic market indicates a contraction in growth strategy and potential loss of future revenue streams.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics begins scheduled maintenance of data analytics systems"
+      "headline": "Grevel Diagnostics begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics announces breakthrough in cloud infrastructure"
+      "headline": "Grevel Diagnostics announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A breakthrough in cloud infrastructure suggests potential for improved operational efficiency or new product capabilities, though the financial impact is not yet quantified.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:14.713Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

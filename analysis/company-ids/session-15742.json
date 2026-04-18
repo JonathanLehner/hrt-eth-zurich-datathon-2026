@@ -60,35 +60,96 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 3% decline in operating income"
+      "headline": "Crevol Retail Group reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and investor sentiment regarding operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks confirms participation in Corporate Strategy Symposium"
+      "headline": "Halvax Networks confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a standard corporate event that rarely provides material financial impact or strategic shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies achieves key regulatory milestone ahead of schedule"
+      "headline": "Myrnep Technologies achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a regulatory milestone ahead of schedule reduces risk and accelerates the path to commercialization or product deployment.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group secures $400M contract with a global retailer"
+      "headline": "Crevol Retail Group secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, quantifiable boost to future revenue and validates market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over process automation service disruption"
+      "headline": "Jovor Networks faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal and financial risk, potentially leading to settlements or reputational damage.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:28.645Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

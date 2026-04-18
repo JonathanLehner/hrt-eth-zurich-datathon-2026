@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Kelvos Resources Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CSO is a reactive communication measure that typically lacks concrete financial impact and creates ambiguity regarding underlying issues.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power completes strategic acquisition to strengthen digital payments"
+      "headline": "Plevep Power completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions provide clear inorganic growth potential, though the long-term value depends on successful integration which is not yet proven.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings signs multi-year partnership with a leading cloud platform"
+      "headline": "Halvix Holdings signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides predictable revenue streams and validates the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power raises full-year guidance citing robust demand"
+      "headline": "Plevep Power raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance is a strong, direct signal of management confidence and positive operational momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power misses quarterly revenue estimates by 3%"
+      "headline": "Plevep Power misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates immediate operational underperformance, though a 3% miss is relatively minor in the context of overall business health.",
+        "longTerm": -1,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries files for regulatory approval of new process automation offering"
+      "headline": "Strynal Industries files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates product development progress but does not guarantee immediate revenue.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Strynal Industries reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% is a strong indicator of successful execution and high market demand for the company's offerings.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:41.513Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands to present at Corporate Strategy Symposium"
+      "headline": "Halvav Brands to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a strategy symposium is a routine corporate event that rarely provides immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software announces $5.7B share buyback program"
+      "headline": "Relvan Software announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems sees mixed results in enterprise software pilot program"
+      "headline": "Brevep Systems sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding future revenue potential and product adoption.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software sees 8% margin improvement in latest quarter"
+      "headline": "Relvan Software sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly indicates increased operational efficiency and higher profitability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands withdraws from Latin America market citing unfavorable conditions"
+      "headline": "Halvav Brands withdraws from Latin America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a regional market represents a loss of future growth opportunities and potential restructuring costs.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:07.195Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

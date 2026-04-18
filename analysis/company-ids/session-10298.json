@@ -64,56 +64,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities recalls products in enterprise software line due to quality concerns"
+      "headline": "Jorvyl Securities recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in enterprise software indicates immediate operational failure and potential reputational damage that may persist.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $120M contract with a major logistics provider"
+      "headline": "Jorvyl Securities secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $120M contract provides clear, immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial faces class action over precision manufacturing service disruption"
+      "headline": "Wrelal Financial faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial uncertainty that typically weighs on sentiment over time.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods files for regulatory approval of new renewable storage offering"
+      "headline": "Talvyn Goods files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward future growth but remains speculative until the approval is granted.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $50M contract with a global retailer"
+      "headline": "Jorvyl Securities secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $50M contract win provides a solid, incremental boost to revenue and reinforces the company's market position.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees 10% margin improvement in latest quarter"
+      "headline": "Jorvyl Securities sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement directly impacts profitability and suggests operational efficiency gains that should persist.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital names new head of process automation division"
+      "headline": "Zelvel Capital names new head of process automation division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with neutral to slightly positive implications depending on the executive's track record.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces breakthrough in wireless connectivity"
+      "headline": "Jorvyl Securities announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A breakthrough in wireless connectivity is a positive technological development, though its commercial impact remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:25.175Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

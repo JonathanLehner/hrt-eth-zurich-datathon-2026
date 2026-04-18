@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital names new head of enterprise software division"
+      "headline": "Ervan Capital names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has a neutral to slightly positive impact depending on the market's perception of the new hire.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities begins scheduled maintenance of automated logistics systems"
+      "headline": "Creven Securities begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and should have no material impact on the company's financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital to host investor day focused on process automation strategy"
+      "headline": "Ervan Capital to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a strategic communication event that generally signals management confidence but does not directly change financial fundamentals.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces $1.2B share buyback program"
+      "headline": "Creven Securities announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program is a direct positive signal for shareholders, typically leading to immediate price appreciation and improved earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees 25% margin improvement in latest quarter"
+      "headline": "Ervan Capital sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement is a significant positive indicator of operational efficiency and profitability that usually drives immediate and sustained investor interest.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics signs multi-year partnership with a leading cloud platform"
+      "headline": "Jorvix Diagnostics signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a leading cloud platform provides long-term revenue visibility and strategic validation for the company.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities delays product launch in automated logistics segment"
+      "headline": "Jorvyl Securities delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal that suggests operational or technical challenges, likely leading to immediate market disappointment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $180M contract with an international consortium"
+      "headline": "Jorvyl Securities secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a clear, quantifiable boost to future revenue and demonstrates strong market demand for the company's services.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:25.861Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

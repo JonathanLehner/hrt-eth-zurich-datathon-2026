@@ -66,56 +66,147 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software wins industry award for excellence in process automation"
+      "headline": "Relvan Software wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees mixed results in data analytics pilot program"
+      "headline": "Calvis Sciences sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the viability and future scaling of the project.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics delays product launch in cloud infrastructure segment"
+      "headline": "Calvos Genomics delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "A product launch delay directly postpones expected revenue streams and signals potential operational or technical hurdles.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences misses quarterly revenue estimates by 8%"
+      "headline": "Calvis Sciences misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin typically triggers immediate negative market sentiment and valuation adjustments.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees 20% drop in new customer orders this quarter"
+      "headline": "Grevon Biotech sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a strong indicator of weakening demand that will likely impact future financial performance.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software explores strategic alternatives for renewable storage unit"
+      "headline": "Relvan Software explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential divestiture or restructuring, creating uncertainty about the future of that business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 7% drop in new customer orders this quarter"
+      "headline": "Calvos Genomics sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% decline in new customer orders suggests a moderate cooling of demand that may persist if not addressed.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences confirms participation in Capital Markets Day"
+      "headline": "Calvis Sciences confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that rarely provides material financial impact on its own.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:43.780Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

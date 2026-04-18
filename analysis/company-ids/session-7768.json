@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial files routine patent applications in cloud infrastructure"
+      "headline": "Ilval Financial files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and do not provide immediate or long-term material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $75M contract with a national infrastructure agency"
+      "headline": "Yorval Partners secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, positive revenue stream that will likely be recognized over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces class action over process automation service disruption"
+      "headline": "Halven Investments faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Talvix Holdings recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls in a precision manufacturing line imply immediate costs and potential reputational damage that may persist.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners faces regulatory review of enterprise software practices"
+      "headline": "Yorval Partners faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create uncertainty regarding future operations and potential compliance costs, weighing on the stock.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Talvix Holdings recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A recall in the cloud infrastructure line suggests a broader quality issue that could impact client trust and long-term service revenue.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments completes planned facility upgrade in Europe"
+      "headline": "Halven Investments completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "A planned facility upgrade is an operational improvement that typically yields incremental efficiency gains over time.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings expands operations into Asia Pacific markets"
+      "headline": "Talvix Holdings expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets provides a clear growth catalyst that should positively impact long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:51.207Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

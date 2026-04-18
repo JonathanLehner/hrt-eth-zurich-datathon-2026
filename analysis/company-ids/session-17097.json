@@ -55,56 +55,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences faces class action over enterprise software service disruption"
+      "headline": "Wyrnik Sciences faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal and reputational risk for Wyrnik Sciences.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Brevep Systems reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 18% indicates strong operational performance and market demand for Brevep Systems.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems misses quarterly revenue estimates by 15%"
+      "headline": "Brevep Systems misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss relative to estimates signals significant weakness in Brevep Systems' current business execution.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over supply chain optimization service disruption"
+      "headline": "Jovor Networks faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "The class action lawsuit against Jovor Networks introduces legal uncertainty and potential financial liability regarding service reliability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems expands operations into Europe markets"
+      "headline": "Brevep Systems expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into European markets represents a strategic growth initiative that could diversify revenue streams for Brevep Systems.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $400M contract with an international consortium"
+      "headline": "Jovor Networks secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, substantial revenue boost and validates Jovor Networks' service offering.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $650M contract with a multinational manufacturer"
+      "headline": "Brevep Systems secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $650M contract win is a major positive catalyst that significantly strengthens Brevep Systems' revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences files for regulatory approval of new supply chain optimization offering"
+      "headline": "Wyrnik Sciences files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for product expansion, though the outcome remains subject to external review.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:19.833Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

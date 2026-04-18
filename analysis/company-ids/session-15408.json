@@ -65,56 +65,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in renewable storage"
+      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but typically have negligible direct financial impact on pharmaceutical operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics names new head of precision manufacturing division"
+      "headline": "Zelvix Therapeutics names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Leadership changes in specific divisions are standard corporate updates with minimal immediate market impact unless the individual is highly prominent.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees 10% drop in new customer orders this quarter"
+      "headline": "Frelis Genomics sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of revenue growth and demand health.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics delays product launch in wireless connectivity segment"
+      "headline": "Frelis Genomics delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and signals potential operational or technical friction.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings wins industry award for excellence in renewable storage"
+      "headline": "Talvix Holdings wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards for renewable storage are positive for brand reputation but lack material financial substance for a holding company.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics schedules annual shareholder meeting for next month"
+      "headline": "Frelis Genomics schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard administrative event with no expected impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces $3.8B share buyback program"
+      "headline": "Frelis Genomics announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A $3.8B share buyback program is a significant capital allocation event that typically boosts earnings per share and signals management confidence.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals announces breakthrough in digital payments"
+      "headline": "Yorvov Pharmaceuticals announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments for a pharmaceutical company is highly unusual and creates significant uncertainty regarding strategic direction and execution.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:17.452Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

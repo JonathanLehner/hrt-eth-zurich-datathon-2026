@@ -54,56 +54,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to present at Emerging Markets Forum"
+      "headline": "Plevep Power to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces significant capital expenditure plan for Scandinavia"
+      "headline": "Plevep Power announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power launches next-generation cloud infrastructure platform"
+      "headline": "Plevep Power launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive development that can drive future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions wins industry award for excellence in supply chain optimization"
+      "headline": "Wyrnor Solutions wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but have a negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports unexpected decline in Scandinavia revenue"
+      "headline": "Plevep Power reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a specific region is a clear negative signal for near-term performance.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports 3% decline in operating income"
+      "headline": "Wyrnor Solutions reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is viewed negatively by investors.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Plevep Power reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue is a positive indicator, though 3% growth is relatively modest.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports 5% decline in operating income"
+      "headline": "Relvon Fuels reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income indicates margin pressure and is a negative financial indicator.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:46.316Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

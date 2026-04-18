@@ -50,35 +50,96 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems faces class action over process automation service disruption"
+      "headline": "Prynis Systems faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that could persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational output and revenue, creating a clear negative impact on near-term performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems confirms participation in Global Innovation Summit"
+      "headline": "Prynis Systems confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in a summit is a standard corporate event with minimal direct financial impact or clear market-moving potential.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital beats analyst expectations with strong earnings growth"
+      "headline": "Ervan Capital beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a strong positive signal for the company's current financial health and market sentiment.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports strong demand in Europe, raises outlook"
+      "headline": "Ulvyn Microchips reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a direct, positive indicator of future financial performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:14.961Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -42,49 +42,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences opens new office in Southeast Asia"
+      "headline": "Calvis Sciences opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market indicates growth potential but lacks immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Calvis Sciences begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences misses quarterly revenue estimates by 15%"
+      "headline": "Calvis Sciences misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss of 15% is a clear negative indicator of current financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences to host investor day focused on supply chain optimization strategy"
+      "headline": "Calvis Sciences to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on supply chain optimization is a strategic communication event with no immediate financial change.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Calvis Sciences recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate financial liability and potential brand damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals faces class action over renewable storage service disruption"
+      "headline": "Yorvov Pharmaceuticals faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial penalties that weigh on the company.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals opens new office in North America"
+      "headline": "Yorvov Pharmaceuticals opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office in North America is a standard expansion move that signals long-term growth intent.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:49.321Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

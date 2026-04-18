@@ -56,56 +56,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid names new head of precision manufacturing division"
+      "headline": "Nerven Grid names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has neutral immediate impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power faces class action over automated logistics service disruption"
+      "headline": "Plevep Power faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal and financial uncertainty that typically weighs on investor sentiment in the short term.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power loses key contract in Middle East to competitor"
+      "headline": "Plevep Power loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share, negatively impacting financial outlook.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports unexpected decline in North America revenue"
+      "headline": "Plevep Power reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a negative indicator for earnings and growth trajectory.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid CTO steps down unexpectedly citing personal reasons"
+      "headline": "Nerven Grid CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates leadership instability and uncertainty regarding technical strategy.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid expands operations into Scandinavia markets"
+      "headline": "Nerven Grid expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets is a positive growth signal that suggests potential for increased revenue over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics recalls products in digital payments line due to quality concerns"
+      "headline": "Frelis Genomics recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns is a significant negative event that impacts reputation and incurs immediate costs.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $650M contract with a global retailer"
+      "headline": "Frelis Genomics secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear, positive boost to revenue expectations and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:46.265Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

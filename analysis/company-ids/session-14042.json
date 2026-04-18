@@ -66,56 +66,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Holtar Stores reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% indicates strong financial performance and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets opens new office in North America"
+      "headline": "Ixenis Outlets opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a standard expansion effort that typically has a modest, long-term positive impact on market reach.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands expands operations into Asia Pacific markets"
+      "headline": "Joval Brands expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into the Asia Pacific market is a significant growth initiative that suggests long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets completes planned facility upgrade in Scandinavia"
+      "headline": "Ixenis Outlets completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational improvement that likely yields incremental efficiency gains rather than immediate market-moving impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files routine patent applications in automated logistics"
+      "headline": "Zrovov Advisors files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that provide minimal immediate impact or clear signal of financial change.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces significant capital expenditure plan for North America"
+      "headline": "Zrovov Advisors announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term investment in growth, though it may temporarily impact cash flow.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands files for regulatory approval of new supply chain optimization offering"
+      "headline": "Joval Brands files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for a new product, but the outcome and timing remain uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces breakthrough in automated logistics"
+      "headline": "Zrovov Advisors announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A breakthrough in automated logistics is a potentially transformative event that could significantly enhance competitive advantage.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:48.970Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

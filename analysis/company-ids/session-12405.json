@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions delays product launch in precision manufacturing segment"
+      "headline": "Orevov Solutions delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and signals potential operational or development hurdles.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces $1.2B share buyback program"
+      "headline": "Zrovex Industries announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $320M contract with a global retailer"
+      "headline": "Varvov Retail Group secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides clear revenue visibility and validates the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Strynal Industries recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial costs and potential reputational damage that can linger.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports unexpected decline in Central Europe revenue"
+      "headline": "Zrovex Industries reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region suggests underlying demand issues that may persist.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group faces regulatory review of process automation practices"
+      "headline": "Varvov Retail Group faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce uncertainty regarding future operations and potential compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:46.823Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

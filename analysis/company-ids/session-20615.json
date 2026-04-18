@@ -52,42 +52,113 @@
       "barIx": 32,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems beats analyst expectations with strong earnings growth"
+      "headline": "Prynis Systems beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations typically drives immediate positive sentiment and price appreciation.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Urvel Grid completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions provide long-term operational benefits but often involve short-term integration costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks completes planned facility upgrade in Middle East"
+      "headline": "Jovor Networks completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Facility upgrades are standard operational improvements that provide incremental efficiency gains over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid to host investor day focused on precision manufacturing strategy"
+      "headline": "Urvel Grid to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that rarely cause significant immediate price movement unless new guidance is provided.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces $0.8B share buyback program"
+      "headline": "Prynis Systems announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems recalls products in automated logistics line due to quality concerns"
+      "headline": "Prynis Systems recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate negative sentiment and potential financial liability that can persist for months.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:28.873Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

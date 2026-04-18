@@ -34,14 +34,45 @@
       "barIx": 32,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $180M contract with a top-tier research institute"
+      "headline": "Relvon Fuels secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $180M contract provides a clear, immediate, and durable revenue stream for Relvon Fuels.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings completes planned facility upgrade in Asia Pacific"
+      "headline": "Halvix Holdings completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that should improve efficiency, though the immediate financial impact is less direct than a contract win.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:25.624Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

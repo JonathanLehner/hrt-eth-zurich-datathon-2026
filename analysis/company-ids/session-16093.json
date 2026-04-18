@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces breakthrough in supply chain optimization"
+      "headline": "Jorvyl Securities announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "The announcement of a supply chain breakthrough suggests potential operational efficiency gains, though the lack of specific financial quantification limits immediate impact.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $400M contract with a global retailer"
+      "headline": "Jorvyl Securities secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, quantifiable revenue boost that will positively impact the company's financial performance over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 25% drop in new customer orders this quarter"
+      "headline": "Calvis Sciences sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative indicator of demand that will likely pressure financial results in the near and medium term.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences revises long-term strategy with focus on renewable storage"
+      "headline": "Wyrnik Sciences revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage indicates a long-term shift in focus, but the immediate financial impact is neutral as it lacks specific execution details.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Wyrnik Sciences warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential cost pressures that will likely persist for some time.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 17,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech wins industry award for excellence in wireless connectivity"
+      "headline": "Grevon Biotech wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Winning an industry award is a positive reputational event, but it lacks a direct, quantifiable link to immediate financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 7% increase in customer acquisition"
+      "headline": "Calvis Sciences reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition is a positive growth signal that should translate into improved revenue performance over the coming quarter.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:42.578Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

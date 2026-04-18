@@ -54,49 +54,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce wins industry award for excellence in enterprise software"
+      "headline": "Nolvav Commerce wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into immediate or sustained financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech names new head of supply chain optimization division"
+      "headline": "Grevon Biotech names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change with minimal immediate impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences faces class action over automated logistics service disruption"
+      "headline": "Calvis Sciences faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate negative sentiment and potential long-term financial liability through legal costs and settlements.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences announces significant capital expenditure plan for Scandinavia"
+      "headline": "Calvis Sciences announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but often pressures short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports 3% increase in customer acquisition"
+      "headline": "Nolvav Commerce reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a modest positive indicator of demand growth that should compound over time.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech delays product launch in wireless connectivity segment"
+      "headline": "Grevon Biotech delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and signals potential operational or technical hurdles.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $75M contract with a multinational manufacturer"
+      "headline": "Calvis Sciences secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue visibility that positively impacts both short and long-term financial outlooks.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:12.795Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -55,56 +55,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software recalls products in data analytics line due to quality concerns"
+      "headline": "Relvan Software recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that will likely persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $400M contract with a multinational manufacturer"
+      "headline": "Ixenix Technologies secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, immediate, and durable boost to revenue expectations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group to host investor day focused on renewable storage strategy"
+      "headline": "Holtum Asset Group to host investor day focused on renewable storage strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral corporate event that signals strategic focus but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $120M contract with a national infrastructure agency"
+      "headline": "Ixenix Technologies secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "This additional $120M contract win reinforces the company's growth trajectory and provides a tangible revenue tailwind.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 10% decline in operating income"
+      "headline": "Holtum Asset Group reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a direct negative signal regarding profitability that will likely weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Ixenix Technologies completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term growth, though the immediate impact is often muted by integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports 7% decline in operating income"
+      "headline": "Holtum Asset Group reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A second consecutive report of declining operating income suggests a persistent trend of deteriorating financial performance.",
+        "longTerm": -7,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group wins industry award for excellence in renewable storage"
+      "headline": "Holtum Asset Group wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but generally lack a direct or material impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:44.195Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

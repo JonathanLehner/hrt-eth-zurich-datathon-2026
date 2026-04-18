@@ -66,56 +66,147 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs raises full-year guidance citing robust demand"
+      "headline": "Yorven Labs raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a direct positive signal for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems begins scheduled maintenance of enterprise software systems"
+      "headline": "Brevep Systems begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems CEO addresses investor concerns in open letter"
+      "headline": "Prynis Systems CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter addressing investor concerns suggests existing uncertainty or dissatisfaction, which is generally neutral to slightly negative until resolved.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems sees 15% margin improvement in latest quarter"
+      "headline": "Brevep Systems sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement is a strong indicator of increased profitability and operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems faces class action over renewable storage service disruption"
+      "headline": "Brevep Systems faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption introduces legal risk and potential financial liability.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $75M contract with a major logistics provider"
+      "headline": "Yorval Partners secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $400M contract with a national infrastructure agency"
+      "headline": "Yorven Labs secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $400M contract with a national agency is a significant, high-value win that bolsters long-term revenue visibility.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 8% decline in operating income"
+      "headline": "Yorval Partners reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income is a negative indicator of core business profitability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:47.693Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

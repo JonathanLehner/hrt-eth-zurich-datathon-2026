@@ -55,56 +55,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics misses quarterly revenue estimates by 12%"
+      "headline": "Jorvix Diagnostics misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A 12% revenue miss is a significant negative indicator of current business performance that will likely trigger immediate downward price pressure.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports 7% decline in operating income"
+      "headline": "Jorvix Diagnostics reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income indicates margin compression that will likely persist until operational efficiencies are addressed.",
+        "longTerm": -5,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics files for regulatory approval of new digital payments offering"
+      "headline": "Jorvix Diagnostics files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the timeline for approval remains uncertain.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics begins scheduled maintenance of digital payments systems"
+      "headline": "Jorvix Diagnostics begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on market valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences faces class action over automated logistics service disruption"
+      "headline": "Calvis Sciences faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that creates immediate negative sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $50M contract with a national infrastructure agency"
+      "headline": "Nerval Biopharma secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides clear, tangible revenue growth and validates the company's service offering.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma to present at Tech Leadership Conference"
+      "headline": "Nerval Biopharma to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate activity that rarely moves the stock price unless significant new information is disclosed.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 25% drop in new customer orders this quarter"
+      "headline": "Calvis Sciences sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a strong signal of weakening demand that will likely impact future revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:20.756Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

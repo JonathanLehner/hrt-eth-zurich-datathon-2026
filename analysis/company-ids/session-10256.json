@@ -60,35 +60,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources opens new office in Latin America"
+      "headline": "Kelvos Resources opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that typically has a negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 10% increase in customer acquisition"
+      "headline": "Yorval Partners reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition is a clear positive indicator of growth and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners explores strategic alternatives for enterprise software unit"
+      "headline": "Plevum Partners explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is highly speculative and creates significant uncertainty regarding the future of the business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Yorval Partners reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 15% is a strong, concrete financial performance metric that typically drives immediate positive sentiment.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings completes strategic acquisition to strengthen enterprise software"
+      "headline": "Halvix Holdings completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Completing an acquisition is a definitive corporate action that signals a shift in strategy and potential for long-term growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:22.421Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

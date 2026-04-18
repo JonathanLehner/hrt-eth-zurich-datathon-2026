@@ -66,56 +66,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities sees 5% margin improvement in latest quarter"
+      "headline": "Jorvyl Securities sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly signals increased profitability and operational efficiency for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces class action over precision manufacturing service disruption"
+      "headline": "Krevan Investments faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities explores strategic alternatives for supply chain optimization unit"
+      "headline": "Jorvyl Securities explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a neutral to positive signal that suggests potential value realization but lacks concrete outcomes.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments completes planned facility upgrade in North America"
+      "headline": "Krevan Investments completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that supports long-term capacity but has limited immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees mixed results in cloud infrastructure pilot program"
+      "headline": "Halvix Holdings sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and future revenue potential of the new infrastructure offering.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities files for regulatory approval of new wireless connectivity offering"
+      "headline": "Jorvyl Securities files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward product expansion, though the outcome and timeline remain uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 5% margin improvement in latest quarter"
+      "headline": "Plevyl Advisors sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates strong financial performance and operational health for the firm.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors wins industry award for excellence in process automation"
+      "headline": "Plevyl Advisors wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides positive brand validation but has a negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:35.824Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

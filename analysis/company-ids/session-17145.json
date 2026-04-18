@@ -62,42 +62,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group lowers full-year guidance amid softening demand"
+      "headline": "Varvov Retail Group lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance directly signals weaker financial performance and negative outlook for the company.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Xovol Goods reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 25% indicates strong market demand and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Jorval Trading Co reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and margins, creating a clear negative financial headwind.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Arnos Marketplace warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region pose a clear operational risk to revenue and efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace enters joint venture with a national infrastructure agency"
+      "headline": "Arnos Marketplace enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests long-term strategic growth and potential for stable future revenue.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees 10% margin improvement in latest quarter"
+      "headline": "Jorval Trading Co sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement demonstrates successful operational efficiency and directly boosts profitability.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:20.957Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

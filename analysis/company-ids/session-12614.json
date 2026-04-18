@@ -50,35 +50,96 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees 10% margin improvement in latest quarter"
+      "headline": "Jorval Trading Co sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates immediate operational efficiency gains that directly boost profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Halvav Brands announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans signal long-term growth investment but often weigh on short-term cash flow and earnings.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace misses quarterly revenue estimates by 20%"
+      "headline": "Orevar Marketplace misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a significant negative indicator of demand or execution, likely to trigger immediate downward price pressure.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $75M contract with a leading cloud platform"
+      "headline": "Jorval Trading Co secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost that strengthens the company's financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co names new head of data analytics division"
+      "headline": "Jorval Trading Co names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change with minimal immediate financial impact and high uncertainty regarding future performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:55.010Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

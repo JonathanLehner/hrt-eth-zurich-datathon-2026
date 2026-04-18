@@ -46,21 +46,62 @@
       "barIx": 39,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports 25% increase in customer acquisition"
+      "headline": "Strynal Industries reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition directly signals strong revenue growth potential and improved market share.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels announces breakthrough in cloud infrastructure"
+      "headline": "Jorvis Fuels announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A breakthrough in cloud infrastructure suggests potential for future product innovation or cost efficiency, though the commercial application remains vague.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems faces regulatory review of wireless connectivity practices"
+      "headline": "Prynis Systems faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational constraints that could negatively impact the company's business model.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:11.299Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

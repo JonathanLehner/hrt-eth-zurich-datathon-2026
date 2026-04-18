@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics delays product launch in enterprise software segment"
+      "headline": "Grevel Diagnostics delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch directly impacts revenue realization and market positioning for the enterprise segment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports 5% decline in operating income"
+      "headline": "Talvix Holdings reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income indicates immediate margin pressure and potential operational inefficiencies.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences launches next-generation renewable storage platform"
+      "headline": "Calvis Sciences launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform provides a clear catalyst for future revenue growth and competitive differentiation.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences CEO steps down unexpectedly citing personal reasons"
+      "headline": "Calvis Sciences CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates immediate leadership instability and uncertainty regarding strategic direction.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences loses key contract in Latin America to competitor"
+      "headline": "Zelvon Biosciences loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct reduction in expected revenue and market share in the region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics completes planned facility upgrade in Latin America"
+      "headline": "Grevel Diagnostics completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is a routine operational milestone that improves long-term capacity but has minimal immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 20% increase in customer acquisition"
+      "headline": "Calvis Sciences reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong indicator of growing demand and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:13.280Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

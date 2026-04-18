@@ -56,56 +56,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics confirms participation in Capital Markets Day"
+      "headline": "Frelis Genomics confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that typically lacks immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences sees mixed results in data analytics pilot program"
+      "headline": "Zelvon Biosciences sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and future scalability of the initiative.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports 5% decline in operating income"
+      "headline": "Zelvon Biosciences reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is generally viewed negatively by the market.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $800M contract with a global retailer"
+      "headline": "Yorvov Pharmaceuticals secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides significant, concrete revenue visibility and positive financial momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics enters joint venture with a national infrastructure agency"
+      "headline": "Frelis Genomics enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests potential for long-term strategic growth and stable partnership revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $120M contract with a leading cloud platform"
+      "headline": "Yorvov Pharmaceuticals secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $120M contract win with a major cloud platform is a clear positive indicator of demand and revenue growth.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals files routine patent applications in precision manufacturing"
+      "headline": "Yorvov Pharmaceuticals files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business maintenance and do not imply immediate or guaranteed financial gain.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences faces class action over enterprise software service disruption"
+      "headline": "Zelvon Biosciences faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability, which is inherently negative for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:02.108Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

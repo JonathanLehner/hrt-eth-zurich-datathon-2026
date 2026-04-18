@@ -50,35 +50,96 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics sees 20% margin improvement in latest quarter"
+      "headline": "Myrnon Therapeutics sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement directly indicates increased profitability and operational efficiency, which is a strong positive signal for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics names new head of digital payments division"
+      "headline": "Myrnon Therapeutics names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has a neutral to slightly positive impact depending on the executive's reputation.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences explores strategic alternatives for enterprise software unit"
+      "headline": "Zelvon Biosciences explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit often signals a potential divestiture or restructuring, creating uncertainty regarding future revenue streams.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics announces significant capital expenditure plan for North America"
+      "headline": "Calvos Genomics announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment, which is generally viewed as a positive long-term commitment despite short-term cash outflows.",
+        "longTerm": 5,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Zelvon Biosciences warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "A warning regarding supply chain disruptions is a clear negative indicator for operational output and potential revenue realization in the affected region.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:02.604Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

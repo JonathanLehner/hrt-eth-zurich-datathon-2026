@@ -60,35 +60,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors to host investor day focused on process automation strategy"
+      "headline": "Zrovov Advisors to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group sees mixed results in renewable storage pilot program"
+      "headline": "Jovik Asset Group sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate lack of clear success, creating ambiguity regarding future commercial viability.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors launches next-generation cloud infrastructure platform"
+      "headline": "Plevyl Advisors launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive strategic move that typically drives long-term revenue growth potential.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports 12% decline in operating income"
+      "headline": "Ulvyn Microchips reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a direct negative indicator of current profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors loses key contract in Latin America to competitor"
+      "headline": "Zrovov Advisors loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts revenue streams and suggests a loss of competitive positioning in a specific region.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:07.775Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

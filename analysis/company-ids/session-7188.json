@@ -65,56 +65,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions enters joint venture with an international consortium"
+      "headline": "Wyrnor Solutions enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "A joint venture indicates potential for future growth and market expansion, though the specific financial impact remains vague.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities begins scheduled maintenance of data analytics systems"
+      "headline": "Creven Securities begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners to host investor day focused on data analytics strategy"
+      "headline": "Yorval Partners to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "An investor day is a standard corporate communication event that does not inherently change the company's financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions withdraws from Europe market citing unfavorable conditions"
+      "headline": "Wyrnor Solutions withdraws from Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market is a negative signal regarding revenue potential and operational stability in that region.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities signs multi-year partnership with a multinational manufacturer"
+      "headline": "Creven Securities signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides clear, long-term revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports 7% decline in operating income"
+      "headline": "Creven Securities reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is viewed negatively by investors.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings signs multi-year partnership with an international consortium"
+      "headline": "Halvix Holdings signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a multi-year partnership with an international consortium is a positive indicator of business growth and stability.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities opens new office in Middle East"
+      "headline": "Creven Securities opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a strategic expansion effort, though the immediate financial contribution is likely minimal.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:29.230Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

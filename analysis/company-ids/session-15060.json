@@ -54,49 +54,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports strong demand in Scandinavia, raises outlook"
+      "headline": "Joval Brands reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised outlook provide clear positive signals for near-term and sustained financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid confirms participation in Capital Markets Day"
+      "headline": "Nerven Grid confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that typically lacks immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace names new head of wireless connectivity division"
+      "headline": "Arnos Marketplace names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "A leadership change in a specific division is a standard operational update with uncertain immediate impact on overall company financials.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid files routine patent applications in digital payments"
+      "headline": "Nerven Grid files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or guaranteed financial benefit.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands faces regulatory review of cloud infrastructure practices"
+      "headline": "Joval Brands faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential compliance costs and operational friction, creating immediate negative sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports 7% decline in operating income"
+      "headline": "Nerven Grid reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of current profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands raises full-year guidance citing robust demand"
+      "headline": "Joval Brands raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a strong, positive signal for both immediate and medium-term financial health.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:45.943Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

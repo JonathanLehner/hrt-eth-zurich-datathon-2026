@@ -50,35 +50,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces regulatory review of automated logistics practices"
+      "headline": "Talvix Holdings faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential operational constraints and legal costs that create immediate market apprehension.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices to host investor day focused on digital payments strategy"
+      "headline": "Volval Devices to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that typically generate neutral to slightly positive sentiment depending on market expectations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees 10% drop in new customer orders this quarter"
+      "headline": "Yorval Partners sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A double-digit decline in new orders is a direct negative signal for revenue growth and operational performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices expands operations into Scandinavia markets"
+      "headline": "Volval Devices expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Market expansion into new geographic regions indicates growth potential and revenue diversification.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $120M contract with a global retailer"
+      "headline": "Volval Devices secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and validates the company's market position.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:17.198Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

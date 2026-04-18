@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports unexpected decline in North America revenue"
+      "headline": "Orevov Solutions reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a key region suggests immediate negative sentiment and potential underlying demand issues.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Wyrnor Solutions begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $75M contract with a leading cloud platform"
+      "headline": "Zelvon Biosciences secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions confirms participation in Tech Leadership Conference"
+      "headline": "Wyrnor Solutions confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference is a standard corporate activity that rarely results in a measurable financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 20% decline in operating income"
+      "headline": "Ulvon Renewables reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a significant negative indicator of profitability and operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $650M contract with a top-tier research institute"
+      "headline": "Orevov Solutions secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A large $650M contract win provides a substantial and durable boost to the company's revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Zelvon Biosciences reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 15% demonstrates strong business momentum and positive financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:28.654Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

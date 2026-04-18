@@ -52,42 +52,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies files for regulatory approval of new automated logistics offering"
+      "headline": "Ixenix Technologies files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress but does not guarantee immediate revenue or approval.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies revises long-term strategy with focus on renewable storage"
+      "headline": "Ixenix Technologies revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage signals a long-term shift in business focus, which lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 18% margin improvement in latest quarter"
+      "headline": "Ulvyn Microchips sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement is a strong, concrete indicator of increased profitability and operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips loses key contract in Scandinavia to competitor"
+      "headline": "Ulvyn Microchips loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct and immediate loss of revenue and market share.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips revises long-term strategy with focus on process automation"
+      "headline": "Ulvyn Microchips revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "Revising strategy toward process automation is a long-term directional change that provides no immediate financial benefit.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets launches next-generation renewable storage platform"
+      "headline": "Frelex Outlets launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive development that could drive future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:24.606Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

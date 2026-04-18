@@ -65,56 +65,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics faces regulatory review of supply chain optimization practices"
+      "headline": "Myrnon Therapeutics faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory review of supply chain practices introduces potential operational friction and compliance risk.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips names new head of enterprise software division"
+      "headline": "Brevon Microchips names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a key division create strategic uncertainty until the new head's direction is established.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees mixed results in process automation pilot program"
+      "headline": "Nolvis Devices sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate lack of clear immediate value or scalability for the technology.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 3,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Relvan Software recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls directly impact revenue and brand reputation, causing immediate negative financial pressure.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software sees mixed results in digital payments pilot program"
+      "headline": "Relvan Software sees mixed results in digital payments pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest the digital payments initiative is not yet a proven growth driver.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices revises long-term strategy with focus on supply chain optimization"
+      "headline": "Nolvis Devices revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward supply chain optimization signals a long-term shift in resource allocation.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software begins scheduled maintenance of digital payments systems"
+      "headline": "Relvan Software begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal impact on long-term financial performance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software announces breakthrough in process automation"
+      "headline": "Relvan Software announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for future efficiency gains and competitive advantage.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:45.850Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

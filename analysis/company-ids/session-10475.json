@@ -66,56 +66,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports 10% decline in operating income"
+      "headline": "Varvov Retail Group reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income directly impacts profitability and investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports 10% increase in customer acquisition"
+      "headline": "Arnos Marketplace reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "Increased customer acquisition is a positive indicator of growth and market share expansion.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports 18% increase in customer acquisition"
+      "headline": "Arnos Marketplace reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition signals strong momentum and accelerated growth potential.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands delays product launch in process automation segment"
+      "headline": "Joval Brands delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch creates uncertainty regarding revenue timelines and competitive positioning.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group launches next-generation renewable storage platform"
+      "headline": "Varvov Retail Group launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform indicates innovation and potential for future revenue diversification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $800M contract with a top-tier research institute"
+      "headline": "Ulvon Renewables secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides significant revenue visibility and validates the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group to present at Emerging Markets Forum"
+      "headline": "Varvov Retail Group to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity with minimal immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Ulvon Renewables reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a clear positive signal for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:31.349Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce announces significant capital expenditure plan for Central Europe"
+      "headline": "Arnik Commerce announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans signal long-term growth investment but often weigh on short-term cash flow and margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in process automation line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational disruption and reputational damage with uncertain long-term financial recovery.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports unexpected decline in Asia Pacific revenue"
+      "headline": "Relvos Biosciences reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a direct negative signal for earnings and growth momentum.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A second product recall within the same company suggests systemic quality control issues, compounding negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce withdraws from Scandinavia market citing unfavorable conditions"
+      "headline": "Arnik Commerce withdraws from Scandinavia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Market withdrawal indicates a strategic retreat that reduces future revenue potential and signals regional failure.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma launches next-generation enterprise software platform"
+      "headline": "Zrovum Biopharma launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a new software platform provides a potential new revenue stream, though adoption rates remain to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $800M contract with a global retailer"
+      "headline": "Arnik Commerce secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides immediate revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences announces $6.3B share buyback program"
+      "headline": "Relvos Biosciences announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of management confidence and provides immediate support for earnings per share.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:08.464Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

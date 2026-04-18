@@ -55,56 +55,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce wins industry award for excellence in supply chain optimization"
+      "headline": "Arnik Commerce wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct, quantifiable financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co loses key contract in Southeast Asia to competitor"
+      "headline": "Jorval Trading Co loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share, creating immediate negative pressure.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 3% increase in customer acquisition"
+      "headline": "Arnik Commerce reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive operational metric that suggests growth momentum.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $250M contract with an international consortium"
+      "headline": "Jorval Trading Co secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides significant, concrete revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce launches next-generation process automation platform"
+      "headline": "Arnik Commerce launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a strategic move that could drive future revenue, though adoption rates remain uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $800M contract with a major logistics provider"
+      "headline": "Nolvol Resources secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial win that significantly bolsters the company's revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $50M contract with a top-tier research institute"
+      "headline": "Arnik Commerce secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $50M contract provides a clear, positive financial boost to the company's revenue stream.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources lowers full-year guidance amid softening demand"
+      "headline": "Nolvol Resources lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a clear negative signal for future financial performance.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:39.084Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

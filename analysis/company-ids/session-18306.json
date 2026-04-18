@@ -65,56 +65,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Zelval Energy begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group faces regulatory review of precision manufacturing practices"
+      "headline": "Jovik Asset Group faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational friction, which can weigh on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $400M contract with a top-tier research institute"
+      "headline": "Jovik Asset Group secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, positive revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources loses key contract in Southeast Asia to competitor"
+      "headline": "Kelvos Resources loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and signals a competitive disadvantage in a specific region.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 5% margin improvement in latest quarter"
+      "headline": "Strynal Industries sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates better operational efficiency and directly boosts profitability.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group faces class action over cloud infrastructure service disruption"
+      "headline": "Jovik Asset Group faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial risk, creating negative sentiment and potential long-term liabilities.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy signs multi-year partnership with a leading cloud platform"
+      "headline": "Zelval Energy signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term strategic growth and revenue stability for the company.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group raises full-year guidance citing robust demand"
+      "headline": "Jovik Asset Group raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance is a strong, direct signal of management confidence and positive business momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:04.425Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

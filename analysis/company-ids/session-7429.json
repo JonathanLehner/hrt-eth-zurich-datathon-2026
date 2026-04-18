@@ -54,49 +54,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces class action over automated logistics service disruption"
+      "headline": "Krevan Investments faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that could persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments to host investor day focused on precision manufacturing strategy"
+      "headline": "Krevan Investments to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that typically aims to build long-term confidence without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $180M contract with a multinational manufacturer"
+      "headline": "Krevan Investments secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract provides a clear, positive financial catalyst with immediate and sustained revenue implications.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports strong demand in North America, raises outlook"
+      "headline": "Zrovov Advisors reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are direct positive indicators for both immediate market sentiment and future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group misses quarterly revenue estimates by 12%"
+      "headline": "Jovik Asset Group misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A 12% revenue miss is a significant negative indicator that typically triggers immediate selling pressure and concerns about operational performance.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors faces class action over wireless connectivity service disruption"
+      "headline": "Zrovov Advisors faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate negative sentiment and ongoing legal uncertainty for the company.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors sees 25% drop in new customer orders this quarter"
+      "headline": "Zrovov Advisors sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a strong negative signal for future revenue growth and operational health.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:38.037Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

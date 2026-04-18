@@ -36,21 +36,62 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces significant capital expenditure plan for Middle East"
+      "headline": "Prynis Systems announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but creates immediate cash outflow pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces significant capital expenditure plan for North America"
+      "headline": "Dralol Computing announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "Capital expenditure in North America signals strategic expansion and capacity building, likely viewed as a positive long-term commitment.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $320M contract with a multinational manufacturer"
+      "headline": "Prynis Systems secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides immediate revenue visibility and confirms strong market demand for the company's services.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:07.898Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

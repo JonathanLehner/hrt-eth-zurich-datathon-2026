@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees mixed results in process automation pilot program"
+      "headline": "Nerval Biopharma sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest operational uncertainty and lack of immediate clear benefit.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital files routine patent applications in automated logistics"
+      "headline": "Zelvel Capital files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and do not imply immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics completes planned facility upgrade in Central Europe"
+      "headline": "Myrnon Therapeutics completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "A planned facility upgrade is a routine capital expenditure that does not immediately alter financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics wins industry award for excellence in precision manufacturing"
+      "headline": "Myrnon Therapeutics wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into direct short-term financial gains.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 10% increase in customer acquisition"
+      "headline": "Nerval Biopharma reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition is a clear positive indicator of growth and revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees 25% drop in new customer orders this quarter"
+      "headline": "Nerval Biopharma sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative signal for near-term revenue performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $320M contract with a multinational manufacturer"
+      "headline": "Nerval Biopharma secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides substantial, concrete revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital to host investor day focused on precision manufacturing strategy"
+      "headline": "Zelvel Capital to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "An investor day is a communication event that typically does not move the stock price unless new material information is disclosed.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:44.443Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -48,28 +48,79 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Zelvix Therapeutics begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors delays product launch in supply chain optimization segment"
+      "headline": "Plevyl Advisors delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential internal execution or market readiness issues.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports strong demand in Europe, raises outlook"
+      "headline": "Talvix Holdings reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a clear positive signal for revenue growth and operational momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics secures $800M contract with a top-tier research institute"
+      "headline": "Zelvix Therapeutics secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large-scale contract provides significant, concrete revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:55.336Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

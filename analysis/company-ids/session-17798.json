@@ -50,35 +50,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing recalls products in enterprise software line due to quality concerns"
+      "headline": "Dralol Computing recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that will likely persist as the company addresses quality issues.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $400M contract with a multinational manufacturer"
+      "headline": "Prynis Systems secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, positive revenue catalyst that will likely be recognized over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $500M contract with a leading cloud platform"
+      "headline": "Prynis Systems secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $500M contract with a major cloud provider is a significant growth signal that strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce begins scheduled maintenance of process automation systems"
+      "headline": "Arnik Commerce begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing files for regulatory approval of new wireless connectivity offering"
+      "headline": "Dralol Computing files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for a new product launch, but the outcome and timing of the approval remain uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:45.291Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

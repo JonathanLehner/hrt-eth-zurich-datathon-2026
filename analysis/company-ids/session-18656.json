@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces restructuring plan, cites challenging market conditions"
+      "headline": "Zelvon Biosciences announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans typically signal cost-cutting measures that may improve margins but indicate underlying financial stress.",
+        "longTerm": 2,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences opens new office in Latin America"
+      "headline": "Zelvon Biosciences opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Geographic expansion represents a strategic growth initiative that typically requires upfront investment before yielding long-term revenue benefits.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics announces $3.8B share buyback program"
+      "headline": "Calvos Genomics announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of capital return to shareholders and often supports the stock price.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics recalls products in data analytics line due to quality concerns"
+      "headline": "Frelis Genomics recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate negative sentiment and potential financial liability, impacting both short-term operations and brand reputation.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences CTO addresses investor concerns in open letter"
+      "headline": "Zelvon Biosciences CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO is a reactive communication attempt to stabilize sentiment, which rarely provides concrete financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics recalls products in process automation line due to quality concerns"
+      "headline": "Frelis Genomics recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A second product recall within a short timeframe suggests systemic quality control issues, compounding the negative impact on the company.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $320M contract with a global retailer"
+      "headline": "Varvov Retail Group secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, verifiable revenue growth and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:16.714Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

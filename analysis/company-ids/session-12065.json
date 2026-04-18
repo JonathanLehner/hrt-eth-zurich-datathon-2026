@@ -62,42 +62,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics files for regulatory approval of new automated logistics offering"
+      "headline": "Calvos Genomics files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates progress but does not guarantee immediate revenue or approval success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences faces class action over process automation service disruption"
+      "headline": "Zelvon Biosciences faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal and reputational risk, though the ultimate financial liability remains highly speculative at this stage.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Calvos Genomics warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization in a key geographic market.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics completes strategic acquisition to strengthen renewable storage"
+      "headline": "Calvos Genomics completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Acquisitions represent a strategic pivot that provides long-term growth potential but often involves immediate integration costs and capital outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech expands operations into North America markets"
+      "headline": "Grevon Biotech expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Market expansion into North America is a clear growth signal that typically leads to increased revenue potential over the medium to long term.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips misses quarterly revenue estimates by 5%"
+      "headline": "Brevon Microchips misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates is a direct negative indicator of financial performance that typically triggers immediate downward pressure on stock valuation.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:33.945Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

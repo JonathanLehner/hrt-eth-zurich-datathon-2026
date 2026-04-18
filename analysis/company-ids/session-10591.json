@@ -62,42 +62,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital beats analyst expectations with strong earnings growth"
+      "headline": "Zelvel Capital beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations typically drives immediate positive sentiment and price appreciation.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $650M contract with a major logistics provider"
+      "headline": "Zelvel Capital secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A large contract win provides clear, long-term revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors misses quarterly revenue estimates by 5%"
+      "headline": "Zrovov Advisors misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates signals potential operational or demand issues, leading to immediate negative market reaction.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports rising costs pressuring margins in renewable storage"
+      "headline": "Talvix Holdings reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability, which is a persistent concern for investors in the renewable sector.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Holtum Asset Group completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquisitions for supply chain optimization offer potential long-term efficiency gains but carry integration risks.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces $7.9B share buyback program"
+      "headline": "Zelvel Capital announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A massive share buyback program signals management confidence and provides immediate support to the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:35.404Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -48,28 +48,79 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces class action over process automation service disruption"
+      "headline": "Zelvel Capital faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate reputational and potential financial liability risks.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Ilval Financial completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The completion of a strategic acquisition to bolster cloud infrastructure is a positive growth signal, though integration outcomes remain to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks recalls products in enterprise software line due to quality concerns"
+      "headline": "Jovor Networks recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns directly impacts revenue and brand trust, creating immediate negative pressure.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces $2.5B share buyback program"
+      "headline": "Ilval Financial announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program is a clear signal of capital allocation confidence and provides immediate support for the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:34.375Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

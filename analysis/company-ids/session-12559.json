@@ -38,28 +38,79 @@
       "barIx": 27,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems opens new office in Central Europe"
+      "headline": "Brevep Systems opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market indicates growth potential but involves initial capital expenditure and operational ramp-up time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences faces class action over digital payments service disruption"
+      "headline": "Wyrnik Sciences faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces immediate legal risk and potential financial liability that creates significant uncertainty for the company.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems announces $6.3B share buyback program"
+      "headline": "Brevep Systems announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences files routine patent applications in supply chain optimization"
+      "headline": "Wyrnik Sciences files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations that do not provide immediate financial impact or clear competitive advantage.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:52.603Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -65,56 +65,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics withdraws from North America market citing unfavorable conditions"
+      "headline": "Jorvix Diagnostics withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a major market is a significant negative strategic shift that will likely lead to immediate revenue loss and long-term contraction.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $320M contract with a major logistics provider"
+      "headline": "Talvyn Goods secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma files for regulatory approval of new precision manufacturing offering"
+      "headline": "Zrovum Biopharma files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive milestone, though the ultimate outcome and timing remain subject to regulatory review.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics begins scheduled maintenance of process automation systems"
+      "headline": "Jorvix Diagnostics begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences misses quarterly revenue estimates by 5%"
+      "headline": "Wyrnik Sciences misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates is a direct negative signal regarding current business performance and market demand.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences announces $5.7B share buyback program"
+      "headline": "Wyrnik Sciences announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a positive signal of management confidence and provides immediate support for earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports strong demand in North America, raises outlook"
+      "headline": "Jorvix Diagnostics reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a clear positive indicator for both near-term and medium-term financial health.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics sees 15% drop in new customer orders this quarter"
+      "headline": "Jorvix Diagnostics sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a significant negative indicator of weakening demand that will likely impact future revenue.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:11.131Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

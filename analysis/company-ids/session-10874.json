@@ -52,42 +52,113 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial explores strategic alternatives for data analytics unit"
+      "headline": "Wrelal Financial explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit often signals potential divestiture or restructuring, creating both opportunity and uncertainty.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma reports unexpected decline in Europe revenue"
+      "headline": "Zrovum Biopharma reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a key geographic region is a direct negative indicator for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial enters joint venture with an international consortium"
+      "headline": "Wrelal Financial enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests expansion and potential revenue growth, though the immediate financial impact is often muted.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma files routine patent applications in data analytics"
+      "headline": "Zrovum Biopharma files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and generally do not provide immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals withdraws from Latin America market citing unfavorable conditions"
+      "headline": "Yorvov Pharmaceuticals withdraws from Latin America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market indicates a loss of revenue streams and potential costs associated with the exit.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in process automation"
+      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into immediate or significant financial gains.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:46.004Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

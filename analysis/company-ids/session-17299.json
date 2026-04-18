@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $250M contract with a multinational manufacturer"
+      "headline": "Plevep Power secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "The $250M contract provides a clear, immediate revenue boost and long-term backlog visibility for Plevep Power.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing recalls products in enterprise software line due to quality concerns"
+      "headline": "Talvep Computing recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate financial liability and reputational damage that will likely persist through the 100-day window.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources announces $1.2B share buyback program"
+      "headline": "Kelvos Resources announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources wins industry award for excellence in wireless connectivity"
+      "headline": "Nolvol Resources wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "An industry award is a positive reputational signal but lacks direct, quantifiable financial impact on the company's bottom line.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources explores strategic alternatives for enterprise software unit"
+      "headline": "Kelvos Resources explores strategic alternatives for enterprise software unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is speculative and creates significant uncertainty regarding the future of the software unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing expands operations into Asia Pacific markets"
+      "headline": "Talvep Computing expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expansion into Asia Pacific markets represents a long-term growth opportunity, though immediate financial returns are likely minimal.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Kelvos Resources warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region pose a direct threat to operational efficiency and revenue generation.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 15% increase in customer acquisition"
+      "headline": "Talvep Computing reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong indicator of demand growth that should positively impact future earnings.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:27.186Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities schedules annual shareholder meeting for next month"
+      "headline": "Creven Securities schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine annual shareholder meeting is a standard corporate governance event with no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital wins industry award for excellence in enterprise software"
+      "headline": "Zelvel Capital wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into immediate or sustained financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities opens new office in North America"
+      "headline": "Creven Securities opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion and potential for future revenue growth, though the immediate financial impact is muted by setup costs.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments wins industry award for excellence in process automation"
+      "headline": "Halven Investments wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award for process automation serves as a marketing benefit but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities files routine patent applications in data analytics"
+      "headline": "Creven Securities files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Filing routine patent applications is a standard operational activity that does not provide immediate competitive advantage or financial gain.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 15% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a direct negative indicator of demand that will likely impact revenue in the current and subsequent quarters.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:54.488Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

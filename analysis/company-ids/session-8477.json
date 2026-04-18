@@ -36,21 +36,62 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $120M contract with a multinational manufacturer"
+      "headline": "Urvel Grid secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, immediate, and durable revenue boost for Urvel Grid.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Urvel Grid warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss for Urvel Grid.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports unexpected decline in Southeast Asia revenue"
+      "headline": "Zrovex Industries reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for Zrovex Industries signals a negative trend that will likely weigh on investor sentiment and financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:15.477Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

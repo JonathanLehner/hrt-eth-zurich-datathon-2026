@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy misses quarterly revenue estimates by 5%"
+      "headline": "Zelval Energy misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 5% indicates a negative performance trend that typically triggers immediate downward price pressure.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces class action over renewable storage service disruption"
+      "headline": "Plevik Energy faces class action over renewable storage service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create significant legal and financial uncertainty that weighs heavily on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $800M contract with a top-tier research institute"
+      "headline": "Orevov Solutions secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, long-term revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports strong demand in Scandinavia, raises outlook"
+      "headline": "Orevov Solutions reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a positive signal that typically leads to upward earnings revisions.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $250M contract with a national infrastructure agency"
+      "headline": "Ilval Financial secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $250M contract with a national agency provides stable, long-term cash flow and validates the company's service offering.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports unexpected decline in North America revenue"
+      "headline": "Plevik Energy reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market suggests potential structural issues or loss of market share.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Plevik Energy reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a persistent headwind for the company.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:06.289Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -46,21 +46,62 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets announces significant capital expenditure plan for Scandinavia"
+      "headline": "Ixenis Outlets announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but suggests immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores announces breakthrough in enterprise software"
+      "headline": "Xovep Stores announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough in enterprise software suggests a strong competitive advantage and potential for new revenue streams, though the commercialization timeline remains vague.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces $8.4B share buyback program"
+      "headline": "Holtar Stores announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program provides immediate support to earnings per share and signals management confidence in the company's financial health.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:49.901Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

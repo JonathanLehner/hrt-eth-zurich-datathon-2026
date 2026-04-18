@@ -54,49 +54,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 5%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates immediate underperformance relative to market expectations, typically leading to a negative short-term reaction.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings expands operations into Latin America markets"
+      "headline": "Talvix Holdings expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion represents a growth initiative that is generally viewed positively but carries execution risk over time.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital delays product launch in process automation segment"
+      "headline": "Ervan Capital delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential internal or technical friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings begins scheduled maintenance of digital payments systems"
+      "headline": "Talvix Holdings begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics sees mixed results in renewable storage pilot program"
+      "headline": "Myrnon Therapeutics sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results create ambiguity regarding the viability of the pilot program, leading to a neutral but uncertain market outlook.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $650M contract with a leading cloud platform"
+      "headline": "Myrnon Therapeutics secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, high-value revenue visibility that is strongly positive for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics revises long-term strategy with focus on data analytics"
+      "headline": "Myrnon Therapeutics revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics is a qualitative shift that lacks immediate financial quantification, creating long-term uncertainty.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:26.397Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

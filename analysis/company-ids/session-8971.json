@@ -65,56 +65,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips completes planned facility upgrade in Europe"
+      "headline": "Brevon Microchips completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that typically improves efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods files for regulatory approval of new digital payments offering"
+      "headline": "Talvyn Goods files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates future growth potential but lacks immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing files for regulatory approval of new supply chain optimization offering"
+      "headline": "Talvep Computing files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Regulatory filing for a new product offering is a positive development signal for future market expansion.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces breakthrough in precision manufacturing"
+      "headline": "Talvep Computing announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing suggests potential long-term competitive advantages and cost efficiencies.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports 10% decline in operating income"
+      "headline": "Brevon Microchips reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a direct negative indicator of financial performance that typically triggers immediate market concern.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips launches next-generation supply chain optimization platform"
+      "headline": "Brevon Microchips launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new software platform provides a clear catalyst for potential revenue growth and market expansion.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips wins industry award for excellence in enterprise software"
+      "headline": "Brevon Microchips wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Winning an industry award is a positive reputational signal but has limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software reports 8% increase in customer acquisition"
+      "headline": "Frelol Software reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a strong leading indicator of future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:35.665Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

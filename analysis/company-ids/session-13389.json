@@ -65,56 +65,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods opens new office in Scandinavia"
+      "headline": "Talvyn Goods opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal but lacks immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co announces breakthrough in automated logistics"
+      "headline": "Jorval Trading Co announces breakthrough in automated logistics",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in logistics suggests significant operational efficiency gains and competitive advantage.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co to host investor day focused on process automation strategy"
+      "headline": "Jorval Trading Co to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides transparency but no immediate financial change.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables faces regulatory review of data analytics practices"
+      "headline": "Orevex Renewables faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny creates immediate uncertainty and potential legal or operational costs for the company.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods delays product launch in renewable storage segment"
+      "headline": "Talvyn Goods delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue expectations and signals potential internal execution issues.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Halvav Brands Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from leadership is a reactive measure to address market sentiment rather than a fundamental change.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $400M contract with a leading cloud platform"
+      "headline": "Jorval Trading Co secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, immediate, and long-term revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $650M contract with a leading cloud platform"
+      "headline": "Jorval Trading Co secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A second major contract win in a short period significantly boosts revenue growth prospects and market confidence.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:24.482Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $650M contract with a top-tier research institute"
+      "headline": "Calvos Genomics secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $650M contract provides a significant and concrete revenue boost for Calvos Genomics.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group files for regulatory approval of new enterprise software offering"
+      "headline": "Holtum Asset Group files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion but does not guarantee immediate revenue.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma reports 25% decline in operating income"
+      "headline": "Nerval Biopharma reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a clear negative indicator of financial health.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals delays product launch in automated logistics segment"
+      "headline": "Krevum Pharmaceuticals delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue expectations and growth timelines.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group sees 20% margin improvement in latest quarter"
+      "headline": "Holtum Asset Group sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency and profitability gains.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics schedules annual shareholder meeting for next month"
+      "headline": "Calvos Genomics schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling a routine shareholder meeting is a standard corporate event with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $75M contract with a top-tier research institute"
+      "headline": "Calvos Genomics secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing an additional $75M contract provides a clear, incremental positive impact on revenue.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:39.637Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

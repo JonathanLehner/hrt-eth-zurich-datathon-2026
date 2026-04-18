@@ -43,56 +43,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics enters joint venture with a national infrastructure agency"
+      "headline": "Jorvix Diagnostics enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national infrastructure agency provides a stable, long-term revenue stream and strategic validation.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources misses quarterly revenue estimates by 10%"
+      "headline": "Nolvol Resources misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 10% indicates immediate operational weakness and typically triggers a negative market reaction.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics faces regulatory review of cloud infrastructure practices"
+      "headline": "Jorvix Diagnostics faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create significant overhang and uncertainty regarding future operational costs and compliance requirements.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources to host investor day focused on supply chain optimization strategy"
+      "headline": "Nolvol Resources to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that aims to provide clarity but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources sees 18% drop in new customer orders this quarter"
+      "headline": "Nolvol Resources sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders is a strong leading indicator of future revenue decline and negative growth momentum.",
+        "longTerm": -7,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources misses quarterly revenue estimates by 8%"
+      "headline": "Nolvol Resources misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss confirms ongoing financial underperformance, reinforcing negative sentiment from previous periods.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources enters joint venture with a multinational manufacturer"
+      "headline": "Nolvol Resources enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A joint venture with a multinational manufacturer suggests potential for market expansion and operational synergies.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources sees 10% drop in new customer orders this quarter"
+      "headline": "Nolvol Resources sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders signals a persistent weakening in demand that will likely impact future earnings.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:20.548Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

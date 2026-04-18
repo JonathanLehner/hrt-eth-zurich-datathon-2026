@@ -52,42 +52,113 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital loses key contract in North America to competitor"
+      "headline": "Ervan Capital loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market position in North America.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital files for regulatory approval of new data analytics offering"
+      "headline": "Ervan Capital files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward future growth but carries inherent uncertainty regarding approval timelines.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital loses key contract in Central Europe to competitor"
+      "headline": "Ervan Capital loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a second key contract in a different region indicates a broader competitive weakness for the company.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files for regulatory approval of new enterprise software offering"
+      "headline": "Wrelal Financial files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Regulatory filing for a new software product signals potential future revenue streams but lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $75M contract with a global retailer"
+      "headline": "Jorvyl Securities secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, immediate, and durable boost to revenue expectations.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial faces class action over process automation service disruption"
+      "headline": "Wrelal Financial faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and reputational risk with highly unpredictable financial outcomes.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:37.058Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

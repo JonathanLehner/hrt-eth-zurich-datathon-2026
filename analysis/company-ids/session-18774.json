@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Zrovov Advisors recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core manufacturing line creates immediate operational disruption and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Xovol Goods reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% indicates strong market demand and positive financial momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 7% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% decline in new customer orders signals a potential slowdown in demand that could impact future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors recalls products in data analytics line due to quality concerns"
+      "headline": "Zrovov Advisors recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A second product recall within the same company suggests systemic quality control issues that compound negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $650M contract with a major logistics provider"
+      "headline": "Ervan Capital secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant revenue visibility and validates the company's service offering.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods launches next-generation digital payments platform"
+      "headline": "Xovol Goods launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "Launching a new digital payments platform opens a new revenue stream and demonstrates innovation capabilities.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods recalls products in process automation line due to quality concerns"
+      "headline": "Xovol Goods recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A recall in the process automation line adds to the company's recent quality issues, likely dampening the positive impact of their product launch.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:20.910Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

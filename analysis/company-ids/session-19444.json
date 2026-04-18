@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports rising costs pressuring margins in data analytics"
+      "headline": "Talvep Computing reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports unexpected decline in Latin America revenue"
+      "headline": "Talvep Computing reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region suggests immediate demand or operational issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces breakthrough in data analytics"
+      "headline": "Jorvyl Securities announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics suggests potential for future competitive advantage and growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports rising costs pressuring margins in renewable storage"
+      "headline": "Ulvyn Microchips reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Margin pressure due to rising costs in a specific segment indicates a negative impact on earnings quality.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen digital payments"
+      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term growth, though immediate integration effects are often neutral.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports unexpected decline in Europe revenue"
+      "headline": "Ulvyn Microchips reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market like Europe is a significant negative indicator for near-term performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing names new head of cloud infrastructure division"
+      "headline": "Talvep Computing names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a key division create uncertainty regarding future strategy and operational execution.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage"
+      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Acquiring assets to strengthen a specific business segment is a positive signal for long-term strategic positioning.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:46.184Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

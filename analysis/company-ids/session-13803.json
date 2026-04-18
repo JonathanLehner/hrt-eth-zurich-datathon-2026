@@ -54,56 +54,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces breakthrough in enterprise software"
+      "headline": "Nerven Grid announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough is vague and lacks specific financial or operational context to quantify immediate impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "product_launch",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics recalls products in renewable storage line due to quality concerns"
+      "headline": "Zelvix Therapeutics recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall directly impacts revenue and brand reputation, creating immediate negative financial and operational pressure.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy sees 12% margin improvement in latest quarter"
+      "headline": "Zelval Energy sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement is a concrete positive indicator of operational efficiency and profitability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $120M contract with an international consortium"
+      "headline": "Zelval Energy secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, quantifiable revenue visibility for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy lowers full-year guidance amid softening demand"
+      "headline": "Zelval Energy lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering guidance due to softening demand is a direct negative signal regarding the company's near-term financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy announces breakthrough in process automation"
+      "headline": "Zelval Energy announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "Process automation breakthroughs are positive but often lack immediate, quantifiable financial impact until implemented.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Nerven Grid announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth strategy but represents an immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy opens new office in Europe"
+      "headline": "Zelval Energy opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a minor operational expansion that typically has negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:39.605Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries expands operations into Central Europe markets"
+      "headline": "Zrovex Industries expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets typically signals growth potential but involves initial execution and setup costs.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals warns of supply chain disruptions affecting Europe operations"
+      "headline": "Krevum Pharmaceuticals warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization in the affected region.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $320M contract with a top-tier research institute"
+      "headline": "Krevum Pharmaceuticals secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and validates the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences completes planned facility upgrade in Southeast Asia"
+      "headline": "Calvis Sciences completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that generally improves long-term capacity without immediate financial shock.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma loses key contract in North America to competitor"
+      "headline": "Nerval Biopharma loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and market share to a competitor.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports 12% decline in operating income"
+      "headline": "Zrovex Industries reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A double-digit decline in operating income is a clear negative indicator of current financial health and profitability.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals recalls products in data analytics line due to quality concerns"
+      "headline": "Krevum Pharmaceuticals recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial liability and potential reputational damage that can persist over time.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces significant capital expenditure plan for Latin America"
+      "headline": "Zrovex Industries announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Announcing significant capital expenditure indicates a long-term growth strategy but implies immediate cash outflows.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:10.937Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

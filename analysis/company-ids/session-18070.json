@@ -50,35 +50,96 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports unexpected decline in Scandinavia revenue"
+      "headline": "Kelvik Power reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a specific region indicates a negative operational trend that will likely weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $75M contract with a national infrastructure agency"
+      "headline": "Arnos Marketplace secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a national agency provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables sees 18% drop in new customer orders this quarter"
+      "headline": "Ulvon Renewables sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A double-digit drop in new customer orders is a strong indicator of weakening demand that will negatively impact future financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Arnos Marketplace recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a precision manufacturing line creates immediate operational costs and potential reputational damage.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $800M contract with a global retailer"
+      "headline": "Arnos Marketplace secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "An $800M contract with a global retailer is a major positive development that significantly boosts the company's revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:55.410Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports rising costs pressuring margins in automated logistics"
+      "headline": "Orevex Renewables reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables completes strategic acquisition to strengthen enterprise software"
+      "headline": "Orevex Renewables completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are generally viewed as growth-positive, though integration outcomes remain to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 10% drop in new customer orders this quarter"
+      "headline": "Jorvis Fuels sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders indicates a clear decline in demand and future revenue potential.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries faces class action over wireless connectivity service disruption"
+      "headline": "Strynal Industries faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk, creating immediate negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $120M contract with a top-tier research institute"
+      "headline": "Orevex Renewables secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable boost to revenue and market confidence.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Strynal Industries recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls due to quality concerns damage brand reputation and incur immediate operational costs.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:34.578Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

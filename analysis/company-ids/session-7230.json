@@ -64,49 +64,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports rising costs pressuring margins in process automation"
+      "headline": "Ixenis Outlets reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 12% margin improvement in latest quarter"
+      "headline": "Talvyn Goods sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement indicates strong operational efficiency and immediate bottom-line growth.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $400M contract with a top-tier research institute"
+      "headline": "Joval Brands secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear revenue visibility and positive growth momentum.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce recalls products in process automation line due to quality concerns"
+      "headline": "Arnik Commerce recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial liability and potential long-term brand damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets signs multi-year partnership with a global retailer"
+      "headline": "Ixenis Outlets signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer suggests sustained revenue growth and market expansion.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce delays product launch in precision manufacturing segment"
+      "headline": "Arnik Commerce delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment suggests operational friction and deferred revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets to host investor day focused on automated logistics strategy"
+      "headline": "Ixenis Outlets to host investor day focused on automated logistics strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that aims to provide clarity but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:31.114Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

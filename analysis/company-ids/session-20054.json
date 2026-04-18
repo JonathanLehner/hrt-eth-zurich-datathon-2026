@@ -50,35 +50,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $650M contract with a national infrastructure agency"
+      "headline": "Dralol Computing secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "The $650M contract provides a clear, substantial revenue boost that will positively impact the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks opens new office in Asia Pacific"
+      "headline": "Jovor Networks opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Expanding into the Asia Pacific region is a strategic growth move, though the immediate financial impact is likely to be modest and gradual.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics lowers full-year guidance amid softening demand"
+      "headline": "Myrnon Therapeutics lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering guidance due to softening demand is a direct negative signal for the company's near-term and medium-term financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics announces significant capital expenditure plan for North America"
+      "headline": "Myrnon Therapeutics announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term investment, but it will likely weigh on short-term cash flow and earnings.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports 5% increase in customer acquisition"
+      "headline": "Myrnon Therapeutics reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 5% increase in customer acquisition is a positive operational metric that suggests improved growth momentum.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:08.689Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Relvon Fuels completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition of precision manufacturing capabilities is a strategic move that should enhance long-term operational efficiency and product quality.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces $2.5B share buyback program"
+      "headline": "Holtum Asset Group announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program provides immediate support to the stock price and signals management confidence in capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Zrovex Industries reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 3% year-over-year is a positive indicator of business health, though the modest growth rate limits the magnitude of the impact.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries to present at Capital Markets Day"
+      "headline": "Zrovex Industries to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "A Capital Markets Day presentation is a standard corporate event that typically lacks immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels faces regulatory review of enterprise software practices"
+      "headline": "Relvon Fuels faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of software practices introduce potential legal and operational risks that could weigh on sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports unexpected decline in Latin America revenue"
+      "headline": "Relvon Fuels reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in regional revenue is a negative signal for growth and operational performance.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces breakthrough in data analytics"
+      "headline": "Ulvon Renewables announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics is a positive technical development, though the financial impact depends on successful commercial application.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:16.008Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

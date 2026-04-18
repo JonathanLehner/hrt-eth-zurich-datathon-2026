@@ -62,42 +62,113 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems beats analyst expectations with strong earnings growth"
+      "headline": "Prynis Systems beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations typically triggers an immediate positive market reaction that often sustains momentum as guidance is updated.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics expands operations into North America markets"
+      "headline": "Jorvix Diagnostics expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Market expansion is a strategic growth move that signals long-term revenue potential but often involves initial capital expenditure drag.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems sees 7% drop in new customer orders this quarter"
+      "headline": "Prynis Systems sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator of demand that usually prompts immediate downward price pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics wins industry award for excellence in process automation"
+      "headline": "Jorvix Diagnostics wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into immediate or significant financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $320M contract with a top-tier research institute"
+      "headline": "Jovor Networks secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, high-confidence revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices secures $500M contract with a national infrastructure agency"
+      "headline": "Volval Devices secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A major infrastructure contract represents a significant, long-term revenue stream that is highly favorable for the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:34.865Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

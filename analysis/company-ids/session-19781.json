@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Ilval Financial recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates operational failure and potential reputational damage that will likely weigh on the company in the short and medium term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources announces $6.3B share buyback program"
+      "headline": "Kelvos Resources announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to the stock price.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $180M contract with a major logistics provider"
+      "headline": "Kelvos Resources secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees 8% drop in new customer orders this quarter"
+      "headline": "Ilval Financial sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a direct negative indicator of slowing demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial expands operations into Central Europe markets"
+      "headline": "Ilval Financial expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets is a strategic growth move that typically yields long-term benefits rather than immediate financial gains.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables misses quarterly revenue estimates by 10%"
+      "headline": "Orevex Renewables misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 10% is a significant negative signal that typically triggers immediate downward price pressure.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $400M contract with a leading cloud platform"
+      "headline": "Zrovex Industries secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $400M contract win is a substantial positive development that strengthens the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables announces $4.1B share buyback program"
+      "headline": "Orevex Renewables announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "The announcement of a $4.1B share buyback program is a positive signal for shareholders and provides capital allocation support.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:58.777Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

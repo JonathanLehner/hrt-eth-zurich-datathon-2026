@@ -55,56 +55,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 25% increase in customer acquisition"
+      "headline": "Talvep Computing reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong indicator of growth and improved market demand for Talvep Computing.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co files routine patent applications in automated logistics"
+      "headline": "Jorval Trading Co files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co names new head of precision manufacturing division"
+      "headline": "Jorval Trading Co names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that typically has neutral immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs CEO steps down unexpectedly citing personal reasons"
+      "headline": "Crevex Labs CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CEO departure creates significant leadership uncertainty and typically triggers a negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs faces class action over enterprise software service disruption"
+      "headline": "Crevex Labs faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption poses a direct threat to reputation and potential financial liability.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co opens new office in North America"
+      "headline": "Jorval Trading Co opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion and a commitment to growing the North American market presence.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing delays product launch in cloud infrastructure segment"
+      "headline": "Talvep Computing delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential operational or development challenges.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co enters joint venture with a multinational manufacturer"
+      "headline": "Jorval Trading Co enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a multinational manufacturer is a strategic move likely to enhance market reach and operational capabilities.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:50.888Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

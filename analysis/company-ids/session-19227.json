@@ -38,28 +38,79 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports 25% decline in operating income"
+      "headline": "Relvan Software reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income directly impacts profitability and investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Talvep Computing completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions aimed at supply chain optimization typically signal long-term efficiency gains but involve short-term integration costs.",
+        "longTerm": 5,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software to present at Global Innovation Summit"
+      "headline": "Relvan Software to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a major industry summit is a standard corporate activity that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports unexpected decline in North America revenue"
+      "headline": "Relvan Software reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key market like North America is a strong negative signal for growth prospects.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:36.985Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports 18% increase in customer acquisition"
+      "headline": "Zrovex Industries reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition directly signals strong growth momentum and improved market penetration.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions signs multi-year partnership with a top-tier research institute"
+      "headline": "Orevov Solutions signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a top-tier research institute suggests long-term R&D benefits but limited immediate financial impact.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions secures $650M contract with an international consortium"
+      "headline": "Orevov Solutions secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract provides significant, concrete revenue visibility and strengthens the company's financial position.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries delays product launch in digital payments segment"
+      "headline": "Zrovex Industries delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment creates immediate uncertainty and potential loss of competitive advantage.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 15% drop in new customer orders this quarter"
+      "headline": "Zrovex Industries sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a clear weakening of demand that will negatively impact near-term revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma misses quarterly revenue estimates by 10%"
+      "headline": "Nerval Biopharma misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 10% is a negative financial indicator that typically triggers immediate market repricing.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions sees 25% drop in new customer orders this quarter"
+      "headline": "Orevov Solutions sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative signal for the company's growth trajectory and revenue outlook.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables signs multi-year partnership with a multinational manufacturer"
+      "headline": "Orevex Renewables signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a multinational manufacturer provides a stable, long-term revenue stream and market validation.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:28.057Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

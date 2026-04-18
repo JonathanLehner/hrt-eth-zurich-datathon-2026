@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid withdraws from North America market citing unfavorable conditions"
+      "headline": "Nerven Grid withdraws from North America market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a major market is a significant negative operational shift that signals long-term revenue contraction.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels enters joint venture with an international consortium"
+      "headline": "Jorvis Fuels enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests potential for growth and shared risk, though the specific financial impact remains vague.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips faces class action over wireless connectivity service disruption"
+      "headline": "Brevon Microchips faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate negative sentiment and potential long-term financial liabilities.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power delays product launch in renewable storage segment"
+      "headline": "Plevep Power delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue expectations and suggests internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Plevep Power reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a positive indicator of business health, though a 5% increase is modest.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $75M contract with a top-tier research institute"
+      "headline": "Brevon Microchips secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue visibility for the company.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips CTO addresses investor concerns in open letter"
+      "headline": "Brevon Microchips CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO is a reactive measure that suggests underlying investor anxiety without providing concrete financial news.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:52.087Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

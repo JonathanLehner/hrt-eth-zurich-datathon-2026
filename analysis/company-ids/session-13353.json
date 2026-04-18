@@ -60,35 +60,96 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies to host investor day focused on process automation strategy"
+      "headline": "Ixenix Technologies to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that typically have minimal immediate financial impact but signal management confidence.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $250M contract with a major logistics provider"
+      "headline": "Plevum Partners secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $250M contract provides a clear, significant, and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Plevum Partners recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational costs and potential reputational damage that can persist over the medium term.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group completes strategic acquisition to strengthen data analytics"
+      "headline": "Jovik Asset Group completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term growth through enhanced capabilities, though the immediate financial impact is often neutral or negative due to costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $75M contract with a leading cloud platform"
+      "headline": "Zelvel Capital secures $75M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract with a major cloud provider is a positive indicator of demand and future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:22.211Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners completes strategic acquisition to strengthen process automation"
+      "headline": "Yorval Partners completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "The acquisition of a process automation firm provides a clear strategic expansion for Yorval Partners.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports rising costs pressuring margins in process automation"
+      "headline": "Creven Securities reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability in the near term.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees mixed results in process automation pilot program"
+      "headline": "Yorval Partners sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success of the automation initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics secures $800M contract with a multinational manufacturer"
+      "headline": "Grevel Diagnostics secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a significant and concrete revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics faces regulatory review of process automation practices"
+      "headline": "Grevel Diagnostics faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential legal and operational risks that could hinder future performance.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Plevyl Advisors reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are clear positive indicators for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics loses key contract in Southeast Asia to competitor"
+      "headline": "Grevel Diagnostics loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract is a direct negative impact on revenue and competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:42.604Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

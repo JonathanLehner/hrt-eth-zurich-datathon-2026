@@ -60,35 +60,96 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Plevum Partners reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised guidance provide a clear positive signal for near-term and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $250M contract with a global retailer"
+      "headline": "Jorvyl Securities secures $250M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems completes strategic acquisition to strengthen renewable storage"
+      "headline": "Brevep Systems completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions offer long-term growth potential but often involve short-term integration costs and uncertainty.",
+        "longTerm": 5,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities launches next-generation precision manufacturing platform"
+      "headline": "Jorvyl Securities launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive development, though the immediate financial impact depends on market adoption rates.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group to host investor day focused on supply chain optimization strategy"
+      "headline": "Jovik Asset Group to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:36.035Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

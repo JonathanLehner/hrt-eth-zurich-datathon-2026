@@ -52,42 +52,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $500M contract with an international consortium"
+      "headline": "Zrovov Advisors secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $500M contract provides a clear, significant, and durable revenue stream for Zrovov Advisors.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial announces breakthrough in digital payments"
+      "headline": "Wrelal Financial announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A breakthrough in digital payments suggests a strong competitive advantage, though the immediate financial impact remains speculative.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences names new head of cloud infrastructure division"
+      "headline": "Calvis Sciences names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial implications.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports unexpected decline in North America revenue"
+      "headline": "Zrovov Advisors reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market is a direct negative signal for the company's short-term financial health.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports 10% decline in operating income"
+      "headline": "Wrelal Financial reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income indicates immediate margin pressure and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees mixed results in cloud infrastructure pilot program"
+      "headline": "Calvis Sciences sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create significant ambiguity regarding the future success and scalability of the cloud infrastructure initiative.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:46.734Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

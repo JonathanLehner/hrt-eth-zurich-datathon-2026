@@ -65,56 +65,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals delays product launch in data analytics segment"
+      "headline": "Krevum Pharmaceuticals delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch typically signals operational friction and potential revenue deferral, negatively impacting investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems begins scheduled maintenance of data analytics systems"
+      "headline": "Brevep Systems begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that does not imply a material change in financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Brevep Systems reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 8% is a strong positive indicator of business health and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Brevep Systems reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "While revenue is at a record high, a modest 3% year-over-year growth may be perceived as slowing momentum compared to market expectations.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals reports 8% increase in customer acquisition"
+      "headline": "Krevum Pharmaceuticals reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition directly correlates with future revenue growth potential.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics names new head of wireless connectivity division"
+      "headline": "Frelis Genomics names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division are standard corporate events with neutral immediate financial impact until strategy shifts are announced.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems delays product launch in wireless connectivity segment"
+      "headline": "Brevep Systems delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "A product launch delay in a specific segment creates near-term uncertainty and potential loss of competitive advantage.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics explores strategic alternatives for data analytics unit"
+      "headline": "Jorvix Diagnostics explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential divestiture or restructuring, which creates significant speculation regarding future value.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:37.836Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

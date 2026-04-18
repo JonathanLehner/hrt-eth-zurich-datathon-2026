@@ -53,49 +53,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports strong demand in Latin America, raises outlook"
+      "headline": "Yorval Partners reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a direct positive signal for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings to present at Corporate Strategy Symposium"
+      "headline": "Halvix Holdings to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a routine corporate event with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Plevum Partners begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a standard operational procedure that does not imply financial gain or loss.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners files for regulatory approval of new wireless connectivity offering"
+      "headline": "Yorval Partners files for regulatory approval of new wireless connectivity offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for future growth but does not guarantee immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners CTO steps down unexpectedly citing personal reasons"
+      "headline": "Yorval Partners CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates leadership instability and uncertainty regarding technical strategy.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces significant capital expenditure plan for North America"
+      "headline": "Yorval Partners announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term investment but may pressure short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners wins industry award for excellence in process automation"
+      "headline": "Plevum Partners wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award is a positive reputational signal but lacks direct quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:58.939Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -53,49 +53,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees mixed results in automated logistics pilot program"
+      "headline": "Kelvos Resources sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest uncertainty regarding the scalability and effectiveness of the new logistics technology.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid files for regulatory approval of new data analytics offering"
+      "headline": "Urvel Grid files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard procedural step that indicates progress but does not guarantee immediate revenue or success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources announces significant capital expenditure plan for Latin America"
+      "headline": "Kelvos Resources announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth ambitions but implies immediate cash outflow and potential execution risk.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions announces restructuring plan, cites challenging market conditions"
+      "headline": "Wyrnor Solutions announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan in response to challenging market conditions typically signals internal distress and potential near-term earnings pressure.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources faces class action over supply chain optimization service disruption"
+      "headline": "Kelvos Resources faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that can weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees 20% margin improvement in latest quarter"
+      "headline": "Urvel Grid sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement is a strong, quantifiable indicator of increased operational efficiency and profitability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources signs multi-year partnership with a leading cloud platform"
+      "headline": "Kelvos Resources signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a leading cloud platform provides a clear, durable revenue stream and strategic validation.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:50.057Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

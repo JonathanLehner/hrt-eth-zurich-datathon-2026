@@ -64,49 +64,130 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems to host investor day focused on data analytics strategy"
+      "headline": "Prynis Systems to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that typically provide clarity on strategy without immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces breakthrough in wireless connectivity"
+      "headline": "Relvon Fuels announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in wireless connectivity suggests potential for future product differentiation and market expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid recalls products in renewable storage line due to quality concerns"
+      "headline": "Urvel Grid recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls represent a direct negative impact on costs, reputation, and short-term operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources wins industry award for excellence in automated logistics"
+      "headline": "Nolvol Resources wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into immediate or significant financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports unexpected decline in Central Europe revenue"
+      "headline": "Prynis Systems reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region is a clear negative signal for near-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels revises long-term strategy with focus on process automation"
+      "headline": "Relvon Fuels revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward automation indicate a long-term focus on efficiency, though the immediate impact is neutral.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces $0.8B share buyback program"
+      "headline": "Relvon Fuels announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct positive signal for shareholder value and capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:29.614Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

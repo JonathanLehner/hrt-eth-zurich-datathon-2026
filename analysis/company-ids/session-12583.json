@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments to host investor day focused on data analytics strategy"
+      "headline": "Halven Investments to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors names new head of data analytics division"
+      "headline": "Plevyl Advisors names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Leadership changes in specific divisions are standard operational updates with limited immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors faces class action over process automation service disruption"
+      "headline": "Plevyl Advisors faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce immediate legal risk and potential financial liability for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports unexpected decline in Central Europe revenue"
+      "headline": "Talvix Holdings reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a direct negative indicator of financial performance and market demand.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets explores strategic alternatives for precision manufacturing unit"
+      "headline": "Frelex Outlets explores strategic alternatives for precision manufacturing unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives creates uncertainty regarding the future of a business unit but lacks immediate financial finality.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors completes strategic acquisition to strengthen automated logistics"
+      "headline": "Plevyl Advisors completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Acquisitions are intended to drive growth, though the immediate financial benefit is often offset by integration costs.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets opens new office in North America"
+      "headline": "Frelex Outlets opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates expansion, though the financial contribution is typically gradual rather than immediate.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:53.980Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

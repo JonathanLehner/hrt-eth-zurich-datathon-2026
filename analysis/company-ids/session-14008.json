@@ -60,35 +60,96 @@
       "barIx": 21,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power names new head of wireless connectivity division"
+      "headline": "Plevep Power names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has a neutral to slightly positive impact depending on the executive's reputation.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy delays product launch in enterprise software segment"
+      "headline": "Plevik Energy delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly impacts revenue realization and suggests potential operational or development friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Plevep Power announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow and margins.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $500M contract with a multinational manufacturer"
+      "headline": "Crevex Labs secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides clear, high-value revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid explores strategic alternatives for automated logistics unit"
+      "headline": "Nerven Grid explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague signal that often implies a potential sale or restructuring, creating significant uncertainty regarding the unit's future.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:02.317Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

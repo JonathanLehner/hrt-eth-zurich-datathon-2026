@@ -62,42 +62,113 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels faces regulatory review of automated logistics practices"
+      "headline": "Jorvis Fuels faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential operational constraints and legal costs, creating immediate uncertainty and negative sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy reports 18% increase in customer acquisition"
+      "headline": "Plevik Energy reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition is a strong indicator of growth and improved market share.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power delays product launch in process automation segment"
+      "headline": "Kelvik Power delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals internal issues or market challenges, negatively impacting growth expectations.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy delays product launch in process automation segment"
+      "headline": "Plevik Energy delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "The delay of a product launch in the process automation segment suggests a setback in the company's strategic roadmap.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports 8% increase in customer acquisition"
+      "headline": "Jorvis Fuels reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition provides a positive signal for revenue growth and market penetration.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma announces breakthrough in supply chain optimization"
+      "headline": "Nerval Biopharma announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential margin expansion and operational efficiency gains.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:31.017Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

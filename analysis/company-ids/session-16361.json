@@ -39,35 +39,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands recalls products in renewable storage line due to quality concerns"
+      "headline": "Halvav Brands recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational costs and potential reputational damage that may persist as the company addresses quality control issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods recalls products in automated logistics line due to quality concerns"
+      "headline": "Xovol Goods recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling products in a core logistics line creates immediate financial liability and operational disruption with lingering uncertainty regarding brand trust.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $400M contract with a global retailer"
+      "headline": "Xovol Goods secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, positive revenue catalyst that will likely bolster financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods sees 10% drop in new customer orders this quarter"
+      "headline": "Xovol Goods sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative signal for revenue growth that will likely weigh on financial results throughout the quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods announces breakthrough in process automation"
+      "headline": "Xovol Goods announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation is a positive development, though the financial impact is speculative until implementation and efficiency gains are realized.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:52.193Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

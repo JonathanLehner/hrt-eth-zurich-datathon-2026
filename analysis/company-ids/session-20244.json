@@ -44,56 +44,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Strynal Industries reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising supply chain costs directly threaten profit margins, signaling immediate and persistent financial headwinds.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Strynal Industries announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but creates short-term cash outflow pressure.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources faces regulatory review of wireless connectivity practices"
+      "headline": "Kelvos Resources faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential legal or operational costs for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources opens new office in North America"
+      "headline": "Kelvos Resources opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office is a minor operational expansion that suggests growth but has limited immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries announces significant capital expenditure plan for Central Europe"
+      "headline": "Strynal Industries announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Similar to the Asia Pacific plan, this capital expenditure in Central Europe signals long-term growth strategy despite short-term costs.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 25% drop in new customer orders this quarter"
+      "headline": "Kelvos Resources sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a strong negative indicator of immediate and potentially sustained revenue decline.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries to present at Tech Leadership Conference"
+      "headline": "Strynal Industries to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate activity with negligible direct financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $500M contract with a leading cloud platform"
+      "headline": "Kelvos Resources secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract provides clear, substantial, and durable revenue growth for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:15.849Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

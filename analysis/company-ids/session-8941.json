@@ -48,28 +48,79 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $500M contract with an international consortium"
+      "headline": "Nerven Grid secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $500M contract provides a clear, significant revenue boost that will positively impact the company's financial outlook over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $400M contract with a national infrastructure agency"
+      "headline": "Nolvol Resources secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract with a national agency provides a stable and predictable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 20% margin improvement in latest quarter"
+      "headline": "Xelvol Biotech sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement indicates strong operational efficiency gains that directly enhance profitability.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid misses quarterly revenue estimates by 25%"
+      "headline": "Nerven Grid misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a substantial negative indicator that will likely cause immediate market concern and downward pressure on the stock.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:33.714Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

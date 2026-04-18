@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks names new head of enterprise software division"
+      "headline": "Jovor Networks names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has a neutral to slightly positive impact depending on the executive's reputation.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems misses quarterly revenue estimates by 15%"
+      "headline": "Brevep Systems misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A significant 15% revenue miss is a clear negative signal that typically triggers immediate downward pressure on the stock price.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets board meeting to discuss major strategic initiative"
+      "headline": "Ixenis Outlets board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The announcement of a board meeting to discuss a strategic initiative is vague and lacks specific details to gauge market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies expands operations into Asia Pacific markets"
+      "headline": "Myrnep Technologies expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a positive growth signal that suggests long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $320M contract with a multinational manufacturer"
+      "headline": "Myrnep Technologies secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides concrete evidence of revenue growth and improved market positioning.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks to host investor day focused on cloud infrastructure strategy"
+      "headline": "Jovor Networks to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a routine corporate event that usually serves as a neutral platform for management to communicate strategy.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies sees 10% drop in new customer orders this quarter"
+      "headline": "Myrnep Technologies sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct indicator of slowing demand that negatively impacts growth expectations.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:53.559Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

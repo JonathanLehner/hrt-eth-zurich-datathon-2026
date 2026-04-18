@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces breakthrough in data analytics"
+      "headline": "Yorven Labs announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough is positive but lacks specific financial details or commercialization timelines.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 3% decline in operating income"
+      "headline": "Yorven Labs reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Halvax Networks recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial costs and potential reputational damage that can persist.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $120M contract with a leading cloud platform"
+      "headline": "Yorven Labs secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, quantifiable revenue growth and validation of the company's services.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports unexpected decline in Southeast Asia revenue"
+      "headline": "Brevep Systems reports unexpected decline in Southeast Asia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals potential demand or competitive issues.",
+        "longTerm": -4,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Prynis Systems begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks launches next-generation cloud infrastructure platform"
+      "headline": "Halvax Networks launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform is a positive strategic move that could drive future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $650M contract with a multinational manufacturer"
+      "headline": "Yorven Labs secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A large $650M contract win is a significant positive event that will materially impact future revenue.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:10.499Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

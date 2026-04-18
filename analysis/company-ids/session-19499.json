@@ -60,35 +60,96 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co completes planned facility upgrade in Southeast Asia"
+      "headline": "Pleven Trading Co completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "The completion of a facility upgrade is an operational milestone that typically improves efficiency but has a muted immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Jorval Trading Co reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising guidance due to strong demand is a direct positive signal for financial performance that usually triggers an immediate market reaction.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co to host investor day focused on cloud infrastructure strategy"
+      "headline": "Jorval Trading Co to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day announcement is a strategic communication event that rarely moves the stock price significantly on its own.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $75M contract with a national infrastructure agency"
+      "headline": "Xelvol Biotech secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear, quantifiable revenue visibility that is highly favorable for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands names new head of data analytics division"
+      "headline": "Halvav Brands names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a routine leadership change that typically has negligible impact on short-term market valuation.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:47.695Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

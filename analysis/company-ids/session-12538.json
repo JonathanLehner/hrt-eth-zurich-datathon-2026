@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power sees 18% margin improvement in latest quarter"
+      "headline": "Plevep Power sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement indicates strong operational efficiency gains that directly boost profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels to host investor day focused on process automation strategy"
+      "headline": "Jorvis Fuels to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "Investor days focused on strategy are generally neutral to slightly positive events aimed at improving market sentiment.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores announces $2.5B share buyback program"
+      "headline": "Xovep Stores announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program provides immediate support for the stock price and signals management confidence.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores announces breakthrough in data analytics"
+      "headline": "Xovep Stores announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics is a positive development but lacks specific details on financial impact or implementation.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables announces $7.9B share buyback program"
+      "headline": "Orevex Renewables announces $7.9B share buyback program",
+      "sentiment": {
+        "reasoning": "A massive $7.9B share buyback program is a significant capital allocation event that strongly supports shareholder value.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores signs multi-year partnership with a top-tier research institute"
+      "headline": "Xovep Stores signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year research partnership is a positive long-term strategic move but offers little immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 7% drop in new customer orders this quarter"
+      "headline": "Jorvis Fuels sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders is a clear negative signal regarding demand and future revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:52.319Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -54,56 +54,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Crevol Retail Group recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns typically triggers immediate negative sentiment and potential operational costs.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Varvov Retail Group recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalls in a precision manufacturing line suggest deeper technical or quality control issues that may impact brand reputation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group to host investor day focused on precision manufacturing strategy"
+      "headline": "Varvov Retail Group to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are generally neutral events unless specific guidance is provided, serving primarily as a communication platform.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports unexpected decline in Asia Pacific revenue"
+      "headline": "Varvov Retail Group reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a direct negative signal for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $650M contract with a global retailer"
+      "headline": "Varvov Retail Group secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, quantifiable revenue growth and positive momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group to host investor day focused on digital payments strategy"
+      "headline": "Crevol Retail Group to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on digital payments indicates a strategic pivot or expansion, which is typically viewed as a positive long-term signal.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $800M contract with a national infrastructure agency"
+      "headline": "Xovep Stores secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A large contract with a government agency provides significant, stable revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group withdraws from Southeast Asia market citing unfavorable conditions"
+      "headline": "Varvov Retail Group withdraws from Southeast Asia market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market indicates a failure to compete or unfavorable macro conditions, leading to immediate negative sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:15.151Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

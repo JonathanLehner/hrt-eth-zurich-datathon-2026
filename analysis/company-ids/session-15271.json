@@ -50,35 +50,96 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods CTO steps down unexpectedly citing personal reasons"
+      "headline": "Talvyn Goods CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership instability and uncertainty regarding the company's technical roadmap.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods explores strategic alternatives for renewable storage unit"
+      "headline": "Talvyn Goods explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit often signals potential divestiture or restructuring, which can be viewed as a positive move to unlock shareholder value.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners explores strategic alternatives for data analytics unit"
+      "headline": "Plevum Partners explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Strategic exploration for a business unit suggests a potential sale or spin-off, typically viewed as a proactive step to focus core operations.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners misses quarterly revenue estimates by 18%"
+      "headline": "Plevum Partners misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss is a significant negative indicator of current demand and operational performance, likely leading to immediate downward pressure on the stock.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Krevan Investments reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 12% year-over-year provides strong evidence of successful execution and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:53.172Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

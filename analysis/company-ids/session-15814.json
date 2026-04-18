@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 7%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "A 7% revenue miss indicates immediate underperformance relative to market expectations, likely triggering a negative stock price reaction.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Holtar Stores warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and uncertainty regarding future revenue realization.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports unexpected decline in Scandinavia revenue"
+      "headline": "Halven Investments reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key market segment signals potential structural or demand issues that will likely weigh on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments to present at Annual Industry Forum"
+      "headline": "Halven Investments to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity that rarely provides material financial impact or market-moving information.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $50M contract with a top-tier research institute"
+      "headline": "Ervan Capital secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive, and quantifiable boost to future revenue and business stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital explores strategic alternatives for supply chain optimization unit"
+      "headline": "Ervan Capital explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is speculative and creates significant uncertainty regarding the future of the business unit.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments announces significant capital expenditure plan for Latin America"
+      "headline": "Halven Investments announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment, though it may pressure short-term cash flow and margins.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:32.130Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

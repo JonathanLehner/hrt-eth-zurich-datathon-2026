@@ -62,42 +62,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports 7% decline in operating income"
+      "headline": "Dralol Computing reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income indicates immediate margin pressure and operational inefficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Myrnon Therapeutics reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth demonstrates strong market demand and positive financial momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces class action over wireless connectivity service disruption"
+      "headline": "Ulvyn Microchips faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability regarding service reliability.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips CFO steps down unexpectedly citing personal reasons"
+      "headline": "Ulvyn Microchips CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership instability and market uncertainty.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing files routine patent applications in supply chain optimization"
+      "headline": "Dralol Computing files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices faces regulatory review of renewable storage practices"
+      "headline": "Volval Devices faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of core practices introduces significant operational risk and potential future compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:37.933Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

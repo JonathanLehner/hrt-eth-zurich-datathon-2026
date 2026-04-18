@@ -46,21 +46,62 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $50M contract with a leading cloud platform"
+      "headline": "Arnos Marketplace secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, immediate revenue boost and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports strong demand in Scandinavia, raises outlook"
+      "headline": "Xovol Goods reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand signals positive momentum that is likely to persist through the quarter.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings loses key contract in Southeast Asia to competitor"
+      "headline": "Talvix Holdings loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor represents a direct loss of revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:59.479Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -46,21 +46,62 @@
       "barIx": 17,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over process automation service disruption"
+      "headline": "Jovor Networks faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal and reputational risk that may persist as the litigation process unfolds.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies names new head of wireless connectivity division"
+      "headline": "Ixenix Technologies names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has minimal immediate market impact until strategic shifts are announced.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks expands operations into Scandinavia markets"
+      "headline": "Halvax Networks expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets represents a clear growth initiative that is expected to contribute positively to revenue over the medium to long term.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:26.305Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

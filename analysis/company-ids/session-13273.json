@@ -63,49 +63,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores files routine patent applications in renewable storage"
+      "headline": "Xovep Stores files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces significant capital expenditure plan for Middle East"
+      "headline": "Creven Securities announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow and potential execution risk.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores secures $320M contract with a leading cloud platform"
+      "headline": "Xovep Stores secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $180M contract with a major logistics provider"
+      "headline": "Arnik Commerce secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "The $180M contract win is a significant positive development that directly boosts revenue expectations.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores delays product launch in enterprise software segment"
+      "headline": "Xovep Stores delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch negatively impacts short-term revenue projections and creates uncertainty regarding future product performance.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Talvyn Goods warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region will likely lead to increased costs and lower revenue in the near term.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Xovep Stores begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and does not materially impact financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:19.802Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

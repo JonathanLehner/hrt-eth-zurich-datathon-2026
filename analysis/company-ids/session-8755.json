@@ -52,42 +52,113 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 8% drop in new customer orders this quarter"
+      "headline": "Calvos Genomics sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and immediate revenue pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics secures $320M contract with a top-tier research institute"
+      "headline": "Frelis Genomics secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, high-value contract provides clear, immediate, and sustained revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $500M contract with a global retailer"
+      "headline": "Relvon Fuels secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A major $500M contract win with a global retailer represents a significant and durable revenue boost.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces significant capital expenditure plan for North America"
+      "headline": "Frelis Genomics announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure indicates growth investment, though the immediate impact is cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels to host investor day focused on digital payments strategy"
+      "headline": "Relvon Fuels to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but no immediate financial change.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics withdraws from Europe market citing unfavorable conditions"
+      "headline": "Calvos Genomics withdraws from Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a major market indicates a loss of revenue streams and potential restructuring costs.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:27.147Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

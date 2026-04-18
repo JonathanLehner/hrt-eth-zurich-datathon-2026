@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions sees 8% margin improvement in latest quarter"
+      "headline": "Wyrnor Solutions sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates direct operational efficiency gains that typically boost profitability immediately and sustain through the quarter.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports strong demand in North America, raises outlook"
+      "headline": "Wyrnor Solutions reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for both immediate sentiment and sustained performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $800M contract with a major logistics provider"
+      "headline": "Urvel Grid secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a significant, quantifiable revenue boost with high visibility for the coming months.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 0,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces regulatory review of automated logistics practices"
+      "headline": "Halven Investments faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational friction, which often persists until the investigation concludes.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments CTO steps down unexpectedly citing personal reasons"
+      "headline": "Halven Investments CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership instability and uncertainty regarding future technical strategy.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid files routine patent applications in wireless connectivity"
+      "headline": "Urvel Grid files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and generally have negligible impact on short or long-term financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $800M contract with a major logistics provider"
+      "headline": "Zelval Energy secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a significant, quantifiable revenue boost with high visibility for the coming months.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 0,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:47.288Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

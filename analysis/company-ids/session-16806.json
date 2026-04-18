@@ -66,56 +66,147 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees 5% drop in new customer orders this quarter"
+      "headline": "Plevum Partners sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders indicates a direct decline in demand that will likely pressure near-term revenue.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Wrelal Financial completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to improve operational efficiency, which is generally viewed as a positive long-term value driver.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files for regulatory approval of new enterprise software offering"
+      "headline": "Zrovov Advisors files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that signals future growth potential but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Zrovov Advisors recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall creates immediate negative financial impact through costs and potential reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial sees mixed results in cloud infrastructure pilot program"
+      "headline": "Wrelal Financial sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide insufficient information to determine a clear financial trajectory for the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners misses quarterly revenue estimates by 15%"
+      "headline": "Plevum Partners misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss is a significant negative indicator of company performance that will likely trigger a sharp market reaction.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets wins industry award for excellence in renewable storage"
+      "headline": "Frelex Outlets wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "An industry award is a positive reputational signal but lacks a direct or quantifiable impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $400M contract with a multinational manufacturer"
+      "headline": "Plevum Partners secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, substantial, and positive boost to future revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:08.947Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

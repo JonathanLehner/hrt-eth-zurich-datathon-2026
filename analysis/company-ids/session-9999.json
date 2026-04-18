@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Dralol Computing begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies announces $0.8B share buyback program"
+      "headline": "Ixenix Technologies announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $75M contract with a national infrastructure agency"
+      "headline": "Dralol Computing secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost for the company.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial completes strategic acquisition to strengthen renewable storage"
+      "headline": "Ilval Financial completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition indicates growth, though the long-term financial benefit depends on integration success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $500M contract with a top-tier research institute"
+      "headline": "Ilval Financial secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $500M contract is a significant revenue driver that will positively impact financial results over the coming quarters.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems to host investor day focused on data analytics strategy"
+      "headline": "Brevep Systems to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that rarely cause immediate material financial shifts.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing completes planned facility upgrade in Middle East"
+      "headline": "Dralol Computing completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Facility upgrades are standard capital expenditures that do not inherently change the short-term financial outlook.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems loses key contract in Central Europe to competitor"
+      "headline": "Brevep Systems loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and potential market share in a specific region.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:13.197Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

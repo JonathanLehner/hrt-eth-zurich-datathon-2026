@@ -41,42 +41,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs confirms participation in Corporate Strategy Symposium"
+      "headline": "Yorven Labs confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a strategy symposium is a routine corporate event that provides no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports unexpected decline in Asia Pacific revenue"
+      "headline": "Volval Devices reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major geographic region signals a negative trend that will likely impact near-term earnings and investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces $5.7B share buyback program"
+      "headline": "Yorven Labs announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is generally viewed as a positive signal of capital allocation and confidence in the company's value.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces $8.4B share buyback program"
+      "headline": "Yorven Labs announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "The increase in the buyback program size further reinforces the positive signal of capital return to shareholders.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage"
+      "headline": "Volval Devices completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions in renewable storage indicate long-term growth potential, though the immediate financial impact is often muted by integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs CFO steps down unexpectedly citing personal reasons"
+      "headline": "Yorven Labs CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership uncertainty and potential concern regarding financial oversight.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:29.242Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

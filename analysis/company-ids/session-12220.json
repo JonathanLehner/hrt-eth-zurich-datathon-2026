@@ -56,56 +56,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports strong demand in Latin America, raises outlook"
+      "headline": "Talvep Computing reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems opens new office in North America"
+      "headline": "Prynis Systems opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that suggests growth but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace completes strategic acquisition to strengthen renewable storage"
+      "headline": "Arnos Marketplace completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition provides a clear path to market strengthening, though integration outcomes remain to be seen.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems wins industry award for excellence in cloud infrastructure"
+      "headline": "Prynis Systems wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but have a negligible direct impact on short-term financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace publishes annual sustainability report"
+      "headline": "Arnos Marketplace publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing a sustainability report is a standard corporate disclosure that rarely impacts financial performance directly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems misses quarterly revenue estimates by 12%"
+      "headline": "Prynis Systems misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A 12% revenue miss is a significant negative indicator that directly impacts investor sentiment and short-term valuation.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing loses key contract in North America to competitor"
+      "headline": "Talvep Computing loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and competitive standing, creating immediate and lasting financial pressure.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing board meeting to discuss major strategic initiative"
+      "headline": "Talvep Computing board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a strategic initiative is speculative and lacks sufficient detail to determine financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:40.601Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

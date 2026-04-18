@@ -54,49 +54,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Nerven Grid begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions raises full-year guidance citing robust demand"
+      "headline": "Wyrnor Solutions raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a strong positive signal for financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips to host investor day focused on cloud infrastructure strategy"
+      "headline": "Brevon Microchips to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a standard corporate communication event that rarely impacts financial results directly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions files routine patent applications in data analytics"
+      "headline": "Wyrnor Solutions files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or quantifiable financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $75M contract with a national infrastructure agency"
+      "headline": "Nerven Grid secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, positive, and durable revenue stream for the company.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $400M contract with a major logistics provider"
+      "headline": "Brevon Microchips secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $400M contract is a significant revenue win that will positively impact financial results over the long term.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips secures $50M contract with a multinational manufacturer"
+      "headline": "Brevon Microchips secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $50M contract represents a solid incremental revenue gain that contributes positively to the company's financial outlook.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:54:00.315Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

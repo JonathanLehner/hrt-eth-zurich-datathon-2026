@@ -43,49 +43,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports 10% increase in customer acquisition"
+      "headline": "Halvix Holdings reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition directly signals growth and improved market penetration for Halvix Holdings.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 20% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders indicates a significant contraction in demand that will negatively impact near-term financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners announces $9.6B share buyback program"
+      "headline": "Plevum Partners announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program is a strong signal of management confidence and provides immediate support for the stock price.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Plevum Partners reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 8% year-over-year confirms strong operational performance and market demand for Plevum Partners.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners explores strategic alternatives for digital payments unit"
+      "headline": "Plevum Partners explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates significant uncertainty regarding the future structure and potential value realization for the company.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners wins industry award for excellence in data analytics"
+      "headline": "Plevum Partners wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Winning an industry award for data analytics is a positive reputational signal but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings to present at Global Innovation Summit"
+      "headline": "Halvix Holdings to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a standard corporate event that typically provides negligible immediate financial impact or market movement.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:06.945Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

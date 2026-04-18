@@ -54,49 +54,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences CEO steps down unexpectedly citing personal reasons"
+      "headline": "Zelvon Biosciences CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CEO creates immediate leadership instability and market uncertainty regarding future strategic direction.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Zelvon Biosciences reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial guidance based on strong regional demand provides a clear, positive signal for near-term and medium-term earnings growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Yorval Partners Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the COO is a reactive measure to address investor concerns, which typically signals underlying issues without providing immediate material change.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners files for regulatory approval of new automated logistics offering"
+      "headline": "Yorval Partners files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress toward a new product launch but does not guarantee immediate revenue.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences wins industry award for excellence in precision manufacturing"
+      "headline": "Zelvon Biosciences wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but generally lack a direct, quantifiable impact on financial performance or stock price.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors faces regulatory review of enterprise software practices"
+      "headline": "Zrovov Advisors faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of core software practices introduces significant operational risk and potential for future penalties or forced changes.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces $1.2B share buyback program"
+      "headline": "Yorval Partners announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct capital allocation action that typically supports share price and signals management confidence.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:38.974Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

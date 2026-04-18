@@ -44,56 +44,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group expands operations into Middle East markets"
+      "headline": "Crevol Retail Group expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a strategic growth initiative that typically requires significant upfront investment before yielding revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group secures $400M contract with a national infrastructure agency"
+      "headline": "Crevol Retail Group secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large-scale infrastructure contract provides immediate revenue visibility and long-term financial stability for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 5% decline in operating income"
+      "headline": "Yorvov Pharmaceuticals reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is viewed negatively by investors in the short term.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals reports 10% decline in operating income"
+      "headline": "Yorvov Pharmaceuticals reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income indicates a more significant deterioration in core business performance than a 5% decline.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group files routine patent applications in data analytics"
+      "headline": "Crevol Retail Group files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in process automation"
+      "headline": "Yorvov Pharmaceuticals wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards for process automation improve brand reputation but have a negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Yorvov Pharmaceuticals warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions create immediate operational bottlenecks and potential revenue loss, signaling negative near-term financial pressure.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group files routine patent applications in automated logistics"
+      "headline": "Crevol Retail Group files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings for logistics are standard operational maintenance and lack immediate material financial implications.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:21.077Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

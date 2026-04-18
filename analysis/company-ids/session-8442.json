@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies recalls products in automated logistics line due to quality concerns"
+      "headline": "Myrnep Technologies recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core logistics line creates immediate operational and reputational damage with lingering uncertainty regarding repair costs and customer trust.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co CFO steps down unexpectedly citing personal reasons"
+      "headline": "Pleven Trading Co CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership instability and market concern regarding the underlying reasons for the exit.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies reports 3% decline in operating income"
+      "headline": "Myrnep Technologies reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability, signaling potential operational inefficiencies that may persist over the quarter.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Talvyn Goods completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance product capabilities, which typically provides long-term value despite short-term integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $500M contract with a multinational manufacturer"
+      "headline": "Jorval Trading Co secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a clear, significant boost to revenue visibility and long-term growth prospects.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Pleven Trading Co warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region pose a direct threat to operational output and profitability for the near to medium term.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $120M contract with an international consortium"
+      "headline": "Talvyn Goods secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $120M contract win provides a solid, quantifiable revenue stream that strengthens the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co sees 12% margin improvement in latest quarter"
+      "headline": "Pleven Trading Co sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement indicates strong operational efficiency and profitability gains that are likely to be sustained.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:15.477Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

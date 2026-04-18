@@ -62,42 +62,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences names new head of data analytics division"
+      "headline": "Relvos Biosciences names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a routine leadership change with minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces class action over automated logistics service disruption"
+      "headline": "Crevol Retail Group faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal and financial risk, though the ultimate impact depends on the scope and resolution of the claims.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Nolvav Commerce begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a standard operational procedure that is expected and typically factored into guidance.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce faces class action over wireless connectivity service disruption"
+      "headline": "Nolvav Commerce faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption suggests potential customer churn and legal costs that could impact financial results.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Nolvav Commerce warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "A warning regarding supply chain disruptions in a specific region indicates a direct negative impact on revenue and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports rising costs pressuring margins in process automation"
+      "headline": "Arnos Marketplace reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for near-term and medium-term financial performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:09.933Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

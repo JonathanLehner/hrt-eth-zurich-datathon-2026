@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels files for regulatory approval of new enterprise software offering"
+      "headline": "Jorvis Fuels files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that does not guarantee immediate revenue or market success.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy sees 18% drop in new customer orders this quarter"
+      "headline": "Plevik Energy sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders indicates a significant decline in demand that will likely impact near-term financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences misses quarterly revenue estimates by 8%"
+      "headline": "Calvis Sciences misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% is a clear negative signal regarding the company's current financial health and operational execution.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences faces regulatory review of digital payments practices"
+      "headline": "Calvis Sciences faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of core business practices introduces significant legal and operational risk that could persist over the coming months.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels signs multi-year partnership with a major logistics provider"
+      "headline": "Jorvis Fuels signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic growth potential for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences secures $180M contract with a global retailer"
+      "headline": "Calvis Sciences secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract is a concrete, positive financial event that directly boosts revenue expectations.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels completes strategic acquisition to strengthen digital payments"
+      "headline": "Jorvis Fuels completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to expand capabilities, though the long-term value depends on successful integration.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:27.254Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

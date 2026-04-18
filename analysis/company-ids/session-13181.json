@@ -52,42 +52,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports 10% decline in operating income"
+      "headline": "Prynis Systems reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $650M contract with a top-tier research institute"
+      "headline": "Pleven Trading Co secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant revenue visibility and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $50M contract with a leading cloud platform"
+      "headline": "Pleven Trading Co secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $50M contract with a leading cloud platform is a positive indicator of growth and client acquisition.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software confirms participation in Tech Leadership Conference"
+      "headline": "Relvan Software confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a conference is a standard industry event with minimal direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems launches next-generation supply chain optimization platform"
+      "headline": "Prynis Systems launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform creates potential for revenue growth, though adoption rates remain to be seen.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software completes strategic acquisition to strengthen enterprise software"
+      "headline": "Relvan Software completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Acquisitions are strategic moves that aim to strengthen market position but carry inherent integration and execution risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:15.871Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

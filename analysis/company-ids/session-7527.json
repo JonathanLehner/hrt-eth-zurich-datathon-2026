@@ -48,28 +48,79 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports 5% decline in operating income"
+      "headline": "Ulvon Renewables reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and investor sentiment in the short term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports 5% increase in customer acquisition"
+      "headline": "Urvel Grid reports 5% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "Increased customer acquisition signals growth and improved market share, which is generally positive for valuation.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $75M contract with a major logistics provider"
+      "headline": "Plevik Energy secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost that will likely persist throughout the 100-day window.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid wins industry award for excellence in automated logistics"
+      "headline": "Urvel Grid wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but have a less direct and quantifiable impact on financial performance compared to contracts.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:40.848Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

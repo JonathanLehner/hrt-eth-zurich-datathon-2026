@@ -50,35 +50,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $250M contract with a major logistics provider"
+      "headline": "Plevum Partners secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, immediate, and durable revenue boost for Plevum Partners.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets sees 15% margin improvement in latest quarter"
+      "headline": "Frelex Outlets sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement indicates strong operational efficiency gains that will likely persist through the quarter.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees 7% drop in new customer orders this quarter"
+      "headline": "Plevum Partners sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders signals a direct negative impact on revenue growth potential.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Yorval Partners warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a major region create immediate operational headwinds with uncertain resolution timelines.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports 15% increase in customer acquisition"
+      "headline": "Frelex Outlets reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong positive indicator for future revenue growth and market share.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:48.791Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

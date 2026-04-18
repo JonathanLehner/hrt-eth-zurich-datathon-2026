@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Orevar Marketplace reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% indicates strong operational momentum and market demand for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace signs multi-year partnership with an international consortium"
+      "headline": "Orevar Marketplace signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic expansion opportunities.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $400M contract with a national infrastructure agency"
+      "headline": "Strynal Industries secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $400M infrastructure contract provides a significant and concrete boost to future revenue.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces significant capital expenditure plan for Latin America"
+      "headline": "Nerven Grid announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Increased capital expenditure signals growth investment but implies near-term cash outflow and potential execution risk.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 20% margin improvement in latest quarter"
+      "headline": "Jorvis Fuels sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement directly enhances profitability and is a strong positive signal for financial health.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces $9.6B share buyback program"
+      "headline": "Nerven Grid announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A massive $9.6B share buyback program is a direct positive signal for shareholder value and capital allocation.",
+        "longTerm": 5,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace misses quarterly revenue estimates by 12%"
+      "headline": "Orevar Marketplace misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 12% is a significant negative indicator of current market performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:04.078Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

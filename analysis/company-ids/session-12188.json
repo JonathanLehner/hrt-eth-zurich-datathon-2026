@@ -58,28 +58,79 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital signs multi-year partnership with an international consortium"
+      "headline": "Zelvel Capital signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "The multi-year partnership provides long-term revenue visibility and strategic growth potential for Zelvel Capital.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group enters joint venture with a multinational manufacturer"
+      "headline": "Varvov Retail Group enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A joint venture with a multinational manufacturer suggests potential operational synergies and market expansion for Varvov Retail Group.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace sees 12% drop in new customer orders this quarter"
+      "headline": "Orevar Marketplace sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders is a direct negative indicator of slowing demand and potential revenue contraction for Orevar Marketplace.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets files for regulatory approval of new process automation offering"
+      "headline": "Frelex Outlets files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates future product potential but lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:38.553Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

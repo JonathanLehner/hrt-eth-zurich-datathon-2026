@@ -53,49 +53,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips opens new office in Scandinavia"
+      "headline": "Brevon Microchips opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a minor operational expansion that typically has negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports unexpected decline in North America revenue"
+      "headline": "Myrnon Therapeutics reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue is a direct negative signal for financial performance and investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences CEO steps down unexpectedly citing personal reasons"
+      "headline": "Zelvon Biosciences CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "Unexpected CEO departures create significant leadership instability and uncertainty regarding future strategic direction.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics enters joint venture with a global retailer"
+      "headline": "Myrnon Therapeutics enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests potential for new market access and revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Zelvon Biosciences reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 18% is a strong positive indicator of current business momentum.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $650M contract with a top-tier research institute"
+      "headline": "Zelvon Biosciences secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant, concrete revenue visibility and validation of the business model.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences revises long-term strategy with focus on enterprise software"
+      "headline": "Zelvon Biosciences revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "A strategic pivot to enterprise software introduces significant execution risk and uncertainty regarding the company's core competency.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:30.506Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

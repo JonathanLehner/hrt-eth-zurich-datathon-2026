@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports 12% decline in operating income"
+      "headline": "Plevep Power reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power schedules annual shareholder meeting for next month"
+      "headline": "Kelvik Power schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Scheduling an annual shareholder meeting is a standard corporate governance event with no inherent financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 0,
+        "shortTermUncertainty": 0,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions files routine patent applications in wireless connectivity"
+      "headline": "Wyrnor Solutions files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations that do not provide immediate financial gain or competitive advantage.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing publishes annual sustainability report"
+      "headline": "Dralol Computing publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "Publishing a sustainability report is a non-financial disclosure that typically has neutral impact on short-term stock performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power begins scheduled maintenance of enterprise software systems"
+      "headline": "Kelvik Power begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and does not imply financial disruption.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to host investor day focused on supply chain optimization strategy"
+      "headline": "Plevep Power to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day to discuss supply chain optimization suggests a proactive management approach, though the actual financial benefit remains speculative.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power revises long-term strategy with focus on process automation"
+      "headline": "Plevep Power revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward process automation indicates a long-term focus on cost reduction, but lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $180M contract with a multinational manufacturer"
+      "headline": "Wyrnor Solutions secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides clear, tangible revenue growth and positive financial momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:51.950Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

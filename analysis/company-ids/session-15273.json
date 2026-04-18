@@ -52,42 +52,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co to host investor day focused on precision manufacturing strategy"
+      "headline": "Jorval Trading Co to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that rarely trigger immediate material financial shifts.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $800M contract with a multinational manufacturer"
+      "headline": "Jorval Trading Co secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "An $800M contract provides a clear, significant, and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace misses quarterly revenue estimates by 5%"
+      "headline": "Arnos Marketplace misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates immediate operational weakness and typically triggers a negative market reaction.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace to present at Corporate Strategy Symposium"
+      "headline": "Arnos Marketplace to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a standard corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries loses key contract in Middle East to competitor"
+      "headline": "Strynal Industries loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts future revenue and signals competitive disadvantage.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $500M contract with a leading cloud platform"
+      "headline": "Arnos Marketplace secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract is a substantial positive development that bolsters revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:53.498Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

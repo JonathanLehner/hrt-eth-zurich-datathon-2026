@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group delays product launch in precision manufacturing segment"
+      "headline": "Jovik Asset Group delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch typically signals operational friction or market readiness issues, negatively impacting investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Zelvel Capital announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "Capital expenditure plans indicate long-term growth investment but often weigh on short-term cash flow and margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group opens new office in Middle East"
+      "headline": "Jovik Asset Group opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Geographic expansion is a positive signal for future revenue growth, though the immediate financial impact is usually minimal.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces breakthrough in renewable storage"
+      "headline": "Zelvel Capital announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in a high-growth sector like renewable storage is a strong positive catalyst for valuation.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $75M contract with a multinational manufacturer"
+      "headline": "Zelvel Capital secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a specific $75M contract provides immediate, quantifiable revenue visibility and validates market demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group begins scheduled maintenance of cloud infrastructure systems"
+      "headline": "Jovik Asset Group begins scheduled maintenance of cloud infrastructure systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems enters joint venture with a global retailer"
+      "headline": "Prynis Systems enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests a strategic partnership that could open new distribution channels.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments wins industry award for excellence in enterprise software"
+      "headline": "Halven Investments wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into direct, measurable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:16.785Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

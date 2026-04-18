@@ -54,49 +54,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs board meeting to discuss major strategic initiative"
+      "headline": "Crevex Labs board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "A board meeting to discuss a strategic initiative is speculative and lacks concrete details on the nature or outcome of the plan.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software explores strategic alternatives for supply chain optimization unit"
+      "headline": "Frelol Software explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals potential divestiture or restructuring, which creates moderate uncertainty regarding future operations.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software faces class action over supply chain optimization service disruption"
+      "headline": "Frelol Software faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability that can weigh on sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software expands operations into Central Europe markets"
+      "headline": "Frelol Software expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a clear growth signal that typically provides long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $800M contract with a major logistics provider"
+      "headline": "Ulvyn Microchips secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides immediate, tangible evidence of revenue growth and market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips to host investor day focused on wireless connectivity strategy"
+      "headline": "Ulvyn Microchips to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a standard corporate event that rarely moves the needle significantly without specific new disclosures.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $800M contract with a global retailer"
+      "headline": "Crevex Labs secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A major $800M contract win is a significant positive catalyst for revenue and market positioning.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:21.076Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

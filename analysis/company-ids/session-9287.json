@@ -63,49 +63,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs launches next-generation supply chain optimization platform"
+      "headline": "Yorven Labs launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "The launch of a new platform provides a clear product expansion opportunity that could drive future revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks wins industry award for excellence in enterprise software"
+      "headline": "Halvax Networks wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but rarely translate into immediate or significant financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Prynis Systems warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create a direct and measurable negative impact on operational output and revenue.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs misses quarterly revenue estimates by 12%"
+      "headline": "Yorven Labs misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A 12% revenue miss is a significant negative indicator of current business performance that typically triggers immediate market repricing.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs CFO steps down unexpectedly citing personal reasons"
+      "headline": "Yorven Labs CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate uncertainty regarding financial oversight and internal stability.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $320M contract with a major logistics provider"
+      "headline": "Frelol Software secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a concrete, high-value revenue stream that strengthens the company's financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports unexpected decline in Scandinavia revenue"
+      "headline": "Yorven Labs reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional market suggests potential underlying demand issues that may persist.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:47.501Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -38,28 +38,79 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce announces $9.6B share buyback program"
+      "headline": "Arnik Commerce announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program directly increases earnings per share and signals management confidence in the company's financial health.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods sees 15% drop in new customer orders this quarter"
+      "headline": "Xovol Goods sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a significant decline in demand that will likely pressure revenue growth in the coming quarters.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods CTO addresses investor concerns in open letter"
+      "headline": "Xovol Goods CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO is a reactive measure to investor concerns, which provides little concrete information to change the fundamental outlook.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce CEO steps down unexpectedly citing personal reasons"
+      "headline": "Arnik Commerce CEO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CEO creates immediate leadership instability and uncertainty regarding the company's strategic direction.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:59.523Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

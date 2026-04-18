@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees 8% margin improvement in latest quarter"
+      "headline": "Grevel Diagnostics sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates direct operational efficiency gains that typically boost profitability immediately and sustain through the quarter.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees 15% drop in new customer orders this quarter"
+      "headline": "Relvon Fuels sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders signals a significant decline in demand that will likely pressure revenue growth throughout the quarter.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels signs multi-year partnership with a top-tier research institute"
+      "headline": "Relvon Fuels signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership is a positive strategic development, though the immediate financial impact is often limited until projects materialize.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics names new head of data analytics division"
+      "headline": "Calvos Genomics names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with minimal immediate financial impact until the individual's strategy is implemented.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen digital payments"
+      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Acquisitions provide long-term strategic value but often involve short-term integration costs and uncertainty regarding immediate financial contribution.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels secures $120M contract with an international consortium"
+      "headline": "Relvon Fuels secures $120M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides clear, quantifiable revenue visibility that will positively impact financial performance over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics expands operations into Middle East markets"
+      "headline": "Calvos Genomics expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets offers long-term growth potential but typically incurs upfront costs that may dampen short-term earnings.",
+        "longTerm": 5,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:58.672Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

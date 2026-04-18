@@ -54,49 +54,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $250M contract with a top-tier research institute"
+      "headline": "Halvix Holdings secures $250M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $250M contract provides a clear, immediate, and durable revenue stream for Halvix Holdings.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors recalls products in data analytics line due to quality concerns"
+      "headline": "Zrovov Advisors recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational failure and potential reputational damage that may persist.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $180M contract with an international consortium"
+      "headline": "Zrovov Advisors secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides a significant and positive financial boost for Zrovov Advisors.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports unexpected decline in Middle East revenue"
+      "headline": "Ervan Capital reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region signals potential structural or demand issues for Ervan Capital.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors opens new office in Middle East"
+      "headline": "Zrovov Advisors opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Expanding into a new region is a strategic move that typically incurs costs before generating long-term growth.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 15% drop in new customer orders this quarter"
+      "headline": "Halvix Holdings sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a direct negative indicator of future revenue growth for Halvix Holdings.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports 25% decline in operating income"
+      "headline": "Ervan Capital reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative financial event that directly impacts profitability.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:07.673Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing names new head of wireless connectivity division"
+      "headline": "Talvep Computing names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing misses quarterly revenue estimates by 8%"
+      "headline": "Talvep Computing misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss is a significant negative indicator that typically triggers immediate downward price pressure.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $400M contract with a major logistics provider"
+      "headline": "Ulvon Renewables secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides clear, tangible revenue growth and positive sentiment for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Talvep Computing reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth, even at a modest 3% year-over-year, is a positive signal of business health.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing faces regulatory review of digital payments practices"
+      "headline": "Dralol Computing faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential legal or operational costs that weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports rising costs pressuring margins in enterprise software"
+      "headline": "Dralol Computing reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for near-term financial performance.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:51.750Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

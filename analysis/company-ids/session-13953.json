@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Frelis Genomics warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces $9.6B share buyback program"
+      "headline": "Frelis Genomics announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support to earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics completes strategic acquisition to strengthen enterprise software"
+      "headline": "Calvos Genomics completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The acquisition of software capabilities is a strategic move to diversify revenue streams, though integration outcomes remain to be seen.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 10% increase in customer acquisition"
+      "headline": "Crevol Retail Group reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A double-digit increase in customer acquisition is a strong indicator of growth momentum and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics secures $50M contract with a top-tier research institute"
+      "headline": "Calvos Genomics secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a contract with a top-tier institute provides stable, high-quality revenue and validates the company's service offering.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports unexpected decline in Asia Pacific revenue"
+      "headline": "Relvos Biosciences reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market segment signals potential structural or competitive issues.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Frelis Genomics reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth, even if modest, confirms the company's ability to scale and maintain market position.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:45.712Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

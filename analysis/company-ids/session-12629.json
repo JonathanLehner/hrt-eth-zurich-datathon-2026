@@ -62,42 +62,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports unexpected decline in Central Europe revenue"
+      "headline": "Dralol Computing reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural demand issues for Dralol Computing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $75M contract with a global retailer"
+      "headline": "Ulvyn Microchips secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost for Ulvyn Microchips.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs opens new office in Southeast Asia"
+      "headline": "Yorven Labs opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a strategic expansion move that typically incurs costs before generating significant revenue.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks expands operations into Europe markets"
+      "headline": "Jovor Networks expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into European markets represents a growth opportunity for Jovor Networks, though the immediate financial impact is speculative.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing sees 18% margin improvement in latest quarter"
+      "headline": "Dralol Computing sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement indicates strong operational efficiency gains for Dralol Computing.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks loses key contract in Latin America to competitor"
+      "headline": "Jovor Networks loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts Jovor Networks' revenue and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:55.493Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

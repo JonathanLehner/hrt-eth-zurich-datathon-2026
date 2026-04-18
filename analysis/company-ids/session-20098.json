@@ -62,42 +62,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees 3% margin improvement in latest quarter"
+      "headline": "Ervan Capital sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates direct operational efficiency gains that typically lead to immediate positive market sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics reports rising costs pressuring margins in renewable storage"
+      "headline": "Jorvix Diagnostics reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs in a specific business segment directly threaten profitability and are likely to cause immediate downward pressure on stock price.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital CEO addresses investor concerns in open letter"
+      "headline": "Ervan Capital CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CEO is a reactive measure that creates ambiguity regarding the severity of the underlying investor concerns.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities launches next-generation enterprise software platform"
+      "headline": "Jorvyl Securities launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a new software platform is a positive growth signal, though the actual revenue impact remains to be seen over the coming months.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Ilval Financial announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth ambition but implies immediate cash outflow and potential short-term margin dilution.",
+        "longTerm": 5,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities explores strategic alternatives for automated logistics unit"
+      "headline": "Jorvyl Securities explores strategic alternatives for automated logistics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague corporate action that creates significant uncertainty regarding the future of the logistics unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:09.883Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group faces class action over supply chain optimization service disruption"
+      "headline": "Varvov Retail Group faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage to the company's service reliability.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group enters joint venture with an international consortium"
+      "headline": "Varvov Retail Group enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "A joint venture suggests strategic expansion and potential revenue growth, though the specific financial impact remains undefined.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group loses key contract in Central Europe to competitor"
+      "headline": "Crevol Retail Group loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences sees 10% drop in new customer orders this quarter"
+      "headline": "Wyrnik Sciences sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a clear negative signal regarding current demand and growth trajectory.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $800M contract with a global retailer"
+      "headline": "Joval Brands secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides significant, concrete revenue visibility and positive momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences names new head of digital payments division"
+      "headline": "Wyrnik Sciences names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change with unclear immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports unexpected decline in Scandinavia revenue"
+      "headline": "Joval Brands reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals potential operational or market-specific headwinds.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:45.891Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

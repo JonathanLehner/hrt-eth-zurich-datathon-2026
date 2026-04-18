@@ -53,49 +53,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips loses key contract in Middle East to competitor"
+      "headline": "Brevon Microchips loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue projections and competitive positioning.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips completes strategic acquisition to strengthen automated logistics"
+      "headline": "Brevon Microchips completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Acquisitions provide strategic growth potential but often involve integration costs and execution risks.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips misses quarterly revenue estimates by 12%"
+      "headline": "Ulvyn Microchips misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "A significant revenue miss indicates underlying demand or operational issues that typically trigger immediate negative sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports 10% increase in customer acquisition"
+      "headline": "Brevon Microchips reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "Increased customer acquisition is a clear positive indicator of market demand and growth momentum.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $650M contract with an international consortium"
+      "headline": "Nerval Biopharma secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips names new head of digital payments division"
+      "headline": "Brevon Microchips names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division create uncertainty regarding future strategy and operational direction.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma delays product launch in enterprise software segment"
+      "headline": "Nerval Biopharma delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "A product launch delay postpones expected revenue and may signal internal development challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:12.711Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

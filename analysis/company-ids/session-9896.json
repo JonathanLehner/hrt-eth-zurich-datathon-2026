@@ -64,49 +64,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors sees 7% drop in new customer orders this quarter"
+      "headline": "Zrovov Advisors sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates a direct decline in demand that will likely impact revenue growth for the remainder of the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces $1.2B share buyback program"
+      "headline": "Zrovov Advisors announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program provides immediate support for the stock price and signals management confidence in capital allocation.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Ilval Financial Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a COO creates immediate leadership instability and raises questions about internal operational continuity.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group files for regulatory approval of new digital payments offering"
+      "headline": "Holtum Asset Group files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the timeline for actual revenue generation remains uncertain.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group misses quarterly revenue estimates by 3%"
+      "headline": "Holtum Asset Group misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% is a negative indicator of operational performance that typically triggers a downward adjustment in valuation.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial faces regulatory review of process automation practices"
+      "headline": "Ilval Financial faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "A regulatory review of internal practices introduces significant legal and operational risk that could lead to fines or forced process changes.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies files for regulatory approval of new precision manufacturing offering"
+      "headline": "Myrnep Technologies files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval of a new offering signals potential future growth, though the outcome of the approval process is not guaranteed.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:09.723Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

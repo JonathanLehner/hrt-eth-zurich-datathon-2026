@@ -54,56 +54,147 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees 15% margin improvement in latest quarter"
+      "headline": "Jorvis Fuels sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement directly indicates increased profitability and operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $180M contract with a global retailer"
+      "headline": "Zrovex Industries secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a clear, immediate revenue boost and validates market competitiveness.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $500M contract with a global retailer"
+      "headline": "Zrovex Industries secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $500M contract represents a significant revenue event that will positively impact financial performance for multiple quarters.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels secures $500M contract with a multinational manufacturer"
+      "headline": "Jorvis Fuels secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "The $500M contract win provides a substantial and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports strong demand in Latin America, raises outlook"
+      "headline": "Ilval Financial reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand signals sustained growth potential.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels signs multi-year partnership with a national infrastructure agency"
+      "headline": "Jorvis Fuels signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides long-term revenue stability and strategic positioning.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports 12% decline in operating income"
+      "headline": "Jorvis Fuels reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a direct negative indicator of current operational performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels recalls products in digital payments line due to quality concerns"
+      "headline": "Jorvis Fuels recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall introduces immediate financial costs and potential reputational damage that may persist.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:16.179Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

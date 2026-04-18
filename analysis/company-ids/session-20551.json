@@ -54,49 +54,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports unexpected decline in Middle East revenue"
+      "headline": "Dralol Computing reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional revenue stream signals potential structural or demand issues for Dralol Computing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems faces class action over data analytics service disruption"
+      "headline": "Prynis Systems faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal and financial risk that typically weighs on sentiment until resolved.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports strong demand in North America, raises outlook"
+      "headline": "Halvax Networks reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a direct positive indicator for future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing faces class action over supply chain optimization service disruption"
+      "headline": "Dralol Computing faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A second class action lawsuit regarding service disruption creates significant reputational and operational uncertainty for Dralol Computing.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks CFO addresses investor concerns in open letter"
+      "headline": "Halvax Networks CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CFO is a reactive measure that highlights existing investor anxiety without providing concrete financial data.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks launches next-generation renewable storage platform"
+      "headline": "Halvax Networks launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform suggests potential for future revenue growth and market expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports 5% decline in operating income"
+      "headline": "Prynis Systems reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and suggests margin pressure or rising costs.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:26.839Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

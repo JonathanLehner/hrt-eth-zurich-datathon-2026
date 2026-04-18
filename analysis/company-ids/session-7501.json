@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources to present at Annual Industry Forum"
+      "headline": "Kelvos Resources to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources delays product launch in process automation segment"
+      "headline": "Kelvos Resources delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly impacts revenue realization and suggests potential operational or development friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy faces regulatory review of enterprise software practices"
+      "headline": "Plevik Energy faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential long-term legal or operational costs for the company.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Holtar Stores warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region indicate immediate operational headwinds and potential margin pressure.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $50M contract with a multinational manufacturer"
+      "headline": "Plevik Energy secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive, and quantifiable boost to revenue expectations.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy files routine patent applications in process automation"
+      "headline": "Plevik Energy files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business maintenance and do not provide immediate financial impact or competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Orevov Solutions recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall carries immediate negative financial impact through costs and potential long-term brand or market share damage.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:40.795Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

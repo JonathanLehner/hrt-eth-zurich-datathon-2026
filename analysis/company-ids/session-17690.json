@@ -54,49 +54,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Jovor Networks reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 5% indicates solid operational performance and positive momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces breakthrough in supply chain optimization"
+      "headline": "Talvep Computing announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential cost savings or efficiency gains, though the financial impact is not yet quantified.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips opens new office in Scandinavia"
+      "headline": "Brevon Microchips opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard expansion move that typically incurs costs before generating revenue.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing to host investor day focused on data analytics strategy"
+      "headline": "Talvep Computing to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event intended to communicate future plans rather than immediate financial results.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing sees 20% margin improvement in latest quarter"
+      "headline": "Talvep Computing sees 20% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 20% margin improvement is a significant positive indicator of increased profitability and operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks files routine patent applications in data analytics"
+      "headline": "Jovor Networks files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or guaranteed financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 8% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a clear negative signal regarding demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:41.548Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

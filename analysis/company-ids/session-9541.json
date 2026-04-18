@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Kelvos Resources reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 8% indicates strong operational performance and positive momentum.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $75M contract with a national infrastructure agency"
+      "headline": "Xelvol Biotech secures $75M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, immediate revenue boost and validates the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma loses key contract in Europe to competitor"
+      "headline": "Nerval Biopharma loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor represents a direct loss of revenue and market share.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 6,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences signs multi-year partnership with an international consortium"
+      "headline": "Relvos Biosciences signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests long-term strategic alignment and potential for recurring revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 10,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma expands operations into Scandinavia markets"
+      "headline": "Nerval Biopharma expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new geographic markets signals growth potential but involves initial execution and setup costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $120M contract with a global retailer"
+      "headline": "Nerval Biopharma secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $120M contract with a global retailer is a significant revenue driver that strengthens the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences files routine patent applications in process automation"
+      "headline": "Relvos Biosciences files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities and do not provide immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $180M contract with a multinational manufacturer"
+      "headline": "Xelvol Biotech secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides substantial revenue visibility and reinforces the company's growth trajectory.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:56.989Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -65,56 +65,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Halven Investments completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition of a precision manufacturing firm provides a clear strategic expansion for Halven Investments.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 12% decline in operating income"
+      "headline": "Krevan Investments reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a direct negative indicator of financial performance for Krevan Investments.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $50M contract with a leading cloud platform"
+      "headline": "Jovor Networks secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides immediate revenue visibility and validates Jovor Networks' market position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital lowers full-year guidance amid softening demand"
+      "headline": "Ervan Capital lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a significant negative signal for Ervan Capital's near-term outlook.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments faces regulatory review of renewable storage practices"
+      "headline": "Halven Investments faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential legal and operational risks for Halven Investments' renewable storage business.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital to host investor day focused on process automation strategy"
+      "headline": "Ervan Capital to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on automation is a neutral event that aims to improve market sentiment but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments delays product launch in cloud infrastructure segment"
+      "headline": "Halven Investments delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in the cloud segment negatively impacts revenue growth expectations for Halven Investments.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments to present at Annual Industry Forum"
+      "headline": "Halven Investments to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity that typically has negligible impact on stock performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:49.502Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

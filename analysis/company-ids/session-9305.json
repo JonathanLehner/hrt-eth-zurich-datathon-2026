@@ -65,56 +65,147 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports strong demand in Europe, raises outlook"
+      "headline": "Calvis Sciences reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised guidance provide a clear positive signal for near-term and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co loses key contract in Middle East to competitor"
+      "headline": "Jorval Trading Co loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct negative impact on revenue that will likely persist throughout the 100-day window.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co completes planned facility upgrade in Asia Pacific"
+      "headline": "Jorval Trading Co completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that typically yields efficiency gains over time rather than immediate revenue spikes.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics wins industry award for excellence in renewable storage"
+      "headline": "Zelvix Therapeutics wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct, quantifiable financial impact on the company's bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics enters joint venture with a national infrastructure agency"
+      "headline": "Zelvix Therapeutics enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests long-term strategic growth and potential revenue stability.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Zelvix Therapeutics announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure indicates future growth investment but represents an immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports strong demand in Europe, raises outlook"
+      "headline": "Relvos Biosciences reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and raised guidance are fundamental positive indicators for the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics faces class action over supply chain optimization service disruption"
+      "headline": "Zelvix Therapeutics faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that creates immediate and lingering uncertainty.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:48.425Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

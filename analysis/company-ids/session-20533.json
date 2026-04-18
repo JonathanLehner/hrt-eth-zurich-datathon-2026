@@ -63,49 +63,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $650M contract with a global retailer"
+      "headline": "Zrovex Industries secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "The $650M contract provides a clear, significant revenue boost that will positively impact financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources sees 10% margin improvement in latest quarter"
+      "headline": "Nolvol Resources sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates immediate operational efficiency gains that are likely to persist through the quarter.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports unexpected decline in Latin America revenue"
+      "headline": "Wyrnor Solutions reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region signals immediate financial weakness and potential ongoing performance issues.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces regulatory review of automated logistics practices"
+      "headline": "Talvix Holdings faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential operational friction, though the ultimate financial impact remains speculative.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports strong demand in Scandinavia, raises outlook"
+      "headline": "Talvix Holdings reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand provides a clear positive signal for both near-term and medium-term growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings launches next-generation automated logistics platform"
+      "headline": "Talvix Holdings launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive strategic move, but the immediate financial contribution is often delayed and uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings signs multi-year partnership with a leading cloud platform"
+      "headline": "Talvix Holdings signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term stability and growth potential, though the immediate financial impact is likely modest.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:26.841Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

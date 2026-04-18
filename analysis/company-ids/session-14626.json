@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports 5% decline in operating income"
+      "headline": "Halvax Networks reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and investor sentiment in the short term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software loses key contract in Europe to competitor"
+      "headline": "Relvan Software loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports strong demand in Middle East, raises outlook"
+      "headline": "Brevep Systems reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and a raised outlook are strong positive indicators for future financial performance.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software announces breakthrough in digital payments"
+      "headline": "Relvan Software announces breakthrough in digital payments",
+      "sentiment": {
+        "reasoning": "A technological breakthrough suggests potential for future revenue growth and market differentiation.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 15,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing to host investor day focused on supply chain optimization strategy"
+      "headline": "Talvep Computing to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but no immediate financial change.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software raises full-year guidance citing robust demand"
+      "headline": "Relvan Software raises full-year guidance citing robust demand",
+      "sentiment": {
+        "reasoning": "Raising full-year guidance based on robust demand is a clear positive signal for financial health.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 5% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates better operational efficiency and higher profitability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing opens new office in North America"
+      "headline": "Talvep Computing opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office is a sign of expansion, though the immediate financial impact is limited.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:29.708Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

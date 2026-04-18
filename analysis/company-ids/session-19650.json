@@ -36,21 +36,62 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores reports strong demand in Europe, raises outlook"
+      "headline": "Xovep Stores reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees mixed results in wireless connectivity pilot program"
+      "headline": "Talvyn Goods sees mixed results in wireless connectivity pilot program",
+      "sentiment": {
+        "reasoning": "The term mixed results creates significant ambiguity regarding the actual financial success or failure of the pilot program.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $320M contract with an international consortium"
+      "headline": "Talvyn Goods secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large, specific dollar-value contract provides a concrete and durable boost to revenue expectations.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:53.052Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Holtum Asset Group begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $180M contract with a top-tier research institute"
+      "headline": "Holtar Stores secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract provides a clear, positive revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners recalls products in digital payments line due to quality concerns"
+      "headline": "Yorval Partners recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core business line creates immediate negative sentiment and potential financial liability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces $2.5B share buyback program"
+      "headline": "Creven Securities announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program is a direct signal of capital allocation that typically boosts earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $50M contract with a major logistics provider"
+      "headline": "Holtum Asset Group secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "The $50M contract win represents a positive, concrete addition to the company's revenue pipeline.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities announces breakthrough in supply chain optimization"
+      "headline": "Creven Securities announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential cost savings, though the exact financial impact remains speculative.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:32.468Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

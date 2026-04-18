@@ -66,56 +66,147 @@
       "barIx": 31,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma completes planned facility upgrade in Europe"
+      "headline": "Zrovum Biopharma completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "The completion of a facility upgrade is a routine operational milestone that improves capacity but does not immediately impact revenue.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies reports 15% decline in operating income"
+      "headline": "Myrnep Technologies reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a direct negative indicator of financial health that will likely weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks recalls products in automated logistics line due to quality concerns"
+      "headline": "Halvax Networks recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational costs and potential reputational damage that can persist as the scope of the issue is assessed.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma launches next-generation enterprise software platform"
+      "headline": "Zrovum Biopharma launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "Launching a new software platform provides a potential growth catalyst, though the actual revenue impact depends on market adoption.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks enters joint venture with a global retailer"
+      "headline": "Halvax Networks enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests a strategic expansion of market reach and potential long-term revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces significant capital expenditure plan for Latin America"
+      "headline": "Dralol Computing announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but may temporarily pressure cash flow in the short term.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma names new head of automated logistics division"
+      "headline": "Zrovum Biopharma names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that typically has neutral immediate impact until strategic shifts are announced.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing faces class action over automated logistics service disruption"
+      "headline": "Dralol Computing faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that creates significant uncertainty for the company's outlook.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:53.583Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

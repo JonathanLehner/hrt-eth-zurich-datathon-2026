@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics delays product launch in precision manufacturing segment"
+      "headline": "Grevel Diagnostics delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and signals potential operational or technical hurdles.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports record quarterly revenue, up 18% year-over-year"
+      "headline": "Grevon Biotech reports record quarterly revenue, up 18% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 18% is a strong positive indicator of market demand and operational success.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Calvis Sciences announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth strategy but implies immediate cash outflow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees 15% margin improvement in latest quarter"
+      "headline": "Ilval Financial sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement demonstrates strong operational efficiency and profitability gains.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Grevon Biotech recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate financial costs and potential reputational damage that may persist.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen renewable storage"
+      "headline": "Grevel Diagnostics completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term value, though the immediate impact is often neutral or slightly negative due to integration costs.",
+        "longTerm": 3,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial sees 8% margin improvement in latest quarter"
+      "headline": "Ilval Financial sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement is a positive signal of operational efficiency, though less impactful than the previous 15% report.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences wins industry award for excellence in wireless connectivity"
+      "headline": "Calvis Sciences wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand validation but have limited direct financial impact on the company's bottom line.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:10.770Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -51,42 +51,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners begins scheduled maintenance of process automation systems"
+      "headline": "Plevum Partners begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities delays product launch in data analytics segment"
+      "headline": "Creven Securities delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch suggests a setback in revenue generation and potential competitive disadvantage.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Krevan Investments reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 20% is a strong positive indicator of business momentum and financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Plevum Partners completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition of cloud infrastructure assets is a strategic move intended to enhance long-term capabilities and market positioning.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $650M contract with a leading cloud platform"
+      "headline": "Plevum Partners secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant, concrete revenue visibility and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners to present at Corporate Strategy Symposium"
+      "headline": "Plevum Partners to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a symposium is a standard corporate communication activity that rarely results in immediate or lasting financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:37.172Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

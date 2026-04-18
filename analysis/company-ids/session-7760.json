@@ -50,35 +50,96 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments confirms participation in Corporate Strategy Symposium"
+      "headline": "Halven Investments confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a corporate strategy symposium is a routine networking event with no direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co sees mixed results in cloud infrastructure pilot program"
+      "headline": "Pleven Trading Co sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the success and scalability of the cloud infrastructure initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $180M contract with a multinational manufacturer"
+      "headline": "Pleven Trading Co secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides a clear, positive, and material revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Wrelal Financial begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a standard operational procedure that is expected and typically has no material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial warns of supply chain disruptions affecting North America operations"
+      "headline": "Wrelal Financial warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions in a major market suggests immediate operational headwinds and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:50.101Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

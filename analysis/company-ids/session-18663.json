@@ -52,42 +52,113 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital explores strategic alternatives for renewable storage unit"
+      "headline": "Ervan Capital explores strategic alternatives for renewable storage unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential sale or restructuring, which creates immediate speculative interest but long-term uncertainty regarding the outcome.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces significant capital expenditure plan for North America"
+      "headline": "Jorvyl Securities announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates growth investment, though it implies near-term cash outflows that may weigh on short-term sentiment.",
+        "longTerm": 5,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces significant capital expenditure plan for North America"
+      "headline": "Jorvyl Securities announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "This is a duplicate of the previous announcement, suggesting no new material information and thus minimal market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors files for regulatory approval of new renewable storage offering"
+      "headline": "Zrovov Advisors files for regulatory approval of new renewable storage offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress toward a product launch but carries inherent regulatory uncertainty.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors revises long-term strategy with focus on data analytics"
+      "headline": "Zrovov Advisors revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot toward data analytics suggests a long-term shift in business model, which typically lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Ervan Capital reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a direct positive signal for financial performance that typically drives immediate and sustained investor confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:16.879Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

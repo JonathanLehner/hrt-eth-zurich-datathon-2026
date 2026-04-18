@@ -50,35 +50,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $50M contract with a global retailer"
+      "headline": "Kelvos Resources secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides immediate revenue visibility and confirms market demand for Kelvos Resources.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Dralol Computing files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that indicates progress but does not guarantee immediate financial gain.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 10% drop in new customer orders this quarter"
+      "headline": "Ulvyn Microchips sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative signal regarding current demand and future revenue growth.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing signs multi-year partnership with a top-tier research institute"
+      "headline": "Dralol Computing signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a research institute suggests long-term innovation potential but lacks immediate financial impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Kelvos Resources reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% provides strong validation of the company's current operational performance.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:32.246Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

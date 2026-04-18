@@ -66,56 +66,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees 10% margin improvement in latest quarter"
+      "headline": "Halvix Holdings sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement indicates strong operational efficiency and immediate profitability gains.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors wins industry award for excellence in data analytics"
+      "headline": "Plevyl Advisors wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but lack direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors sees 10% margin improvement in latest quarter"
+      "headline": "Plevyl Advisors sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "Margin expansion directly correlates to improved bottom-line performance and investor sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $400M contract with a major logistics provider"
+      "headline": "Krevan Investments secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $400M contract represents a significant, concrete revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments names new head of digital payments division"
+      "headline": "Krevan Investments names new head of digital payments division",
+      "sentiment": {
+        "reasoning": "Leadership changes introduce strategic uncertainty until the new executive's vision is implemented.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $50M contract with a multinational manufacturer"
+      "headline": "Plevyl Advisors secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive boost to revenue expectations.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files for regulatory approval of new supply chain optimization offering"
+      "headline": "Krevan Investments files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Regulatory filings are a necessary step for product expansion but do not guarantee immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices revises long-term strategy with focus on supply chain optimization"
+      "headline": "Nolvis Devices revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic pivots are high-level announcements that lack immediate financial quantification or execution certainty.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:07.959Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

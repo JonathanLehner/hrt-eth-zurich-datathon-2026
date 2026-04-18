@@ -62,42 +62,113 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners delays product launch in supply chain optimization segment"
+      "headline": "Yorval Partners delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly impacts revenue realization and market positioning in the short term.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces breakthrough in wireless connectivity"
+      "headline": "Nerven Grid announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough provides a positive catalyst for market sentiment and potential future competitive advantage.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings revises long-term strategy with focus on precision manufacturing"
+      "headline": "Talvix Holdings revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic pivots are high-level shifts that lack immediate financial quantification, leading to market ambiguity.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $320M contract with a global retailer"
+      "headline": "Jorvyl Securities secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate, quantifiable revenue visibility and positive market impact.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid signs multi-year partnership with a multinational manufacturer"
+      "headline": "Nerven Grid signs multi-year partnership with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership signals stable, recurring revenue growth and long-term operational validation.",
+        "longTerm": 8,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners faces regulatory review of data analytics practices"
+      "headline": "Yorval Partners faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant downside risk and uncertainty regarding future operational compliance and costs.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:57.614Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

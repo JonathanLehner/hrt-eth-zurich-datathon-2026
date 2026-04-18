@@ -36,21 +36,62 @@
       "barIx": 23,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs misses quarterly revenue estimates by 25%"
+      "headline": "Yorven Labs misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss indicates immediate operational weakness and likely negative sentiment for the upcoming quarter.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital announces $5.7B share buyback program"
+      "headline": "Zelvel Capital announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price through increased demand.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital confirms participation in Corporate Strategy Symposium"
+      "headline": "Zelvel Capital confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a corporate strategy symposium is a routine industry event that lacks specific actionable news or financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:53.417Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

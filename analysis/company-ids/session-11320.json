@@ -66,56 +66,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments recalls products in data analytics line due to quality concerns"
+      "headline": "Halven Investments recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational costs and potential reputational damage that may persist throughout the quarter.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group loses key contract in Latin America to competitor"
+      "headline": "Holtum Asset Group loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct revenue hit with negative implications for market share in the region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $400M contract with a global retailer"
+      "headline": "Halven Investments secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, positive revenue catalyst that will likely bolster financial performance over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Crevex Labs warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions create immediate operational headwinds and uncertainty regarding revenue realization in the affected region.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs confirms participation in Corporate Strategy Symposium"
+      "headline": "Crevex Labs confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a routine corporate event with negligible direct impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports 3% decline in operating income"
+      "headline": "Ervan Capital reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative signal regarding the company's current profitability and efficiency.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments completes strategic acquisition to strengthen data analytics"
+      "headline": "Halven Investments completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "An acquisition to strengthen a core business segment is a strategic move that typically signals long-term growth potential despite short-term integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital announces major organizational restructuring"
+      "headline": "Ervan Capital announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Major organizational restructuring often signals underlying issues and creates significant uncertainty regarding future execution and cost structures.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:02.199Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

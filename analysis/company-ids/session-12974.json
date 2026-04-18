@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources reports 10% decline in operating income"
+      "headline": "Nolvol Resources reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power board meeting to discuss major strategic initiative"
+      "headline": "Kelvik Power board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The announcement of a board meeting to discuss a major strategic initiative is vague and lacks actionable details regarding the nature or outcome of the strategy.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries opens new office in Southeast Asia"
+      "headline": "Zrovex Industries opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a minor operational expansion that typically incurs costs before generating revenue.",
+        "longTerm": 2,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports strong demand in Latin America, raises outlook"
+      "headline": "Zrovex Industries reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are clear positive indicators of improved financial performance and growth trajectory.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power sees mixed results in process automation pilot program"
+      "headline": "Kelvik Power sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the efficacy and scalability of the new process.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources completes strategic acquisition to strengthen data analytics"
+      "headline": "Nolvol Resources completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to enhance data analytics capabilities is a positive move for long-term competitive positioning.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:07.976Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

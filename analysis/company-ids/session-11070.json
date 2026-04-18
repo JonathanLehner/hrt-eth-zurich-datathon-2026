@@ -36,21 +36,62 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners announces significant capital expenditure plan for Europe"
+      "headline": "Plevum Partners announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $320M contract with a multinational manufacturer"
+      "headline": "Halven Investments secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports strong demand in North America, raises outlook"
+      "headline": "Plevum Partners reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators of improved financial performance and market momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:52.459Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

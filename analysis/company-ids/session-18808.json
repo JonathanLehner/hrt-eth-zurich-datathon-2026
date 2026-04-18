@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Ulvon Renewables reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% year-over-year provides strong fundamental validation of the company's current market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables delays product launch in supply chain optimization segment"
+      "headline": "Ulvon Renewables delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly impacts revenue realization timelines and suggests potential operational friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources faces class action over automated logistics service disruption"
+      "headline": "Kelvos Resources faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal and financial risk, creating immediate negative sentiment and potential long-term liability.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $50M contract with an international consortium"
+      "headline": "Ulvon Renewables secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable boost to future revenue and demonstrates strong market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co enters joint venture with a national infrastructure agency"
+      "headline": "Jorval Trading Co enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency signals long-term strategic alignment and potential for stable, large-scale project pipelines.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions files routine patent applications in automated logistics"
+      "headline": "Wyrnor Solutions files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate material financial impact or competitive advantage.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources to present at Tech Leadership Conference"
+      "headline": "Kelvos Resources to present at Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Presenting at a conference is a standard corporate communication event that rarely moves the needle on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:22.598Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

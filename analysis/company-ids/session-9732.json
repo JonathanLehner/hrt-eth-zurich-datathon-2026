@@ -65,56 +65,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports 12% decline in operating income"
+      "headline": "Jorval Trading Co reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $250M contract with a multinational manufacturer"
+      "headline": "Varvov Retail Group secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, quantifiable boost to future revenue streams.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $320M contract with a multinational manufacturer"
+      "headline": "Orevar Marketplace secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $320M contract win represents a significant and positive revenue catalyst for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace delays product launch in wireless connectivity segment"
+      "headline": "Orevar Marketplace delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue and may signal internal development challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods names new head of cloud infrastructure division"
+      "headline": "Xovol Goods names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a key division introduce strategic uncertainty until the new head's direction is clear.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods files for regulatory approval of new supply chain optimization offering"
+      "headline": "Xovol Goods files for regulatory approval of new supply chain optimization offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward product expansion but does not guarantee success.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Xovol Goods reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 3% is a positive indicator of business health and demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports 25% increase in customer acquisition"
+      "headline": "Xovol Goods reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong leading indicator of future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:03.567Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

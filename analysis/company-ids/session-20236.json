@@ -54,56 +54,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Jorvis Fuels reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% indicates strong operational performance and market demand.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels completes planned facility upgrade in Central Europe"
+      "headline": "Jorvis Fuels completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completion of a planned facility upgrade suggests improved operational capacity and efficiency.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors files for regulatory approval of new digital payments offering"
+      "headline": "Plevyl Advisors files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for product expansion but does not guarantee immediate revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Jorvis Fuels reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Revenue growth of 12% is positive but represents a deceleration compared to previous performance metrics.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels secures $180M contract with a multinational manufacturer"
+      "headline": "Jorvis Fuels secures $180M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides clear, tangible revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions files routine patent applications in automated logistics"
+      "headline": "Orevov Solutions files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and provide minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels loses key contract in Latin America to competitor"
+      "headline": "Jorvis Fuels loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and signals competitive pressure.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions loses key contract in Scandinavia to competitor"
+      "headline": "Orevov Solutions loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a specific region negatively impacts revenue and market share.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:15.540Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

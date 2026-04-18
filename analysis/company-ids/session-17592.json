@@ -54,49 +54,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $800M contract with a global retailer"
+      "headline": "Brevep Systems secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "The $800M contract provides a clear, significant revenue boost that will positively impact the company's financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports 8% increase in customer acquisition"
+      "headline": "Halvax Networks reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a positive growth indicator that should translate into immediate and sustained revenue momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports 5% decline in operating income"
+      "headline": "Relvos Biosciences reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income directly signals reduced profitability, creating immediate negative pressure on the stock.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports strong demand in Latin America, raises outlook"
+      "headline": "Relvos Biosciences reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand provides a clear positive signal for future earnings growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems completes planned facility upgrade in Southeast Asia"
+      "headline": "Brevep Systems completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that improves long-term capacity but has limited immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Halvax Networks reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 8% is a strong fundamental indicator that confirms business health and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Brevep Systems completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "The strategic acquisition is intended to bolster long-term competitive positioning, though the immediate financial benefit remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:38.264Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

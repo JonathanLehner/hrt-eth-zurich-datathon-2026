@@ -50,35 +50,96 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports 12% increase in customer acquisition"
+      "headline": "Talvix Holdings reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition indicates strong top-line growth momentum that should positively impact near-term sentiment and long-term revenue.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions opens new office in Asia Pacific"
+      "headline": "Wyrnor Solutions opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office is a strategic expansion move that signals growth but lacks immediate financial quantification, leading to moderate long-term optimism.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Wyrnor Solutions reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs in cloud infrastructure directly threaten profitability, creating a clear negative signal for both short-term earnings and long-term margin sustainability.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $320M contract with an international consortium"
+      "headline": "Plevyl Advisors secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a concrete, high-value revenue stream that significantly boosts both immediate valuation and long-term financial stability.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees 3% margin improvement in latest quarter"
+      "headline": "Talvix Holdings sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement demonstrates operational efficiency gains that directly translate to improved profitability in the current and future quarters.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:53.713Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $250M contract with a multinational manufacturer"
+      "headline": "Strynal Industries secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, immediate, and durable revenue boost for Strynal Industries.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group misses quarterly revenue estimates by 20%"
+      "headline": "Crevol Retail Group misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a significant negative indicator of operational performance that will likely weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources in talks for potential merger, details undisclosed"
+      "headline": "Kelvos Resources in talks for potential merger, details undisclosed",
+      "sentiment": {
+        "reasoning": "The mention of merger talks without specific details creates speculative upside but carries high uncertainty regarding completion.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "acquisition",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 3,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources confirms participation in Emerging Markets Forum"
+      "headline": "Nolvol Resources confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate event with negligible direct financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces regulatory review of wireless connectivity practices"
+      "headline": "Crevol Retail Group faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential legal and operational risks that create immediate uncertainty and potential long-term headwinds.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries confirms participation in Tech Leadership Conference"
+      "headline": "Strynal Industries confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Conference participation is a routine marketing activity that does not materially alter the company's financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:18.036Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

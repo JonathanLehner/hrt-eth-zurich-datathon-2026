@@ -52,42 +52,113 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 15% increase in customer acquisition"
+      "headline": "Arnik Commerce reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition indicates strong growth momentum that should positively impact revenue in both the short and long term.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce launches next-generation wireless connectivity platform"
+      "headline": "Arnik Commerce launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development, though the immediate financial impact depends on adoption rates which remain uncertain.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports strong demand in Middle East, raises outlook"
+      "headline": "Frelex Outlets reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides clear positive financial guidance for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods delays product launch in supply chain optimization segment"
+      "headline": "Talvyn Goods delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and signals potential operational friction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods faces regulatory review of supply chain optimization practices"
+      "headline": "Talvyn Goods faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create significant uncertainty and potential legal or operational costs that weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees 15% drop in new customer orders this quarter"
+      "headline": "Talvyn Goods sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a direct negative indicator of current business performance and future revenue.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:11.375Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

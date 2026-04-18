@@ -48,28 +48,79 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial warns of supply chain disruptions affecting Europe operations"
+      "headline": "Wrelal Financial warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region like Europe directly threaten operational efficiency and revenue realization.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital delays product launch in renewable storage segment"
+      "headline": "Zelvel Capital delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a growth segment like renewable storage postpones expected revenue and signals potential execution hurdles.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 5% margin improvement in latest quarter"
+      "headline": "Zelvel Capital sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates increased operational efficiency and profitability, which typically has a positive, lasting impact on valuation.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments confirms participation in Emerging Markets Forum"
+      "headline": "Krevan Investments confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard networking event that lacks specific financial catalysts or material business impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:23.047Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

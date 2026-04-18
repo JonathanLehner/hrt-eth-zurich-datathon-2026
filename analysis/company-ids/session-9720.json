@@ -66,56 +66,147 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Plevyl Advisors reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability in the near and medium term.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $500M contract with a national infrastructure agency"
+      "headline": "Jovik Asset Group secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a significant and concrete revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners explores strategic alternatives for wireless connectivity unit"
+      "headline": "Plevum Partners explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is ambiguous and creates uncertainty regarding the future of the business unit.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports unexpected decline in Middle East revenue"
+      "headline": "Yorval Partners reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region is a negative indicator for short-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $50M contract with a leading cloud platform"
+      "headline": "Yorval Partners secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $50M contract win provides a positive, albeit smaller, revenue contribution to the company.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees mixed results in precision manufacturing pilot program"
+      "headline": "Plevum Partners sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create uncertainty about the viability and future scaling of the project.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group secures $320M contract with an international consortium"
+      "headline": "Jovik Asset Group secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing another large contract reinforces the company's growth trajectory and revenue stability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $400M contract with an international consortium"
+      "headline": "Plevum Partners secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $400M contract win is a strong positive development that improves the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:03.023Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

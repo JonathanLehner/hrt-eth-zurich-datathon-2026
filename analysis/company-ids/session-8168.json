@@ -52,42 +52,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources expands operations into Asia Pacific markets"
+      "headline": "Nolvol Resources expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets typically signals growth potential but involves initial execution and integration costs.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co explores strategic alternatives for wireless connectivity unit"
+      "headline": "Jorval Trading Co explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often implies a potential sale or spin-off, creating speculative upside but significant uncertainty regarding the outcome.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces significant capital expenditure plan for Scandinavia"
+      "headline": "Nolvav Commerce announces significant capital expenditure plan for Scandinavia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term investment in growth but may weigh on short-term cash flow and margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co announces breakthrough in process automation"
+      "headline": "Jorval Trading Co announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential for improved efficiency and margin expansion over time.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co faces regulatory review of enterprise software practices"
+      "headline": "Jorval Trading Co faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of software practices introduce legal and operational risk, typically resulting in negative market sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $650M contract with a leading cloud platform"
+      "headline": "Nolvol Resources secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear revenue visibility and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:05.564Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

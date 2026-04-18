@@ -42,49 +42,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices names new head of enterprise software division"
+      "headline": "Nolvis Devices names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices begins scheduled maintenance of data analytics systems"
+      "headline": "Nolvis Devices begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that does not impact financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices misses quarterly revenue estimates by 7%"
+      "headline": "Nolvis Devices misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "A 7% revenue miss is a clear negative signal regarding current demand and operational execution.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems loses key contract in Scandinavia to competitor"
+      "headline": "Brevep Systems loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract directly impacts future revenue streams and market share in the region.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices recalls products in renewable storage line due to quality concerns"
+      "headline": "Nolvis Devices recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control failures that will likely lead to immediate costs and potential reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports rising costs pressuring margins in enterprise software"
+      "headline": "Nolvis Devices reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs in a core division directly threaten profitability and margin stability.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems expands operations into Scandinavia markets"
+      "headline": "Brevep Systems expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Market expansion into Scandinavia represents a growth opportunity, though the financial payoff is not immediate.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:09.787Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels sees 25% margin improvement in latest quarter"
+      "headline": "Relvon Fuels sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement is a significant positive indicator of operational efficiency and profitability.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports strong demand in Scandinavia, raises outlook"
+      "headline": "Nerven Grid reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong regional demand combined with a raised outlook provides a clear positive signal for future growth.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels misses quarterly revenue estimates by 3%"
+      "headline": "Relvon Fuels misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% is a negative indicator of current sales performance.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables announces breakthrough in wireless connectivity"
+      "headline": "Ulvon Renewables announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough is a positive development, though the commercial impact remains speculative.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Nerven Grid reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising supply chain costs directly threaten profitability and indicate potential operational headwinds.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Brevon Microchips reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 12% year-over-year confirms strong market position and execution.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:29.232Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

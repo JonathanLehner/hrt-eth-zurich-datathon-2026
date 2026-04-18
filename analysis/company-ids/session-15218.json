@@ -56,56 +56,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 8% margin improvement in latest quarter"
+      "headline": "Calvis Sciences sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates direct operational efficiency gains that typically boost profitability immediately and sustainably.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences confirms participation in Capital Markets Day"
+      "headline": "Calvis Sciences confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that rarely provides material financial impact or market-moving information.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees mixed results in process automation pilot program"
+      "headline": "Frelis Genomics sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the new process automation.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Frelis Genomics reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 3% is a positive indicator of demand, though the modest percentage suggests limited acceleration.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences recalls products in data analytics line due to quality concerns"
+      "headline": "Calvis Sciences recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall introduces immediate financial costs and potential reputational damage that may persist through the quarter.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $650M contract with a top-tier research institute"
+      "headline": "Myrnon Therapeutics secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract provides a significant, high-certainty revenue stream that will positively impact financial performance over the long term.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics revises long-term strategy with focus on automated logistics"
+      "headline": "Myrnon Therapeutics revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automated logistics is a long-term operational shift with unclear immediate financial benefits or execution success.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics faces regulatory review of wireless connectivity practices"
+      "headline": "Frelis Genomics faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of core practices create significant uncertainty and potential downside risk for the company's operations.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:52.218Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

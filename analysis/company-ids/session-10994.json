@@ -62,42 +62,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power sees 5% drop in new customer orders this quarter"
+      "headline": "Plevep Power sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds for the current quarter.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets delays product launch in process automation segment"
+      "headline": "Ixenis Outlets delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch creates immediate uncertainty regarding revenue realization and competitive positioning in the automation segment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy signs multi-year partnership with an international consortium"
+      "headline": "Zelval Energy signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy sees 5% margin improvement in latest quarter"
+      "headline": "Plevik Energy sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement indicates operational efficiency gains that directly boost profitability.",
+        "longTerm": 5,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy sees 5% margin improvement in latest quarter"
+      "headline": "Plevik Energy sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "This is a duplicate report of the margin improvement, reinforcing the positive operational trend.",
+        "longTerm": 5,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy sees mixed results in enterprise software pilot program"
+      "headline": "Zelval Energy sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the enterprise software offering.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:50.010Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

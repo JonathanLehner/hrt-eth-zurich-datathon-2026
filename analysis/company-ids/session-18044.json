@@ -48,28 +48,79 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports strong demand in Central Europe, raises outlook"
+      "headline": "Plevyl Advisors reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "The company is experiencing positive demand momentum and has officially increased its financial guidance for the period.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports 8% decline in operating income"
+      "headline": "Plevep Power reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income directly impacts profitability and typically triggers a negative market reaction.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power loses key contract in North America to competitor"
+      "headline": "Plevep Power loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor represents a direct loss of revenue and market share in a major region.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group achieves key regulatory milestone ahead of schedule"
+      "headline": "Jovik Asset Group achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a regulatory milestone ahead of schedule removes a significant barrier to operations and potential growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:54.010Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

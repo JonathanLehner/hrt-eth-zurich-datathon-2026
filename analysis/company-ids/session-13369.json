@@ -62,42 +62,113 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports 8% decline in operating income"
+      "headline": "Jorvyl Securities reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income directly impacts profitability and investor sentiment in the short term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities expands operations into Europe markets"
+      "headline": "Jorvyl Securities expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets represents a growth opportunity, though the immediate financial contribution is typically delayed.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $180M contract with a national infrastructure agency"
+      "headline": "Zrovov Advisors secures $180M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities loses key contract in Central Europe to competitor"
+      "headline": "Jorvyl Securities loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract negatively impacts revenue projections and market position in the affected region.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Brevep Systems completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquisitions aimed at supply chain optimization offer potential cost efficiencies, though integration success remains to be seen.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group sees 8% margin improvement in latest quarter"
+      "headline": "Holtum Asset Group sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates better operational efficiency and higher profitability, which is a strong positive signal.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:23.305Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

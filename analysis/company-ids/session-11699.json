@@ -51,42 +51,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources loses key contract in Middle East to competitor"
+      "headline": "Nolvol Resources loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue and market share, creating immediate negative sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables to host investor day focused on supply chain optimization strategy"
+      "headline": "Orevex Renewables to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that typically do not cause significant immediate price movement unless specific guidance is provided.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables enters joint venture with a national infrastructure agency"
+      "headline": "Orevex Renewables enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency suggests long-term strategic alignment and potential for stable future revenue streams.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Orevex Renewables reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability, which is a fundamental negative signal for investors.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Zelval Energy Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "Unexpected executive departures often trigger uncertainty regarding internal stability and strategic direction.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables enters joint venture with a top-tier research institute"
+      "headline": "Orevex Renewables enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Partnering with a research institute indicates potential for future innovation, though the financial impact is likely delayed.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:19.162Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

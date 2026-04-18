@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands opens new office in Scandinavia"
+      "headline": "Halvav Brands opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a minor operational expansion that typically has negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce names new head of precision manufacturing division"
+      "headline": "Nolvav Commerce names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with no immediate quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 1,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $650M contract with a top-tier research institute"
+      "headline": "Varvov Retail Group secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides clear, significant, and durable revenue growth for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands signs multi-year partnership with a global retailer"
+      "headline": "Halvav Brands signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer indicates a positive long-term revenue stream and strategic growth.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $500M contract with a major logistics provider"
+      "headline": "Nolvav Commerce secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $500M contract with a major logistics provider is a substantial and direct positive financial catalyst.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group loses key contract in Middle East to competitor"
+      "headline": "Varvov Retail Group loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and competitive standing in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands faces regulatory review of wireless connectivity practices"
+      "headline": "Halvav Brands faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce uncertainty and potential costs, creating a negative sentiment for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands completes planned facility upgrade in Central Europe"
+      "headline": "Halvav Brands completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that likely improves efficiency but has limited immediate impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:47.174Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

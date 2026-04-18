@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial expands operations into Middle East markets"
+      "headline": "Wrelal Financial expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a growth opportunity but lacks immediate revenue quantification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $400M contract with an international consortium"
+      "headline": "Plevum Partners secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate and verifiable revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals reports unexpected decline in Latin America revenue"
+      "headline": "Krevum Pharmaceuticals reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a direct negative indicator for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial loses key contract in Europe to competitor"
+      "headline": "Wrelal Financial loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts market share and future revenue streams.",
+        "longTerm": -5,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners completes strategic acquisition to strengthen enterprise software"
+      "headline": "Plevum Partners completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to bolster long-term capabilities but often involve integration uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees mixed results in digital payments pilot program"
+      "headline": "Halvix Holdings sees mixed results in digital payments pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide no clear directional signal for future financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals launches next-generation process automation platform"
+      "headline": "Krevum Pharmaceuticals launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive operational development that may improve efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $650M contract with a global retailer"
+      "headline": "Krevum Pharmaceuticals secures $650M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A large $650M contract win is a significant, high-confidence positive event for the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:55.662Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

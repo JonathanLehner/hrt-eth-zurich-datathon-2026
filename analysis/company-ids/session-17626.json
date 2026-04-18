@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices beats analyst expectations with strong earnings growth"
+      "headline": "Nolvis Devices beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Nolvis Devices exceeded market expectations, which typically drives immediate positive sentiment and validates current operational performance.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks delays product launch in supply chain optimization segment"
+      "headline": "Jovor Networks delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests operational friction, creating immediate negative pressure.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $500M contract with a top-tier research institute"
+      "headline": "Prynis Systems secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, high-value contract provides clear revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports strong demand in Europe, raises outlook"
+      "headline": "Jovor Networks reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and a raised outlook are strong indicators of growth momentum that typically lead to upward revisions in valuation.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems revises long-term strategy with focus on precision manufacturing"
+      "headline": "Prynis Systems revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "A strategic pivot is a long-term directional change that lacks immediate financial quantification, leading to market caution.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems confirms participation in Capital Markets Day"
+      "headline": "Prynis Systems confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that rarely moves the needle on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $180M contract with a major logistics provider"
+      "headline": "Creven Securities secures $180M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Winning a significant contract with a major provider provides a clear, positive boost to revenue expectations and business stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:39.375Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

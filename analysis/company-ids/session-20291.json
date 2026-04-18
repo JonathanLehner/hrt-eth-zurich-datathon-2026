@@ -38,28 +38,79 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $50M contract with a leading cloud platform"
+      "headline": "Varvov Retail Group secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "The $50M contract provides a clear, immediate revenue boost and validates the company's service capabilities.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma completes strategic acquisition to strengthen data analytics"
+      "headline": "Nerval Biopharma completes strategic acquisition to strengthen data analytics",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance data capabilities, but the immediate financial impact is unclear without cost or revenue details.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $250M contract with a multinational manufacturer"
+      "headline": "Varvov Retail Group secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $250M contract represents a significant revenue expansion that will positively impact the company's financial outlook for the remainder of the period.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma sees 8% drop in new customer orders this quarter"
+      "headline": "Nerval Biopharma sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders indicates a direct negative trend in demand that will likely weigh on performance throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:17.018Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

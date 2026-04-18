@@ -64,49 +64,130 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial CTO steps down unexpectedly citing personal reasons"
+      "headline": "Ilval Financial CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership instability and uncertainty regarding the company's technical direction.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial announces $1.2B share buyback program"
+      "headline": "Ilval Financial announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments completes planned facility upgrade in Latin America"
+      "headline": "Halven Investments completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational milestone that has minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech confirms participation in Corporate Strategy Symposium"
+      "headline": "Grevon Biotech confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a standard corporate event with no material financial impact on the company.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments beats analyst expectations with strong earnings growth"
+      "headline": "Halven Investments beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides a strong positive signal for financial health and investor sentiment.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Krevan Investments recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control failures that will likely lead to immediate costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces regulatory review of data analytics practices"
+      "headline": "Krevan Investments faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant uncertainty and potential legal or operational risks for the company's data practices.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:05.328Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

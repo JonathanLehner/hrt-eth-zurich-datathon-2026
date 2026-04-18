@@ -48,28 +48,79 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $50M contract with a national infrastructure agency"
+      "headline": "Talvep Computing secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, immediate revenue boost and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices opens new office in Central Europe"
+      "headline": "Volval Devices opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Expanding into a new region is a strategic growth move that typically incurs costs before generating significant revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems sees mixed results in precision manufacturing pilot program"
+      "headline": "Prynis Systems sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the viability and scalability of the manufacturing process.",
+        "longTerm": -2,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing delays product launch in cloud infrastructure segment"
+      "headline": "Talvep Computing delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue projections and signals potential operational or technical challenges.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:34.642Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

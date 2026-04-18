@@ -55,56 +55,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group begins scheduled maintenance of automated logistics systems"
+      "headline": "Holtum Asset Group begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has minimal impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces class action over data analytics service disruption"
+      "headline": "Xovol Goods faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal uncertainty and potential financial liability for the company.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces class action over cloud infrastructure service disruption"
+      "headline": "Xovol Goods faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "A second class action lawsuit regarding infrastructure disruption increases the risk profile and potential for significant damages.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce announces breakthrough in enterprise software"
+      "headline": "Arnik Commerce announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough in enterprise software suggests potential for future revenue growth and competitive advantage.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group revises long-term strategy with focus on precision manufacturing"
+      "headline": "Holtum Asset Group revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic pivots indicate management's long-term vision but lack immediate financial impact or clarity on execution.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods files for regulatory approval of new digital payments offering"
+      "headline": "Xovol Goods files for regulatory approval of new digital payments offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard step toward expansion, though the outcome remains uncertain.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group warns of supply chain disruptions affecting North America operations"
+      "headline": "Holtum Asset Group warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten operational efficiency and revenue realization in a key market.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces regulatory review of wireless connectivity practices"
+      "headline": "Xovol Goods faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of core practices introduce potential for fines or forced changes to business models.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:25.790Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

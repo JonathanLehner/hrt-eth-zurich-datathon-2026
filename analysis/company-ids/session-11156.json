@@ -50,35 +50,96 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces major organizational restructuring"
+      "headline": "Zelvon Biosciences announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring often signals cost-cutting or strategic shifts that create immediate uncertainty regarding operational stability.",
+        "longTerm": 2,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices misses quarterly revenue estimates by 20%"
+      "headline": "Nolvis Devices misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A significant 20% revenue miss is a clear negative indicator of current business performance and market demand.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices loses key contract in Middle East to competitor"
+      "headline": "Nolvis Devices loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts future revenue streams and suggests a competitive disadvantage.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences to host investor day focused on digital payments strategy"
+      "headline": "Zelvon Biosciences to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on a new strategy is a neutral event that aims to provide clarity but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics misses quarterly revenue estimates by 18%"
+      "headline": "Grevel Diagnostics misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "An 18% revenue miss indicates a substantial shortfall in performance that will likely weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:55.628Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 22,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries to host investor day focused on wireless connectivity strategy"
+      "headline": "Strynal Industries to host investor day focused on wireless connectivity strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that rarely trigger immediate material financial shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software warns of supply chain disruptions affecting North America operations"
+      "headline": "Frelol Software warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions directly threaten revenue realization and operational efficiency in the near term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software secures $320M contract with a global retailer"
+      "headline": "Frelol Software secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, quantifiable revenue growth and improved financial outlook.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices misses quarterly revenue estimates by 25%"
+      "headline": "Volval Devices misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a significant negative indicator of current demand and operational performance.",
+        "longTerm": -3,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Volval Devices completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions provide long-term growth potential but often involve short-term integration costs and uncertainty.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices announces breakthrough in supply chain optimization"
+      "headline": "Volval Devices announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Supply chain optimization breakthroughs suggest improved margins and operational efficiency over the coming months.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:50.261Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

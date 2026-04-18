@@ -65,56 +65,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods expands operations into Latin America markets"
+      "headline": "Xovol Goods expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a clear growth opportunity that typically yields long-term revenue benefits.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences completes planned facility upgrade in Latin America"
+      "headline": "Relvos Biosciences completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that improves efficiency but has a limited immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports 20% decline in operating income"
+      "headline": "Myrnon Therapeutics reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a significant negative indicator of financial health that will likely weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Xovol Goods reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and creates immediate concern for bottom-line performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen process automation"
+      "headline": "Krevum Pharmaceuticals completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Acquiring technology to strengthen process automation is a strategic move that should improve operational efficiency over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods completes planned facility upgrade in Europe"
+      "headline": "Xovol Goods completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a routine operational improvement that provides incremental efficiency gains.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces regulatory review of data analytics practices"
+      "headline": "Xovol Goods faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of data practices introduce significant uncertainty and potential legal or operational risks for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics misses quarterly revenue estimates by 20%"
+      "headline": "Myrnon Therapeutics misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a substantial negative surprise that will likely lead to immediate downward pressure on the stock price.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:14.351Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

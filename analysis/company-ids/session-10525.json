@@ -50,35 +50,96 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Plevep Power reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% indicates strong operational performance and market demand.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks sees 8% margin improvement in latest quarter"
+      "headline": "Jovor Networks sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly enhances profitability and is a strong positive signal for financial health.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices enters joint venture with a leading cloud platform"
+      "headline": "Nolvis Devices enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a leading cloud platform suggests strategic expansion and potential for future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to present at Corporate Strategy Symposium"
+      "headline": "Plevep Power to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a strategy symposium is a routine corporate event with no inherent material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports 5% decline in operating income"
+      "headline": "Nolvis Devices reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income reflects reduced profitability and is a negative indicator for the company.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:32.372Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

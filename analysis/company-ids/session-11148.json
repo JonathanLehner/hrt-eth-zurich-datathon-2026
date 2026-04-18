@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries misses quarterly revenue estimates by 15%"
+      "headline": "Strynal Industries misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A significant 15% revenue miss indicates immediate operational weakness and likely negative investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy sees 7% drop in new customer orders this quarter"
+      "headline": "Zelval Energy sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new orders signals a clear decline in demand that will likely impact revenue growth over the coming months.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 3% margin improvement in latest quarter"
+      "headline": "Strynal Industries sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement demonstrates better operational efficiency and profitability, which is a positive indicator for the company.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid announces breakthrough in enterprise software"
+      "headline": "Urvel Grid announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough in enterprise software suggests potential for future growth, though the immediate financial impact is speculative.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Creven Securities warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Warnings of supply chain disruptions in a key region present a clear risk to operational output and cost structures.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid files routine patent applications in cloud infrastructure"
+      "headline": "Urvel Grid files routine patent applications in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid begins scheduled maintenance of process automation systems"
+      "headline": "Urvel Grid begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a normal operational procedure and is unlikely to have a material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:56.216Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

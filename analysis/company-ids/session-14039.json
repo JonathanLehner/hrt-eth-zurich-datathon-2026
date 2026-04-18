@@ -50,35 +50,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports 25% decline in operating income"
+      "headline": "Plevyl Advisors reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income indicates significant fundamental weakness that will likely weigh on investor sentiment immediately and persist through the quarter.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $800M contract with a global retailer"
+      "headline": "Creven Securities secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear, substantial revenue boost that will be viewed positively by the market in both the short and long term.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments names new head of automated logistics division"
+      "headline": "Krevan Investments names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change with limited immediate financial impact and high uncertainty regarding future performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors announces $0.8B share buyback program"
+      "headline": "Plevyl Advisors announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct positive signal for shareholders that typically provides immediate support to the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces regulatory review of digital payments practices"
+      "headline": "Krevan Investments faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant downside risk and uncertainty, as the outcome and potential financial penalties remain unknown.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:48.113Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

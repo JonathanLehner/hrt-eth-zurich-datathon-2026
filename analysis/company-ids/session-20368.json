@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy recalls products in cloud infrastructure line due to quality concerns"
+      "headline": "Zelval Energy recalls products in cloud infrastructure line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core infrastructure line creates immediate negative sentiment and potential operational disruption.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy sees 15% margin improvement in latest quarter"
+      "headline": "Zelval Energy sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement indicates strong operational efficiency and positive earnings momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $250M contract with a national infrastructure agency"
+      "headline": "Nolvol Resources secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides clear, long-term revenue visibility and strengthens the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables files routine patent applications in data analytics"
+      "headline": "Orevex Renewables files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and do not provide immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $120M contract with a top-tier research institute"
+      "headline": "Halvav Brands secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $120M contract win provides a solid, predictable revenue stream that positively impacts financial performance.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands completes planned facility upgrade in North America"
+      "headline": "Halvav Brands completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that typically yields incremental efficiency gains over time.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands recalls products in data analytics line due to quality concerns"
+      "headline": "Halvav Brands recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in the data analytics line suggests potential quality control issues that could damage reputation and lead to costs.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:20.146Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma begins scheduled maintenance of renewable storage systems"
+      "headline": "Nerval Biopharma begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Xelvol Biotech recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate negative financial impact through costs and potential reputational damage that may linger.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $500M contract with a national infrastructure agency"
+      "headline": "Relvos Biosciences secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A large $500M contract provides significant, predictable revenue growth over the medium to long term.",
+        "longTerm": 8,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences loses key contract in Scandinavia to competitor"
+      "headline": "Wyrnik Sciences loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract results in an immediate loss of revenue and potential market share erosion.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences enters joint venture with an international consortium"
+      "headline": "Wyrnik Sciences enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "Entering a joint venture suggests future growth opportunities but lacks immediate financial quantification.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 8% drop in new customer orders this quarter"
+      "headline": "Xelvol Biotech sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new orders indicates a weakening demand trend that will likely impact future revenue.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Wyrnik Sciences reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 10% is a strong positive indicator of current business health and momentum.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 18% drop in new customer orders this quarter"
+      "headline": "Xelvol Biotech sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new orders represents a significant acceleration of negative demand trends, signaling deeper operational or market issues.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:45.061Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

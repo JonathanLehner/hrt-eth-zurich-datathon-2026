@@ -54,49 +54,130 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial lowers full-year guidance amid softening demand"
+      "headline": "Wrelal Financial lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance directly signals weaker financial performance and reduced investor confidence.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $320M contract with a leading cloud platform"
+      "headline": "Yorven Labs secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, quantifiable boost to revenue visibility and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports unexpected decline in North America revenue"
+      "headline": "Wrelal Financial reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market indicates operational or demand-side issues that negatively impact financial outlook.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs to present at Annual Industry Forum"
+      "headline": "Crevex Labs to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum is a standard corporate activity with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $400M contract with a national infrastructure agency"
+      "headline": "Crevex Labs secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $400M contract with a national agency represents a significant, high-certainty revenue stream.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $75M contract with a global retailer"
+      "headline": "Wrelal Financial secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $75M contract win provides a positive, though smaller, contribution to revenue and growth prospects.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Crevex Labs warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create operational headwinds that threaten near-term output and profitability.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:28.801Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

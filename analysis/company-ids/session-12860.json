@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports strong demand in Central Europe, raises outlook"
+      "headline": "Talvix Holdings reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace reports 18% increase in customer acquisition"
+      "headline": "Orevar Marketplace reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition is a strong growth indicator that typically translates into sustained revenue momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 18% increase in customer acquisition"
+      "headline": "Crevol Retail Group reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition for a retail group suggests successful marketing or market penetration that should boost near-term sales.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings announces significant capital expenditure plan for North America"
+      "headline": "Talvix Holdings announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure indicates long-term growth investment but may weigh on short-term cash flow and sentiment.",
+        "longTerm": 5,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings files for regulatory approval of new process automation offering"
+      "headline": "Talvix Holdings files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for future growth but carries inherent uncertainty regarding the timeline and outcome.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $250M contract with a multinational manufacturer"
+      "headline": "Talvix Holdings secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides immediate revenue visibility and long-term backlog support.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group delays product launch in precision manufacturing segment"
+      "headline": "Crevol Retail Group delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal that suggests operational friction or strategic setbacks, impacting near-term expectations.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods secures $120M contract with a leading cloud platform"
+      "headline": "Talvyn Goods secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract with a major cloud platform is a significant positive development for revenue growth and market positioning.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:04.777Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces significant capital expenditure plan for North America"
+      "headline": "Nerven Grid announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions announces significant capital expenditure plan for Central Europe"
+      "headline": "Wyrnor Solutions announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "Expanding capital expenditure into Central Europe indicates a strategic growth push that may weigh on short-term earnings while building long-term capacity.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables recalls products in enterprise software line due to quality concerns"
+      "headline": "Orevex Renewables recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in the enterprise software line creates immediate reputational damage and direct costs, with lingering uncertainty regarding customer retention.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions sees mixed results in data analytics pilot program"
+      "headline": "Wyrnor Solutions sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest lack of clear success, creating ambiguity about future revenue potential from this initiative.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid revises long-term strategy with focus on precision manufacturing"
+      "headline": "Nerven Grid revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "A strategic pivot to precision manufacturing is a long-term directional shift that lacks immediate financial impact or clarity on execution success.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:01.989Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

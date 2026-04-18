@@ -46,21 +46,62 @@
       "barIx": 12,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees mixed results in process automation pilot program"
+      "headline": "Halvix Holdings sees mixed results in process automation pilot program",
+      "sentiment": {
+        "reasoning": "The mixed results of the pilot program indicate uncertainty regarding the scalability and future adoption of the automation technology.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software begins scheduled maintenance of data analytics systems"
+      "headline": "Relvan Software begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial faces class action over precision manufacturing service disruption"
+      "headline": "Wrelal Financial faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption introduces significant legal and reputational risk that could persist throughout the 100-day window.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:29.169Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital files routine patent applications in data analytics"
+      "headline": "Ervan Capital files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not indicate immediate or long-term financial shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees mixed results in automated logistics pilot program"
+      "headline": "Grevon Biotech sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the logistics initiative.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital secures $800M contract with an international consortium"
+      "headline": "Ervan Capital secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a clear, significant, and durable revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals wins industry award for excellence in process automation"
+      "headline": "Krevum Pharmaceuticals wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards for process automation are positive for brand reputation but have negligible direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 12% decline in operating income"
+      "headline": "Grevon Biotech reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals misses quarterly revenue estimates by 20%"
+      "headline": "Krevum Pharmaceuticals misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 20% is a substantial negative signal that typically triggers immediate market repricing.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital begins scheduled maintenance of renewable storage systems"
+      "headline": "Ervan Capital begins scheduled maintenance of renewable storage systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and does not impact financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics announces breakthrough in wireless connectivity"
+      "headline": "Calvos Genomics announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A breakthrough in wireless connectivity suggests potential for new product development and competitive advantage.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:41.122Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

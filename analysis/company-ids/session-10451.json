@@ -50,35 +50,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports rising costs pressuring margins in renewable storage"
+      "headline": "Krevan Investments reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $500M contract with a top-tier research institute"
+      "headline": "Krevan Investments secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $500M contract provides a clear, significant revenue boost and positive outlook for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $800M contract with a top-tier research institute"
+      "headline": "Zrovov Advisors secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract is a major positive development that strengthens the company's revenue pipeline.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors faces class action over supply chain optimization service disruption"
+      "headline": "Zrovov Advisors faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and reputational risk that could impact financial performance.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial expands operations into North America markets"
+      "headline": "Ilval Financial expands operations into North America markets",
+      "sentiment": {
+        "reasoning": "Expanding into North American markets represents a strategic growth initiative that typically signals long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:29.602Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

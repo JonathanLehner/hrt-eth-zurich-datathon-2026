@@ -52,42 +52,113 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities begins scheduled maintenance of process automation systems"
+      "headline": "Creven Securities begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities delays product launch in cloud infrastructure segment"
+      "headline": "Creven Securities delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly postpones expected revenue realization and signals potential internal execution issues.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Calvos Genomics reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% is a strong positive indicator of business momentum and financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics faces class action over wireless connectivity service disruption"
+      "headline": "Calvos Genomics faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that can weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics sees 20% drop in new customer orders this quarter"
+      "headline": "Frelis Genomics sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders is a direct negative signal regarding current demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics expands operations into Southeast Asia markets"
+      "headline": "Frelis Genomics expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a strategic move that suggests long-term growth potential despite initial capital expenditure.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:30.345Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

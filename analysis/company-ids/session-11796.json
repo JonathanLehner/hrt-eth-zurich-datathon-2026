@@ -62,42 +62,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group announces $4.1B share buyback program"
+      "headline": "Varvov Retail Group announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A $4.1B share buyback program directly increases earnings per share and signals management confidence in the company's financial health.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace CTO steps down unexpectedly citing personal reasons"
+      "headline": "Arnos Marketplace CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership instability and raises questions about internal project continuity.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace wins industry award for excellence in wireless connectivity"
+      "headline": "Arnos Marketplace wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand validation but typically have a negligible direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports 12% decline in operating income"
+      "headline": "Arnos Marketplace reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a clear negative indicator of core business profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems faces class action over automated logistics service disruption"
+      "headline": "Brevep Systems faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal risk and potential financial liability that could weigh on the company for an extended period.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $650M contract with an international consortium"
+      "headline": "Nolvav Commerce secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $650M contract provides a substantial and predictable revenue stream that strengthens the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:23.754Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

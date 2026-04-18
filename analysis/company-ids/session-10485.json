@@ -63,49 +63,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Halvav Brands warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational headwinds and potential revenue loss.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies sees 3% margin improvement in latest quarter"
+      "headline": "Myrnep Technologies sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates increased operational efficiency and profitability in the most recent quarter.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing delays product launch in automated logistics segment"
+      "headline": "Dralol Computing delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and may signal internal development challenges.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks launches next-generation digital payments platform"
+      "headline": "Halvax Networks launches next-generation digital payments platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive growth catalyst that expands the company's product portfolio.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Halvax Networks reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and suggest potential margin compression in the near term.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 3,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks confirms participation in Global Innovation Summit"
+      "headline": "Halvax Networks confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in an industry summit is a neutral event that provides visibility but lacks direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports strong demand in Europe, raises outlook"
+      "headline": "Halvax Networks reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are clear positive indicators of financial performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:31.782Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods faces class action over precision manufacturing service disruption"
+      "headline": "Talvyn Goods faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential financial liability for Talvyn Goods.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets expands operations into Asia Pacific markets"
+      "headline": "Frelex Outlets expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expansion into the Asia Pacific market represents a strategic growth opportunity that typically yields long-term revenue benefits.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce faces regulatory review of supply chain optimization practices"
+      "headline": "Nolvav Commerce faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny of supply chain practices creates uncertainty and potential operational constraints for Nolvav Commerce.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods sees mixed results in data analytics pilot program"
+      "headline": "Talvyn Goods sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest lack of clear immediate success or failure, leading to a neutral market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences loses key contract in Middle East to competitor"
+      "headline": "Wyrnik Sciences loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue projections and competitive standing for Wyrnik Sciences.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences CFO steps down unexpectedly citing personal reasons"
+      "headline": "Wyrnik Sciences CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership instability and market concern regarding internal governance.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports 3% decline in operating income"
+      "headline": "Talvyn Goods reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of financial health and profitability for Talvyn Goods.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:50.860Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

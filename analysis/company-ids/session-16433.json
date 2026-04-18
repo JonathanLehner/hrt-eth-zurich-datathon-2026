@@ -62,42 +62,113 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs CFO steps down unexpectedly citing personal reasons"
+      "headline": "Yorven Labs CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CFO creates immediate leadership instability and market concern regarding financial oversight.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs CTO addresses investor concerns in open letter"
+      "headline": "Yorven Labs CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO is a reactive measure that signals existing investor anxiety rather than providing new fundamental value.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Dralol Computing Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "Similar to the CTO letter, the COO's address highlights underlying investor concerns without offering concrete operational improvements.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs opens new office in Scandinavia"
+      "headline": "Yorven Labs opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Expanding into a new region is a strategic growth move that typically yields long-term benefits rather than immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $50M contract with a global retailer"
+      "headline": "Myrnep Technologies secures $50M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides clear, quantifiable revenue growth that positively impacts both short-term sentiment and long-term financial performance.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences reports 25% decline in operating income"
+      "headline": "Relvos Biosciences reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative indicator of core business profitability that will likely weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:55.139Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -42,42 +42,113 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $75M contract with a major logistics provider"
+      "headline": "Yorval Partners secures $75M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "The $75M contract provides a clear, immediate revenue boost and validates the company's service offering.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports 25% decline in operating income"
+      "headline": "Halvix Holdings reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative indicator of core business profitability.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners announces breakthrough in renewable storage"
+      "headline": "Yorval Partners announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A technological breakthrough offers high potential for future growth but lacks immediate financial quantification.",
+        "longTerm": 7,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Halvix Holdings announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure signals long-term growth strategy but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings sees mixed results in precision manufacturing pilot program"
+      "headline": "Halvix Holdings sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the new initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $800M contract with a global retailer"
+      "headline": "Yorval Partners secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial event that significantly improves revenue visibility and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:37.986Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

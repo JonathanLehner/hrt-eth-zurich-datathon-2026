@@ -48,28 +48,79 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics loses key contract in Central Europe to competitor"
+      "headline": "Frelis Genomics loses key contract in Central Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly reduces expected revenue and market share in a specific region.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings sees mixed results in enterprise software pilot program"
+      "headline": "Talvix Holdings sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding future adoption and revenue potential for the software.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "demand",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics faces regulatory review of enterprise software practices"
+      "headline": "Frelis Genomics faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential legal and operational risks that could lead to fines or forced changes in business practices.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities launches next-generation supply chain optimization platform"
+      "headline": "Jorvyl Securities launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "The launch of a new platform represents a strategic expansion of the product portfolio aimed at capturing new market demand.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:05.859Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

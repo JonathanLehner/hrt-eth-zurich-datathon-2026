@@ -54,49 +54,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial to present at Capital Markets Day"
+      "headline": "Wrelal Financial to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Day presentations are standard corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences secures $120M contract with a major logistics provider"
+      "headline": "Relvos Biosciences secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, immediate, and durable boost to revenue expectations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $50M contract with an international consortium"
+      "headline": "Wrelal Financial secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $50M contract win is a positive development that strengthens the company's revenue pipeline.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $50M contract with a national infrastructure agency"
+      "headline": "Yorval Partners secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $50M contract with a national agency provides stable, long-term revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences faces class action over process automation service disruption"
+      "headline": "Relvos Biosciences faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate negative sentiment and potential long-term financial liability.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners secures $50M contract with a leading cloud platform"
+      "headline": "Yorval Partners secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a contract with a leading cloud platform validates the company's service offering and adds significant revenue.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners completes strategic acquisition to strengthen renewable storage"
+      "headline": "Yorval Partners completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term growth, though the immediate financial impact is often neutral or negative due to integration costs.",
+        "longTerm": 4,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:54.286Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing delays product launch in cloud infrastructure segment"
+      "headline": "Dralol Computing delays product launch in cloud infrastructure segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch typically signals operational challenges and immediate revenue deferral, negatively impacting investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $500M contract with a top-tier research institute"
+      "headline": "Talvix Holdings secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, immediate positive revenue visibility and strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 5%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 5%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 5% is a direct negative indicator of financial performance that typically triggers an immediate sell-off.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings faces class action over automated logistics service disruption"
+      "headline": "Talvix Holdings faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial uncertainty that often weighs on stock performance over an extended period.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $400M contract with a major logistics provider"
+      "headline": "Crevex Labs secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $400M contract win with a major provider is a strong, positive indicator of demand and future revenue growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:42.023Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

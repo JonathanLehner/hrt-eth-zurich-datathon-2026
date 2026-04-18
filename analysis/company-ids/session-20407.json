@@ -54,49 +54,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries launches next-generation automated logistics platform"
+      "headline": "Zrovex Industries launches next-generation automated logistics platform",
+      "sentiment": {
+        "reasoning": "The launch of a new product platform is a positive development that should drive long-term growth through operational efficiency.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power sees 25% drop in new customer orders this quarter"
+      "headline": "Kelvik Power sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders is a significant negative signal for immediate and near-term revenue performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $180M contract with a global retailer"
+      "headline": "Nolvol Resources secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $180M contract provides clear, quantifiable revenue visibility and positive momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces significant capital expenditure plan for North America"
+      "headline": "Zrovex Industries announces significant capital expenditure plan for North America",
+      "sentiment": {
+        "reasoning": "Increased capital expenditure signals growth investment but creates short-term cash outflow pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources completes strategic acquisition to strengthen renewable storage"
+      "headline": "Nolvol Resources completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to expand capabilities in renewable storage, likely yielding long-term competitive advantages.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 8% margin improvement in latest quarter"
+      "headline": "Zrovex Industries sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement directly indicates better profitability and operational efficiency for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power sees 15% drop in new customer orders this quarter"
+      "headline": "Kelvik Power sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders indicates a persistent negative trend in demand for the company.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:21.657Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

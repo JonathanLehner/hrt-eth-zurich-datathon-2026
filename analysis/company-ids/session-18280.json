@@ -65,56 +65,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group recalls products in data analytics line due to quality concerns"
+      "headline": "Crevol Retail Group recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational costs and potential brand damage that may persist as the company addresses quality control issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores to host investor day focused on cloud infrastructure strategy"
+      "headline": "Holtar Stores to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but does not guarantee immediate financial improvement.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $500M contract with a major logistics provider"
+      "headline": "Halvav Brands secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, quantifiable revenue growth that will positively impact financial performance over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group faces class action over digital payments service disruption"
+      "headline": "Crevol Retail Group faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal uncertainty and potential financial liabilities that could weigh on the stock price for an extended period.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma revises long-term strategy with focus on automated logistics"
+      "headline": "Nerval Biopharma revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automated logistics is a long-term initiative with unclear immediate financial benefits and significant execution risk.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group confirms participation in Emerging Markets Forum"
+      "headline": "Crevol Retail Group confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores expands operations into Europe markets"
+      "headline": "Holtar Stores expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into European markets represents a significant growth opportunity, though the initial costs and market penetration challenges create uncertainty.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group reports 15% increase in customer acquisition"
+      "headline": "Crevol Retail Group reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition is a strong indicator of demand growth that should translate into improved financial results.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:03.333Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

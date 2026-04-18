@@ -51,42 +51,113 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid wins industry award for excellence in data analytics"
+      "headline": "Urvel Grid wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but rarely translate into immediate or sustained material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources completes strategic acquisition to strengthen digital payments"
+      "headline": "Kelvos Resources completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions represent a clear expansion of capabilities, though the financial benefit depends on integration success.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources explores strategic alternatives for digital payments unit"
+      "headline": "Nolvol Resources explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals potential divestiture or restructuring, creating significant uncertainty regarding future revenue streams.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Kelvos Resources Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the COO is a reactive measure to address existing investor sentiment, which typically has a neutral to slightly stabilizing effect.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $650M contract with a leading cloud platform"
+      "headline": "Kelvos Resources secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides a clear and immediate boost to revenue visibility and market confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports rising costs pressuring margins in supply chain optimization"
+      "headline": "Kelvos Resources reports rising costs pressuring margins in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability, signaling a negative impact on margins that is likely to persist until supply chain issues are resolved.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:10.135Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

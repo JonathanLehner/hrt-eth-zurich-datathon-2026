@@ -48,28 +48,79 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners opens new office in Scandinavia"
+      "headline": "Plevum Partners opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market represents a strategic growth initiative that typically yields long-term benefits rather than immediate financial gains.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 10%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin of 10% is a clear negative signal that typically triggers an immediate market sell-off.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports 10% increase in customer acquisition"
+      "headline": "Halvix Holdings reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition is a strong indicator of improved demand and future revenue growth potential.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners faces regulatory review of wireless connectivity practices"
+      "headline": "Plevum Partners faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant uncertainty and potential legal or operational costs that weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:35.777Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

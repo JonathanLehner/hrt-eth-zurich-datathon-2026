@@ -55,56 +55,147 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Zelvel Capital begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital opens new office in North America"
+      "headline": "Zelvel Capital opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates growth and expansion, which is generally viewed as a positive long-term strategic move.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences CFO addresses investor concerns in open letter"
+      "headline": "Calvis Sciences CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO addressing investor concerns suggests underlying instability or lack of confidence, creating short-term volatility.",
+        "longTerm": -1,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Zelvel Capital begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance of manufacturing systems is a standard operational procedure with no expected material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences warns of supply chain disruptions affecting Latin America operations"
+      "headline": "Zelvon Biosciences warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly threatens revenue and operational efficiency, leading to negative market sentiment.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $500M contract with a global retailer"
+      "headline": "Zelvon Biosciences secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides significant revenue visibility and is a strong positive indicator for financial health.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences wins industry award for excellence in cloud infrastructure"
+      "headline": "Zelvon Biosciences wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into immediate or material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $120M contract with a multinational manufacturer"
+      "headline": "Zelvel Capital secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $120M contract win is a clear, positive development that bolsters revenue expectations for the company.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:29.401Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

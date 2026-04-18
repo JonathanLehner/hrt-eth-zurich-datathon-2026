@@ -54,49 +54,130 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power completes strategic acquisition to strengthen enterprise software"
+      "headline": "Plevep Power completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The acquisition of an enterprise software firm provides a clear inorganic growth path for Plevep Power.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources names new head of enterprise software division"
+      "headline": "Kelvos Resources names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division create moderate uncertainty regarding future strategic direction.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power beats analyst expectations with strong earnings growth"
+      "headline": "Plevep Power beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides immediate positive momentum for the stock price.",
+        "longTerm": 2,
+        "shortTerm": 6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Plevep Power revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic pivot to cloud infrastructure signals a long-term shift that lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels sees mixed results in cloud infrastructure pilot program"
+      "headline": "Jorvis Fuels sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity about the success of the cloud infrastructure initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources sees 8% drop in new customer orders this quarter"
+      "headline": "Kelvos Resources sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a direct negative indicator of near-term revenue health.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources reports rising costs pressuring margins in enterprise software"
+      "headline": "Kelvos Resources reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:20.267Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

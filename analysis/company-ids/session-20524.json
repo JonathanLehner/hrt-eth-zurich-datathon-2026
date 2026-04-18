@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Prynis Systems begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals secures $400M contract with a multinational manufacturer"
+      "headline": "Yorvov Pharmaceuticals secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides a clear, positive revenue catalyst for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports strong demand in Middle East, raises outlook"
+      "headline": "Relvan Software reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong regional demand is a direct positive signal for future earnings.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals sees 8% drop in new customer orders this quarter"
+      "headline": "Yorvov Pharmaceuticals sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a negative indicator for near-term revenue growth.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $50M contract with a multinational manufacturer"
+      "headline": "Brevep Systems secures $50M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $50M contract win represents a positive, albeit smaller, revenue contribution for the company.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems expands operations into Southeast Asia markets"
+      "headline": "Prynis Systems expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a strategic growth move that typically yields long-term benefits.",
+        "longTerm": 5,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems signs multi-year partnership with a leading cloud platform"
+      "headline": "Prynis Systems signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a major cloud provider suggests stable, long-term revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:25.747Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

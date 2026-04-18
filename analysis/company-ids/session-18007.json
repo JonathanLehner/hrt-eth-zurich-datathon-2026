@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems announces significant capital expenditure plan for Europe"
+      "headline": "Brevep Systems announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software opens new office in Central Europe"
+      "headline": "Relvan Software opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a minor operational expansion that suggests growth but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions secures $250M contract with an international consortium"
+      "headline": "Wyrnor Solutions secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $250M contract provides clear, immediate, and durable revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports unexpected decline in Europe revenue"
+      "headline": "Relvan Software reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a negative signal that directly impacts financial performance and investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Nolvis Devices reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% is a positive indicator of business health and demand.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports 25% increase in customer acquisition"
+      "headline": "Brevep Systems reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong leading indicator for future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems loses key contract in Middle East to competitor"
+      "headline": "Brevep Systems loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract is a direct negative impact on revenue and competitive positioning.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $400M contract with a top-tier research institute"
+      "headline": "Relvan Software secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract is a major positive development that significantly bolsters the revenue pipeline.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:53.895Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

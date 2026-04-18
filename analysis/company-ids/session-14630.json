@@ -48,28 +48,79 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital to host investor day focused on precision manufacturing strategy"
+      "headline": "Ervan Capital to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that typically provide strategic clarity without immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands launches next-generation enterprise software platform"
+      "headline": "Halvav Brands launches next-generation enterprise software platform",
+      "sentiment": {
+        "reasoning": "The launch of a new enterprise software platform represents a direct expansion of the product portfolio with potential for new revenue streams.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands faces class action over supply chain optimization service disruption"
+      "headline": "Joval Brands faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability, creating immediate negative sentiment and long-term uncertainty.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands completes planned facility upgrade in Southeast Asia"
+      "headline": "Halvav Brands completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that likely improves efficiency but is already expected by the market.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:10.029Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

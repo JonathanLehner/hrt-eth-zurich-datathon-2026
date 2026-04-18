@@ -63,49 +63,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co delays product launch in process automation segment"
+      "headline": "Jorval Trading Co delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment typically signals operational friction and deferred revenue, negatively impacting investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces $3.8B share buyback program"
+      "headline": "Nolvav Commerce announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for earnings per share.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce secures $650M contract with a major logistics provider"
+      "headline": "Nolvav Commerce secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides clear, long-term revenue visibility and validates the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce completes planned facility upgrade in Southeast Asia"
+      "headline": "Nolvav Commerce completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that typically improves efficiency but has a muted immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce delays product launch in automated logistics segment"
+      "headline": "Nolvav Commerce delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch for the automated logistics segment suggests potential technical or supply chain hurdles that dampen growth expectations.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips enters joint venture with a top-tier research institute"
+      "headline": "Brevon Microchips enters joint venture with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a top-tier research institute suggests future innovation potential, though the financial impact is speculative and long-term.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 27,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace announces breakthrough in wireless connectivity"
+      "headline": "Arnos Marketplace announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in wireless connectivity is a significant positive catalyst that could lead to competitive advantages and new revenue streams.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:27.866Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods opens new office in Central Europe"
+      "headline": "Talvyn Goods opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that typically has a neutral to slightly positive long-term impact without immediate revenue implications.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $50M contract with a national infrastructure agency"
+      "headline": "Jorval Trading Co secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co CEO addresses investor concerns in open letter"
+      "headline": "Jorval Trading Co CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CEO indicates existing investor anxiety, which creates short-term volatility while the long-term impact depends on the market's reception of the message.",
+        "longTerm": 0,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid confirms participation in Corporate Strategy Symposium"
+      "headline": "Nerven Grid confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a strategy symposium is a routine corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports unexpected decline in Middle East revenue"
+      "headline": "Nerven Grid reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region is a negative signal that likely persists as a headwind for the remainder of the quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co misses quarterly revenue estimates by 10%"
+      "headline": "Pleven Trading Co misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 10% is a significant negative event that typically triggers immediate downward price pressure and lingering sentiment concerns.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co completes planned facility upgrade in Europe"
+      "headline": "Jorval Trading Co completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that is likely already priced in by the market.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods completes strategic acquisition to strengthen process automation"
+      "headline": "Talvyn Goods completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "A strategic acquisition to improve process automation is a positive long-term move, though the immediate financial benefit is often obscured by integration costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:51.942Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

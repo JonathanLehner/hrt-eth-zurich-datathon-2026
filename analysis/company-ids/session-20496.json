@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores to host investor day focused on supply chain optimization strategy"
+      "headline": "Holtar Stores to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that rarely trigger immediate material financial changes.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners board meeting to discuss major strategic initiative"
+      "headline": "Yorval Partners board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The announcement of a meeting to discuss strategy is vague and lacks actionable financial detail.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co beats analyst expectations with strong earnings growth"
+      "headline": "Pleven Trading Co beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations provides immediate positive momentum for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Talvyn Goods completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Completing an acquisition is a concrete operational step that typically signals long-term strategic intent.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores sees mixed results in supply chain optimization pilot program"
+      "headline": "Holtar Stores sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success of the supply chain strategy.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co wins industry award for excellence in process automation"
+      "headline": "Pleven Trading Co wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive sentiment but rarely translate into direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Pleven Trading Co reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong, quantifiable indicator of business health and market demand.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:24.844Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

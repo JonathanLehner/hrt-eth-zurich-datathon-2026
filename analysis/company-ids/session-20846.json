@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings wins industry award for excellence in automated logistics"
+      "headline": "Halvix Holdings wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but rarely translate into immediate or sustained financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities announces restructuring plan, cites challenging market conditions"
+      "headline": "Jorvyl Securities announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "Restructuring plans indicate internal stress and potential near-term costs, creating uncertainty about future operational efficiency.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings CEO addresses investor concerns in open letter"
+      "headline": "Halvix Holdings CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CEO is a reactive measure that signals existing investor anxiety without providing concrete financial catalysts.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Plevyl Advisors reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a positive indicator of business health, though a 3% year-over-year increase is relatively modest.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities names new head of automated logistics division"
+      "headline": "Jorvyl Securities names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change that lacks immediate financial impact until the leader's strategy is implemented.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $180M contract with an international consortium"
+      "headline": "Plevyl Advisors secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, quantifiable revenue visibility that benefits the company over both short and long horizons.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $400M contract with a global retailer"
+      "headline": "Halven Investments secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A significant $400M contract win is a strong positive signal for future revenue growth and market positioning.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors completes planned facility upgrade in Middle East"
+      "headline": "Plevyl Advisors completes planned facility upgrade in Middle East",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that likely improves long-term capacity but has minimal immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:38.392Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

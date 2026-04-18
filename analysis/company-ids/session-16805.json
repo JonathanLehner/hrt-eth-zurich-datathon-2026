@@ -48,28 +48,79 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital wins industry award for excellence in data analytics"
+      "headline": "Ervan Capital wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Winning an industry award provides positive brand recognition but lacks direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Xovep Stores recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall directly impacts revenue, incurs immediate costs, and damages brand reputation in the short term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Ervan Capital recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Recalling precision manufacturing products suggests significant operational failure and potential long-term liability or client loss.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners confirms participation in Capital Markets Day"
+      "headline": "Plevum Partners confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Confirming participation in a Capital Markets Day is a standard corporate event that typically does not move the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:07.614Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

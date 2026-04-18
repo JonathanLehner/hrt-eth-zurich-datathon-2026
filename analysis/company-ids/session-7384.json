@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments wins industry award for excellence in digital payments"
+      "headline": "Krevan Investments wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct, quantifiable financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $400M contract with a global retailer"
+      "headline": "Orevar Marketplace secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $400M contract represents a significant, concrete revenue stream that will positively impact financial performance over the coming months.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities launches next-generation supply chain optimization platform"
+      "headline": "Jorvyl Securities launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform creates potential for future revenue growth, though the immediate financial contribution remains speculative.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners sees mixed results in precision manufacturing pilot program"
+      "headline": "Plevum Partners sees mixed results in precision manufacturing pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the viability and scalability of the project, leading to a neutral to slightly negative sentiment.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $120M contract with a top-tier research institute"
+      "headline": "Jorvyl Securities secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear and measurable boost to the company's revenue outlook.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace reports 25% increase in customer acquisition"
+      "headline": "Orevar Marketplace reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong indicator of growth that will likely translate into higher revenue in the near and medium term.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports 3% increase in customer acquisition"
+      "headline": "Krevan Investments reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a modest positive signal that suggests steady but slow growth.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:37.001Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

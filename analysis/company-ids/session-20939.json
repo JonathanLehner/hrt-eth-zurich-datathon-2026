@@ -38,28 +38,79 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Krevan Investments files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates future potential but lacks immediate financial impact or certainty of outcome.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces breakthrough in process automation"
+      "headline": "Zrovov Advisors announces breakthrough in process automation",
+      "sentiment": {
+        "reasoning": "A breakthrough in process automation suggests potential efficiency gains, though the lack of specific financial metrics or implementation timelines limits the immediate impact.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 0,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $250M contract with a multinational manufacturer"
+      "headline": "Krevan Investments secures $250M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract provides a clear, quantifiable revenue boost that will positively impact the company's financial performance over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors announces breakthrough in precision manufacturing"
+      "headline": "Zrovov Advisors announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing implies a competitive advantage, but the headline provides no details on commercialization or revenue impact, leading to high uncertainty.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:40.973Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

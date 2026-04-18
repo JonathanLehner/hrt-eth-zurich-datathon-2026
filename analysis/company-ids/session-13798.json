@@ -60,35 +60,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks publishes annual sustainability report"
+      "headline": "Jovor Networks publishes annual sustainability report",
+      "sentiment": {
+        "reasoning": "The publication of an annual sustainability report is a standard corporate disclosure that typically has no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $500M contract with a global retailer"
+      "headline": "Ilval Financial secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a clear, immediate, and durable boost to revenue expectations.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software sees 3% drop in new customer orders this quarter"
+      "headline": "Frelol Software sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative signal regarding demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial names new head of enterprise software division"
+      "headline": "Ilval Financial names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a routine leadership change that lacks sufficient information to determine a positive or negative financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 2,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Yorven Labs completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition to enhance product capabilities is generally viewed as a positive long-term growth driver, though integration risks exist.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:39.022Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

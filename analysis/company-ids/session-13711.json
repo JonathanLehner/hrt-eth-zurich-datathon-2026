@@ -66,56 +66,147 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies reports unexpected decline in North America revenue"
+      "headline": "Myrnep Technologies reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a major regional market signals potential structural issues or weakening demand for Myrnep Technologies.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 7% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement indicates strong operational efficiency gains that should positively impact profitability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 5% margin improvement in latest quarter"
+      "headline": "Halvax Networks sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement is a positive indicator of operational health, though slightly less impactful than the 7% figure.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing loses key contract in Europe to competitor"
+      "headline": "Talvep Computing loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract in a major market represents a direct revenue headwind and a competitive setback for Talvep Computing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma sees mixed results in data analytics pilot program"
+      "headline": "Zrovum Biopharma sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program provide insufficient evidence to determine a clear positive or negative trajectory for Zrovum Biopharma.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma sees mixed results in supply chain optimization pilot program"
+      "headline": "Zrovum Biopharma sees mixed results in supply chain optimization pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a supply chain pilot suggest operational uncertainty without a clear directional impact on the company's bottom line.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks reports rising costs pressuring margins in process automation"
+      "headline": "Halvax Networks reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs in process automation directly threaten Halvax Networks' profitability and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies secures $650M contract with a leading cloud platform"
+      "headline": "Myrnep Technologies secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides significant revenue visibility and a strong positive signal for Myrnep Technologies.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:36.667Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

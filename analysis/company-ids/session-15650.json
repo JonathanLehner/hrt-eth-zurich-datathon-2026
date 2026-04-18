@@ -50,35 +50,96 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions to present at Capital Markets Day"
+      "headline": "Orevov Solutions to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Days are standard corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources achieves key regulatory milestone ahead of schedule"
+      "headline": "Nolvol Resources achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a regulatory milestone ahead of schedule removes a significant barrier to commercialization and provides a clear positive catalyst.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "regulatory",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources reports unexpected decline in Middle East revenue"
+      "headline": "Nolvol Resources reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative trend that will likely weigh on earnings reports for the remainder of the period.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences announces $6.3B share buyback program"
+      "headline": "Zelvon Biosciences announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program provides immediate support to the stock price and signals management confidence in long-term value.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences secures $500M contract with a major logistics provider"
+      "headline": "Zelvon Biosciences secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a major $500M contract provides a clear, durable revenue stream that will positively impact financial performance over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:25.457Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce recalls products in data analytics line due to quality concerns"
+      "headline": "Arnik Commerce recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company addresses quality control.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Jorval Trading Co completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to enhance infrastructure, which typically signals long-term growth potential despite initial integration costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores launches next-generation process automation platform"
+      "headline": "Xovep Stores launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive development that suggests future revenue growth through product innovation.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports strong demand in Latin America, raises outlook"
+      "headline": "Wrelal Financial reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook are clear positive indicators of financial health and growth momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports unexpected decline in Central Europe revenue"
+      "headline": "Wrelal Financial reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals potential regional headwinds that could impact overall financial performance.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co reports 10% decline in operating income"
+      "headline": "Jorval Trading Co reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is generally viewed negatively by the market.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce secures $650M contract with a national infrastructure agency"
+      "headline": "Arnik Commerce secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large government contract provides significant, stable revenue visibility for the long term.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce sees 25% margin improvement in latest quarter"
+      "headline": "Arnik Commerce sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement is a strong indicator of operational efficiency and increased profitability.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:33.558Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

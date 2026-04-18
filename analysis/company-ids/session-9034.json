@@ -65,56 +65,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources begins scheduled maintenance of wireless connectivity systems"
+      "headline": "Kelvos Resources begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions begins scheduled maintenance of automated logistics systems"
+      "headline": "Wyrnor Solutions begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Routine maintenance of logistics systems is standard operational procedure and does not imply a material financial shift.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources expands operations into Scandinavia markets"
+      "headline": "Kelvos Resources expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into Scandinavia represents a strategic growth initiative that should provide long-term revenue benefits.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions reports 7% increase in customer acquisition"
+      "headline": "Wyrnor Solutions reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition is a clear positive indicator of demand growth that should positively impact future earnings.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources loses key contract in Asia Pacific to competitor"
+      "headline": "Kelvos Resources loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a major region like Asia Pacific is a direct negative hit to revenue and market position.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources misses quarterly revenue estimates by 20%"
+      "headline": "Kelvos Resources misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% miss on quarterly revenue estimates is a significant negative signal regarding company performance and market expectations.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power recalls products in data analytics line due to quality concerns"
+      "headline": "Plevep Power recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate financial costs and potential long-term reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid sees 18% drop in new customer orders this quarter"
+      "headline": "Nerven Grid sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders is a strong negative indicator of weakening demand that will likely impact future revenue.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:38.005Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

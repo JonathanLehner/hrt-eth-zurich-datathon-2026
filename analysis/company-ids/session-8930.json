@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power recalls products in enterprise software line due to quality concerns"
+      "headline": "Kelvik Power recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in enterprise software indicates immediate operational failure and potential reputational damage that will likely persist as customers seek alternatives.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Grevel Diagnostics",
-      "headline": "Grevel Diagnostics sees 7% drop in new customer orders this quarter"
+      "headline": "Grevel Diagnostics sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative signal for revenue growth that will likely impact financial performance throughout the quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences revises long-term strategy with focus on wireless connectivity"
+      "headline": "Relvos Biosciences revises long-term strategy with focus on wireless connectivity",
+      "sentiment": {
+        "reasoning": "A strategic pivot is a long-term directional change that lacks immediate financial impact and carries significant execution uncertainty.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 6,
       "companyId": 3,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics CFO addresses investor concerns in open letter"
+      "headline": "Calvos Genomics CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO is a reactive communication measure that typically fails to resolve underlying investor concerns without concrete financial data.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 16,
       "companyId": 3,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics signs multi-year partnership with a national infrastructure agency"
+      "headline": "Calvos Genomics signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides stable, long-term revenue visibility and validates the company's service offering.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 3,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports unexpected decline in Middle East revenue"
+      "headline": "Calvos Genomics reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a specific region signals a localized demand shock that will negatively impact the upcoming earnings report.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power names new head of data analytics division"
+      "headline": "Kelvik Power names new head of data analytics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change that rarely impacts stock performance unless the individual has a transformative reputation.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences sees 5% margin improvement in latest quarter"
+      "headline": "Relvos Biosciences sees 5% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 5% margin improvement directly enhances profitability and suggests operational efficiency gains that should persist in the near term.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:34.485Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace to present at Capital Markets Day"
+      "headline": "Orevar Marketplace to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Day presentations are standard corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics completes planned facility upgrade in Latin America"
+      "headline": "Frelis Genomics completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Facility upgrades are operational improvements that typically lead to incremental efficiency gains over time rather than immediate revenue spikes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Orevar Marketplace",
-      "headline": "Orevar Marketplace secures $800M contract with a national infrastructure agency"
+      "headline": "Orevar Marketplace secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides significant, concrete revenue visibility and positive financial momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods announces breakthrough in data analytics"
+      "headline": "Talvyn Goods announces breakthrough in data analytics",
+      "sentiment": {
+        "reasoning": "A breakthrough in data analytics is a positive development, but the financial impact is speculative until commercialized or integrated.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods warns of supply chain disruptions affecting Europe operations"
+      "headline": "Talvyn Goods warns of supply chain disruptions affecting Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a major market represent a direct negative impact on operational capacity and potential revenue.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:31.989Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

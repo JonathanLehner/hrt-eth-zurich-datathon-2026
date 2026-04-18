@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Volval Devices",
-      "headline": "Volval Devices reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Volval Devices reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 15% indicates strong operational performance and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 0,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $320M contract with a multinational manufacturer"
+      "headline": "Yorven Labs secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, significant revenue boost and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces $5.7B share buyback program"
+      "headline": "Yorven Labs announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A $5.7B share buyback program signals management confidence and provides immediate support to the stock price.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group opens new office in Middle East"
+      "headline": "Jovik Asset Group opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office in the Middle East represents a strategic expansion into a new geographic market.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group faces class action over enterprise software service disruption"
+      "headline": "Jovik Asset Group faces class action over enterprise software service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit regarding service disruption creates immediate legal risk and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs delays product launch in wireless connectivity segment"
+      "headline": "Yorven Labs delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment negatively impacts revenue projections and market competitiveness.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:35.357Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

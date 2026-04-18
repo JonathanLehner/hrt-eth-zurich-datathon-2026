@@ -66,56 +66,147 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $500M contract with a leading cloud platform"
+      "headline": "Plevep Power secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing opens new office in Central Europe"
+      "headline": "Dralol Computing opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion but the immediate financial impact is likely minimal and capital-intensive.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing reports 20% increase in customer acquisition"
+      "headline": "Dralol Computing reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong indicator of demand growth that should translate into revenue.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power reports 18% decline in operating income"
+      "headline": "Plevep Power reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income is a significant negative signal regarding profitability and operational efficiency.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies begins scheduled maintenance of enterprise software systems"
+      "headline": "Ixenix Technologies begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems names new head of automated logistics division"
+      "headline": "Prynis Systems names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with uncertain impact until strategic direction is clarified.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to host investor day focused on digital payments strategy"
+      "headline": "Plevep Power to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that provides a platform for communication but does not change fundamentals directly.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies reports 18% decline in operating income"
+      "headline": "Ixenix Technologies reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income reflects poor financial performance that will likely weigh on investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:34.691Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

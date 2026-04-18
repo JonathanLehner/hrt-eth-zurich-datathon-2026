@@ -55,56 +55,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports rising costs pressuring margins in enterprise software"
+      "headline": "Holtar Stores reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands names new head of process automation division"
+      "headline": "Halvav Brands names new head of process automation division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division have a neutral to slightly positive impact depending on the new hire's track record.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $320M contract with a global retailer"
+      "headline": "Holtar Stores secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear revenue visibility and positive growth momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce to host investor day focused on precision manufacturing strategy"
+      "headline": "Arnik Commerce to host investor day focused on precision manufacturing strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that typically have a neutral impact until specific strategic details are revealed.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores to host investor day focused on enterprise software strategy"
+      "headline": "Holtar Stores to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that does not immediately change financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce loses key contract in Scandinavia to competitor"
+      "headline": "Arnik Commerce loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract is a direct negative impact on revenue and competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $180M contract with a national infrastructure agency"
+      "headline": "Holtar Stores secures $180M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing another significant contract reinforces revenue growth and operational success.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Arnik Commerce warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions create immediate operational headwinds and potential revenue delays.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:30.736Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

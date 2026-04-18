@@ -52,42 +52,113 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities secures $50M contract with a top-tier research institute"
+      "headline": "Jorvyl Securities secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $50M contract provides a clear, immediate revenue boost and validates the company's service offering.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings misses quarterly revenue estimates by 3%"
+      "headline": "Talvix Holdings misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 3% indicates a negative performance trend that typically triggers immediate investor concern.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $50M contract with a major logistics provider"
+      "headline": "Zrovov Advisors secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $50M contract with a major logistics provider represents a significant, concrete revenue win for the firm.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors names new head of enterprise software division"
+      "headline": "Zrovov Advisors names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a neutral event that introduces leadership uncertainty until the executive's strategy is revealed.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings completes planned facility upgrade in North America"
+      "headline": "Talvix Holdings completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that likely has minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $800M contract with an international consortium"
+      "headline": "Talvix Holdings secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major, transformative win that significantly improves the company's long-term revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:39.007Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

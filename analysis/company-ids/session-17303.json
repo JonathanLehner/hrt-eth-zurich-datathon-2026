@@ -52,42 +52,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid to host investor day focused on supply chain optimization strategy"
+      "headline": "Nerven Grid to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that rarely trigger immediate material financial shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $400M contract with a global retailer"
+      "headline": "Urvel Grid secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $400M contract provides a clear, significant, and durable revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid expands operations into Scandinavia markets"
+      "headline": "Nerven Grid expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into Scandinavia represents a strategic growth move with long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports 20% decline in operating income"
+      "headline": "Nerven Grid reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a direct negative indicator of current profitability.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables completes planned facility upgrade in Southeast Asia"
+      "headline": "Orevex Renewables completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Facility upgrades are routine operational improvements that generally have a neutral to slightly positive long-term impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables wins industry award for excellence in cloud infrastructure"
+      "headline": "Orevex Renewables wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:26.693Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

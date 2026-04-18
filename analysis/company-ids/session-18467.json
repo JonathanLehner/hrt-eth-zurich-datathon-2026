@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing schedules annual shareholder meeting for next month"
+      "headline": "Dralol Computing schedules annual shareholder meeting for next month",
+      "sentiment": {
+        "reasoning": "Annual shareholder meetings are routine corporate governance events that typically have no material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Dralol Computing begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a standard operational procedure that does not imply a disruption to business performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks announces significant capital expenditure plan for Middle East"
+      "headline": "Jovor Networks announces significant capital expenditure plan for Middle East",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may pressure short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks misses quarterly revenue estimates by 8%"
+      "headline": "Jovor Networks misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% is a clear negative signal regarding current demand and operational execution.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Prynis Systems announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "Capital expenditure in a new region signals strategic growth and potential future revenue expansion.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics delays product launch in process automation segment"
+      "headline": "Frelis Genomics delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue and signals potential internal execution issues.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:09.575Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

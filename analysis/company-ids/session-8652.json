@@ -56,56 +56,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group faces class action over data analytics service disruption"
+      "headline": "Holtum Asset Group faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that could persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 4,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors secures $650M contract with a leading cloud platform"
+      "headline": "Plevyl Advisors secures $650M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a clear, significant, and durable revenue boost for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors loses key contract in Latin America to competitor"
+      "headline": "Plevyl Advisors loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract is a direct negative event that impacts revenue visibility and competitive standing.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital names new head of cloud infrastructure division"
+      "headline": "Ervan Capital names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard operational change with neutral to slightly positive sentiment depending on the individual's track record.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital explores strategic alternatives for wireless connectivity unit"
+      "headline": "Ervan Capital explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives is a vague signal that could imply a sale, spin-off, or restructuring, creating significant uncertainty.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors expands operations into Europe markets"
+      "headline": "Plevyl Advisors expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion is a positive growth signal, though the immediate financial impact is often muted by initial setup costs.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group reports unexpected decline in Latin America revenue"
+      "headline": "Holtum Asset Group reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline is a negative indicator that directly impacts financial performance and investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital explores strategic alternatives for process automation unit"
+      "headline": "Ervan Capital explores strategic alternatives for process automation unit",
+      "sentiment": {
+        "reasoning": "Similar to the previous strategic review, this creates speculative upside or downside potential without clear immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:23.879Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -60,35 +60,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports 10% increase in customer acquisition"
+      "headline": "Nolvav Commerce reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition indicates strong growth momentum that should positively impact revenue in both the short and long term.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores faces regulatory review of digital payments practices"
+      "headline": "Holtar Stores faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential legal or operational costs that weigh on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores misses quarterly revenue estimates by 8%"
+      "headline": "Xovep Stores misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 8% is a clear negative signal that typically triggers an immediate downward market reaction.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 46,
       "companyId": 3,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets secures $120M contract with a major logistics provider"
+      "headline": "Ixenis Outlets secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost that improves the company's financial outlook.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports 12% increase in customer acquisition"
+      "headline": "Holtar Stores reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition is a strong indicator of improved demand and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:59:09.018Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -36,21 +36,62 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $180M contract with an international consortium"
+      "headline": "Grevon Biotech secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $180M contract provides a clear, immediate, and durable revenue boost for Grevon Biotech.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences faces regulatory review of wireless connectivity practices"
+      "headline": "Calvis Sciences faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential downside risk for Calvis Sciences' operations.",
+        "longTerm": -5,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Grevon Biotech reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Rising costs in cloud infrastructure directly threaten Grevon Biotech's profitability and margins.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:55.490Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

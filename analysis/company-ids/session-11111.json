@@ -65,56 +65,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments reports 18% increase in customer acquisition"
+      "headline": "Halven Investments reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition indicates strong growth momentum that should positively impact revenue in the near and medium term.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group CTO steps down unexpectedly citing personal reasons"
+      "headline": "Varvov Retail Group CTO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a CTO creates immediate leadership uncertainty and potential strategic disruption.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group secures $180M contract with an international consortium"
+      "headline": "Varvov Retail Group secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides a clear, quantifiable boost to future revenue and backlog.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments delays product launch in process automation segment"
+      "headline": "Krevan Investments delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and may signal internal operational challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports rising costs pressuring margins in process automation"
+      "headline": "Plevum Partners reports rising costs pressuring margins in process automation",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability, which is a fundamental negative for financial performance.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments reports rising costs pressuring margins in enterprise software"
+      "headline": "Krevan Investments reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Margin pressure in the enterprise software segment suggests a negative trend in operational efficiency and profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group recalls products in data analytics line due to quality concerns"
+      "headline": "Varvov Retail Group recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns poses both immediate financial costs and potential long-term reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group misses quarterly revenue estimates by 15%"
+      "headline": "Varvov Retail Group misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss is a significant negative indicator of current business performance and market demand.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:55.155Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

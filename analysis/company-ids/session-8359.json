@@ -64,49 +64,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital beats analyst expectations with strong earnings growth"
+      "headline": "Ervan Capital beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations typically drives immediate positive sentiment and validates current operational performance.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores loses key contract in North America to competitor"
+      "headline": "Holtar Stores loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct revenue hit and a loss of market share to a competitor.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $250M contract with an international consortium"
+      "headline": "Halvav Brands secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides clear revenue visibility and positive growth momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital files routine patent applications in data analytics"
+      "headline": "Ervan Capital files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not indicate immediate or significant financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Ervan Capital Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a C-suite executive creates leadership instability and market concern regarding internal strategy.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Frelex Outlets warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region directly threaten operational efficiency and revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands revises long-term strategy with focus on data analytics"
+      "headline": "Halvav Brands revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot is a long-term initiative with unclear immediate financial benefits and significant execution risk.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:12.039Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

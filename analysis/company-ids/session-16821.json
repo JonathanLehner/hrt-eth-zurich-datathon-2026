@@ -64,56 +64,147 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels expands operations into Southeast Asia markets"
+      "headline": "Jorvis Fuels expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into a new geographic market represents a strategic growth initiative that typically signals long-term revenue potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $180M contract with an international consortium"
+      "headline": "Zrovex Industries secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large, specific dollar-value contract provides immediate and verifiable revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners recalls products in automated logistics line due to quality concerns"
+      "headline": "Plevum Partners recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate operational costs and potential reputational damage.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries names new head of cloud infrastructure division"
+      "headline": "Zrovex Industries names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with neutral to slightly positive sentiment depending on the individual's track record.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Zrovex Industries reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 5% indicates positive momentum and operational success.",
+        "longTerm": 3,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries loses key contract in Southeast Asia to competitor"
+      "headline": "Zrovex Industries loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts future revenue streams and market share.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels achieves key regulatory milestone ahead of schedule"
+      "headline": "Relvon Fuels achieves key regulatory milestone ahead of schedule",
+      "sentiment": {
+        "reasoning": "Achieving a regulatory milestone ahead of schedule removes a significant barrier to entry or product deployment.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Zrovex Industries reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Revenue growth of 3% is positive but represents a deceleration compared to previous performance, tempering market enthusiasm.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:09.659Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

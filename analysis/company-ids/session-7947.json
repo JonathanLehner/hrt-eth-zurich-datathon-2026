@@ -50,35 +50,96 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports 10% increase in customer acquisition"
+      "headline": "Urvel Grid reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition directly signals improved growth momentum and revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces $2.5B share buyback program"
+      "headline": "Nerven Grid announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A $2.5B share buyback program provides immediate support to earnings per share and signals management confidence in capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid wins industry award for excellence in data analytics"
+      "headline": "Nerven Grid wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Industry awards for excellence provide positive brand signaling but lack direct, quantifiable financial impact on the company's bottom line.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $800M contract with a global retailer"
+      "headline": "Ulvon Renewables secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract represents a significant, material revenue win that bolsters the company's financial outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables secures $50M contract with a national infrastructure agency"
+      "headline": "Ulvon Renewables secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $50M contract with a national agency provides stable, reliable revenue, though it is smaller in scale than the company's larger deals.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:56.151Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

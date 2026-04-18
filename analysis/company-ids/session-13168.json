@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma signs multi-year partnership with a global retailer"
+      "headline": "Nerval Biopharma signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer provides long-term revenue visibility and strategic growth for Nerval Biopharma.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power board meeting to discuss major strategic initiative"
+      "headline": "Kelvik Power board meeting to discuss major strategic initiative",
+      "sentiment": {
+        "reasoning": "The announcement of a board meeting to discuss a major strategic initiative is speculative and lacks specific details on the nature or impact of the initiative.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics sees 15% margin improvement in latest quarter"
+      "headline": "Calvos Genomics sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement directly indicates increased operational efficiency and profitability for Calvos Genomics.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics files for regulatory approval of new process automation offering"
+      "headline": "Calvos Genomics files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward commercialization but does not guarantee immediate revenue or success.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power launches next-generation supply chain optimization platform"
+      "headline": "Kelvik Power launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive operational development that could drive future revenue growth for Kelvik Power.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power delays product launch in data analytics segment"
+      "headline": "Kelvik Power delays product launch in data analytics segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch typically signals operational challenges or market headwinds, negatively impacting short-term sentiment.",
+        "longTerm": -2,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Myrnon Therapeutics reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 10% year-over-year demonstrates strong market demand and solid financial performance for Myrnon Therapeutics.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:15.419Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

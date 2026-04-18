@@ -64,49 +64,130 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces significant capital expenditure plan for Latin America"
+      "headline": "Talvep Computing announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow and margins.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings signs multi-year partnership with an international consortium"
+      "headline": "Talvix Holdings signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides clear revenue visibility and strategic validation for the company.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings files for regulatory approval of new process automation offering"
+      "headline": "Talvix Holdings files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the outcome and timeline remain subject to external review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $800M contract with an international consortium"
+      "headline": "Zrovov Advisors secures $800M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a substantial and immediate boost to the company's revenue outlook.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $650M contract with a top-tier research institute"
+      "headline": "Zrovov Advisors secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $650M contract with a research institute represents a major revenue win that strengthens the company's market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $500M contract with a top-tier research institute"
+      "headline": "Talvep Computing secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $500M contract win is a significant positive development that improves the company's financial trajectory.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities misses quarterly revenue estimates by 12%"
+      "headline": "Creven Securities misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 12% is a clear negative signal regarding operational performance and market demand.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:41.437Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 24,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips enters joint venture with a multinational manufacturer"
+      "headline": "Brevon Microchips enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A joint venture indicates strategic expansion and potential long-term revenue growth through shared resources.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 26,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $500M contract with a top-tier research institute"
+      "headline": "Relvan Software secures $500M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large, specific contract provides immediate revenue visibility and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software faces class action over supply chain optimization service disruption"
+      "headline": "Relvan Software faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that could persist.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Yorven Labs announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "Increased capital expenditure signals management's confidence in growth, though it represents a short-term cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports unexpected decline in Asia Pacific revenue"
+      "headline": "Brevon Microchips reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a key region is a negative signal for near-term financial performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports 8% decline in operating income"
+      "headline": "Zelval Energy reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and suggests underlying operational inefficiencies.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:34.456Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

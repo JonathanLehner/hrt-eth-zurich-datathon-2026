@@ -52,42 +52,113 @@
       "barIx": 15,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions files routine patent applications in automated logistics"
+      "headline": "Orevov Solutions files routine patent applications in automated logistics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions files for regulatory approval of new precision manufacturing offering"
+      "headline": "Orevov Solutions files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step for future product revenue but carries significant uncertainty regarding approval timelines and outcomes.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries confirms participation in Capital Markets Day"
+      "headline": "Zrovex Industries confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Participation in a Capital Markets Day is a standard corporate event that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries CFO steps down unexpectedly citing personal reasons"
+      "headline": "Zrovex Industries CFO steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "An unexpected CFO departure creates immediate leadership instability and market concern regarding internal financial oversight.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries expands operations into Europe markets"
+      "headline": "Zrovex Industries expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into Europe represents a clear growth strategy that should positively impact long-term revenue potential.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group announces breakthrough in precision manufacturing"
+      "headline": "Crevol Retail Group announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in manufacturing technology suggests potential for improved margins or competitive advantage, though the commercialization timeline remains unclear.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:47.738Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

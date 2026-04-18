@@ -46,21 +46,62 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital completes strategic acquisition to strengthen enterprise software"
+      "headline": "Zelvel Capital completes strategic acquisition to strengthen enterprise software",
+      "sentiment": {
+        "reasoning": "The acquisition of an enterprise software firm provides a clear strategic expansion, though integration and immediate financial impact remain to be seen.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks announces breakthrough in supply chain optimization"
+      "headline": "Jovor Networks announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential cost savings or efficiency gains, but the headline lacks specific financial quantification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings reports 20% increase in customer acquisition"
+      "headline": "Halvix Holdings reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a strong, quantifiable indicator of growth that should positively impact revenue in the near and medium term.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:57.414Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

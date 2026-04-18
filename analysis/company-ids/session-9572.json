@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Kelvik Power reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% indicates strong operational momentum and immediate financial health.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $320M contract with a national infrastructure agency"
+      "headline": "Kelvik Power secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $320M contract provides a clear, long-term revenue stream and validates the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid reports 10% increase in customer acquisition"
+      "headline": "Urvel Grid reports 10% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 10% increase in customer acquisition directly correlates to improved future revenue growth potential.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods misses quarterly revenue estimates by 20%"
+      "headline": "Xovol Goods misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "A 20% revenue miss is a significant negative indicator of current operational performance and market demand.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces $9.6B share buyback program"
+      "headline": "Zrovex Industries announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods completes strategic acquisition to strengthen process automation"
+      "headline": "Xovol Goods completes strategic acquisition to strengthen process automation",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions aim to improve long-term efficiency, though integration outcomes remain inherently uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods confirms participation in Global Innovation Summit"
+      "headline": "Xovol Goods confirms participation in Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Participation in an innovation summit is a positive branding event but lacks direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries faces regulatory review of supply chain optimization practices"
+      "headline": "Zrovex Industries faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant downside risk and operational uncertainty regarding future practices.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:58.102Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 18,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid wins industry award for excellence in process automation"
+      "headline": "Nerven Grid wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets to present at Global Innovation Summit"
+      "headline": "Frelex Outlets to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a standard corporate event that rarely moves stock prices unless specific news is announced.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Nolvav Commerce completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions typically signal growth and capability expansion, though integration risks remain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets CTO addresses investor concerns in open letter"
+      "headline": "Frelex Outlets CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CTO is a reactive measure to address uncertainty, which may stabilize sentiment but does not change fundamentals.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports record quarterly revenue, up 8% year-over-year"
+      "headline": "Frelex Outlets reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong, quantifiable indicator of business health and positive momentum.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid faces regulatory review of precision manufacturing practices"
+      "headline": "Nerven Grid faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce significant operational risk and potential costs, creating immediate and sustained uncertainty.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:43.473Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

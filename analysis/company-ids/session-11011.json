@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings opens new office in North America"
+      "headline": "Talvix Holdings opens new office in North America",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion but lacks immediate financial scale or revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital misses quarterly revenue estimates by 25%"
+      "headline": "Zelvel Capital misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% revenue miss is a significant negative indicator of current operational performance and market demand.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings to present at Global Innovation Summit"
+      "headline": "Talvix Holdings to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a standard corporate event that rarely provides immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings secures $400M contract with a global retailer"
+      "headline": "Halvix Holdings secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a clear, substantial, and durable revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $400M contract with a top-tier research institute"
+      "headline": "Zelvel Capital secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $400M contract win is a strong positive signal that offsets recent negative earnings performance.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 26,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy secures $50M contract with a leading cloud platform"
+      "headline": "Zelval Energy secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A $50M contract with a major cloud platform provides a solid, verifiable revenue boost.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings wins industry award for excellence in automated logistics"
+      "headline": "Halvix Holdings wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack direct, quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy revises long-term strategy with focus on renewable storage"
+      "headline": "Zelval Energy revises long-term strategy with focus on renewable storage",
+      "sentiment": {
+        "reasoning": "A strategic pivot to renewable storage is a long-term directional change with high uncertainty regarding execution and profitability.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:51.181Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

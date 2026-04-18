@@ -55,56 +55,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Nerven Grid reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "A 5% year-over-year revenue increase indicates modest growth, providing a stable but unspectacular positive signal.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Kelvik Power recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational and reputational damage, with potential for lingering costs and customer trust issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid misses quarterly revenue estimates by 15%"
+      "headline": "Nerven Grid misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss is a significant negative indicator of current business performance and market demand.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Kelvik Power recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "This repeat mention of the recall confirms the severity of the issue, likely compounding negative sentiment.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets opens new office in Latin America"
+      "headline": "Ixenis Outlets opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal, though the immediate financial impact is likely minimal.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $500M contract with a global retailer"
+      "headline": "Kelvik Power secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $500M contract provides a clear, substantial, and durable revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power to host investor day focused on process automation strategy"
+      "headline": "Kelvik Power to host investor day focused on process automation strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that may signal future intent but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid revises long-term strategy with focus on enterprise software"
+      "headline": "Nerven Grid revises long-term strategy with focus on enterprise software",
+      "sentiment": {
+        "reasoning": "A strategic pivot to enterprise software is a long-term directional change with high uncertainty regarding execution and success.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:46.877Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

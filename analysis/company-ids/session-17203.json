@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group faces class action over digital payments service disruption"
+      "headline": "Varvov Retail Group faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that may persist as the litigation process unfolds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial to host investor day focused on supply chain optimization strategy"
+      "headline": "Wrelal Financial to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but lacks immediate financial impact until the strategy is detailed.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group names new head of renewable storage division"
+      "headline": "Varvov Retail Group names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change that typically has minimal immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings secures $180M contract with an international consortium"
+      "headline": "Talvix Holdings secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides clear, positive revenue visibility that will likely benefit the company throughout the 100-day period.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports rising costs pressuring margins in data analytics"
+      "headline": "Jorvyl Securities reports rising costs pressuring margins in data analytics",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins is a direct negative signal for profitability that is likely to persist until operational efficiencies are realized.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group expands operations into Asia Pacific markets"
+      "headline": "Varvov Retail Group expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expansion into new markets is a growth signal that typically requires time to generate revenue, leading to a delayed positive impact.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings completes planned facility upgrade in Scandinavia"
+      "headline": "Talvix Holdings completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that improves efficiency but has a limited, incremental impact on short-term financial results.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Talvix Holdings completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A strategic acquisition to strengthen infrastructure is a positive long-term move, though the immediate financial benefit is often offset by integration costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:24.707Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

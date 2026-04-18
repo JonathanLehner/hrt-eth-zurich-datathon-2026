@@ -64,49 +64,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources secures $75M contract with an international consortium"
+      "headline": "Nolvol Resources secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, immediate, and durable revenue boost for Nolvol Resources.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Plevep Power files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the timeline for approval remains uncertain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power confirms participation in Corporate Strategy Symposium"
+      "headline": "Plevep Power confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a strategy symposium is a routine corporate event with negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces breakthrough in renewable storage"
+      "headline": "Plevep Power announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A breakthrough in renewable storage technology suggests significant long-term growth potential, though commercialization timelines are unclear.",
+        "longTerm": 8,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports rising costs pressuring margins in automated logistics"
+      "headline": "Myrnon Therapeutics reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs in automated logistics directly threaten profit margins, creating a negative financial outlook.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports rising costs pressuring margins in cloud infrastructure"
+      "headline": "Myrnon Therapeutics reports rising costs pressuring margins in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Increased costs in cloud infrastructure indicate persistent margin compression that will likely weigh on earnings.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries misses quarterly revenue estimates by 10%"
+      "headline": "Zrovex Industries misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "A 10% revenue miss is a significant negative indicator of current business performance and market demand.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:49.152Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

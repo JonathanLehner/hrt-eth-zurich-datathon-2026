@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Ilval Financial reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% indicates strong operational performance and positive momentum for Ilval Financial.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports rising costs pressuring margins in renewable storage"
+      "headline": "Frelex Outlets reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins in a key growth segment like renewable storage presents a direct threat to profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $320M contract with a global retailer"
+      "headline": "Ilval Financial secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides a clear, significant revenue boost and validates the company's market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce reports 5% decline in operating income"
+      "headline": "Arnik Commerce reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income signals underlying efficiency or demand issues that negatively impact financial health.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports 12% increase in customer acquisition"
+      "headline": "Ilval Financial reports 12% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 12% increase in customer acquisition is a strong leading indicator of future revenue growth and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets secures $120M contract with a global retailer"
+      "headline": "Frelex Outlets secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "The $120M contract win provides a concrete revenue stream and improves the company's growth outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports record quarterly revenue, up 15% year-over-year"
+      "headline": "Frelex Outlets reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 15% demonstrates exceptional performance and strong market demand for Frelex Outlets.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes strategic acquisition to strengthen automated logistics"
+      "headline": "Joval Brands completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "The acquisition of automated logistics capabilities is a strategic move to improve long-term operational efficiency.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:23.258Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

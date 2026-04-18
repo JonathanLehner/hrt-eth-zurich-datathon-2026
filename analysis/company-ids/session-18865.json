@@ -43,56 +43,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma recalls products in process automation line due to quality concerns"
+      "headline": "Nerval Biopharma recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company addresses quality control issues.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics reports strong demand in North America, raises outlook"
+      "headline": "Calvos Genomics reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and an increased outlook provide clear positive signals for both immediate investor sentiment and sustained financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $250M contract with a national infrastructure agency"
+      "headline": "Nerval Biopharma secures $250M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large, multi-million dollar contract provides a clear, immediate boost to revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $650M contract with a major logistics provider"
+      "headline": "Nerval Biopharma secures $650M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A significant $650M contract win represents a major revenue catalyst that will positively impact financial results throughout the 100-day window.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma expands operations into Southeast Asia markets"
+      "headline": "Nerval Biopharma expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion is a strategic move that signals growth, though the immediate financial impact is often muted compared to the long-term potential.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $75M contract with a multinational manufacturer"
+      "headline": "Nerval Biopharma secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "This contract win adds to the company's revenue backlog, providing a steady, positive contribution to financial performance.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma delays product launch in digital payments segment"
+      "headline": "Nerval Biopharma delays product launch in digital payments segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch creates immediate disappointment and uncertainty regarding the timeline for expected revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Calvos Genomics",
-      "headline": "Calvos Genomics files for regulatory approval of new automated logistics offering"
+      "headline": "Calvos Genomics files for regulatory approval of new automated logistics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step toward commercialization, though the outcome and timing remain subject to external review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:24.706Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -62,42 +62,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 18% decline in operating income"
+      "headline": "Grevon Biotech reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income directly impacts profitability and investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports unexpected decline in Asia Pacific revenue"
+      "headline": "Wrelal Financial reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "Revenue decline in a key growth region like Asia Pacific signals potential structural or competitive headwinds.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial sees 15% margin improvement in latest quarter"
+      "headline": "Wrelal Financial sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 15% margin improvement indicates strong operational efficiency gains that typically boost bottom-line performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial reports 15% increase in customer acquisition"
+      "headline": "Ilval Financial reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "Increased customer acquisition is a leading indicator of future revenue growth and market share expansion.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial secures $320M contract with a leading cloud platform"
+      "headline": "Wrelal Financial secures $320M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides immediate revenue visibility and validates the company's service offering.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments misses quarterly revenue estimates by 25%"
+      "headline": "Halven Investments misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A 25% miss on revenue estimates is a substantial negative surprise that typically triggers immediate downward valuation adjustments.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:03.737Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

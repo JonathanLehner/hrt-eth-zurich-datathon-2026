@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs reports 7% increase in customer acquisition"
+      "headline": "Crevex Labs reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition indicates positive growth momentum that should translate into immediate and sustained revenue benefits.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs revises long-term strategy with focus on precision manufacturing"
+      "headline": "Crevex Labs revises long-term strategy with focus on precision manufacturing",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward precision manufacturing are directional shifts that lack immediate financial quantification, creating high uncertainty regarding short-term impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co sees 15% drop in new customer orders this quarter"
+      "headline": "Pleven Trading Co sees 15% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 15% drop in new customer orders is a direct negative signal for future revenue generation and market demand.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co reports 7% decline in operating income"
+      "headline": "Pleven Trading Co reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income directly impacts profitability and is a clear negative indicator for the company's financial health.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co misses quarterly revenue estimates by 12%"
+      "headline": "Jorval Trading Co misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 12% is a significant negative surprise that typically triggers immediate downward pressure on stock valuation.",
+        "longTerm": -4,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co secures $800M contract with a multinational manufacturer"
+      "headline": "Jorval Trading Co secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides a clear, substantial, and long-term revenue stream for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 24,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace completes strategic acquisition to strengthen renewable storage"
+      "headline": "Arnos Marketplace completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "Strategic acquisitions are intended to drive long-term growth, though the immediate financial impact is often obscured by integration costs and capital outlay.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:31.348Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

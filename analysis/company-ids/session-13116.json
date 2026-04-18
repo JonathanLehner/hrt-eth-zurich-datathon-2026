@@ -54,49 +54,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets begins scheduled maintenance of enterprise software systems"
+      "headline": "Ixenis Outlets begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands recalls products in enterprise software line due to quality concerns"
+      "headline": "Joval Brands recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls indicate quality control failures that lead to immediate costs and potential long-term reputational damage.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands to host investor day focused on digital payments strategy"
+      "headline": "Joval Brands to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that rarely cause immediate financial shifts but signal management's long-term focus.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Ixenis Outlets reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a direct positive signal for future earnings growth.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels reports 20% decline in operating income"
+      "headline": "Jorvis Fuels reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income is a clear negative indicator of current financial health and operational efficiency.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels enters joint venture with a leading cloud platform"
+      "headline": "Jorvis Fuels enters joint venture with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A joint venture with a cloud leader suggests potential for operational improvement or new revenue streams, though the financial benefit is not yet quantified.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels announces breakthrough in cloud infrastructure"
+      "headline": "Jorvis Fuels announces breakthrough in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "A breakthrough in cloud infrastructure is a positive technical development that could lead to long-term cost savings or competitive advantages.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:13.301Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

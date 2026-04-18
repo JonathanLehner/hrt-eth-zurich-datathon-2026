@@ -56,56 +56,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $75M contract with a multinational manufacturer"
+      "headline": "Prynis Systems secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides immediate revenue visibility and positive sentiment for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 0,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems announces $0.8B share buyback program"
+      "headline": "Prynis Systems announces $0.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies loses key contract in Asia Pacific to competitor"
+      "headline": "Myrnep Technologies loses key contract in Asia Pacific to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract to a competitor directly impacts future revenue and market share in a significant region.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 4,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs expands operations into Latin America markets"
+      "headline": "Yorven Labs expands operations into Latin America markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets offers long-term growth potential but involves initial execution and setup costs.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs revises long-term strategy with focus on data analytics"
+      "headline": "Yorven Labs revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to data analytics is a long-term directional change with unclear immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies begins scheduled maintenance of enterprise software systems"
+      "headline": "Myrnep Technologies begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and typically has negligible market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs recalls products in digital payments line due to quality concerns"
+      "headline": "Yorven Labs recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a core line creates immediate reputational and financial risk with potential for lingering operational issues.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems misses quarterly revenue estimates by 10%"
+      "headline": "Prynis Systems misses quarterly revenue estimates by 10%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 10% is a significant negative indicator of current business performance.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:31.936Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

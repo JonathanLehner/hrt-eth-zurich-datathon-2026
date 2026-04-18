@@ -64,49 +64,130 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid faces class action over data analytics service disruption"
+      "headline": "Urvel Grid faces class action over data analytics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces immediate legal risk and potential reputational damage that may persist throughout the 100-day window.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners signs multi-year partnership with a top-tier research institute"
+      "headline": "Plevum Partners signs multi-year partnership with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term strategic value and credibility, though the immediate financial impact is likely modest.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables launches next-generation cloud infrastructure platform"
+      "headline": "Ulvon Renewables launches next-generation cloud infrastructure platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform is a positive growth signal that should drive revenue potential over the coming months.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 3,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power begins scheduled maintenance of data analytics systems"
+      "headline": "Kelvik Power begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that typically has negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Ulvon Renewables",
-      "headline": "Ulvon Renewables misses quarterly revenue estimates by 15%"
+      "headline": "Ulvon Renewables misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A significant 15% revenue miss is a clear negative indicator that will likely weigh on investor sentiment for the remainder of the quarter.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power begins scheduled maintenance of process automation systems"
+      "headline": "Kelvik Power begins scheduled maintenance of process automation systems",
+      "sentiment": {
+        "reasoning": "Routine scheduled maintenance of internal systems is a standard operational procedure with no expected financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $500M contract with a multinational manufacturer"
+      "headline": "Plevum Partners secures $500M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $500M contract is a substantial, concrete win that provides both immediate validation and long-term revenue visibility.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:07.311Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

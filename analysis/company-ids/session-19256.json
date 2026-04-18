@@ -64,49 +64,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences to host investor day focused on supply chain optimization strategy"
+      "headline": "Wyrnik Sciences to host investor day focused on supply chain optimization strategy",
+      "sentiment": {
+        "reasoning": "Investor days focused on supply chain optimization are generally viewed as neutral to slightly positive as they signal management transparency and operational focus.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences completes planned facility upgrade in Europe"
+      "headline": "Wyrnik Sciences completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a positive operational milestone that should improve efficiency and capacity.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma faces regulatory review of precision manufacturing practices"
+      "headline": "Zrovum Biopharma faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of manufacturing practices introduce significant uncertainty and potential operational risk for a biopharma company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences to host investor day focused on cloud infrastructure strategy"
+      "headline": "Wyrnik Sciences to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on cloud infrastructure is a standard corporate communication event that typically has minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics delays product launch in automated logistics segment"
+      "headline": "Jorvix Diagnostics delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch is a negative signal that directly impacts revenue expectations and market positioning.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 3,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 7% decline in operating income"
+      "headline": "Grevon Biotech reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of financial performance and profitability.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma announces breakthrough in precision manufacturing"
+      "headline": "Zrovum Biopharma announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing is a strong positive indicator for long-term competitive advantage and cost efficiency.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:38.588Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

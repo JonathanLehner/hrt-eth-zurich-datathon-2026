@@ -54,49 +54,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals files routine patent applications in precision manufacturing"
+      "headline": "Yorvov Pharmaceuticals files routine patent applications in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports strong demand in Central Europe, raises outlook"
+      "headline": "Frelis Genomics reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising financial outlook based on strong demand is a direct positive signal for near-term and medium-term performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics opens new office in Latin America"
+      "headline": "Frelis Genomics opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Expanding into a new region is a strategic growth move that typically incurs costs before generating significant revenue.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 0,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals enters joint venture with a major logistics provider"
+      "headline": "Yorvov Pharmaceuticals enters joint venture with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A joint venture with a logistics provider suggests operational efficiency improvements, though the financial benefit is not immediately quantified.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors secures $500M contract with a leading cloud platform"
+      "headline": "Zrovov Advisors secures $500M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, high-value revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors reports 10% decline in operating income"
+      "headline": "Zrovov Advisors reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a negative indicator of profitability that typically impacts investor sentiment immediately.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors faces class action over cloud infrastructure service disruption"
+      "headline": "Zrovov Advisors faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits introduce significant legal and financial uncertainty that can weigh on the stock price over time.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:00.225Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

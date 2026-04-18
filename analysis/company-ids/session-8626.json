@@ -53,49 +53,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co recalls products in automated logistics line due to quality concerns"
+      "headline": "Pleven Trading Co recalls products in automated logistics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates operational failure and potential liability, creating immediate negative sentiment and long-term brand/cost risks.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands confirms participation in Corporate Strategy Symposium"
+      "headline": "Joval Brands confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a corporate symposium is a routine event with negligible impact on financial performance or market valuation.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Joval Brands reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a positive indicator of business health, though a 3% increase is modest.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes planned facility upgrade in North America"
+      "headline": "Joval Brands completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that typically improves efficiency but has a neutral immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands completes strategic acquisition to strengthen digital payments"
+      "headline": "Joval Brands completes strategic acquisition to strengthen digital payments",
+      "sentiment": {
+        "reasoning": "A strategic acquisition to strengthen digital payments suggests long-term growth potential, though integration risks remain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports strong demand in Central Europe, raises outlook"
+      "headline": "Xovol Goods reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive signals for financial performance and investor confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co delays product launch in wireless connectivity segment"
+      "headline": "Pleven Trading Co delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch signals potential internal issues or market headwinds, negatively impacting short-term expectations.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:22.020Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

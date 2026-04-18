@@ -66,56 +66,147 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces $1.2B share buyback program"
+      "headline": "Dralol Computing announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A $1.2B share buyback program directly increases earnings per share and signals management confidence in the company's valuation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks expands operations into Scandinavia markets"
+      "headline": "Halvax Networks expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion into Scandinavia represents a new revenue stream, though the immediate financial contribution is likely to be gradual.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies secures $800M contract with a multinational manufacturer"
+      "headline": "Ixenix Technologies secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing an $800M contract provides significant, concrete revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies wins industry award for excellence in precision manufacturing"
+      "headline": "Ixenix Technologies wins industry award for excellence in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand sentiment but lack a direct, quantifiable impact on near-term financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks misses quarterly revenue estimates by 3%"
+      "headline": "Halvax Networks misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by 3% is a negative signal that typically triggers immediate downward pressure on stock price.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software wins industry award for excellence in supply chain optimization"
+      "headline": "Frelol Software wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Winning an industry award for supply chain optimization is a positive reputational signal with minimal direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks begins scheduled maintenance of automated logistics systems"
+      "headline": "Halvax Networks begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is generally priced in and expected by the market.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Ixenix Technologies warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "A warning regarding supply chain disruptions in a key region introduces immediate operational risk and potential revenue headwinds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:04.422Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -52,42 +52,113 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks opens new office in Central Europe"
+      "headline": "Halvax Networks opens new office in Central Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that typically has a neutral to slightly positive long-term impact without immediate revenue implications.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 0,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting North America operations"
+      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting North America operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions represent a direct negative operational headwind that will likely impact near-term production and revenue.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 1,
       "companyId": 0,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks secures $400M contract with an international consortium"
+      "headline": "Halvax Networks secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides clear, high-value revenue visibility that is strongly positive for both short and long-term performance.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips to present at Emerging Markets Forum"
+      "headline": "Ulvyn Microchips to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a routine corporate communication event that rarely moves the stock price or changes financial fundamentals.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports record quarterly revenue, up 25% year-over-year"
+      "headline": "Ulvyn Microchips reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 25% is a strong indicator of financial health and market demand, providing a positive catalyst for the stock.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks expands operations into Scandinavia markets"
+      "headline": "Jovor Networks expands operations into Scandinavia markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets is a strategic growth move that signals potential for future revenue, though the immediate financial impact is modest.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:06.719Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

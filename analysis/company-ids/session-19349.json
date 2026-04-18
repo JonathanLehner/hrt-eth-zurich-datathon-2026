@@ -55,56 +55,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Yorven Labs files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress but does not guarantee immediate revenue or market success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands announces $4.1B share buyback program"
+      "headline": "Halvav Brands announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and provides immediate support to the stock price through increased demand.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Frelex Outlets reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a strong indicator of current business health and positive momentum for the company.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs signs multi-year partnership with an international consortium"
+      "headline": "Yorven Labs signs multi-year partnership with an international consortium",
+      "sentiment": {
+        "reasoning": "A multi-year partnership provides long-term revenue visibility and strategic validation for the company's offerings.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports unexpected decline in Scandinavia revenue"
+      "headline": "Halvav Brands reports unexpected decline in Scandinavia revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in a specific regional market suggests potential operational or demand issues that could weigh on investor sentiment.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets announces significant capital expenditure plan for Latin America"
+      "headline": "Frelex Outlets announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure indicates a strategic expansion effort that will likely depress short-term cash flow while aiming for long-term growth.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $800M contract with a top-tier research institute"
+      "headline": "Halvav Brands secures $800M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a top-tier institution provides both immediate financial validation and long-term revenue stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands announces $2.5B share buyback program"
+      "headline": "Halvav Brands announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A secondary announcement of a share buyback program reinforces the company's commitment to returning capital to shareholders.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:43.358Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

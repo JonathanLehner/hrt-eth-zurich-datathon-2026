@@ -36,21 +36,62 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees 12% margin improvement in latest quarter"
+      "headline": "Nolvis Devices sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement directly signals increased profitability and operational efficiency, which typically drives immediate positive market sentiment.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Prynis Systems reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% year-over-year provides strong evidence of sustained demand and market share expansion.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices confirms participation in Emerging Markets Forum"
+      "headline": "Nolvis Devices confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a networking event that lacks specific financial outcomes or measurable business impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:29.300Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

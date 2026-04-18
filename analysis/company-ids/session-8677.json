@@ -54,49 +54,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $800M contract with a leading cloud platform"
+      "headline": "Ulvyn Microchips secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a significant $800M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group sees 25% drop in new customer orders this quarter"
+      "headline": "Jovik Asset Group sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 25% drop in new customer orders indicates a sharp decline in demand that will negatively impact financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems files for regulatory approval of new cloud infrastructure offering"
+      "headline": "Prynis Systems files for regulatory approval of new cloud infrastructure offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that signals future growth potential but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems delays product launch in wireless connectivity segment"
+      "headline": "Prynis Systems delays product launch in wireless connectivity segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and signals potential internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group delays product launch in precision manufacturing segment"
+      "headline": "Jovik Asset Group delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "A product launch delay in a specific segment creates immediate uncertainty and pushes back anticipated growth contributions.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Jovik Asset Group",
-      "headline": "Jovik Asset Group confirms participation in Corporate Strategy Symposium"
+      "headline": "Jovik Asset Group confirms participation in Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Participation in a symposium is a routine corporate activity that carries negligible direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports 3% decline in operating income"
+      "headline": "Ulvyn Microchips reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income reflects reduced profitability and operational efficiency, which is a negative signal for investors.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:24.451Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

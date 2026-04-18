@@ -68,63 +68,164 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions opens new office in Middle East"
+      "headline": "Orevov Solutions opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion but lacks immediate financial impact data.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Zelval Energy reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth is a strong positive indicator of current business performance.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions wins industry award for excellence in digital payments"
+      "headline": "Orevov Solutions wins industry award for excellence in digital payments",
+      "sentiment": {
+        "reasoning": "Industry awards provide brand prestige but have limited direct impact on financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 25% decline in operating income"
+      "headline": "Talvep Computing reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative signal regarding profitability.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid begins scheduled maintenance of supply chain optimization systems"
+      "headline": "Nerven Grid begins scheduled maintenance of supply chain optimization systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal impact on financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy misses quarterly revenue estimates by 8%"
+      "headline": "Zelval Energy misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 8% is a clear negative signal that directly impacts investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 0,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions reports 7% decline in operating income"
+      "headline": "Orevov Solutions reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income reflects underlying margin pressure or cost issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 33,
       "companyId": 3,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid secures $500M contract with a global retailer"
+      "headline": "Nerven Grid secures $500M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $500M contract provides a substantial and concrete boost to future revenue expectations.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H009",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy expands operations into Europe markets"
+      "headline": "Zelval Energy expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding into European markets represents a growth opportunity but involves execution risk.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:24.033Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

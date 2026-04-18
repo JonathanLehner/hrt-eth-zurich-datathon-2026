@@ -41,42 +41,113 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports strong demand in North America, raises outlook"
+      "headline": "Yorval Partners reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 7% increase in customer acquisition"
+      "headline": "Yorval Partners reports 7% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 7% increase in customer acquisition is a positive growth indicator that typically translates into sustained revenue momentum.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $400M contract with a multinational manufacturer"
+      "headline": "Creven Securities secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and long-term backlog support.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities names new head of renewable storage division"
+      "headline": "Creven Securities names new head of renewable storage division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a strategic move, but the financial impact is speculative until the leader's strategy is implemented.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $180M contract with an international consortium"
+      "headline": "Creven Securities secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "This $180M contract win adds significant, concrete revenue to the company's pipeline.",
+        "longTerm": 6,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Creven Securities reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% confirms strong operational execution and market position.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:38.202Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

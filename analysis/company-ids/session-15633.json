@@ -64,49 +64,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Nerven Grid reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "A 20% year-over-year revenue increase indicates strong financial performance and growth momentum.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments recalls products in digital payments line due to quality concerns"
+      "headline": "Krevan Investments recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls in a core business line create immediate financial liability and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions files routine patent applications in wireless connectivity"
+      "headline": "Wyrnor Solutions files routine patent applications in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate material financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments faces regulatory review of renewable storage practices"
+      "headline": "Krevan Investments faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential operational constraints and uncertainty regarding future compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 0,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid wins industry award for excellence in wireless connectivity"
+      "headline": "Nerven Grid wins industry award for excellence in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand validation but have limited direct impact on near-term financial results.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables delays product launch in automated logistics segment"
+      "headline": "Orevex Renewables delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue streams and signals potential internal execution issues.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables signs multi-year partnership with a national infrastructure agency"
+      "headline": "Orevex Renewables signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides long-term revenue visibility and stability.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:24.867Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

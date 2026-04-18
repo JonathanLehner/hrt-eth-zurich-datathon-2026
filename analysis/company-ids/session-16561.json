@@ -52,42 +52,113 @@
       "barIx": 19,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy recalls products in process automation line due to quality concerns"
+      "headline": "Zelval Energy recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational costs and potential reputational damage that may persist as the company manages the logistics of the recall.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables CFO addresses investor concerns in open letter"
+      "headline": "Orevex Renewables CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CFO is a reactive measure to investor sentiment, which provides little concrete financial information and creates ambiguity regarding the underlying issues.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy CEO addresses investor concerns in open letter"
+      "headline": "Zelval Energy CEO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CEO open letter is a standard communication tactic that rarely changes fundamental financial outlooks without specific new data or strategic shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "leadership",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Jorvis Fuels",
-      "headline": "Jorvis Fuels secures $50M contract with a top-tier research institute"
+      "headline": "Jorvis Fuels secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive revenue stream that will likely have a sustained impact on the company's financial performance.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables sees mixed results in automated logistics pilot program"
+      "headline": "Orevex Renewables sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program suggest uncertainty regarding the scalability and future profitability of the logistics initiative.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Orevex Renewables",
-      "headline": "Orevex Renewables secures $250M contract with an international consortium"
+      "headline": "Orevex Renewables secures $250M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $250M contract is a significant, high-value win that provides strong, predictable revenue growth for the company over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:59.476Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital files for regulatory approval of new process automation offering"
+      "headline": "Zelvel Capital files for regulatory approval of new process automation offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates future growth potential but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees 10% drop in new customer orders this quarter"
+      "headline": "Yorval Partners sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative signal for revenue growth and market demand.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $75M contract with a multinational manufacturer"
+      "headline": "Nerval Biopharma secures $75M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue growth and strengthens the company's financial position.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $320M contract with an international consortium"
+      "headline": "Plevum Partners secures $320M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "A $320M contract is a significant positive event that provides substantial revenue visibility and market validation.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 12% drop in new customer orders this quarter"
+      "headline": "Zelvel Capital sees 12% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 12% drop in new customer orders indicates a weakening demand environment that will likely pressure future earnings.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners reports 5% decline in operating income"
+      "headline": "Yorval Partners reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 5% decline in operating income directly impacts profitability and reflects operational inefficiencies or margin pressure.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma completes planned facility upgrade in Asia Pacific"
+      "headline": "Nerval Biopharma completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is a routine operational milestone that improves capacity but does not guarantee immediate revenue gains.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma announces significant capital expenditure plan for Europe"
+      "headline": "Nerval Biopharma announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "Announcing a significant capital expenditure plan signals long-term growth investment but implies immediate cash outflow and potential margin pressure.",
+        "longTerm": 3,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:18.079Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

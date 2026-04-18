@@ -64,49 +64,130 @@
       "barIx": 13,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets misses quarterly revenue estimates by 3%"
+      "headline": "Ixenis Outlets misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates immediate operational underperformance that typically triggers a negative market reaction.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores announces $4.1B share buyback program"
+      "headline": "Holtar Stores announces $4.1B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets faces class action over cloud infrastructure service disruption"
+      "headline": "Ixenis Outlets faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create legal and financial uncertainty that often weighs on sentiment over an extended period.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources delays product launch in renewable storage segment"
+      "headline": "Kelvos Resources delays product launch in renewable storage segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a growth segment suggests execution issues and pushes back expected revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 37,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce withdraws from Central Europe market citing unfavorable conditions"
+      "headline": "Nolvav Commerce withdraws from Central Europe market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a market is a strategic retreat that reduces future revenue potential and signals regional weakness.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce faces class action over digital payments service disruption"
+      "headline": "Nolvav Commerce faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "Service disruptions leading to class action litigation pose both reputational and financial risks to the payment business.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 49,
       "companyId": 3,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce reports 20% increase in customer acquisition"
+      "headline": "Nolvav Commerce reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A significant increase in customer acquisition is a strong leading indicator of future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:49.311Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

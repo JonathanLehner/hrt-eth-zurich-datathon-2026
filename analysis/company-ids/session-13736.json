@@ -51,42 +51,113 @@
       "barIx": 34,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets enters joint venture with a global retailer"
+      "headline": "Ixenis Outlets enters joint venture with a global retailer",
+      "sentiment": {
+        "reasoning": "A joint venture with a global retailer suggests a strategic expansion of market reach and potential revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems faces regulatory review of enterprise software practices"
+      "headline": "Brevep Systems faces regulatory review of enterprise software practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews of software practices introduce significant operational risk and potential for future penalties or forced changes.",
+        "longTerm": -6,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 36,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems announces breakthrough in precision manufacturing"
+      "headline": "Brevep Systems announces breakthrough in precision manufacturing",
+      "sentiment": {
+        "reasoning": "A breakthrough in precision manufacturing indicates a potential competitive advantage and long-term efficiency gains.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks sees 3% drop in new customer orders this quarter"
+      "headline": "Halvax Networks sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders directly signals weakening demand and potential revenue headwinds.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems sees 10% margin improvement in latest quarter"
+      "headline": "Brevep Systems sees 10% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 10% margin improvement demonstrates successful operational efficiency and immediate bottom-line growth.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $650M contract with a national infrastructure agency"
+      "headline": "Brevep Systems secures $650M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides immediate revenue visibility and long-term financial stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:37.100Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

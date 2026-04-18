@@ -60,35 +60,96 @@
       "barIx": 20,
       "companyId": 0,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments expands operations into Southeast Asia markets"
+      "headline": "Halven Investments expands operations into Southeast Asia markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets typically signals growth potential but involves initial capital expenditure and execution risk.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial loses key contract in Southeast Asia to competitor"
+      "headline": "Ilval Financial loses key contract in Southeast Asia to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract directly impacts revenue streams and suggests a competitive disadvantage in the region.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Wrelal Financial reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% is a strong positive indicator of current business momentum and market demand.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 36,
       "companyId": 3,
       "companyName": "Halvax Networks",
-      "headline": "Halvax Networks misses quarterly revenue estimates by 15%"
+      "headline": "Halvax Networks misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss relative to estimates is a significant negative signal regarding operational performance or market demand.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Ilval Financial warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain warnings indicate potential future operational headwinds and margin pressure in a specific region.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:33.970Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

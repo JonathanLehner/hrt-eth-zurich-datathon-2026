@@ -50,35 +50,96 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for wireless connectivity unit"
+      "headline": "Plevik Energy explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit often signals potential divestiture or restructuring, which creates speculative upside but lacks immediate operational clarity.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Nolvis Devices completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "Acquiring assets to optimize supply chains is a proactive operational move that typically improves efficiency and margins over time.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices delays product launch in enterprise software segment"
+      "headline": "Nolvis Devices delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and may signal internal development or market readiness challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices sees mixed results in renewable storage pilot program"
+      "headline": "Nolvis Devices sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the viability and scalability of a new technology initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 18% decline in operating income"
+      "headline": "Yorven Labs reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income is a direct negative indicator of current profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:16.902Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

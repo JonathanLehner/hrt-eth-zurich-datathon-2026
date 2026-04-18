@@ -50,35 +50,96 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries completes strategic acquisition to strengthen cloud infrastructure"
+      "headline": "Strynal Industries completes strategic acquisition to strengthen cloud infrastructure",
+      "sentiment": {
+        "reasoning": "The acquisition of cloud infrastructure assets is a strategic move that should improve long-term operational capabilities despite potential short-term integration costs.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores reports 12% decline in operating income"
+      "headline": "Holtar Stores reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 12% decline in operating income is a direct negative indicator of profitability that will likely weigh on investor sentiment in the short and long term.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 41,
       "companyId": 1,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores loses key contract in Middle East to competitor"
+      "headline": "Holtar Stores loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a clear loss of revenue and market share that will negatively impact financial performance over the coming months.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries sees 20% drop in new customer orders this quarter"
+      "headline": "Strynal Industries sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 20% drop in new customer orders is a significant indicator of weakening demand that will likely persist throughout the current quarter.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces significant capital expenditure plan for Europe"
+      "headline": "Relvon Fuels announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may create short-term cash flow pressure.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:42.877Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

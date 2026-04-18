@@ -64,49 +64,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks reports strong demand in Scandinavia, raises outlook"
+      "headline": "Jovor Networks reports strong demand in Scandinavia, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and raised guidance provide clear positive signals for near-term and sustained financial performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing launches next-generation data analytics platform"
+      "headline": "Dralol Computing launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "The launch of a new platform is a positive growth catalyst, though the immediate revenue impact remains subject to market adoption rates.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips delays product launch in enterprise software segment"
+      "headline": "Brevon Microchips delays product launch in enterprise software segment",
+      "sentiment": {
+        "reasoning": "A product launch delay directly impacts revenue realization and suggests potential operational or development challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 12,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing secures $800M contract with a leading cloud platform"
+      "headline": "Talvep Computing secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides significant, high-certainty revenue visibility for the company.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips signs multi-year partnership with a major logistics provider"
+      "headline": "Brevon Microchips signs multi-year partnership with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A multi-year partnership indicates stable, long-term revenue growth, though the immediate financial impact is likely modest.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 35,
       "companyId": 1,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing warns of supply chain disruptions affecting Scandinavia operations"
+      "headline": "Dralol Computing warns of supply chain disruptions affecting Scandinavia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions create immediate operational headwinds and uncertainty regarding the duration of the impact.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports strong demand in Europe, raises outlook"
+      "headline": "Talvep Computing reports strong demand in Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong demand is a clear positive indicator for both immediate and medium-term financial health.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:59.031Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

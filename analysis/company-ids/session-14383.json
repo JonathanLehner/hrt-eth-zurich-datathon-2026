@@ -52,42 +52,113 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips sees 7% drop in new customer orders this quarter"
+      "headline": "Ulvyn Microchips sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders indicates a direct decline in demand that will likely impact revenue immediately and persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips begins scheduled maintenance of data analytics systems"
+      "headline": "Ulvyn Microchips begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and should have negligible impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing opens new office in Asia Pacific"
+      "headline": "Talvep Computing opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office represents a strategic expansion into a new market, which is generally positive but takes time to generate meaningful revenue.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing delays product launch in automated logistics segment"
+      "headline": "Talvep Computing delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly postpones expected revenue streams and may signal internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips files routine patent applications in renewable storage"
+      "headline": "Ulvyn Microchips files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business practice and do not provide immediate financial impact or clear long-term competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies files routine patent applications in data analytics"
+      "headline": "Ixenix Technologies files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings in data analytics are standard administrative actions with no immediate material financial consequence.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:54:01.331Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -50,35 +50,96 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores delays product launch in supply chain optimization segment"
+      "headline": "Holtar Stores delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch in a key segment suggests operational friction and potential revenue deferral.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores completes planned facility upgrade in Southeast Asia"
+      "headline": "Holtar Stores completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a neutral to slightly positive operational milestone that improves long-term capacity.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors reports unexpected decline in Asia Pacific revenue"
+      "headline": "Plevyl Advisors reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major region is a negative signal for financial performance and growth trajectory.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Arnik Commerce",
-      "headline": "Arnik Commerce begins scheduled maintenance of automated logistics systems"
+      "headline": "Arnik Commerce begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event that is expected and typically has negligible market impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $75M contract with a top-tier research institute"
+      "headline": "Holtar Stores secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $75M contract provides clear, positive revenue visibility and strengthens the company's market position.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:02.376Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

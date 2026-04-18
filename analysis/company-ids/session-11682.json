@@ -52,42 +52,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power faces regulatory review of cloud infrastructure practices"
+      "headline": "Kelvik Power faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential legal and operational risks that could lead to fines or forced changes to business practices.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries launches next-generation data analytics platform"
+      "headline": "Zrovex Industries launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "The launch of a new product platform is a positive development that typically drives revenue growth and market competitiveness.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 31,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs to present at Emerging Markets Forum"
+      "headline": "Crevex Labs to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum is a standard corporate activity that rarely results in immediate or significant financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 7,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries recalls products in process automation line due to quality concerns"
+      "headline": "Zrovex Industries recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates quality control failures that lead to immediate costs and potential reputational damage.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power completes planned facility upgrade in Europe"
+      "headline": "Kelvik Power completes planned facility upgrade in Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that should improve efficiency but is generally expected by the market.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Zrovex Industries warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region pose a direct threat to production capacity and revenue realization.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:52:19.624Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing names new head of cloud infrastructure division"
+      "headline": "Dralol Computing names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with neutral immediate impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 1,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing names new head of supply chain optimization division"
+      "headline": "Talvep Computing names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "Appointing a new supply chain head is an operational adjustment that lacks immediate financial implications.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources secures $800M contract with a global retailer"
+      "headline": "Kelvos Resources secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, tangible revenue growth potential for the company.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing to present at Global Innovation Summit"
+      "headline": "Dralol Computing to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a marketing and visibility event that rarely results in direct financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources to host investor day focused on data analytics strategy"
+      "headline": "Kelvos Resources to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a routine corporate communication event that does not change the underlying financial outlook.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports unexpected decline in Europe revenue"
+      "headline": "Prynis Systems reports unexpected decline in Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market is a negative indicator for near-term financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing revises long-term strategy with focus on cloud infrastructure"
+      "headline": "Dralol Computing revises long-term strategy with focus on cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Strategic revisions are qualitative shifts that lack immediate financial impact until execution details are provided.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Talvep Computing reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 3% is a positive financial signal, though the modest growth rate limits the magnitude of the impact.",
+        "longTerm": 2,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:13.304Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -54,49 +54,130 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs recalls products in supply chain optimization line due to quality concerns"
+      "headline": "Crevex Labs recalls products in supply chain optimization line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that may persist as the company addresses quality control.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Ixenix Technologies",
-      "headline": "Ixenix Technologies misses quarterly revenue estimates by 7%"
+      "headline": "Ixenix Technologies misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 7% is a clear negative signal regarding current demand and operational performance.",
+        "longTerm": -3,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 20,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $500M contract with a major logistics provider"
+      "headline": "Jovor Networks secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract provides a significant, concrete boost to future revenue visibility and market position.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks faces class action over automated logistics service disruption"
+      "headline": "Jovor Networks faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal and financial uncertainty that could weigh on the stock as the litigation process unfolds.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks announces $9.6B share buyback program"
+      "headline": "Jovor Networks announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct signal of management confidence and provides immediate support for the stock price.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs faces regulatory review of wireless connectivity practices"
+      "headline": "Crevex Labs faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create an overhang of uncertainty regarding potential fines or operational restrictions that could impact the business long-term.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 0,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $400M contract with a global retailer"
+      "headline": "Crevex Labs secures $400M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract with a global retailer is a strong positive indicator of business growth and revenue stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:56.712Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

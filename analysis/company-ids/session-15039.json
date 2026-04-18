@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital completes planned facility upgrade in North America"
+      "headline": "Zelvel Capital completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is a routine operational milestone that typically has minimal immediate market impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $320M contract with a top-tier research institute"
+      "headline": "Plevum Partners secures $320M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, immediate, and sustained revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 26,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces class action over digital payments service disruption"
+      "headline": "Zelvel Capital faces class action over digital payments service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces significant legal and reputational risk that creates immediate negative sentiment and long-term uncertainty.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners reports 7% decline in operating income"
+      "headline": "Plevum Partners reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of financial health that typically triggers an immediate downward market reaction.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $180M contract with a top-tier research institute"
+      "headline": "Prynis Systems secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "The $180M contract win is a positive development that strengthens the company's revenue pipeline and market position.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital sees 7% margin improvement in latest quarter"
+      "headline": "Zelvel Capital sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement indicates better operational efficiency and profitability, which is viewed positively by investors.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Jorvyl Securities warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Warnings of supply chain disruptions suggest potential revenue or cost headwinds that create immediate concern and ongoing operational uncertainty.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 1,
       "companyName": "Plevum Partners",
-      "headline": "Plevum Partners secures $50M contract with an international consortium"
+      "headline": "Plevum Partners secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing an additional $50M contract adds incremental value to the company's revenue base.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:45.619Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

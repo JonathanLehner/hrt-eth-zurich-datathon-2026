@@ -52,42 +52,113 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries revises long-term strategy with focus on process automation"
+      "headline": "Strynal Industries revises long-term strategy with focus on process automation",
+      "sentiment": {
+        "reasoning": "A strategic shift toward process automation is a long-term operational improvement that lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $120M contract with a leading cloud platform"
+      "headline": "Strynal Industries secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost that will positively impact financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries wins industry award for excellence in renewable storage"
+      "headline": "Zrovex Industries wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "An industry award serves as positive brand validation but lacks a direct, immediate link to financial results.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries faces regulatory review of data analytics practices"
+      "headline": "Zrovex Industries faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces significant uncertainty and potential downside risk to business operations.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 25,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries files routine patent applications in process automation"
+      "headline": "Strynal Industries files routine patent applications in process automation",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activity and do not provide immediate or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods loses key contract in North America to competitor"
+      "headline": "Xovol Goods loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct and material negative impact on revenue and market position.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:04.839Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

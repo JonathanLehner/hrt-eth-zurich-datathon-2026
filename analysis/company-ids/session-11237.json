@@ -64,49 +64,130 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Nolvav Commerce",
-      "headline": "Nolvav Commerce announces significant capital expenditure plan for Europe"
+      "headline": "Nolvav Commerce announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow and margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems secures $180M contract with an international consortium"
+      "headline": "Prynis Systems secures $180M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $180M contract provides immediate revenue visibility and positive sentiment for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores sees 7% drop in new customer orders this quarter"
+      "headline": "Holtar Stores sees 7% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 7% drop in new customer orders is a direct negative indicator of slowing demand and future revenue potential.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets launches next-generation wireless connectivity platform"
+      "headline": "Frelex Outlets launches next-generation wireless connectivity platform",
+      "sentiment": {
+        "reasoning": "Launching a next-generation platform is a positive product development that could drive future market share gains.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores secures $75M contract with a global retailer"
+      "headline": "Holtar Stores secures $75M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $75M contract win provides a clear, positive boost to revenue and offsets some of the negative sentiment from previous order declines.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems reports 8% decline in operating income"
+      "headline": "Prynis Systems reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income directly impacts profitability and is viewed negatively by investors.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets recalls products in digital payments line due to quality concerns"
+      "headline": "Frelex Outlets recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns creates immediate negative financial and reputational risk for the company.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:59.091Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

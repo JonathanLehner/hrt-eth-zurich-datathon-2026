@@ -52,42 +52,113 @@
       "barIx": 30,
       "companyId": 0,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Frelol Software announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow and margins.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 31,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs CTO addresses investor concerns in open letter"
+      "headline": "Yorven Labs CTO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CTO is a reactive measure to address investor sentiment, which typically provides temporary stabilization without changing fundamental performance.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 33,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 3% decline in operating income"
+      "headline": "Yorven Labs reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income is a direct negative indicator of profitability that typically triggers immediate downward pressure on stock price.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 8% increase in customer acquisition"
+      "headline": "Yorven Labs reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition is a clear positive signal for future revenue growth and market share expansion.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments sees mixed results in renewable storage pilot program"
+      "headline": "Krevan Investments sees mixed results in renewable storage pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the viability and scalability of the new technology.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments secures $120M contract with a national infrastructure agency"
+      "headline": "Krevan Investments secures $120M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large $120M contract provides immediate revenue visibility and validates the company's service offering.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:59.532Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

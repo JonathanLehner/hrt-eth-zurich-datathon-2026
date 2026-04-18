@@ -63,49 +63,130 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities loses key contract in Latin America to competitor"
+      "headline": "Creven Securities loses key contract in Latin America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract in a specific region directly impacts revenue projections and competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems faces regulatory review of cloud infrastructure practices"
+      "headline": "Prynis Systems faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential future operational constraints or fines.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs wins industry award for excellence in enterprise software"
+      "headline": "Yorven Labs wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Yorven Labs recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls involve immediate costs and potential reputational damage that can persist over time.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 18% margin improvement in latest quarter"
+      "headline": "Yorven Labs sees 18% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 18% margin improvement is a strong indicator of increased profitability and operational efficiency.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 41,
       "companyId": 3,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems Chief Strategy Officer steps down unexpectedly citing personal reasons"
+      "headline": "Brevep Systems Chief Strategy Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a C-suite executive creates leadership instability and market concern.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 41,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs announces $6.3B share buyback program"
+      "headline": "Yorven Labs announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program signals management confidence and provides direct support to the stock price.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:34.158Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

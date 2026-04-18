@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial faces regulatory review of renewable storage practices"
+      "headline": "Wrelal Financial faces regulatory review of renewable storage practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces potential compliance costs and operational scrutiny that typically weigh on investor sentiment.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $50M contract with a top-tier research institute"
+      "headline": "Holtum Asset Group secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue stream that bolsters the company's financial outlook.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Zrovov Advisors",
-      "headline": "Zrovov Advisors wins industry award for excellence in enterprise software"
+      "headline": "Zrovov Advisors wins industry award for excellence in enterprise software",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but rarely translate into immediate or significant financial performance shifts.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial files for regulatory approval of new data analytics offering"
+      "headline": "Wrelal Financial files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates growth potential but carries inherent uncertainty regarding the outcome.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 43,
       "companyId": 1,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group announces $5.7B share buyback program"
+      "headline": "Holtum Asset Group announces $5.7B share buyback program",
+      "sentiment": {
+        "reasoning": "A $5.7B share buyback program is a significant capital allocation event that directly supports earnings per share and signals management confidence.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy explores strategic alternatives for digital payments unit"
+      "headline": "Plevik Energy explores strategic alternatives for digital payments unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a business unit creates significant ambiguity regarding the future structure and value of the company.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Plevik Energy announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term growth investment but implies near-term cash outflows that may pressure margins.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:03.010Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

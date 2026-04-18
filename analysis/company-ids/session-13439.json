@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries reports strong demand in Southeast Asia, raises outlook"
+      "headline": "Zrovex Industries reports strong demand in Southeast Asia, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand provides a clear positive signal for both immediate and medium-term financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets faces regulatory review of wireless connectivity practices"
+      "headline": "Frelex Outlets faces regulatory review of wireless connectivity practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential downside risk regarding operational practices and future compliance costs.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 10% drop in new customer orders this quarter"
+      "headline": "Zrovex Industries sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative indicator of slowing demand that will likely impact revenue for the remainder of the quarter.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries to host investor day focused on data analytics strategy"
+      "headline": "Zrovex Industries to host investor day focused on data analytics strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries secures $50M contract with a major logistics provider"
+      "headline": "Strynal Industries secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a concrete, quantifiable boost to revenue expectations.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid expands operations into Asia Pacific markets"
+      "headline": "Urvel Grid expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding into new markets is a positive growth signal, though the immediate financial contribution is often delayed.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets announces $2.5B share buyback program"
+      "headline": "Frelex Outlets announces $2.5B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program is a direct positive signal for shareholder value and capital allocation.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries reports record quarterly revenue, up 3% year-over-year"
+      "headline": "Strynal Industries reports record quarterly revenue, up 3% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth is a positive indicator of business health, though 3% growth is modest.",
+        "longTerm": 3,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:26.411Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

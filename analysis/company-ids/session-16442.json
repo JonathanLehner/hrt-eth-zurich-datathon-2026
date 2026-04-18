@@ -48,28 +48,79 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid misses quarterly revenue estimates by 15%"
+      "headline": "Urvel Grid misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "A 15% revenue miss indicates significant operational underperformance that will likely trigger immediate negative market sentiment.",
+        "longTerm": -5,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid completes strategic acquisition to strengthen precision manufacturing"
+      "headline": "Urvel Grid completes strategic acquisition to strengthen precision manufacturing",
+      "sentiment": {
+        "reasoning": "The acquisition is a strategic move to improve manufacturing capabilities, which is generally viewed as a positive long-term growth driver.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power opens new office in Latin America"
+      "headline": "Kelvik Power opens new office in Latin America",
+      "sentiment": {
+        "reasoning": "Expanding into a new geographic market is a positive growth signal, though the immediate financial impact is likely to be muted.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 35,
       "companyId": 2,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings enters joint venture with a multinational manufacturer"
+      "headline": "Halvix Holdings enters joint venture with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Entering a joint venture with a multinational partner provides clear strategic upside and potential for increased market reach.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:54.658Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

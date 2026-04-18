@@ -60,35 +60,96 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Frelex Outlets",
-      "headline": "Frelex Outlets reports 8% increase in customer acquisition"
+      "headline": "Frelex Outlets reports 8% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 8% increase in customer acquisition indicates positive growth momentum that should immediately benefit revenue metrics.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics reports rising costs pressuring margins in digital payments"
+      "headline": "Frelis Genomics reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a negative signal for profitability that typically triggers immediate investor concern.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics launches next-generation renewable storage platform"
+      "headline": "Frelis Genomics launches next-generation renewable storage platform",
+      "sentiment": {
+        "reasoning": "The launch of a new product platform represents a significant expansion of the company's addressable market and potential revenue streams.",
+        "longTerm": 7,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets explores strategic alternatives for cloud infrastructure unit"
+      "headline": "Ixenis Outlets explores strategic alternatives for cloud infrastructure unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives creates significant ambiguity regarding the future of the business unit, leading to market speculation.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 3,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands files for regulatory approval of new data analytics offering"
+      "headline": "Halvav Brands files for regulatory approval of new data analytics offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary procedural step that signals future growth potential but lacks immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:37.648Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -64,49 +64,130 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips reports 8% decline in operating income"
+      "headline": "Brevon Microchips reports 8% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 8% decline in operating income directly impacts profitability and investor sentiment negatively.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 10,
       "companyId": 0,
       "companyName": "Brevon Microchips",
-      "headline": "Brevon Microchips sees 18% drop in new customer orders this quarter"
+      "headline": "Brevon Microchips sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 18% drop in new orders signals a weakening demand pipeline that will likely pressure future revenue.",
+        "longTerm": -7,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies names new head of supply chain optimization division"
+      "headline": "Myrnep Technologies names new head of supply chain optimization division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard operational change with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $120M contract with a global retailer"
+      "headline": "Grevon Biotech secures $120M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable boost to future revenue and business stability.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing announces $6.3B share buyback program"
+      "headline": "Dralol Computing announces $6.3B share buyback program",
+      "sentiment": {
+        "reasoning": "A $6.3B share buyback program is a strong signal of capital allocation that typically boosts earnings per share.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Myrnep Technologies",
-      "headline": "Myrnep Technologies faces class action over process automation service disruption"
+      "headline": "Myrnep Technologies faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal risk and potential financial liability that creates uncertainty for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees 18% drop in new customer orders this quarter"
+      "headline": "Grevon Biotech sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 18% drop in new customer orders indicates a material slowdown in business growth for the biotech firm.",
+        "longTerm": -7,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:20:34.933Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

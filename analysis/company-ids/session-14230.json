@@ -65,56 +65,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports 5% decline in operating income"
+      "headline": "Zelvon Biosciences reports 5% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly signals reduced profitability and operational inefficiency.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 13,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences loses key contract in North America to competitor"
+      "headline": "Calvis Sciences loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct revenue hit and a loss of market share to a competitor.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Zelvon Biosciences",
-      "headline": "Zelvon Biosciences reports rising costs pressuring margins in automated logistics"
+      "headline": "Zelvon Biosciences reports rising costs pressuring margins in automated logistics",
+      "sentiment": {
+        "reasoning": "Rising costs in a specific business segment indicate structural margin pressure that is likely to persist.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 8% margin improvement in latest quarter"
+      "headline": "Calvis Sciences sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement is a strong indicator of enhanced operational efficiency and profitability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Calvis Sciences announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests long-term growth investment but implies immediate cash outflow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 1,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences expands operations into Middle East markets"
+      "headline": "Calvis Sciences expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Expanding into new geographic markets provides a clear pathway for revenue growth and market diversification.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $650M contract with a multinational manufacturer"
+      "headline": "Holtum Asset Group secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides a substantial and predictable revenue stream for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $250M contract with a major logistics provider"
+      "headline": "Myrnon Therapeutics secures $250M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $250M contract win is a significant positive development that bolsters the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:56.176Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities wins industry award for excellence in renewable storage"
+      "headline": "Creven Securities wins industry award for excellence in renewable storage",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand recognition but lack direct financial impact on revenue or operations.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings faces class action over supply chain optimization service disruption"
+      "headline": "Halvix Holdings faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create immediate legal uncertainty and potential financial liability that can persist over time.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings expands operations into Middle East markets"
+      "headline": "Halvix Holdings expands operations into Middle East markets",
+      "sentiment": {
+        "reasoning": "Geographic expansion represents a strategic growth initiative that typically yields long-term revenue potential rather than immediate gains.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings delays product launch in supply chain optimization segment"
+      "headline": "Halvix Holdings delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "A product launch delay directly impacts revenue realization and suggests potential operational or technical hurdles.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences beats analyst expectations with strong earnings growth"
+      "headline": "Calvis Sciences beats analyst expectations with strong earnings growth",
+      "sentiment": {
+        "reasoning": "Beating analyst expectations is a strong positive signal that typically drives immediate market sentiment and valuation adjustments.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences enters joint venture with a national infrastructure agency"
+      "headline": "Calvis Sciences enters joint venture with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A joint venture with a national agency provides a stable, long-term revenue stream and validates the company's operational capabilities.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments Chief Operating Officer steps down unexpectedly citing personal reasons"
+      "headline": "Halven Investments Chief Operating Officer steps down unexpectedly citing personal reasons",
+      "sentiment": {
+        "reasoning": "The unexpected departure of a key executive creates immediate leadership instability and uncertainty regarding future operational strategy.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences sees 18% drop in new customer orders this quarter"
+      "headline": "Calvis Sciences sees 18% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant drop in new customer orders is a direct indicator of weakening demand that will negatively impact future financial performance.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:22.113Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors announces breakthrough in wireless connectivity"
+      "headline": "Plevyl Advisors announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "The announcement of a breakthrough in wireless connectivity suggests a positive technological advancement, though the lack of commercialization details creates long-term uncertainty.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands sees 8% drop in new customer orders this quarter"
+      "headline": "Halvav Brands sees 8% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "An 8% drop in new customer orders is a direct negative indicator of demand that will likely impact financial performance throughout the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $320M contract with a major logistics provider"
+      "headline": "Halvav Brands secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a clear, quantifiable revenue boost that will positively influence the company's financial outlook for the remainder of the period.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets begins scheduled maintenance of data analytics systems"
+      "headline": "Ixenis Outlets begins scheduled maintenance of data analytics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is unlikely to have a material impact on the company's financial standing.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 18,
       "companyId": 2,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets reports 18% increase in customer acquisition"
+      "headline": "Ixenis Outlets reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition is a strong growth signal that should translate into improved revenue performance over the coming months.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands reports 15% increase in customer acquisition"
+      "headline": "Halvav Brands reports 15% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 15% increase in customer acquisition indicates robust demand growth that will likely sustain positive momentum through the 100-day window.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Plevyl Advisors",
-      "headline": "Plevyl Advisors confirms participation in Emerging Markets Forum"
+      "headline": "Plevyl Advisors confirms participation in Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Participation in a forum is a standard corporate event that provides networking opportunities but lacks immediate or quantifiable financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 22,
       "companyId": 3,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods secures $650M contract with a top-tier research institute"
+      "headline": "Xovol Goods secures $650M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $650M contract win is a significant, high-value event that provides strong, durable revenue visibility for the company.",
+        "longTerm": 9,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:26.105Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

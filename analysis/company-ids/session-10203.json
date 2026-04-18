@@ -36,21 +36,62 @@
       "barIx": 2,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities completes planned facility upgrade in North America"
+      "headline": "Creven Securities completes planned facility upgrade in North America",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that likely improves efficiency but is already priced in as a planned event.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Wrelal Financial",
-      "headline": "Wrelal Financial signs multi-year partnership with a global retailer"
+      "headline": "Wrelal Financial signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer represents a significant, durable revenue stream that provides clear long-term growth potential.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 14,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities begins scheduled maintenance of digital payments systems"
+      "headline": "Creven Securities begins scheduled maintenance of digital payments systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational necessity that typically causes minor, temporary friction without long-term negative impact.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:19.817Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

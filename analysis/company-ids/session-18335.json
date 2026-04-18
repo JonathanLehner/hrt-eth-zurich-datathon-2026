@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy completes planned facility upgrade in Latin America"
+      "headline": "Zelval Energy completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that should improve efficiency and output capacity over time.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees 10% drop in new customer orders this quarter"
+      "headline": "Urvel Grid sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a direct negative signal regarding near-term demand and revenue growth.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 5,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs sees 5% drop in new customer orders this quarter"
+      "headline": "Yorven Labs sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% decline in new customer orders indicates a softening in demand that will likely impact financial performance in the coming quarter.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs files routine patent applications in data analytics"
+      "headline": "Yorven Labs files routine patent applications in data analytics",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business activities that do not provide immediate financial impact or competitive advantage.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs warns of supply chain disruptions affecting Middle East operations"
+      "headline": "Yorven Labs warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a specific region create immediate operational risk and potential cost pressures.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid files routine patent applications in renewable storage"
+      "headline": "Urvel Grid files routine patent applications in renewable storage",
+      "sentiment": {
+        "reasoning": "Routine patent filings in renewable storage are standard R&D activities with no immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Zelval Energy",
-      "headline": "Zelval Energy reports record quarterly revenue, up 5% year-over-year"
+      "headline": "Zelval Energy reports record quarterly revenue, up 5% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth confirms strong business performance and positive momentum for the company.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions launches next-generation precision manufacturing platform"
+      "headline": "Orevov Solutions launches next-generation precision manufacturing platform",
+      "sentiment": {
+        "reasoning": "The launch of a new manufacturing platform represents a potential growth catalyst and product expansion.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:05.144Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

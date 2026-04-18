@@ -55,56 +55,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Ervan Capital reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative fundamental signal for profitability.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital secures $400M contract with a multinational manufacturer"
+      "headline": "Zelvel Capital secures $400M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $400M contract provides immediate revenue visibility and positive growth momentum.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital reports unexpected decline in North America revenue"
+      "headline": "Zelvel Capital reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected revenue decline in a major market is a significant negative indicator for near-term financial performance.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 9,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital launches next-generation supply chain optimization platform"
+      "headline": "Zelvel Capital launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new product platform suggests potential for future revenue growth and market expansion.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital faces class action over cloud infrastructure service disruption"
+      "headline": "Zelvel Capital faces class action over cloud infrastructure service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces legal risk and potential financial liability that weighs on investor sentiment.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 25,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics faces regulatory review of cloud infrastructure practices"
+      "headline": "Jorvix Diagnostics faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory review of core infrastructure creates uncertainty regarding operational compliance and potential future costs.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics explores strategic alternatives for supply chain optimization unit"
+      "headline": "Jorvix Diagnostics explores strategic alternatives for supply chain optimization unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals potential divestiture or restructuring, which creates significant uncertainty for the business unit.",
+        "longTerm": 0,
+        "shortTerm": 1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics files routine patent applications in digital payments"
+      "headline": "Jorvix Diagnostics files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and generally have negligible immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:21.489Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

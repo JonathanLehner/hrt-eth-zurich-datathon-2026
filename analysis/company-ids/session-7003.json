@@ -66,56 +66,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks completes planned facility upgrade in Central Europe"
+      "headline": "Jovor Networks completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "The completion of a planned facility upgrade is an operational milestone that likely improves efficiency but lacks immediate revenue impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 9,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks explores strategic alternatives for wireless connectivity unit"
+      "headline": "Jovor Networks explores strategic alternatives for wireless connectivity unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives often signals a potential sale or spin-off, creating significant market speculation regarding future value.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting Southeast Asia operations"
+      "headline": "Ulvyn Microchips warns of supply chain disruptions affecting Southeast Asia operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly threatens production capacity and revenue realization in the near term.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips secures $800M contract with a global retailer"
+      "headline": "Ulvyn Microchips secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides a clear, substantial boost to future revenue and market confidence.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 26,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software recalls products in precision manufacturing line due to quality concerns"
+      "headline": "Frelol Software recalls products in precision manufacturing line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a precision manufacturing line indicates quality control failures that damage reputation and incur immediate costs.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 0,
       "companyName": "Jovor Networks",
-      "headline": "Jovor Networks secures $400M contract with a national infrastructure agency"
+      "headline": "Jovor Networks secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $400M contract with a national agency provides stable, long-term revenue visibility for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 2,
       "companyName": "Frelol Software",
-      "headline": "Frelol Software recalls products in renewable storage line due to quality concerns"
+      "headline": "Frelol Software recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A second recall in a different product line suggests systemic quality issues, significantly increasing negative sentiment.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 3,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital recalls products in process automation line due to quality concerns"
+      "headline": "Ervan Capital recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A recall in the process automation line directly impacts the company's core product reliability and financial performance.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:22.649Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -41,42 +41,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities expands operations into Central Europe markets"
+      "headline": "Creven Securities expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expansion into new geographic markets represents a strategic growth initiative that typically yields long-term revenue benefits.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities completes planned facility upgrade in Latin America"
+      "headline": "Creven Securities completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that improves efficiency but is generally priced in by the market.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial faces regulatory review of automated logistics practices"
+      "headline": "Ilval Financial faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews create immediate uncertainty and potential downside risk regarding future operational compliance costs.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial recalls products in process automation line due to quality concerns"
+      "headline": "Ilval Financial recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls directly impact revenue and brand reputation, causing immediate negative sentiment and potential long-term costs.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial secures $800M contract with a national infrastructure agency"
+      "headline": "Ilval Financial secures $800M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large-scale contract provides clear, high-value revenue visibility that positively impacts both short-term sentiment and long-term earnings.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Ilval Financial",
-      "headline": "Ilval Financial warns of supply chain disruptions affecting Asia Pacific operations"
+      "headline": "Ilval Financial warns of supply chain disruptions affecting Asia Pacific operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a major region create immediate operational headwinds and uncertainty regarding revenue realization.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:30.766Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

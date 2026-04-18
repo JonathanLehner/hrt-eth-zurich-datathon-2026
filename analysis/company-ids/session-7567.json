@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co sees mixed results in data analytics pilot program"
+      "headline": "Pleven Trading Co sees mixed results in data analytics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate lack of clear success, creating ambiguity regarding future adoption and revenue impact.",
+        "longTerm": -1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips opens new office in Southeast Asia"
+      "headline": "Ulvyn Microchips opens new office in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Opening a new office is a standard operational expansion that suggests long-term growth potential but has negligible immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 2,
       "companyId": 2,
       "companyName": "Crevex Labs",
-      "headline": "Crevex Labs secures $75M contract with a top-tier research institute"
+      "headline": "Crevex Labs secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides a clear, quantifiable revenue boost with high certainty of positive financial impact.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 6,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices withdraws from Middle East market citing unfavorable conditions"
+      "headline": "Nolvis Devices withdraws from Middle East market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Withdrawing from a market is a negative operational shift that implies lost revenue and potential exit costs.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 11,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports rising costs pressuring margins in precision manufacturing"
+      "headline": "Nolvis Devices reports rising costs pressuring margins in precision manufacturing",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profit margins, signaling a negative trend that is likely to persist in the near term.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen automated logistics"
+      "headline": "Ulvyn Microchips completes strategic acquisition to strengthen automated logistics",
+      "sentiment": {
+        "reasoning": "Acquisitions are strategic moves that typically involve upfront costs but promise long-term operational efficiencies.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips announces significant capital expenditure plan for Europe"
+      "headline": "Ulvyn Microchips announces significant capital expenditure plan for Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term investment in growth, though it will likely weigh on cash flow in the short term.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Pleven Trading Co",
-      "headline": "Pleven Trading Co secures $400M contract with a major logistics provider"
+      "headline": "Pleven Trading Co secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $400M contract is a major, high-impact win that provides significant, concrete revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:43.223Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

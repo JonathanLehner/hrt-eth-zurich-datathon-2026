@@ -66,56 +66,147 @@
       "barIx": 10,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources recalls products in process automation line due to quality concerns"
+      "headline": "Nolvol Resources recalls products in process automation line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential reputational damage that will likely persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 17,
       "companyId": 0,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources names new head of enterprise software division"
+      "headline": "Nolvol Resources names new head of enterprise software division",
+      "sentiment": {
+        "reasoning": "Leadership changes in a specific division create moderate uncertainty regarding future strategy and operational execution.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 27,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power delays product launch in supply chain optimization segment"
+      "headline": "Kelvik Power delays product launch in supply chain optimization segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts revenue realization and suggests potential internal execution challenges.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $800M contract with a leading cloud platform"
+      "headline": "Kelvik Power secures $800M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides clear, long-term revenue visibility and strengthens the company's market position.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power names new head of cloud infrastructure division"
+      "headline": "Kelvik Power names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard corporate move with neutral immediate impact until strategic shifts are announced.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions to present at Global Innovation Summit"
+      "headline": "Orevov Solutions to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a summit is a routine marketing activity that rarely moves the needle on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Wyrnor Solutions",
-      "headline": "Wyrnor Solutions sees mixed results in wireless connectivity pilot program"
+      "headline": "Wyrnor Solutions sees mixed results in wireless connectivity pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program indicate uncertainty regarding the viability and scalability of the new product offering.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 2,
       "companyName": "Orevov Solutions",
-      "headline": "Orevov Solutions sees mixed results in cloud infrastructure pilot program"
+      "headline": "Orevov Solutions sees mixed results in cloud infrastructure pilot program",
+      "sentiment": {
+        "reasoning": "Mixed pilot results suggest the company is still in the testing phase, providing little clarity on future financial contribution.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:40.733Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

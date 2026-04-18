@@ -36,21 +36,62 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital recalls products in renewable storage line due to quality concerns"
+      "headline": "Zelvel Capital recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall indicates immediate operational disruption and potential financial liability for Zelvel Capital.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech faces regulatory review of process automation practices"
+      "headline": "Xelvol Biotech faces regulatory review of process automation practices",
+      "sentiment": {
+        "reasoning": "Regulatory review of internal processes creates uncertainty regarding potential fines or operational changes for Xelvol Biotech.",
+        "longTerm": -4,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Zelvel Capital",
-      "headline": "Zelvel Capital to present at Global Innovation Summit"
+      "headline": "Zelvel Capital to present at Global Innovation Summit",
+      "sentiment": {
+        "reasoning": "Presenting at a major industry summit is a standard corporate event that typically provides minimal direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:25.507Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

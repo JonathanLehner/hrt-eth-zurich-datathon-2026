@@ -66,56 +66,147 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Plevik Energy",
-      "headline": "Plevik Energy secures $50M contract with a top-tier research institute"
+      "headline": "Plevik Energy secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, immediate revenue boost and validates the company's service offerings.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power opens new office in Middle East"
+      "headline": "Plevep Power opens new office in Middle East",
+      "sentiment": {
+        "reasoning": "Opening a new office indicates geographic expansion, though the immediate financial impact is likely minimal and long-term benefits depend on execution.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs reports 15% decline in operating income"
+      "headline": "Yorven Labs reports 15% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 15% decline in operating income is a direct negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power to host investor day focused on digital payments strategy"
+      "headline": "Plevep Power to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Hosting an investor day is a neutral event that signals strategic focus but lacks immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels reports 25% increase in customer acquisition"
+      "headline": "Relvon Fuels reports 25% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 25% increase in customer acquisition is a strong positive signal for growth and future revenue potential.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 40,
       "companyId": 3,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels completes strategic acquisition to strengthen wireless connectivity"
+      "headline": "Relvon Fuels completes strategic acquisition to strengthen wireless connectivity",
+      "sentiment": {
+        "reasoning": "Completing a strategic acquisition is a significant corporate action that aims to enhance capabilities, though integration risks remain.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "acquisition",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces significant capital expenditure plan for Central Europe"
+      "headline": "Plevep Power announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan signals long-term investment but may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs secures $500M contract with an international consortium"
+      "headline": "Yorven Labs secures $500M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $500M contract is a major positive development that significantly bolsters the company's revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:07.959Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

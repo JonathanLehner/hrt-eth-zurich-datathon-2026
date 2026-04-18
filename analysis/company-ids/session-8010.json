@@ -52,42 +52,113 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods faces regulatory review of supply chain optimization practices"
+      "headline": "Xovol Goods faces regulatory review of supply chain optimization practices",
+      "sentiment": {
+        "reasoning": "Regulatory reviews introduce potential operational friction and compliance costs that create immediate uncertainty for the company.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips reports 18% decline in operating income"
+      "headline": "Ulvyn Microchips reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income is a direct negative indicator of financial health that typically triggers immediate market repricing.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Ulvyn Microchips",
-      "headline": "Ulvyn Microchips faces class action over wireless connectivity service disruption"
+      "headline": "Ulvyn Microchips faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "Class action lawsuits create significant legal and financial liability risks that often persist well beyond the initial filing.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 33,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace secures $50M contract with a national infrastructure agency"
+      "headline": "Arnos Marketplace secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost that strengthens the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace sees 8% margin improvement in latest quarter"
+      "headline": "Arnos Marketplace sees 8% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "An 8% margin improvement indicates enhanced operational efficiency and profitability, which is a strong positive signal for investors.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 47,
       "companyId": 0,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods reports rising costs pressuring margins in digital payments"
+      "headline": "Xovol Goods reports rising costs pressuring margins in digital payments",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly threaten profitability and suggest ongoing headwinds for the company's financial performance.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:49:58.945Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

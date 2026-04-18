@@ -62,42 +62,113 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Wyrnik Sciences",
-      "headline": "Wyrnik Sciences reports record quarterly revenue, up 10% year-over-year"
+      "headline": "Wyrnik Sciences reports record quarterly revenue, up 10% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 10% year-over-year provides strong fundamental validation for the company's current performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing reports 18% increase in customer acquisition"
+      "headline": "Talvep Computing reports 18% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "An 18% increase in customer acquisition is a clear leading indicator of future revenue growth and market share expansion.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 2,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems secures $400M contract with a top-tier research institute"
+      "headline": "Brevep Systems secures $400M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides a significant, concrete revenue boost and enhances the company's competitive standing.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 16,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing signs multi-year partnership with a global retailer"
+      "headline": "Talvep Computing signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a global retailer suggests a stable, long-term revenue stream and strategic market penetration.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 1,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces significant capital expenditure plan for Asia Pacific"
+      "headline": "Talvep Computing announces significant capital expenditure plan for Asia Pacific",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates aggressive expansion but introduces short-term cash outflow and execution risk.",
+        "longTerm": 4,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 3,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software files routine patent applications in digital payments"
+      "headline": "Relvan Software files routine patent applications in digital payments",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard operational activities that do not provide immediate or guaranteed financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:45.032Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

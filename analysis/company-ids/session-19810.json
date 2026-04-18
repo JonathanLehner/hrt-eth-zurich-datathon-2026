@@ -63,49 +63,130 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries secures $320M contract with a global retailer"
+      "headline": "Zrovex Industries secures $320M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides immediate revenue visibility and long-term growth potential.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Jorvyl Securities",
-      "headline": "Jorvyl Securities reports rising costs pressuring margins in renewable storage"
+      "headline": "Jorvyl Securities reports rising costs pressuring margins in renewable storage",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability margins, creating a negative outlook for financial performance.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries sees 5% drop in new customer orders this quarter"
+      "headline": "Zrovex Industries sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders signals weakening demand, which negatively impacts revenue growth expectations.",
+        "longTerm": -5,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Krevan Investments",
-      "headline": "Krevan Investments announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Krevan Investments announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "Significant capital expenditure indicates long-term expansion efforts, though it may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 23,
       "companyId": 3,
       "companyName": "Holtum Asset Group",
-      "headline": "Holtum Asset Group secures $320M contract with a national infrastructure agency"
+      "headline": "Holtum Asset Group secures $320M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A $320M infrastructure contract provides a stable, long-term revenue stream from a reliable government entity.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 39,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries announces $8.4B share buyback program"
+      "headline": "Zrovex Industries announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program is a strong signal of management confidence and provides immediate support to earnings per share.",
+        "longTerm": 3,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries completes planned facility upgrade in Asia Pacific"
+      "headline": "Zrovex Industries completes planned facility upgrade in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that should improve efficiency over the long term.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:59.678Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -66,56 +66,147 @@
       "barIx": 16,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co sees mixed results in enterprise software pilot program"
+      "headline": "Jorval Trading Co sees mixed results in enterprise software pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding future adoption and revenue potential.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 23,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands delays product launch in process automation segment"
+      "headline": "Halvav Brands delays product launch in process automation segment",
+      "sentiment": {
+        "reasoning": "A delay in a product launch directly postpones expected revenue and signals potential operational friction.",
+        "longTerm": -2,
+        "shortTerm": -4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods Chief Operating Officer addresses investor concerns in open letter"
+      "headline": "Xovol Goods Chief Operating Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the COO is a reactive measure that highlights existing investor anxiety without providing concrete financial changes.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $320M contract with a major logistics provider"
+      "headline": "Halvav Brands secures $320M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large $320M contract provides clear, immediate, and long-term revenue visibility.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods loses key contract in Middle East to competitor"
+      "headline": "Xovol Goods loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct negative impact on revenue and competitive positioning.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 32,
       "companyId": 3,
       "companyName": "Arnos Marketplace",
-      "headline": "Arnos Marketplace reports strong demand in Asia Pacific, raises outlook"
+      "headline": "Arnos Marketplace reports strong demand in Asia Pacific, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook are direct positive indicators for financial performance.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 34,
       "companyId": 0,
       "companyName": "Jorval Trading Co",
-      "headline": "Jorval Trading Co files routine patent applications in enterprise software"
+      "headline": "Jorval Trading Co files routine patent applications in enterprise software",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not imply immediate financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands secures $800M contract with a multinational manufacturer"
+      "headline": "Halvav Brands secures $800M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "An $800M contract is a significant positive development that materially improves the company's long-term revenue outlook.",
+        "longTerm": 8,
+        "shortTerm": 7,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:21.198Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

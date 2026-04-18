@@ -66,56 +66,147 @@
       "barIx": 8,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores faces class action over supply chain optimization service disruption"
+      "headline": "Holtar Stores faces class action over supply chain optimization service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit introduces legal and financial risk that typically weighs on sentiment until resolved.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands recalls products in wireless connectivity line due to quality concerns"
+      "headline": "Joval Brands recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls create immediate operational costs and potential brand damage that often persist through the quarter.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 13,
       "companyId": 2,
       "companyName": "Xovol Goods",
-      "headline": "Xovol Goods wins industry award for excellence in automated logistics"
+      "headline": "Xovol Goods wins industry award for excellence in automated logistics",
+      "sentiment": {
+        "reasoning": "Industry awards provide positive brand signaling but have limited direct impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics delays product launch in precision manufacturing segment"
+      "headline": "Zelvix Therapeutics delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch directly impacts expected revenue timelines and growth projections.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores signs multi-year partnership with a national infrastructure agency"
+      "headline": "Holtar Stores signs multi-year partnership with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a national agency provides long-term revenue visibility and stability.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics to host investor day focused on cloud infrastructure strategy"
+      "headline": "Zelvix Therapeutics to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "Investor days are informational events that rarely cause significant price movement unless specific guidance is provided.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics faces class action over automated logistics service disruption"
+      "headline": "Zelvix Therapeutics faces class action over automated logistics service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation creates ongoing legal uncertainty and potential financial liability for the company.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 49,
       "companyId": 0,
       "companyName": "Holtar Stores",
-      "headline": "Holtar Stores sees 12% margin improvement in latest quarter"
+      "headline": "Holtar Stores sees 12% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 12% margin improvement is a strong indicator of operational efficiency and improved profitability.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:50.744Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

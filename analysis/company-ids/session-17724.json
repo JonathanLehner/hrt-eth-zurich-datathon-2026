@@ -34,14 +34,45 @@
       "barIx": 29,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports rising costs pressuring margins in wireless connectivity"
+      "headline": "Relvan Software reports rising costs pressuring margins in wireless connectivity",
+      "sentiment": {
+        "reasoning": "Rising costs directly impacting margins is a clear negative signal for profitability that will likely persist through the quarter.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 47,
       "companyId": 1,
       "companyName": "Halvix Holdings",
-      "headline": "Halvix Holdings confirms participation in Tech Leadership Conference"
+      "headline": "Halvix Holdings confirms participation in Tech Leadership Conference",
+      "sentiment": {
+        "reasoning": "Participation in a leadership conference is a routine corporate event with no clear material impact on financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:41.799Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

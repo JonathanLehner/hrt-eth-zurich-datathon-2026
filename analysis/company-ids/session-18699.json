@@ -64,49 +64,130 @@
       "barIx": 14,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries to present at Corporate Strategy Symposium"
+      "headline": "Strynal Industries to present at Corporate Strategy Symposium",
+      "sentiment": {
+        "reasoning": "Presenting at a strategy symposium is a routine corporate event that rarely moves the stock price significantly.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 35,
       "companyId": 0,
       "companyName": "Strynal Industries",
-      "headline": "Strynal Industries files for regulatory approval of new enterprise software offering"
+      "headline": "Strynal Industries files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a standard operational step that indicates progress but does not guarantee immediate revenue or success.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 37,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $75M contract with a top-tier research institute"
+      "headline": "Kelvik Power secures $75M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $75M contract provides clear, quantifiable revenue growth for the company.",
+        "longTerm": 4,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Relvon Fuels",
-      "headline": "Relvon Fuels announces $8.4B share buyback program"
+      "headline": "Relvon Fuels announces $8.4B share buyback program",
+      "sentiment": {
+        "reasoning": "An $8.4B share buyback program is a significant capital allocation event that directly benefits shareholders and signals management confidence.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 42,
       "companyId": 3,
       "companyName": "Talvep Computing",
-      "headline": "Talvep Computing announces breakthrough in enterprise software"
+      "headline": "Talvep Computing announces breakthrough in enterprise software",
+      "sentiment": {
+        "reasoning": "A breakthrough announcement is positive but lacks specific details on commercialization or financial impact, leading to high uncertainty.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power secures $120M contract with a top-tier research institute"
+      "headline": "Kelvik Power secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "A $120M contract win is a substantial positive development that strengthens the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 1,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power completes planned facility upgrade in Scandinavia"
+      "headline": "Kelvik Power completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that is expected and likely already priced in by the market.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:17.926Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

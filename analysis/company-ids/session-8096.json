@@ -66,56 +66,147 @@
       "barIx": 1,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports 25% decline in operating income"
+      "headline": "Ervan Capital reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 25% decline in operating income is a significant negative indicator of core profitability and operational efficiency.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 2,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods misses quarterly revenue estimates by 12%"
+      "headline": "Talvyn Goods misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 12% indicates a failure to meet market expectations and potential demand issues.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 8,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods names new head of cloud infrastructure division"
+      "headline": "Talvyn Goods names new head of cloud infrastructure division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change that typically has neutral immediate impact on financial performance.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital sees mixed results in automated logistics pilot program"
+      "headline": "Ervan Capital sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and scalability of the new logistics initiative.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 4,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods CFO addresses investor concerns in open letter"
+      "headline": "Talvyn Goods CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CFO is a reactive communication measure that rarely changes underlying financial fundamentals.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 37,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments revises long-term strategy with focus on automated logistics"
+      "headline": "Halven Investments revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic pivot to automated logistics signals a long-term shift in capital allocation but lacks immediate financial impact.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 2,
       "companyName": "Halven Investments",
-      "headline": "Halven Investments secures $400M contract with a major logistics provider"
+      "headline": "Halven Investments secures $400M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $400M contract provides clear, tangible revenue growth and positive momentum for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 47,
       "companyId": 3,
       "companyName": "Yorval Partners",
-      "headline": "Yorval Partners sees 7% margin improvement in latest quarter"
+      "headline": "Yorval Partners sees 7% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 7% margin improvement directly enhances profitability and is a strong positive signal for financial health.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:02.633Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

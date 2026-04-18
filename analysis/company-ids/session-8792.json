@@ -52,49 +52,130 @@
       "barIx": 5,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods files routine patent applications in supply chain optimization"
+      "headline": "Talvyn Goods files routine patent applications in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Routine patent filings are standard business operations and do not provide immediate or long-term financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 1,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Crevol Retail Group",
-      "headline": "Crevol Retail Group secures $120M contract with a top-tier research institute"
+      "headline": "Crevol Retail Group secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost that will positively impact financial performance over the next 100 days.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 11,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods reports strong demand in Central Europe, raises outlook"
+      "headline": "Talvyn Goods reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong regional demand is a direct positive signal for earnings growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 24,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods launches next-generation process automation platform"
+      "headline": "Talvyn Goods launches next-generation process automation platform",
+      "sentiment": {
+        "reasoning": "Launching a new automation platform is a positive product development that may drive future revenue but has uncertain immediate adoption rates.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 31,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods launches next-generation data analytics platform"
+      "headline": "Talvyn Goods launches next-generation data analytics platform",
+      "sentiment": {
+        "reasoning": "The launch of a data analytics platform represents a positive expansion of the product portfolio with potential for long-term revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 2,
       "companyName": "Xovep Stores",
-      "headline": "Xovep Stores recalls products in digital payments line due to quality concerns"
+      "headline": "Xovep Stores recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall in a digital payments line creates immediate negative sentiment and potential costs, with lingering uncertainty regarding brand reputation.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 0,
       "companyName": "Talvyn Goods",
-      "headline": "Talvyn Goods begins scheduled maintenance of enterprise software systems"
+      "headline": "Talvyn Goods begins scheduled maintenance of enterprise software systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is expected and does not materially impact financial performance.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:50:28.758Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

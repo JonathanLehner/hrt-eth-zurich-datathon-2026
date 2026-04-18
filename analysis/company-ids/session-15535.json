@@ -54,49 +54,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics announces breakthrough in wireless connectivity"
+      "headline": "Frelis Genomics announces breakthrough in wireless connectivity",
+      "sentiment": {
+        "reasoning": "A breakthrough in wireless connectivity suggests a significant technological advancement that could enhance product capabilities.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech opens new office in Asia Pacific"
+      "headline": "Xelvol Biotech opens new office in Asia Pacific",
+      "sentiment": {
+        "reasoning": "Opening a new office in Asia Pacific indicates a strategic expansion into a new market, which is generally positive for growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics reports rising costs pressuring margins in enterprise software"
+      "headline": "Zelvix Therapeutics reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs pressuring margins directly impacts profitability and is a negative signal for financial performance.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech announces significant capital expenditure plan for Latin America"
+      "headline": "Xelvol Biotech announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan suggests long-term investment in growth, though it may weigh on short-term cash flow.",
+        "longTerm": 3,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 40,
       "companyId": 1,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech sees 10% drop in new customer orders this quarter"
+      "headline": "Xelvol Biotech sees 10% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 10% drop in new customer orders is a clear negative indicator of slowing demand and revenue growth.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Zelvix Therapeutics",
-      "headline": "Zelvix Therapeutics wins industry award for excellence in data analytics"
+      "headline": "Zelvix Therapeutics wins industry award for excellence in data analytics",
+      "sentiment": {
+        "reasoning": "Winning an industry award for data analytics provides positive brand validation but has limited direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Frelis Genomics",
-      "headline": "Frelis Genomics revises long-term strategy with focus on automated logistics"
+      "headline": "Frelis Genomics revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "Revising strategy toward automated logistics indicates a shift in operational focus, but the financial outcome remains speculative.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:21.239Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

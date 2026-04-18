@@ -66,56 +66,147 @@
       "barIx": 7,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech secures $400M contract with an international consortium"
+      "headline": "Grevon Biotech secures $400M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "The $400M contract provides a clear, significant revenue boost that will positively impact financial performance over the next 100 days.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 15,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals faces regulatory review of cloud infrastructure practices"
+      "headline": "Yorvov Pharmaceuticals faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny regarding infrastructure creates immediate uncertainty and potential operational risk for the company.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics misses quarterly revenue estimates by 8%"
+      "headline": "Myrnon Therapeutics misses quarterly revenue estimates by 8%",
+      "sentiment": {
+        "reasoning": "An 8% revenue miss is a direct negative indicator of current performance, typically leading to immediate downward pressure on stock price.",
+        "longTerm": -3,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports strong demand in North America, raises outlook"
+      "headline": "Grevon Biotech reports strong demand in North America, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising the outlook based on strong demand is a positive signal that suggests sustained growth momentum for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 20,
       "companyId": 1,
       "companyName": "Yorvov Pharmaceuticals",
-      "headline": "Yorvov Pharmaceuticals misses quarterly revenue estimates by 7%"
+      "headline": "Yorvov Pharmaceuticals misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "A 7% revenue miss indicates underperformance relative to expectations, causing immediate negative sentiment.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 22,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics secures $50M contract with a top-tier research institute"
+      "headline": "Myrnon Therapeutics secures $50M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a concrete revenue stream that improves the company's financial outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 48,
       "companyId": 3,
       "companyName": "Relvos Biosciences",
-      "headline": "Relvos Biosciences completes strategic acquisition to strengthen supply chain optimization"
+      "headline": "Relvos Biosciences completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "The acquisition is intended to optimize the supply chain, which should yield operational efficiencies over the medium to long term.",
+        "longTerm": 4,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 2,
       "companyName": "Myrnon Therapeutics",
-      "headline": "Myrnon Therapeutics reports strong demand in Latin America, raises outlook"
+      "headline": "Myrnon Therapeutics reports strong demand in Latin America, raises outlook",
+      "sentiment": {
+        "reasoning": "Increased demand and a raised outlook are strong indicators of positive financial trajectory for the company.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:38.210Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

@@ -53,49 +53,130 @@
       "barIx": 4,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces significant capital expenditure plan for Southeast Asia"
+      "headline": "Grevon Biotech announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 8,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech warns of supply chain disruptions affecting Central Europe operations"
+      "headline": "Grevon Biotech warns of supply chain disruptions affecting Central Europe operations",
+      "sentiment": {
+        "reasoning": "Supply chain disruptions in a key region represent a direct operational headwind that will likely impact near-term performance.",
+        "longTerm": -2,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 12,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech reports 3% increase in customer acquisition"
+      "headline": "Grevon Biotech reports 3% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 3% increase in customer acquisition is a positive indicator of demand growth, though the magnitude is modest.",
+        "longTerm": 2,
+        "shortTerm": 2,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 30,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees 5% drop in new customer orders this quarter"
+      "headline": "Grevon Biotech sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders is a clear negative signal regarding current demand trends.",
+        "longTerm": -3,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 32,
       "companyId": 1,
       "companyName": "Jorvix Diagnostics",
-      "headline": "Jorvix Diagnostics secures $320M contract with a multinational manufacturer"
+      "headline": "Jorvix Diagnostics secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a $320M contract provides a substantial and concrete boost to revenue visibility and growth.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences reports 18% decline in operating income"
+      "headline": "Calvis Sciences reports 18% decline in operating income",
+      "sentiment": {
+        "reasoning": "An 18% decline in operating income is a significant negative indicator of profitability and operational efficiency.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Calvis Sciences",
-      "headline": "Calvis Sciences files for regulatory approval of new enterprise software offering"
+      "headline": "Calvis Sciences files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a positive step toward product expansion, though the outcome remains subject to regulatory review.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:19.422Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

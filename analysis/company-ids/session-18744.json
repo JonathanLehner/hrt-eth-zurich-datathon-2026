@@ -65,56 +65,147 @@
       "barIx": 9,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software enters joint venture with an international consortium"
+      "headline": "Relvan Software enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "A joint venture indicates strategic expansion but lacks specific financial details or immediate revenue impact.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 5,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $120M contract with a leading cloud platform"
+      "headline": "Relvan Software secures $120M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $120M contract provides a clear, quantifiable revenue boost for the company.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 19,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software reports rising costs pressuring margins in enterprise software"
+      "headline": "Relvan Software reports rising costs pressuring margins in enterprise software",
+      "sentiment": {
+        "reasoning": "Rising costs directly threaten profitability and margins, signaling a negative financial outlook.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "cost_pressure",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 22,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands begins scheduled maintenance of precision manufacturing systems"
+      "headline": "Halvav Brands begins scheduled maintenance of precision manufacturing systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational event with minimal expected financial impact.",
+        "longTerm": 0,
+        "shortTerm": -1,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Dralol Computing",
-      "headline": "Dralol Computing secures $180M contract with a global retailer"
+      "headline": "Dralol Computing secures $180M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "A $180M contract with a global retailer represents a significant and positive revenue event.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 29,
       "companyId": 1,
       "companyName": "Halvav Brands",
-      "headline": "Halvav Brands lowers full-year guidance amid softening demand"
+      "headline": "Halvav Brands lowers full-year guidance amid softening demand",
+      "sentiment": {
+        "reasoning": "Lowering full-year guidance due to softening demand is a clear negative signal for future performance.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 39,
       "companyId": 3,
       "companyName": "Prynis Systems",
-      "headline": "Prynis Systems completes planned facility upgrade in Central Europe"
+      "headline": "Prynis Systems completes planned facility upgrade in Central Europe",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is a neutral operational milestone with no immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 46,
       "companyId": 0,
       "companyName": "Relvan Software",
-      "headline": "Relvan Software secures $800M contract with a major logistics provider"
+      "headline": "Relvan Software secures $800M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "An $800M contract is a major financial win that will significantly bolster revenue and market position.",
+        "longTerm": 9,
+        "shortTerm": 9,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:40:19.828Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

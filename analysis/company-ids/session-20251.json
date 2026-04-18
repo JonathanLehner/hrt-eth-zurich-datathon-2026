@@ -46,21 +46,62 @@
       "barIx": 31,
       "companyId": 0,
       "companyName": "Zrovum Biopharma",
-      "headline": "Zrovum Biopharma to present at Capital Markets Day"
+      "headline": "Zrovum Biopharma to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Capital Markets Days are standard corporate events that rarely provide immediate material financial impact or directional shifts.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 38,
       "companyId": 1,
       "companyName": "Krevum Pharmaceuticals",
-      "headline": "Krevum Pharmaceuticals secures $50M contract with a leading cloud platform"
+      "headline": "Krevum Pharmaceuticals secures $50M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive revenue stream that will likely be recognized over the coming quarters.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 47,
       "companyId": 2,
       "companyName": "Nerval Biopharma",
-      "headline": "Nerval Biopharma secures $120M contract with a multinational manufacturer"
+      "headline": "Nerval Biopharma secures $120M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "A $120M contract win represents a significant revenue boost that will positively influence financial performance throughout the 100-day window.",
+        "longTerm": 7,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:41:14.940Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

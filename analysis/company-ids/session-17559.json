@@ -65,56 +65,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power names new head of automated logistics division"
+      "headline": "Plevep Power names new head of automated logistics division",
+      "sentiment": {
+        "reasoning": "The appointment of a new division head is a standard leadership change with minimal immediate financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "leadership",
+        "evidenceStrength": 8,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid revises long-term strategy with focus on supply chain optimization"
+      "headline": "Urvel Grid revises long-term strategy with focus on supply chain optimization",
+      "sentiment": {
+        "reasoning": "Strategic revisions are directional shifts that lack immediate financial quantification or guaranteed outcomes.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power secures $650M contract with a multinational manufacturer"
+      "headline": "Plevep Power secures $650M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract provides clear, quantifiable revenue growth and positive sentiment.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 19,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid misses quarterly revenue estimates by 7%"
+      "headline": "Urvel Grid misses quarterly revenue estimates by 7%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 7% is a direct negative indicator of current operational performance.",
+        "longTerm": -3,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 29,
       "companyId": 2,
       "companyName": "Kelvos Resources",
-      "headline": "Kelvos Resources signs multi-year partnership with a global retailer"
+      "headline": "Kelvos Resources signs multi-year partnership with a global retailer",
+      "sentiment": {
+        "reasoning": "A multi-year partnership suggests stable, recurring revenue growth over the long term.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 9
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 30,
       "companyId": 3,
       "companyName": "Kelvik Power",
-      "headline": "Kelvik Power launches next-generation supply chain optimization platform"
+      "headline": "Kelvik Power launches next-generation supply chain optimization platform",
+      "sentiment": {
+        "reasoning": "Launching a new platform is a positive product development that may drive future demand.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power completes planned facility upgrade in Scandinavia"
+      "headline": "Plevep Power completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a facility upgrade is an operational milestone that improves efficiency but has limited immediate market impact.",
+        "longTerm": 2,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 42,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power misses quarterly revenue estimates by 25%"
+      "headline": "Plevep Power misses quarterly revenue estimates by 25%",
+      "sentiment": {
+        "reasoning": "A significant 25% revenue miss indicates severe operational or demand issues with high negative impact.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:37.229Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

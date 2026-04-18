@@ -55,56 +55,147 @@
       "barIx": 3,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets sees 3% drop in new customer orders this quarter"
+      "headline": "Ixenis Outlets sees 3% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 3% drop in new customer orders indicates a modest decline in demand that will likely pressure short-term revenue.",
+        "longTerm": -3,
+        "shortTerm": -3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 5,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands sees 25% drop in new customer orders this quarter"
+      "headline": "Joval Brands sees 25% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 25% drop in new customer orders signals a severe demand contraction with immediate negative financial implications.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 6,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands secures $50M contract with a major logistics provider"
+      "headline": "Joval Brands secures $50M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, positive revenue catalyst that will likely bolster financial performance over the coming months.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets misses quarterly revenue estimates by 15%"
+      "headline": "Ixenis Outlets misses quarterly revenue estimates by 15%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by 15% is a substantial negative indicator that will likely trigger an immediate downward market reaction.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 24,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands to host investor day focused on enterprise software strategy"
+      "headline": "Joval Brands to host investor day focused on enterprise software strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy is a neutral event that provides information but lacks immediate direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 36,
       "companyId": 0,
       "companyName": "Ixenis Outlets",
-      "headline": "Ixenis Outlets sees 25% margin improvement in latest quarter"
+      "headline": "Ixenis Outlets sees 25% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 25% margin improvement is a strong positive signal for operational efficiency and bottom-line profitability.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "operations",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 43,
       "companyId": 2,
       "companyName": "Varvov Retail Group",
-      "headline": "Varvov Retail Group reports record quarterly revenue, up 7% year-over-year"
+      "headline": "Varvov Retail Group reports record quarterly revenue, up 7% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 7% year-over-year demonstrates solid business momentum and positive financial health.",
+        "longTerm": 4,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 45,
       "companyId": 1,
       "companyName": "Joval Brands",
-      "headline": "Joval Brands reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Joval Brands reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record revenue growth of 20% year-over-year is a strong indicator of high demand and successful market expansion.",
+        "longTerm": 7,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:48.806Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

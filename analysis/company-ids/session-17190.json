@@ -56,56 +56,147 @@
       "barIx": 0,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech announces major organizational restructuring"
+      "headline": "Grevon Biotech announces major organizational restructuring",
+      "sentiment": {
+        "reasoning": "Organizational restructuring often signals cost-cutting or strategic shifts that create short-term uncertainty and potential disruption.",
+        "longTerm": 2,
+        "shortTerm": -2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 3,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $800M contract with a global retailer"
+      "headline": "Urvel Grid secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a large $800M contract provides clear, immediate, and durable revenue visibility for the company.",
+        "longTerm": 7,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 10,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid sees 5% drop in new customer orders this quarter"
+      "headline": "Urvel Grid sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A decline in new customer orders is a direct negative indicator of demand and future revenue growth.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 13,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech names new head of precision manufacturing division"
+      "headline": "Grevon Biotech names new head of precision manufacturing division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head is a standard leadership change with minimal immediate financial impact until strategy is defined.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 5,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech secures $120M contract with a major logistics provider"
+      "headline": "Xelvol Biotech secures $120M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "A $120M contract win provides a positive, concrete boost to the company's revenue outlook.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 21,
       "companyId": 2,
       "companyName": "Xelvol Biotech",
-      "headline": "Xelvol Biotech recalls products in data analytics line due to quality concerns"
+      "headline": "Xelvol Biotech recalls products in data analytics line due to quality concerns",
+      "sentiment": {
+        "reasoning": "Product recalls carry immediate negative financial and reputational costs, with potential long-term operational impacts.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 28,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid secures $400M contract with a national infrastructure agency"
+      "headline": "Urvel Grid secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $400M infrastructure contract is a significant positive development that strengthens the company's long-term revenue base.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H008",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Grevon Biotech",
-      "headline": "Grevon Biotech sees mixed results in digital payments pilot program"
+      "headline": "Grevon Biotech sees mixed results in digital payments pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results in a pilot program create ambiguity regarding the success and future scalability of the initiative.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 4
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:23.664Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

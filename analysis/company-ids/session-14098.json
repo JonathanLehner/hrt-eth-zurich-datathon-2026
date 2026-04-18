@@ -50,35 +50,96 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power announces $9.6B share buyback program"
+      "headline": "Plevep Power announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A $9.6B share buyback program directly increases earnings per share and signals management confidence in the company's valuation.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 7,
       "companyId": 1,
       "companyName": "Urvel Grid",
-      "headline": "Urvel Grid loses key contract in Europe to competitor"
+      "headline": "Urvel Grid loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract represents a direct reduction in future revenue and market share in a specific region.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 17,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources completes planned facility upgrade in Southeast Asia"
+      "headline": "Nolvol Resources completes planned facility upgrade in Southeast Asia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade is an operational milestone that should improve efficiency and output capacity.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 38,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources CFO addresses investor concerns in open letter"
+      "headline": "Nolvol Resources CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from the CFO is a reactive measure to address investor uncertainty, which may stabilize sentiment but does not change fundamentals.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 45,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources announces significant capital expenditure plan for Latin America"
+      "headline": "Nolvol Resources announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan indicates long-term growth investment but may weigh on short-term cash flow and margins.",
+        "longTerm": 4,
+        "shortTerm": -1,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:53:50.203Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

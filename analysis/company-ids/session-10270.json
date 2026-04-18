@@ -50,35 +50,96 @@
       "barIx": 11,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings to host investor day focused on digital payments strategy"
+      "headline": "Talvix Holdings to host investor day focused on digital payments strategy",
+      "sentiment": {
+        "reasoning": "Investor days are routine corporate events that rarely provide immediate material financial impact.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 1
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 14,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities secures $50M contract with an international consortium"
+      "headline": "Creven Securities secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract provides a clear, quantifiable revenue boost that will likely be recognized over the coming quarters.",
+        "longTerm": 6,
+        "shortTerm": 5,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Creven Securities",
-      "headline": "Creven Securities Chief Strategy Officer addresses investor concerns in open letter"
+      "headline": "Creven Securities Chief Strategy Officer addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "An open letter from a CSO indicates existing market skepticism, and the impact depends entirely on the market's subjective interpretation of the content.",
+        "longTerm": 1,
+        "shortTerm": -1,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 5,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 3
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 34,
       "companyId": 2,
       "companyName": "Ervan Capital",
-      "headline": "Ervan Capital reports 20% decline in operating income"
+      "headline": "Ervan Capital reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 20% decline in operating income is a direct negative indicator of profitability that typically triggers immediate downward price pressure.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 48,
       "companyId": 0,
       "companyName": "Talvix Holdings",
-      "headline": "Talvix Holdings reports record quarterly revenue, up 12% year-over-year"
+      "headline": "Talvix Holdings reports record quarterly revenue, up 12% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 12% is a strong positive signal of business momentum and operational success.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T15:51:22.723Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

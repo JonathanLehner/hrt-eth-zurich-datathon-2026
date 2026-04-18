@@ -63,49 +63,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Yorven Labs",
-      "headline": "Yorven Labs to host investor day focused on automated logistics strategy"
+      "headline": "Yorven Labs to host investor day focused on automated logistics strategy",
+      "sentiment": {
+        "reasoning": "Investor days are strategic communication events that typically have minimal immediate financial impact but signal management confidence.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 2
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports record quarterly revenue, up 20% year-over-year"
+      "headline": "Brevep Systems reports record quarterly revenue, up 20% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue growth of 20% is a strong positive indicator of market demand and operational success.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 16,
       "companyId": 2,
       "companyName": "Nolvol Resources",
-      "headline": "Nolvol Resources revises long-term strategy with focus on data analytics"
+      "headline": "Nolvol Resources revises long-term strategy with focus on data analytics",
+      "sentiment": {
+        "reasoning": "Strategic pivots toward data analytics are qualitative shifts that lack immediate financial quantification.",
+        "longTerm": 2,
+        "shortTerm": 0,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 5
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 18,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports 3% decline in operating income"
+      "headline": "Brevep Systems reports 3% decline in operating income",
+      "sentiment": {
+        "reasoning": "A decline in operating income directly impacts profitability and is viewed negatively by investors.",
+        "longTerm": -4,
+        "shortTerm": -5,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 30,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems loses key contract in North America to competitor"
+      "headline": "Brevep Systems loses key contract in North America to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract represents a direct loss of revenue and potential market share erosion.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 43,
       "companyId": 3,
       "companyName": "Nolvis Devices",
-      "headline": "Nolvis Devices reports strong demand in Middle East, raises outlook"
+      "headline": "Nolvis Devices reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Raising outlook based on strong regional demand is a clear positive signal for future financial performance.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 44,
       "companyId": 1,
       "companyName": "Brevep Systems",
-      "headline": "Brevep Systems reports 20% increase in customer acquisition"
+      "headline": "Brevep Systems reports 20% increase in customer acquisition",
+      "sentiment": {
+        "reasoning": "A 20% increase in customer acquisition is a leading indicator of future revenue growth.",
+        "longTerm": 5,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:38:14.395Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }

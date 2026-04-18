@@ -54,49 +54,130 @@
       "barIx": 6,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries withdraws from Middle East market citing unfavorable conditions"
+      "headline": "Zrovex Industries withdraws from Middle East market citing unfavorable conditions",
+      "sentiment": {
+        "reasoning": "Exiting a market reduces revenue potential and signals operational challenges in that region.",
+        "longTerm": -4,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H002",
       "barIx": 11,
       "companyId": 1,
       "companyName": "Plevep Power",
-      "headline": "Plevep Power enters joint venture with an international consortium"
+      "headline": "Plevep Power enters joint venture with an international consortium",
+      "sentiment": {
+        "reasoning": "A joint venture suggests potential for shared costs and expanded market access, though specific financial benefits are not quantified.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H003",
       "barIx": 15,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid announces breakthrough in renewable storage"
+      "headline": "Nerven Grid announces breakthrough in renewable storage",
+      "sentiment": {
+        "reasoning": "A technological breakthrough in a core growth sector provides a strong positive catalyst for future competitive advantage.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
     },
     {
       "headlineId": "H004",
       "barIx": 23,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid faces class action over precision manufacturing service disruption"
+      "headline": "Nerven Grid faces class action over precision manufacturing service disruption",
+      "sentiment": {
+        "reasoning": "Class action litigation introduces significant legal risk and potential financial liability related to service disruptions.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
     },
     {
       "headlineId": "H005",
       "barIx": 28,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries faces regulatory review of precision manufacturing practices"
+      "headline": "Zrovex Industries faces regulatory review of precision manufacturing practices",
+      "sentiment": {
+        "reasoning": "Regulatory scrutiny creates uncertainty and potential for operational restrictions or fines.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
     },
     {
       "headlineId": "H006",
       "barIx": 33,
       "companyId": 0,
       "companyName": "Zrovex Industries",
-      "headline": "Zrovex Industries misses quarterly revenue estimates by 3%"
+      "headline": "Zrovex Industries misses quarterly revenue estimates by 3%",
+      "sentiment": {
+        "reasoning": "A revenue miss indicates weaker demand or execution, though a 3% variance is relatively minor.",
+        "longTerm": -1,
+        "shortTerm": -3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 4
+      }
     },
     {
       "headlineId": "H007",
       "barIx": 42,
       "companyId": 2,
       "companyName": "Nerven Grid",
-      "headline": "Nerven Grid delays product launch in precision manufacturing segment"
+      "headline": "Nerven Grid delays product launch in precision manufacturing segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch postpones expected revenue and may signal internal development or supply chain issues.",
+        "longTerm": -3,
+        "shortTerm": -2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
     }
-  ]
+  ],
+  "scoring": {
+    "model": "gemini-3.1-flash-lite-preview",
+    "scoredAt": "2026-04-18T16:39:23.130Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
 }
