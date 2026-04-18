@@ -1,0 +1,126 @@
+{
+  "session": "1327",
+  "companyCount": 3,
+  "headlineCount": 4,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Jovor Networks",
+      "headlineCount": 1,
+      "firstBarIx": 27,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Jovor Networks completes planned facility upgrade in Latin America"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Talvep Computing",
+      "headlineCount": 2,
+      "firstBarIx": 28,
+      "headlineIds": [
+        "H002",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Talvep Computing signs multi-year partnership with a leading cloud platform",
+        "Talvep Computing reports unexpected decline in North America revenue"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Volval Devices",
+      "headlineCount": 1,
+      "firstBarIx": 34,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Volval Devices wins industry award for excellence in process automation"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 27,
+      "companyId": 0,
+      "companyName": "Jovor Networks",
+      "headline": "Jovor Networks completes planned facility upgrade in Latin America",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive for the company.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 28,
+      "companyId": 1,
+      "companyName": "Talvep Computing",
+      "headline": "Talvep Computing signs multi-year partnership with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "A multi-year partnership with a leading cloud platform is a significant positive development, indicating potential for increased revenue, market reach, and strategic alignment.",
+        "longTerm": 8,
+        "shortTerm": 6,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 34,
+      "companyId": 2,
+      "companyName": "Volval Devices",
+      "headline": "Volval Devices wins industry award for excellence in process automation",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and brand recognition, potentially leading to increased demand or improved competitive positioning.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 5,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 45,
+      "companyId": 1,
+      "companyName": "Talvep Computing",
+      "headline": "Talvep Computing reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue in a key region is a significant negative indicator for the company's financial performance and market outlook.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:11:56.715Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "session": "1731",
+  "companyCount": 3,
+  "headlineCount": 3,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Dralol Computing",
+      "headlineCount": 1,
+      "firstBarIx": 20,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Dralol Computing loses key contract in Middle East to competitor"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Myrnep Technologies",
+      "headlineCount": 1,
+      "firstBarIx": 24,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Myrnep Technologies reports 12% decline in operating income"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Ixenix Technologies",
+      "headlineCount": 1,
+      "firstBarIx": 31,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Ixenix Technologies warns of supply chain disruptions affecting Middle East operations"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 20,
+      "companyId": 0,
+      "companyName": "Dralol Computing",
+      "headline": "Dralol Computing loses key contract in Middle East to competitor",
+      "sentiment": {
+        "reasoning": "The loss of a key contract will negatively impact Dralol Computing's revenue and market position.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 24,
+      "companyId": 1,
+      "companyName": "Myrnep Technologies",
+      "headline": "Myrnep Technologies reports 12% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates a negative financial performance for Myrnep Technologies.",
+        "longTerm": -7,
+        "shortTerm": -10,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 31,
+      "companyId": 2,
+      "companyName": "Ixenix Technologies",
+      "headline": "Ixenix Technologies warns of supply chain disruptions affecting Middle East operations",
+      "sentiment": {
+        "reasoning": "Warnings of supply chain disruptions indicate potential negative impacts on production, sales, and profitability for Ixenix Technologies.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:09.884Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

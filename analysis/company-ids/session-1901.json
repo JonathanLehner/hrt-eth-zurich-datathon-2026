@@ -1,0 +1,164 @@
+{
+  "session": "1901",
+  "companyCount": 3,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Strynal Industries",
+      "headlineCount": 2,
+      "firstBarIx": 1,
+      "headlineIds": [
+        "H001",
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Strynal Industries secures $120M contract with a top-tier research institute",
+        "Strynal Industries reports unexpected decline in Latin America revenue"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Kelvik Power",
+      "headlineCount": 2,
+      "firstBarIx": 18,
+      "headlineIds": [
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Kelvik Power announces significant capital expenditure plan for Southeast Asia",
+        "Kelvik Power delays product launch in automated logistics segment"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Nolvis Devices",
+      "headlineCount": 2,
+      "firstBarIx": 33,
+      "headlineIds": [
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Nolvis Devices faces regulatory review of cloud infrastructure practices",
+        "Nolvis Devices to host investor day focused on cloud infrastructure strategy"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 1,
+      "companyId": 0,
+      "companyName": "Strynal Industries",
+      "headline": "Strynal Industries secures $120M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a top-tier institute is a clear positive for revenue and reputation.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 11,
+      "companyId": 0,
+      "companyName": "Strynal Industries",
+      "headline": "Strynal Industries reports unexpected decline in Latin America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative financial performance and potential demand issues.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 18,
+      "companyId": 1,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion in a new region indicates future growth potential but also immediate costs and execution risk.",
+        "longTerm": 7,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 20,
+      "companyId": 1,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power delays product launch in automated logistics segment",
+      "sentiment": {
+        "reasoning": "Delaying a product launch can lead to missed revenue opportunities, increased development costs, and potential loss of competitive advantage.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "product_launch",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 33,
+      "companyId": 2,
+      "companyName": "Nolvis Devices",
+      "headline": "Nolvis Devices faces regulatory review of cloud infrastructure practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty, potential fines, operational changes, and reputational damage.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 45,
+      "companyId": 2,
+      "companyName": "Nolvis Devices",
+      "headline": "Nolvis Devices to host investor day focused on cloud infrastructure strategy",
+      "sentiment": {
+        "reasoning": "An investor day focused on strategy provides an opportunity for the company to articulate its vision, potentially boosting investor confidence, but offers no immediate financial impact.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 4
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:41.504Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

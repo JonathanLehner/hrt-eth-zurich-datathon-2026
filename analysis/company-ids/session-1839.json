@@ -1,0 +1,174 @@
+{
+  "session": "1839",
+  "companyCount": 4,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Jovor Networks",
+      "headlineCount": 1,
+      "firstBarIx": 1,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Jovor Networks to present at Annual Industry Forum"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Ulvyn Microchips",
+      "headlineCount": 1,
+      "firstBarIx": 7,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Ulvyn Microchips sees 20% drop in new customer orders this quarter"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Wyrnik Sciences",
+      "headlineCount": 2,
+      "firstBarIx": 9,
+      "headlineIds": [
+        "H003",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Wyrnik Sciences announces $1.2B share buyback program",
+        "Wyrnik Sciences reports unexpected decline in Asia Pacific revenue"
+      ]
+    },
+    {
+      "companyId": 3,
+      "name": "Relvan Software",
+      "headlineCount": 2,
+      "firstBarIx": 29,
+      "headlineIds": [
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Relvan Software begins scheduled maintenance of automated logistics systems",
+        "Relvan Software opens new office in Europe"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 1,
+      "companyId": 0,
+      "companyName": "Jovor Networks",
+      "headline": "Jovor Networks to present at Annual Industry Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an industry forum offers minor visibility and networking opportunities, which could indirectly benefit the company.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 2,
+        "durability": 2
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 7,
+      "companyId": 1,
+      "companyName": "Ulvyn Microchips",
+      "headline": "Ulvyn Microchips sees 20% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A significant 20% drop in new customer orders indicates weakening demand, which will negatively impact future revenue and earnings.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 9,
+      "companyId": 2,
+      "companyName": "Wyrnik Sciences",
+      "headline": "Wyrnik Sciences announces $1.2B share buyback program",
+      "sentiment": {
+        "reasoning": "A substantial share buyback program typically signals management confidence and can boost earnings per share, positively impacting shareholder value.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 29,
+      "companyId": 3,
+      "companyName": "Relvan Software",
+      "headline": "Relvan Software begins scheduled maintenance of automated logistics systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that is generally expected and should not have a significant direct financial impact unless it causes unexpected disruptions.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 1,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 1
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 36,
+      "companyId": 3,
+      "companyName": "Relvan Software",
+      "headline": "Relvan Software opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in Europe indicates geographic expansion, which could lead to increased market reach and revenue opportunities, but also involves initial costs.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 36,
+      "companyId": 2,
+      "companyName": "Wyrnik Sciences",
+      "headline": "Wyrnik Sciences reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative operational performance that will likely impact overall financial results.",
+        "longTerm": -6,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:32.522Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

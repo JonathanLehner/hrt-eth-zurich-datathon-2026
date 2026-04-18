@@ -1,0 +1,145 @@
+{
+  "session": "1903",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Halven Investments",
+      "headlineCount": 2,
+      "firstBarIx": 17,
+      "headlineIds": [
+        "H001",
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Halven Investments secures $320M contract with a multinational manufacturer",
+        "Halven Investments secures $400M contract with a leading cloud platform"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Creven Securities",
+      "headlineCount": 2,
+      "firstBarIx": 39,
+      "headlineIds": [
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Creven Securities misses quarterly revenue estimates by 20%",
+        "Creven Securities recalls products in renewable storage line due to quality concerns"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Jorvyl Securities",
+      "headlineCount": 1,
+      "firstBarIx": 44,
+      "headlineIds": [
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Jorvyl Securities explores strategic alternatives for data analytics unit"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 17,
+      "companyId": 0,
+      "companyName": "Halven Investments",
+      "headline": "Halven Investments secures $320M contract with a multinational manufacturer",
+      "sentiment": {
+        "reasoning": "Securing a significant contract is a clear positive for revenue and business growth.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 37,
+      "companyId": 0,
+      "companyName": "Halven Investments",
+      "headline": "Halven Investments secures $400M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing another substantial contract further boosts revenue prospects and market position.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 39,
+      "companyId": 1,
+      "companyName": "Creven Securities",
+      "headline": "Creven Securities misses quarterly revenue estimates by 20%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin indicates weaker-than-expected financial performance, negatively impacting investor confidence.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 10,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 43,
+      "companyId": 1,
+      "companyName": "Creven Securities",
+      "headline": "Creven Securities recalls products in renewable storage line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs, damage reputation, and potentially impact future sales.",
+        "longTerm": -9,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 44,
+      "companyId": 2,
+      "companyName": "Jorvyl Securities",
+      "headline": "Jorvyl Securities explores strategic alternatives for data analytics unit",
+      "sentiment": {
+        "reasoning": "Exploring strategic alternatives for a unit can signal potential divestiture or restructuring, which could be positive or negative depending on the outcome, creating uncertainty.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 9,
+        "shortTermUncertainty": 8,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 5
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:40.935Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

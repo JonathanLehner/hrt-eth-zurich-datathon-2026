@@ -1,0 +1,164 @@
+{
+  "session": "2002",
+  "companyCount": 3,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Halvav Brands",
+      "headlineCount": 1,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Halvav Brands reports unexpected decline in Asia Pacific revenue"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Krevan Investments",
+      "headlineCount": 2,
+      "firstBarIx": 10,
+      "headlineIds": [
+        "H002",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Krevan Investments reports record quarterly revenue, up 15% year-over-year",
+        "Krevan Investments reports unexpected decline in Middle East revenue"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Jorval Trading Co",
+      "headlineCount": 3,
+      "firstBarIx": 13,
+      "headlineIds": [
+        "H004",
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Jorval Trading Co expands operations into Asia Pacific markets",
+        "Jorval Trading Co secures $75M contract with an international consortium",
+        "Jorval Trading Co reports 20% decline in operating income"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 8,
+      "companyId": 0,
+      "companyName": "Halvav Brands",
+      "headline": "Halvav Brands reports unexpected decline in Asia Pacific revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a specific region indicates a negative financial performance, likely impacting overall earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 10,
+      "companyId": 1,
+      "companyName": "Krevan Investments",
+      "headline": "Krevan Investments reports record quarterly revenue, up 15% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue with significant year-over-year growth indicates strong positive financial performance.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 13,
+      "companyId": 1,
+      "companyName": "Krevan Investments",
+      "headline": "Krevan Investments reports unexpected decline in Middle East revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue for a specific region indicates a negative financial performance, likely impacting overall earnings.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 13,
+      "companyId": 2,
+      "companyName": "Jorval Trading Co",
+      "headline": "Jorval Trading Co expands operations into Asia Pacific markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets suggests potential for future revenue growth and market share, but also involves initial costs and execution risk.",
+        "longTerm": 6,
+        "shortTerm": 3,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 15,
+      "companyId": 2,
+      "companyName": "Jorval Trading Co",
+      "headline": "Jorval Trading Co secures $75M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a significant contract provides a clear and immediate boost to future revenue and order backlog.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 29,
+      "companyId": 2,
+      "companyName": "Jorval Trading Co",
+      "headline": "Jorval Trading Co reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant 20% decline in operating income indicates a substantial negative impact on profitability.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:59.146Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

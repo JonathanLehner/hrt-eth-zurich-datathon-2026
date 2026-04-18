@@ -1,0 +1,155 @@
+{
+  "session": "1502",
+  "companyCount": 4,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Talvix Holdings",
+      "headlineCount": 1,
+      "firstBarIx": 11,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Talvix Holdings expands operations into Central Europe markets"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Holtum Asset Group",
+      "headlineCount": 1,
+      "firstBarIx": 15,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Holtum Asset Group secures $500M contract with a major logistics provider"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Brevon Microchips",
+      "headlineCount": 2,
+      "firstBarIx": 27,
+      "headlineIds": [
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Brevon Microchips expands operations into Europe markets",
+        "Brevon Microchips misses quarterly revenue estimates by 18%"
+      ]
+    },
+    {
+      "companyId": 3,
+      "name": "Ervan Capital",
+      "headlineCount": 1,
+      "firstBarIx": 32,
+      "headlineIds": [
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Ervan Capital loses key contract in Scandinavia to competitor"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 11,
+      "companyId": 0,
+      "companyName": "Talvix Holdings",
+      "headline": "Talvix Holdings expands operations into Central Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets is generally positive for growth, but the immediate financial impact and success are uncertain.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 15,
+      "companyId": 1,
+      "companyName": "Holtum Asset Group",
+      "headline": "Holtum Asset Group secures $500M contract with a major logistics provider",
+      "sentiment": {
+        "reasoning": "Securing a large contract with a major provider is a clear positive for revenue and market position.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 27,
+      "companyId": 2,
+      "companyName": "Brevon Microchips",
+      "headline": "Brevon Microchips expands operations into Europe markets",
+      "sentiment": {
+        "reasoning": "Expanding operations into new markets is generally positive for growth, but the immediate financial impact and success are uncertain.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 30,
+      "companyId": 2,
+      "companyName": "Brevon Microchips",
+      "headline": "Brevon Microchips misses quarterly revenue estimates by 18%",
+      "sentiment": {
+        "reasoning": "Missing quarterly revenue estimates by a significant margin is a clear negative signal for financial performance and investor confidence.",
+        "longTerm": -6,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 32,
+      "companyId": 3,
+      "companyName": "Ervan Capital",
+      "headline": "Ervan Capital loses key contract in Scandinavia to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract, especially to a competitor, is a significant negative event impacting revenue and market share.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:12:28.567Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

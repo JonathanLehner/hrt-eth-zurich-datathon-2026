@@ -1,0 +1,164 @@
+{
+  "session": "1095",
+  "companyCount": 3,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Varvov Retail Group",
+      "headlineCount": 2,
+      "firstBarIx": 7,
+      "headlineIds": [
+        "H001",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Varvov Retail Group sees 5% drop in new customer orders this quarter",
+        "Varvov Retail Group faces regulatory review of digital payments practices"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Kelvik Power",
+      "headlineCount": 2,
+      "firstBarIx": 14,
+      "headlineIds": [
+        "H002",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Kelvik Power reports unexpected decline in Central Europe revenue",
+        "Kelvik Power reports 7% decline in operating income"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Ixenis Outlets",
+      "headlineCount": 2,
+      "firstBarIx": 31,
+      "headlineIds": [
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Ixenis Outlets wins industry award for excellence in supply chain optimization",
+        "Ixenis Outlets faces class action over process automation service disruption"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 7,
+      "companyId": 0,
+      "companyName": "Varvov Retail Group",
+      "headline": "Varvov Retail Group sees 5% drop in new customer orders this quarter",
+      "sentiment": {
+        "reasoning": "A 5% drop in new customer orders indicates weakening demand, negatively impacting revenue and future growth.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "demand",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 14,
+      "companyId": 1,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region signals underperformance and potential negative impact on overall financial results.",
+        "longTerm": -4,
+        "shortTerm": -6,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "earnings",
+        "evidenceStrength": 7,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 24,
+      "companyId": 0,
+      "companyName": "Varvov Retail Group",
+      "headline": "Varvov Retail Group faces regulatory review of digital payments practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty, potential fines, and operational changes, which can negatively impact the company.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 31,
+      "companyId": 2,
+      "companyName": "Ixenis Outlets",
+      "headline": "Ixenis Outlets wins industry award for excellence in supply chain optimization",
+      "sentiment": {
+        "reasoning": "Winning an industry award for supply chain optimization enhances reputation and may indirectly lead to improved operational efficiency or new business, but has no direct financial impact.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 33,
+      "companyId": 2,
+      "companyName": "Ixenis Outlets",
+      "headline": "Ixenis Outlets faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "A class action lawsuit over service disruption indicates potential legal costs, settlements, and reputational damage.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 43,
+      "companyId": 1,
+      "companyName": "Kelvik Power",
+      "headline": "Kelvik Power reports 7% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 7% decline in operating income directly indicates reduced profitability, negatively impacting financial performance.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:10:40.346Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

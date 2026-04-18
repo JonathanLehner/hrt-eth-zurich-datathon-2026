@@ -1,0 +1,145 @@
+{
+  "session": "1231",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Jovor Networks",
+      "headlineCount": 3,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H001",
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Jovor Networks to present at Capital Markets Day",
+        "Jovor Networks secures $50M contract with a national infrastructure agency",
+        "Jovor Networks CFO addresses investor concerns in open letter"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Calvis Sciences",
+      "headlineCount": 1,
+      "firstBarIx": 30,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Calvis Sciences to present at Emerging Markets Forum"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Nerval Biopharma",
+      "headlineCount": 1,
+      "firstBarIx": 34,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Nerval Biopharma reports 25% decline in operating income"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 8,
+      "companyId": 0,
+      "companyName": "Jovor Networks",
+      "headline": "Jovor Networks to present at Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Presenting at a Capital Markets Day provides an opportunity for the company to communicate its strategy and outlook to investors, which can be mildly positive if the presentation is well-received.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 30,
+      "companyId": 1,
+      "companyName": "Calvis Sciences",
+      "headline": "Calvis Sciences to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at an Emerging Markets Forum offers a platform to attract new investors and potentially expand market reach, which could be mildly positive.",
+        "longTerm": 1,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 34,
+      "companyId": 2,
+      "companyName": "Nerval Biopharma",
+      "headline": "Nerval Biopharma reports 25% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant 25% decline in operating income indicates a negative financial performance, likely impacting investor confidence.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 35,
+      "companyId": 0,
+      "companyName": "Jovor Networks",
+      "headline": "Jovor Networks secures $50M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract with a national agency is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 43,
+      "companyId": 0,
+      "companyName": "Jovor Networks",
+      "headline": "Jovor Networks CFO addresses investor concerns in open letter",
+      "sentiment": {
+        "reasoning": "A CFO addressing investor concerns in an open letter suggests existing negative sentiment, and the impact depends entirely on the content and effectiveness of the letter.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 8,
+        "impactType": "other",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:11:42.228Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

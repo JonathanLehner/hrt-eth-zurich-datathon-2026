@@ -1,0 +1,172 @@
+{
+  "session": "1920",
+  "companyCount": 2,
+  "headlineCount": 7,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Xovol Goods",
+      "headlineCount": 4,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H001",
+        "H002",
+        "H003",
+        "H007"
+      ],
+      "sampleHeadlines": [
+        "Xovol Goods sees 3% margin improvement in latest quarter",
+        "Xovol Goods reports 10% decline in operating income",
+        "Xovol Goods announces significant capital expenditure plan for Latin America"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Ulvon Renewables",
+      "headlineCount": 3,
+      "firstBarIx": 39,
+      "headlineIds": [
+        "H004",
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Ulvon Renewables announces significant capital expenditure plan for Central Europe",
+        "Ulvon Renewables secures $250M contract with a leading cloud platform",
+        "Ulvon Renewables faces regulatory review of automated logistics practices"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 8,
+      "companyId": 0,
+      "companyName": "Xovol Goods",
+      "headline": "Xovol Goods sees 3% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A 3% margin improvement indicates increased profitability, which is a positive financial development for the company.",
+        "longTerm": 5,
+        "shortTerm": 7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 16,
+      "companyId": 0,
+      "companyName": "Xovol Goods",
+      "headline": "Xovol Goods reports 10% decline in operating income",
+      "sentiment": {
+        "reasoning": "A 10% decline in operating income is a significant negative financial indicator, suggesting reduced profitability from core operations.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 35,
+      "companyId": 0,
+      "companyName": "Xovol Goods",
+      "headline": "Xovol Goods announces significant capital expenditure plan for Latin America",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a specific region suggests future growth and expansion, which is a long-term positive but can be a short-term cost.",
+        "longTerm": 6,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 39,
+      "companyId": 1,
+      "companyName": "Ulvon Renewables",
+      "headline": "Ulvon Renewables announces significant capital expenditure plan for Central Europe",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for a specific region suggests future growth and expansion, which is a long-term positive but can be a short-term cost.",
+        "longTerm": 6,
+        "shortTerm": 1,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 45,
+      "companyId": 1,
+      "companyName": "Ulvon Renewables",
+      "headline": "Ulvon Renewables secures $250M contract with a leading cloud platform",
+      "sentiment": {
+        "reasoning": "Securing a $250M contract with a leading cloud platform is a significant positive event, indicating strong demand and future revenue.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 48,
+      "companyId": 1,
+      "companyName": "Ulvon Renewables",
+      "headline": "Ulvon Renewables faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "Facing a regulatory review introduces uncertainty and potential negative consequences, such as fines or operational changes, which could impact costs and reputation.",
+        "longTerm": -5,
+        "shortTerm": -4,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H007",
+      "barIx": 49,
+      "companyId": 0,
+      "companyName": "Xovol Goods",
+      "headline": "Xovol Goods confirms participation in Capital Markets Day",
+      "sentiment": {
+        "reasoning": "Confirming participation in a Capital Markets Day is a neutral event in itself, as it's a standard investor relations activity, but it signals upcoming communication.",
+        "longTerm": 0,
+        "shortTerm": 0,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 3,
+        "durability": 1
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:46.314Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

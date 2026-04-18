@@ -1,0 +1,172 @@
+{
+  "session": "2000",
+  "companyCount": 2,
+  "headlineCount": 7,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Relvon Fuels",
+      "headlineCount": 4,
+      "firstBarIx": 4,
+      "headlineIds": [
+        "H001",
+        "H002",
+        "H004",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Relvon Fuels completes strategic acquisition to strengthen supply chain optimization",
+        "Relvon Fuels reports unexpected decline in North America revenue",
+        "Relvon Fuels reports strong demand in Middle East, raises outlook"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Zrovex Industries",
+      "headlineCount": 3,
+      "firstBarIx": 13,
+      "headlineIds": [
+        "H003",
+        "H005",
+        "H007"
+      ],
+      "sampleHeadlines": [
+        "Zrovex Industries warns of supply chain disruptions affecting Latin America operations",
+        "Zrovex Industries secures $650M contract with an international consortium",
+        "Zrovex Industries announces breakthrough in supply chain optimization"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 4,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels completes strategic acquisition to strengthen supply chain optimization",
+      "sentiment": {
+        "reasoning": "The strategic acquisition aims to strengthen supply chain optimization, suggesting a positive operational improvement for the company.",
+        "longTerm": 6,
+        "shortTerm": 4,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 11,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in North America revenue is a clear negative financial indicator that will likely impact investor sentiment immediately.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 13,
+      "companyId": 1,
+      "companyName": "Zrovex Industries",
+      "headline": "Zrovex Industries warns of supply chain disruptions affecting Latin America operations",
+      "sentiment": {
+        "reasoning": "A warning of supply chain disruptions directly impacting operations in a key region is a negative operational signal with potential financial consequences.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 25,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a region combined with a raised outlook is a clear positive financial indicator for the company's future performance.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 27,
+      "companyId": 1,
+      "companyName": "Zrovex Industries",
+      "headline": "Zrovex Industries secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large $650M contract with an international consortium is a significant positive event for revenue and future business prospects.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 29,
+      "companyId": 0,
+      "companyName": "Relvon Fuels",
+      "headline": "Relvon Fuels secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a substantial $400M contract with a national infrastructure agency is a significant positive event for revenue and business stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H007",
+      "barIx": 37,
+      "companyId": 1,
+      "companyName": "Zrovex Industries",
+      "headline": "Zrovex Industries announces breakthrough in supply chain optimization",
+      "sentiment": {
+        "reasoning": "A breakthrough in supply chain optimization suggests potential for improved efficiency and cost savings, which is a positive operational development.",
+        "longTerm": 5,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:59.963Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

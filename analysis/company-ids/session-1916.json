@@ -1,0 +1,164 @@
+{
+  "session": "1916",
+  "companyCount": 3,
+  "headlineCount": 6,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Zrovov Advisors",
+      "headlineCount": 3,
+      "firstBarIx": 7,
+      "headlineIds": [
+        "H001",
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Zrovov Advisors wins industry award for excellence in cloud infrastructure",
+        "Zrovov Advisors to present at Emerging Markets Forum",
+        "Zrovov Advisors loses key contract in Europe to competitor"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Krevum Pharmaceuticals",
+      "headlineCount": 1,
+      "firstBarIx": 15,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Krevum Pharmaceuticals reports record quarterly revenue, up 25% year-over-year"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Creven Securities",
+      "headlineCount": 2,
+      "firstBarIx": 17,
+      "headlineIds": [
+        "H003",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Creven Securities faces class action over process automation service disruption",
+        "Creven Securities recalls products in wireless connectivity line due to quality concerns"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 7,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors wins industry award for excellence in cloud infrastructure",
+      "sentiment": {
+        "reasoning": "Winning an industry award enhances reputation and could indirectly lead to future business, but the direct financial impact is not immediate or quantifiable.",
+        "longTerm": 3,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "other",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 15,
+      "companyId": 1,
+      "companyName": "Krevum Pharmaceuticals",
+      "headline": "Krevum Pharmaceuticals reports record quarterly revenue, up 25% year-over-year",
+      "sentiment": {
+        "reasoning": "Record quarterly revenue and significant year-over-year growth indicate strong financial performance, positively impacting investor sentiment.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 17,
+      "companyId": 2,
+      "companyName": "Creven Securities",
+      "headline": "Creven Securities faces class action over process automation service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit over service disruption creates negative sentiment and potential financial liabilities from legal costs and settlements.",
+        "longTerm": -7,
+        "shortTerm": -6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 32,
+      "companyId": 2,
+      "companyName": "Creven Securities",
+      "headline": "Creven Securities recalls products in wireless connectivity line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will incur costs for the recall itself, potential lost sales, and damage to brand reputation.",
+        "longTerm": -7,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 45,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors to present at Emerging Markets Forum",
+      "sentiment": {
+        "reasoning": "Presenting at a forum offers increased visibility and networking opportunities, which could indirectly lead to future business, but has no direct financial impact.",
+        "longTerm": 1,
+        "shortTerm": 1,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 6,
+        "impactType": "other",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 48,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors loses key contract in Europe to competitor",
+      "sentiment": {
+        "reasoning": "Losing a key contract in a significant market like Europe will negatively impact future revenue and market share.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 3,
+        "impactType": "contract_win",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:44.087Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "session": "1426",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Zelval Energy",
+      "headlineCount": 1,
+      "firstBarIx": 6,
+      "headlineIds": [
+        "H001"
+      ],
+      "sampleHeadlines": [
+        "Zelval Energy opens new office in Europe"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Brevon Microchips",
+      "headlineCount": 3,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H002",
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Brevon Microchips faces regulatory review of data analytics practices",
+        "Brevon Microchips completes planned facility upgrade in Scandinavia",
+        "Brevon Microchips reports strong demand in Central Europe, raises outlook"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Zrovex Industries",
+      "headlineCount": 1,
+      "firstBarIx": 10,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Zrovex Industries sees 15% margin improvement in latest quarter"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 6,
+      "companyId": 0,
+      "companyName": "Zelval Energy",
+      "headline": "Zelval Energy opens new office in Europe",
+      "sentiment": {
+        "reasoning": "Opening a new office in Europe indicates business expansion, which could lead to increased market presence and potential revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "expansion",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 8,
+      "companyId": 1,
+      "companyName": "Brevon Microchips",
+      "headline": "Brevon Microchips faces regulatory review of data analytics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential for fines or operational changes, which is a negative signal.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 10,
+      "companyId": 2,
+      "companyName": "Zrovex Industries",
+      "headline": "Zrovex Industries sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 15% margin improvement indicates strong operational efficiency and profitability, which is a very positive financial indicator.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 16,
+      "companyId": 1,
+      "companyName": "Brevon Microchips",
+      "headline": "Brevon Microchips completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or increased capacity, which is generally positive for future performance.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 39,
+      "companyId": 1,
+      "companyName": "Brevon Microchips",
+      "headline": "Brevon Microchips reports strong demand in Central Europe, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand and a raised outlook indicate improved business prospects and expected higher future revenues and profitability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "guidance",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:12:16.080Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

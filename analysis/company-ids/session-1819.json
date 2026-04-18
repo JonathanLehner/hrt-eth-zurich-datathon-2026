@@ -1,0 +1,97 @@
+{
+  "session": "1819",
+  "companyCount": 2,
+  "headlineCount": 3,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Frelol Software",
+      "headlineCount": 2,
+      "firstBarIx": 17,
+      "headlineIds": [
+        "H001",
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Frelol Software faces regulatory review of automated logistics practices",
+        "Frelol Software announces restructuring plan, cites challenging market conditions"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Crevex Labs",
+      "headlineCount": 1,
+      "firstBarIx": 25,
+      "headlineIds": [
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Crevex Labs announces significant capital expenditure plan for Southeast Asia"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 17,
+      "companyId": 0,
+      "companyName": "Frelol Software",
+      "headline": "Frelol Software faces regulatory review of automated logistics practices",
+      "sentiment": {
+        "reasoning": "A regulatory review introduces uncertainty and potential negative outcomes, which could impact operations and reputation.",
+        "longTerm": -6,
+        "shortTerm": -5,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 6,
+        "impactType": "regulatory",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 19,
+      "companyId": 0,
+      "companyName": "Frelol Software",
+      "headline": "Frelol Software announces restructuring plan, cites challenging market conditions",
+      "sentiment": {
+        "reasoning": "A restructuring plan, especially when driven by challenging market conditions, typically signals operational difficulties and can lead to short-term disruption, though it aims for long-term efficiency.",
+        "longTerm": -4,
+        "shortTerm": -7,
+        "longTermUncertainty": 8,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 25,
+      "companyId": 1,
+      "companyName": "Crevex Labs",
+      "headline": "Crevex Labs announces significant capital expenditure plan for Southeast Asia",
+      "sentiment": {
+        "reasoning": "A significant capital expenditure plan for expansion into Southeast Asia suggests future growth potential but also involves immediate costs and execution risks.",
+        "longTerm": 6,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 4,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:21.560Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

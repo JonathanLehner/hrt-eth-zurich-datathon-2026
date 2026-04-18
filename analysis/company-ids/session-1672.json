@@ -1,0 +1,171 @@
+{
+  "session": "1672",
+  "companyCount": 2,
+  "headlineCount": 7,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Zrovov Advisors",
+      "headlineCount": 5,
+      "firstBarIx": 7,
+      "headlineIds": [
+        "H001",
+        "H002",
+        "H003",
+        "H004",
+        "H007"
+      ],
+      "sampleHeadlines": [
+        "Zrovov Advisors begins scheduled maintenance of wireless connectivity systems",
+        "Zrovov Advisors announces $3.8B share buyback program",
+        "Zrovov Advisors sees mixed results in automated logistics pilot program"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Brevep Systems",
+      "headlineCount": 2,
+      "firstBarIx": 37,
+      "headlineIds": [
+        "H005",
+        "H006"
+      ],
+      "sampleHeadlines": [
+        "Brevep Systems misses quarterly revenue estimates by 12%",
+        "Brevep Systems faces class action over wireless connectivity service disruption"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 7,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors begins scheduled maintenance of wireless connectivity systems",
+      "sentiment": {
+        "reasoning": "Scheduled maintenance is a routine operational activity that might cause minor, temporary disruptions but is generally positive for long-term system reliability.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 3
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 18,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors announces $3.8B share buyback program",
+      "sentiment": {
+        "reasoning": "A significant share buyback program typically signals management confidence and can boost shareholder value by reducing share count and increasing EPS.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "other",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 19,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors sees mixed results in automated logistics pilot program",
+      "sentiment": {
+        "reasoning": "Mixed results from a pilot program indicate uncertainty regarding the success and future scalability of a new operational initiative.",
+        "longTerm": -1,
+        "shortTerm": -2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "operations",
+        "evidenceStrength": 6,
+        "durability": 4
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 36,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors secures $50M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a $50M contract is a clear positive event, indicating new revenue and business growth.",
+        "longTerm": 6,
+        "shortTerm": 7,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 37,
+      "companyId": 1,
+      "companyName": "Brevep Systems",
+      "headline": "Brevep Systems misses quarterly revenue estimates by 12%",
+      "sentiment": {
+        "reasoning": "Missing revenue estimates by a significant margin is a clear negative indicator for the company's financial performance.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 38,
+      "companyId": 1,
+      "companyName": "Brevep Systems",
+      "headline": "Brevep Systems faces class action over wireless connectivity service disruption",
+      "sentiment": {
+        "reasoning": "Facing a class action lawsuit, especially over service disruption, presents significant legal and financial risks, including potential damages and reputational harm.",
+        "longTerm": -8,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 3,
+        "impactType": "litigation",
+        "evidenceStrength": 8,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H007",
+      "barIx": 43,
+      "companyId": 0,
+      "companyName": "Zrovov Advisors",
+      "headline": "Zrovov Advisors opens new office in Scandinavia",
+      "sentiment": {
+        "reasoning": "Opening a new office in a new region indicates geographic expansion and potential for new market penetration and revenue growth.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "expansion",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:02.911Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

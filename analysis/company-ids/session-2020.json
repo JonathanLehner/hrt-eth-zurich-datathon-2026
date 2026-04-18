@@ -1,0 +1,145 @@
+{
+  "session": "2020",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Ulvyn Microchips",
+      "headlineCount": 2,
+      "firstBarIx": 0,
+      "headlineIds": [
+        "H001",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Ulvyn Microchips reports unexpected decline in North America revenue",
+        "Ulvyn Microchips secures $650M contract with an international consortium"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Volval Devices",
+      "headlineCount": 2,
+      "firstBarIx": 8,
+      "headlineIds": [
+        "H002",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Volval Devices reports unexpected decline in Central Europe revenue",
+        "Volval Devices files for regulatory approval of new enterprise software offering"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Calvis Sciences",
+      "headlineCount": 1,
+      "firstBarIx": 34,
+      "headlineIds": [
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Calvis Sciences secures $500M contract with a national infrastructure agency"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 0,
+      "companyId": 0,
+      "companyName": "Ulvyn Microchips",
+      "headline": "Ulvyn Microchips reports unexpected decline in North America revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue indicates a negative financial performance, likely impacting investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 8,
+      "companyId": 1,
+      "companyName": "Volval Devices",
+      "headline": "Volval Devices reports unexpected decline in Central Europe revenue",
+      "sentiment": {
+        "reasoning": "An unexpected decline in revenue from a specific region indicates a negative financial performance, likely impacting investor confidence.",
+        "longTerm": -5,
+        "shortTerm": -7,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 29,
+      "companyId": 1,
+      "companyName": "Volval Devices",
+      "headline": "Volval Devices files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new product is a positive step towards potential future revenue, but the impact is not immediate.",
+        "longTerm": 6,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 6,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 34,
+      "companyId": 2,
+      "companyName": "Calvis Sciences",
+      "headline": "Calvis Sciences secures $500M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and significant positive revenue stream for the company.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 47,
+      "companyId": 0,
+      "companyName": "Ulvyn Microchips",
+      "headline": "Ulvyn Microchips secures $650M contract with an international consortium",
+      "sentiment": {
+        "reasoning": "Securing a large contract provides a clear and significant positive revenue stream for the company.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 8
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:14:01.949Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

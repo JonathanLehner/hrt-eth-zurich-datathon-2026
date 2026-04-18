@@ -1,0 +1,172 @@
+{
+  "session": "1541",
+  "companyCount": 2,
+  "headlineCount": 7,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Jorvyl Securities",
+      "headlineCount": 4,
+      "firstBarIx": 14,
+      "headlineIds": [
+        "H001",
+        "H003",
+        "H004",
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Jorvyl Securities reports 20% decline in operating income",
+        "Jorvyl Securities revises long-term strategy with focus on automated logistics",
+        "Jorvyl Securities recalls products in digital payments line due to quality concerns"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Calvos Genomics",
+      "headlineCount": 3,
+      "firstBarIx": 16,
+      "headlineIds": [
+        "H002",
+        "H006",
+        "H007"
+      ],
+      "sampleHeadlines": [
+        "Calvos Genomics files for regulatory approval of new enterprise software offering",
+        "Calvos Genomics reports record quarterly revenue, up 8% year-over-year",
+        "Calvos Genomics secures $180M contract with a top-tier research institute"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 14,
+      "companyId": 0,
+      "companyName": "Jorvyl Securities",
+      "headline": "Jorvyl Securities reports 20% decline in operating income",
+      "sentiment": {
+        "reasoning": "A significant decline in operating income indicates poor financial performance, negatively impacting investor sentiment.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 16,
+      "companyId": 1,
+      "companyName": "Calvos Genomics",
+      "headline": "Calvos Genomics files for regulatory approval of new enterprise software offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval for a new offering is a positive step towards potential future revenue, but the impact is not immediate.",
+        "longTerm": 4,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 7,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 17,
+      "companyId": 0,
+      "companyName": "Jorvyl Securities",
+      "headline": "Jorvyl Securities revises long-term strategy with focus on automated logistics",
+      "sentiment": {
+        "reasoning": "A strategic revision towards automated logistics indicates a potential for future efficiency and growth, but the immediate impact is uncertain and execution risk exists.",
+        "longTerm": 3,
+        "shortTerm": 1,
+        "longTermUncertainty": 5,
+        "shortTermUncertainty": 6,
+        "impactType": "operations",
+        "evidenceStrength": 5,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 22,
+      "companyId": 0,
+      "companyName": "Jorvyl Securities",
+      "headline": "Jorvyl Securities recalls products in digital payments line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will likely lead to immediate costs, reputational damage, and potential loss of revenue.",
+        "longTerm": -7,
+        "shortTerm": -9,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 31,
+      "companyId": 0,
+      "companyName": "Jorvyl Securities",
+      "headline": "Jorvyl Securities names new head of wireless connectivity division",
+      "sentiment": {
+        "reasoning": "Appointing a new division head can signal a renewed focus or strategic shift, but the impact is highly dependent on the individual's capabilities and future actions.",
+        "longTerm": 1,
+        "shortTerm": 0,
+        "longTermUncertainty": 7,
+        "shortTermUncertainty": 7,
+        "impactType": "leadership",
+        "evidenceStrength": 4,
+        "durability": 5
+      }
+    },
+    {
+      "headlineId": "H006",
+      "barIx": 42,
+      "companyId": 1,
+      "companyName": "Calvos Genomics",
+      "headline": "Calvos Genomics reports record quarterly revenue, up 8% year-over-year",
+      "sentiment": {
+        "reasoning": "Reporting record quarterly revenue with an 8% year-over-year increase indicates strong financial performance and growth.",
+        "longTerm": 6,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H007",
+      "barIx": 45,
+      "companyId": 1,
+      "companyName": "Calvos Genomics",
+      "headline": "Calvos Genomics secures $180M contract with a top-tier research institute",
+      "sentiment": {
+        "reasoning": "Securing a significant $180M contract with a top-tier institute is a strong positive for future revenue and market validation.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "contract_win",
+        "evidenceStrength": 10,
+        "durability": 9
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:12:39.352Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

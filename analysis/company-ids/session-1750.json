@@ -1,0 +1,126 @@
+{
+  "session": "1750",
+  "companyCount": 3,
+  "headlineCount": 4,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Krevum Pharmaceuticals",
+      "headlineCount": 2,
+      "firstBarIx": 13,
+      "headlineIds": [
+        "H001",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Krevum Pharmaceuticals recalls products in enterprise software line due to quality concerns",
+        "Krevum Pharmaceuticals reports strong demand in Middle East, raises outlook"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Prynis Systems",
+      "headlineCount": 1,
+      "firstBarIx": 14,
+      "headlineIds": [
+        "H002"
+      ],
+      "sampleHeadlines": [
+        "Prynis Systems sees 15% margin improvement in latest quarter"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Zrovum Biopharma",
+      "headlineCount": 1,
+      "firstBarIx": 45,
+      "headlineIds": [
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Zrovum Biopharma completes strategic acquisition to strengthen renewable storage"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 13,
+      "companyId": 0,
+      "companyName": "Krevum Pharmaceuticals",
+      "headline": "Krevum Pharmaceuticals recalls products in enterprise software line due to quality concerns",
+      "sentiment": {
+        "reasoning": "A product recall due to quality concerns will negatively impact sales, reputation, and potentially incur costs for Krevum Pharmaceuticals.",
+        "longTerm": -6,
+        "shortTerm": -8,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 2,
+        "impactType": "recall",
+        "evidenceStrength": 8,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 14,
+      "companyId": 1,
+      "companyName": "Prynis Systems",
+      "headline": "Prynis Systems sees 15% margin improvement in latest quarter",
+      "sentiment": {
+        "reasoning": "A significant 15% margin improvement indicates strong operational efficiency and profitability for Prynis Systems.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 1,
+        "impactType": "earnings",
+        "evidenceStrength": 9,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 36,
+      "companyId": 0,
+      "companyName": "Krevum Pharmaceuticals",
+      "headline": "Krevum Pharmaceuticals reports strong demand in Middle East, raises outlook",
+      "sentiment": {
+        "reasoning": "Strong demand in a key region and a raised outlook indicate positive future revenue and profitability for Krevum Pharmaceuticals.",
+        "longTerm": 8,
+        "shortTerm": 8,
+        "longTermUncertainty": 2,
+        "shortTermUncertainty": 1,
+        "impactType": "demand",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 45,
+      "companyId": 2,
+      "companyName": "Zrovum Biopharma",
+      "headline": "Zrovum Biopharma completes strategic acquisition to strengthen renewable storage",
+      "sentiment": {
+        "reasoning": "The completion of a strategic acquisition aimed at strengthening a specific business area is generally positive for long-term growth and market position.",
+        "longTerm": 7,
+        "shortTerm": 2,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 5,
+        "impactType": "acquisition",
+        "evidenceStrength": 7,
+        "durability": 8
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:13.214Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}

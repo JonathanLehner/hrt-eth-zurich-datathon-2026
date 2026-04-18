@@ -1,0 +1,145 @@
+{
+  "session": "1702",
+  "companyCount": 3,
+  "headlineCount": 5,
+  "companies": [
+    {
+      "companyId": 0,
+      "name": "Ervan Capital",
+      "headlineCount": 2,
+      "firstBarIx": 0,
+      "headlineIds": [
+        "H001",
+        "H004"
+      ],
+      "sampleHeadlines": [
+        "Ervan Capital secures $400M contract with a national infrastructure agency",
+        "Ervan Capital secures $800M contract with a global retailer"
+      ]
+    },
+    {
+      "companyId": 1,
+      "name": "Zelvon Biosciences",
+      "headlineCount": 2,
+      "firstBarIx": 10,
+      "headlineIds": [
+        "H002",
+        "H003"
+      ],
+      "sampleHeadlines": [
+        "Zelvon Biosciences completes planned facility upgrade in Scandinavia",
+        "Zelvon Biosciences files for regulatory approval of new precision manufacturing offering"
+      ]
+    },
+    {
+      "companyId": 2,
+      "name": "Plevyl Advisors",
+      "headlineCount": 1,
+      "firstBarIx": 45,
+      "headlineIds": [
+        "H005"
+      ],
+      "sampleHeadlines": [
+        "Plevyl Advisors announces $9.6B share buyback program"
+      ]
+    }
+  ],
+  "headlines": [
+    {
+      "headlineId": "H001",
+      "barIx": 0,
+      "companyId": 0,
+      "companyName": "Ervan Capital",
+      "headline": "Ervan Capital secures $400M contract with a national infrastructure agency",
+      "sentiment": {
+        "reasoning": "Securing a significant contract with a national agency is a clear positive for revenue and business stability.",
+        "longTerm": 7,
+        "shortTerm": 8,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H002",
+      "barIx": 10,
+      "companyId": 1,
+      "companyName": "Zelvon Biosciences",
+      "headline": "Zelvon Biosciences completes planned facility upgrade in Scandinavia",
+      "sentiment": {
+        "reasoning": "Completing a planned facility upgrade suggests improved operational efficiency or capacity, which is generally positive for the company.",
+        "longTerm": 4,
+        "shortTerm": 3,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 4,
+        "impactType": "operations",
+        "evidenceStrength": 7,
+        "durability": 6
+      }
+    },
+    {
+      "headlineId": "H003",
+      "barIx": 34,
+      "companyId": 1,
+      "companyName": "Zelvon Biosciences",
+      "headline": "Zelvon Biosciences files for regulatory approval of new precision manufacturing offering",
+      "sentiment": {
+        "reasoning": "Filing for regulatory approval is a necessary step towards commercializing a new offering, indicating potential future revenue, but success is not guaranteed.",
+        "longTerm": 5,
+        "shortTerm": 2,
+        "longTermUncertainty": 6,
+        "shortTermUncertainty": 5,
+        "impactType": "product_launch",
+        "evidenceStrength": 6,
+        "durability": 7
+      }
+    },
+    {
+      "headlineId": "H004",
+      "barIx": 35,
+      "companyId": 0,
+      "companyName": "Ervan Capital",
+      "headline": "Ervan Capital secures $800M contract with a global retailer",
+      "sentiment": {
+        "reasoning": "Securing a substantial contract with a global retailer is a clear positive for revenue and market presence.",
+        "longTerm": 8,
+        "shortTerm": 9,
+        "longTermUncertainty": 3,
+        "shortTermUncertainty": 2,
+        "impactType": "contract_win",
+        "evidenceStrength": 9,
+        "durability": 8
+      }
+    },
+    {
+      "headlineId": "H005",
+      "barIx": 45,
+      "companyId": 2,
+      "companyName": "Plevyl Advisors",
+      "headline": "Plevyl Advisors announces $9.6B share buyback program",
+      "sentiment": {
+        "reasoning": "A large share buyback program typically signals management confidence and aims to boost shareholder value by reducing share count and increasing EPS.",
+        "longTerm": 5,
+        "shortTerm": 6,
+        "longTermUncertainty": 4,
+        "shortTermUncertainty": 3,
+        "impactType": "other",
+        "evidenceStrength": 8,
+        "durability": 7
+      }
+    }
+  ],
+  "scoring": {
+    "model": "gemini-2.5-flash",
+    "scoredAt": "2026-04-18T15:13:05.879Z",
+    "scale": {
+      "longTerm": "integer from -10 to 10",
+      "shortTerm": "integer from -10 to 10",
+      "longTermUncertainty": "integer from 0 to 10",
+      "shortTermUncertainty": "integer from 0 to 10"
+    },
+    "methodology": "Gemini scores only the effect implied by the headline text itself, then separates immediate reaction versus later carry-through within the same 100-day session."
+  }
+}
