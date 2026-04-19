@@ -3,6 +3,18 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 # =========================================================
+# Load data
+# =========================================================
+bars_seen_train = pd.read_parquet("data/bars_seen_train.parquet")
+bars_seen_public_test = pd.read_parquet("data/bars_seen_public_test.parquet")
+bars_seen_private_test = pd.read_parquet("data/bars_seen_private_test.parquet")
+
+bars_unseen_train = pd.read_parquet("data/bars_unseen_train.parquet").sort_values(["session", "bar_ix"])
+data = bars_unseen_train.groupby("session").apply(
+    lambda x: x["close"].iloc[-1] / x["open"].iloc[0] - 1
+).rename("target").reset_index()
+
+# =========================================================
 # helper: build the 3 features return_seen, recent_return, oc_change
 # =========================================================
 def build_feature_table(bars_df):
